@@ -4,7 +4,7 @@ This repository contains very simple samples, demonstrating the capatibilities o
 
 ## List of projects
 
-### [Simpliest project](01-simpliest-project/)
+### [Simpliest project](01-simple-tour/)
 
 It is the simpliest possible project : a very tiny webpage, a tiny configuration, and only one image to display. This is an example of the minimum required to run a project.
 

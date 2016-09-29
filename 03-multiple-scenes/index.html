@@ -40,11 +40,34 @@
         height: 100%;
     }
 
+    button#next, button#previous
+    {
+        height: 40px;
+        font-size: x-large;
+    }
+
+    button#next
+    {
+        position: absolute;
+        top: 50%;
+        right: 0px;
+    }
+
+    button#previous
+    {
+        position: absolute;
+        top: 50%;
+        left: 0px;
+    }
+
     </style>
 </head>
 
 <body>
     <div id="container"></div>
+
+    <button id="next" onclick="viewer.tour.nextScene()">NEXT</button>
+    <button id="previous" onclick="viewer.tour.previousScene()">PREVIOUS</button>
 
     <div id="instructions">
         Click on NEXT and PREVIOUS button to navigate inside the tour.
