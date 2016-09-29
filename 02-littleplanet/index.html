@@ -22,6 +22,18 @@
         padding: 0;
     }
 
+    div#instructions
+    {
+        position: absolute;
+        bottom: 10px;
+        background: rgba(0, 0, 0, 0.75);
+        color: whitesmoke;
+        padding: 15px;
+        width: 40%;
+        left: 30%;
+        text-align: center;
+    }
+
     div#container
     {
         width: 100%;
@@ -34,8 +46,12 @@
 <body>
     <div id="container"></div>
 
+    <div id="instructions">
+        Scroll with the mouse to trigger the Little planet effect
+    </div>
+
     <!-- Include the KEN library -->
-    <script type="text/javascript" src="ken.min.js" ></script>
+    <script type="text/javascript" src="ken.js" ></script>
 
     <!-- Start KEN -->
     <script type="text/javascript">
