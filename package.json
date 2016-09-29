@@ -1,0 +1,21 @@
+{
+  "name": "ken-samples",
+  "version": "1.0.0",
+  "description": "A collection of simple samples to demonstrate the capabilities of KEN",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update": "./update-ken.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.kolor.com/koloreyes/koloreyesnextsamples.git"
+  },
+  "keywords": [
+    "ken",
+    "vr",
+    "gopro"
+  ],
+  "author": "GoPro - Kolor team",
+  "license": "Apache-2.0"
+}

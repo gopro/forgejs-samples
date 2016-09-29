@@ -1,0 +1,27 @@
+{
+    "uid": "simpliest-tour",
+    "name": "Simpliest Tour",
+    "slug": "simpliest-tour",
+    "description": "This is the simpliest tour ever",
+    "defaultLoadUid": "scene-0",
+
+    "scenes": [
+    {
+        "uid": "scene-0",
+        "name": "First scene",
+        "slug": "first-scene",
+        "description": "This is the first and only scene",
+
+        "media":
+        {
+            "uid": "scene-0-pano-0",
+            "type": "image",
+            "format": "equi",
+
+            "source":
+            {
+                "url": "./ocean.jpg"
+            }
+        }
+    }]
+}
