@@ -1,0 +1,59 @@
+{
+    "uid": "com.pluginmaker.simplebutton",
+    "name": "Simple Button",
+    "slug": "simplebutton",
+    "version": "1.0.0",
+    "versionName": "Simple Button 1.0.0",
+    "description": "Add a simple button",
+    
+    "author": 
+    {
+        "name": "GoPro - Kolor Team",
+        "website": "http://www.kolor.com"
+    },
+
+    "licence": "MIT",
+
+    "options":
+    {
+        "top": 0, 
+        "right": 0,
+        "bottom": 0,
+        "left": 0,
+        "horizontalCenter": false,
+        "verticalCenter": false,
+
+        "width": 0,
+        "height": 0,
+
+        "value": null,
+
+        "skin": {
+            "out": null,
+            "over": null,
+            "down": null
+        }
+    },
+
+    "events":
+    {
+        "onClick": null,
+        "onOver": null,
+        "onOut": null,
+        "onDown": null
+    }, 
+
+    "actions":
+    [
+        "show",
+        "hide"
+    ],
+
+
+    "sources":
+    [
+        "src/SimpleButton.js"
+    ],
+
+    "constructor": "KPlug.SimpleButton"
+}
