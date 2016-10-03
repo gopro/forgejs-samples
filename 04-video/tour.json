@@ -1,0 +1,34 @@
+{
+    "uid": "simpliest-tour",
+    "name": "Simpliest Tour",
+    "slug": "simpliest-tour",
+    "description": "This is the simpliest tour ever, but with a video",
+    "defaultLoadUid": "scene-0",
+
+    "scenes": [
+    {
+        "uid": "scene-0",
+        "name": "First scene",
+        "slug": "first-scene",
+        "description": "This is the first and only scene",
+
+        "media":
+        {
+            "uid": "scene-0-pano-0",
+            "type": "video",
+            "format": "equi",
+
+            "source":
+            {
+                "files": [ "http://streams.ken.com/dev/formats/steelblue/steelblue.mp4" ]
+            },
+
+            "options":
+            {
+                "autoPlay": true,
+                "loop": true,
+                "volume": 1
+            }
+        }
+    }]
+}
