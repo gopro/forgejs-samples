@@ -95,7 +95,8 @@
             {
                 "config":
                 {
-                    "i18n": "pano-welcome",
+                    "i18n": true,
+                    "value": "pano-welcome",
                     "fontSize": 50,
                     "color": "white",
                     "textAlign": "center"
@@ -111,7 +112,8 @@
             {
                 "config":
                 {
-                    "i18n": "pano-instructions",
+                    "i18n": true,
+                    "value": "pano-instructions",
                     "fontSize": 30,
                     "color": "white",
                     "textAlign": "center"

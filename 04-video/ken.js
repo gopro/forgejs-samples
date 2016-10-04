@@ -57171,7 +57171,7 @@ KEN.Tour.prototype._parseConfig = function(config)
 
     if (typeof this._config["i18n"] !== "undefined")
     {
-        this._viewer["i18n"].addConfig(this._config["i18n"]);
+        this._viewer["i18n"].addConfig(this._config["i18n"], true); //force the parse of the main config
     }
 
     // Set the keys for the locale strings
@@ -62941,18 +62941,16 @@ KEN.RenderDisplay.prototype.getRenderParams = function()
         var eyeTranslationR = new THREE.Vector3();
         eyeTranslationR.fromArray(eyeParamsR.offset);
 
-        var rx, ry, rw, rh;
-
-        rx = this._rendererSize["width"] * this._leftBounds[0],
+        var rx = this._rendererSize["width"] * this._leftBounds[0],
         ry = this._rendererSize["height"] * this._leftBounds[1],
         rw = this._rendererSize["width"] * this._leftBounds[2],
         rh = this._rendererSize["height"] * this._leftBounds[3];
 
         var renderRectL = new KEN.Rectangle(rx, ry, rw, rh);
 
-        rx = this._rendererSize["width"] * this._rightBounds[0],
-        ry = this._rendererSize["height"] * this._rightBounds[1],
-        rw = this._rendererSize["width"] * this._rightBounds[2],
+        rx = this._rendererSize["width"] * this._rightBounds[0];
+        ry = this._rendererSize["height"] * this._rightBounds[1];
+        rw = this._rendererSize["width"] * this._rightBounds[2];
         rh = this._rendererSize["height"] * this._rightBounds[3];
 
         var renderRectR = new KEN.Rectangle(rx, ry, rw, rh);
@@ -68954,7 +68952,7 @@ KEN.Camera.prototype._updateFromMatrix = function()
  */
 KEN.Camera.prototype._updatePerspectiveCamera = function()
 {
-    if (this._perspectiveCamera === null) {
+    if (this._perspectiveCamera === null) {
         return;
     }
 
@@ -70222,7 +70220,7 @@ Object.defineProperty(KEN.CameraAnimation.prototype, "cancelRoll",
 });
 
 /**
- * Get the "onStart" {@link KEN.EventDispatcher} of the camera.
+ * Get the "onPlay" {@link KEN.EventDispatcher} of the camera.
  * @name KEN.CameraAnimation#onPlay
  * @readonly
  * @type {KEN.EventDispatcher}
@@ -70559,14 +70557,12 @@ KEN.CameraViewfinder.prototype._createObjectCrosshair = function()
 KEN.CameraViewfinder.prototype._createMesh = function()
 {
     switch (this._type) {
-        case KEN.CameraViewfinderType.RING:
-        default:
-            return this._createObjectRing();
-        break;
-
         case KEN.CameraViewfinderType.CROSSHAIR:
             return this._createObjectCrosshair();
-        break;
+
+        // case KEN.CameraViewfinderType.RING:
+        default:
+            return this._createObjectRing();
     }
 };
 
@@ -83501,10 +83497,11 @@ KEN.LocaleManager.prototype.boot = function()
  * Add i18n configuration data.
  * @method KEN.LocaleManager#addConfig
  * @param {I18nConfig} config - The configuration data.
+ * @param {boolean=} force - Internal parameter to force the parse/update of the main i18n config.
  */
-KEN.LocaleManager.prototype.addConfig = function(config)
+KEN.LocaleManager.prototype.addConfig = function(config, force)
 {
-    this._parseConfig(config);
+    this._parseConfig(config, force);
 };
 
 /**
@@ -83540,13 +83537,20 @@ KEN.LocaleManager.prototype._parseMainConfig = function(config)
  * Parse the configuration data of a i18n node.
  * @method KEN.LocaleManager#_parseConfig
  * @param {I18nConfig} config - The configuration data.
+ * @param {boolean=} force - Internal parameter to force the parse/update of the main i18n config.
  * @private
  */
-KEN.LocaleManager.prototype._parseConfig = function(config)
+KEN.LocaleManager.prototype._parseConfig = function(config, force)
 {
     if(typeof config === "undefined")
     {
         return;
+    }
+
+    // force the parse of the main config
+    if (force === true)
+    {
+        this._parseMainConfig(config);
     }
 
     if(this._enabled === false)
@@ -91958,22 +91962,16 @@ KEN.Image.prototype._loadComplete = function()
  */
 KEN.Image.prototype._parseConfig = function(config)
 {
-    if(typeof config === "string")
-    {
-        this._imageUrl = config;
-        this._imageKey = "";
-        this._i18n = false;
-    }
-    else if(typeof config === "object" && config !== null)
+    if(typeof config === "object" && config !== null)
     {
         this._imageKey = config["key"] || "";
         
-        this._i18n = (typeof config["i18n"] === "string");
+        this._i18n = config["i18n"] || false;
 
         if(this._i18n === true)
         {
             this._imageUrl = "";
-            this._i18nImageUrl = config["i18n"];
+            this._i18nImageUrl = config["url"];
         }
         else
         {
@@ -92003,6 +92001,11 @@ KEN.Image.prototype._parseConfig = function(config)
         this._imageKey = "";
         this._imageUrl = "";
         this._i18n = false;
+
+        if(typeof config === "string")
+        {
+            this._imageUrl = config;
+        }
     }
 };
 
@@ -92034,7 +92037,7 @@ KEN.Image.prototype.load = function(config)
         var locale = this._viewer["i18n"]["locale"];
         if(locale !== "")
         {
-            imageKey = this._getLocalizedCacheKey(this._viewer["i18n"]["locale"]);
+            imageKey = this._getLocalizedCacheKey(locale);
         }
         
         if(this._viewer["i18n"].hasValue(this._i18nImageUrl) === true)
@@ -92816,18 +92819,14 @@ KEN.Iframe.prototype._loadCompleteHandler = function()
  */
 KEN.Iframe.prototype._parseConfig = function(config)
 {
-    if(typeof config === "string")
+    if(typeof config === "object" && config !== null)
     {
-        this._url = config;
-    }
-    else if(typeof config === "object" && config !== null)
-    {
-        this._i18n = (typeof config["i18n"] === "string");
+        this._i18n = config["i18n"] || false;
 
         if(this._i18n === true)
         {
             this._url = "";
-            this._i18nUrl = config["i18n"];
+            this._i18nUrl = config["url"];
         }
         else
         {
@@ -92836,7 +92835,26 @@ KEN.Iframe.prototype._parseConfig = function(config)
     }
     else
     {
+        this._i18n = false;
         this._url = "";
+
+        if(typeof config === "string")
+        {
+            this._url = config;
+        }
+    }
+};
+
+/**
+ * Add locale change complete listener.
+ * @method KEN.Iframe#_addLocaleChangeListener
+ * @private
+ */
+KEN.Iframe.prototype._addLocaleChangeListener = function()
+{
+    if(this._viewer["i18n"]["onLocaleChangeComplete"].has(this._localeChangeComplete, this) === false)
+    {
+        this._viewer["i18n"]["onLocaleChangeComplete"].add(this._localeChangeComplete, this);
     }
 };
 
@@ -92854,10 +92872,7 @@ KEN.Iframe.prototype.load = function(config)
     {
         this._i18nUrlLocaleString = new KEN.LocaleString(this._viewer, this._i18nUrl);
 
-        if(this._viewer["i18n"]["onLocaleChangeComplete"].has(this._localeChangeComplete, this) === false)
-        {
-            this._viewer["i18n"]["onLocaleChangeComplete"].add(this._localeChangeComplete, this);
-        }
+        this._addLocaleChangeListener();
 
         url = this._i18nUrlLocaleString["value"];
     }
@@ -92909,10 +92924,50 @@ KEN.Iframe.prototype.destroy = function()
 };
 
 /**
+* Get and set the i18n iframe url.
+* @name KEN.Iframe#i18nUrl
+* @type {string} 
+*/
+KEN.Iframe.prototype.i18nUrl;
+Object.defineProperty(KEN.Iframe.prototype, "i18nUrl", 
+{
+    /** @this {KEN.Iframe} */
+    get: function()
+    {
+        return this._i18nUrl;
+    },
+
+    /** @this {KEN.Iframe} */
+    set: function(value)
+    {
+        if(typeof value === "string")
+        {
+            this._i18n = true;
+            this._i18nUrl = value;
+
+            var url;
+            if(this._i18nUrl !== "")
+            {
+                this._i18nUrlLocaleString = new KEN.LocaleString(this._viewer, this._i18nUrl);
+
+                this._addLocaleChangeListener();
+
+                url = this._i18nUrlLocaleString["value"];
+            }
+
+            if(typeof url !== "undefined")
+            {
+                this._loadIframe(url);
+            }
+        }
+    }
+});
+
+/**
 * Get and set the iframe url.<br>
 * You'll lose the i18n behavior if you use this setter.
 * @name KEN.Iframe#url
-* @type {boolean} 
+* @type {string} 
 */
 KEN.Iframe.prototype.url;
 Object.defineProperty(KEN.Iframe.prototype, "url", 
@@ -93676,12 +93731,7 @@ KEN.TextField.prototype._createLocaleStringEvent = function()
 KEN.TextField.prototype._localeChangeComplete = function()
 {
     this.log("_localeChangeComplete");
-    /*
-    if(this._i18n === false)
-    {
-        return;
-    }
-    */
+
     if(this._viewer["i18n"].hasValue(this._i18nKey) === true)
     {
         this["value"] = this._i18nLocaleString["value"];
@@ -93835,9 +93885,6 @@ KEN.TextField.prototype._destroyInput = function()
  */
 KEN.TextField.prototype._parseConfig = function(config)
 {
-    //Reset i18n flag
-    this._i18n = false;
-
     if(typeof config === "object" && config !== null)
     {
         if(config["color"])
@@ -93921,11 +93968,12 @@ KEN.TextField.prototype._parseConfig = function(config)
             this["editable"] = config["editable"];
         }
 
+        this._i18n = config["i18n"] || false;
+
         //If there is a i18n key in the configuration
-        if(typeof config["i18n"] === "string" && config["i18n"] !== "")
+        if(this._i18n === true)
         {
-            this._i18n = true;
-            this._i18nKey = config["i18n"];
+            this._i18nKey = config["value"];
         }
         else
         {
@@ -93934,6 +93982,7 @@ KEN.TextField.prototype._parseConfig = function(config)
     }
     else if(typeof config === "string")
     {
+        this._i18n = false;
         this["value"] = config;
     }
 };
@@ -93992,37 +94041,38 @@ KEN.TextField.prototype.destroy = function()
 };
 
 /**
-* Get and set the i18n key of the textfield.
-* @name KEN.TextField#i18nKey
+* Get and set the i18n key of the textfield value.
+* @name KEN.TextField#i18nValue
 * @type {string}
 */
-// Object.defineProperty(KEN.TextField.prototype, "i18nKey",
-// {
-//     /** @this {KEN.TextField} */
-//     get: function()
-//     {
-//         return this._i18nKey;
-//     },
+KEN.TextField.prototype.i18nValue;
+Object.defineProperty(KEN.TextField.prototype, "i18nValue",
+{
+    /** @this {KEN.TextField} */
+    get: function()
+    {
+        return this._i18nKey;
+    },
 
-//     /** @this {KEN.TextField} */
-//     set: function(value)
-//     {
-//         if(typeof value !== "string")
-//         {
-//             return;
-//         }
+    /** @this {KEN.TextField} */
+    set: function(value)
+    {
+        if(typeof value !== "string")
+        {
+            return;
+        }
 
-//         if(this._i18nKey === "")
-//         {
-//             this._createLocaleStringEvent();
-//         }
+        if(this._i18nKey === "")
+        {
+            this._createLocaleStringEvent();
+        }
 
-//         this._i18n = true;
-//         this._i18nKey = value;
+        this._i18n = true;
+        this._i18nKey = value;
 
-//         this._createLocaleString();
-//     }
-// });
+        this._createLocaleString();
+    }
+});
 
 /**
  * Get the flag to know if this TextField works in i18n mode.
@@ -94030,17 +94080,19 @@ KEN.TextField.prototype.destroy = function()
  * @type {boolean}
  * @readonly
  */
-// Object.defineProperty(KEN.TextField.prototype, "i18n",
-// {
-//     /** @this {KEN.TextField} */
-//     get: function()
-//     {
-//         return this._i18n;
-//     }
-// });
+KEN.TextField.prototype.i18n;
+Object.defineProperty(KEN.TextField.prototype, "i18n",
+{
+    /** @this {KEN.TextField} */
+    get: function()
+    {
+        return this._i18n;
+    }
+});
 
 /**
-* Get and set the value displayed by the text field.
+* Get and set the value displayed by the text field.<br>
+* You'll lose the i18n behavior if you use this setter.
 * @name KEN.TextField#value
 * @type {string}
 */
@@ -94061,6 +94113,7 @@ Object.defineProperty(KEN.TextField.prototype, "value",
             return;
         }
 
+        this._i18n = false;
         this._updateValue(value);
     }
 });
@@ -95572,7 +95625,7 @@ KEN.ButtonSkin.emptyStateImage =
 {
     key: "",
     url: "",
-    i18n: "",
+    i18n: false,
     keepRatio: true,
     maximized: false,
     alpha: 1
@@ -95587,7 +95640,7 @@ KEN.ButtonSkin.emptyStateImage =
 KEN.ButtonSkin.emptyStateLabel = 
 {
     value: "",
-    i18n: "",
+    i18n: false,
     color: "",
     fontFamily: "",
     fontWeight: ""
@@ -95629,7 +95682,7 @@ KEN.ButtonSkin.defaultStateImage =
 {
     key: "",
     url: "",
-    i18n: "",
+    i18n: false,
     keepRatio: true,
     maximized: false,
     alpha: 1
@@ -95644,7 +95697,7 @@ KEN.ButtonSkin.defaultStateImage =
 KEN.ButtonSkin.defaultStateLabel = 
 {
     value: "Button",
-    i18n: "",
+    i18n: false,
     color: "",
     fontFamily: "",
     fontWeight: ""
@@ -95741,7 +95794,7 @@ KEN.ButtonSkin.prototype.getProperty = function(property, state)
 KEN.ButtonSkin.prototype.hasImage = function(state)
 {
     var image = this.getProperty("image", state);
-    return (typeof image !== "undefined" && ((typeof image["url"] === "string" && image["url"] !== "") || (typeof image["i18n"] === "string" && image["i18n"] !== "")) );
+    return (typeof image !== "undefined" && (typeof image["url"] === "string" && image["url"] !== ""));
 };
 
 /**
@@ -95753,7 +95806,7 @@ KEN.ButtonSkin.prototype.hasImage = function(state)
 KEN.ButtonSkin.prototype.hasLabel = function(state)
 {
     var label = this.getProperty("label", state);
-    return (typeof label !== "undefined" && ((typeof label["value"] === "string" && label["value"] !== "") || (typeof label["i18n"] === "string" && label["i18n"] !== "")) );
+    return (typeof label !== "undefined" && (typeof label["value"] === "string" && label["value"] !== ""));
 };
 
 /**
