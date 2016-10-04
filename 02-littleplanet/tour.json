@@ -27,6 +27,18 @@
             {
                 "url": "./ocean.jpg"
             }
+        },
+
+        "camera":
+        {
+            "pitch":
+            {
+                "default": -90
+            },
+            "fov":
+            {
+                "default": 250
+            }
         }
     }]
 }

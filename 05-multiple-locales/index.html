@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>KEN - Little Planet view</title>
+    <title>KEN - Multiple locales</title>
 
     <!-- Little styling -->
     <style type="text/css">
@@ -47,7 +47,7 @@
     <div id="container"></div>
 
     <div id="instructions">
-        Scroll with the mouse to trigger the Little planet effect
+        Click on a flag to change the locale.
     </div>
 
     <!-- Include the KEN library -->
@@ -57,7 +57,14 @@
     <script type="text/javascript">
 
     // Create a viewer
-    var viewer = new KEN.Viewer(null, "container", {
+    var options =
+    {
+        plugins: {
+            prefix: "plugins/"
+        }
+    };
+
+    var viewer = new KEN.Viewer(options, "container", {
         boot: boot
     });
 

@@ -1,0 +1,124 @@
+{
+    "uid": "simpliest-tour",
+    "name": "Simpliest Tour",
+    "slug": "simpliest-tour",
+    "description": "This is the simpliest tour ever",
+    "defaultLoadUid": "scene-0",
+
+    "i18n":
+    {
+        "enabled": true,
+        "locales": [
+
+            {
+                "name": "en_US",
+                "files": [
+                {
+                    "key": "tour.en_US",
+                    "url": "./i18n/en_US/locale.json"
+                }]
+            },
+
+            {
+                "name": "fr_FR",
+                "files": [
+                {
+                    "key": "tour.fr_FR",
+                    "url": "./i18n/fr_FR/locale.json"
+                }]
+            },
+
+            {
+                "name": "jp_JP",
+                "files": [
+                {
+                    "key": "tour.jp_JP",
+                    "url": "./i18n/jp_JP/locale.json"
+                }]
+            }
+        ],
+
+        "default": 0
+    },
+
+    "scenes": [
+    {
+        "uid": "scene-0",
+        "name": "First scene",
+        "slug": "first-scene",
+        "description": "This is the first and only scene",
+
+        "media":
+        {
+            "uid": "scene-0-pano-0",
+            "type": "image",
+            "format": "equi",
+
+            "source":
+            {
+                "url": "./beach.jpg"
+            }
+        }
+    }],
+
+    "plugins":
+    {
+        "engines": [
+        {
+            "uid": "com.pluginmaker.localeselector",
+            "url": "LocaleSelector/",
+            "manifest": "manifest.json"
+        },
+        {
+            "uid": "com.pluginmaker.simpletext",
+            "url": "SimpleText/",
+            "manifest": "manifest.json"
+        }],
+
+        "instances": [
+        {
+            "uid": "localeselector",
+            "engine": "com.pluginmaker.localeselector",
+            "options":
+            {
+                "horizontalCenter": true,
+                "bottom": 100,
+                "flagWidth": 150,
+                "flagHeight": 100,
+                "fileName": "flag-{{locale}}.gif"
+            }
+        },
+        {
+            "uid": "text-welcome",
+            "engine": "com.pluginmaker.simpletext",
+            "options":
+            {
+                "config":
+                {
+                    "i18n": "pano-welcome",
+                    "fontSize": 50,
+                    "color": "white",
+                    "textAlign": "center"
+                },
+                "horizontalCenter": true,
+                "verticalCenter": true
+            }
+        },
+        {
+            "uid": "text-instructions",
+            "engine": "com.pluginmaker.simpletext",
+            "options":
+            {
+                "config":
+                {
+                    "i18n": "pano-instructions",
+                    "fontSize": 30,
+                    "color": "white",
+                    "textAlign": "center"
+                },
+                "horizontalCenter": true,
+                "bottom": 400
+            }
+        }]
+    }
+}

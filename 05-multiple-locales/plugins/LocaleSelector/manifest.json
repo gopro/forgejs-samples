@@ -1,0 +1,47 @@
+{
+    "uid": "com.pluginmaker.localeselector",
+    "name": "Locale Selector",
+    "slug": "localeselector",
+    "version": "1.0.0",
+    "versionName": "Locale Selector 1.0.0",
+    "description": "Add a locale selector, using flags, to the tour.",
+    "tags": ["i18n", "locale", "multilingual"],
+    
+    "author": 
+    {
+        "name": "GoPro - Kolor Team",
+        "website": "http://www.kolor.com"
+    },
+
+    "licence": "MIT",
+
+    "options":
+    {
+        "top": 0, 
+        "right": 0,
+        "bottom": 0,
+        "left": 0,
+        "horizontalCenter": false,
+        "verticalCenter": false,
+
+        "flagWidth": 62,
+        "flagHeight": 46,
+        "flagMargin": 5,
+
+        "baseURL": "{{plugin_url}}assets/",
+        "fileName": "flag_{{locale}}.png"
+    },
+
+    "actions":
+    [
+        "show",
+        "hide"
+    ],
+
+    "sources":
+    [
+        "src/LocaleSelector.js"
+    ],
+
+    "constructor": "KPlug.LocaleSelector"
+}
