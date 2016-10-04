@@ -56563,7 +56563,6 @@ KEN.Tags = (function(c)
         KEN.BaseObject.call(this, "Tags");
     };
 });
-
 /**
  * Manage UIDs inside KEN.<br>
  * UID is singleton, so if you have multiple instances in the same page you MUST avoid UID conflict.
@@ -56585,10 +56584,10 @@ KEN.UID = (function(c)
     Tmp.prototype.generate = function(prefix)
     {
         var p = prefix || "ken-uid";
-        var uid = p+"-"+this._uidIncrement;
+        var uid = p + "-" + this._uidIncrement;
         this._uidIncrement++;
 
-        if(KEN.UID.exists(uid) === false)
+        if (KEN.UID.exists(uid) === false)
         {
             return uid;
         }
@@ -56614,19 +56613,19 @@ KEN.UID = (function(c)
 
             for (var i in object)
             {
-                if(i === "uid")
+                if (i === "uid")
                 {
                     uid = object[i];
 
-                    if(typeof uid === "string")
+                    if (typeof uid === "string")
                     {
-                        if(KEN.UID.exists(uid))
+                        if (KEN.UID.exists(uid))
                         {
-                            throw "UID configuration not valid, uid "+uid+" already have an object binded to!";
+                            throw "UID configuration not valid, uid " + uid + " already have an object binded to!";
                         }
-                        else if(uids.indexOf(uid) !== -1)
+                        else if (uids.indexOf(uid) !== -1)
                         {
-                            throw "UID configuration not valid, uid "+uid+" is in double in config file!";
+                            throw "UID configuration not valid, uid " + uid + " is in double in config file!";
                         }
                         else
                         {
@@ -56638,7 +56637,7 @@ KEN.UID = (function(c)
                         throw "Found a uid in configuration that is not a string!";
                     }
                 }
-                else if (typeof(object[i]) === "object") 
+                else if (typeof(object[i]) === "object")
                 {
                     validateRecursive(object[i]);
                 }
@@ -56659,11 +56658,11 @@ KEN.UID = (function(c)
      */
     Tmp.prototype.register = function(object)
     {
-        if(typeof object === "object" && typeof object["uid"] === "string")
+        if (typeof object === "object" && typeof object["uid"] === "string")
         {
             var uid = object["uid"];
 
-            if(KEN.UID.exists(uid) === false)
+            if (KEN.UID.exists(uid) === false)
             {
                 this._objects[uid] = object;
                 return true;
@@ -56690,7 +56689,7 @@ KEN.UID = (function(c)
      */
     Tmp.prototype.unregister = function(object)
     {
-        if(typeof object === "object" && typeof object["uid"] === "string")
+        if (typeof object === "object" && typeof object["uid"] === "string")
         {
             var uid = object["uid"];
             this._objects[uid] = null;
@@ -56709,7 +56708,7 @@ KEN.UID = (function(c)
      */
     Tmp.prototype.getUids = function(className)
     {
-        if(typeof className === "undefined" || className === null)
+        if (typeof className === "undefined" || className === null)
         {
             return Object.keys(this._objects);
         }
@@ -56730,7 +56729,7 @@ KEN.UID = (function(c)
     {
         var filter = function(uid)
         {
-            if(KEN.UID.isTypeOf(uid, className))
+            if (KEN.UID.isTypeOf(uid, className))
             {
                 return true;
             }
@@ -56751,10 +56750,10 @@ KEN.UID = (function(c)
     Tmp.prototype.get = function(value, className)
     {
         //If no value is passed, the whole uids array is used as values
-        if(typeof value === "undefined" || value === null)
+        if (typeof value === "undefined" || value === null)
         {
             //If no value and no className, return all the objects.
-            if(typeof className !== "string")
+            if (typeof className !== "string")
             {
                 return this._objects;
             }
@@ -56762,25 +56761,25 @@ KEN.UID = (function(c)
             value = Object.keys(this._objects);
         }
 
-        if(typeof value === "string")
+        if (typeof value === "string")
         {
             return this._objects[value];
         }
-        else if(Array.isArray(value))
+        else if (Array.isArray(value))
         {
-            if(typeof className === "string")
+            if (typeof className === "string")
             {
                 value = KEN.UID.filterType(value, className);
             }
 
             var result = [];
             var uid;
-            for(var i = 0, ii = value.length; i < ii; i++)
+            for (var i = 0, ii = value.length; i < ii; i++)
             {
                 uid = value[i];
-                if(KEN.UID.exists(uid) === true)
+                if (KEN.UID.exists(uid) === true)
                 {
-                    result.push(this._objects[uid]); 
+                    result.push(this._objects[uid]);
                 }
             }
 
@@ -56815,7 +56814,7 @@ KEN.UID = (function(c)
     };
 
     return new Tmp();
-    
+
 })(function()
 {
     return function()
@@ -56847,7 +56846,6 @@ KEN.UID = (function(c)
         KEN.BaseObject.call(this, "UID");
     };
 });
-
 /**
  * The KEN.Tour manages groups and scenes, the logic and the data of the virtual tour.
  *
@@ -60850,7 +60848,10 @@ KEN.RenderManager.prototype._setRendererSize = function(size)
     }
 
     // Resize
-    this._renderDisplay.setSize(size);
+    if (vr === false) {
+        this._renderDisplay.setSize(size);
+    }
+
     this._webGLRenderer.setSize(size["width"], size["height"], keepCanvasStyle);
     this._canvasResolution = size;
 
@@ -61010,9 +61011,8 @@ KEN.RenderManager.prototype.setBackgroundRenderer = function(type)
 
     this._renderPipeline.addBackground(this._backgroundRenderer["renderTarget"]["texture"], fxSet);
 
-    if (this._hotspotsRenderer !== null &&
-        this._sceneConfig["hotspots"] !== null &&
-        this._sceneConfig["hotspots"].length > 0)
+    if (this._hotspotsRenderer !== null && this._sceneConfig["hotspots"] !== null 
+        && typeof this._sceneConfig["hotspots"] !== "undefined" && this._sceneConfig["hotspots"].length > 0)
     {
         this._hotspotsRenderer.loadConfig(this._sceneConfig["hotspots"]);
         this._renderPipeline.addRenderScenes(this._hotspotsRenderer["renderScenes"]);
@@ -62546,14 +62546,12 @@ KEN.RenderDisplay.prototype._boot = function()
         this._frameData = new VRFrameData();
     }
 
-    if ( typeof navigator.getVRDisplays === "function") {
+    if(KEN.Device.webVR === true)
+    {
         navigator.getVRDisplays().then( this._gotVRDisplays.bind(this) );
-    }
-    else {
-        throw(new Error("VRDisplay: missing api navigator.getVRDisplays"));
-    }
 
-    this._addFullscreenListener();
+        this._addFullscreenListener();
+    }
 };
 
 /**
@@ -66446,7 +66444,7 @@ KEN.Hotspot3D.prototype.constructor = KEN.Hotspot3D;
  * Call superclass boot when objects are created as it will trigger parse config
  * @private
  */
-KEN.Hotspot3D.prototype._boot = function() 
+KEN.Hotspot3D.prototype._boot = function()
 {
     KEN.HotspotBase.prototype._boot.call(this);
 
@@ -66454,7 +66452,7 @@ KEN.Hotspot3D.prototype._boot = function()
     this._transform = new KEN.HotspotTransform();
     this._material = new KEN.HotspotMaterial(this._viewer);
 
-    if(typeof this._config !== "undefined" && this._config !== null)
+    if (typeof this._config !== "undefined" && this._config !== null)
     {
         this._parseConfig(this._config);
     }
@@ -66470,16 +66468,16 @@ KEN.Hotspot3D.prototype._parseConfig = function(config)
 {
     KEN.HotspotBase.prototype._parseConfig.call(this, config);
 
-    if(typeof config.transform !== "undefined")
+    if (typeof config.transform !== "undefined")
     {
         this._transform.load(config.transform);
     }
-    
+
     this._material["onReady"].addOnce(this._materialReadyHandler, this);
-    
+
     var materialConfig;
-    
-    if(typeof config["material"] !== "undefined")
+
+    if (typeof config["material"] !== "undefined")
     {
         materialConfig = /** @type {HotspotMaterialConfig} */ config["material"];
     }
@@ -66488,14 +66486,14 @@ KEN.Hotspot3D.prototype._parseConfig = function(config)
         materialConfig = /** @type {HotspotMaterialConfig} */ KEN.HotspotMaterial.presets.TRANSPARENT;
     }
 
-    if(this._debug === true)
+    if (this._debug === true)
     {
         materialConfig = /** @type {HotspotMaterialConfig} */ KEN.Utils.extendMultipleObjects(materialConfig, KEN.HotspotMaterial.presets.DEBUG);
     }
 
     this._material.load(materialConfig);
 
-    if(typeof config["sound"] !== "undefined")
+    if (typeof config["sound"] !== "undefined")
     {
         this._sound = new KEN.HotspotSound(this._viewer);
         this._sound.load(config["sound"], config.transform);
@@ -66519,7 +66517,7 @@ KEN.Hotspot3D.prototype._materialReadyHandler = function()
  * @method KEN.Hotspot3D#_setupDoneCallback
  * @private
  */
-KEN.Hotspot3D.prototype._createHotspot3D = function() 
+KEN.Hotspot3D.prototype._createHotspot3D = function()
 {
     this._mesh.geometry = new THREE.PlaneGeometry(this._transform["size"]["width"], this._transform["size"]["height"], 2);
     this._mesh["material"] = this._material["material"];
@@ -66531,7 +66529,7 @@ KEN.Hotspot3D.prototype._createHotspot3D = function()
 
     this._ready = true;
 
-    if (this._onReady !== null) 
+    if (this._onReady !== null)
     {
         this._onReady.dispatch();
     }
@@ -66542,7 +66540,7 @@ KEN.Hotspot3D.prototype._createHotspot3D = function()
  * @method KEN.Hotspot3D#_setupPosition
  * @private
  */
-KEN.Hotspot3D.prototype._updatePosition = function() 
+KEN.Hotspot3D.prototype._updatePosition = function()
 {
     // inverse theta angle
     var theta = KEN.Math.wrap(Math.PI - KEN.Math.degToRad(this._transform["position"].theta), -Math.PI, Math.PI);
@@ -66555,11 +66553,11 @@ KEN.Hotspot3D.prototype._updatePosition = function()
 
     var position = KEN.Utils.toTHREESpherical(radius, theta, phi);
     this._mesh["position"].copy(new THREE.Vector3().setFromSpherical(position));
-    
+
     // Apply rotation
     var rx = -KEN.Math.degToRad(this._transform["rotation"].x); // pitch
     var ry = KEN.Math.degToRad(this._transform["rotation"].y); // yaw
-    var rz = KEN.Math.degToRad(this._transform["rotation"].z);        
+    var rz = KEN.Math.degToRad(this._transform["rotation"].z);
     this._mesh.rotateY(ry).rotateX(rx).rotateZ(rz);
 };
 
@@ -66568,13 +66566,13 @@ KEN.Hotspot3D.prototype._updatePosition = function()
  * @method KEN.Hotspot3D#_setupActions
  * @private
  */
-KEN.Hotspot3D.prototype._setupActions = function() 
+KEN.Hotspot3D.prototype._setupActions = function()
 {
     this._actions = [];
 
-    if (typeof this._config["actions"] !== "undefined") 
+    if (typeof this._config["actions"] !== "undefined")
     {
-        for (var i=0, ii = this._config["actions"].length; i<ii; i++) 
+        for (var i = 0, ii = this._config["actions"].length; i < ii; i++)
         {
             var actionSet = /** @type {KEN.ActionSet} */ (KEN.UID.get(this._config["actions"][i]));
             this._actions.push(actionSet);
@@ -66586,13 +66584,13 @@ KEN.Hotspot3D.prototype._setupActions = function()
  * Click method
  * @method KEN.Hotspot3D#click
  */
-KEN.Hotspot3D.prototype.click = function() 
+KEN.Hotspot3D.prototype.click = function()
 {
     this.log("CLICK: " + this._name);
 
-    for (var i=0, ii=this._actions.length; i<ii; i++) 
+    for (var i = 0, ii = this._actions.length; i < ii; i++)
     {
-        if (typeof this._actions[i]["events"]["onClick"] !== "undefined") 
+        if (typeof this._actions[i]["events"]["onClick"] !== "undefined")
         {
             this._actions[i]["events"]["onClick"].dispatch();
         }
@@ -66605,17 +66603,17 @@ KEN.Hotspot3D.prototype.click = function()
  * @param {THREE.Vector2} uv UV coordinates
  * @return {THREE.Vector4} RGBA color at given point
  */
-KEN.Hotspot3D.prototype.getColorForUVCoords = function(uv) 
+KEN.Hotspot3D.prototype.getColorForUVCoords = function(uv)
 {
 
     var displayObject = this._material["displayObject"];
 
-    if (displayObject === null) 
+    if (displayObject === null)
     {
         return null;
     }
 
-    if (typeof displayObject.getColorForUVCoords !== "undefined") 
+    if (typeof displayObject.getColorForUVCoords !== "undefined")
     {
         return displayObject.getColorForUVCoords(uv);
     }
@@ -66627,14 +66625,14 @@ KEN.Hotspot3D.prototype.getColorForUVCoords = function(uv)
  * Update hotspot content
  * @method KEN.Hotspot3D#update
  */
-KEN.Hotspot3D.prototype.update = function() 
+KEN.Hotspot3D.prototype.update = function()
 {
-    if(this._material !== null)
+    if (this._material !== null)
     {
         this._material.update();
     }
 
-    if(this._sound !== null)
+    if (this._sound !== null)
     {
         this._sound.update();
     }
@@ -66644,31 +66642,31 @@ KEN.Hotspot3D.prototype.update = function()
  * Destroy routine
  * @method KEN.Hotspot3D#destroy
  */
-KEN.Hotspot3D.prototype.destroy = function() 
+KEN.Hotspot3D.prototype.destroy = function()
 {
-    if(this._transform !== null)
+    if (this._transform !== null)
     {
         this._transform.destroy();
         this._transform = null;
     }
 
-    if(this._material !== null)
+    if (this._material !== null)
     {
         this._material.destroy();
         this._material = null;
     }
 
-	if(this._sound !== null)
+    if (this._sound !== null)
     {
         this._sound.destroy();
         this._sound = null;
     }
-    
-    if (this._mesh !== null) 
+
+    if (this._mesh !== null)
     {
         this._mesh.userData = null;
 
-        if (this._mesh.geometry !== null) 
+        if (this._mesh.geometry !== null)
         {
             this._mesh.geometry.dispose();
             this._mesh.geometry = null;
@@ -66677,7 +66675,7 @@ KEN.Hotspot3D.prototype.destroy = function()
         this._mesh = null;
     }
 
-    if(this._onReady !== null)
+    if (this._onReady !== null)
     {
         this._onReady.destroy();
         this._onReady = null;
@@ -66695,9 +66693,9 @@ KEN.Hotspot3D.prototype.destroy = function()
  * @name KEN.Hotspot3D#mesh
  * @readonly
  * @type {THREE.Mesh} 
-  */
+ */
 KEN.Hotspot3D.prototype.mesh;
-Object.defineProperty(KEN.Hotspot3D.prototype, "mesh", 
+Object.defineProperty(KEN.Hotspot3D.prototype, "mesh",
 {
     /** @this {KEN.Hotspot3D} */
     get: function()
@@ -66710,32 +66708,32 @@ Object.defineProperty(KEN.Hotspot3D.prototype, "mesh",
  * 3D hotspot over flag accessor
  * @name KEN.Hotspot3D#over
  * @type {boolean} 
-  */
+ */
 KEN.Hotspot3D.prototype.over;
-Object.defineProperty(KEN.Hotspot3D.prototype, "over", 
+Object.defineProperty(KEN.Hotspot3D.prototype, "over",
 {
     /** @this {KEN.Hotspot3D} */
     set: function(value)
     {
-        if (value === true) 
+        if (value === true)
         {
-            for (var i=0, ii=this._actions.length; i<ii; i++) 
+            for (var i = 0, ii = this._actions.length; i < ii; i++)
             {
-                if (typeof this._actions[i]["events"]["onOver"] !== "undefined") 
+                if (typeof this._actions[i]["events"]["onOver"] !== "undefined")
                 {
                     this.log("OVER: " + this._name);
                     this._actions[i]["events"]["onOver"].dispatch();
                     this._viewer["canvas"]["pointer"]["cursor"] = KEN.Pointer.cursors.POINTER;
-                }                    
+                }
             }
         }
-        else 
+        else
         {
-            if (this._over !== value) 
+            if (this._over !== value)
             {
-                for (var j=0, jj=this._actions.length; j<jj; j++) 
+                for (var j = 0, jj = this._actions.length; j < jj; j++)
                 {
-                    if (typeof this._actions[j]["events"]["onOut"] !== "undefined") 
+                    if (typeof this._actions[j]["events"]["onOut"] !== "undefined")
                     {
                         this.log("OUT: " + this._name);
                         this._actions[j]["events"]["onOut"].dispatch();
@@ -66754,7 +66752,6 @@ Object.defineProperty(KEN.Hotspot3D.prototype, "over",
         return this._over;
     }
 });
-
 /**
  * Hotspot sound handles the parse of the sound config and the loading of the needed sound ressource.
  *
@@ -67839,7 +67836,6 @@ Object.defineProperty(KEN.HotspotRenderer.prototype, "onReady",
     }
 });
 
-
 /**
  * Hotspot material handles the parse of the material config and the loading of the needed ressource.<br>
  * In the end it provides a THREE.MeshBasicMaterial when the ressources are loaded.
@@ -67915,7 +67911,7 @@ KEN.HotspotMaterial = function(viewer)
     /**
      * The display object used for the texture
      * @name  KEN.HotspotMaterial#_displayObject
-     * @type {(KEN.Image)}
+     * @type {(KEN.ImageScalable|KEN.DisplayObject)}
      * @private
      */
     this._displayObject = null;
@@ -68010,13 +68006,13 @@ KEN.HotspotMaterial.prototype._parseConfig = function(config)
     this._color = (typeof config["color"] === "string") ? config["color"] : 0xffffff;
 
     // Hotspot with image as background
-    if (typeof config.image !== "undefined" && config.image !== null) 
+    if (typeof config.image !== "undefined" && config.image !== null)
     {
         this._setupWithImage(config.image);
     }
 
     // Hotspot with plugin that provide a texture as background
-    else if (typeof config.plugin !== "undefined" && config.plugin !== null) 
+    else if (typeof config.plugin !== "undefined" && config.plugin !== null)
     {
         this._setupWithPlugin(config.plugin);
     }
@@ -68037,10 +68033,10 @@ KEN.HotspotMaterial.prototype._parseConfig = function(config)
 /**
  * Setup hotspot material with an image as texture.
  * @method KEN.HotspotMaterial#_setupWithImage
- * @param {string|Object} config - The image configuration you want to load and use as a texture.
+ * @param {(string|ImageConfig)} config - The image configuration you want to load and use as a texture.
  * @private
  */
-KEN.HotspotMaterial.prototype._setupWithImage = function(config) 
+KEN.HotspotMaterial.prototype._setupWithImage = function(config)
 {
     this._type = KEN.HotspotMaterial.types.IMAGE;
 
@@ -68054,12 +68050,12 @@ KEN.HotspotMaterial.prototype._setupWithImage = function(config)
  * @param {KEN.Event} event - load event
  * @private
  */
-KEN.HotspotMaterial.prototype._imageLoadCompleteHandler = function(event) 
-{ 
+KEN.HotspotMaterial.prototype._imageLoadCompleteHandler = function(event)
+{
     var image = event["emitter"];
 
     this.log("Texture load complete (Image) : " + image["element"].src);
-    this._createTexureFromImage(image);
+    this._createTextureFromImage(image);
 };
 
 /**
@@ -68068,7 +68064,7 @@ KEN.HotspotMaterial.prototype._imageLoadCompleteHandler = function(event)
  * @param  {KEN.Image} image - The KEN.Image used to create the texture.
  * @private
  */
-KEN.HotspotMaterial.prototype._createTexureFromImage = function(image)
+KEN.HotspotMaterial.prototype._createTextureFromImage = function(image)
 {
     this._displayObject = image;
 
@@ -68093,22 +68089,22 @@ KEN.HotspotMaterial.prototype._createTexureFromImage = function(image)
  * The plugin have to have a "texture" public property.
  * @private
  */
-KEN.HotspotMaterial.prototype._setupWithPlugin = function(config) 
+KEN.HotspotMaterial.prototype._setupWithPlugin = function(config)
 {
     this._type = KEN.HotspotMaterial.types.PLUGIN;
 
     var plugin = this._viewer["plugins"].get(config);
-    
-    if (plugin === null) 
+
+    if (plugin === null)
     {
         throw new Error("No plugin with uid " + config);
     }
 
-    if (plugin["instanceReady"] === true) 
+    if (plugin["instanceReady"] === true)
     {
-        this._createTexureFromPlugin(plugin);
+        this._createTextureFromPlugin(plugin);
     }
-    else 
+    else
     {
         plugin["onInstanceReady"].addOnce(this._pluginInstanceReadyHandler, this);
     }
@@ -68120,25 +68116,25 @@ KEN.HotspotMaterial.prototype._setupWithPlugin = function(config)
  * @param {KEN.Event} event - instance ready event
  * @private
  */
-KEN.HotspotMaterial.prototype._pluginInstanceReadyHandler = function(event) 
+KEN.HotspotMaterial.prototype._pluginInstanceReadyHandler = function(event)
 {
     var plugin = event["emitter"];
-    
-    if (plugin["instance"] === null || plugin["instanceReady"] === false) 
+
+    if (plugin["instance"] === null || plugin["instanceReady"] === false)
     {
         throw new Error("Plugin instance not available");
     }
 
-    this._createTexureFromPlugin(plugin);
+    this._createTextureFromPlugin(plugin);
 };
 
 /**
  * Create a texture from a plugin that provides a display object on a "texture" property.
- * @method KEN.HotspotMaterial#_createTexureFromPlugin
+ * @method KEN.HotspotMaterial#_createTextureFromPlugin
  * @param {KEN.Plugin} plugin - plugin that provides the texture.
  * @private
  */
-KEN.HotspotMaterial.prototype._createTexureFromPlugin = function(plugin) 
+KEN.HotspotMaterial.prototype._createTextureFromPlugin = function(plugin)
 {
     this._displayObject = plugin["instance"]["texture"];
 
@@ -68162,7 +68158,7 @@ KEN.HotspotMaterial.prototype._createTexureFromPlugin = function(plugin)
  * @private
  * @todo Make a config to use only graphical properties
  */
-KEN.HotspotMaterial.prototype._setupWithGraphics = function() 
+KEN.HotspotMaterial.prototype._setupWithGraphics = function()
 {
     this._type = KEN.HotspotMaterial.types.GRAPHICS;
 
@@ -68185,16 +68181,18 @@ KEN.HotspotMaterial.prototype._setupComplete = function()
  * @method KEN.HotspotMaterial#_createMaterial
  * @private
  */
-KEN.HotspotMaterial.prototype._createMaterial = function() 
+KEN.HotspotMaterial.prototype._createMaterial = function()
 {
     /** @type {MeshBasicMaterialOptions} */
-    var materialOptions = { side: THREE.FrontSide };
+    var materialOptions = {
+        side: THREE.FrontSide
+    };
     this._material = new THREE.MeshBasicMaterial(materialOptions);
 
     this._material["opacity"] = this._opacity;
     this._material["color"] = new THREE.Color(this._color);
 
-    if (this._texture !== null) 
+    if (this._texture !== null)
     {
         //Apply transparent parameter only if we have a texture.
         this._material["transparent"] = this._transparent;
@@ -68203,7 +68201,7 @@ KEN.HotspotMaterial.prototype._createMaterial = function()
         this._material.needsUpdate = true;
     }
 
-    if(this._onReady !== null)
+    if (this._onReady !== null)
     {
         this._onReady.dispatch();
     }
@@ -68237,21 +68235,24 @@ KEN.HotspotMaterial.prototype.update = function()
  */
 KEN.HotspotMaterial.prototype.destroy = function()
 {
-    this._texture.dispose();
-    this._texture = null;
+    if (this._texture !== null)
+    {
+        this._texture.dispose();
+        this._texture = null;
+    }
 
     this._material.dispose();
     this._material = null;
 
     this._viewer = null;
 
-    if(this._type === KEN.HotspotMaterial.types.IMAGE && this._displayObject !== null)
+    if (this._type === KEN.HotspotMaterial.types.IMAGE && this._displayObject !== null)
     {
         this._displayObject.destroy();
     }
     this._displayObject = null;
 
-    if(this._onReady !== null)
+    if (this._onReady !== null)
     {
         this._onReady.destroy();
         this._onReady = null;
@@ -68267,7 +68268,7 @@ KEN.HotspotMaterial.prototype.destroy = function()
  * @type {string}
  */
 KEN.HotspotMaterial.prototype.type;
-Object.defineProperty(KEN.HotspotMaterial.prototype, "type", 
+Object.defineProperty(KEN.HotspotMaterial.prototype, "type",
 {
     /** @this {KEN.HotspotMaterial} */
     get: function()
@@ -68283,7 +68284,7 @@ Object.defineProperty(KEN.HotspotMaterial.prototype, "type",
  * @type {THREE.Texture}
  */
 KEN.HotspotMaterial.prototype.texture;
-Object.defineProperty(KEN.HotspotMaterial.prototype, "texture", 
+Object.defineProperty(KEN.HotspotMaterial.prototype, "texture",
 {
     /** @this {KEN.HotspotMaterial} */
     get: function()
@@ -68299,7 +68300,7 @@ Object.defineProperty(KEN.HotspotMaterial.prototype, "texture",
  * @type {THREE.MeshBasicMaterial}
  */
 KEN.HotspotMaterial.prototype.material;
-Object.defineProperty(KEN.HotspotMaterial.prototype, "material", 
+Object.defineProperty(KEN.HotspotMaterial.prototype, "material",
 {
     /** @this {KEN.HotspotMaterial} */
     get: function()
@@ -68315,7 +68316,7 @@ Object.defineProperty(KEN.HotspotMaterial.prototype, "material",
  * @type {number}
  */
 KEN.HotspotMaterial.prototype.opacity;
-Object.defineProperty(KEN.HotspotMaterial.prototype, "opacity", 
+Object.defineProperty(KEN.HotspotMaterial.prototype, "opacity",
 {
     /** @this {KEN.HotspotMaterial} */
     get: function()
@@ -68331,7 +68332,7 @@ Object.defineProperty(KEN.HotspotMaterial.prototype, "opacity",
  * @type {boolean}
  */
 KEN.HotspotMaterial.prototype.transparent;
-Object.defineProperty(KEN.HotspotMaterial.prototype, "transparent", 
+Object.defineProperty(KEN.HotspotMaterial.prototype, "transparent",
 {
     /** @this {KEN.HotspotMaterial} */
     get: function()
@@ -68347,7 +68348,7 @@ Object.defineProperty(KEN.HotspotMaterial.prototype, "transparent",
  * @type {(string|number)}
  */
 KEN.HotspotMaterial.prototype.color;
-Object.defineProperty(KEN.HotspotMaterial.prototype, "color", 
+Object.defineProperty(KEN.HotspotMaterial.prototype, "color",
 {
     /** @this {KEN.HotspotMaterial} */
     get: function()
@@ -68360,10 +68361,10 @@ Object.defineProperty(KEN.HotspotMaterial.prototype, "color",
  * Get the displayObject of this hotspot material.
  * @name KEN.HotspotMaterial#displayObject
  * @readonly
- * @type {KEN.DisplayObject}
+ * @type {(KEN.ImageScalable|KEN.DisplayObject)}
  */
 KEN.HotspotMaterial.prototype.displayObject;
-Object.defineProperty(KEN.HotspotMaterial.prototype, "displayObject", 
+Object.defineProperty(KEN.HotspotMaterial.prototype, "displayObject",
 {
     /** @this {KEN.HotspotMaterial} */
     get: function()
@@ -68380,22 +68381,19 @@ Object.defineProperty(KEN.HotspotMaterial.prototype, "displayObject",
  * @type {KEN.EventDispatcher}
  */
 KEN.HotspotMaterial.prototype.onReady;
-Object.defineProperty(KEN.HotspotMaterial.prototype, "onReady", 
+Object.defineProperty(KEN.HotspotMaterial.prototype, "onReady",
 {
     /** @this {KEN.HotspotMaterial} */
     get: function()
     {
-        if(this._onReady === null)
+        if (this._onReady === null)
         {
             this._onReady = new KEN.EventDispatcher(this);
         }
-        
+
         return this._onReady;
     }
 });
-
-
-
 
 /**
  * HotspotTransform handle the parsing of the position rotation and size of a 3d Hotspot.
@@ -76373,7 +76371,7 @@ KEN.PlaylistTrack.prototype.play = function()
 {
     if(this._sound === null)
     {
-        this._sound = new KEN.Sound(this._viewer, this._uid, this._url);
+        this._sound = new KEN.Sound(this._viewer, this._uid + "-sound", this._url);
         this._sound["volume"] = this._viewer["playlists"]["volume"];
 
         this._bindEvents();
@@ -80279,7 +80277,7 @@ KEN.PluginObjectFactory.prototype.string = function(key)
 /**
  * Add a {@link KEN.Textfield}.
  * @method KEN.PluginObjectFactory#textField
- * @param  {string} config - Object configuration.
+ * @param  {(string|TextFieldConfig)} config - Object configuration.
  * @return {KEN.TextField} Returns the created KEN.Textfield.
  */
 KEN.PluginObjectFactory.prototype.textField = function(config)
@@ -80396,7 +80394,7 @@ KEN.PluginObjectFactory.prototype.sprite = function(config, relativeToPluginPath
 /**
  * Add a {@link KEN.Button}.
  * @method KEN.PluginObjectFactory#button
- * @param  {Object} config - The button configuration object.
+ * @param  {ButtonConfig} config - The button configuration object.
  * @return {KEN.Button} Returns the created KEN.Button.
  */
 KEN.PluginObjectFactory.prototype.button = function(config)
@@ -80420,6 +80418,7 @@ KEN.PluginObjectFactory.prototype.button = function(config)
 KEN.PluginObjectFactory.prototype.video = function(key, config, format, qualityMode)
 {
     var video;
+
     if(typeof format !== undefined && format === KEN.VideoFormat.DASH)
     {
         video = new KEN.VideoDash(this._viewer, key, config, qualityMode);
@@ -80428,6 +80427,7 @@ KEN.PluginObjectFactory.prototype.video = function(key, config, format, qualityM
     {
         video = new KEN.VideoHTML5(this._viewer, key, config, qualityMode);
     }
+
     video["onDestroy"].addOnce(this._destroyObjectHandler, this);
 
     this._objects.push(video);
@@ -80973,6 +80973,15 @@ KEN.Device = (function(c)
             this.webGL = false;
         }
 
+        if (typeof navigator.getVRDisplays === "function")
+        {
+            this.webVR = true;
+        }
+        else
+        {
+            this.webVR = false;
+        }
+
         this.JSON = (typeof window.JSON === "object" && typeof window.JSON.parse === "function" && typeof window.JSON.stringify === "function");
 
         this.geolocation = (typeof navigator.geolocation === "object");
@@ -81364,6 +81373,8 @@ KEN.Device = (function(c)
     {
         this.ua = navigator["userAgent"];
 
+        this.language = ((navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage || "");
+
         this._checkOS();
         this._checkBrowsers();
         this._checkDevice();
@@ -81530,6 +81541,13 @@ KEN.Device = (function(c)
          * @type {string}
          */
         this.ua = "";
+
+        /**
+         * The browser language.
+         * @name KEN.Device#language
+         * @type {string}
+         */
+        this.language = "";
 
         //OS
 
@@ -82058,6 +82076,13 @@ KEN.Device = (function(c)
          * @type {boolean}
          */
         this.webGL = false;
+
+        /**
+         * Is WebVR available?
+         * @name KEN.Device#webVR
+         * @type {boolean}
+         */
+        this.webVR = false;
 
         /**
          * Is file available?
@@ -83503,11 +83528,11 @@ KEN.LocaleManager.prototype._parseMainConfig = function(config)
     if(typeof config.autoDetect !== "undefined" && config.autoDetect === true && KEN.Device.language !== "")
     {
         //change the default config option
-        this._defaultLocale = KEN.Device.language.toLowerCase();
+        this._defaultLocale = KEN.Device.language;
     }
     else if(typeof config["default"] === "string")
     {
-        this._defaultLocale = config["default"].toLowerCase();
+        this._defaultLocale = config["default"];
     }
 };
 
@@ -83549,7 +83574,7 @@ KEN.LocaleManager.prototype._parseConfig = function(config)
             // set the default locale for the manager only once
             if(this._indexOfLocale(this._defaultLocale) === -1)
             {
-                this._defaultLocale = config["locales"][0]["name"].toLowerCase();
+                this._defaultLocale = config["locales"][0]["name"];
             }
             this._setLocaleIndex(this._indexOfLocale(config["locales"][0]["name"]));
         }
@@ -83570,7 +83595,7 @@ KEN.LocaleManager.prototype._indexOfLocale = function(name)
     {
         locale = this._locales.get(i);
 
-        if(locale["name"] === name.toLowerCase()) 
+        if(locale["name"].toLowerCase() === name.toLowerCase()) 
         {
             return i;
         }
@@ -83635,7 +83660,7 @@ KEN.LocaleManager.prototype._addLocale = function(config)
     locale.addConfig(config);
     
     // If this is the current locale in use, load the files
-    if(i === this._localeIndex || this._defaultLocale === config["name"].toLowerCase())
+    if(i === this._localeIndex || this._defaultLocale.toLowerCase() === config["name"].toLowerCase())
     {
         locale.loadFiles();
 
@@ -84169,7 +84194,7 @@ KEN.Locale.prototype.addConfig = function(config)
 {
     if(this._name === "" && typeof config["name"] === "string") 
     {
-        this._name = config["name"].toLowerCase();
+        this._name = config["name"];
     }
 
     if(typeof config.files !== "undefined")
@@ -90424,13 +90449,23 @@ Object.defineProperty(KEN.DisplayObject.prototype, "borderRadius",
     /** @this {KEN.DisplayObject} */
     set: function(value)
     {
-        if(typeof value !== "number" || typeof value !== "string" || value === this._borderRadius)
+        if((typeof value !== "number" && typeof value !== "string") || value === this._borderRadius)
+        {
+            return;
+        }
+
+        if (typeof value === "string")
+        {
+            value = parseInt(value, 10);
+        }
+
+        if (isNaN(value))
         {
             return;
         }
 
         this._borderRadius = value;
-        this._dom.style["borderRadius"] = this._borderRadius+"px";
+        this._dom.style["borderRadius"] = this._borderRadius + "px";
     }
 });
 
@@ -92288,7 +92323,7 @@ Object.defineProperty(KEN.Image.prototype, "onLoadComplete",
  * 
  * @constructor KEN.ImageScalable
  * @param {KEN.Viewer} viewer - The Viewer reference.
- * @param {(string|Object)} config - Image configuration object or just tan image URL.
+ * @param {(string|ImageConfig)} config - Image configuration object or just tan image URL.
  * @extends {KEN.Image}
  */
 KEN.ImageScalable = function(viewer, config)
@@ -92448,7 +92483,7 @@ Object.defineProperty(KEN.ImageScalable.prototype, "scaleHeight",
  *
  * @constructor KEN.Sprite
  * @param {KEN.Viewer} viewer - The Viewer reference.
- * @param {Object} config - Configuration object.
+ * @param {(string|ImageConfig)} config - Configuration object.
  * @extends {KEN.Image}
  */
 KEN.Sprite = function(viewer, config)
@@ -93144,7 +93179,7 @@ KEN.TextField = function(viewer, config)
     /**
      * Button Configuration object.
      * @name  KEN.TextField#_config
-     * @type {Object|string|undefined}
+     * @type {(TextFieldConfig|string|undefined)}
      * @private
      */
     this._config = config;
@@ -93216,7 +93251,7 @@ KEN.TextField = function(viewer, config)
     /**
      * Padding of the text.
      * @name  KEN.TextField#_padding
-     * @type {number|string}
+     * @type {(number|string)}
      * @private
      */
     this._padding = 0;
@@ -93340,7 +93375,7 @@ KEN.TextField = function(viewer, config)
     /**
      * The font-size CSS value. Can be "", "inherit", "medium", "xx-small", "x-small", "small", "large", "x-large", "xx-large", "smaller", "larger", % or length.
      * @name  KEN.TextField#_fontSize
-     * @type {number|string}
+     * @type {(number|string)}
      * @private
      */
     this._fontSize = "";
@@ -93356,7 +93391,7 @@ KEN.TextField = function(viewer, config)
     /**
      * The font-weight CSS value. Can be "", "inherit", "normal" (400), "bold" (700), "bolder", "lighter" or a value between 100 and 900.
      * @name  KEN.TextField#_fontWeight
-     * @type {string|number}
+     * @type {(string|number)}
      * @private
      */
     this._fontWeight = "";
@@ -93372,7 +93407,7 @@ KEN.TextField = function(viewer, config)
     /**
      * The line-height CSS value. Can be "", "inherit", "normal", % or length.
      * @name  KEN.TextField#_lineHeight
-     * @type {string|number}
+     * @type {(string|number)}
      * @private
      */
     this._lineHeight = "";
@@ -93380,7 +93415,7 @@ KEN.TextField = function(viewer, config)
     /**
      * This is the dom element into which the value will be injected
      * @name  KEN.TextField#_span
-     * @type {Element|HTMLSpanElement}
+     * @type {(Element|HTMLSpanElement)}
      * @private
      */
     this._span = null;
@@ -93388,7 +93423,7 @@ KEN.TextField = function(viewer, config)
     /**
      * The textarea element to replace the textfield once set as "editable".
      * @name KEN.TextField#_textArea
-     * @type {Element|HTMLTextAreaElement}
+     * @type {(Element|HTMLTextAreaElement)}
      * @private
      */
     this._textArea = null;
@@ -93518,7 +93553,7 @@ KEN.TextField.prototype._notifyShow = function()
 /**
  * Update the dom with a new value.
  * @method KEN.TextField#_updateValue
- * @param {number|string} value - The new value to display.
+ * @param {(number|string)} value - The new value to display.
  * @private
  */
 KEN.TextField.prototype._updateValue = function(value)
@@ -93906,7 +93941,7 @@ KEN.TextField.prototype._parseConfig = function(config)
 /**
  * Load a textfield configuration.
  * @method  KEN.TextField#load
- * @param  {(Object|string)} config - The config object to load, if it's a simple string will try to get i18n from the string.
+ * @param  {(TextFieldConfig|string)} config - The config object to load, if it's a simple string will try to get i18n from the string.
  */
 KEN.TextField.prototype.load = function(config)
 {
@@ -94123,7 +94158,7 @@ Object.defineProperty(KEN.TextField.prototype, "fontFamily",
 /**
 * Get and set the line-height CSS of the text.
 * @name KEN.TextField#fontSize
-* @type {number|string}
+* @type {(number|string)}
 */
 KEN.TextField.prototype.fontSize;
 Object.defineProperty(KEN.TextField.prototype, "fontSize",
@@ -94186,7 +94221,7 @@ Object.defineProperty(KEN.TextField.prototype, "fontStyle",
 /**
 * Get and set the font-weight CSS of the text.
 * @name KEN.TextField#fontWeight
-* @type {string|number}
+* @type {(string|number)}
 */
 KEN.TextField.prototype.fontWeight;
 Object.defineProperty(KEN.TextField.prototype, "fontWeight",
@@ -94242,7 +94277,7 @@ Object.defineProperty(KEN.TextField.prototype, "fontVariant",
 /**
 * Get and set the line-height CSS of the text.
 * @name KEN.TextField#lineHeight
-* @type {number|string}
+* @type {(number|string)}
 */
 KEN.TextField.prototype.lineHeight;
 Object.defineProperty(KEN.TextField.prototype, "lineHeight",
@@ -94438,7 +94473,7 @@ Object.defineProperty(KEN.TextField.prototype, "autoHeight",
 /**
 * Get and set the padding CSS value of the text.
 * @name KEN.TextField#padding
-* @type {number|string}
+* @type {(number|string)}
 */
 KEN.TextField.prototype.padding;
 Object.defineProperty(KEN.TextField.prototype, "padding",
@@ -94726,7 +94761,7 @@ Object.defineProperty(KEN.TextField.prototype, "onValueChange",
  *
  * @constructor KEN.Button
  * @param {KEN.Viewer} viewer - {@link KEN.Viewer} reference.
- * @param {Object=} config - The button config.
+ * @param {ButtonConfig=} config - The button config.
  * @extends {KEN.DisplayObjectContainer}
  *
  * @todo  Add tween for properties
@@ -94737,7 +94772,7 @@ KEN.Button = function(viewer, config)
     /**
      * Button configuration object.
      * @name KEN.Button#_config
-     * @type {ButtonConfig}
+     * @type {?ButtonConfig}
      * @private
      */
     this._config = config || null;
@@ -94745,7 +94780,7 @@ KEN.Button = function(viewer, config)
     /**
      * Object that handles the button skins.
      * @name KEN.Button#_skins
-     * @type {!Object<string, KEN.ButtonSkin>}
+     * @type {Object}
      * @private
      */
     this._skins = {};
@@ -95016,6 +95051,7 @@ KEN.Button.prototype._applyState = function(state)
     //this._itemsToLoad = 0;
 
     var hasImage = skin.hasImage(this._state);
+    
     // if(hasImage === true)
     // {
     //     this._itemsToLoad ++;
@@ -95049,21 +95085,21 @@ KEN.Button.prototype._applyState = function(state)
     this._autoWidth = /** @type {boolean} */ (skin.getProperty("autoWidth", this._state));
     this._autoHeight = /** @type {boolean} */ (skin.getProperty("autoHeight", this._state));
 
-    var label = skin.getProperty("label", this._state);
+    var label = /** @type {(string|TextFieldConfig)} */ (skin.getProperty("label", this._state)); //@todo !!!
     if(typeof label !== "undefined")
     {
-        this._label.load(/** @type {Object} */ (label));
+        this._label.load(label);
     }
 
     // Image =================================
     
     if(hasImage === true)
     {
-        this._image.load(/** @type {string|Object} */ (skin.getProperty("image", this._state)));
+        this._image.load(/** @type {(string|ImageConfig)} */ (skin.getProperty("image", this._state)));
     }
     else
     {
-        this._image.load(null);
+        // this._image.load(null);
     }
 
     // if(hasImage === false && hasLabel === false)
@@ -95185,7 +95221,7 @@ KEN.Button.prototype._updateAutoSize = function()
 
         if(height !== this["pixelHeight"])
         {
-            this._notifyResize({ property: "autoWidth" });
+            this._notifyResize({ property: "autoHeight" });
         }
     }
 };
@@ -95194,24 +95230,46 @@ KEN.Button.prototype._updateAutoSize = function()
  * Parse a Button configuration
  * @method KEN.Button#_parseConfig
  * @private
- * @param  {ButtonConfig|KEN.ButtonSkin} config - The configuration to parse.
+ * @param  {(ButtonConfig|KEN.ButtonSkin)} config - The configuration to parse.
  */
 KEN.Button.prototype._parseConfig = function(config)
 {
     if(typeof config !== "undefined" && config !== null)
     {
         //If there is an array of skins, add them
-        if(config !== null && KEN.Utils.isArrayOf(config["skins"], "ButtonSkin") === true)
+        if(KEN.Utils.isArrayOf(config["skins"], "ButtonSkin") === true)
         {
             for(var i = 0, ii = config["skins"].length; i < ii; i++)
             {
                 this.addSkin(config["skins"][i]);
             }
         }
+        else
+        {
+            //convert skins object definition into KEN.ButtonSkin objects
+            if(typeof config["skins"] === "object" && config["skins"].length > 0)
+            {
+                var skin;
+                for(var j = 0, jj = config["skins"].length; j < jj; j++)
+                {
+                    skin = new KEN.ButtonSkin(config["skins"][j]["name"], config["skins"][j].states);
+                    this.addSkin(skin);
+                }
+            }
+        }
         //If there is a single skin in config, add it
         if(KEN.Utils.isTypeOf(config["skin"], "ButtonSkin"))
         {
             this.addSkin(config["skin"]);
+        }
+        else
+        {
+            //convert skin object definition into KEN.ButtonSkin
+            if(typeof config["skin"] === "object")
+            {
+                var singleSkin = new KEN.ButtonSkin(config["skin"]["name"], config["skin"].states);
+                this.addSkin(singleSkin);
+            }
         }
 
         if(KEN.Utils.isTypeOf(config["default"], "string") === true && this.hasSkin(config["default"]) === true)
@@ -95221,22 +95279,25 @@ KEN.Button.prototype._parseConfig = function(config)
     }
 
     //If no skin found, add the default skin
-    if(Object.keys(this._skins).length === 0)
+    var skins = this._skins || {};
+    if(Object.keys(skins).length === 0)
     {
-        this._skins["default"] = new KEN.ButtonSkin("default");
+        var defaultSkin = new KEN.ButtonSkin("default");
+        this.addSkin(defaultSkin);
+        // this._skins["default"] = new KEN.ButtonSkin("default");
     }
 
     //If no skin have been chosen pick the first one
     if(this._defaultSkin === "")
-    {   
-        this._defaultSkin = this._skins[Object.keys(this._skins)[0]]["name"];
+    {
+        this._defaultSkin = this._skins[Object.keys(skins)[0]]["name"];
     }
 };
 
 /**
  * Load a button configuration.
  * @method  KEN.Button#load
- * @param  {ButtonConfig|KEN.ButtonSkin} config - The button configuration to load.
+ * @param  {(ButtonConfig|KEN.ButtonSkin)} config - The button configuration to load.
  */
 KEN.Button.prototype.load = function(config)
 {
@@ -95257,8 +95318,8 @@ KEN.Button.prototype.addSkin = function(skin, setup)
         throw "KEN.Button: Invalid button skin!";
     }
 
+    skin.setDefaultFromState(KEN.Button.states.OUT);
     this._skins[skin["name"]] = skin; 
-    skin.setDefaultFromState("out");
 
     if(setup === true)
     {
@@ -95269,7 +95330,7 @@ KEN.Button.prototype.addSkin = function(skin, setup)
 /**
  * Set the button skin
  * @method KEN.Button#setSkin
- * @param {(string|KEN.ButtonSkin)} value - Either an existing skin name or a {@link KEN.ButtonSkin}
+ * @param {(string|KEN.ButtonSkin)} value - Either an existing skin name or an existing or a new {@link KEN.ButtonSkin}
  */
 KEN.Button.prototype.setSkin = function(value)
 {
@@ -95293,7 +95354,7 @@ KEN.Button.prototype.setSkin = function(value)
 /**
  * Does the button has a specified skin ?
  * @param  {string}  name - The name of the skin you want to check.
- * @return {boolean} Returns true if the button have a skin with aked name.
+ * @return {boolean} Returns true if the button have a skin with asked name.
  */
 KEN.Button.prototype.hasSkin = function(name)
 {
@@ -95306,8 +95367,40 @@ KEN.Button.prototype.hasSkin = function(name)
  */
 KEN.Button.prototype.updateSkin = function()
 {
-    this._skins[this._skin].setDefaultFromState("out"); 
+    this._skins[this._skin].setDefaultFromState(KEN.Button.states.OUT); 
     this._applySkin(this._skin);
+};
+
+/**
+ * Destroy image method.
+ * @method KEN.Button#_destroyImage
+ */
+KEN.Button.prototype._destroyImage = function()
+{
+    if(this._image !== null)
+    {
+        this._image["onLoadComplete"].remove(this._itemLoadComplete, this);
+        this._image["onResize"].remove(this._itemResizeHandler, this);
+
+        this.removeChild(this._image, true);
+        this._image = null;
+    }
+};
+
+/**
+ * Destroy label method.
+ * @method KEN.Button#_destroyLabel
+ */
+KEN.Button.prototype._destroyLabel = function()
+{
+    if(this._label !== null)
+    {
+        this._label["onLoadComplete"].remove(this._itemLoadComplete, this);
+        this._label["onResize"].remove(this._itemResizeHandler, this);
+
+        this.removeChild(this._label, true);
+        this._label = null;
+    }
 };
 
 /**
@@ -95316,13 +95409,29 @@ KEN.Button.prototype.updateSkin = function()
  */
 KEN.Button.prototype.destroy = function()
 {
+    this._viewer["i18n"]["onLocaleChangeComplete"].remove(this._localeChangeCompleteHandler, this);
+
+    if(typeof this._skins !== "undefined" && this._skins.length > 0)
+    {
+        for(var i in this._skins)
+        {
+            if(this._skins.hasOwnProperty(i))
+            {
+                this._skins[i].destroy();
+            }
+        }
+    }
     this._skins = {};
+
+    this._destroyImage();
+
+    this._destroyLabel();
 
     KEN.DisplayObjectContainer.prototype.destroy.call(this);
 };
 
 /**
- * Get the skins list
+ * Get the skins list.
  * @name  KEN.Button#skins
  * @readonly 
  * @type {Object}
@@ -95338,8 +95447,8 @@ Object.defineProperty(KEN.Button.prototype, "skins",
 });
 
 /**
- * Get and set the current skin
- * @name  KEN.Button#skins
+ * Get and set the current skin.
+ * @name  KEN.Button#skin
  * @type {KEN.ButtonSkin}
  */
 KEN.Button.prototype.skin;
@@ -95424,19 +95533,28 @@ Object.defineProperty(KEN.Button.prototype, "autoHeight",
 KEN.ButtonSkin = function(name, states)
 {
     /**
+     * Button skin name.
+     * @name KEN.ButtonSkin#_config
      * @type {string}
+     * @private
      */
     this._name = name || "";
 
     /**
-     * @type {Object}
+     * Default skin state.
+     * @name KEN.ButtonSkin#_defaultState
+     * @type {ButtonSkinStateConfig}
+     * @private
      */
-    this._defaultState = KEN.Utils.extendSimpleObject(KEN.ButtonSkin.defaultState, {});
+    this._defaultState = /** @type {ButtonSkinStateConfig} */ (KEN.Utils.extendSimpleObject(KEN.ButtonSkin.defaultState, {}));
 
     /**
-     * @type {Object}
+     * List of skin states.
+     * @name KEN.ButtonSkin#_states
+     * @type {Object<ButtonSkinStateConfig>}
+     * @private
      */
-    this._states = KEN.Utils.extendSimpleObject((states || {}), {"out": {}, "over": {}, "down": {}});
+    this._states = /** @type {Object<ButtonSkinStateConfig>} */ (KEN.Utils.extendSimpleObject((states || {}), {"out": {}, "over": {}, "down": {}}));
 
     KEN.BaseObject.call(this, "ButtonSkin");
 };
@@ -95445,88 +95563,118 @@ KEN.ButtonSkin.prototype = Object.create(KEN.BaseObject.prototype);
 KEN.ButtonSkin.prototype.constructor = KEN.ButtonSkin;
 
 /**
+ * This is the empty Skin state for image
+ * @name  KEN.ButtonSkin.emptyStateImage
+ * @type {ImageConfig}
+ * @const
+ */
+KEN.ButtonSkin.emptyStateImage = 
+{
+    key: "",
+    url: "",
+    i18n: "",
+    keepRatio: true,
+    maximized: false,
+    alpha: 1
+};
+
+/**
+ * This is the empty Skin state for label
+ * @name  KEN.ButtonSkin.emptyStateLabel
+ * @type {TextFieldConfig}
+ * @const
+ */
+KEN.ButtonSkin.emptyStateLabel = 
+{
+    value: "",
+    i18n: "",
+    color: "",
+    fontFamily: "",
+    fontWeight: ""
+};
+
+/**
  * This is the empty Skin state
  * @name  KEN.ButtonSkin.emptyState
- * @type {ButtonSkinConfig}
+ * @type {ButtonSkinStateConfig}
  * @const
  */
 KEN.ButtonSkin.emptyState =
 {
-    "name": "",
-    "background": "",
-    "borderStyle": "solid",
-    "borderColor": "",
-    "borderRadius": 0,
-    "borderWidth": 0,
-    "autoWidth": true,
-    "autoHeight": true,
-    "align": "center",
-    "padding": 0,
-    "spacing": 0,
-    "first": "image",
+    name: "",
+    background: "",
+    borderStyle: "solid",
+    borderColor: "",
+    borderRadius: 0,
+    borderWidth: 0,
+    autoWidth: true,
+    autoHeight: true,
+    align: "center",
+    padding: 0,
+    spacing: 0,
+    first: "image",
 
-    "image":
-    {
-        "key": "",
-        "url": "",
-        "i18n": "",
-        "keepRatio": true,
-        "maximized": false,
-        "alpha": 1
-    },
+    image: /** @type {ImageConfig} */ (KEN.ButtonSkin.emptyStateImage),
 
-    "label":
-    {
-        "value": "",
-        "i18n": "",
-        "color": "",
-        "fontFamily": "",
-        "fontWeight": ""
-    }
+    label: /** @type {TextFieldConfig} */ (KEN.ButtonSkin.emptyStateLabel)
+};
+
+/**
+ * This is the empty Skin state for image
+ * @name  KEN.ButtonSkin.defaultStateImage
+ * @type {ImageConfig}
+ * @const
+ */
+KEN.ButtonSkin.defaultStateImage = 
+{
+    key: "",
+    url: "",
+    i18n: "",
+    keepRatio: true,
+    maximized: false,
+    alpha: 1
+};
+
+/**
+ * This is the empty Skin state for label
+ * @name  KEN.ButtonSkin.defaultStateLabel
+ * @type {TextFieldConfig}
+ * @const
+ */
+KEN.ButtonSkin.defaultStateLabel = 
+{
+    value: "Button",
+    i18n: "",
+    color: "",
+    fontFamily: "",
+    fontWeight: ""
 };
 
 /**
  * This is the default Skin
  * @name  KEN.ButtonSkin.defaultState
- * @type {ButtonSkinConfig}
+ * @type {ButtonSkinStateConfig}
  * @const
  */
 KEN.ButtonSkin.defaultState =
 {
-    "name": "default",
-    "background": "#eee",
-    "borderStyle": "solid",
-    "borderColor": "#555",
-    "borderRadius": 5,
-    "borderWidth": 2,
-    "autoWidth": true,
-    "autoHeight": true,
-    "align": "left",
-    "padding": 5,
-    "spacing": 0,
-    "first": "image",
+    name: "default",
+    background: "#eee",
+    borderStyle: "solid",
+    borderColor: "#555",
+    borderRadius: 5,
+    borderWidth: 2,
+    autoWidth: true,
+    autoHeight: true,
+    align: "left",
+    padding: 5,
+    spacing: 0,
+    first: "image",
 
-    "image":
-    {
-        "key": "",
-        "url": "",
-        "i18n": "",
-        "keepRatio": true,
-        "maximized": false,
-        "alpha": 1
-    },
+    image: /** @type {ImageConfig} */ (KEN.ButtonSkin.defaultStateImage),
 
-    "label":
-    {
-        "value": "Button",
-        "i18n": "",
-        "color": "",
-        "fontFamily": "",
-        "fontWeight": ""
-    }
+    label: /** @type {TextFieldConfig} */ (KEN.ButtonSkin.defaultStateLabel)
 };
-
-
 
 /**
  * Set the default skin from a declared state, by default the default skin state will be "out".
@@ -95547,8 +95695,10 @@ KEN.ButtonSkin.prototype.setDefaultFromState = function(name)
  * Static method to validate a {@link KEN.ButtonSkin}
  * @method  KEN.ButtonSkin.isValid
  * @static
- * @param  {KEN.ButtonSkin}  skin 
+ * @param  {KEN.ButtonSkin} skin 
  * @return {boolean} Returns true if the button skin is valid.
+ *
+ * @todo
  */
 KEN.ButtonSkin.isValid = function(skin)
 {
@@ -95624,7 +95774,7 @@ Object.defineProperty(KEN.ButtonSkin.prototype, "name",
 /**
  * Get and set the default state of this skin.
  * @name KEN.ButtonSkin#name
- * @type {Object}
+ * @type {ButtonSkinStateConfig}
  */
 KEN.ButtonSkin.prototype.default;
 Object.defineProperty(KEN.ButtonSkin.prototype, "default", 
@@ -95645,7 +95795,7 @@ Object.defineProperty(KEN.ButtonSkin.prototype, "default",
 /**
  * Get and set the "out" state of this skin.
  * @name KEN.ButtonSkin#out
- * @type {Object}
+ * @type {ButtonSkinStateConfig}
  */
 KEN.ButtonSkin.prototype.out;
 Object.defineProperty(KEN.ButtonSkin.prototype, "out", 
@@ -95666,7 +95816,7 @@ Object.defineProperty(KEN.ButtonSkin.prototype, "out",
 /**
  * Get and set the "over" state of this skin.
  * @name KEN.ButtonSkin#over
- * @type {Object}
+ * @type {ButtonSkinStateConfig}
  */
 KEN.ButtonSkin.prototype.over;
 Object.defineProperty(KEN.ButtonSkin.prototype, "over", 
@@ -95687,7 +95837,7 @@ Object.defineProperty(KEN.ButtonSkin.prototype, "over",
 /**
  * Get and set the "down" state of this skin.
  * @name KEN.ButtonSkin#down
- * @type {Object}
+ * @type {ButtonSkinStateConfig}
  */
 KEN.ButtonSkin.prototype.down;
 Object.defineProperty(KEN.ButtonSkin.prototype, "down", 
@@ -95713,7 +95863,7 @@ Object.defineProperty(KEN.ButtonSkin.prototype, "down",
  * @param {KEN.Viewer} viewer - The {@link KEN.Viewer} reference.
  * @extends {KEN.DisplayObject}
  */
-KEN.Canvas = function(viewer) /*, width, height*/
+KEN.Canvas = function(viewer)
 {
     KEN.DisplayObject.call(this, viewer, document.createElement("canvas"), "Canvas");
 };
@@ -103802,7 +103952,6 @@ KEN.File.prototype.loaded = false;
 KEN.File.prototype.error = "";
 
 KEN.File.prototype.constructor = KEN.File;
-
 /**
  * This class have several methods to load assets and put them in cache.
  * @constructor KEN.Loader
@@ -103837,8 +103986,8 @@ KEN.Loader.prototype.constructor = KEN.Loader;
  * @param  {Function=} onErrorCallback - The callback function called on file error.
  * @param  {Object=} onErrorContext - The callback context for file error.
  */
-KEN.Loader.prototype.json = function (key, url, onCompleteCallback, onCompleteContext, onErrorCallback, onErrorContext) 
-{ 
+KEN.Loader.prototype.json = function(key, url, onCompleteCallback, onCompleteContext, onErrorCallback, onErrorContext)
+{
     var file = new KEN.File();
     file["type"] = "json";
     file["key"] = key;
@@ -103860,11 +104009,11 @@ KEN.Loader.prototype.json = function (key, url, onCompleteCallback, onCompleteCo
  */
 KEN.Loader.prototype._jsonLoadComplete = function(file, xhr)
 {
-    if (xhr.responseText) 
+    if (xhr.responseText)
     {
         file["data"] = Object(JSON.parse(xhr.responseText));
 
-        if(this._viewer["cache"].has(KEN.Cache.types.JSON, file["key"]) === false)
+        if (this._viewer["cache"].has(KEN.Cache.types.JSON, file["key"]) === false)
         {
             this._viewer["cache"].add(KEN.Cache.types.JSON, file["key"], file);
         }
@@ -103873,7 +104022,7 @@ KEN.Loader.prototype._jsonLoadComplete = function(file, xhr)
             this.log("KEN.Loader.json : JSON file already exists");
         }
 
-        if(typeof file.onCompleteCallback === "function" && file.onCompleteContext !== null)
+        if (typeof file.onCompleteCallback === "function" && file.onCompleteContext !== null)
         {
             var callback = file.onCompleteCallback;
             var context = file.onCompleteContext;
@@ -103885,8 +104034,8 @@ KEN.Loader.prototype._jsonLoadComplete = function(file, xhr)
 
             callback.call(context, file);
         }
-    } 
-    else 
+    }
+    else
     {
         throw "KEN.Loader.json : JSON file empty ?";
     }
@@ -103901,9 +104050,9 @@ KEN.Loader.prototype._jsonLoadComplete = function(file, xhr)
  */
 KEN.Loader.prototype._jsonLoadError = function(file, xhr)
 {
-    if (xhr.responseText) 
+    if (xhr.responseText)
     {
-        if(typeof file.onErrorCallback === "function" && file.onErrorContext !== null)
+        if (typeof file.onErrorCallback === "function" && file.onErrorContext !== null)
         {
             var callback = file.onErrorCallback;
             var context = file.onErrorContext;
@@ -103915,8 +104064,8 @@ KEN.Loader.prototype._jsonLoadError = function(file, xhr)
 
             callback.call(context, file);
         }
-    } 
-    else 
+    }
+    else
     {
         throw "KEN.Loader.json : JSON file empty ?";
     }
@@ -103932,8 +104081,8 @@ KEN.Loader.prototype._jsonLoadError = function(file, xhr)
  * @param  {Function} onErrorCallback - The callback function called on file error.
  * @param  {Object} onErrorContext - The callback context for file error.
  */
-KEN.Loader.prototype.xml = function (key, url, onCompleteCallback, onCompleteContext, onErrorCallback, onErrorContext) 
-{ 
+KEN.Loader.prototype.xml = function(key, url, onCompleteCallback, onCompleteContext, onErrorCallback, onErrorContext)
+{
     var file = new KEN.File();
     file["type"] = "xml";
     file["key"] = key;
@@ -103955,11 +104104,11 @@ KEN.Loader.prototype.xml = function (key, url, onCompleteCallback, onCompleteCon
  */
 KEN.Loader.prototype._xmlLoadComplete = function(file, xhr)
 {
-    if (xhr.responseXML) 
+    if (xhr.responseXML)
     {
         file["data"] = xhr.responseXML;
 
-        if(this._viewer["cache"].has(KEN.Cache.types.XML, file["key"]) === false)
+        if (this._viewer["cache"].has(KEN.Cache.types.XML, file["key"]) === false)
         {
             this._viewer["cache"].add(KEN.Cache.types.XML, file["key"], file);
         }
@@ -103968,7 +104117,7 @@ KEN.Loader.prototype._xmlLoadComplete = function(file, xhr)
             this.log("KEN.Loader.xml : XML file already exists");
         }
 
-        if(typeof file.onCompleteCallback === "function" && file.onCompleteContext !== null)
+        if (typeof file.onCompleteCallback === "function" && file.onCompleteContext !== null)
         {
             var callback = file.onCompleteCallback;
             var context = file.onCompleteContext;
@@ -103980,8 +104129,8 @@ KEN.Loader.prototype._xmlLoadComplete = function(file, xhr)
 
             callback.call(context, file);
         }
-    } 
-    else 
+    }
+    else
     {
         throw "KEN.Loader.xml : XML file empty ?";
     }
@@ -103996,9 +104145,9 @@ KEN.Loader.prototype._xmlLoadComplete = function(file, xhr)
  */
 KEN.Loader.prototype._xmlLoadError = function(file, xhr)
 {
-    if (xhr.responseXML) 
+    if (xhr.responseXML)
     {
-        if(typeof file.onErrorCallback === "function" && file.onErrorContext !== null)
+        if (typeof file.onErrorCallback === "function" && file.onErrorContext !== null)
         {
             var callback = file.onErrorCallback;
             var context = file.onErrorContext;
@@ -104010,8 +104159,8 @@ KEN.Loader.prototype._xmlLoadError = function(file, xhr)
 
             callback.call(context, file);
         }
-    } 
-    else 
+    }
+    else
     {
         throw "KEN.Loader.xml : JSON file empty ?";
     }
@@ -104025,8 +104174,8 @@ KEN.Loader.prototype._xmlLoadError = function(file, xhr)
  * @param  {Function} onCompleteCallback - The callback function called when file is completed.
  * @param  {Object} onCompleteContext - The callback context when file is completed.
  */
-KEN.Loader.prototype.sound = function (key, url, onCompleteCallback, onCompleteContext) 
-{ 
+KEN.Loader.prototype.sound = function(key, url, onCompleteCallback, onCompleteContext)
+{
     var file = new KEN.File();
     file["type"] = "sound";
     file["key"] = key;
@@ -104058,12 +104207,12 @@ KEN.Loader.prototype._soundLoadComplete = function(file, xhr)
     {
         file["data"] = xhr.response;
     }
-    
+
     this._viewer["cache"].add(KEN.Cache.types.SOUND, file["key"], file);
 
-    if(typeof file.onCompleteCallback === "function" && file.onCompleteContext !== null)
+    if (typeof file.onCompleteCallback === "function" && file.onCompleteContext !== null)
     {
-        file.onCompleteCallback.call(file.onCompleteContext, file);  
+        file.onCompleteCallback.call(file.onCompleteContext, file);
     }
 };
 
@@ -104075,7 +104224,7 @@ KEN.Loader.prototype._soundLoadComplete = function(file, xhr)
  * @param {Function} callback - The callback function called when file is completed.
  * @param  {Object} context - The callback context when file is completed.
  */
-KEN.Loader.prototype._loadAudioTag = function (file, callback, context)
+KEN.Loader.prototype._loadAudioTag = function(file, callback, context)
 {
     // Populate Audio tag data
     file["data"] = new Audio();
@@ -104083,9 +104232,9 @@ KEN.Loader.prototype._loadAudioTag = function (file, callback, context)
 
     file["data"]["preload"] = "auto";
     file["data"].src = file["url"]; //this.transformUrl(file["url"], file);
-    
+
     var canPlayEvent = "canplaythrough";
-    var canPlayThroughEvent = function () 
+    var canPlayThroughEvent = function()
     {
         file["data"].removeEventListener(canPlayEvent, canPlayThroughEvent, false);
         file["data"].onerror = null;
@@ -104095,7 +104244,7 @@ KEN.Loader.prototype._loadAudioTag = function (file, callback, context)
             callback.call(context, file);
         }
     };
-    file["data"].onerror = function () 
+    file["data"].onerror = function()
     {
         file["data"].removeEventListener(canPlayEvent, canPlayThroughEvent, false);
         file["data"].onerror = null;
@@ -104120,12 +104269,12 @@ KEN.Loader.prototype._loadAudioTag = function (file, callback, context)
  * @param {Function=} onError - The callback function for error during the load.
  * @param {Function=} onProgress - The callback function for the progress of the load.         
  */
-KEN.Loader.prototype._xhr = function (file, type, onComplete, onError, onProgress) 
+KEN.Loader.prototype._xhr = function(file, type, onComplete, onError, onProgress)
 {
     file.loading = true;
 
     var xhr = new XMLHttpRequest();
-    xhr.open( "GET", file["url"], true );
+    xhr.open("GET", file["url"], true);
     xhr.responseType = type;
 
     var length = 0;
@@ -104133,47 +104282,49 @@ KEN.Loader.prototype._xhr = function (file, type, onComplete, onError, onProgres
     var _this = this;
 
     /** @this {XMLHttpRequest} */
-    xhr.onreadystatechange = function () 
+    xhr.onreadystatechange = function()
     {
         if (xhr.readyState === XMLHttpRequest.DONE)
         {
-            if (xhr.status === 200 || xhr.status === 0) 
+            if (xhr.status === 200 || xhr.status === 0)
             {
                 this.onreadystatechange = null;
 
-                if(typeof onComplete === "function")
+                if (typeof onComplete === "function")
                 {
                     file["loaded"] = true;
                     onComplete.call(_this, file, xhr);
                 }
-            } 
-            else 
+            }
+            else
             {
                 throw "KEN.Loader._xhr : Could not load " + file.url;
             }
-        } 
-        else if(xhr.readyState === XMLHttpRequest.LOADING) 
+        }
+        else if (xhr.readyState === XMLHttpRequest.LOADING)
         {
-            if(onProgress !== null && typeof onProgress !== "undefined") 
+            if (onProgress !== null && typeof onProgress !== "undefined")
             {
                 if (length === 0)
                 {
-                    length = xhr.getResponseHeader( "Content-Length" );
+                    length = xhr.getResponseHeader("Content-Length");
                 }
-                
-                if(typeof onProgress !== "undefined")
+
+                if (typeof onProgress !== "undefined")
                 {
-                    onProgress( { "total": length, "loaded": xhr.responseText.length } );
+                    onProgress(
+                    {
+                        "total": length,
+                        "loaded": xhr.responseText.length
+                    });
                 }
             }
-
-            //this.log(xhr.responseText.length);
-        } 
-        else if ( xhr.readyState === XMLHttpRequest.HEADERS_RECEIVED ) 
+        }
+        else if (xhr.readyState === XMLHttpRequest.HEADERS_RECEIVED)
         {
-            if(onProgress !== null && typeof onProgress !== "undefined") 
-            { 
-                length = xhr.getResponseHeader( "Content-Length" );
+            if (onProgress !== null && typeof onProgress !== "undefined")
+            {
+                length = xhr.getResponseHeader("Content-Length");
             }
         }
 
@@ -104181,26 +104332,14 @@ KEN.Loader.prototype._xhr = function (file, type, onComplete, onError, onProgres
 
     xhr.onerror = function()
     {
-        if(typeof onError === "function") 
+        if (typeof onError === "function")
         {
             onError.call(_this, file, xhr);
         }
-        //_this._xhrError(file, xhr);
     };
-  
-    //xhr.withCredentials = this.withCredentials;
-    xhr.send(null);
+
+    xhr.send();
 };
-
-// KEN.Loader.prototype._xhrError = function(file, xhr)
-// {
-
-// };
-
-// KEN.Loader.prototype._xhrComplete = function(file, xhr)
-// {
-    
-// };
 
 /**
  * Load an image file.
@@ -104222,7 +104361,7 @@ KEN.Loader.prototype.image = function(key, url, callback, context)
 
     var _this = this;
 
-    file["data"].onload = function() 
+    file["data"].onload = function()
     {
         file["data"].onload = null;
         file["data"].onerror = null;
@@ -104236,12 +104375,12 @@ KEN.Loader.prototype.image = function(key, url, callback, context)
         _this = null;
     };
 
-    file["data"].onerror = function() 
+    file["data"].onerror = function()
     {
         file["data"].onload = null;
         file["data"].onerror = null;
 
-        throw "ERROR : KEN.Loader.image, failed to load image key : "+key+" at url "+url;
+        throw "ERROR : KEN.Loader.image, failed to load image key : " + key + " at url " + url;
     };
 
     file["data"].src = file["url"];
@@ -104261,9 +104400,9 @@ KEN.Loader.prototype.script = function(url, callback, context)
     var scripts = head.getElementsByTagName("script");
 
     //Check if a script is not already in the head of the document
-    for(var i = 0, ii = scripts.length; i < ii; i++)
+    for (var i = 0, ii = scripts.length; i < ii; i++)
     {
-        if(scripts[i].src === url)
+        if (scripts[i].src === url)
         {
             this.warn("Attempt to load an already loaded script!");
             callback.call(context);
@@ -104320,7 +104459,6 @@ KEN.Loader.prototype.destroy = function()
 
     KEN.BaseObject.prototype.destroy.call(this);
 };
-
 
 /**
  * Manager for the dependencies (scripts).

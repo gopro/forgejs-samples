@@ -3,7 +3,7 @@
     "name": "Simpliest Tour",
     "slug": "simpliest-tour",
     "description": "This is the simpliest tour ever",
-    "defaultLoadUid": "scene-0",
+    "defaultLoadUid": "scene-3",
 
     "scenes": [
     {
@@ -20,7 +20,7 @@
 
             "source":
             {
-                "url": "./images/01-ocean.jpg"
+                "url": "./images/01-forest.png"
             }
         }
     },
@@ -38,7 +38,7 @@
 
             "source":
             {
-                "url": "./images/02-beach.jpg"
+                "url": "./images/02-sand.png"
             }
         }
     },
@@ -56,7 +56,7 @@
 
             "source":
             {
-                "url": "./images/03-island.jpg"
+                "url": "./images/03-snow.png"
             }
         }
     }],
