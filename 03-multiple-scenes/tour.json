@@ -69,58 +69,61 @@
             "url": "SimpleButton/",
             "manifest": "manifest.json"
         }],
+
         "instances": [
-        {
-            "uid": "simplebutton-previous",
-            "engine": "com.pluginmaker.simplebutton",
-            "enabled": true,
-
-            "options":
             {
-                "left": 0,
-                "verticalCenter": true,
+                "uid": "simplebutton-previous",
+                "engine": "com.pluginmaker.simplebutton",
+                "enabled": true,
 
-                "width": 100,
-                "height": 50,
+                "options":
+                {
+                    "left": 0,
+                    "verticalCenter": true,
 
-                "value": "Previous"
+                    "width": 100,
+                    "height": 50,
+
+                    "value": "Previous"
+                },
+
+                "events":
+                {
+                    "onClick": [
+                    {
+                        "target": "this.viewer.tour",
+                        "action": "previousScene",
+                        "params": []
+                    }]
+                }
             },
 
-            "events":
             {
-                "onClick": [
+                "uid": "simplebutton-next",
+                "engine": "com.pluginmaker.simplebutton",
+                "enabled": true,
+
+                "options":
                 {
-                    "target": "this.viewer.tour",
-                    "action": "previousScene",
-                    "params": []
-                }]
-            }
-        },
-        {
-            "uid": "simplebutton-next",
-            "engine": "com.pluginmaker.simplebutton",
-            "enabled": true,
+                    "right": 0,
+                    "verticalCenter": true,
 
-            "options":
-            {
-                "right": 0,
-                "verticalCenter": true,
+                    "width": 100,
+                    "height": 50,
 
-                "width": 100,
-                "height": 50,
+                    "value": "Next"
+                },
 
-                "value": "Next"
-            },
-
-            "events":
-            {
-                "onClick": [
+                "events":
                 {
-                    "target": "this.viewer.tour",
-                    "action": "nextScene",
-                    "params": []
-                }]
+                    "onClick": [
+                    {
+                        "target": "this.viewer.tour",
+                        "action": "nextScene",
+                        "params": []
+                    }]
+                }
             }
-        }]
+        ]
     }
 }
