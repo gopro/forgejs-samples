@@ -3,7 +3,7 @@
     "name": "Simpliest Tour",
     "slug": "simpliest-tour",
     "description": "This is the simpliest tour ever",
-    "defaultLoadUid": "scene-0",
+    "default": "scene-0",
 
     "i18n":
     {
@@ -11,34 +11,34 @@
         "locales": [
 
             {
-                "name": "en_US",
+                "name": "en-US",
                 "files": [
                 {
-                    "key": "tour.en_US",
-                    "url": "./i18n/en_US/locale.json"
+                    "key": "tour.en-US",
+                    "url": "./i18n/en-US/locale.json"
                 }]
             },
 
             {
-                "name": "fr_FR",
+                "name": "fr-FR",
                 "files": [
                 {
-                    "key": "tour.fr_FR",
-                    "url": "./i18n/fr_FR/locale.json"
+                    "key": "tour.fr-FR",
+                    "url": "./i18n/fr-FR/locale.json"
                 }]
             },
 
             {
-                "name": "jp_JP",
+                "name": "jp-JP",
                 "files": [
                 {
-                    "key": "tour.jp_JP",
-                    "url": "./i18n/jp_JP/locale.json"
+                    "key": "tour.jp-JP",
+                    "url": "./i18n/jp-JP/locale.json"
                 }]
             }
         ],
 
-        "default": 0
+        "default": "en-US"
     },
 
     "scenes": [
@@ -102,7 +102,7 @@
                     "textAlign": "center"
                 },
                 "horizontalCenter": true,
-                "verticalCenter": true
+                "bottom": 400
             }
         },
         {
@@ -119,7 +119,7 @@
                     "textAlign": "center"
                 },
                 "horizontalCenter": true,
-                "bottom": 400
+                "bottom": 350
             }
         }]
     }

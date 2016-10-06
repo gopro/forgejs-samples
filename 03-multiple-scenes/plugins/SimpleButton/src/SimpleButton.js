@@ -34,28 +34,40 @@ KPlug.SimpleButton.prototype = {
         // Set the skin if any
         if (typeof this.plugin.options.skin !== "undefined")
         {
+            // default state
             if (typeof this.plugin.options.skin.out !== "undefined")
             {
                 skin.out = KEN.Utils.extendMultipleObjects(KEN.ButtonSkin.defaultState, skin.out, this.plugin.options.skin.out);
             }
 
+            // skin.out is the default skin state for over state
             if (typeof this.plugin.options.skin.over !== "undefined")
             {
-                skin.over = KEN.Utils.extendMultipleObjects(KEN.ButtonSkin.defaultState, skin.over, this.plugin.options.skin.over);
+                skin.over = KEN.Utils.extendMultipleObjects(skin.out, skin.over, this.plugin.options.skin.over);
             }
 
+            // skin.out is the default skin state for down state
             if (typeof this.plugin.options.skin.down !== "undefined")
             {
-                skin.down = KEN.Utils.extendMultipleObjects(KEN.ButtonSkin.defaultState, skin.down, this.plugin.options.skin.down);
+                skin.down = KEN.Utils.extendMultipleObjects(skin.out, skin.down, this.plugin.options.skin.down);
             }
         }
 
         // Set the global value if any
-        if (this.plugin.options.value !== undefined)
+        if (this.plugin.options.value !== undefined && this.plugin.options.value !== null)
         {
-            skin.out.label.value = this.plugin.options.value;
-            skin.over.label.value = this.plugin.options.value;
-            skin.down.label.value = this.plugin.options.value;
+            if(typeof skin.out.label !== "undefined")
+            {
+                skin.out.label.value = this.plugin.options.value;
+            }
+            if(typeof skin.over.label !== "undefined")
+            {
+                skin.over.label.value = this.plugin.options.value;
+            }
+            if(typeof skin.down.label !== "undefined")
+            {
+                skin.down.label.value = this.plugin.options.value;
+            }
         }
 
         this._btn.updateSkin();

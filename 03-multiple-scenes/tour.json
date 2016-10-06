@@ -3,7 +3,7 @@
     "name": "Simpliest Tour",
     "slug": "simpliest-tour",
     "description": "This is the simpliest tour ever",
-    "defaultLoadUid": "scene-3",
+    "default": "scene-3",
 
     "scenes": [
     {
@@ -74,7 +74,6 @@
             {
                 "uid": "simplebutton-previous",
                 "engine": "com.pluginmaker.simplebutton",
-                "enabled": true,
 
                 "options":
                 {
@@ -101,7 +100,6 @@
             {
                 "uid": "simplebutton-next",
                 "engine": "com.pluginmaker.simplebutton",
-                "enabled": true,
 
                 "options":
                 {

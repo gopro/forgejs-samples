@@ -1,9 +1,9 @@
 {
-    "uid": "simpliest-tour",
-    "name": "Simpliest Tour",
-    "slug": "simpliest-tour",
-    "description": "This is the simpliest tour ever",
-    "defaultLoadUid": "scene-0",
+    "uid": "littleplanet-tour",
+    "name": "Little planet Tour",
+    "slug": "littleplanet-tour",
+    "description": "This is the little planet tour ever",
+    "default": "scene-0",
 
     "view":
     {

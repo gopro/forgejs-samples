@@ -3,7 +3,7 @@
     "name": "Simpliest Tour",
     "slug": "simpliest-tour",
     "description": "This is the simpliest tour ever",
-    "defaultLoadUid": "scene-0",
+    "default": "scene-0",
 
     "scenes": [
     {

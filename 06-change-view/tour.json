@@ -3,7 +3,7 @@
     "name": "Simpliest Tour",
     "slug": "simpliest-tour",
     "description": "This is the simpliest tour ever",
-    "defaultLoadUid": "scene-0",
+    "default": "scene-0",
 
     "scenes": [
     {
@@ -90,6 +90,11 @@
                     "target": "this.viewer.renderManager.camera",
                     "action": "fov",
                     "params": 50
+                },
+                {
+                    "target": "this.viewer.renderManager.camera",
+                    "action": "pitch",
+                    "params": 0
                 }]
             }
         },
@@ -121,6 +126,11 @@
                     "target": "this.viewer.renderManager.camera",
                     "action": "fov",
                     "params": 250
+                },
+                {
+                    "target": "this.viewer.renderManager.camera",
+                    "action": "pitch",
+                    "params": -90
                 }]
             }
         }]
