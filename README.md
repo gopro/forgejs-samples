@@ -34,13 +34,22 @@ Apply a special effect on a scene, and toggle it to view how it affects the scen
 
 ## Test it
 
-Run a server in the root folder of this repository. If you have Python installed, you can run 
+Run a server in the root folder of this repository.
+
+If you have Python installed, you can run
 ````bash
 python -m SimpleHTTPServer
 
 # OR
 
 python -m http.server
+````
+
+If you have Node.js installed, you can run these commands to install `http-server`, a simple zero-configuration command-line http server.
+````bash
+npm install http-server -g
+
+http-server -p 8000
 ````
 
 You can then browse [your localhost](http://localhost:8000).
