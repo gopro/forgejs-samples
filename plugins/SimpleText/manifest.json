@@ -1,0 +1,45 @@
+{
+    "uid": "com.pluginmaker.simpletext",
+    "name": "Simple Text",
+    "slug": "simpletext",
+    "version": "1.0.0",
+    "versionName": "Simple Text 1.0.0",
+    "description": "Add a simple text",
+    
+    "author": 
+    {
+        "name": "GoPro - Kolor Team",
+        "website": "http://www.kolor.com"
+    },
+
+    "licence": "MIT",
+
+    "options":
+    {
+        "config": 
+        {
+            "i18n": false,
+            "value": "Default text"
+        },
+
+        "top": null, 
+        "right": null,
+        "bottom": null,
+        "left": null,
+        "horizontalCenter": false,
+        "verticalCenter": false
+    },
+
+    "actions":
+    [
+        "show",
+        "hide"
+    ],
+
+    "sources":
+    [
+        "src/SimpleText.js"
+    ],
+
+    "constructor": "KPlug.SimpleText"
+}
