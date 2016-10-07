@@ -1,8 +1,8 @@
 {
-    "uid": "simpliest-tour",
-    "name": "Simpliest Tour",
-    "slug": "simpliest-tour",
-    "description": "This is the simpliest tour ever",
+    "uid": "locales-tour",
+    "name": "Multiple Locales Tour",
+    "slug": "locales-tour",
+    "description": "This is a tour which uses multiple locales",
     "default": "scene-0",
 
     "i18n":
@@ -56,7 +56,7 @@
 
             "source":
             {
-                "url": "./01-forest.png"
+                "url": "../assets/panoramas/01-forest.png"
             }
         }
     }],
@@ -85,9 +85,11 @@
                 "bottom": 100,
                 "flagWidth": 150,
                 "flagHeight": 100,
+                "baseURL": "../assets/images/",
                 "fileName": "flag-{{locale}}.gif"
             }
         },
+
         {
             "uid": "text-welcome",
             "engine": "com.pluginmaker.simpletext",
@@ -105,6 +107,7 @@
                 "bottom": 400
             }
         },
+
         {
             "uid": "text-instructions",
             "engine": "com.pluginmaker.simpletext",

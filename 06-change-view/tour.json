@@ -1,8 +1,8 @@
 {
-    "uid": "simpliest-tour",
-    "name": "Simpliest Tour",
-    "slug": "simpliest-tour",
-    "description": "This is the simpliest tour ever",
+    "uid": "view-tour",
+    "name": "Change View Tour",
+    "slug": "view-tour",
+    "description": "This is a demonstration of the view changes",
     "default": "scene-0",
 
     "scenes": [
@@ -53,6 +53,37 @@
         }
     }],
 
+    "actions":
+    [
+        {
+            "uid": "action-view-recti",
+            "target": "viewer.renderer",
+            "method": "view",
+            "params": ["rectilinear"]
+        },
+
+        {
+            "uid": "action-camera-fov-recti",
+            "target": "viewer.renderer.camera",
+            "method": "lookAt",
+            "params": [null, 0, null, 70, 1500]
+        },
+
+        {
+            "uid": "action-view-gopro",
+            "target": "viewer.renderer",
+            "method": "view",
+            "params": ["gopro"]
+        },
+
+        {
+            "uid": "action-camera-fov-gopro",
+            "target": "viewer.renderer.camera",
+            "method": "lookAt",
+            "params": [null, -90, null, 250, 1500]
+        }
+    ],
+
     "plugins":
     {
         "engines": [
@@ -80,22 +111,7 @@
 
             "events":
             {
-                "onClick": [
-                {
-                    "target": "this.viewer.renderManager",
-                    "action": "setView",
-                    "params": ["rectilinear"]
-                },
-                {
-                    "target": "this.viewer.renderManager.camera",
-                    "action": "fov",
-                    "params": 50
-                },
-                {
-                    "target": "this.viewer.renderManager.camera",
-                    "action": "pitch",
-                    "params": 0
-                }]
+                "onClick": ["action-view-recti", "action-camera-fov-recti", "action-camera-pitch-recti"]
             }
         },
         {
@@ -116,22 +132,7 @@
 
             "events":
             {
-                "onClick": [
-                {
-                    "target": "this.viewer.renderManager",
-                    "action": "setView",
-                    "params": ["gopro"]
-                },
-                {
-                    "target": "this.viewer.renderManager.camera",
-                    "action": "fov",
-                    "params": 250
-                },
-                {
-                    "target": "this.viewer.renderManager.camera",
-                    "action": "pitch",
-                    "params": -90
-                }]
+                "onClick": ["action-view-gopro", "action-camera-fov-gopro", "action-camera-pitch-gopro"]
             }
         }]
     }

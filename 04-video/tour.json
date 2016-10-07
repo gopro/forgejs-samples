@@ -1,7 +1,7 @@
 {
-    "uid": "simpliest-tour",
-    "name": "Simpliest Tour",
-    "slug": "simpliest-tour",
+    "uid": "video-tour",
+    "name": "Video Tour",
+    "slug": "video-tour",
     "description": "This is the simpliest tour ever, but with a video",
     "default": "scene-0",
 

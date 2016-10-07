@@ -1,8 +1,8 @@
 {
-    "uid": "simpliest-tour",
-    "name": "Simpliest Tour",
-    "slug": "simpliest-tour",
-    "description": "This is the simpliest tour ever",
+    "uid": "multiple-scenes-tour",
+    "name": "Multiple Scenes Tour",
+    "slug": "multiple-scenes-tour",
+    "description": "This is a tour made with multiple scenes",
     "default": "scene-3",
 
     "scenes": [
@@ -20,7 +20,7 @@
 
             "source":
             {
-                "url": "./images/01-forest.png"
+                "url": "../assets/panoramas/01-forest.png"
             }
         }
     },
@@ -38,7 +38,7 @@
 
             "source":
             {
-                "url": "./images/02-sand.png"
+                "url": "../assets/panoramas/02-sand.png"
             }
         }
     },
@@ -56,10 +56,25 @@
 
             "source":
             {
-                "url": "./images/03-snow.png"
+                "url": "../assets/panoramas/03-snow.png"
             }
         }
     }],
+
+    "actions":
+    [
+        {
+            "uid": "action-prev",
+            "target": "viewer.tour",
+            "method": "previousScene"
+        },
+
+        {
+            "uid": "action-next",
+            "target": "viewer.tour",
+            "method": "nextScene"
+        }
+    ],
 
     "plugins":
     {
@@ -88,12 +103,7 @@
 
                 "events":
                 {
-                    "onClick": [
-                    {
-                        "target": "this.viewer.tour",
-                        "action": "previousScene",
-                        "params": []
-                    }]
+                    "onClick": ["action-prev"]
                 }
             },
 
@@ -114,12 +124,7 @@
 
                 "events":
                 {
-                    "onClick": [
-                    {
-                        "target": "this.viewer.tour",
-                        "action": "nextScene",
-                        "params": []
-                    }]
+                    "onClick": ["action-next"]
                 }
             }
         ]

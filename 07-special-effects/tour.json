@@ -1,8 +1,8 @@
 {
-    "uid": "simpliest-tour",
-    "name": "Simpliest Tour",
-    "slug": "simpliest-tour",
-    "description": "This is the simpliest tour ever",
+    "uid": "fx-tour",
+    "name": "Special Effects Tour",
+    "slug": "fx-tour",
+    "description": "This is a demonstration of special effects applied to the background",
     "default": "scene-0",
 
     "scenes": [
@@ -22,7 +22,7 @@
 
             "source":
             {
-                "url": "./01-forest.png"
+                "url": "../assets/panoramas/01-forest.png"
             }
         }
     }],
@@ -90,6 +90,23 @@
         ]
     },
 
+    "actions":
+    [
+        {
+            "uid": "action-disable-fx",
+            "target": "viewer.renderer.renderPipeline",
+            "method": "enabled",
+            "params": [false]
+        },
+
+        {
+            "uid": "action-enable-fx",
+            "target": "viewer.renderer.renderPipeline",
+            "method": "enabled",
+            "params": [true]
+        }
+    ],
+
     "plugins":
     {
         "engines": [
@@ -118,12 +135,7 @@
 
                 "events":
                 {
-                    "onClick": [
-                    {
-                        "target": "this.viewer.renderManager.renderPipeline",
-                        "action": "enabled",
-                        "params": [false]
-                    }]
+                    "onClick": ["action-disable-fx"]
                 }
             },
 
@@ -145,12 +157,7 @@
 
                 "events":
                 {
-                    "onClick": [
-                    {
-                        "target": "this.viewer.renderManager.renderPipeline",
-                        "action": "enabled",
-                        "params": [true]
-                    }]
+                    "onClick": ["action-enable-fx"]
                 }
             }
         ]
