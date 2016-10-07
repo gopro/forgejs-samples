@@ -66,13 +66,19 @@
         {
             "uid": "action-prev",
             "target": "viewer.tour",
-            "method": "previousScene"
+            "method":
+            {
+                "name": "previousScene"
+            }
         },
 
         {
             "uid": "action-next",
             "target": "viewer.tour",
-            "method": "nextScene"
+            "method":
+            {
+                "name": "nextScene"
+            }
         }
     ],
 

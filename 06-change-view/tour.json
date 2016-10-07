@@ -58,29 +58,41 @@
         {
             "uid": "action-view-recti",
             "target": "viewer.renderer",
-            "method": "view",
-            "params": ["rectilinear"]
+            "property":
+            {
+                "name": "view",
+                "value": "rectilinear"
+            }
         },
 
         {
             "uid": "action-camera-fov-recti",
             "target": "viewer.renderer.camera",
-            "method": "lookAt",
-            "params": [null, 0, null, 70, 1500]
+            "method":
+            {
+                "name": "lookAt",
+                "args": [null, 0, null, 70]
+            }
         },
 
         {
             "uid": "action-view-gopro",
             "target": "viewer.renderer",
-            "method": "view",
-            "params": ["gopro"]
+            "property":
+            {
+                "name": "view",
+                "value": "gopro"
+            }
         },
 
         {
             "uid": "action-camera-fov-gopro",
             "target": "viewer.renderer.camera",
-            "method": "lookAt",
-            "params": [null, -90, null, 250, 1500]
+            "method":
+            {
+                "name": "lookAt",
+                "args": [null, -90, null, 250]
+            }
         }
     ],
 

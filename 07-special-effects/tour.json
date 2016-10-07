@@ -95,15 +95,21 @@
         {
             "uid": "action-disable-fx",
             "target": "viewer.renderer.renderPipeline",
-            "method": "enabled",
-            "params": [false]
+            "property":
+            {
+                "name": "enabled",
+                "value": false
+            }
         },
 
         {
             "uid": "action-enable-fx",
             "target": "viewer.renderer.renderPipeline",
-            "method": "enabled",
-            "params": [true]
+            "property":
+            {
+                "name": "enabled",
+                "value": true
+            }
         }
     ],
 
