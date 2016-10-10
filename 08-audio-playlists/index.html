@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>KEN - Audio playlists</title>
+
+    <!-- Little styling -->
+    <style type="text/css">
+
+    html
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    body
+    {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    div#instructions
+    {
+        position: absolute;
+        bottom: 10px;
+        background: rgba(0, 0, 0, 0.75);
+        color: whitesmoke;
+        padding: 15px;
+        width: 40%;
+        left: 30%;
+        text-align: center;
+    }
+
+    div#container
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <div id="instructions">
+        Click on NEXT TRACK to change the audio track on the current scene.<br />
+        Click on PREVIOUS and NEXT buttons to navigate inside the tour and change playlist.
+    </div>
+
+    <!-- Include the KEN library -->
+    <script type="text/javascript" src="../lib/ken.js" ></script>
+
+    <!-- Start KEN -->
+    <script type="text/javascript">
+
+    // Create a viewer
+    var options =
+    {
+        plugins: {
+            prefix: "../plugins/"
+        }
+    };
+
+    var viewer = new KEN.Viewer(options, "container", {
+        boot: boot
+    });
+
+    // What to do on boot time
+    function boot()
+    {
+        // Load the tour configuration
+        viewer.tour.load('tour.json');
+    }
+
+    // Start the viewer
+    viewer.boot();
+
+    </script>
+</body>
+</html>

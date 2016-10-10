@@ -1,0 +1,36 @@
+{
+    "uid": "simpliest-tour",
+    "name": "Simpliest Tour",
+    "slug": "simpliest-tour",
+    "description": "This is the simpliest tour ever",
+    "default": "scene-0",
+
+    "camera":
+    {
+        "parallax": 0,
+        "yaw": { "default": 0, "min": -70, "max": 70 },
+        "pitch": { "default": 30, "min": 0, "max": 60 },
+        "roll": { "default": 0, "min": 0, "max": 0 },
+        "fov": { "default": 70, "min": 50, "max": 100 }
+    },
+
+    "scenes": [
+    {
+        "uid": "scene-0",
+        "name": "First scene",
+        "slug": "first-scene",
+        "description": "This is the first and only scene",
+
+        "media":
+        {
+            "uid": "scene-0-pano-0",
+            "type": "image",
+            "format": "equi",
+
+            "source":
+            {
+                "url": "../assets/panoramas/01-forest.png"
+            }
+        }
+    }]
+}

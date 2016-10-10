@@ -1,0 +1,257 @@
+{
+    "uid": "playlist-tour",
+    "name": "Audi Playlists Tour",
+    "slug": "playlist-tour",
+    "description": "This is a demonstration of audio playlists applied to the scenes",
+    "default": "scene-0",
+
+    "playlists":
+    {
+        "volume":
+        {
+            "default": 1.0,
+            "max": 1.0
+        },
+        "defaultList": "playlist-0",
+
+        "lists":
+        [
+            {
+                "uid": "playlist-0",
+                "name": "Playlist #1",
+                "defaultTrack": "track-0",
+                "tracks": ["track-0", "track-1"]
+            },
+
+            {
+                "uid": "playlist-1",
+                "name": "Playlist #2",
+                "defaultTrack": "track-2",
+                "tracks": ["track-2", "track-3"]
+            },
+
+            {
+                "uid": "playlist-2",
+                "name": "Playlist #3",
+                "defaultTrack": "track-5",
+                "tracks": ["track-4", "track-5"]
+            }
+
+        ],
+
+        "tracks":
+        [
+            {
+                "uid": "track-0",
+                "author": "TinyWorlds",
+                "name": "Forest Ambience",
+                "url": "../assets/audio/Forest_Ambience.mp3"
+            },
+
+            {
+                "uid": "track-1",
+                "author": "Écrivain",
+                "name": "Nature Comes",
+                "url": "../assets/audio/nature_comes_sharp.ogg"
+            },
+
+            {
+                "uid": "track-2",
+                "author": "cynicmusic",
+                "name": "Battle theme A",
+                "url": "../assets/audio/battleThemeA.mp3"
+            },
+
+            {
+                "uid": "track-3",
+                "author": "Sudocolon",
+                "name": "Space Ace",
+                "url": "../assets/audio/Logisector Intro.mp3"
+            },
+
+            {
+                "uid": "track-4",
+                "author": "Oddroom",
+                "name": "Samsara",
+                "url": "../assets/audio/samsara_0.mp3"
+            },
+
+            {
+                "uid": "track-5",
+                "author": "tebruno99",
+                "name": "The Rush",
+                "url": "../assets/audio/The Rush.mp3"
+            }
+        ]
+    },
+
+    "scenes": [
+    {
+        "uid": "scene-1",
+        "name": "First scene",
+        "slug": "first-scene",
+        "description": "This is the first scene",
+
+        "media":
+        {
+            "uid": "scene-1-pano-0",
+            "type": "image",
+            "format": "equi",
+
+            "source":
+            {
+                "url": "../assets/panoramas/01-forest.png"
+            }
+        },
+
+        "playlists":
+        {
+            "defaultList": "playlist-0"
+        }
+    },
+    {
+        "uid": "scene-2",
+        "name": "Second scene",
+        "slug": "second-scene",
+        "description": "This is the second scene",
+
+        "media":
+        {
+            "uid": "scene-2-pano-0",
+            "type": "image",
+            "format": "equi",
+
+            "source":
+            {
+                "url": "../assets/panoramas/02-sand.png"
+            }
+        },
+
+        "playlists":
+        {
+            "defaultList": "playlist-2"
+        }
+    },
+    {
+        "uid": "scene-3",
+        "name": "Third scene",
+        "slug": "third-scene",
+        "description": "This is the third and last scene",
+
+        "media":
+        {
+            "uid": "scene-3-pano-0",
+            "type": "image",
+            "format": "equi",
+
+            "source":
+            {
+                "url": "../assets/panoramas/03-snow.png"
+            }
+        },
+
+        "playlists":
+        {
+            "defaultList": "playlist-1"
+        }
+    }],
+
+    "actions":
+    [
+        {
+            "uid": "action-next-track",
+            "target": "viewer.playlists",
+            "method":
+            {
+                "name": "nextTrack"
+            }
+        },
+
+        {
+            "uid": "action-prev",
+            "target": "viewer.tour",
+            "method":
+            {
+                "name": "previousScene"
+            }
+        },
+
+        {
+            "uid": "action-next",
+            "target": "viewer.tour",
+            "method":
+            {
+                "name": "nextScene"
+            }
+        }
+    ],
+
+    "plugins":
+    {
+        "engines": [
+        {
+            "uid": "com.pluginmaker.simplebutton",
+            "url": "SimpleButton/",
+            "manifest": "manifest.json"
+        }],
+
+        "instances": [
+            {
+                "uid": "simplebutton-previous",
+                "engine": "com.pluginmaker.simplebutton",
+
+                "options":
+                {
+                    "left": 5,
+                    "verticalCenter": true,
+
+                    "value": "Previous"
+                },
+
+                "events":
+                {
+                    "onClick": ["action-prev"]
+                }
+            },
+
+            {
+                "uid": "simplebutton-next",
+                "engine": "com.pluginmaker.simplebutton",
+
+                "options":
+                {
+                    "right": 5,
+                    "verticalCenter": true,
+
+                    "value": "Next"
+                },
+
+                "events":
+                {
+                    "onClick": ["action-next"]
+                }
+            },
+
+            {
+                "uid": "simplebutton-next-track",
+                "engine": "com.pluginmaker.simplebutton",
+
+                "options":
+                {
+                    "top": 5,
+                    "horizontalCenter": true,
+
+                    "width": 100,
+                    "height": 50,
+
+                    "value": "Next track"
+                },
+
+                "events":
+                {
+                    "onClick": ["action-next-track"]
+                }
+            }
+        ]
+    }
+}

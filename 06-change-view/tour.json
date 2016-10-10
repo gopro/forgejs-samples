@@ -112,7 +112,7 @@
 
             "options":
             {
-                "left": 0,
+                "left": 5,
                 "verticalCenter": true,
 
                 "width": 100,
@@ -133,7 +133,7 @@
 
             "options":
             {
-                "right": 0,
+                "right": 5,
                 "verticalCenter": true,
 
                 "width": 100,

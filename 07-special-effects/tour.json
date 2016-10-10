@@ -93,22 +93,12 @@
     "actions":
     [
         {
-            "uid": "action-disable-fx",
+            "uid": "action-toggle-fx",
             "target": "viewer.renderer.renderPipeline",
             "property":
             {
                 "name": "enabled",
-                "value": false
-            }
-        },
-
-        {
-            "uid": "action-enable-fx",
-            "target": "viewer.renderer.renderPipeline",
-            "property":
-            {
-                "name": "enabled",
-                "value": true
+                "operation": "toggle"
             }
         }
     ],
@@ -124,46 +114,24 @@
 
         "instances": [
             {
-                "uid": "simplebutton-fx-disable",
-                "engine": "com.pluginmaker.simplebutton",
-                "enabled": true,
-
-                "options":
-                {
-                    "left": 0,
-                    "verticalCenter": true,
-
-                    "width": 100,
-                    "height": 50,
-
-                    "value": "Disable FX"
-                },
-
-                "events":
-                {
-                    "onClick": ["action-disable-fx"]
-                }
-            },
-
-            {
                 "uid": "simplebutton-fx-enable",
                 "engine": "com.pluginmaker.simplebutton",
                 "enabled": true,
 
                 "options":
                 {
-                    "right": 0,
+                    "right": 5,
                     "verticalCenter": true,
 
                     "width": 100,
                     "height": 50,
 
-                    "value": "Enable FX"
+                    "value": "Toggle FX"
                 },
 
                 "events":
                 {
-                    "onClick": ["action-enable-fx"]
+                    "onClick": ["action-toggle-fx"]
                 }
             }
         ]

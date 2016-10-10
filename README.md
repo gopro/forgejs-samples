@@ -32,6 +32,30 @@ Change the view in realtime, going to Rectilinear to Little Planet, without stop
 
 Apply a special effect on a scene, and toggle it to view how it affects the scene.
 
+### [Audio playlists](08-audio-playlists/)
+
+Using playlists, it's possible to apply a background sound track to each scene.
+
+### [Director's cut](09-directors-cut/)
+
+Change the orientation of the camera in realtime according to waypoints.
+
+### [MPEG-DASH video](10-mpeg-dash/)
+
+Video player based on MPEG-DASH technology.
+
+### [Hotspots](11-hotspots/)
+
+Add hotspots to a scene.
+
+### [Hotspots with spatialized sound](12-hotspots-sounds/)
+
+Add hotspots with spatialized sound to a scene.
+
+### [Camera limits](13-camera-limits/)
+
+Apply orientation and limits to the orientation and the field of view of the camera.
+
 ## Test it
 
 Run a server in the root folder of this repository.
