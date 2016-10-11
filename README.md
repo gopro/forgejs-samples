@@ -36,15 +36,15 @@ Apply a special effect on a scene, and toggle it to view how it affects the scen
 
 Using playlists, it's possible to apply a background sound track to each scene.
 
-### [Director's cut](09-directors-cut/)
+### [Director's cut](09-directors-cut/) TODO
 
 Change the orientation of the camera in realtime according to waypoints.
 
-### [MPEG-DASH video](10-mpeg-dash/)
+### [MPEG-DASH video](10-mpeg-dash/) TODO
 
 Video player based on MPEG-DASH technology.
 
-### [Hotspots](11-hotspots/)
+### [Hotspots](11-hotspots/) TODO
 
 Add hotspots to a scene.
 
@@ -52,9 +52,13 @@ Add hotspots to a scene.
 
 Add hotspots with spatialized sound to a scene.
 
-### [Camera limits](13-camera-limits/)
+### [Camera limitation](13-camera-limits/)
 
 Apply orientation and limits to the orientation and the field of view of the camera.
+
+### [Parallax effect](14-hotspots-parallax/)
+
+Apply a camera parallax effect on the hotspots layer.
 
 ## Test it
 

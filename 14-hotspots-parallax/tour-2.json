@@ -1,0 +1,238 @@
+{
+    "uid": "tour-0",
+    "name": "i18n-tourName",
+    "slug": "i18n-tourSlug",
+    "description": "i18n-tourDescription",
+    "default": "scene-0",
+    "i18n":
+    {
+        "enabled": true,
+        "locales": 
+        [
+            {
+                "name": "fr-FR",
+                "files": 
+                [
+                    {
+                        "key": "tour.fr-FR",
+                        "url": "./i18n/fr-FR/locale.json"
+                    }
+                ]
+            },
+            {
+                "name": "en-US",
+                "files": 
+                [
+                    {
+                        "key": "tour.en-US",
+                        "url": "./i18n/en-US/locale.json"
+                    }
+                ]
+            }
+        ],
+        "default": "en-US"
+    },
+    "thumbnails":
+    [
+        {   
+            "uid": "tour-0-thumbnail-0",
+            "width": 400,
+            "height": 200,
+            "url": "./tour/thumbnails/Innerschweiz-no-planes.jpg"
+        }
+    ],
+    "audio":
+    {
+        "enabled": true,
+        "volume":
+        {
+            "default": 1.0,
+            "max": 1.0
+        }
+    },
+    "scenes":
+    [
+        {
+            "uid": "scene-0",
+            "name": "i18n-scene-0-name",
+            "slug": "i18n-scene-0-slug",
+            "description": "i18n-scene-0-description",
+            "tags": [],
+            "background": "rgb(0,0,0)",
+            "thumbnails":
+            [
+                {   
+                    "uid": "scene-0-thumb-0",
+                    "width": 400,
+                    "height": 200,
+                    "url": "tour/thumbnails/Innerschweiz-no-planes.jpg"
+                }
+            ],
+            "media":
+            {
+                "uid": "media-0",
+                "type": "image",
+                "format": "equi",
+                "source": {
+                    "url": "panos/pano-0/Innerschweiz-no-planes.jpg"
+                }
+            },
+            "camera":
+            {
+                "parallax": 0.4
+            },
+            "hotspots":
+            [
+                // 2 nearset
+                {
+                    "uid": "hotspot-plane-a917",
+                    "tags": [],
+                    "visible":true,
+                    "type": "3d",
+                    "transform":
+                    {
+                        "position": 
+                        {
+                            "radius":200,
+                            "theta":-103.7,
+                            "phi":9.6
+                        },
+
+                        "size":
+                        {
+                            "theta": 30,
+                        }
+                    },
+                    "material":
+                    {
+                        "image": "panos/pano-0/hotspots/avion-a917.png",
+                        "transparent": true
+                    }
+                },
+                {
+                    "uid": "hotspot-plane-a919",
+                    "tags": [],
+                    "visible":true,
+                    "type": "3d",
+                    "transform":
+                    {
+                        "position": 
+                        {
+                            "radius":200,
+                            "theta":150.2,
+                            "phi":8.7
+                        },
+                        "size":
+                        {
+                            "theta": 40,
+                        }
+                    },
+                    "material":
+                    {
+                        "image": "panos/pano-0/hotspots/avion-a919.png",
+                        "transparent": true
+                    }
+                },
+                // 2 middle
+                {
+                    "uid": "hotspot-plane-a912",
+                    "tags": [],
+                    "visible":true,
+                    "type": "3d",
+
+                    "transform":
+                    {
+                        "position": 
+                        {
+                            "radius":500,
+                            "theta":-69,
+                            "phi":4
+                        },
+                        "size":
+                        {
+                            "theta": 25,
+                        }
+                    },
+                    "material":
+                    {
+                        "image": "panos/pano-0/hotspots/avion-a912.png",
+                        "transparent": true
+                    }
+                },
+                {
+                    "uid": "hotspot-plane-a933",
+                    "tags": [],
+                    "visible":true,
+                    "type": "3d",
+                    "transform":
+                    {
+                        "position": 
+                        {
+                            "radius":500,
+                            "theta":109.2,
+                            "phi":1.7
+                        },
+                        "size":
+                        {
+                            "theta": 24,
+                        }
+                    },
+                    "material":
+                    {
+                        "image": "panos/pano-0/hotspots/avion-a933.png",
+                        "transparent": true
+                    }
+                },
+                // 2 farest
+                {
+                    "uid": "hotspot-plane-a915",
+                    "tags": [],
+                    "visible":true,
+                    "type": "3d",
+                    "transform":
+                    {
+                        "position": 
+                        {
+                            "radius":800,
+                            "theta":90.9,
+                            "phi":0.2
+                        },
+                        "size":
+                        {
+                            "theta": 17,
+                        }
+                    },
+                    "material":
+                    {
+                        "image": "panos/pano-0/hotspots/avion-a915.png",
+                        "transparent": true
+                    }
+                },
+                {
+                    "uid": "hotspot-plane-a928",
+                    "tags": [],
+                    "visible":true,
+                    "type": "3d",
+                    "transform":
+                    {
+                        "position": 
+                        {
+                            "radius":800,
+                            "theta":-53.5,
+                            "phi":2.1
+                        },
+                        "size":
+                        {
+                            "theta": 14,
+                        }
+                    },
+                    "material":
+                    {
+                        "image": "panos/pano-0/hotspots/avion-a928.png",
+                        "transparent": true
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,8 +1,8 @@
 {
-    "uid": "simpliest-tour",
-    "name": "Simpliest Tour",
-    "slug": "simpliest-tour",
-    "description": "This is the simpliest tour ever",
+    "uid": "camera-tour",
+    "name": "Camera Limitation Tour",
+    "slug": "camera-tour",
+    "description": "Camera limitation and orientation can be applied on a tour",
     "default": "scene-0",
 
     "camera":

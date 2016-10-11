@@ -85,7 +85,6 @@
 
             {
                 "uid": "hotspot-3d-1",
-                "visible":true,
                 "type": "3d",
                 "name": "Jungle",
 
@@ -108,7 +107,7 @@
                     "uid" : "hotspot-3d-1-sound",
                     "url" : "http://streams.ken.com/projects/hotspotsSound/audio/Jungle.mp3",
                     "type" : "2d",
-                    "volume" : 0.02,
+                    "volume" : 0.1,
                     "loop" : true,
                     "autoPlay": true
                 }
