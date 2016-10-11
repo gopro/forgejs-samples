@@ -1,0 +1,152 @@
+{
+    "uid": "mpegdash-tour",
+    "name": "MPEG-DASH Video Tour",
+    "slug": "mpegdash-tour",
+    "description": "This is sample of MPEG-DASH video display",
+    "default": "scene-0",
+
+    "scenes": [
+        {
+            "uid": "scene-0",
+            "name": "First scene",
+            "slug": "first-scene",
+            "description": "This is the first scene",
+
+            "media":
+            {
+                "uid": "video-0",
+                "type": "video",
+                "format": "equi",
+
+                "source": {
+
+                    "format": "dash",
+                    "files":
+                    [
+                        "http://streams.ken.com/dev/formats/mpeg-dash/omni/301830.mpd"
+                    ]
+                },
+
+                "options": {
+                    "autoPlay": true,
+                    "loop": true,
+                    "volume": 0.5
+                }
+            }
+        },
+
+        {
+            "uid": "scene-1",
+            "name": "Second scene",
+            "slug": "second-scene",
+            "description": "This is the second scene",
+            "background": "#111",
+
+            "plugins":
+            {
+                "instances":
+                [
+                    {
+                        "uid": "simplevideo-mpegdash",
+                        "engine": "com.pluginmaker.simplevideo",
+
+                        "options":
+                        {
+                            "height": "100%",
+                            "width": "100%",
+                            "horizontalCenter": true,
+                            "verticalCenter": true,
+                            "autoPlay": true,
+                            "loop": true,
+                            "volume": 0.5
+                        },
+
+                        "data":
+                        {
+                            "video": "http://dash.edgesuite.net/envivio/EnvivioDash3/manifest.mpd",
+                            "format": "dash"
+                        },
+
+                        "keep": false
+                    }
+                ]
+            }
+        }
+    ],
+
+    "actions":
+    [
+        {
+            "uid": "action-prev",
+            "target": "viewer.tour",
+            "method":
+            {
+                "name": "previousScene"
+            }
+        },
+
+        {
+            "uid": "action-next",
+            "target": "viewer.tour",
+            "method":
+            {
+                "name": "nextScene"
+            }
+        }
+    ],
+
+    "plugins":
+    {
+        "engines": [
+            {
+                "uid": "com.pluginmaker.simplebutton",
+                "url": "SimpleButton/",
+                "manifest": "manifest.json"
+            },
+
+            {
+                "uid": "com.pluginmaker.simplevideo",
+                "url": "SimpleVideo/",
+                "manifest": "manifest.json"
+            }
+        ],
+
+        "instances": [
+            {
+                "uid": "simplebutton-previous",
+                "engine": "com.pluginmaker.simplebutton",
+
+                "options":
+                {
+                    "left": 5,
+                    "verticalCenter": true,
+
+                    "value": "Previous"
+                },
+
+                "events":
+                {
+                    "onClick": ["action-prev"]
+                }
+            },
+
+            {
+                "uid": "simplebutton-next",
+                "engine": "com.pluginmaker.simplebutton",
+
+                "options":
+                {
+                    "right": 5,
+                    "verticalCenter": true,
+
+                    "value": "Next"
+                },
+
+                "events":
+                {
+                    "onClick": ["action-next"]
+                }
+            }
+        ]
+    }
+}

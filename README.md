@@ -36,13 +36,13 @@ Apply a special effect on a scene, and toggle it to view how it affects the scen
 
 Using playlists, it's possible to apply a background sound track to each scene.
 
-### [Director's cut](09-directors-cut/) TODO
+### [Director's cut](09-directors-cut/)
 
 Change the orientation of the camera in realtime according to waypoints.
 
-### [MPEG-DASH video](10-mpeg-dash/) TODO
+### [MPEG-DASH videos](10-mpeg-dash/)
 
-Video player based on MPEG-DASH technology.
+Video player based on MPEG-DASH technique.
 
 ### [Hotspots](11-hotspots/) TODO
 
