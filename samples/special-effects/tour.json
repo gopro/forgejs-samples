@@ -1,0 +1,139 @@
+{
+    "uid": "fx-tour",
+    "name": "Special Effects Tour",
+    "slug": "fx-tour",
+    "description": "This is a demonstration of special effects applied to the background",
+    "default": "scene-0",
+
+    "scenes": [
+    {
+        "uid": "scene-0",
+        "name": "First scene",
+        "slug": "first-scene",
+        "description": "This is the first and only scene",
+        "fx": "fxSet-overall",
+
+        "media":
+        {
+            "uid": "scene-0-pano-0",
+            "type": "image",
+            "format": "equi",
+            "fx": "fxSet-background",
+
+            "source":
+            {
+                "url": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/common/panos/01-forest.png"
+            }
+        }
+    }],
+
+    "postProcessing":
+    {
+        "fxSets": [
+            {
+                "uid": "fxSet-background",
+                "set": [
+                    {
+                        "type": "HorizontalBlurShader",
+                        "uid": "fxSet-background-horizontalblur-0",
+                        "params":
+                        {
+                            "h": 0.0001
+                        }
+                    },
+
+                    {
+                        "type": "VerticalBlurShader",
+                        "uid": "fxSet-background-verticalblur-0",
+                        "params":
+                        {
+                            "v": 0.001
+                        }
+                    },
+
+                    {
+                        "type": "FilmShader",
+                        "uid": "fxSet-background-film-0",
+                        "params":
+                        {
+                            "nIntensity": 0.1,
+                            "sIntensity": 0.8,
+                            "sCount": 1024,
+                            "grayscale": 0
+                        }
+                    },
+
+                    {
+                        "type": "SepiaShader",
+                        "uid": "fxSet-background-sepia-0",
+                        "params":
+                        {
+                            "amount": 0.7
+                        }
+                    }
+                ]
+            },
+
+            {
+                "uid": "fxSet-overall",
+                "set": [
+                {
+                    "type": "VignetteShader",
+                    "uid": "fxSet-overall-vignette-0",
+                    "params":
+                    {
+                        "offset": 0.20,
+                        "darkness": 26
+                    }
+                }]
+            }
+        ]
+    },
+
+    "actions":
+    [
+        {
+            "uid": "action-toggle-fx",
+            "target": "viewer.renderer.renderPipeline",
+            "property":
+            {
+                "name": "enabled",
+                "operation": "toggle"
+            }
+        }
+    ],
+
+    "plugins":
+    {
+        "engines": [
+        {
+            "uid": "com.pluginmaker.simplebutton",
+            "url": "SimpleButton/",
+            "manifest": "manifest.json"
+        }],
+
+        "instances": [
+            {
+                "uid": "simplebutton-fx-enable",
+                "engine": "com.pluginmaker.simplebutton",
+                "enabled": true,
+
+                "options":
+                {
+                    "right": 5,
+                    "verticalCenter": true,
+
+                    "width": 100,
+                    "height": 50,
+
+                    "value": "Toggle FX"
+                },
+
+                "events":
+                {
+                    "onClick": ["action-toggle-fx"]
+                }
+            }
+        ]
+    }
+}

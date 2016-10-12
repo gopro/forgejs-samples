@@ -2,63 +2,67 @@
 
 This repository contains very simple samples, demonstrating the capatibilities of Kolor Eyes Next. [Another document](EXPLANATIONS.md) goes into details about some of the projects. It is recommended to read it if it is your first time creating a project.
 
-## List of projects
+## List of sample projects
 
-### [Simpliest project](01-simple-tour/)
+### [Simpliest project](samples/simple-tour/)
 
 It is the simpliest possible project : a very tiny webpage, a tiny configuration, and only one image to display. This is an example of the minimum required to run a project.
 
-### [Littleplanet view](02-littleplanet/)
+### [Littleplanet view](samples/littleplanet/)
 
 The previous project, with a different view, the little planet one.
 
-### [Multiple scenes](03-multiple-scenes/)
+### [Multiple scenes](samples/multiple-scenes/)
 
 A simple example showing how to navigate through scenes, using two buttons, **Next** and **Previous**.
 
-### [Simple video](04-video/)
+### [Simple video](samples/video/)
 
 A very simple example with a video playing.
 
-### [Multiple locales](05-multiple-locales/)
+### [Multiple locales](samples/multiple-locales/)
 
 Using the *LocaleSelector* plugin, it is possible to switch between the multiple locales present in this tour.
 
-### [Changing the view](06-change-view/)
+### [Changing the view](samples/change-view/)
 
 Change the view in realtime, going to Rectilinear to Little Planet, without stopping the playing video and without changing the orientation of the camera.
 
-### [Special effects](07-special-effects/)
+### [Special effects](samples/special-effects/)
 
 Apply a special effect on a scene, and toggle it to view how it affects the scene.
 
-### [Audio playlists](08-audio-playlists/)
+### [Audio playlists](samples/audio-playlists/)
 
 Using playlists, it's possible to apply a background sound track to each scene.
 
-### [Director's cut](09-directors-cut/)
+### [Director's cut](samples/directors-cut/)
 
 Change the orientation of the camera in realtime according to waypoints.
 
-### [MPEG-DASH videos](10-mpeg-dash/)
+### [MPEG-DASH videos](samples/mpeg-dash/)
 
 Video player based on MPEG-DASH technique.
 
-### [Hotspots](11-hotspots/) TODO
+### [Hotspots](samples/hotspots/)
 
 Add hotspots to a scene.
 
-### [Hotspots with spatialized sound](12-hotspots-sounds/)
+### [Hotspots with spatialized sounds](samples/hotspots-sounds/)
 
-Add hotspots with spatialized sound to a scene.
+Add hotspots with spatialized sounds to a scene.
 
-### [Camera limitation](13-camera-limits/)
+### [Camera limitation](samples/camera-limits/)
 
 Apply orientation and limits to the orientation and the field of view of the camera.
 
-### [Parallax effect](14-hotspots-parallax/)
+### [Camera parallax](samples/camera-parallax/)
 
 Apply a camera parallax effect on the hotspots layer.
+
+## Demonstration
+
+[Vrrroom](samples/vrrroom/)
 
 ## Test it
 

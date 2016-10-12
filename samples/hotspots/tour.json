@@ -1,0 +1,169 @@
+{
+    "uid": "hotspots-tour",
+    "name": "Hotspots Tour",
+    "slug": "hotspots-tour",
+    "description": "This is sample of hotspots",
+    "default": "scene-0",
+
+    "scenes": [
+    {
+        "uid": "scene-0",
+        "name": "First scene",
+        "slug": "first-scene",
+        "description": "This is the first and only scene",
+
+        "media":
+        {
+            "uid": "scene-0-pano-0",
+            "type": "image",
+            "format": "equi",
+
+            "source":
+            {
+                "url": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/common/panos/01-forest.png"
+            }
+        },
+
+        "camera":
+        {
+            "fov": {
+                "min": 30,
+                "max": 120
+            }
+        },
+
+        "hotspots":
+        [
+            {
+                "uid": "hotspot-3d-0",
+                "tags": [],
+                "visible":true,
+                "type": "3d",
+
+                "transform":
+                {
+                    "position":
+                    {
+                        "radius": 200,
+                        "theta": 0,
+                        "phi": 90
+                    },
+
+                    "size":
+                    {
+                        "phi": 12
+                    }
+                },
+
+                "material":
+                {
+                    "image": "../../assets/images/spot-4.png"
+                }
+            },
+
+            {
+                "uid": "hotspot-3d-1",
+                "tags": [],
+                "visible":true,
+                "type": "3d",
+
+                "transform":
+                {
+                    "position":
+                    {
+                        "radius": 400,
+                        "theta": -90
+                    },
+
+                    "size":
+                    {
+                        "phi": 12
+                    }
+                },
+
+                "material":
+                {
+                    "image": "../../assets/images/spot-3.png"
+                }
+            },
+
+            {
+                "uid": "hotspot-3d-2",
+                "tags": [],
+                "visible":true,
+                "type": "3d",
+
+                "transform":
+                {
+                    "position":
+                    {
+                        "radius": 400,
+                        "theta": 180
+                    },
+
+                    "size":
+                    {
+                        "phi": 12
+                    }
+                },
+
+                "material":
+                {
+                    "image": "../../assets/images/spot-2.png"
+                }
+            },
+
+            {
+                "uid": "hotspot-3d-3",
+                "tags": [],
+                "visible":true,
+                "type": "3d",
+
+                "transform":
+                {
+                    "position":
+                    {
+                        "radius": 400,
+                        "theta": 90
+                    },
+
+                    "size":
+                    {
+                        "phi": 12
+                    }
+                },
+
+                "material":
+                {
+                    "image": "../../assets/images/spot-1.png"
+                }
+            },
+
+            {
+                "uid": "hotspot-3d-4",
+                "tags": [],
+                "visible":true,
+                "type": "3d",
+
+                "transform":
+                {
+                    "position":
+                    {
+                        "radius": 400,
+                        "theta": 0
+                    },
+
+                    "size":
+                    {
+                        "phi": 12
+                    }
+                },
+
+                "material":
+                {
+                    "image": "../../assets/images/spot-0.png"
+                }
+            }
+        ]
+    }]
+}

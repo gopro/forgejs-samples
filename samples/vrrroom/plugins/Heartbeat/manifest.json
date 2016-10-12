@@ -1,0 +1,54 @@
+{
+    "uid": "com.pluginmaker.heartbeat",
+    "name": "Heartbeat",
+    "slug": "heartbeat",
+    "version": "1.0.0",
+    "versionName": "Heartbeat 1.0.0",
+    "description": "Add a simple heartbeat",
+
+    "author":
+    {
+        "name": "GoPro",
+        "website": "http://ken.com"
+    },
+
+    "licence": "MIT",
+
+    "data":
+    {
+        "keyframes": [
+            { "ts": 0,      "data": 100 },
+            { "ts": 3000,   "data": 150 },
+            { "ts": 5000,   "data": 190 }
+        ]
+    },
+
+    "options":
+    {
+        "width": 100,
+        "height": 100,
+
+        "top": null,
+        "left": null,
+        "right": null,
+        "bottom": null,
+
+        "urlIcon": "assets/heart.png",
+        "urlAnimation": "assets/heart.json",
+
+        "source": "media",
+
+        "font": {
+            "color": "black",
+            "size": 35,
+            "family": "pfdintextprolight"
+        }
+    },
+
+    "sources":
+    [
+        "src/Heartbeat.js"
+    ],
+
+    "constructor": "KPlug.Heartbeat"
+}

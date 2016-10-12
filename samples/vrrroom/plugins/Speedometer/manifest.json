@@ -1,0 +1,52 @@
+{
+    "uid": "com.pluginmaker.speedometer",
+    "name": "Speedometer",
+    "slug": "speedometer",
+    "version": "1.0.0",
+    "versionName": "Speed'o'meter 1.0.0",
+    "description": "Add a simple speedometer",
+
+    "author":
+    {
+        "name": "GoPro",
+        "website": "http://ken.com"
+    },
+
+    "licence": "MIT",
+
+    "data":
+    {
+        "keyframes": [
+            { "ts": 0,      "data": 0 },
+            { "ts": 3000,   "data": 50 },
+            { "ts": 5000,   "data": 70 },
+            { "ts": 7000,   "data": 100 }
+        ]
+    },
+
+    "options":
+    {
+        "width": 100,
+        "height": 100,
+
+        "top": null,
+        "left": null,
+        "right": null,
+        "bottom": null,
+
+        "speedUnit": "km/h",
+        "source": "media",
+
+        "font": {
+            "color": "black",
+            "size": 35,
+            "family": "pfdintextprolight"
+        }
+    },
+
+    "sources": [
+        "src/Speedometer.js"
+    ],
+
+    "constructor": "KPlug.Speedometer"
+}

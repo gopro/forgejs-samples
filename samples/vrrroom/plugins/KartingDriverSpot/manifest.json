@@ -1,0 +1,50 @@
+{
+    "uid": "com.pluginmaker.kartingdriverspot",
+    "name": "Karting Driver Spot",
+    "slug": "kartingdriverspot",
+    "version": "1.0.0",
+    "versionName": "Karting Driver Spot 1.0.0",
+    "description": "Add information about a driver as a hotspot.",
+    "tags": ["hotspot", "provider"],
+
+    "author":
+    {
+        "name": "GoPro",
+        "website": "http://ken.com"
+    },
+
+    "licence": "MIT",
+
+    "options":
+    {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null,
+        "horizontalCenter": false,
+        "verticalCenter": false,
+
+        "background": "#fff",
+        "width": 200,
+        "height": 100,
+        "nameFontFamily": "pfdintextprobold",
+        "infoFontFamily": "pfdintextprolight",
+
+        "name": "Name",
+        "size": "size (Meters)",
+        "weight": "weight (Kg)"
+    },
+
+    "actions":
+    [
+        "show",
+        "hide"
+    ],
+
+    "sources":
+    [
+        "src/KartingDriverSpot.js"
+    ],
+
+    "constructor": "KPlug.KartingDriverSpot"
+}

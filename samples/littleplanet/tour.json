@@ -1,0 +1,44 @@
+{
+    "uid": "littleplanet-tour",
+    "name": "Little planet Tour",
+    "slug": "littleplanet-tour",
+    "description": "This is the little planet tour ever",
+    "default": "scene-0",
+
+    "view":
+    {
+        "type": "GoPro"
+    },
+
+    "scenes": [
+    {
+        "uid": "scene-0",
+        "name": "First scene",
+        "slug": "first-scene",
+        "description": "This is the first and only scene",
+
+        "media":
+        {
+            "uid": "scene-0-pano-0",
+            "type": "image",
+            "format": "equi",
+
+            "source":
+            {
+                "url": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/common/panos/01-forest.png"
+            }
+        },
+
+        "camera":
+        {
+            "pitch":
+            {
+                "default": -90
+            },
+            "fov":
+            {
+                "default": 250
+            }
+        }
+    }]
+}
