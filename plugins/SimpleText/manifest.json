@@ -5,24 +5,24 @@
     "version": "1.0.0",
     "versionName": "Simple Text 1.0.0",
     "description": "Add a simple text",
-    
-    "author": 
+
+    "author":
     {
-        "name": "GoPro - Kolor Team",
-        "website": "http://www.kolor.com"
+        "name": "GoPro",
+        "website": "http://ken.com"
     },
 
     "licence": "MIT",
 
     "options":
     {
-        "config": 
+        "config":
         {
             "i18n": false,
             "value": "Default text"
         },
 
-        "top": null, 
+        "top": null,
         "right": null,
         "bottom": null,
         "left": null,

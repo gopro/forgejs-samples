@@ -23,7 +23,7 @@ KPlug.LocaleSelector = function()
     this._flagMargin = 0;
 };
 
-KPlug.LocaleSelector.prototype = 
+KPlug.LocaleSelector.prototype =
 {
     /**
      * The boot function, initialize the container of the flags, and then the
@@ -47,7 +47,7 @@ KPlug.LocaleSelector.prototype =
         this._container.left = this.plugin.options.left;
         this._container.right = this.plugin.options.right;
         this._container.bottom = this.plugin.options.bottom;
-        
+
         this._container.horizontalCenter = this.plugin.options.horizontalCenter;
         this._container.verticalCenter = this.plugin.options.verticalCenter;
 
@@ -70,17 +70,17 @@ KPlug.LocaleSelector.prototype =
     {
         // Get the location of the folder containing the flags
         var pluginUrl = this.plugin.fullUrl;
-        pluginUrl += pluginUrl.endsWith("/") ? "" : "/";
+        pluginUrl += KEN.Utils.endsWith(pluginUrl,"/") ? "" : "/";
 
         var imgUrl = this.plugin.options.baseURL.replace("{{plugin_url}}", pluginUrl);
             imgUrl += this.plugin.options.fileName.replace("{{locale}}", locale);
 
-        var skinConfig = 
+        var skinConfig =
         {
-            skin: 
+            skin:
             {
                 "name": "localeSelectorSkin",
-                "states": 
+                "states":
                 {
                     "out":
                     {
@@ -128,7 +128,7 @@ KPlug.LocaleSelector.prototype =
         this.viewer.i18n.locale = locale;
     },
 
-    /** 
+    /**
      * Placeholder, do nothing
      */
     update: function()
@@ -148,7 +148,7 @@ KPlug.LocaleSelector.prototype =
     hide: function()
     {
         this._container.hide();
-    }, 
+    },
 
     /**
      * Destroy the container and its flags

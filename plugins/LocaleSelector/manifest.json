@@ -6,18 +6,18 @@
     "versionName": "Locale Selector 1.0.0",
     "description": "Add a locale selector, using flags, to the tour.",
     "tags": ["i18n", "locale", "multilingual"],
-    
-    "author": 
+
+    "author":
     {
-        "name": "GoPro - Kolor Team",
-        "website": "http://www.kolor.com"
+        "name": "GoPro",
+        "website": "http://ken.com"
     },
 
     "licence": "MIT",
 
     "options":
     {
-        "top": null, 
+        "top": null,
         "right": null,
         "bottom": null,
         "left": null,

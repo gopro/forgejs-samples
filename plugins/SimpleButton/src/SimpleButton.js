@@ -37,7 +37,7 @@ KPlug.SimpleButton.prototype = {
             // default state
             if (typeof this.plugin.options.skin.out !== "undefined")
             {
-                skin.out = KEN.Utils.extendMultipleObjects(KEN.ButtonSkin.DEFAULT_STATE, skin.out, this.plugin.options.skin.out);
+                skin.out = KEN.Utils.extendMultipleObjects((this.plugin.options.defaultSkin === true ? KEN.ButtonSkin.DEFAULT_STATE : {}), skin.out, this.plugin.options.skin.out);
             }
 
             // skin.out is the default skin state for over state

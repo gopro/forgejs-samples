@@ -8,8 +8,8 @@
 
     "author":
     {
-        "name": "GoPro - Kolor Team",
-        "website": "http://www.kolor.com"
+        "name": "GoPro",
+        "website": "http://ken.com"
     },
 
     "licence": "MIT",
@@ -26,6 +26,7 @@
         "width": null,
         "height": null,
 
+        "defaultSkin": true,
         "value": null,
 
         "skin": {

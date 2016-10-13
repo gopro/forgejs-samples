@@ -1,0 +1,29 @@
+{
+    "uid": "com.pluginmaker.letterbox",
+    "name": "Letterbox",
+    "slug": "letterbox",
+    "version": "1.0.0",
+    "versionName": "Letterbox 1.0.0",
+    "description": "Add a letterboxing effect to a scene.",
+
+    "author":
+    {
+        "name": "GoPro",
+        "website": "http://ken.com"
+    },
+
+    "licence": "MIT",
+
+    "options":
+    {
+        "stripeHeight": 50,
+        "stripeColor": "black"
+    },
+
+    "sources":
+    [
+        "src/Letterbox.js"
+    ],
+
+    "constructor": "KPlug.Letterbox"
+}

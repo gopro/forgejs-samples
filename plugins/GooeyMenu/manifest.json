@@ -1,0 +1,73 @@
+{
+    "uid": "com.pluginmaker.gooeymenu",
+    "name": "Gooey Menu",
+    "slug": "gooey",
+    "version": "1.0.0",
+    "versionName": "Gooey Menu 1.0.0",
+    "description": "A simple Gooey menu",
+
+    "author":
+    {
+        "name": "GoPro",
+        "website": "http://ken.com"
+    },
+
+    "licence": "MIT",
+
+    "options":
+    {
+        "top": null,
+        "left": null,
+        "right": null,
+        "bottom": null,
+
+        "width": 300,
+        "height": 320,
+
+        "items": [
+        {
+            "id": "my-item",
+            "title": "gooeymenu-item-0",
+            "click": {
+                "action": "scene",
+                "target": "next"
+            }
+        }]
+    },
+
+    "i18n":
+    {
+        "locales":
+        [
+            {
+                "name": "fr-FR",
+                "files":
+                [
+                    {
+                        "key": "com.pluginmaker.gooeymenu.fr-FR",
+                        "url": "i18n/fr-FR/locale.json"
+                    }
+                ]
+            },
+
+            {
+                "name": "en-US",
+                "files":
+                [
+                    {
+                        "key": "com.pluginmaker.gooeymenu.en-US",
+                        "url": "i18n/en-US/locale.json"
+                    }
+                ]
+            }
+        ]
+    },
+
+    "sources":
+    [
+        "src/style.css",
+        "src/GooeyMenu.js"
+    ],
+
+    "constructor": "KPlug.GooeyMenu"
+}
