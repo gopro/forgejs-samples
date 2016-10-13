@@ -26,8 +26,7 @@
             "source":
             {
                 "files": [
-                    "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/directors-cut/Moto_Desert_2048x1024_2k_like_short.mp4",
-                    "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/directors-cut/Moto_Desert_3840x1920_4k_like_short.mp4"
+                    "http://d2z3zwtr25q24l.cloudfront.net/data/samples/directors-cut/Moto_Desert_2048x1024_2k_like_short.mp4"
                 ]
             },
 

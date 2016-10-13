@@ -20,7 +20,7 @@
 
             "source":
             {
-                "url": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/common/panos/01-forest.png"
+                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/01-forest.png"
             }
         },
 
@@ -57,7 +57,7 @@
 
                 "material":
                 {
-                    "image": "../../assets/images/spot-4.png"
+                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-4.png"
                 }
             },
 
@@ -83,7 +83,7 @@
 
                 "material":
                 {
-                    "image": "../../assets/images/spot-3.png"
+                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-3.png"
                 }
             },
 
@@ -109,7 +109,7 @@
 
                 "material":
                 {
-                    "image": "../../assets/images/spot-2.png"
+                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-2.png"
                 }
             },
 
@@ -135,7 +135,7 @@
 
                 "material":
                 {
-                    "image": "../../assets/images/spot-1.png"
+                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-1.png"
                 }
             },
 
@@ -161,7 +161,7 @@
 
                 "material":
                 {
-                    "image": "../../assets/images/spot-0.png"
+                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-0.png"
                 }
             }
         ]

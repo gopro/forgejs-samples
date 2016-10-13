@@ -23,7 +23,7 @@
                     "format": "dash",
                     "files":
                     [
-                        "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/common/videos/omni-highlights/dash/stream.mpd"
+                        "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/dash/411255.mpd"
                     ]
                 },
 
@@ -63,7 +63,7 @@
 
                         "data":
                         {
-                            "video": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/mpeg-dash/410524.mpd",
+                            "video": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/moto-desert/dash/410524.mpd",
                             "format": "dash"
                         },
 

@@ -20,7 +20,7 @@
 
             "source":
             {
-                "url": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/camera-parallax/Innerschweiz-no-planes.jpg"
+                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/camera-parallax/Innerschweiz-no-planes.jpg"
             }
         },
 
@@ -55,7 +55,7 @@
 
                 "material":
                 {
-                    "image": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/camera-parallax/plane-a917.png",
+                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/camera-parallax/plane-a917.png",
                     "transparent": true
                 }
             },
@@ -80,7 +80,7 @@
 
                 "material":
                 {
-                    "image": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/camera-parallax/plane-a919.png",
+                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/camera-parallax/plane-a919.png",
                     "transparent": true
                 }
             },
@@ -105,7 +105,7 @@
 
                 "material":
                 {
-                    "image": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/camera-parallax/plane-a912.png",
+                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/camera-parallax/plane-a912.png",
                     "transparent": true
                 }
             },
@@ -130,7 +130,7 @@
 
                 "material":
                 {
-                    "image": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/camera-parallax/plane-a933.png",
+                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/camera-parallax/plane-a933.png",
                     "transparent": true
                 }
             },
@@ -155,7 +155,7 @@
 
                 "material":
                 {
-                    "image": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/camera-parallax/plane-a915.png",
+                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/camera-parallax/plane-a915.png",
                     "transparent": true
                 }
             },
@@ -180,7 +180,7 @@
 
                 "material":
                 {
-                    "image": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/camera-parallax/plane-a928.png",
+                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/camera-parallax/plane-a928.png",
                     "transparent": true
                 }
             }

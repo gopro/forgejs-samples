@@ -2,13 +2,13 @@
 @font-face
 {
     font-family: pfdintextprolight;
-    src: url("http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/vrrroom/fonts/pfdintextpro-light.otf") format("opentype");
+    src: url("http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/fonts/pfdintextpro-light.otf") format("opentype");
 }
 
 @font-face
 {
     font-family: pfdintextprobold;
-    src: url("http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/vrrroom/fonts/pfdintextpro-bold.otf") format("opentype");
+    src: url("http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/fonts/pfdintextpro-bold.otf") format("opentype");
 }
 
 /**
@@ -16,63 +16,63 @@
  */
 .menu-i18n.menu-item-inactive
 {
-  background-image: url('http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/vrrroom/assets/gooeymenu/menu-i18n-white.png');
+  background-image: url('http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/gooeymenu/menu-i18n-white.png');
 }
 .menu-i18n.menu-item-active
 {
-  background-image: url('http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/vrrroom/assets/gooeymenu/menu-i18n-blue.png');
+  background-image: url('http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/gooeymenu/menu-i18n-blue.png');
 }
 
 .menu-map.menu-item-inactive
 {
-  background-image: url('http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/vrrroom/assets/gooeymenu/menu-map-white.png');
+  background-image: url('http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/gooeymenu/menu-map-white.png');
 }
 .menu-map.menu-item-active
 {
-  background-image: url('http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/vrrroom/assets/gooeymenu/menu-map-blue.png');
+  background-image: url('http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/gooeymenu/menu-map-blue.png');
 }
 
 .menu-rank.menu-item-inactive
 {
-  background-image: url('http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/vrrroom/assets/gooeymenu/menu-rank-white.png');
+  background-image: url('http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/gooeymenu/menu-rank-white.png');
 }
 .menu-rank.menu-item-active
 {
-  background-image: url('http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/vrrroom/assets/gooeymenu/menu-rank-blue.png');
+  background-image: url('http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/gooeymenu/menu-rank-blue.png');
 }
 
 .menu-cinema.menu-item-inactive
 {
-  background-image: url('http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/vrrroom/assets/gooeymenu/menu-cinema-white.png');
+  background-image: url('http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/gooeymenu/menu-cinema-white.png');
 }
 .menu-cinema.menu-item-active
 {
-  background-image: url('http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/vrrroom/assets/gooeymenu/menu-cinema-blue.png');
+  background-image: url('http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/gooeymenu/menu-cinema-blue.png');
 }
 
 .menu-heart.menu-item-inactive
 {
-  background-image: url('http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/vrrroom/assets/gooeymenu/menu-heart-white.png');
+  background-image: url('http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/gooeymenu/menu-heart-white.png');
 }
 .menu-heart.menu-item-active
 {
-  background-image: url('http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/vrrroom/assets/gooeymenu/menu-heart-blue.png');
+  background-image: url('http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/gooeymenu/menu-heart-blue.png');
 }
 
 .menu-home.menu-item-inactive
 {
-  background-image: url('http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/vrrroom/assets/gooeymenu/menu-home-white.png');
+  background-image: url('http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/gooeymenu/menu-home-white.png');
 }
 .menu-home.menu-item-active
 {
-  background-image: url('http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/vrrroom/assets/gooeymenu/menu-home-blue.png');
+  background-image: url('http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/gooeymenu/menu-home-blue.png');
 }
 
 .menu-music.menu-item-inactive
 {
-  background-image: url('http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/vrrroom/assets/gooeymenu/menu-music-white.png');
+  background-image: url('http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/gooeymenu/menu-music-white.png');
 }
 .menu-music.menu-item-active
 {
-  background-image: url('http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/vrrroom/assets/gooeymenu/menu-music-blue.png');
+  background-image: url('http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/gooeymenu/menu-music-blue.png');
 }

@@ -29,7 +29,7 @@
 
             "source":
             {
-                "url": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/common/panos/01-forest.png"
+                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/01-forest.png"
             }
         }
     }]

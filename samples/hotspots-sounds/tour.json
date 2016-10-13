@@ -20,7 +20,7 @@
 
             "source":
             {
-                "url": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/hotspots-sounds/rainforest-daniel-wambach.jpg"
+                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/rainforest-daniel-wambach.jpg"
             }
         },
 
@@ -58,7 +58,7 @@
 
                 "material":
                 {
-                    "image": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/hotspots-sounds/frog-b.png",
+                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/frog-b.png",
                     "color": "#ffffff",
                     "opacity": 1,
                     "transparent": true
@@ -67,7 +67,7 @@
                 "sound":
                 {
                     "uid" : "hotspot-3d-0-sound",
-                    "url" : "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/hotspots-sounds/Peeper_Frogs_Near_Lake.mp3",
+                    "url" : "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/Peeper_Frogs_Near_Lake.mp3",
                     "type" : "3d",
                     "volume" : 0.6,
                     "loop" : true,
@@ -105,7 +105,7 @@
                 "sound":
                 {
                     "uid" : "hotspot-3d-1-sound",
-                    "url" : "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/hotspots-sounds/Jungle.mp3",
+                    "url" : "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/Jungle.mp3",
                     "type" : "2d",
                     "volume" : 0.1,
                     "loop" : true,
@@ -136,7 +136,7 @@
 
                 "material":
                 {
-                    "image": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/hotspots-sounds/frog-a.png",
+                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/frog-a.png",
                     "color": "#ffffff",
                     "opacity": 1,
                     "transparent": true
@@ -145,7 +145,7 @@
                 "sound":
                 {
                     "uid" : "hotspot-3d-2-sound",
-                    "url" : "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/hotspots-sounds/Frogs.mp3",
+                    "url" : "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/Frogs.mp3",
                     "type" : "3d",
                     "volume" : 0.6,
                     "loop" : true,
@@ -185,7 +185,7 @@
 
                 "material":
                 {
-                    "image": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/hotspots-sounds/osprey.png",
+                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/osprey.png",
                     "color": "#ffffff",
                     "opacity": 1,
                     "transparent": true
@@ -194,7 +194,7 @@
                 "sound":
                 {
                     "uid" : "hotspot-3d-3-sound",
-                    "url" : "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/hotspots-sounds/Osprey_Bird_Call.mp3",
+                    "url" : "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/Osprey_Bird_Call.mp3",
                     "type" : "3d",
                     "volume" : 0.6,
                     "loop" : true,

@@ -45,42 +45,42 @@
                 "uid": "track-0",
                 "author": "TinyWorlds",
                 "name": "Forest Ambience",
-                "url": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/audio-playlists/Forest_Ambience.mp3"
+                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/audio-playlists/Forest_Ambience.mp3"
             },
 
             {
                 "uid": "track-1",
                 "author": "Écrivain",
                 "name": "Nature Comes",
-                "url": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/audio-playlists/nature_comes_sharp.ogg"
+                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/audio-playlists/nature_comes_sharp.ogg"
             },
 
             {
                 "uid": "track-2",
                 "author": "cynicmusic",
                 "name": "Battle theme A",
-                "url": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/audio-playlists/battleThemeA.mp3"
+                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/audio-playlists/battleThemeA.mp3"
             },
 
             {
                 "uid": "track-3",
                 "author": "Sudocolon",
                 "name": "Space Ace",
-                "url": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/audio-playlists/Logisector Intro.mp3"
+                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/audio-playlists/Logisector Intro.mp3"
             },
 
             {
                 "uid": "track-4",
                 "author": "Oddroom",
                 "name": "Samsara",
-                "url": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/audio-playlists/samsara_0.mp3"
+                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/audio-playlists/samsara_0.mp3"
             },
 
             {
                 "uid": "track-5",
                 "author": "tebruno99",
                 "name": "The Rush",
-                "url": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/audio-playlists/The Rush.mp3"
+                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/audio-playlists/The Rush.mp3"
             }
         ]
     },
@@ -100,7 +100,7 @@
 
             "source":
             {
-                "url": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/common/panos/01-forest.png"
+                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/01-forest.png"
             }
         },
 
@@ -123,7 +123,7 @@
 
             "source":
             {
-                "url": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/common/panos/02-sand.png"
+                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/02-sand.png"
             }
         },
 
@@ -146,7 +146,7 @@
 
             "source":
             {
-                "url": "http://ec2-52-37-161-225.us-west-2.compute.amazonaws.com/kendata/samples/common/panos/03-snow.png"
+                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/03-snow.png"
             }
         },
 
