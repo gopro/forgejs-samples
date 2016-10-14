@@ -978,7 +978,7 @@
         },
         {
             "uid": "hotspotAction-samy",
-            "target": "com.pluginmaker.simplebutton-start",
+            "target": "viewer.tour",
             "method":
             {
                 "name": "loadScene",
