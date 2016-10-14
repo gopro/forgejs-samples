@@ -62,7 +62,7 @@ Apply a camera parallax effect on the hotspots layer.
 
 ## Demonstration
 
-[Vrrroom](samples/vrrroom/)
+[VRRROOM](samples/vrrroom/)
 
 ## Test it
 
