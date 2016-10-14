@@ -2,7 +2,7 @@
 
 We are going to make a full tour, starting from nothing.
 
-The first thing to do is to start by copying the `00-example/` folder and renaming it with the name of your project. In here are a basic webpage and the `tour.json`, which is the core of our tour. In it is described the complete tour, from scenes to plugins, hotspots to the behavior of the camera.
+The first thing to do is to start by copying the `samples/empty-tour/` folder and renaming it with the name of your project. In here are a basic webpage and the `tour.json`, which is the core of our tour. In it is described the complete tour, from scenes to plugins, hotspots to the behavior of the camera.
 
 You don't have to touch the webpage in this tutorial, only the `tour.json`. To learn more how to configure the `KEN.Viewer` object, please consult the [documentation of the API]().
 
@@ -71,7 +71,7 @@ Now that we have a scene, we can specify the media we want to add. First, let's 
         "type": "image",
         "format": "equi",
 
-        "source": "images/image-scene-0.jpg"
+        "source": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/01-forest.png"
     }
 }
 ````
@@ -91,7 +91,7 @@ Above is the code to load an image, and below is for a video :
         "type": "video",
         "format": "equi",
 
-        "source": "videos/video-scene-0.mp4"
+        "source": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.03-1080p_HD.mp4"
     }
 }
 ````
@@ -130,19 +130,19 @@ You can also limit the movement on your scene, for example if you don't want the
         "yaw":
         {
             "default": 0,
-            "min": -180, 
-            "max": 180 
+            "min": -180,
+            "max": 180
         },
 
-        "pitch": 
-        { 
+        "pitch":
+        {
             "default": 0,
-            "min": 0, 
+            "min": 0,
             "max": 0
         },
-        
-        "fov": 
-        { 
+
+        "fov":
+        {
             "default": 80,
             "min": 80,
             "max": 80
@@ -184,7 +184,7 @@ If we go back to our `scenes` object, we can see it is in fact an array. So we c
 
             "source":
             {
-                "url": "images/image-scene-1.jpg"
+                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/02-sand.png"
             }
         }
     },
@@ -203,7 +203,7 @@ If we go back to our `scenes` object, we can see it is in fact an array. So we c
 
             "source":
             {
-                "url": "images/image-scene-2.jpg"
+                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/03-snow.png"
             }
         }
     },
@@ -222,7 +222,7 @@ If we go back to our `scenes` object, we can see it is in fact an array. So we c
 
             "source":
             {
-                "url": "videos/video-scene-3.mp4"
+                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/moto-desert/Moto_Desert_1920x960_1080p_like.mp4"
             }
         }
     }]
@@ -252,20 +252,20 @@ One of the points we can take advantage of having multiple scenes, is to specify
         "description": "This is the second scene",
 
         "media": { ... },
-        
+
         "camera":
         {
             "yaw":
             {
                 "default": 0,
-                "min": -90, 
-                "max": 90 
+                "min": -90,
+                "max": 90
             },
-        
-            "pitch": 
-            { 
+
+            "pitch":
+            {
                 "default": 0,
-                "min": 0, 
+                "min": 0,
                 "max": 0
             }
         }
@@ -278,7 +278,7 @@ One of the points we can take advantage of having multiple scenes, is to specify
         "description": "This is the third and last scene",
 
         "media": { ... },
-        
+
         "view":
         {
             "type": "GoPro"
@@ -292,7 +292,8 @@ Even if there is a global configuration for those objects, the configuration ins
 + the `view`
 + the `camera` limitation
 + the `plugins` section (see [Plugins](#Plugins))
-+ the `director`'s cut section (see [Director](#Director))
++ the `director`'s cut section
++ the `audio` and `playlists` sections
 
 ## Plugins
 
@@ -370,14 +371,14 @@ Now that we have an engine, we can instantiate our plugin. Let's start with our 
     "plugins":
     {
         "engines": [ ... ],
-        
+
         "instances": [
         {
             "uid": "simplebutton-previous",
             "engine": "com.pluginmaker.simplebutton",
 
             "options": {},
-            
+
             "events": {}
         }]
     }
@@ -438,7 +439,7 @@ Note that here the `instances` property is also an array (like `engines`), so we
     "plugins":
     {
         "engines": [ ... ],
-        
+
         "instances": [
         {
             "uid": "simplebutton-previous",
@@ -455,7 +456,7 @@ Note that here the `instances` property is also an array (like `engines`), so we
                 "verticalCenter": true,
                 "value": "Next"
             }
-            
+
             "events": {}
         }]
     }
@@ -509,7 +510,7 @@ When this action will be called by its uid, it will trigger a changement in the 
 }
 ````
 
-These two actions can now be called ! To trigger an action, we need to bind it to an event. Let's consult the list of available events on a *SimpleButton*: 
+These two actions can now be called ! To trigger an action, we need to bind it to an event. Let's consult the list of available events on a *SimpleButton*:
 
 ````json
 {
