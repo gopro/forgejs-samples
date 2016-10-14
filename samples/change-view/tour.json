@@ -71,7 +71,7 @@
             "method":
             {
                 "name": "lookAt",
-                "args": [null, 0, null, 70]
+                "args": [null, 0, null, 90]
             }
         },
 
