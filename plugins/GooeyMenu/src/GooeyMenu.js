@@ -73,6 +73,8 @@ KPlug.GooeyMenu.prototype = {
             this._items[i].dom.addEventListener('click', this._clickHandler.bind(this));
         }
 
+        this._setLabelTitle();
+
         // Load the locale
         this.viewer.i18n.onLocaleChangeComplete.add(this._onLocaleChangeCompletehandler, this);
     },
@@ -157,6 +159,11 @@ KPlug.GooeyMenu.prototype = {
      * Handle the locale change
      */
     _onLocaleChangeCompletehandler: function(event)
+    {
+        this._setLabelTitle();
+    },
+
+    _setLabelTitle: function()
     {
         for (var i = 0; i < this._itemsCount; i++)
         {

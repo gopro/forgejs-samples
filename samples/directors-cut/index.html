@@ -51,7 +51,7 @@
     </div>
 
     <!-- Include the KEN library -->
-    <script type="text/javascript" src="../../lib/ken.js" ></script>
+    <script type="text/javascript" src="../../lib/ken.min.js" ></script>
 
     <!-- Start KEN -->
     <script type="text/javascript">
@@ -64,20 +64,8 @@
     // What to do on boot time
     function boot()
     {
-        viewer.onReady.add(onReadyHandler);
-
         // Load the tour configuration
         viewer.tour.load('tour.json');
-    }
-
-    // What to do when viewer is ready
-    function onReadyHandler()
-    {
-        // Disable all camera controllers
-        for (var i=0, ii = viewer.controllers.all.length; i < ii; i++)
-        {
-            viewer.controllers.all[i].disable();
-        }
     }
 
     // Start the viewer

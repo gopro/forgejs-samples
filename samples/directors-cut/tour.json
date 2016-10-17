@@ -10,6 +10,11 @@
         "type": "gopro"
     },
 
+    "controllers":
+    {
+        "enabled": false
+    },
+
     "scenes": [
     {
         "uid": "scene-0",

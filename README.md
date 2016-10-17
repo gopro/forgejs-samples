@@ -85,13 +85,3 @@ http-server -p 8000
 ````
 
 You can then browse [your localhost](http://localhost:8000).
-
-## Update KEN in all projects
-
-````bash
-./update-ken.sh
-
-# OR
-
-npm run update
-````

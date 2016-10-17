@@ -80,7 +80,10 @@ KPlug.GoogleMaps.prototype = {
         this._clearVideo();
         this._setupVideo();
 
-        this._loadGpx();
+        if (typeof google !== "undefined")
+        {
+            this._loadGpx();
+        }
     },
 
     _setupVideo: function(video)
