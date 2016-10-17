@@ -1,31 +1,34 @@
 {
-    "uid": "fx-tour",
-    "name": "Special Effects Tour",
-    "slug": "fx-tour",
-    "description": "This is a demonstration of special effects applied to the background",
-    "default": "scene-0",
-
-    "scenes": [
+    "tour":
     {
-        "uid": "scene-0",
-        "name": "First scene",
-        "slug": "first-scene",
-        "description": "This is the first and only scene",
-        "fx": "fxSet-overall",
+        "uid": "fx-tour",
+        "name": "Special Effects Tour",
+        "slug": "fx-tour",
+        "description": "This is a demonstration of special effects applied to the background",
+        "default": "scene-0",
 
-        "media":
+        "scenes": [
         {
-            "uid": "scene-0-pano-0",
-            "type": "image",
-            "format": "equi",
-            "fx": "fxSet-background",
+            "uid": "scene-0",
+            "name": "First scene",
+            "slug": "first-scene",
+            "description": "This is the first and only scene",
+            "fx": "fxSet-overall",
 
-            "source":
+            "media":
             {
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/01-forest.png"
+                "uid": "scene-0-pano-0",
+                "type": "image",
+                "format": "equi",
+                "fx": "fxSet-background",
+
+                "source":
+                {
+                    "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/01-forest.png"
+                }
             }
-        }
-    }],
+        }]
+    },
 
     "postProcessing":
     {
@@ -105,6 +108,8 @@
 
     "plugins":
     {
+        "prefix": "../../plugins/",
+
         "engines": [
         {
             "uid": "com.pluginmaker.simplebutton",

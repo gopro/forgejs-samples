@@ -1,39 +1,42 @@
 {
-    "uid": "video-tour",
-    "name": "Video Tour",
-    "slug": "video-tour",
-    "description": "This is the simpliest tour ever, but with a video",
-    "default": "scene-0",
-
-    "scenes": [
+    "tour":
     {
-        "uid": "scene-0",
-        "name": "First scene",
-        "slug": "first-scene",
-        "description": "This is the first and only scene",
+        "uid": "video-tour",
+        "name": "Video Tour",
+        "slug": "video-tour",
+        "description": "This is the simpliest tour ever, but with a video",
+        "default": "scene-0",
 
-        "media":
+        "scenes": [
         {
-            "uid": "scene-0-pano-0",
-            "type": "video",
-            "format": "equi",
+            "uid": "scene-0",
+            "name": "First scene",
+            "slug": "first-scene",
+            "description": "This is the first and only scene",
 
-            "source":
+            "media":
             {
-                "files": [
-                    "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.02-720p_HD.mp4",
-                    "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.03-1080p_HD.mp4",
-                    "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.04-1440p_HD.mp4",
-                    "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.07-2160p_4K_H264_12M.mp4"
-                ]
-            },
+                "uid": "scene-0-pano-0",
+                "type": "video",
+                "format": "equi",
 
-            "options":
-            {
-                "autoPlay": true,
-                "loop": true,
-                "volume": 1
+                "source":
+                {
+                    "files": [
+                        "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.02-720p_HD.mp4",
+                        "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.03-1080p_HD.mp4",
+                        "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.04-1440p_HD.mp4",
+                        "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.07-2160p_4K_H264_12M.mp4"
+                    ]
+                },
+
+                "options":
+                {
+                    "autoPlay": true,
+                    "loop": true,
+                    "volume": 1
+                }
             }
-        }
-    }]
+        }]
+    }
 }

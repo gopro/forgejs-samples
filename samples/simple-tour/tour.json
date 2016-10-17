@@ -1,27 +1,30 @@
 {
-    "uid": "simpliest-tour",
-    "name": "Simpliest Tour",
-    "slug": "simpliest-tour",
-    "description": "This is the simpliest tour ever",
-    "default": "scene-0",
-
-    "scenes": [
+    "tour":
     {
-        "uid": "scene-0",
-        "name": "First scene",
-        "slug": "first-scene",
-        "description": "This is the first and only scene",
+        "uid": "simpliest-tour",
+        "name": "Simpliest Tour",
+        "slug": "simpliest-tour",
+        "description": "This is the simpliest tour ever",
+        "default": "scene-0",
 
-        "media":
+        "scenes": [
         {
-            "uid": "scene-0-pano-0",
-            "type": "image",
-            "format": "equi",
+            "uid": "scene-0",
+            "name": "First scene",
+            "slug": "first-scene",
+            "description": "This is the first and only scene",
 
-            "source":
+            "media":
             {
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/01-forest.png"
+                "uid": "scene-0-pano-0",
+                "type": "image",
+                "format": "equi",
+
+                "source":
+                {
+                    "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/01-forest.png"
+                }
             }
-        }
-    }]
+        }]
+    }
 }

@@ -55,6 +55,9 @@
         Click on NEXT and PREVIOUS buttons to navigate between 360° and flat MPEG-DASH videos.
     </div>
 
+    <!-- Include the DASH library -->
+    <script type="text/javascript" src="dash.js/dash.all.min.js"></script>
+
     <!-- Include the KEN library -->
     <script type="text/javascript" src="../../lib/ken.min.js" ></script>
 
@@ -62,33 +65,7 @@
     <script type="text/javascript">
 
     // Create a viewer
-    var options =
-    {
-        plugins: {
-            prefix: "../../plugins/"
-        }
-    };
-
-    var viewer = new KEN.Viewer(options, "container", {
-        boot: boot
-    });
-
-    // What to do on boot time
-    function boot()
-    {
-        // Add a script as dependency
-        viewer.dependencies.onAllScriptsLoaded.add(onDependenciesHandler, this)
-        viewer.dependencies.add({"url": "dash.js/dash.all.min.js"});
-    }
-
-    function onDependenciesHandler()
-    {
-        // Load the tour configuration
-        viewer.tour.load('tour.json');
-    }
-
-    // Start the viewer
-    viewer.boot();
+    var viewer = new KEN.Viewer("container", "tour.json");
 
     </script>
 </body>

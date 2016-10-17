@@ -1,169 +1,172 @@
 {
-    "uid": "hotspots-tour",
-    "name": "Hotspots Tour",
-    "slug": "hotspots-tour",
-    "description": "This is sample of hotspots",
-    "default": "scene-0",
-
-    "scenes": [
+    "tour":
     {
-        "uid": "scene-0",
-        "name": "First scene",
-        "slug": "first-scene",
-        "description": "This is the first and only scene",
+        "uid": "hotspots-tour",
+        "name": "Hotspots Tour",
+        "slug": "hotspots-tour",
+        "description": "This is sample of hotspots",
+        "default": "scene-0",
 
-        "media":
+        "scenes": [
         {
-            "uid": "scene-0-pano-0",
-            "type": "image",
-            "format": "equi",
+            "uid": "scene-0",
+            "name": "First scene",
+            "slug": "first-scene",
+            "description": "This is the first and only scene",
 
-            "source":
+            "media":
             {
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/01-forest.png"
-            }
-        },
+                "uid": "scene-0-pano-0",
+                "type": "image",
+                "format": "equi",
 
-        "camera":
-        {
-            "fov": {
-                "min": 30,
-                "max": 120
-            }
-        },
-
-        "hotspots":
-        [
-            {
-                "uid": "hotspot-3d-0",
-                "tags": [],
-                "visible":true,
-                "type": "3d",
-
-                "transform":
+                "source":
                 {
-                    "position":
-                    {
-                        "radius": 200,
-                        "theta": 0,
-                        "phi": 90
-                    },
-
-                    "size":
-                    {
-                        "phi": 12
-                    }
-                },
-
-                "material":
-                {
-                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-4.png"
+                    "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/01-forest.png"
                 }
             },
 
+            "camera":
             {
-                "uid": "hotspot-3d-1",
-                "tags": [],
-                "visible":true,
-                "type": "3d",
-
-                "transform":
+                "fov":
                 {
-                    "position":
-                    {
-                        "radius": 400,
-                        "theta": -90
-                    },
-
-                    "size":
-                    {
-                        "phi": 12
-                    }
-                },
-
-                "material":
-                {
-                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-3.png"
+                    "min": 30,
+                    "max": 120
                 }
             },
 
-            {
-                "uid": "hotspot-3d-2",
-                "tags": [],
-                "visible":true,
-                "type": "3d",
-
-                "transform":
+            "hotspots": [
                 {
-                    "position":
+                    "uid": "hotspot-3d-0",
+                    "tags": [],
+                    "visible": true,
+                    "type": "3d",
+
+                    "transform":
                     {
-                        "radius": 400,
-                        "theta": 180
+                        "position":
+                        {
+                            "radius": 200,
+                            "theta": 0,
+                            "phi": 90
+                        },
+
+                        "size":
+                        {
+                            "phi": 12
+                        }
                     },
 
-                    "size":
+                    "material":
                     {
-                        "phi": 12
+                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-4.png"
                     }
                 },
 
-                "material":
                 {
-                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-2.png"
-                }
-            },
+                    "uid": "hotspot-3d-1",
+                    "tags": [],
+                    "visible": true,
+                    "type": "3d",
 
-            {
-                "uid": "hotspot-3d-3",
-                "tags": [],
-                "visible":true,
-                "type": "3d",
-
-                "transform":
-                {
-                    "position":
+                    "transform":
                     {
-                        "radius": 400,
-                        "theta": 90
+                        "position":
+                        {
+                            "radius": 400,
+                            "theta": -90
+                        },
+
+                        "size":
+                        {
+                            "phi": 12
+                        }
                     },
 
-                    "size":
+                    "material":
                     {
-                        "phi": 12
+                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-3.png"
                     }
                 },
 
-                "material":
                 {
-                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-1.png"
-                }
-            },
+                    "uid": "hotspot-3d-2",
+                    "tags": [],
+                    "visible": true,
+                    "type": "3d",
 
-            {
-                "uid": "hotspot-3d-4",
-                "tags": [],
-                "visible":true,
-                "type": "3d",
-
-                "transform":
-                {
-                    "position":
+                    "transform":
                     {
-                        "radius": 400,
-                        "theta": 0
+                        "position":
+                        {
+                            "radius": 400,
+                            "theta": 180
+                        },
+
+                        "size":
+                        {
+                            "phi": 12
+                        }
                     },
 
-                    "size":
+                    "material":
                     {
-                        "phi": 12
+                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-2.png"
                     }
                 },
 
-                "material":
                 {
-                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-0.png"
+                    "uid": "hotspot-3d-3",
+                    "tags": [],
+                    "visible": true,
+                    "type": "3d",
+
+                    "transform":
+                    {
+                        "position":
+                        {
+                            "radius": 400,
+                            "theta": 90
+                        },
+
+                        "size":
+                        {
+                            "phi": 12
+                        }
+                    },
+
+                    "material":
+                    {
+                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-1.png"
+                    }
+                },
+
+                {
+                    "uid": "hotspot-3d-4",
+                    "tags": [],
+                    "visible": true,
+                    "type": "3d",
+
+                    "transform":
+                    {
+                        "position":
+                        {
+                            "radius": 400,
+                            "theta": 0
+                        },
+
+                        "size":
+                        {
+                            "phi": 12
+                        }
+                    },
+
+                    "material":
+                    {
+                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-0.png"
+                    }
                 }
-            }
-        ]
-    }]
+            ]
+        }]
+    }
 }

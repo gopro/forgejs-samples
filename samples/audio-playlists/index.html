@@ -58,26 +58,7 @@
     <script type="text/javascript">
 
     // Create a viewer
-    var options =
-    {
-        plugins: {
-            prefix: "../../plugins/"
-        }
-    };
-
-    var viewer = new KEN.Viewer(options, "container", {
-        boot: boot
-    });
-
-    // What to do on boot time
-    function boot()
-    {
-        // Load the tour configuration
-        viewer.tour.load('tour.json');
-    }
-
-    // Start the viewer
-    viewer.boot();
+    var viewer = new KEN.Viewer("container", "tour.json");
 
     </script>
 </body>

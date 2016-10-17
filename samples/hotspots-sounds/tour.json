@@ -1,216 +1,220 @@
 {
-    "uid": "hotspots-sound-tour",
-    "name": "Hotspots with Spatialized Sound Tour",
-    "slug": "hotspots-sound-tour",
-    "description": "This is sample of hotspots sound spatialization",
-    "default": "scene-0",
-
-    "scenes": [
+    "tour":
     {
-        "uid": "scene-0",
-        "name": "First scene",
-        "slug": "first-scene",
-        "description": "This is the first and only scene",
+        "uid": "hotspots-sound-tour",
+        "name": "Hotspots with Spatialized Sound Tour",
+        "slug": "hotspots-sound-tour",
+        "description": "This is sample of hotspots sound spatialization",
+        "default": "scene-0",
 
-        "media":
+        "scenes": [
         {
-            "uid": "scene-0-pano-0",
-            "type": "image",
-            "format": "equi",
+            "uid": "scene-0",
+            "name": "First scene",
+            "slug": "first-scene",
+            "description": "This is the first and only scene",
 
-            "source":
+            "media":
             {
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/rainforest-daniel-wambach.jpg"
-            }
-        },
+                "uid": "scene-0-pano-0",
+                "type": "image",
+                "format": "equi",
 
-        "camera":
-        {
-            "yaw": {
-                "default": 160
-            },
-            "fov": {
-                "min": 30,
-                "max": 120
-            }
-        },
-
-        "hotspots" :
-        [
-            {
-                "uid": "hotspot-3d-0",
-                "visible":true,
-                "type": "3d",
-                "name": "Peeper Frogs Near Lake",
-
-                "transform":
+                "source":
                 {
-                    "position":
-                    {
-                        "radius": 400,
-                        "theta": 135
-                    },
-                    "size":
-                    {
-                        "phi": 10
-                    }
-                },
-
-                "material":
-                {
-                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/frog-b.png",
-                    "color": "#ffffff",
-                    "opacity": 1,
-                    "transparent": true
-                },
-
-                "sound":
-                {
-                    "uid" : "hotspot-3d-0-sound",
-                    "url" : "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/Peeper_Frogs_Near_Lake.mp3",
-                    "type" : "3d",
-                    "volume" : 0.6,
-                    "loop" : true,
-                    "autoPlay": true,
-                    "range" : 210,
-                    "outOfFov":
-                    {
-                        "mute": false,
-                        "fade": false,
-                        "fadeTime" : 0.5,
-                        "minVolume" : 0.2
-                    }
+                    "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/rainforest-daniel-wambach.jpg"
                 }
             },
 
+            "camera":
             {
-                "uid": "hotspot-3d-1",
-                "type": "3d",
-                "name": "Jungle",
-
-                "transform":
+                "yaw":
                 {
-                    "position":
-                    {
-                        "radius": 400,
-                        "theta": -175,
-                        "phi": 12
-                    },
-                    "size":
-                    {
-                        "phi": 10
-                    }
+                    "default": 160
                 },
-
-                "sound":
+                "fov":
                 {
-                    "uid" : "hotspot-3d-1-sound",
-                    "url" : "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/Jungle.mp3",
-                    "type" : "2d",
-                    "volume" : 0.1,
-                    "loop" : true,
-                    "autoPlay": true
+                    "min": 30,
+                    "max": 120
                 }
             },
 
-            {
-                "uid": "hotspot-3d-2",
-                "tags": [],
-                "visible":true,
-                "type": "3d",
-                "name": "Frogs",
-
-                "transform":
+            "hotspots": [
                 {
-                    "position":
+                    "uid": "hotspot-3d-0",
+                    "visible": true,
+                    "type": "3d",
+                    "name": "Peeper Frogs Near Lake",
+
+                    "transform":
                     {
-                        "radius": 400,
-                        "theta": -110,
-                        "phi": -10
+                        "position":
+                        {
+                            "radius": 400,
+                            "theta": 135
+                        },
+                        "size":
+                        {
+                            "phi": 10
+                        }
                     },
-                    "size":
+
+                    "material":
                     {
-                        "phi": 10
+                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/frog-b.png",
+                        "color": "#ffffff",
+                        "opacity": 1,
+                        "transparent": true
+                    },
+
+                    "sound":
+                    {
+                        "uid": "hotspot-3d-0-sound",
+                        "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/Peeper_Frogs_Near_Lake.mp3",
+                        "type": "3d",
+                        "volume": 0.6,
+                        "loop": true,
+                        "autoPlay": true,
+                        "range": 210,
+                        "outOfFov":
+                        {
+                            "mute": false,
+                            "fade": false,
+                            "fadeTime": 0.5,
+                            "minVolume": 0.2
+                        }
                     }
                 },
 
-                "material":
                 {
-                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/frog-a.png",
-                    "color": "#ffffff",
-                    "opacity": 1,
-                    "transparent": true
+                    "uid": "hotspot-3d-1",
+                    "type": "3d",
+                    "name": "Jungle",
+
+                    "transform":
+                    {
+                        "position":
+                        {
+                            "radius": 400,
+                            "theta": -175,
+                            "phi": 12
+                        },
+                        "size":
+                        {
+                            "phi": 10
+                        }
+                    },
+
+                    "sound":
+                    {
+                        "uid": "hotspot-3d-1-sound",
+                        "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/Jungle.mp3",
+                        "type": "2d",
+                        "volume": 0.1,
+                        "loop": true,
+                        "autoPlay": true
+                    }
                 },
 
-                "sound":
                 {
-                    "uid" : "hotspot-3d-2-sound",
-                    "url" : "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/Frogs.mp3",
-                    "type" : "3d",
-                    "volume" : 0.6,
-                    "loop" : true,
-                    "startTime" : 0,
-                    "autoPlay": true,
-                    "range" : 120,
-                    "outOfFov":
+                    "uid": "hotspot-3d-2",
+                    "tags": [],
+                    "visible": true,
+                    "type": "3d",
+                    "name": "Frogs",
+
+                    "transform":
                     {
-                        "mute": false,
-                        "fade": false,
-                        "fadeTime" : 0.5,
-                        "minVolume" : 0.2
+                        "position":
+                        {
+                            "radius": 400,
+                            "theta": -110,
+                            "phi": -10
+                        },
+                        "size":
+                        {
+                            "phi": 10
+                        }
+                    },
+
+                    "material":
+                    {
+                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/frog-a.png",
+                        "color": "#ffffff",
+                        "opacity": 1,
+                        "transparent": true
+                    },
+
+                    "sound":
+                    {
+                        "uid": "hotspot-3d-2-sound",
+                        "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/Frogs.mp3",
+                        "type": "3d",
+                        "volume": 0.6,
+                        "loop": true,
+                        "startTime": 0,
+                        "autoPlay": true,
+                        "range": 120,
+                        "outOfFov":
+                        {
+                            "mute": false,
+                            "fade": false,
+                            "fadeTime": 0.5,
+                            "minVolume": 0.2
+                        }
+                    }
+                },
+
+                {
+                    "uid": "hotspot-3d-3",
+                    "tags": [],
+                    "visible": true,
+                    "type": "3d",
+                    "name": "Osprey Bird Call",
+
+                    "transform":
+                    {
+                        "position":
+                        {
+                            "radius": 400,
+                            "theta": 6,
+                            "phi": 42
+                        },
+                        "size":
+                        {
+                            "phi": 10
+                        }
+                    },
+
+                    "material":
+                    {
+                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/osprey.png",
+                        "color": "#ffffff",
+                        "opacity": 1,
+                        "transparent": true
+                    },
+
+                    "sound":
+                    {
+                        "uid": "hotspot-3d-3-sound",
+                        "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/Osprey_Bird_Call.mp3",
+                        "type": "3d",
+                        "volume": 0.6,
+                        "loop": true,
+                        "startTime": 0,
+                        "autoPlay": true,
+                        "range": 120,
+                        "outOfFov":
+                        {
+                            "mute": false,
+                            "fade": false,
+                            "fadeTime": 0.5,
+                            "minVolume": 0.2
+                        }
                     }
                 }
-            },
 
-            {
-                "uid": "hotspot-3d-3",
-                "tags": [],
-                "visible":true,
-                "type": "3d",
-                "name": "Osprey Bird Call",
-
-                "transform":
-                {
-                    "position":
-                    {
-                        "radius": 400,
-                        "theta": 6,
-                        "phi": 42
-                    },
-                    "size":
-                    {
-                        "phi": 10
-                    }
-                },
-
-                "material":
-                {
-                    "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/osprey.png",
-                    "color": "#ffffff",
-                    "opacity": 1,
-                    "transparent": true
-                },
-
-                "sound":
-                {
-                    "uid" : "hotspot-3d-3-sound",
-                    "url" : "http://d2z3zwtr25q24l.cloudfront.net/data/samples/hotspots-sounds/Osprey_Bird_Call.mp3",
-                    "type" : "3d",
-                    "volume" : 0.6,
-                    "loop" : true,
-                    "startTime" : 0,
-                    "autoPlay": true,
-                    "range" : 120,
-                    "outOfFov":
-                    {
-                        "mute": false,
-                        "fade": false,
-                        "fadeTime" : 0.5,
-                        "minVolume" : 0.2
-                    }
-                }
-            }
-
-        ]
-    }]
+            ]
+        }]
+    }
 }

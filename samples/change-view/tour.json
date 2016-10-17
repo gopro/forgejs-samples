@@ -1,60 +1,63 @@
 {
-    "uid": "view-tour",
-    "name": "Change View Tour",
-    "slug": "view-tour",
-    "description": "This is a demonstration of the view changes",
-    "default": "scene-0",
-
-    "scenes": [
+    "tour":
     {
-        "uid": "scene-0",
-        "name": "First scene",
-        "slug": "first-scene",
-        "description": "This is the first and only scene",
+        "uid": "view-tour",
+        "name": "Change View Tour",
+        "slug": "view-tour",
+        "description": "This is a demonstration of the view changes",
+        "default": "scene-0",
 
-        "view": {
-            "type": "gopro"
-        },
-
-        "media":
+        "scenes": [
         {
-            "uid": "scene-0-pano-0",
-            "type": "video",
-            "format": "equi",
+            "uid": "scene-0",
+            "name": "First scene",
+            "slug": "first-scene",
+            "description": "This is the first and only scene",
 
-            "source":
+            "view":
             {
-                "files": [
-                    "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.02-720p_HD.mp4",
-                    "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.03-1080p_HD.mp4",
-                    "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.04-1440p_HD.mp4",
-                    "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.07-2160p_4K_H264_12M.mp4"
-                ]
+                "type": "gopro"
             },
 
-            "options":
+            "media":
             {
-                "autoPlay": true,
-                "loop": true,
-                "volume": 1
-            }
-        },
+                "uid": "scene-0-pano-0",
+                "type": "video",
+                "format": "equi",
 
-        "camera":
-        {
-            "pitch":
-            {
-                "default": -90
+                "source":
+                {
+                    "files": [
+                        "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.02-720p_HD.mp4",
+                        "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.03-1080p_HD.mp4",
+                        "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.04-1440p_HD.mp4",
+                        "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.07-2160p_4K_H264_12M.mp4"
+                    ]
+                },
+
+                "options":
+                {
+                    "autoPlay": true,
+                    "loop": true,
+                    "volume": 1
+                }
             },
-            "fov":
-            {
-                "default": 250
-            }
-        }
-    }],
 
-    "actions":
-    [
+            "camera":
+            {
+                "pitch":
+                {
+                    "default": -90
+                },
+                "fov":
+                {
+                    "default": 250
+                }
+            }
+        }]
+    },
+
+    "actions": [
         {
             "uid": "action-view-recti",
             "target": "viewer.renderer",
@@ -98,6 +101,8 @@
 
     "plugins":
     {
+        "prefix": "../../plugins/",
+
         "engines": [
         {
             "uid": "com.pluginmaker.simplebutton",

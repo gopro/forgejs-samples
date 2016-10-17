@@ -1,51 +1,53 @@
 {
-    "uid": "mpegdash-tour",
-    "name": "MPEG-DASH Video Tour",
-    "slug": "mpegdash-tour",
-    "description": "This is sample of MPEG-DASH video display",
-    "default": "scene-0",
+    "tour":
+    {
+        "uid": "mpegdash-tour",
+        "name": "MPEG-DASH Video Tour",
+        "slug": "mpegdash-tour",
+        "description": "This is sample of MPEG-DASH video display",
+        "default": "scene-0",
 
-    "scenes": [
-        {
-            "uid": "scene-0",
-            "name": "First scene",
-            "slug": "first-scene",
-            "description": "This is the first scene",
-
-            "media":
+        "scenes": [
             {
-                "uid": "video-0",
-                "type": "video",
-                "format": "equi",
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first scene",
 
-                "source": {
+                "media":
+                {
+                    "uid": "video-0",
+                    "type": "video",
+                    "format": "equi",
 
-                    "format": "dash",
-                    "files":
-                    [
-                        "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/dash/411255.mpd"
-                    ]
-                },
+                    "source":
+                    {
 
-                "options": {
-                    "autoPlay": true,
-                    "loop": true,
-                    "volume": 0.5
+                        "format": "dash",
+                        "files": [
+                            "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/dash/411255.mpd"
+                        ]
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0.5
+                    }
                 }
-            }
-        },
+            },
 
-        {
-            "uid": "scene-1",
-            "name": "Second scene",
-            "slug": "second-scene",
-            "description": "This is the second scene",
-            "background": "#111",
-
-            "plugins":
             {
-                "instances":
-                [
+                "uid": "scene-1",
+                "name": "Second scene",
+                "slug": "second-scene",
+                "description": "This is the second scene",
+                "background": "#111",
+
+                "plugins":
+                {
+                    "instances": [
                     {
                         "uid": "simplevideo-mpegdash",
                         "engine": "com.pluginmaker.simplevideo",
@@ -69,11 +71,11 @@
 
                         "index": 1,
                         "keep": false
-                    }
-                ]
+                    }]
+                }
             }
-        }
-    ],
+        ]
+    },
 
     "actions":
     [
@@ -98,6 +100,8 @@
 
     "plugins":
     {
+        "prefix": "../../plugins/",
+
         "engines": [
             {
                 "uid": "com.pluginmaker.simplebutton",

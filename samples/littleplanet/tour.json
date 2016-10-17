@@ -1,44 +1,47 @@
 {
-    "uid": "littleplanet-tour",
-    "name": "Little planet Tour",
-    "slug": "littleplanet-tour",
-    "description": "This is the little planet tour ever",
-    "default": "scene-0",
-
-    "view":
+    "tour":
     {
-        "type": "GoPro"
-    },
+        "uid": "littleplanet-tour",
+        "name": "Little planet Tour",
+        "slug": "littleplanet-tour",
+        "description": "This is the little planet tour ever",
+        "default": "scene-0",
 
-    "scenes": [
-    {
-        "uid": "scene-0",
-        "name": "First scene",
-        "slug": "first-scene",
-        "description": "This is the first and only scene",
-
-        "media":
+        "view":
         {
-            "uid": "scene-0-pano-0",
-            "type": "image",
-            "format": "equi",
-
-            "source":
-            {
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/01-forest.png"
-            }
+            "type": "GoPro"
         },
 
-        "camera":
+        "scenes": [
         {
-            "pitch":
+            "uid": "scene-0",
+            "name": "First scene",
+            "slug": "first-scene",
+            "description": "This is the first and only scene",
+
+            "media":
             {
-                "default": -90
+                "uid": "scene-0-pano-0",
+                "type": "image",
+                "format": "equi",
+
+                "source":
+                {
+                    "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/01-forest.png"
+                }
             },
-            "fov":
+
+            "camera":
             {
-                "default": 250
+                "pitch":
+                {
+                    "default": -90
+                },
+                "fov":
+                {
+                    "default": 250
+                }
             }
-        }
-    }]
+        }]
+    }
 }
