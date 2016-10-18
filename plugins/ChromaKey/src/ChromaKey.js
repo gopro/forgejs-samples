@@ -324,7 +324,7 @@ KPlug.ChromaKey.prototype = {
         this._setupCanvas();
         this._mediaReady = true;
 
-        if (this.plugin.options.autoplay === true)
+        if (this.plugin.options.autoPlay === true)
         {
             this._start();
         }

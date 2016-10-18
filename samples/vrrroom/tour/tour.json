@@ -332,7 +332,7 @@
 
                             "threshold": 40,
                             "smoothness": 22,
-                            "autoplay": true
+                            "autoPlay": true
                         },
                         "data": {},
                         "events": {},
@@ -380,7 +380,7 @@
 
                             "threshold": 36,
                             "smoothness": 16,
-                            "autoplay": true
+                            "autoPlay": true
                         },
                         "data": {},
                         "events": {},
