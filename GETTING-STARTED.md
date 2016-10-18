@@ -10,25 +10,28 @@ You don't have to touch the webpage in this tutorial, only the `tour.json`. To l
 
 ````json
 {
-    "uid": "example-tour",
-    "name": "Example Tour",
-    "slug": "example-tour",
-    "description": "This is an example tour"
+    "tour":
+    {
+        "uid": "example-tour",
+        "name": "Example Tour",
+        "slug": "example-tour",
+        "description": "This is an example tour"
+    }
 }
 ````
 
 This is what your `tour.json` file is looking like at the start. It got four elements:
 
-+ uid
-+ name
-+ slug
-+ description
++ `uid` - the uid of the tour
++ `name` - the name of the tour
++ `slug` - the slug of the tour
++ `description` - the description of the tour
 
 ## Add a scene
 
 The first thing to do is to add a scene to the tour. A scene is at least composed with a media, either an image or a video. The media will be projected onto the background, and will be adapt to a 360° view. We will see later how to add others things to a scene.
 
-So let's add a scene to our tour by adding two properties to the root of the tour :
+So let's add a scene to our tour by adding two properties to the tour object :
 
 ````json
 {
@@ -48,16 +51,16 @@ So let's add a scene to our tour by adding two properties to the root of the tou
 }
 ````
 
-+ *default* - the uid of the scene to load by default at the opening of the webpage
-+ *scenes* - an array containing scenes
++ `default` - the uid of the scene to load by default at the opening of the webpage
++ `scenes` - an array containing scenes
 
 In this array, what is more interesting is how is composed the object we added :
 
-+ *uid* - the unique identifier of the scene, will be used as a reference across the whole tour
-+ *name* -
-+ *slug* - the slug for the current scene to display in the URL bar
-+ *description* -
-+ *media* - an object where the media will be set
++ `uid` - the unique identifier of the scene, will be used as a reference across the whole tour
++ `name` - the name of the scene
++ `slug` - the slug for the current scene to display in the URL bar
++ `description` - the description of the scene
++ `media` - an object where the media will be set
 
 ## Load a media
 
@@ -76,10 +79,10 @@ Now that we have a scene, we can specify the media we want to add. First, let's 
 }
 ````
 
-+ *uid* - the unique identifier of the media, will be used as a reference across the whole tour
-+ *type* - specify the type of media we're loading, either `image` or `video`
-+ *format* - the format of the media : for now we will only learn about the most classic one, `equi` (for [equirectangular](https://en.wikipedia.org/wiki/Equirectangular_projection))
-+ *source* - the source of the media : for now we will only set the path to our media, it can be local, but it can be an http address as well
++ `uid` - the unique identifier of the media, will be used as a reference across the whole tour
++ `type` - specify the type of media we're loading, either `image` or `video`
++ `format` - the format of the media : for now we will only learn about the most classic one, `equi` (for [equirectangular](https://en.wikipedia.org/wiki/Equirectangular_projection))
++ `source` - the source of the media : for now we will only set the path to our media, it can be local, but it can be an http address as well
 
 Above is the code to load an image, and below is for a video :
 
@@ -106,7 +109,7 @@ If you now open your browser, you should see your media visible in the player. U
 
 If you try to scroll in the page, you'll see a change in the field of view (fov), and a deformation on the edge of the player. The current type of view is called **Rectilinear**. It can be changed to another type of view, called the **GoPro** view.
 
-To change it, add this property at the root of the `tour.json` file :
+To change it, add this property to the tour object :
 
 ````json
 {
@@ -121,7 +124,7 @@ Refresh your page, and play with the scroll and move inside the media, you shoul
 
 ### Limiting the movement
 
-You can also limit the movement on your scene, for example if you don't want the user to be able to look down, up or behind him. Add this object to the root of the `tour.json` file :
+You can also limit the movement on your scene, for example if you don't want the user to be able to look down, up or behind him. Add this object to the tour object :
 
 ````json
 {
@@ -153,9 +156,9 @@ You can also limit the movement on your scene, for example if you don't want the
 
 You can set three properties : `yaw`, `pitch` and `fov`. **Yaw** is the horizontal movement, **Pitch** is the vertical movement, and the **FOV** is the field of view, that can be changed using the scroll of the mouse. Each of those properties has three properties :
 
-+ *default* - the default value to set on the launch of the player
-+ *min* - the minimum value that can be set; a pitch with a minimum value of 0 disables the possibility to view the bottom of the scene
-+ *max* - the maximum value that can be set; a pitch with a maximum value of 0 disables the possibility to view the top of the scene
++ `default` - the default value to set on the launch of the player
++ `min` - the minimum value that can be set; a pitch with a minimum value of 0 disables the possibility to view the bottom of the scene
++ `max` - the maximum value that can be set; a pitch with a maximum value of 0 disables the possibility to view the top of the scene
 
 By adding the configuration above, you shouldn't be able to move the view beside the horizontal movement. Try to modify the other values to view the effect it as on the movement of the camera.
 
@@ -355,10 +358,10 @@ First we're going to add an engine, which will be the basis of a plugin. This en
 }
 ````
 
-+ *uid* - the uid of the plugin, the one specified in the manifest
-+ *url* - where to find the plugin and its source
-+ *manifest* - the manifest of the plugin, containing its description
-+ *prefix* - an optional prefix (actually not present), to override the global one (set above)
++ `uid` - the uid of the plugin, the one specified in the manifest
++ `url` - where to find the plugin and its source
++ `manifest` - the manifest of the plugin, containing its description
++ `prefix` - an optional prefix (actually not present), to override the global one (set above)
 
 Note that the `engines` property is an array, and so multiple plugins and their engines can be added. Only one engine by plugin can be added.
 
@@ -385,10 +388,10 @@ Now that we have an engine, we can instantiate our plugin. Let's start with our 
 }
 ````
 
-+ `uid` is the uid of the instance
-+ `engine` is the uid of the engine that will be used
-+ `options` is an object containing all the options specific to the plugin and this instance
-+ `events` is an object containing the events and their handlers for this plugin, like a mouse click or double click
++ `uid` - the uid of the instance
++ `engine` - the uid of the engine that will be used
++ `options` - an object containing all the options specific to the plugin and this instance
++ `events` - an object containing the events and their handlers for this plugin, like a mouse click or double click
 
 In `options`, we have all the options related to the plugin we are instanciating. All the available options should be written in the manifest of the plugin. For the *SimpleButton*, if we consult the manifest, we have :
 
