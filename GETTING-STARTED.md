@@ -15,17 +15,19 @@ You don't have to touch the webpage in this tutorial, only the `tour.json`. To l
         "uid": "example-tour",
         "name": "Example Tour",
         "slug": "example-tour",
-        "description": "This is an example tour"
+        "description": "This is an example tour",
+        "scenes": []
     }
 }
 ````
 
 This is what your `tour.json` file is looking like at the start. It got four elements:
 
-+ `uid` - the uid of the tour
-+ `name` - the name of the tour
-+ `slug` - the slug of the tour
-+ `description` - the description of the tour
++ `uid` - The uid of the tour.
++ `name` - The name of the tour.
++ `slug` - The slug of the tour.
++ `description` - The description of the tour.
++ `scenes` - The array where our scenes will be declared.
 
 ## Add a scene
 
@@ -35,19 +37,25 @@ So let's add a scene to our tour by adding two properties to the tour object :
 
 ````json
 {
-    "default": "scene-0",
+    "tour":
+    {
+        ...
 
-    "scenes":
-    [
-        {
-            "uid": "scene-0",
-            "name": "First scene",
-            "slug": "first-scene",
-            "description": "This is the first scene",
+        "default": "scene-0",
 
-            "media": {}
-        }
-    ]
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first scene",
+
+                "media": {}
+            }
+        ]
+    }
+
 }
 ````
 
@@ -56,11 +64,11 @@ So let's add a scene to our tour by adding two properties to the tour object :
 
 In this array, what is more interesting is how is composed the object we added :
 
-+ `uid` - the unique identifier of the scene, will be used as a reference across the whole tour
-+ `name` - the name of the scene
-+ `slug` - the slug for the current scene to display in the URL bar
-+ `description` - the description of the scene
-+ `media` - an object where the media will be set
++ `uid` - The unique identifier of the scene, will be used as a reference across the whole tour.
++ `name` - The name of the scene.
++ `slug` - The slug for the current scene to display in the URL bar.
++ `description` - The description of the scene.
++ `media` - An object where the media will be set.
 
 ## Load a media
 
@@ -79,10 +87,10 @@ Now that we have a scene, we can specify the media we want to add. First, let's 
 }
 ````
 
-+ `uid` - the unique identifier of the media, will be used as a reference across the whole tour
-+ `type` - specify the type of media we're loading, either `image` or `video`
-+ `format` - the format of the media : for now we will only learn about the most classic one, `equi` (for [equirectangular](https://en.wikipedia.org/wiki/Equirectangular_projection))
-+ `source` - the source of the media : for now we will only set the path to our media, it can be local, but it can be an http address as well
++ `uid` - The unique identifier of the media, will be used as a reference across the whole tour.
++ `type` - Specify the type of media we're loading, either `image` or `video`.
++ `format` - The format of the media : for now we will only learn about the most classic one, `equi` (for [equirectangular](https://en.wikipedia.org/wiki/Equirectangular_projection)).
++ `source` - The source of the media : for now we will only set the path to our media, it can be local, but it can be an http address as well.
 
 Above is the code to load an image, and below is for a video :
 
@@ -107,9 +115,9 @@ If you now open your browser, you should see your media visible in the player. U
 
 ### A different view
 
-If you try to scroll in the page, you'll see a change in the field of view (fov), and a deformation on the edge of the player. The current type of view is called **Rectilinear**. It can be changed to another type of view, called the **GoPro** view.
+If you try to scroll in the page, you'll see a change in the field of view (fov), and a deformation on the edge of the player. The default type of view is called **Rectilinear**. It can be changed to another type of view, called the **GoPro** view.
 
-To change it, add this property to the tour object :
+To change the view type, add the following `view` object to the root of the configuration. If you want to specify a view for a single `scene` you can add this view object to a one of your `scene`.
 
 ````json
 {
@@ -156,9 +164,9 @@ You can also limit the movement on your scene, for example if you don't want the
 
 You can set three properties : `yaw`, `pitch` and `fov`. **Yaw** is the horizontal movement, **Pitch** is the vertical movement, and the **FOV** is the field of view, that can be changed using the scroll of the mouse. Each of those properties has three properties :
 
-+ `default` - the default value to set on the launch of the player
-+ `min` - the minimum value that can be set; a pitch with a minimum value of 0 disables the possibility to view the bottom of the scene
-+ `max` - the maximum value that can be set; a pitch with a maximum value of 0 disables the possibility to view the top of the scene
++ `default` - The default value to set on the launch of the player.
++ `min` - The minimum value that can be set; a pitch with a minimum value of 0 disables the possibility to view the bottom of the scene.
++ `max` - The maximum value that can be set; a pitch with a maximum value of 0 disables the possibility to view the top of the scene.
 
 By adding the configuration above, you shouldn't be able to move the view beside the horizontal movement. Try to modify the other values to view the effect it as on the movement of the camera.
 
@@ -308,39 +316,28 @@ Now that we have multiple scenes, we want to navigate through them without havin
 
 In our root folder, let's create a `plugins` folder. Then, go in the `plugins` folder of the samples repository to copy the *SimpleButton* plugin inside our own folder.
 
-For the first (and only) time we are going to edit the `index.html` of our project, and especially the javascript part.
+### Plugins object in JSON
 
-````js
-// Options for the viewer
-var options =
+In the JSON file we have to add a `plugins` object to set options, declare where are located plugin engines and configure plugins instances.
+
+````json
 {
-    plugins: {
-        prefix: "plugins/"
+    "plugins":
+    {
+        "enabled": true,
+        "prefix": "./plugins/",
+        "engines": [],
+        "instances": []
     }
-};
-
-// Create a viewer
-var viewer = new KEN.Viewer(options, "container", {
-    boot: boot
-});
-
-// What to do on boot time
-function boot()
-{
-    // Load the tour configuration
-    viewer.tour.load('tour.json');
 }
-
-// Start the viewer
-viewer.boot();
 ````
 
-We edited two things :
++ `enabled` - Global enabled switch, if set to false you will have no plugins, usefull for debug mainly. It's true by default.
++ `prefix` - This is the root plugin folder. In our case we put the *SimpleButton* plugin in the `./plugins/` folder.
++ `engines` - Declaration of the different engines that will be used in our project.
++ `instances` - Configuration of the different plugins instances.
 
-+ create an `options` containing a description for the plugins global location, with the root reference being this folder
-+ change the `null` option of the viewer to this `options` object
-
-### Engine
+### Engines
 
 First we're going to add an engine, which will be the basis of a plugin. This engine will be used as a reference for each instance of the plugin, as a plugin can be present multiple times in the tour and also in the same scene.
 
@@ -348,20 +345,23 @@ First we're going to add an engine, which will be the basis of a plugin. This en
 {
     "plugins":
     {
-        "engines": [
-        {
-            "uid": "com.pluginmaker.simplebutton",
-            "url": "SimpleButton/",
-            "manifest": "manifest.json"
-        }]
+        "prefix": "./plugins/",
+        "engines":
+        [
+            {
+                "uid": "com.pluginmaker.simplebutton",
+                "url": "SimpleButton/",
+                "manifest": "manifest.json"
+            }
+        ]
     }
 }
 ````
 
-+ `uid` - the uid of the plugin, the one specified in the manifest
-+ `url` - where to find the plugin and its source
-+ `manifest` - the manifest of the plugin, containing its description
-+ `prefix` - an optional prefix (actually not present), to override the global one (set above)
++ `uid` - The uid of the plugin, the one specified in the manifest.
++ `url` - Where to find the plugin and its source.
++ `manifest` - The manifest of the plugin, containing its description.
++ `prefix` - An optional prefix (actually not present), to override the global one (set above).
 
 Note that the `engines` property is an array, and so multiple plugins and their engines can be added. Only one engine by plugin can be added.
 
@@ -373,25 +373,25 @@ Now that we have an engine, we can instantiate our plugin. Let's start with our 
 {
     "plugins":
     {
+        "prefix": "./plugins/",
         "engines": [ ... ],
-
-        "instances": [
-        {
-            "uid": "simplebutton-previous",
-            "engine": "com.pluginmaker.simplebutton",
-
-            "options": {},
-
-            "events": {}
-        }]
+        "instances":
+        [
+            {
+                "uid": "simplebutton-previous",
+                "engine": "com.pluginmaker.simplebutton",
+                "options": {},
+                "events": {}
+            }
+        ]
     }
 }
 ````
 
-+ `uid` - the uid of the instance
-+ `engine` - the uid of the engine that will be used
-+ `options` - an object containing all the options specific to the plugin and this instance
-+ `events` - an object containing the events and their handlers for this plugin, like a mouse click or double click
++ `uid` - The uid of the instance.
++ `engine` - The uid of the engine that will be used.
++ `options` - An object containing all the options specific to the plugin and this instance.
++ `events` - An object containing the events and their handlers for this plugin, like a mouse click or double click.
 
 In `options`, we have all the options related to the plugin we are instanciating. All the available options should be written in the manifest of the plugin. For the *SimpleButton*, if we consult the manifest, we have :
 
@@ -411,7 +411,8 @@ In `options`, we have all the options related to the plugin we are instanciating
 
         "value": null,
 
-        "skin": {
+        "skin":
+        {
             "out": null,
             "over": null,
             "down": null
@@ -458,7 +459,7 @@ Note that here the `instances` property is also an array (like `engines`), so we
                 "right": 0,
                 "verticalCenter": true,
                 "value": "Next"
-            }
+            },
 
             "events": {}
         }]
