@@ -7,27 +7,27 @@
             "default": 1.0,
             "max": 1.0
         },
-        "defaultList": "playlist-0",
+        "default": "playlist-0",
 
         "lists": [
             {
                 "uid": "playlist-0",
                 "name": "Playlist #1",
-                "defaultTrack": "track-0",
+                "default": "track-0",
                 "tracks": ["track-0", "track-1"]
             },
 
             {
                 "uid": "playlist-1",
                 "name": "Playlist #2",
-                "defaultTrack": "track-2",
+                "default": "track-2",
                 "tracks": ["track-2", "track-3"]
             },
 
             {
                 "uid": "playlist-2",
                 "name": "Playlist #3",
-                "defaultTrack": "track-5",
+                "default": "track-5",
                 "tracks": ["track-4", "track-5"]
             }
 
@@ -81,7 +81,7 @@
     "tour":
     {
         "uid": "playlist-tour",
-        "name": "Audi Playlists Tour",
+        "name": "Audio Playlists Tour",
         "slug": "playlist-tour",
         "description": "This is a demonstration of audio playlists applied to the scenes",
         "default": "scene-0",
@@ -106,7 +106,7 @@
 
             "playlists":
             {
-                "defaultList": "playlist-0"
+                "default": "playlist-0"
             }
         },
         {
@@ -129,7 +129,7 @@
 
             "playlists":
             {
-                "defaultList": "playlist-2"
+                "default": "playlist-2"
             }
         },
         {
@@ -152,7 +152,7 @@
 
             "playlists":
             {
-                "defaultList": "playlist-1"
+                "default": "playlist-1"
             }
         }]
     },
