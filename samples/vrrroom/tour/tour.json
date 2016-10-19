@@ -1,4 +1,11 @@
 {
+    "viewer":
+    {
+        "background": "#000"
+    },
+
+    "history": {"enabled": true},
+
     // Locale settings
     "i18n":
     {
