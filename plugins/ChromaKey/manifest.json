@@ -32,7 +32,7 @@
 
         "threshold": 50,
         "smoothness": 50,
-        "autoplay": true
+        "autoPlay": true
     },
 
     "sources": [

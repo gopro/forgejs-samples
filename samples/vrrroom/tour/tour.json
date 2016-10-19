@@ -61,14 +61,14 @@
             "default": 1.0,
             "max": 1.0
         },
-        "defaultList": "playlist-0",
+        "default": "playlist-0",
 
         "lists": [
             // Playlist 1 for the driver selection
             {
                 "uid": "playlist-0",
                 "name": "driver-selection",
-                "defaultTrack": "playlist-0-track-0",
+                "default": "playlist-0-track-0",
                 "tracks": ["playlist-0-track-0"]
             },
 
@@ -76,7 +76,7 @@
             {
                 "uid": "playlist-1",
                 "name": "karting",
-                "defaultTrack": "playlist-1-track-0",
+                "default": "playlist-1-track-0",
                 "tracks": ["playlist-1-track-0", "playlist-1-track-1", "playlist-1-track-2"]
             },
 
@@ -84,7 +84,7 @@
             {
                 "uid": "playlist-2",
                 "name": "fun",
-                "defaultTrack": "playlist-2-track-0",
+                "default": "playlist-2-track-0",
                 "tracks": ["playlist-2-track-0"]
             }
         ],
@@ -258,6 +258,7 @@
 
             // The second scene is the driver selection
             {
+
                 "uid": "scene-1",
                 "name": "Driver selection",
                 "slug": "driver-selection",
@@ -279,7 +280,7 @@
                 "playlists":
                 {
                     "enabled": true,
-                    "defaultList": "playlist-0"
+                    "default": "playlist-0"
                 },
 
                 // The camera is limited here, allowing only an horizontal movement
@@ -334,7 +335,7 @@
 
                                 "threshold": 40,
                                 "smoothness": 22,
-                                "autoplay": true
+                                "autoPlay": true
                             },
                             "data": {},
                             "events": {},
@@ -382,7 +383,7 @@
 
                                 "threshold": 36,
                                 "smoothness": 16,
-                                "autoplay": true
+                                "autoPlay": true
                             },
                             "data": {},
                             "events": {},
@@ -594,8 +595,9 @@
 
                 "playlists":
                 {
+
                     "enabled": true,
-                    "defaultList": "playlist-1"
+                    "default": "playlist-1"
                 },
 
                 // Load all the configuration related to multiple plugins for this scene
@@ -686,13 +688,14 @@
                 "playlists":
                 {
                     "enabled": true,
-                    "defaultList": "playlist-1"
+                    "default": "playlist-1"
                 },
 
                 // Load all the configuration related to multiple plugins for this scene
                 "plugins":
                 {
-                    "configurations": [
+                    "configurations":
+                    [
                         {
                             "instance": "com.pluginmaker.ranking-0",
                             "options":
@@ -738,6 +741,7 @@
                         }
                     ]
                 }
+
             },
 
             // This scene is the race viewed from Samy kart, with perspective changed during time
@@ -754,7 +758,7 @@
                 "playlists":
                 {
                     "enabled": true,
-                    "defaultList": "playlist-1"
+                    "default": "playlist-1"
                 },
 
                 "plugins":
@@ -842,7 +846,7 @@
                 "playlists":
                 {
                     "enabled": true,
-                    "defaultList": "playlist-1"
+                    "default": "playlist-1"
                 },
 
                 "plugins":
