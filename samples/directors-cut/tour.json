@@ -49,7 +49,7 @@
             {
                 "animation":
                 {
-                    "autoplay": true,
+                    "autoPlay": true,
                     "userCanStop": false,
                     "idleTimer": false,
                     "tweenToStart": false,
