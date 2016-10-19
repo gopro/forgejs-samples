@@ -38,42 +38,42 @@
                 "uid": "track-0",
                 "author": "TinyWorlds",
                 "name": "Forest Ambience",
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/audio-playlists/Forest_Ambience.mp3"
+                "url": "http://streams.kolor.com/streams/ken/samples/audio-playlists/Forest_Ambience.mp3"
             },
 
             {
                 "uid": "track-1",
                 "author": "Écrivain",
                 "name": "Nature Comes",
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/audio-playlists/nature_comes_sharp.ogg"
+                "url": "http://streams.kolor.com/streams/ken/samples/audio-playlists/nature_comes_sharp.ogg"
             },
 
             {
                 "uid": "track-2",
                 "author": "cynicmusic",
                 "name": "Battle theme A",
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/audio-playlists/battleThemeA.mp3"
+                "url": "http://streams.kolor.com/streams/ken/samples/audio-playlists/battleThemeA.mp3"
             },
 
             {
                 "uid": "track-3",
                 "author": "Sudocolon",
                 "name": "Space Ace",
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/audio-playlists/Logisector Intro.mp3"
+                "url": "http://streams.kolor.com/streams/ken/samples/audio-playlists/Logisector Intro.mp3"
             },
 
             {
                 "uid": "track-4",
                 "author": "Oddroom",
                 "name": "Samsara",
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/audio-playlists/samsara_0.mp3"
+                "url": "http://streams.kolor.com/streams/ken/samples/audio-playlists/samsara_0.mp3"
             },
 
             {
                 "uid": "track-5",
                 "author": "tebruno99",
                 "name": "The Rush",
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/audio-playlists/The Rush.mp3"
+                "url": "http://streams.kolor.com/streams/ken/samples/audio-playlists/The Rush.mp3"
             }
         ]
     },
@@ -85,6 +85,7 @@
         "slug": "playlist-tour",
         "description": "This is a demonstration of audio playlists applied to the scenes",
         "default": "scene-0",
+
         "scenes": [
         {
             "uid": "scene-1",
@@ -100,7 +101,7 @@
 
                 "source":
                 {
-                    "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/01-forest.png"
+                    "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
                 }
             },
 
@@ -123,7 +124,7 @@
 
                 "source":
                 {
-                    "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/02-sand.png"
+                    "url": "http://streams.kolor.com/streams/ken/samples/common/panos/02-sand.png"
                 }
             },
 
@@ -146,7 +147,7 @@
 
                 "source":
                 {
-                    "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/03-snow.png"
+                    "url": "http://streams.kolor.com/streams/ken/samples/common/panos/03-snow.png"
                 }
             },
 

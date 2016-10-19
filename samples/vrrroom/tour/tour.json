@@ -1,10 +1,4 @@
 {
-    "uid": "tour-0",
-    "name": "i18n-tourName",
-    "slug": "i18n-tourSlug",
-    "description": "i18n-tourDescription",
-    "default": "scene-0",
-
     // Locale settings
     "i18n":
     {
@@ -101,819 +95,828 @@
                 "uid": "playlist-0-track-0",
                 "author": "",
                 "name": "",
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/audio/Everlone-Flying_Alaska.mp3"
+                "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/audio/Everlone-Flying_Alaska.mp3"
             },
 
             {
                 "uid": "playlist-1-track-0",
                 "author": "",
                 "name": "",
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/audio/Double-Trouble.mp3"
+                "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/audio/Double-Trouble.mp3"
             },
 
             {
                 "uid": "playlist-1-track-1",
                 "author": "",
                 "name": "",
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/audio/dexters-lab.mp3"
+                "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/audio/dexters-lab.mp3"
             },
 
             {
                 "uid": "playlist-1-track-2",
                 "author": "",
                 "name": "",
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/audio/Conscious.mp3"
+                "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/audio/Conscious.mp3"
             },
 
             {
                 "uid": "playlist-2-track-0",
                 "author": "Boots Randolph",
                 "name": "Yakety Sax",
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/audio/Benny-hill-theme.mp3"
+                "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/audio/Benny-hill-theme.mp3"
             }
         ]
     },
 
-    // Configuration for all the scenes
-    "scenes": [
+    "tour":
+    {
+        "uid": "tour-0",
+        "name": "i18n-tourName",
+        "slug": "i18n-tourSlug",
+        "description": "i18n-tourDescription",
+        "default": "scene-0",
 
-        // The first scene is the welcome screen, with language selection
-        {
-            "uid": "scene-0",
-            "name": "Introduction Karting",
-            "slug": "intro",
-            "description": "",
-            "tags": ["intro", "start"],
-
-            "media": {},
-
-            "plugins":
+        // Configuration for all the scenes
+        "scenes":
+        [
+            // The first scene is the welcome screen, with language selection
             {
-                "instances": [
-                    // The video is the little one that plays when selecting "start" on the screen
+                "uid": "scene-0",
+                "name": "Introduction Karting",
+                "slug": "intro",
+                "description": "",
+                "tags": ["intro", "start"],
+
+                "media": {},
+
+                "plugins":
+                {
+                    "instances": [
+                        // The video is the little one that plays when selecting "start" on the screen
+                        {
+                            "uid": "com.pluginmaker.simplevideo-0",
+                            "engine": "com.pluginmaker.simplevideo",
+                            "options":
+                            {
+                                "height": "100%",
+                                "width": "100%",
+                                "horizontalCenter": true
+                            },
+                            "data":
+                            {
+                                "video": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/intro.mp4"
+                            },
+                            "events":
+                            {
+                                "onEnded": ["action-next"]
+                            },
+                            "index": 0,
+                            "keep": false
+                        },
+
+                        // The text inviting the user to start the race
+                        {
+                            "uid": "com.pluginmaker.simpletext-intro",
+                            "engine": "com.pluginmaker.simpletext",
+                            "options":
+                            {
+                                "config":
+                                {
+                                    "i18n": true,
+                                    "value": "intro-text",
+                                    "fontFamily": "pfdintextprolight",
+                                    "fontSize": 30,
+                                    "color": "white",
+                                    "textAlign": "center"
+                                },
+                                "bottom": 270,
+                                "horizontalCenter": true
+                            },
+                            "data": {},
+                            "index": 13,
+                            "keep": false
+                        },
+
+                        // The button "start", triggering the next scene (driver's selection)
+                        {
+                            "uid": "com.pluginmaker.simplebutton-start",
+                            "engine": "com.pluginmaker.simplebutton",
+                            "options":
+                            {
+                                "bottom": 160,
+                                "horizontalCenter": true,
+
+                                "defaultSkin": false,
+
+                                "skin":
+                                {
+                                    "out":
+                                    {
+                                        "image":
+                                        {
+                                            "i18n": true,
+                                            "url": "intro-btn",
+                                            "alpha": 0.7
+                                        }
+                                    },
+
+                                    "over":
+                                    {
+                                        "image":
+                                        {
+                                            "alpha": 1
+                                        }
+                                    }
+                                }
+                            },
+                            "data": {},
+                            "events":
+                            {
+                                "onClick": ["action-plugin-video-play", "action-plugin-localeselector-hide", "action-plugin-button-hide"]
+                            },
+                            "index": 13,
+                            "keep": false
+                        },
+
+                        // Selection of the locale, with flags of each language in assets/
+                        {
+                            "uid": "com.pluginmaker.localeselector-0",
+                            "engine": "com.pluginmaker.localeselector",
+                            "options":
+                            {
+                                "bottom": 80,
+                                "horizontalCenter": true,
+                                "baseURL": "http://streams.kolor.com/streams/ken/samples/vrrroom/assets/flags/"
+                            },
+                            "data": {},
+                            "index": 13,
+                            "keep": false
+                        }
+                    ]
+                }
+            },
+
+            // The second scene is the driver selection
+            {
+                "uid": "scene-1",
+                "name": "Driver selection",
+                "slug": "driver-selection",
+                "description": "i18n-scene-1-description",
+                "tags": ["tourism", "bike", "gps", "video360", "geolocalized"],
+
+                "media":
+                {
+                    "uid": "media-1",
+                    "type": "image",
+                    "format": "equi",
+
+                    "source":
                     {
-                        "uid": "com.pluginmaker.simplevideo-0",
+                        "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/panos/pano-scene-1-v3.jpg"
+                    }
+                },
+
+                "playlists":
+                {
+                    "enabled": true,
+                    "defaultList": "playlist-0"
+                },
+
+                // The camera is limited here, allowing only an horizontal movement
+                "camera":
+                {
+                    "parallax": 0.2,
+                    "yaw": { "min": -180, "max": 180 },
+                    "pitch": { "min": 0, "max": 0 },
+                    "fov": { "default": 80, "min": 80, "max": 80 }
+                },
+
+                "plugins":
+                {
+                    "instances": [
+                        // Show informations about the first driver, Martin
+                        {
+                            "uid": "com.pluginmaker.kartingdriverspot-martin",
+                            "engine": "com.pluginmaker.kartingdriverspot",
+                            "options":
+                            {
+                                "top": 10,
+                                "left": 10,
+
+                                "background": "#000",
+                                "width": 150,
+                                "height": 100,
+
+                                "name": "MARTIN",
+                                "size": "1.88 m",
+                                "weight": "78 Kg"
+                            },
+                            "data": {},
+                            "events": {},
+                            "keep": false,
+                            "index": 123
+                        },
+
+                        // Show Martin cut from his green background with the chromakey effect
+                        {
+                            "uid": "com.pluginmaker.chromakey-martin",
+                            "engine": "com.pluginmaker.chromakey",
+                            "options":
+                            {
+                                "authoring": false,
+                                "top": 100,
+                                "right": 20,
+                                "width": 540,
+                                "height": 800,
+
+                                "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/martin_greenscreen_low.mp4",
+                                "backgroundSample": { "x": 2, "y": 2 },
+
+                                "threshold": 40,
+                                "smoothness": 22,
+                                "autoplay": true
+                            },
+                            "data": {},
+                            "events": {},
+                            "keep": false,
+                            "index": 14
+                        },
+
+                        // Show informations about the second driver, Samy
+                        {
+                            "uid": "com.pluginmaker.kartingdriverspot-samy",
+                            "engine": "com.pluginmaker.kartingdriverspot",
+                            "options":
+                            {
+                                "top": 10,
+                                "right": 10,
+
+                                "background": "#000",
+                                "width": 150,
+                                "height": 100,
+
+                                "name": "SAMY",
+                                "size": "1.87 m",
+                                "weight": "75 Kg"
+                            },
+                            "data": {},
+                            "events": {},
+                            "keep": false,
+                            "index": 123
+                        },
+
+                        // Show Samy cut from his green background with the chromakey effect
+                        {
+                            "uid": "com.pluginmaker.chromakey-samy",
+                            "engine": "com.pluginmaker.chromakey",
+                            "options":
+                            {
+                                "authoring": false,
+                                "top": 100,
+                                "right": 20,
+                                "width": 507,
+                                "height": 800,
+
+                                "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/samy_greenscreen_low.mp4",
+                                "backgroundSample": { "x": 2, "y": 2 },
+
+                                "threshold": 36,
+                                "smoothness": 16,
+                                "autoplay": true
+                            },
+                            "data": {},
+                            "events": {},
+                            "keep": false,
+                            "index": 14
+                        }
+                    ]
+                },
+
+                "hotspots": [
+                    // Set Martin as a 3D hotspot, allowing parallax effect
+                    {
+                        "uid": "hotspot-3d-martin",
+                        "tags": [],
+                        "visible": true,
+                        "type": "3d",
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 800,
+                                "theta": -30,
+                                "phi": -15
+                            },
+                            "rotation":
+                            {
+                                "x": 0,
+                                "y": 30,
+                                "z": 0
+                            },
+                            "size":
+                            {
+                                "width": 450,
+                                "height": 584
+                            }
+                        },
+
+                        "material":
+                        {
+                            "plugin": "com.pluginmaker.chromakey-martin",
+                            "update": true
+                        },
+
+                        "events":
+                        {
+                            "onClick": ["hotspotAction-martin"],
+                            "onOver": ["hotspotAction-martin-over"],
+                            "onOut": ["hotspotAction-martin-out"]
+                        }
+                    },
+
+                    // Same with his informations
+                    {
+                        "uid": "hotspot-3d-kartingdriverspot-martin",
+                        "tags": [],
+                        "visible": true,
+                        "type": "3d",
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 404,
+                                "theta": -33,
+                                "phi": 20
+                            },
+                            "rotation":
+                            {
+                                "x": 0,
+                                "y": 15,
+                                "z": 0
+                            },
+                            "size":
+                            {
+                                "width": 150,
+                                "height": 100
+                            }
+                        },
+
+                        "material":
+                        {
+                            "plugin": "com.pluginmaker.kartingdriverspot-martin"
+                        },
+
+                        "events":
+                        {
+                            "onClick": ["hotspotAction-martin"],
+                            "onOver": ["hotspotAction-martin-over"],
+                            "onOut": ["hotspotAction-martin-out"]
+                        }
+                    },
+
+                    // Set Samy as a 3D hotspot, allowing parallax effect
+                    {
+                        "uid": "hotspot-3d-samy",
+                        "tags": [],
+                        "visible": true,
+                        "type": "3d",
+                        "hotspotStyle": {},
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 800,
+                                "theta": 30,
+                                "phi": -15
+                            },
+                            "rotation":
+                            {
+                                "x": 0,
+                                "y": -30,
+                                "z": 0
+                            },
+                            "size":
+                            {
+                                "width": 384,
+                                "height": 570
+                            }
+                        },
+
+                        "material":
+                        {
+                            "plugin": "com.pluginmaker.chromakey-samy",
+                            "update": true
+                        },
+
+                        "events":
+                        {
+                            "onClick": ["hotspotAction-samy"],
+                            "onOver": ["hotspotAction-samy-over"],
+                            "onOut": ["hotspotAction-samy-out"]
+                        }
+                    },
+
+                    // Same with his informations
+                    {
+                        "uid": "hotspot-3d-kartingdriverspot-samy",
+                        "tags": [],
+                        "visible": true,
+                        "type": "3d",
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 404,
+                                "theta": 24,
+                                "phi": 20
+                            },
+                            "rotation":
+                            {
+                                "x": 0,
+                                "y": -12,
+                                "z": 0
+                            },
+                            "size":
+                            {
+                                "width": 150,
+                                "height": 100
+                            }
+                        },
+
+                        "material":
+                        {
+                            "plugin": "com.pluginmaker.kartingdriverspot-samy"
+                        },
+
+                        "events":
+                        {
+                            "onClick": ["hotspotAction-samy"],
+                            "onOver": ["hotspotAction-samy-over"],
+                            "onOut": ["hotspotAction-samy-out"]
+                        }
+                    }
+                ]
+            },
+
+            // This scene is the race viewed from Samy kart
+            {
+                "uid": "scene-2",
+                "name": "Samy karting",
+                "slug": "samy-karting",
+                "description": "i18n-scene-2-description",
+                "tags": ["circuit", "samy", "kart"],
+
+                "media":
+                {
+                    "uid": "media-2",
+                    "type": "video",
+                    "format": "equi",
+
+                    "source":
+                    {
+                        "files": [
+                            "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/360_Samy_UHD_25M_final_fast.mp4"
+                        ]
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0
+                    }
+                },
+
+                "view":
+                {
+                    "type": "gopro"
+                },
+
+                "playlists":
+                {
+                    "enabled": true,
+                    "defaultList": "playlist-1"
+                },
+
+                // Load all the configuration related to multiple plugins for this scene
+                "plugins":
+                {
+                    "configurations": [
+                        {
+                            "instance": "com.pluginmaker.ranking-0",
+                            "options":
+                            {
+                                "source": "media"
+                            }
+                        },
+
+                        {
+                            "instance": "com.pluginmaker.googlemaps-0",
+                            "data":
+                            {
+                                "gpx": "http://streams.kolor.com/streams/ken/samples/vrrroom/gpx/samy.xml"
+                            },
+                            "options":
+                            {
+                                "source": "media"
+                            }
+                        },
+
+                        {
+                            "instance": "com.pluginmaker.heartbeat-0",
+                            "data":
+                            {
+                                "keyframes": "http://streams.kolor.com/streams/ken/samples/vrrroom/timeline/heartbeat-samy.json"
+                            },
+                            "options":
+                            {
+                                "source": "media"
+                            }
+                        },
+
+                        {
+                            "instance": "com.pluginmaker.speedometer-0",
+                            "data":
+                            {
+                                "keyframes": "http://streams.kolor.com/streams/ken/samples/vrrroom/timeline/speed-samy.json"
+                            },
+                            "options":
+                            {
+                                "source": "media"
+                            }
+                        }
+                    ]
+                }
+            },
+
+            // This scene is the race viewed from Martin kart
+            {
+                "uid": "scene-3",
+                "name": "Martin karting",
+                "slug": "martin-karting",
+                "description": "i18n-scene-3-description",
+                "tags": ["circuit", "martin", "kart"],
+
+                "media":
+                {
+                    "uid": "media-3",
+                    "type": "video",
+                    "format": "equi",
+
+                    "source":
+                    {
+                        "files": [
+                            "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/360_Martin_UHD_25M_final_fast.mp4"
+                        ]
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0
+                    }
+                },
+
+                "view":
+                {
+                    "type": "gopro"
+                },
+
+                "playlists":
+                {
+                    "enabled": true,
+                    "defaultList": "playlist-1"
+                },
+
+                // Load all the configuration related to multiple plugins for this scene
+                "plugins":
+                {
+                    "configurations": [
+                        {
+                            "instance": "com.pluginmaker.ranking-0",
+                            "options":
+                            {
+                                "source": "media"
+                            }
+                        },
+
+                        {
+                            "instance": "com.pluginmaker.googlemaps-0",
+                            "data":
+                            {
+                                "gpx": "http://streams.kolor.com/streams/ken/samples/vrrroom/gpx/martin.xml"
+                            },
+                            "options":
+                            {
+                                "source": "media"
+                            }
+                        },
+
+                        {
+                            "instance": "com.pluginmaker.heartbeat-0",
+                            "data":
+                            {
+                                "keyframes": "http://streams.kolor.com/streams/ken/samples/vrrroom/timeline/heartbeat-martin.json"
+                            },
+                            "options":
+                            {
+                                "source": "media"
+                            }
+                        },
+
+                        {
+                            "instance": "com.pluginmaker.speedometer-0",
+                            "data":
+                            {
+                                "keyframes": "http://streams.kolor.com/streams/ken/samples/vrrroom/timeline/speed-martin.json"
+                            },
+                            "options":
+                            {
+                                "source": "media"
+                            }
+                        }
+                    ]
+                }
+            },
+
+            // This scene is the race viewed from Samy kart, with perspective changed during time
+            // It is a simple 2D video and not a 360 one, but the scene is the same as scene-2
+            {
+                "uid": "scene-4",
+                "name": "Samy karting cinema mode",
+                "slug": "samy-karting-cinema",
+                "description": "",
+                "tags": ["circuit", "samy", "kart", "cinema"],
+
+                "media": {},
+
+                "playlists":
+                {
+                    "enabled": true,
+                    "defaultList": "playlist-1"
+                },
+
+                "plugins":
+                {
+                    "instances": [
+                    {
+                        "uid": "com.pluginmaker.simplevideo-1",
                         "engine": "com.pluginmaker.simplevideo",
                         "options":
                         {
-                            "height": "100%",
-                            "width": "100%",
-                            "horizontalCenter": true
+                            "height": 1080,
+                            "width": 2048,
+                            "horizontalCenter": true,
+                            "autoPlay": true,
+                            "loop": true,
+                            "volume": 0
                         },
                         "data":
                         {
-                            "video": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/videos/intro.mp4"
-                        },
-                        "events":
-                        {
-                            "onEnded": ["action-next"]
+                            "video": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/Authoring_Samy_Full_HD_15M_fast.mp4"
                         },
                         "index": 0,
                         "keep": false
-                    },
+                    }],
 
-                    // The text inviting the user to start the race
-                    {
-                        "uid": "com.pluginmaker.simpletext-intro",
-                        "engine": "com.pluginmaker.simpletext",
-                        "options":
+                    "configurations": [
                         {
-                            "config":
+                            "instance": "com.pluginmaker.ranking-0",
+                            "options":
                             {
-                                "i18n": true,
-                                "value": "intro-text",
-                                "fontFamily": "pfdintextprolight",
-                                "fontSize": 30,
-                                "color": "white",
-                                "textAlign": "center"
-                            },
-                            "bottom": 270,
-                            "horizontalCenter": true
-                        },
-                        "data": {},
-                        "index": 13,
-                        "keep": false
-                    },
-
-                    // The button "start", triggering the next scene (driver's selection)
-                    {
-                        "uid": "com.pluginmaker.simplebutton-start",
-                        "engine": "com.pluginmaker.simplebutton",
-                        "options":
-                        {
-                            "bottom": 160,
-                            "horizontalCenter": true,
-
-                            "defaultSkin": false,
-
-                            "skin":
-                            {
-                                "out":
-                                {
-                                    "image":
-                                    {
-                                        "i18n": true,
-                                        "url": "intro-btn",
-                                        "alpha": 0.7
-                                    }
-                                },
-
-                                "over":
-                                {
-                                    "image":
-                                    {
-                                        "alpha": 1
-                                    }
-                                }
+                                "source": "com.pluginmaker.simplevideo-1"
                             }
                         },
-                        "data": {},
-                        "events":
-                        {
-                            "onClick": ["action-plugin-video-play", "action-plugin-localeselector-hide", "action-plugin-button-hide"]
-                        },
-                        "index": 13,
-                        "keep": false
-                    },
 
-                    // Selection of the locale, with flags of each language in assets/
+                        {
+                            "instance": "com.pluginmaker.googlemaps-0",
+                            "data":
+                            {
+                                "gpx": "http://streams.kolor.com/streams/ken/samples/vrrroom/gpx/samy.xml"
+                            },
+                            "options":
+                            {
+                                "source": "com.pluginmaker.simplevideo-1"
+                            }
+                        },
+
+                        {
+                            "instance": "com.pluginmaker.heartbeat-0",
+                            "data":
+                            {
+                                "keyframes": "http://streams.kolor.com/streams/ken/samples/vrrroom/timeline/heartbeat-samy.json"
+                            },
+                            "options":
+                            {
+                                "source": "com.pluginmaker.simplevideo-1"
+                            }
+                        },
+
+                        {
+                            "instance": "com.pluginmaker.speedometer-0",
+                            "data":
+                            {
+                                "keyframes": "http://streams.kolor.com/streams/ken/samples/vrrroom/timeline/speed-samy.json"
+                            },
+                            "options":
+                            {
+                                "source": "com.pluginmaker.simplevideo-1"
+                            }
+                        }
+                    ]
+                }
+            },
+
+            // This scene is the race viewed from Samy kart, with perspective changed during time
+            // It is a simple 2D video and not a 360 one, but the scene is the same as scene-3
+            {
+                "uid": "scene-5",
+                "name": "Martin karting cinema mode",
+                "slug": "martin-karting-cinema",
+                "description": "",
+                "tags": ["circuit", "martin", "kart", "cinema"],
+
+                "media": {},
+
+                "playlists":
+                {
+                    "enabled": true,
+                    "defaultList": "playlist-1"
+                },
+
+                "plugins":
+                {
+                    "instances": [
                     {
-                        "uid": "com.pluginmaker.localeselector-0",
-                        "engine": "com.pluginmaker.localeselector",
+                        "uid": "com.pluginmaker.simplevideo-2",
+                        "engine": "com.pluginmaker.simplevideo",
                         "options":
                         {
-                            "bottom": 80,
+                            "height": 1080,
+                            "width": 2048,
                             "horizontalCenter": true,
-                            "baseURL": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/flags/"
+                            "autoPlay": true,
+                            "loop": true,
+                            "volume": 0
                         },
-                        "data": {},
-                        "index": 13,
+                        "data":
+                        {
+                            "video": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/Authoring_Martin_Full_HD_15M_fast.mp4"
+                        },
+                        "index": 0,
                         "keep": false
-                    }
-                ]
-            }
-        },
+                    }],
 
-        // The second scene is the driver selection
-        {
-            "uid": "scene-1",
-            "name": "Driver selection",
-            "slug": "driver-selection",
-            "description": "i18n-scene-1-description",
-            "tags": ["tourism", "bike", "gps", "video360", "geolocalized"],
-
-            "media":
-            {
-                "uid": "media-1",
-                "type": "image",
-                "format": "equi",
-
-                "source":
-                {
-                    "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/panos/pano-scene-1-v3.jpg"
-                }
-            },
-
-            "playlists":
-            {
-                "enabled": true,
-                "defaultList": "playlist-0"
-            },
-
-            // The camera is limited here, allowing only an horizontal movement
-            "camera":
-            {
-                "parallax": 0.2,
-                "yaw": { "min": -180, "max": 180 },
-                "pitch": { "min": 0, "max": 0 },
-                "fov": { "default": 80, "min": 80, "max": 80 }
-            },
-
-            "plugins":
-            {
-                "instances": [
-                    // Show informations about the first driver, Martin
-                    {
-                        "uid": "com.pluginmaker.kartingdriverspot-martin",
-                        "engine": "com.pluginmaker.kartingdriverspot",
-                        "options":
+                    "configurations": [
                         {
-                            "top": 10,
-                            "left": 10,
-
-                            "background": "#000",
-                            "width": 150,
-                            "height": 100,
-
-                            "name": "MARTIN",
-                            "size": "1.88 m",
-                            "weight": "78 Kg"
+                            "instance": "com.pluginmaker.ranking-0",
+                            "options":
+                            {
+                                "source": "com.pluginmaker.simplevideo-2"
+                            }
                         },
-                        "data": {},
-                        "events": {},
-                        "keep": false,
-                        "index": 123
-                    },
 
-                    // Show Martin cut from his green background with the chromakey effect
-                    {
-                        "uid": "com.pluginmaker.chromakey-martin",
-                        "engine": "com.pluginmaker.chromakey",
-                        "options":
                         {
-                            "authoring": false,
-                            "top": 100,
-                            "right": 20,
-                            "width": 540,
-                            "height": 800,
-
-                            "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/videos/martin_greenscreen_low.mp4",
-                            "backgroundSample": { "x": 2, "y": 2 },
-
-                            "threshold": 40,
-                            "smoothness": 22,
-                            "autoplay": true
+                            "instance": "com.pluginmaker.googlemaps-0",
+                            "data":
+                            {
+                                "gpx": "http://streams.kolor.com/streams/ken/samples/vrrroom/gpx/martin.xml"
+                            },
+                            "options":
+                            {
+                                "source": "com.pluginmaker.simplevideo-2"
+                            }
                         },
-                        "data": {},
-                        "events": {},
-                        "keep": false,
-                        "index": 14
-                    },
 
-                    // Show informations about the second driver, Samy
-                    {
-                        "uid": "com.pluginmaker.kartingdriverspot-samy",
-                        "engine": "com.pluginmaker.kartingdriverspot",
-                        "options":
                         {
-                            "top": 10,
-                            "right": 10,
-
-                            "background": "#000",
-                            "width": 150,
-                            "height": 100,
-
-                            "name": "SAMY",
-                            "size": "1.87 m",
-                            "weight": "75 Kg"
+                            "instance": "com.pluginmaker.heartbeat-0",
+                            "data":
+                            {
+                                "keyframes": "http://streams.kolor.com/streams/ken/samples/vrrroom/timeline/heartbeat-martin.json"
+                            },
+                            "options":
+                            {
+                                "source": "com.pluginmaker.simplevideo-2"
+                            }
                         },
-                        "data": {},
-                        "events": {},
-                        "keep": false,
-                        "index": 123
-                    },
 
-                    // Show Samy cut from his green background with the chromakey effect
-                    {
-                        "uid": "com.pluginmaker.chromakey-samy",
-                        "engine": "com.pluginmaker.chromakey",
-                        "options":
                         {
-                            "authoring": false,
-                            "top": 100,
-                            "right": 20,
-                            "width": 507,
-                            "height": 800,
-
-                            "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/videos/samy_greenscreen_low.mp4",
-                            "backgroundSample": { "x": 2, "y": 2 },
-
-                            "threshold": 36,
-                            "smoothness": 16,
-                            "autoplay": true
-                        },
-                        "data": {},
-                        "events": {},
-                        "keep": false,
-                        "index": 14
-                    }
-                ]
-            },
-
-            "hotspots": [
-                // Set Martin as a 3D hotspot, allowing parallax effect
-                {
-                    "uid": "hotspot-3d-martin",
-                    "tags": [],
-                    "visible": true,
-                    "type": "3d",
-                    "transform":
-                    {
-                        "position":
-                        {
-                            "radius": 800,
-                            "theta": -30,
-                            "phi": -15
-                        },
-                        "rotation":
-                        {
-                            "x": 0,
-                            "y": 30,
-                            "z": 0
-                        },
-                        "size":
-                        {
-                            "width": 450,
-                            "height": 584
+                            "instance": "com.pluginmaker.speedometer-0",
+                            "data":
+                            {
+                                "keyframes": "http://streams.kolor.com/streams/ken/samples/vrrroom/timeline/speed-martin.json"
+                            },
+                            "options":
+                            {
+                                "source": "com.pluginmaker.simplevideo-2"
+                            }
                         }
-                    },
-
-                    "material":
-                    {
-                        "plugin": "com.pluginmaker.chromakey-martin",
-                        "update": true
-                    },
-
-                    "events":
-                    {
-                        "onClick": ["hotspotAction-martin"],
-                        "onOver": ["hotspotAction-martin-over"],
-                        "onOut": ["hotspotAction-martin-out"]
-                    }
-                },
-
-                // Same with his informations
-                {
-                    "uid": "hotspot-3d-kartingdriverspot-martin",
-                    "tags": [],
-                    "visible": true,
-                    "type": "3d",
-                    "transform":
-                    {
-                        "position":
-                        {
-                            "radius": 404,
-                            "theta": -33,
-                            "phi": 20
-                        },
-                        "rotation":
-                        {
-                            "x": 0,
-                            "y": 15,
-                            "z": 0
-                        },
-                        "size":
-                        {
-                            "width": 150,
-                            "height": 100
-                        }
-                    },
-
-                    "material":
-                    {
-                        "plugin": "com.pluginmaker.kartingdriverspot-martin"
-                    },
-
-                    "events":
-                    {
-                        "onClick": ["hotspotAction-martin"],
-                        "onOver": ["hotspotAction-martin-over"],
-                        "onOut": ["hotspotAction-martin-out"]
-                    }
-                },
-
-                // Set Samy as a 3D hotspot, allowing parallax effect
-                {
-                    "uid": "hotspot-3d-samy",
-                    "tags": [],
-                    "visible": true,
-                    "type": "3d",
-                    "hotspotStyle": {},
-                    "transform":
-                    {
-                        "position":
-                        {
-                            "radius": 800,
-                            "theta": 30,
-                            "phi": -15
-                        },
-                        "rotation":
-                        {
-                            "x": 0,
-                            "y": -30,
-                            "z": 0
-                        },
-                        "size":
-                        {
-                            "width": 384,
-                            "height": 570
-                        }
-                    },
-
-                    "material":
-                    {
-                        "plugin": "com.pluginmaker.chromakey-samy",
-                        "update": true
-                    },
-
-                    "events":
-                    {
-                        "onClick": ["hotspotAction-samy"],
-                        "onOver": ["hotspotAction-samy-over"],
-                        "onOut": ["hotspotAction-samy-out"]
-                    }
-                },
-
-                // Same with his informations
-                {
-                    "uid": "hotspot-3d-kartingdriverspot-samy",
-                    "tags": [],
-                    "visible": true,
-                    "type": "3d",
-                    "transform":
-                    {
-                        "position":
-                        {
-                            "radius": 404,
-                            "theta": 24,
-                            "phi": 20
-                        },
-                        "rotation":
-                        {
-                            "x": 0,
-                            "y": -12,
-                            "z": 0
-                        },
-                        "size":
-                        {
-                            "width": 150,
-                            "height": 100
-                        }
-                    },
-
-                    "material":
-                    {
-                        "plugin": "com.pluginmaker.kartingdriverspot-samy"
-                    },
-
-                    "events":
-                    {
-                        "onClick": ["hotspotAction-samy"],
-                        "onOver": ["hotspotAction-samy-over"],
-                        "onOut": ["hotspotAction-samy-out"]
-                    }
-                }
-            ]
-        },
-
-        // This scene is the race viewed from Samy kart
-        {
-            "uid": "scene-2",
-            "name": "Samy karting",
-            "slug": "samy-karting",
-            "description": "i18n-scene-2-description",
-            "tags": ["circuit", "samy", "kart"],
-
-            "media":
-            {
-                "uid": "media-2",
-                "type": "video",
-                "format": "equi",
-
-                "source":
-                {
-                    "files": [
-                        "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/videos/360_Samy_UHD_25M_final_fast.mp4"
                     ]
-                },
-
-                "options":
-                {
-                    "autoPlay": true,
-                    "loop": true,
-                    "volume": 0
                 }
-            },
-
-            "view":
-            {
-                "type": "gopro"
-            },
-
-            "playlists":
-            {
-                "enabled": true,
-                "defaultList": "playlist-1"
-            },
-
-            // Load all the configuration related to multiple plugins for this scene
-            "plugins":
-            {
-                "configurations": [
-                    {
-                        "instance": "com.pluginmaker.ranking-0",
-                        "options":
-                        {
-                            "source": "media"
-                        }
-                    },
-
-                    {
-                        "instance": "com.pluginmaker.googlemaps-0",
-                        "data":
-                        {
-                            "gpx": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/gpx/samy.xml"
-                        },
-                        "options":
-                        {
-                            "source": "media"
-                        }
-                    },
-
-                    {
-                        "instance": "com.pluginmaker.heartbeat-0",
-                        "data":
-                        {
-                            "keyframes": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/timeline/heartbeat-samy.json"
-                        },
-                        "options":
-                        {
-                            "source": "media"
-                        }
-                    },
-
-                    {
-                        "instance": "com.pluginmaker.speedometer-0",
-                        "data":
-                        {
-                            "keyframes": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/timeline/speed-samy.json"
-                        },
-                        "options":
-                        {
-                            "source": "media"
-                        }
-                    }
-                ]
             }
-        },
-
-        // This scene is the race viewed from Martin kart
-        {
-            "uid": "scene-3",
-            "name": "Martin karting",
-            "slug": "martin-karting",
-            "description": "i18n-scene-3-description",
-            "tags": ["circuit", "martin", "kart"],
-
-            "media":
-            {
-                "uid": "media-3",
-                "type": "video",
-                "format": "equi",
-
-                "source":
-                {
-                    "files": [
-                        "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/videos/360_Martin_UHD_25M_final_fast.mp4"
-                    ]
-                },
-
-                "options":
-                {
-                    "autoPlay": true,
-                    "loop": true,
-                    "volume": 0
-                }
-            },
-
-            "view":
-            {
-                "type": "gopro"
-            },
-
-            "playlists":
-            {
-                "enabled": true,
-                "defaultList": "playlist-1"
-            },
-
-            // Load all the configuration related to multiple plugins for this scene
-            "plugins":
-            {
-                "configurations": [
-                    {
-                        "instance": "com.pluginmaker.ranking-0",
-                        "options":
-                        {
-                            "source": "media"
-                        }
-                    },
-
-                    {
-                        "instance": "com.pluginmaker.googlemaps-0",
-                        "data":
-                        {
-                            "gpx": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/gpx/martin.xml"
-                        },
-                        "options":
-                        {
-                            "source": "media"
-                        }
-                    },
-
-                    {
-                        "instance": "com.pluginmaker.heartbeat-0",
-                        "data":
-                        {
-                            "keyframes": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/timeline/heartbeat-martin.json"
-                        },
-                        "options":
-                        {
-                            "source": "media"
-                        }
-                    },
-
-                    {
-                        "instance": "com.pluginmaker.speedometer-0",
-                        "data":
-                        {
-                            "keyframes": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/timeline/speed-martin.json"
-                        },
-                        "options":
-                        {
-                            "source": "media"
-                        }
-                    }
-                ]
-            }
-        },
-
-        // This scene is the race viewed from Samy kart, with perspective changed during time
-        // It is a simple 2D video and not a 360 one, but the scene is the same as scene-2
-        {
-            "uid": "scene-4",
-            "name": "Samy karting cinema mode",
-            "slug": "samy-karting-cinema",
-            "description": "",
-            "tags": ["circuit", "samy", "kart", "cinema"],
-
-            "media": {},
-
-            "playlists":
-            {
-                "enabled": true,
-                "defaultList": "playlist-1"
-            },
-
-            "plugins":
-            {
-                "instances": [
-                {
-                    "uid": "com.pluginmaker.simplevideo-1",
-                    "engine": "com.pluginmaker.simplevideo",
-                    "options":
-                    {
-                        "height": 1080,
-                        "width": 2048,
-                        "horizontalCenter": true,
-                        "autoPlay": true,
-                        "loop": true,
-                        "volume": 0
-                    },
-                    "data":
-                    {
-                        "video": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/videos/Authoring_Samy_Full_HD_15M_fast.mp4"
-                    },
-                    "index": 0,
-                    "keep": false
-                }],
-
-                "configurations": [
-                    {
-                        "instance": "com.pluginmaker.ranking-0",
-                        "options":
-                        {
-                            "source": "com.pluginmaker.simplevideo-1"
-                        }
-                    },
-
-                    {
-                        "instance": "com.pluginmaker.googlemaps-0",
-                        "data":
-                        {
-                            "gpx": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/gpx/samy.xml"
-                        },
-                        "options":
-                        {
-                            "source": "com.pluginmaker.simplevideo-1"
-                        }
-                    },
-
-                    {
-                        "instance": "com.pluginmaker.heartbeat-0",
-                        "data":
-                        {
-                            "keyframes": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/timeline/heartbeat-samy.json"
-                        },
-                        "options":
-                        {
-                            "source": "com.pluginmaker.simplevideo-1"
-                        }
-                    },
-
-                    {
-                        "instance": "com.pluginmaker.speedometer-0",
-                        "data":
-                        {
-                            "keyframes": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/timeline/speed-samy.json"
-                        },
-                        "options":
-                        {
-                            "source": "com.pluginmaker.simplevideo-1"
-                        }
-                    }
-                ]
-            }
-        },
-
-        // This scene is the race viewed from Samy kart, with perspective changed during time
-        // It is a simple 2D video and not a 360 one, but the scene is the same as scene-3
-        {
-            "uid": "scene-5",
-            "name": "Martin karting cinema mode",
-            "slug": "martin-karting-cinema",
-            "description": "",
-            "tags": ["circuit", "martin", "kart", "cinema"],
-
-            "media": {},
-
-            "playlists":
-            {
-                "enabled": true,
-                "defaultList": "playlist-1"
-            },
-
-            "plugins":
-            {
-                "instances": [
-                {
-                    "uid": "com.pluginmaker.simplevideo-2",
-                    "engine": "com.pluginmaker.simplevideo",
-                    "options":
-                    {
-                        "height": 1080,
-                        "width": 2048,
-                        "horizontalCenter": true,
-                        "autoPlay": true,
-                        "loop": true,
-                        "volume": 0
-                    },
-                    "data":
-                    {
-                        "video": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/videos/Authoring_Martin_Full_HD_15M_fast.mp4"
-                    },
-                    "index": 0,
-                    "keep": false
-                }],
-
-                "configurations": [
-                    {
-                        "instance": "com.pluginmaker.ranking-0",
-                        "options":
-                        {
-                            "source": "com.pluginmaker.simplevideo-2"
-                        }
-                    },
-
-                    {
-                        "instance": "com.pluginmaker.googlemaps-0",
-                        "data":
-                        {
-                            "gpx": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/gpx/martin.xml"
-                        },
-                        "options":
-                        {
-                            "source": "com.pluginmaker.simplevideo-2"
-                        }
-                    },
-
-                    {
-                        "instance": "com.pluginmaker.heartbeat-0",
-                        "data":
-                        {
-                            "keyframes": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/timeline/heartbeat-martin.json"
-                        },
-                        "options":
-                        {
-                            "source": "com.pluginmaker.simplevideo-2"
-                        }
-                    },
-
-                    {
-                        "instance": "com.pluginmaker.speedometer-0",
-                        "data":
-                        {
-                            "keyframes": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/timeline/speed-martin.json"
-                        },
-                        "options":
-                        {
-                            "source": "com.pluginmaker.simplevideo-2"
-                        }
-                    }
-                ]
-            }
-        }
-    ],
+        ],
+    },
 
     "actions":
     [
@@ -1007,6 +1010,8 @@
 
     "plugins":
     {
+        "prefix": "../../plugins/",
+
         "engines": [
             // Plugin adding two black strips on top and bottom
             {
@@ -1205,7 +1210,7 @@
                     [
                         {
                             "name": "Martin",
-                            "thumb": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/videos/Martin_POV_160px_2M_fast.mp4",
+                            "thumb": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/Martin_POV_160px_2M_fast.mp4",
                             "scenes": [ "scene-3", "scene-5"],
 
                             "keyframes": [
@@ -1222,7 +1227,7 @@
 
                         {
                             "name": "Samy",
-                            "thumb": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/videos/Samy_POV_160px_2M_fast.mp4",
+                            "thumb": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/Samy_POV_160px_2M_fast.mp4",
                             "scenes": [ "scene-2", "scene-4"],
 
                             "keyframes": [
@@ -1255,7 +1260,7 @@
                 {
                     "markerIcon":
                     {
-                        "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/helmet-30x30.png",
+                        "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/assets/helmet-30x30.png",
                         "width": 30,
                         "height": 30,
                         "anchorX": 15,
@@ -1315,7 +1320,7 @@
                 "options":
                 {
                     "key": "simpleimage-helmet-scratch",
-                    "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/helmet-scratch.png",
+                    "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/assets/helmet-scratch.png",
                     "alpha": 0.3
                 },
                 "data": {},
@@ -1330,7 +1335,7 @@
                 "options":
                 {
                     "key": "simpleimage-helmet-vigneting",
-                    "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/vrrroom/assets/helmet-vigneting.png",
+                    "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/assets/helmet-vigneting.png",
                     "alpha": 0.4
                 },
                 "data": {},

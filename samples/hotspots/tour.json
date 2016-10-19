@@ -22,7 +22,7 @@
 
                 "source":
                 {
-                    "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/01-forest.png"
+                    "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
                 }
             },
 
@@ -35,7 +35,8 @@
                 }
             },
 
-            "hotspots": [
+            "hotspots":
+            [
                 {
                     "uid": "hotspot-3d-0",
                     "tags": [],
@@ -59,7 +60,7 @@
 
                     "material":
                     {
-                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-4.png"
+                        "image": "http://streams.kolor.com/streams/ken/samples/common/images/spot-4.png"
                     }
                 },
 
@@ -85,7 +86,7 @@
 
                     "material":
                     {
-                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-3.png"
+                        "image": "http://streams.kolor.com/streams/ken/samples/common/images/spot-3.png"
                     }
                 },
 
@@ -111,7 +112,7 @@
 
                     "material":
                     {
-                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-2.png"
+                        "image": "http://streams.kolor.com/streams/ken/samples/common/images/spot-2.png"
                     }
                 },
 
@@ -137,7 +138,7 @@
 
                     "material":
                     {
-                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-1.png"
+                        "image": "http://streams.kolor.com/streams/ken/samples/common/images/spot-1.png"
                     }
                 },
 
@@ -163,7 +164,7 @@
 
                     "material":
                     {
-                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/spot-0.png"
+                        "image": "http://streams.kolor.com/streams/ken/samples/common/images/spot-0.png"
                     }
                 }
             ]

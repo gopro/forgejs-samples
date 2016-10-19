@@ -1,4 +1,9 @@
 {
+    "controllers":
+    {
+        "enabled": false
+    },
+
     "tour":
     {
         "uid": "director-tour",
@@ -6,16 +11,6 @@
         "slug": "director-tour",
         "description": "This is a sample of director's cut applied to a video.",
         "default": "scene-0",
-
-        "view":
-        {
-            "type": "gopro"
-        },
-
-        "controllers":
-        {
-            "enabled": false
-        },
 
         "scenes": [
         {
@@ -33,7 +28,7 @@
                 "source":
                 {
                     "files": [
-                        "http://d2z3zwtr25q24l.cloudfront.net/data/samples/directors-cut/Moto_Desert_2048x1024_2k_like_short.mp4"
+                        "http://streams.kolor.com/streams/ken/samples/directors-cut/Moto_Desert_2048x1024_2k_like_short.mp4"
                     ]
                 },
 
@@ -43,6 +38,11 @@
                     "loop": false,
                     "volume": 0.4
                 }
+            },
+
+            "view":
+            {
+                "type": "gopro"
             },
 
             "director":

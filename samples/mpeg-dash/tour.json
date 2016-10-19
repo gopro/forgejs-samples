@@ -7,7 +7,8 @@
         "description": "This is sample of MPEG-DASH video display",
         "default": "scene-0",
 
-        "scenes": [
+        "scenes":
+        [
             {
                 "uid": "scene-0",
                 "name": "First scene",
@@ -25,7 +26,7 @@
 
                         "format": "dash",
                         "files": [
-                            "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/dash/411255.mpd"
+                            "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/dash/411255.mpd"
                         ]
                     },
 
@@ -65,7 +66,7 @@
 
                         "data":
                         {
-                            "video": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/moto-desert/dash/410524.mpd",
+                            "video": "http://streams.kolor.com/streams/ken/samples/common/videos/moto-desert/dash/410524.mpd",
                             "format": "dash"
                         },
 
@@ -102,7 +103,8 @@
     {
         "prefix": "../../plugins/",
 
-        "engines": [
+        "engines":
+        [
             {
                 "uid": "com.pluginmaker.simplebutton",
                 "url": "SimpleButton/",
@@ -116,7 +118,8 @@
             }
         ],
 
-        "instances": [
+        "instances":
+        [
             {
                 "uid": "simplebutton-previous",
                 "engine": "com.pluginmaker.simplebutton",

@@ -82,7 +82,7 @@ Now that we have a scene, we can specify the media we want to add. First, let's 
         "type": "image",
         "format": "equi",
 
-        "source": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/01-forest.png"
+        "source": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
     }
 }
 ````
@@ -102,7 +102,7 @@ Above is the code to load an image, and below is for a video :
         "type": "video",
         "format": "equi",
 
-        "source": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/omni-highlights/source.03-1080p_HD.mp4"
+        "source": "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/source.03-1080p_HD.mp4"
     }
 }
 ````
@@ -195,7 +195,7 @@ If we go back to our `scenes` object, we can see it is in fact an array. So we c
 
             "source":
             {
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/02-sand.png"
+                "url": "http://streams.kolor.com/streams/ken/samples/common/panos/02-sand.png"
             }
         }
     },
@@ -214,7 +214,7 @@ If we go back to our `scenes` object, we can see it is in fact an array. So we c
 
             "source":
             {
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/03-snow.png"
+                "url": "http://streams.kolor.com/streams/ken/samples/common/panos/03-snow.png"
             }
         }
     },
@@ -233,7 +233,7 @@ If we go back to our `scenes` object, we can see it is in fact an array. So we c
 
             "source":
             {
-                "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/videos/moto-desert/Moto_Desert_1920x960_1080p_like.mp4"
+                "url": "http://streams.kolor.com/streams/ken/samples/common/videos/moto-desert/Moto_Desert_1920x960_1080p_like.mp4"
             }
         }
     }]

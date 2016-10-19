@@ -58,7 +58,7 @@
 
                 "source":
                 {
-                    "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/01-forest.png"
+                    "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
                 }
             }
         }]
@@ -68,67 +68,71 @@
     {
         "prefix": "../../plugins/",
 
-        "engines": [
-        {
-            "uid": "com.pluginmaker.localeselector",
-            "url": "LocaleSelector/",
-            "manifest": "manifest.json"
-        },
-        {
-            "uid": "com.pluginmaker.simpletext",
-            "url": "SimpleText/",
-            "manifest": "manifest.json"
-        }],
-
-        "instances": [
-        {
-            "uid": "localeselector",
-            "engine": "com.pluginmaker.localeselector",
-            "options":
+        "engines":
+        [
             {
-                "horizontalCenter": true,
-                "bottom": 100,
-                "flagWidth": 150,
-                "flagHeight": 100,
-                "baseURL": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/images/",
-                "fileName": "flag-{{locale}}.gif"
+                "uid": "com.pluginmaker.localeselector",
+                "url": "LocaleSelector/",
+                "manifest": "manifest.json"
+            },
+            {
+                "uid": "com.pluginmaker.simpletext",
+                "url": "SimpleText/",
+                "manifest": "manifest.json"
             }
-        },
+        ],
 
-        {
-            "uid": "text-welcome",
-            "engine": "com.pluginmaker.simpletext",
-            "options":
+        "instances":
+        [
             {
-                "config":
+                "uid": "localeselector",
+                "engine": "com.pluginmaker.localeselector",
+                "options":
                 {
-                    "i18n": true,
-                    "value": "pano-welcome",
-                    "fontSize": 50,
-                    "color": "white",
-                    "textAlign": "center"
-                },
-                "horizontalCenter": true,
-                "bottom": 400
-            }
-        },
+                    "horizontalCenter": true,
+                    "bottom": 100,
+                    "flagWidth": 150,
+                    "flagHeight": 100,
+                    "baseURL": "http://streams.kolor.com/streams/ken/samples/common/images/",
+                    "fileName": "flag-{{locale}}.gif"
+                }
+            },
 
-        {
-            "uid": "text-instructions",
-            "engine": "com.pluginmaker.simpletext",
-            "options":
             {
-                "config":
+                "uid": "text-welcome",
+                "engine": "com.pluginmaker.simpletext",
+                "options":
                 {
-                    "i18n": true,
-                    "value": "pano-instructions",
-                    "fontSize": 30,
-                    "color": "white",
-                    "textAlign": "center"
-                },
-                "horizontalCenter": true,
-                "bottom": 350
+                    "config":
+                    {
+                        "i18n": true,
+                        "value": "pano-welcome",
+                        "fontSize": 50,
+                        "color": "white",
+                        "textAlign": "center"
+                    },
+                    "horizontalCenter": true,
+                    "bottom": 400
+                }
+            },
+
+            {
+                "uid": "text-instructions",
+                "engine": "com.pluginmaker.simpletext",
+                "options":
+                {
+                    "config":
+                    {
+                        "i18n": true,
+                        "value": "pano-instructions",
+                        "fontSize": 30,
+                        "color": "white",
+                        "textAlign": "center"
+                    },
+                    "horizontalCenter": true,
+                    "bottom": 350
+                }
             }
-        }]
+        ]
     }
 }

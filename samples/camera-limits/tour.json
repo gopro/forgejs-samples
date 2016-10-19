@@ -1,4 +1,33 @@
 {
+    "camera":
+    {
+        "parallax": 0,
+        "yaw":
+        {
+            "default": 0,
+            "min": -70,
+            "max": 70
+        },
+        "pitch":
+        {
+            "default": 30,
+            "min": 0,
+            "max": 60
+        },
+        "roll":
+        {
+            "default": 0,
+            "min": 0,
+            "max": 0
+        },
+        "fov":
+        {
+            "default": 70,
+            "min": 50,
+            "max": 100
+        }
+    },
+
     "tour":
     {
         "uid": "camera-tour",
@@ -6,35 +35,6 @@
         "slug": "camera-tour",
         "description": "Camera limitation and orientation can be applied on a tour",
         "default": "scene-0",
-
-        "camera":
-        {
-            "parallax": 0,
-            "yaw":
-            {
-                "default": 0,
-                "min": -70,
-                "max": 70
-            },
-            "pitch":
-            {
-                "default": 30,
-                "min": 0,
-                "max": 60
-            },
-            "roll":
-            {
-                "default": 0,
-                "min": 0,
-                "max": 0
-            },
-            "fov":
-            {
-                "default": 70,
-                "min": 50,
-                "max": 100
-            }
-        },
 
         "scenes": [
         {
@@ -51,7 +51,7 @@
 
                 "source":
                 {
-                    "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/common/panos/01-forest.png"
+                    "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
                 }
             }
         }]

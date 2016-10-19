@@ -1,4 +1,13 @@
 {
+    "camera":
+    {
+        "parallax": 0.4,
+        "yaw":
+        {
+            "default": -110
+        }
+    },
+
     "tour":
     {
         "uid": "parallax-tour",
@@ -22,16 +31,7 @@
 
                 "source":
                 {
-                    "url": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/camera-parallax/Innerschweiz-no-planes.jpg"
-                }
-            },
-
-            "camera":
-            {
-                "parallax": 0.4,
-                "yaw":
-                {
-                    "default": -110
+                    "url": "http://streams.kolor.com/streams/ken/samples/camera-parallax/Innerschweiz-no-planes.jpg"
                 }
             },
 
@@ -56,7 +56,7 @@
 
                     "material":
                     {
-                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/camera-parallax/plane-a917.png",
+                        "image": "http://streams.kolor.com/streams/ken/samples/camera-parallax/plane-a917.png",
                         "transparent": true
                     }
                 },
@@ -81,7 +81,7 @@
 
                     "material":
                     {
-                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/camera-parallax/plane-a919.png",
+                        "image": "http://streams.kolor.com/streams/ken/samples/camera-parallax/plane-a919.png",
                         "transparent": true
                     }
                 },
@@ -106,7 +106,7 @@
 
                     "material":
                     {
-                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/camera-parallax/plane-a912.png",
+                        "image": "http://streams.kolor.com/streams/ken/samples/camera-parallax/plane-a912.png",
                         "transparent": true
                     }
                 },
@@ -131,7 +131,7 @@
 
                     "material":
                     {
-                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/camera-parallax/plane-a933.png",
+                        "image": "http://streams.kolor.com/streams/ken/samples/camera-parallax/plane-a933.png",
                         "transparent": true
                     }
                 },
@@ -156,7 +156,7 @@
 
                     "material":
                     {
-                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/camera-parallax/plane-a915.png",
+                        "image": "http://streams.kolor.com/streams/ken/samples/camera-parallax/plane-a915.png",
                         "transparent": true
                     }
                 },
@@ -181,7 +181,7 @@
 
                     "material":
                     {
-                        "image": "http://d2z3zwtr25q24l.cloudfront.net/data/samples/camera-parallax/plane-a928.png",
+                        "image": "http://streams.kolor.com/streams/ken/samples/camera-parallax/plane-a928.png",
                         "transparent": true
                     }
                 }
