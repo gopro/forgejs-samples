@@ -20,10 +20,7 @@
                 "type": "image",
                 "format": "equi",
 
-                "source":
-                {
-                    "url": "http://streams.kolor.com/streams/ken/samples/hotspots-sounds/rainforest-daniel-wambach.jpg"
-                }
+                "source": "http://streams.kolor.com/streams/ken/samples/hotspots-sounds/rainforest-daniel-wambach.jpg"
             },
 
             "camera":

@@ -26,10 +26,7 @@
                     "type": "image",
                     "format": "equi",
 
-                    "source":
-                    {
-                        "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
-                    }
+                    "source": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
                 },
 
                 "camera":
