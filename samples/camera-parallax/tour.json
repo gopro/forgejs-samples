@@ -29,7 +29,10 @@
                 "type": "image",
                 "format": "equi",
 
-                "source": "http://streams.kolor.com/streams/ken/samples/camera-parallax/Innerschweiz-no-planes.jpg"
+                "source":
+                {
+                    "url": "http://streams.kolor.com/streams/ken/samples/camera-parallax/Innerschweiz-no-planes.jpg"
+                }
             },
 
             "hotspots": [

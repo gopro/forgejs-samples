@@ -56,7 +56,10 @@
                 "type": "image",
                 "format": "equi",
 
-                "source": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
+                "source":
+                {
+                    "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
+                }
             }
         }]
     },

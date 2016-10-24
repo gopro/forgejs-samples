@@ -20,12 +20,15 @@
                 "type": "video",
                 "format": "equi",
 
-                "source": [
-                    "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/source.02-720p_HD.mp4",
-                    "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/source.03-1080p_HD.mp4",
-                    "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/source.04-1440p_HD.mp4",
-                    "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/source.07-2160p_4K_H264_12M.mp4"
-                ],
+                "source":
+                {
+                    "files": [
+                        "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/source.02-720p_HD.mp4",
+                        "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/source.03-1080p_HD.mp4",
+                        "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/source.04-1440p_HD.mp4",
+                        "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/source.07-2160p_4K_H264_12M.mp4"
+                    ]
+                },
 
                 "options":
                 {

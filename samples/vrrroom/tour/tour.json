@@ -278,7 +278,10 @@
                     "type": "image",
                     "format": "equi",
 
-                    "source": "http://streams.kolor.com/streams/ken/samples/vrrroom/panos/pano-scene-1-v3.jpg"
+                    "source":
+                    {
+                        "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/panos/pano-scene-1-v3.jpg"
+                    }
                 },
 
                 "playlists":
@@ -577,7 +580,12 @@
                     "type": "video",
                     "format": "equi",
 
-                    "source": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/360_Samy_UHD_25M_final_fast.mp4",
+                    "source":
+                    {
+                        "files": [
+                            "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/360_Samy_UHD_25M_final_fast.mp4"
+                        ]
+                    },
 
                     "options":
                     {
@@ -664,7 +672,12 @@
                     "type": "video",
                     "format": "equi",
 
-                    "source": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/360_Martin_UHD_25M_final_fast.mp4",
+                    "source":
+                    {
+                        "files": [
+                            "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/360_Martin_UHD_25M_final_fast.mp4"
+                        ]
+                    },
 
                     "options":
                     {

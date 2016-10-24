@@ -21,11 +21,17 @@
                     "type": "video",
                     "format": "equi",
 
-                    "source": "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/dash/411255.mpd",
+                    "source":
+                    {
+
+                        "format": "dash",
+                        "files": [
+                            "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/dash/411255.mpd"
+                        ]
+                    },
 
                     "options":
                     {
-                        "format": "dash",
                         "autoPlay": true,
                         "loop": true,
                         "volume": 0.5
