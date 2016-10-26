@@ -24,10 +24,10 @@
                 {
                     "uid": "scene-0-pano-0",
                     "type": "image",
-                    "format": "equi",
 
                     "source":
                     {
+                        "format": "equi",
                         "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
                     }
                 },
