@@ -23,13 +23,11 @@
             {
                 "uid": "scene-0-video-0",
                 "type": "video",
-                "format": "equi",
 
                 "source":
                 {
-                    "files": [
-                        "http://streams.kolor.com/streams/ken/samples/directors-cut/Moto_Desert_2048x1024_2k_like_short.mp4"
-                    ]
+                    "format": "equi",
+                    "url": "http://streams.kolor.com/streams/ken/samples/directors-cut/Moto_Desert_2048x1024_2k_like_short.mp4"
                 },
 
                 "options":

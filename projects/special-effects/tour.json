@@ -19,11 +19,11 @@
             {
                 "uid": "scene-0-pano-0",
                 "type": "image",
-                "format": "equi",
                 "fx": "fxSet-background",
 
                 "source":
                 {
+                    "format": "equi",
                     "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
                 }
             }

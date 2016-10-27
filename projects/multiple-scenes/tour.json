@@ -18,10 +18,10 @@
             {
                 "uid": "scene-1-pano-0",
                 "type": "image",
-                "format": "equi",
 
                 "source":
                 {
+                    "format": "equi",
                     "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
                 }
             }
@@ -36,10 +36,10 @@
             {
                 "uid": "scene-2-pano-0",
                 "type": "image",
-                "format": "equi",
 
                 "source":
                 {
+                    "format": "equi",
                     "url": "http://streams.kolor.com/streams/ken/samples/common/panos/02-sand.png"
                 }
             }
@@ -54,10 +54,10 @@
             {
                 "uid": "scene-3-pano-0",
                 "type": "image",
-                "format": "equi",
 
                 "source":
                 {
+                    "format": "equi",
                     "url": "http://streams.kolor.com/streams/ken/samples/common/panos/03-snow.png"
                 }
             }
