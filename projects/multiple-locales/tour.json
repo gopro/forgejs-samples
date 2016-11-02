@@ -5,7 +5,8 @@
         "locales": [
 
             {
-                "name": "en-US",
+                "uid": "en-US",
+                "name": "English",
                 "files": [
                 {
                     "key": "tour.en-US",
@@ -14,7 +15,8 @@
             },
 
             {
-                "name": "fr-FR",
+                "uid": "fr-FR",
+                "name": "French",
                 "files": [
                 {
                     "key": "tour.fr-FR",
@@ -23,7 +25,8 @@
             },
 
             {
-                "name": "jp-JP",
+                "uid": "jp-JP",
+                "name": "Japanese",
                 "files": [
                 {
                     "key": "tour.jp-JP",

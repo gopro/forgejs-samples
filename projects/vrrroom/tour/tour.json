@@ -14,7 +14,8 @@
 
             // English support
             {
-                "name": "en-US",
+                "uid": "en-US",
+                "name": "English",
                 "files": [
                 {
                     "key": "tour.en-US",
@@ -24,7 +25,8 @@
 
             // French support
             {
-                "name": "fr-FR",
+                "uid": "fr-FR",
+                "name": "French",
                 "files": [
                 {
                     "key": "tour.fr-FR",
@@ -34,7 +36,8 @@
 
             // Italian support
             {
-                "name": "it-IT",
+                "uid": "it-IT",
+                "name": "Italian",
                 "files": [
                 {
                     "key": "tour.it-IT",
