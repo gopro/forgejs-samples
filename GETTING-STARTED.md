@@ -2,7 +2,7 @@
 
 We are going to make a full tour, starting from nothing.
 
-The first thing to do is to start by copying the `samples/empty-tour/` folder and renaming it with the name of your project. In here are a basic webpage and the `tour.json`, which is the core of our tour. In it is described the complete tour, from scenes to plugins, hotspots to the behavior of the camera.
+The first thing to do is to start by copying the `projects/empty-tour/` folder and renaming it with the name of your project. In here are a basic webpage and the `tour.json`, which is the core of our tour. In it is described the complete tour, from scenes to plugins, hotspots to the behavior of the camera.
 
 You don't have to touch the webpage in this tutorial, only the `tour.json`. To learn more how to configure the `KEN.Viewer` object, please consult the [documentation of the API]().
 
