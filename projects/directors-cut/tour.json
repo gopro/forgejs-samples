@@ -47,10 +47,19 @@
             {
                 "animation":
                 {
-                    "autoPlay": true,
-                    "userCanStop": false,
-                    "idleTimer": false,
-                    "tweenToStart": false,
+                    "enabled": true,
+
+                    "intro":
+                    {
+                        "smooth": false,
+                        "idleTime": 0
+                    },
+
+                    "user":
+                    {
+                        "canStop": false
+                    },
+
                     "loop": false,
 
                     "tracks": ["director-track-0"]
