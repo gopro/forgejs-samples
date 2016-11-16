@@ -73,29 +73,30 @@
         "tracks": [
         {
             "uid": "director-track-0",
-            "name": "Director's track name",
-            "description": "Director's track description",
+            "name": "Director's track #0 name",
+            "description": "Director's track #0 description",
             "smooth": true,
             "cancelRoll": true,
 
             "waypoints": [
-                { "time": 0,     "yaw": 100,  "pitch": 0,   "roll": 0, "fov": 110 },
-                { "time": 6500,  "yaw": 100,  "pitch": 0,   "roll": 0, "fov": 110 },
-                { "time": 9300,  "yaw": 0,    "pitch": 0,   "roll": 0, "fov": 110 },
-                { "time": 11000, "yaw": 0,    "pitch": -20, "roll": 0, "fov": 130 },
-                { "time": 15000, "yaw": 0,    "pitch": -60, "roll": 0, "fov": 130 },
-                { "time": 25000, "yaw": -180, "pitch": -30, "roll": 0, "fov": 100 },
-                { "time": 30000, "yaw": -170, "pitch": -20, "roll": 0, "fov": 70 },
-                { "time": 33000, "yaw": -160, "pitch": -30, "roll": 0, "fov": 110 },
-                { "time": 37850, "yaw": -140, "pitch": -40, "roll": 0, "fov": 140 },
-                { "time": 37851, "yaw": 0,    "pitch": 0,   "roll": 0, "fov": 100 },
-                { "time": 39000, "yaw": -25,  "pitch": 0,   "roll": 0, "fov": 100 },
-                { "time": 41000, "yaw": 85,   "pitch": 0,   "roll": 0, "fov": 120 },
-                { "time": 44000, "yaw": 30,   "pitch": 0,   "roll": 0, "fov": 120 },
-                { "time": 45000, "yaw": 0,    "pitch": 0,   "roll": 0, "fov": 120 },
-                { "time": 48000, "yaw": -5,   "pitch": -40, "roll": 0, "fov": 180 },
-                { "time": 51200, "yaw": -15,  "pitch": -85, "roll": 0, "fov": 210 }
+                { "time": 0,     "yaw": 100,  "pitch": null, "roll": null, "fov": 110 },
+                { "time": 6500,  "yaw": null, "pitch": null, "roll": null, "fov": null },
+                { "time": 9300,  "yaw": 0,    "pitch": null, "roll": null, "fov": null },
+                { "time": 11000, "yaw": null, "pitch": -20,  "roll": null, "fov": 130 },
+                { "time": 15000, "yaw": null, "pitch": -60,  "roll": null, "fov": null },
+                { "time": 25000, "yaw": -180, "pitch": -30,  "roll": null, "fov": 100 },
+                { "time": 30000, "yaw": -170, "pitch": -20,  "roll": null, "fov": 70 },
+                { "time": 33000, "yaw": -160, "pitch": -30,  "roll": null, "fov": 110 },
+                { "time": 37850, "yaw": -140, "pitch": -40,  "roll": null, "fov": 140 },
+                { "time": 37851, "yaw": 0,   "pitch": 0,    "roll": null, "fov": 100 },
+                { "time": 39000, "yaw": -25, "pitch": null, "roll": null, "fov": null },
+                { "time": 41000, "yaw": 85,  "pitch": null, "roll": null, "fov": 120 },
+                { "time": 44000, "yaw": 30,  "pitch": null, "roll": null, "fov": null },
+                { "time": 45000, "yaw": 0,   "pitch": null, "roll": null, "fov": null },
+                { "time": 48000, "yaw": -5,  "pitch": -40,  "roll": null, "fov": 180 },
+                { "time": 51200, "yaw": -15, "pitch": -85,  "roll": null, "fov": 210 }
             ]
-        }]
+        }
+        ]
     }
 }
