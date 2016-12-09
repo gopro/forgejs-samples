@@ -1,0 +1,57 @@
+{
+    "camera":
+    {
+        "roll":
+        {
+            "default": 0,
+            "min": -20,
+            "max": 20
+        },
+        "fov":
+        {
+            "default": 90,
+            "min": 50,
+            "max": 120
+        }
+    },
+
+    "tour":
+    {
+        "uid": "ambisonic-tour",
+        "name": "Ambisonic tour",
+        "slug": "ambisonic-tour",
+        "description": "This is a demonstration of the ambisonic sound applied to a scene",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first and only scene",
+
+                "media":
+                {
+                    "uid": "scene-0-pano-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "./panos/pano_sphere.jpg"
+                    },
+
+                    "sound":
+                    {
+                        "type": "ambisonic",
+                        "url": "./audio/37b1fe960daba91fffadbdb5a3a9db15.wav",
+                        "volume": 1,
+                        "autoPlay": true,
+                        "loop": true,
+                        "startTime": 0
+                    }
+                }
+            }
+        ]
+    }
+}
