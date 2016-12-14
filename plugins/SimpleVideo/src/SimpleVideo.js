@@ -18,7 +18,7 @@ KPlug.SimpleVideo.prototype = {
     boot: function()
     {
         // Create a KEN.Video instance
-        this._video = this.plugin.create.video(this.plugin.uid + "-video", this.plugin.data.video, this.plugin.data.format);
+        this._video = this.plugin.create.video(this.plugin.uid + "-video", this.plugin.data.video, this.plugin.data.streaming);
 
         // Set properties to the image
         this._video.width = this.plugin.options.width;
