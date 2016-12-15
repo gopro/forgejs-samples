@@ -87,7 +87,7 @@
                 { "time": 25000, "yaw": -180, "pitch": -30,  "roll": null, "fov": 100 },
                 { "time": 30000, "yaw": -170, "pitch": -20,  "roll": null, "fov": 70 },
                 { "time": 33000, "yaw": -160, "pitch": -30,  "roll": null, "fov": 110 },
-                { "time": 37850, "yaw": -140, "pitch": -40,  "roll": null, "fov": 140 },
+                { "time": 37500, "yaw": -140, "pitch": -40,  "roll": null, "fov": 140 },
                 { "time": 37851, "yaw": 0,   "pitch": 0,    "roll": null, "fov": 100 },
                 { "time": 39000, "yaw": -25, "pitch": null, "roll": null, "fov": null },
                 { "time": 41000, "yaw": 85,  "pitch": null, "roll": null, "fov": 120 },
@@ -95,6 +95,7 @@
                 { "time": 45000, "yaw": 0,   "pitch": null, "roll": null, "fov": null },
                 { "time": 48000, "yaw": -5,  "pitch": -40,  "roll": null, "fov": 180 },
                 { "time": 51200, "yaw": -15, "pitch": -85,  "roll": null, "fov": 210 }
+
             ]
         }
         ]
