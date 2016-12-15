@@ -1,0 +1,298 @@
+{
+    "view":
+    {
+        "type": "rectilinear"
+    },
+
+    "camera":
+    {
+        "yaw": { "default": 0, "min": -180, "max": 180 },
+        "pitch": { "default": 0, "min": -90, "max": 90 },
+        "roll": { "default": 0, "min": -180, "max": 180 },
+        "fov": { "default": 90, "min": 30, "max": 150 }
+    },
+
+    "tour":
+    {
+        "uid": "hotspots-actions",
+        "name": "Hotspots with actions",
+        "slug": "hotspots-actions",
+        "description": "This is a sample tour with actions applied on hotspots",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first scene",
+                "background": "rgb(0,0,0)",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
+                    }
+                },
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-0",
+                        "name": "White rabbit",
+                        "visible": true,
+                        "type": "3d",
+
+                        "transform":
+                        {
+                            "facingCenter": true,
+
+                            "position":
+                            {
+                                "radius": 400,
+                                "theta": 0
+                            },
+
+                            "rotation":
+                            {
+                                "x": 0,
+                                "y": 0
+                            },
+
+                            "size":
+                            {
+                                "phi": 4
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "http://streams.kolor.com/streams/ken/samples/hotspots-animation/rabbit-34013.svg",
+                            "color": "#ffffff",
+                            "opacity": 1,
+                            "transparent": true
+                        },
+
+                        "animation":
+                        {
+                            "enabled": true,
+                            "loop": false,
+                            "random": false,
+                            "autoPlay": true,
+
+                            "order": [ "hotspot-0-track-0", "hotspot-0-track-1"]
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-1",
+                        "name": "Butterfly",
+                        "visible": true,
+                        "type": "3d",
+
+                        "transform":
+                        {
+                            "facingCenter": true,
+
+                            "position":
+                            {
+                                "radius": 400,
+                                "theta": 10,
+                                "phi": -5
+                            },
+
+                            "rotation":
+                            {
+                                "x": 0,
+                                "y": 0
+                            },
+
+                            "size":
+                            {
+                                "phi": 4
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "http://streams.kolor.com/streams/ken/samples/hotspots-animation/butterfly-1299922.svg",
+                            "color": "#ffffff",
+                            "opacity": 1,
+                            "transparent": true
+                        },
+
+                        "animation":
+                        {
+                            "enabled": true,
+                            "loop": true,
+                            "random": false,
+                            "autoPlay": true,
+
+                            "order": [ "hotspot-1-track-0"]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+
+    "hotspots":
+    {
+        "tracks":
+        [
+            {
+                "uid": "hotspot-0-track-0",
+                "name": "Animation track #0",
+                "description": "First animation track",
+                "smooth": true,
+
+                "transforms":
+                [
+                    {
+                        "time": 4000,
+                        "position": { "radius": 333, "theta": 10, "phi": -5 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 5000,
+                        "position": { "radius": 316, "theta": 8, "phi": -6 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 8000,
+                        "position": { "radius": 266, "theta": 3, "phi": -8 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 9000,
+                        "position": { "radius": 250, "theta": 5, "phi": -10 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 12000,
+                        "position": { "radius": 200, "theta": 6, "phi": -15 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    }
+                ]
+            },
+
+            {
+                "uid": "hotspot-0-track-1",
+                "name": "Animation track #1",
+                "description": "Second animation track",
+                "smooth": true,
+
+                "transforms":
+                [
+                    {
+                        "time": 5000,
+                        "position": { "radius": 200, "theta": 90, "phi": -15 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 6000,
+                        "position": { "radius": 200, "theta": 110, "phi": -10 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 7000,
+                        "position": { "radius": 200, "theta": 130, "phi": -15 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 10000,
+                        "position": { "radius": 200, "theta": 180, "phi": -15 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 15000,
+                        "position": { "radius": 200, "theta": -90, "phi": -15 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 20000,
+                        "position": { "radius": 200, "theta": 6, "phi": -15 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    }
+                ]
+            },
+
+            {
+                "uid": "hotspot-1-track-0",
+                "name": "Animation track #3",
+                "description": "Third animation track",
+                "smooth": true,
+
+                "transforms":
+                [
+                    {
+                        "time": 3500,
+                        "position": { "radius": 400, "theta": 10, "phi": -5 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 6000,
+                        "position": { "radius": 400, "theta": 25, "phi": 20 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 8000,
+                        "position": { "radius": 400, "theta": 40, "phi": 45 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 10000,
+                        "position": { "radius": 400, "theta": 25, "phi": 60 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 12000,
+                        "position": { "radius": 400, "theta": 45, "phi": 75 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 14000,
+                        "position": { "radius": 400, "theta": 180, "phi": 75 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 16000,
+                        "position": { "radius": 400, "theta": -90, "phi": 80 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 18000,
+                        "position": { "radius": 400, "theta": 6, "phi": 85 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 20000,
+                        "position": { "radius": 400, "theta": -15, "phi": 65 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 22000,
+                        "position": { "radius": 400, "theta": 2, "phi": 35 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 24000,
+                        "position": { "radius": 400, "theta": 15, "phi": 5 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    },
+                    {
+                        "time": 26000,
+                        "position": { "radius": 400, "theta": 10, "phi": -5 },
+                        "rotation": { "x": 0, "y": 0, "z": 0 }
+                    }
+                ]
+            }
+        ]
+    }
+}
