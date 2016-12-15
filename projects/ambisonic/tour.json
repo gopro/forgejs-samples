@@ -38,13 +38,13 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "./panos/pano_sphere.jpg"
+                        "url": "http://streams.kolor.com/streams/ken/samples/ambisonic/pano_sphere.jpg"
                     },
 
                     "sound":
                     {
                         "type": "ambisonic",
-                        "url": "./audio/37b1fe960daba91fffadbdb5a3a9db15.wav",
+                        "url": "http://streams.kolor.com/streams/ken/samples/ambisonic/37b1fe960daba91fffadbdb5a3a9db15.wav",
                         "volume": 1,
                         "autoPlay": true,
                         "loop": true,
