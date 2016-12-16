@@ -22,7 +22,6 @@
                 "source":
                 {
                     "format": "equi",
-                    
                     "levels": [
                         { "url": "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/source.02-720p_HD.mp4" },
                         { "url": "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/source.03-1080p_HD.mp4" },

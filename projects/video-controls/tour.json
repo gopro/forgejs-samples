@@ -1,0 +1,75 @@
+{
+    "tour":
+    {
+        "uid": "tour-0",
+        "name": "Video Controls",
+        "slug": "video-controls",
+        "description": "This is a project sample with video controls plugin",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first scene",
+
+                "media":
+                {
+                    "uid": "video-0",
+                    "type": "video",
+
+                    "source": {
+                        "format": "equi",
+                        "levels": [
+                            { "url": "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/source.02-720p_HD.mp4" },
+                            { "url": "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/source.03-1080p_HD.mp4" },
+                            { "url": "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/source.04-1440p_HD.mp4" },
+                            { "url": "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/source.07-2160p_4K_H264_12M.mp4" }
+                        ]
+                    },
+
+                    "options": {
+                        "autoPlay": false,
+                        "loop": true,
+                        "volume": 0.5
+                    }
+                },
+
+                "plugins":
+                {
+                    "instances":
+                    [
+                        {
+                            "uid": "com.pluginmaker.videocontrols-0",
+                            "engine": "com.pluginmaker.videocontrols",
+                            "options":
+                            {
+                                "poster": "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/poster.png"
+                            },
+                            "data": {},
+                            "keep": false,
+                            "index": 1
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "enabled": true,
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "com.pluginmaker.videocontrols",
+                "url": "VideoControls/",
+                "manifest": "manifest.json"
+            }
+        ]
+    }
+}
