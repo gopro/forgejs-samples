@@ -1,0 +1,28 @@
+{
+    "uid": "com.pluginmaker.videocontrols",
+    "name": "Video Controls",
+    "slug": "videocontrols",
+    "version": "1.0.0",
+    "description": "Add video controls UI on a 360 video scene",
+
+    "author":
+    {
+        "name": "GoPro",
+        "website": "http://kenprivatebeta.kolor.com/"
+    },
+
+    "licence": "Apache 2",
+
+    "options":
+    {
+        "poster": null
+    },
+
+    "sources":
+    [
+        "src/style.css",
+        "src/VideoControls.js"
+    ],
+
+    "constructor": "VideoControls"
+}
