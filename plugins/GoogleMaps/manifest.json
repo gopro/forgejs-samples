@@ -9,10 +9,10 @@
     "author":
     {
         "name": "GoPro",
-        "website": "http://ken.com"
+        "website": "http://kenprivatebeta.kolor.com/"
     },
 
-    "licence": "MIT",
+    "licence": "Apache 2",
 
     "options":
     {
