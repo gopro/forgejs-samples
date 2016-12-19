@@ -1,4 +1,9 @@
 {
+    "history":
+    {
+        "enabled": true
+    },
+
     "camera":
     {
         "roll":
@@ -581,7 +586,7 @@
 
                         "material":
                         {
-                            "image": "http://streams.kolor.com/streams/ken/samples/hotspots-actions/ChevronUpCircle_white_64",
+                            "image": "http://streams.kolor.com/streams/ken/samples/hotspots-actions/ChevronUpCircle_white_64.png",
                             "opacity": 1
                         },
 
@@ -617,7 +622,7 @@
 
                         "material":
                         {
-                            "image": "http://streams.kolor.com/streams/ken/samples/hotspots-actions/ChevronUpCircle_white_64",
+                            "image": "http://streams.kolor.com/streams/ken/samples/hotspots-actions/ChevronUpCircle_white_64.png",
                             "opacity": 1
                         },
 
@@ -653,7 +658,7 @@
 
                         "material":
                         {
-                            "image": "http://streams.kolor.com/streams/ken/samples/hotspots-actions/ChevronUpCircle_white_64",
+                            "image": "http://streams.kolor.com/streams/ken/samples/hotspots-actions/ChevronUpCircle_white_64.png",
                             "opacity": 1
                         },
 
@@ -724,7 +729,7 @@
 
                         "material":
                         {
-                            "image": "http://streams.kolor.com/streams/ken/samples/hotspots-actions/ChevronUpCircle_white_64",
+                            "image": "http://streams.kolor.com/streams/ken/samples/hotspots-actions/ChevronUpCircle_white_64.png",
                             "opacity": 1
                         },
 

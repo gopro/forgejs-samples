@@ -39,7 +39,7 @@
 
                 "view":
                 {
-                    "type": "gopro"
+                    "type": "GoPro"
                 },
 
                 "plugins":
@@ -51,7 +51,7 @@
                             "engine": "com.pluginmaker.videocontrols",
                             "options":
                             {
-                                "poster": "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/poster.png"
+                                "poster": "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/poster.jpg"
                             },
                             "data": {},
                             "keep": false,
