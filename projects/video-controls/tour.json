@@ -37,6 +37,11 @@
                     }
                 },
 
+                "view":
+                {
+                    "type": "gopro"
+                },
+
                 "plugins":
                 {
                     "instances":
