@@ -310,7 +310,7 @@ KPlug.Ranking.prototype = {
         for (var i = 0, ii = this._drivers.length; i < ii; i++)
         {
             driver = this._drivers[i];
-            driver.keyframe = driver.timeline.getKeyframesFromTime(this._video.currentTimeMS).previous;
+            driver.keyframe = driver.timeline.keyframes[driver.timeline.getKeyframesFromTime(this._video.currentTimeMS).previous];
             driver.video.currentTime = this._video.currentTime;
         }
     },
@@ -361,7 +361,7 @@ KPlug.Ranking.prototype = {
             driver = this._drivers[i];
 
             // Get the current keyframe
-            var keyframe = driver.timeline.getKeyframesFromTime(this._video.currentTimeMS).previous;
+            var keyframe = driver.timeline.keyframes[driver.timeline.getKeyframesFromTime(this._video.currentTimeMS).previous];
 
             if (keyframe !== driver.keyframe)
             {

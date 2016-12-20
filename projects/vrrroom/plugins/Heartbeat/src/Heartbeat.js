@@ -202,7 +202,7 @@ KPlug.Heartbeat.prototype = {
      */
     _onSeekedHandler: function()
     {
-        var keyframe = this._timeline.getKeyframesFromTime(this._video.currentTimeMS).previous;
+        var keyframe = this._timeline.keyframes[this._timeline.getKeyframesFromTime(this._video.currentTimeMS).previous];
         this._currentTime = this._video.currentTime;
     },
 
@@ -273,7 +273,7 @@ KPlug.Heartbeat.prototype = {
             return;
         }
 
-        var keyframe = this._timeline.getKeyframesFromTime(this._video.currentTimeMS).previous;
+        var keyframe = this._timeline.keyframes[this._timeline.getKeyframesFromTime(this._video.currentTimeMS).previous];
 
         if (keyframe !== this._keyframe)
         {
