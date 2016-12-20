@@ -474,7 +474,8 @@
 
                         "material":
                         {
-                            "plugin": "com.pluginmaker.kartingdriverspot-martin"
+                            "plugin": "com.pluginmaker.kartingdriverspot-martin",
+                            "update": true
                         },
 
                         "events":
@@ -556,7 +557,8 @@
 
                         "material":
                         {
-                            "plugin": "com.pluginmaker.kartingdriverspot-samy"
+                            "plugin": "com.pluginmaker.kartingdriverspot-samy",
+                            "update": true
                         },
 
                         "events":
