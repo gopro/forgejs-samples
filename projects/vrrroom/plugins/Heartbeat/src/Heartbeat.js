@@ -202,7 +202,6 @@ KPlug.Heartbeat.prototype = {
      */
     _onSeekedHandler: function()
     {
-        var keyframe = this._timeline.keyframes[this._timeline.getKeyframesFromTime(this._video.currentTimeMS).previous];
         this._currentTime = this._video.currentTime;
     },
 
@@ -273,19 +272,23 @@ KPlug.Heartbeat.prototype = {
             return;
         }
 
-        var keyframe = this._timeline.keyframes[this._timeline.getKeyframesFromTime(this._video.currentTimeMS).previous];
-
-        if (keyframe !== this._keyframe)
+        var kf = this._timeline.getKeyframesFromTime(this._video.currentTimeMS);
+        if (kf !== null)
         {
-            this._keyframe = keyframe;
+            var keyframe = this._timeline.keyframes[kf.previous];
 
-            //pulse value
-            this._heartbeatPulse.value = this._keyframe.data;
+            if (keyframe !== this._keyframe)
+            {
+                this._keyframe = keyframe;
 
-            var totalFrames = this._heartbeat.animations.currentAnimation.frames.length;
-            var frameRate = Math.round((this._keyframe.data * totalFrames) / 60);
+                //pulse value
+                this._heartbeatPulse.value = this._keyframe.data;
 
-            this._heartbeat.animations.currentAnimation.frameRate = frameRate;
+                var totalFrames = this._heartbeat.animations.currentAnimation.frames.length;
+                var frameRate = Math.round((this._keyframe.data * totalFrames) / 60);
+
+                this._heartbeat.animations.currentAnimation.frameRate = frameRate;
+            }
         }
     },
 

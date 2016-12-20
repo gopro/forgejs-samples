@@ -203,13 +203,17 @@ KPlug.Speedometer.prototype = {
             return;
         }
 
-        var keyframe = this._timeline.keyframes[this._timeline.getKeyframesFromTime(this._video.currentTimeMS).previous];
-
-        if (keyframe !== this._keyframe)
+        var kf = this._timeline.getKeyframesFromTime(this._video.currentTimeMS);
+        if (kf !== null)
         {
-            this._keyframe = keyframe;
+            var keyframe = this._timeline.keyframes[kf.previous];
 
-            this._speedLabel.value = this._keyframe.data;
+            if (keyframe !== this._keyframe)
+            {
+                this._keyframe = keyframe;
+
+                this._speedLabel.value = this._keyframe.data;
+            }
         }
     },
 

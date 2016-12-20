@@ -1164,7 +1164,8 @@
                             "action": "visibility",
                             "target": ["com.pluginmaker.ranking-0"]
                         },
-                        "ticked": true
+                        "ticked": true,
+                        "toggle": true
                     },
                     {
                         "id": "map",
@@ -1174,7 +1175,8 @@
                             "action": "visibility",
                             "target": ["com.pluginmaker.googlemaps-0"]
                         },
-                        "ticked": true
+                        "ticked": true,
+                        "toggle": true
                     },
                     {
                         "id": "heart",
@@ -1184,7 +1186,8 @@
                             "action": "visibility",
                             "target": ["com.pluginmaker.heartbeat-0", "com.pluginmaker.speedometer-0"]
                         },
-                        "ticked": true
+                        "ticked": true,
+                        "toggle": true
                     },
                     {
                         "id": "cinema",
@@ -1193,7 +1196,9 @@
                         {
                             "action": "scene",
                             "target": [["scene-2", "scene-4"], ["scene-3", "scene-5"]]
-                        }
+                        },
+                        "toggle": true,
+                        "videotime": "com.pluginmaker.ranking-0"
                     },
                     {
                         "id": "home",

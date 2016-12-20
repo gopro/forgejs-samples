@@ -54,7 +54,9 @@ KPlug.GooeyMenu.prototype = {
             content += '    <a class="menu-item menu-'
                     + this.plugin.options.items[i].id + ' '
                     + (this.plugin.options.items[i].ticked ? 'menu-item-active' : 'menu-item-inactive')
-                    + '" id="menu-item-' + i + '"></a>';
+                    + (this.plugin.options.items[i].toggle ? ' menu-item-toggle' : '')
+                    + '" id="menu-item-' + i + '"'
+                    + (this.plugin.options.items[i].videotime !== "undefined" ? ' data-videotime="' + this.plugin.options.items[i].videotime + '"' : '') + '></a>';
         }
 
         content += '</nav>';
@@ -87,12 +89,12 @@ KPlug.GooeyMenu.prototype = {
         var item = event.target;
 
         // Change the visual
-        if (item.classList.contains('menu-item-active'))
+        if (item.classList.contains('menu-item-active') && item.classList.contains('menu-item-toggle'))
         {
             item.classList.remove('menu-item-active');
             item.classList.add('menu-item-inactive');
         }
-        else
+        else if(item.classList.contains('menu-item-toggle'))
         {
             item.classList.remove('menu-item-inactive');
             item.classList.add('menu-item-active');
@@ -111,6 +113,7 @@ KPlug.GooeyMenu.prototype = {
                 this.viewer.plugins.get(target[i]).container.toggleVisibility();
             }
         }
+
         // Change the current scene
         else if (action === "scene")
         {
@@ -128,6 +131,12 @@ KPlug.GooeyMenu.prototype = {
             }
             else if (Array.isArray(target))
             {
+                // change video current time into the plugin defined into dataset
+                if (item.dataset.videotime !== "" && this.viewer.plugins.get(item.dataset.videotime) !== "undefined")
+                {
+                    this.viewer.plugins.get(item.dataset.videotime).instance.changeCurrentTime();
+                }
+
                 for (var i = 0, ii = target.length; i < ii; i++)
                 {
                     if (this.viewer.tour.scene.uid === target[i][0])
@@ -141,6 +150,7 @@ KPlug.GooeyMenu.prototype = {
                 }
             }
         }
+
         // Change the current song in the playlist
         else if (action === "playlist")
         {

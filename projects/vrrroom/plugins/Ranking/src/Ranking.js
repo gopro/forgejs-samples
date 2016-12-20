@@ -90,7 +90,7 @@ KPlug.Ranking.prototype = {
             }
         }
 
-        if (KEN.Utils.isTypeOf(this._video, "VideoHTML5") == true)
+        if (KEN.Utils.isTypeOf(this._video, "VideoHTML5") === true)
         {
             this._video.onSeeked.add(this._onSeekedHandler, this);
             this._video.onPlay.add(this._onPlayHandler, this);
@@ -310,8 +310,13 @@ KPlug.Ranking.prototype = {
         for (var i = 0, ii = this._drivers.length; i < ii; i++)
         {
             driver = this._drivers[i];
-            driver.keyframe = driver.timeline.keyframes[driver.timeline.getKeyframesFromTime(this._video.currentTimeMS).previous];
-            driver.video.currentTime = this._video.currentTime;
+
+            var kf = driver.timeline.getKeyframesFromTime(this._video.currentTimeMS);
+            if (kf !== null)
+            {
+                driver.keyframe = driver.timeline.keyframes[kf.previous];
+                driver.video.currentTime = this._video.currentTime;
+            }
         }
     },
 
@@ -344,6 +349,14 @@ KPlug.Ranking.prototype = {
     },
 
     /**
+     * Update video current time.
+     */
+    changeCurrentTime: function()
+    {
+        this.plugin.persistentData.time = this._video.currentTime;
+    },
+
+    /**
      * Update the synchronization with the main video, and update the position
      * of the driver if necessary.
      */
@@ -361,46 +374,50 @@ KPlug.Ranking.prototype = {
             driver = this._drivers[i];
 
             // Get the current keyframe
-            var keyframe = driver.timeline.keyframes[driver.timeline.getKeyframesFromTime(this._video.currentTimeMS).previous];
-
-            if (keyframe !== driver.keyframe)
+            var kf = driver.timeline.getKeyframesFromTime(this._video.currentTimeMS);
+            if (kf !== null)
             {
-                // Update the current keyframe
-                driver.keyframe = keyframe;
+                var keyframe = driver.timeline.keyframes[kf.previous];
 
-                // Compute and move the player to its position on the leaderboard
-                var top = driver.keyframe.data * this.plugin.options.height + driver.keyframe.data * this.plugin.options.margin;
-
-                driver.tween.to(
+                if (keyframe !== driver.keyframe)
                 {
-                    top: top
-                }, 350).start();
+                    // Update the current keyframe
+                    driver.keyframe = keyframe;
 
-                // Get the text displaying the position of the driver
-                var pos = (driver.keyframe.data + 1).toString(), suffix = null;
-                switch (pos.charAt(pos.length - 1))
-                {
-                    case "1":
-                        suffix = "st";
-                        break;
-                    case "2":
-                        suffix = "nd";
-                        break;
-                    case "3":
-                        suffix = "rd";
-                        break;
-                    default:
-                        suffix = "th";
-                        break;
+                    // Compute and move the player to its position on the leaderboard
+                    var top = driver.keyframe.data * this.plugin.options.height + driver.keyframe.data * this.plugin.options.margin;
+
+                    driver.tween.to(
+                    {
+                        top: top
+                    }, 350).start();
+
+                    // Get the text displaying the position of the driver
+                    var pos = (driver.keyframe.data + 1).toString(), suffix = null;
+                    switch (pos.charAt(pos.length - 1))
+                    {
+                        case "1":
+                            suffix = "st";
+                            break;
+                        case "2":
+                            suffix = "nd";
+                            break;
+                        case "3":
+                            suffix = "rd";
+                            break;
+                        default:
+                            suffix = "th";
+                            break;
+                    }
+
+                    driver.position.value = pos + suffix;
                 }
 
-                driver.position.value = pos + suffix;
-            }
-
-            // Update the synchronization
-            if (Math.abs(this._video.currentTimeMS - driver.video.currentTimeMS) > 200)
-            {
-                driver.video.currentTime = this._video.currentTime;
+                // Update the synchronization
+                if (Math.abs(this._video.currentTimeMS - driver.video.currentTimeMS) > 200)
+                {
+                    driver.video.currentTime = this._video.currentTime;
+                }
             }
         }
     },

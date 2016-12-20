@@ -9,10 +9,10 @@
     "author":
     {
         "name": "GoPro",
-        "website": "http://ken.com"
+        "website": "hhttp://kenprivatebeta.kolor.com/"
     },
 
-    "licence": "MIT",
+    "licence": "Apache 2",
 
     "options":
     {
@@ -40,8 +40,8 @@
         "drivers":
         [
             {
-                "name": "Bob",
-                "thumb": "videos/bob_pov.mp4",
+                "name": "John Doe",
+                "thumb": "videos/johndoe_pov.mp4",
                 "scenes": null,
 
                 "keyframes": [
