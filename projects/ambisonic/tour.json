@@ -39,18 +39,26 @@
                     {
                         "format": "equi",
                         "url": "http://streams.kolor.com/streams/ken/samples/ambisonic/pano_sphere.jpg"
-                    },
+                    }
+                },
 
-                    "sound":
+                "sound":
+                {
+                    "uid": "scene-0-sound-0",
+                    "type": "ambisonic",
+                    "source":
                     {
-                        "type": "ambisonic",
-                        "url": "http://streams.kolor.com/streams/ken/samples/ambisonic/ambisonic.wav",
+                        "url": "http://streams.kolor.com/streams/ken/samples/ambisonic/ambisonic.wav"
+                    },
+                    "options":
+                    {
                         "volume": 1,
                         "autoPlay": true,
                         "loop": true,
                         "startTime": 0
                     }
                 }
+
             }
         ]
     }

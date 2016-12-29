@@ -70,18 +70,24 @@
                     "sound":
                     {
                         "uid": "hotspot-3d-0-sound",
-                        "url": "http://streams.kolor.com/streams/ken/samples/hotspots-sounds/Peeper_Frogs_Near_Lake.mp3",
                         "type": "3d",
-                        "volume": 0.6,
-                        "loop": true,
-                        "autoPlay": true,
-                        "range": 210,
-                        "outOfFov":
+                        "source":
                         {
-                            "mute": false,
-                            "fade": false,
-                            "fadeTime": 0.5,
-                            "minVolume": 0.2
+                            "url": "http://streams.kolor.com/streams/ken/samples/hotspots-sounds/Peeper_Frogs_Near_Lake.mp3"
+                        },
+                        "options":
+                        {
+                            "volume": 0.6,
+                            "loop": true,
+                            "autoPlay": true,
+                            "range": 210,
+                            "outOfFov":
+                            {
+                                "mute": false,
+                                "fade": false,
+                                "fadeTime": 0.5,
+                                "minVolume": 0.2
+                            }
                         }
                     }
                 },
@@ -108,11 +114,17 @@
                     "sound":
                     {
                         "uid": "hotspot-3d-1-sound",
-                        "url": "http://streams.kolor.com/streams/ken/samples/hotspots-sounds/Jungle.mp3",
                         "type": "2d",
-                        "volume": 0.1,
-                        "loop": true,
-                        "autoPlay": true
+                        "source":
+                        {
+                            "url": "http://streams.kolor.com/streams/ken/samples/hotspots-sounds/Jungle.mp3"
+                        },
+                        "options":
+                        {
+                            "volume": 0.1,
+                            "loop": true,
+                            "autoPlay": true
+                        }
                     }
                 },
 
@@ -148,19 +160,25 @@
                     "sound":
                     {
                         "uid": "hotspot-3d-2-sound",
-                        "url": "http://streams.kolor.com/streams/ken/samples/hotspots-sounds/Frogs.mp3",
                         "type": "3d",
-                        "volume": 0.6,
-                        "loop": true,
-                        "startTime": 0,
-                        "autoPlay": true,
-                        "range": 120,
-                        "outOfFov":
+                        "source":
                         {
-                            "mute": false,
-                            "fade": false,
-                            "fadeTime": 0.5,
-                            "minVolume": 0.2
+                            "url": "http://streams.kolor.com/streams/ken/samples/hotspots-sounds/Frogs.mp3"
+                        },
+                        "options":
+                        {
+                            "volume": 0.6,
+                            "loop": true,
+                            "startTime": 0,
+                            "autoPlay": true,
+                            "range": 120,
+                            "outOfFov":
+                            {
+                                "mute": false,
+                                "fade": false,
+                                "fadeTime": 0.5,
+                                "minVolume": 0.2
+                            }
                         }
                     }
                 },
@@ -197,19 +215,25 @@
                     "sound":
                     {
                         "uid": "hotspot-3d-3-sound",
-                        "url": "http://streams.kolor.com/streams/ken/samples/hotspots-sounds/Osprey_Bird_Call.mp3",
                         "type": "3d",
-                        "volume": 0.6,
-                        "loop": true,
-                        "startTime": 0,
-                        "autoPlay": true,
-                        "range": 120,
-                        "outOfFov":
+                        "source":
                         {
-                            "mute": false,
-                            "fade": false,
-                            "fadeTime": 0.5,
-                            "minVolume": 0.2
+                            "url": "http://streams.kolor.com/streams/ken/samples/hotspots-sounds/Osprey_Bird_Call.mp3"
+                        },
+                        "options":
+                        {
+                            "volume": 0.6,
+                            "loop": true,
+                            "startTime": 0,
+                            "autoPlay": true,
+                            "range": 120,
+                            "outOfFov":
+                            {
+                                "mute": false,
+                                "fade": false,
+                                "fadeTime": 0.5,
+                                "minVolume": 0.2
+                            }
                         }
                     }
                 }
