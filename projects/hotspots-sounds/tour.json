@@ -74,7 +74,6 @@
                         "sound":
                         {
                             "uid": "hotspot-3d-0-sound",
-                            "type": "3d",
 
                             "source":
                             {
@@ -83,18 +82,11 @@
 
                             "options":
                             {
-                                "volume": 0.6,
+                                "volume": {"min": 0.2, "max": 0.6},
                                 "loop": true,
                                 "autoPlay": true,
-                                "range": 210,
+                                "range": 210
 
-                                "outOfFov":
-                                {
-                                    "mute": false,
-                                    "fade": false,
-                                    "fadeTime": 0.5,
-                                    "minVolume": 0.2
-                                }
                             }
                         }
                     },
@@ -122,7 +114,6 @@
                         "sound":
                         {
                             "uid": "hotspot-3d-1-sound",
-                            "type": "2d",
 
                             "source":
                             {
@@ -171,7 +162,6 @@
                         "sound":
                         {
                             "uid": "hotspot-3d-2-sound",
-                            "type": "3d",
 
                             "source":
                             {
@@ -180,19 +170,11 @@
 
                             "options":
                             {
-                                "volume": 0.6,
+                                "volume": {"min": 0.2, "max": 0.6},
                                 "loop": true,
                                 "startTime": 0,
                                 "autoPlay": true,
-                                "range": 120,
-
-                                "outOfFov":
-                                {
-                                    "mute": false,
-                                    "fade": false,
-                                    "fadeTime": 0.5,
-                                    "minVolume": 0.2
-                                }
+                                "range": 120
                             }
                         }
                     },
@@ -230,7 +212,6 @@
                         "sound":
                         {
                             "uid": "hotspot-3d-3-sound",
-                            "type": "3d",
 
                             "source":
                             {
@@ -239,23 +220,14 @@
 
                             "options":
                             {
-                                "volume": 0.6,
+                                "volume": {"min": 0.2, "max": 0.6},
                                 "loop": true,
                                 "startTime": 0,
                                 "autoPlay": true,
-                                "range": 120,
-
-                                "outOfFov":
-                                {
-                                    "mute": false,
-                                    "fade": false,
-                                    "fadeTime": 0.5,
-                                    "minVolume": 0.2
-                                }
+                                "range": 120
                             }
                         }
                     }
-
                 ]
             }
         ]
