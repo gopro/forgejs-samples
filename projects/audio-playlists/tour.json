@@ -1,5 +1,4 @@
 {
-
     "playlists":
     {
         "volume":
@@ -7,13 +6,16 @@
             "default": 1.0,
             "max": 1.0
         },
+
         "default": "playlist-0",
 
-        "lists": [
+        "lists":
+        [
             {
                 "uid": "playlist-0",
                 "name": "Playlist #1",
                 "default": "track-0",
+
                 "tracks": ["track-0", "track-1"]
             },
 
@@ -21,6 +23,7 @@
                 "uid": "playlist-1",
                 "name": "Playlist #2",
                 "default": "track-2",
+
                 "tracks": ["track-2", "track-3"]
             },
 
@@ -28,12 +31,14 @@
                 "uid": "playlist-2",
                 "name": "Playlist #3",
                 "default": "track-5",
+
                 "tracks": ["track-4", "track-5"]
             }
 
         ],
 
-        "tracks": [
+        "tracks":
+        [
             {
                 "uid": "track-0",
                 "author": "TinyWorlds",
@@ -84,79 +89,83 @@
         "name": "Audio Playlists Tour",
         "slug": "playlist-tour",
         "description": "This is a demonstration of audio playlists applied to the scenes",
-        "default": "scene-0",
+        "default": "scene-1",
 
-        "scenes": [
-        {
-            "uid": "scene-1",
-            "name": "First scene",
-            "slug": "first-scene",
-            "description": "This is the first scene",
-
-            "media":
+        "scenes":
+        [
             {
-                "uid": "scene-1-pano-0",
-                "type": "image",
+                "uid": "scene-1",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first scene",
 
-                "source":
+                "media":
                 {
-                    "format": "equi",
-                    "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
-                }
-            }
-        },
-        {
-            "uid": "scene-2",
-            "name": "Second scene",
-            "slug": "second-scene",
-            "description": "This is the second scene",
+                    "uid": "media-1",
+                    "type": "image",
 
-            "media":
-            {
-                "uid": "scene-2-pano-0",
-                "type": "image",
-
-                "source":
-                {
-                    "format": "equi",
-                    "url": "http://streams.kolor.com/streams/ken/samples/common/panos/02-sand.png"
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
+                    }
                 }
             },
-
-            "playlists":
             {
-                "default": "playlist-2"
-            }
-        },
-        {
-            "uid": "scene-3",
-            "name": "Third scene",
-            "slug": "third-scene",
-            "description": "This is the third and last scene",
+                "uid": "scene-2",
+                "name": "Second scene",
+                "slug": "second-scene",
+                "description": "This is the second scene",
 
-            "media":
-            {
-                "uid": "scene-3-pano-0",
-                "type": "image",
-
-                "source":
+                "media":
                 {
-                    "format": "equi",
-                    "url": "http://streams.kolor.com/streams/ken/samples/common/panos/03-snow.png"
+                    "uid": "media-2",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "http://streams.kolor.com/streams/ken/samples/common/panos/02-sand.png"
+                    }
+                },
+
+                "playlists":
+                {
+                    "default": "playlist-2"
                 }
             },
-
-            "playlists":
             {
-                "default": "playlist-1"
+                "uid": "scene-3",
+                "name": "Third scene",
+                "slug": "third-scene",
+                "description": "This is the third and last scene",
+
+                "media":
+                {
+                    "uid": "media-3",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "http://streams.kolor.com/streams/ken/samples/common/panos/03-snow.png"
+                    }
+                },
+
+                "playlists":
+                {
+                    "default": "playlist-1"
+                }
             }
-        }]
+        ]
     },
 
-    "actions": [
+    "actions":
+    [
         {
             "uid": "action-next-track",
             "target": "viewer.playlists",
+
             "method":
             {
                 "name": "nextTrack"
@@ -166,6 +175,7 @@
         {
             "uid": "action-prev",
             "target": "viewer.tour",
+
             "method":
             {
                 "name": "previousScene"
@@ -175,6 +185,7 @@
         {
             "uid": "action-next",
             "target": "viewer.tour",
+
             "method":
             {
                 "name": "nextScene"
@@ -186,23 +197,25 @@
     {
         "prefix": "../../plugins/",
 
-        "engines": [
-        {
-            "uid": "com.pluginmaker.simplebutton",
-            "url": "SimpleButton/",
-            "manifest": "manifest.json"
-        }],
+        "engines":
+        [
+            {
+                "uid": "com.gopro.simplebutton",
+                "url": "SimpleButton/",
+                "manifest": "manifest.json"
+            }
+        ],
 
-        "instances": [
+        "instances":
+        [
             {
                 "uid": "simplebutton-previous",
-                "engine": "com.pluginmaker.simplebutton",
+                "engine": "com.gopro.simplebutton",
 
                 "options":
                 {
                     "left": 5,
                     "verticalCenter": true,
-
                     "value": "Previous"
                 },
 
@@ -214,13 +227,12 @@
 
             {
                 "uid": "simplebutton-next",
-                "engine": "com.pluginmaker.simplebutton",
+                "engine": "com.gopro.simplebutton",
 
                 "options":
                 {
                     "right": 5,
                     "verticalCenter": true,
-
                     "value": "Next"
                 },
 
@@ -232,16 +244,14 @@
 
             {
                 "uid": "simplebutton-next-track",
-                "engine": "com.pluginmaker.simplebutton",
+                "engine": "com.gopro.simplebutton",
 
                 "options":
                 {
                     "top": 5,
                     "horizontalCenter": true,
-
                     "width": 100,
                     "height": 50,
-
                     "value": "Next track"
                 },
 

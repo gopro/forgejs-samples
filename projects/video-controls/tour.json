@@ -20,7 +20,8 @@
                     "uid": "video-0",
                     "type": "video",
 
-                    "source": {
+                    "source":
+                    {
                         "format": "equi",
                         "levels": [
                             { "url": "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/source.02-720p_HD.mp4" },
@@ -30,7 +31,8 @@
                         ]
                     },
 
-                    "options": {
+                    "options":
+                    {
                         "autoPlay": false,
                         "loop": true,
                         "volume": 0.5
@@ -47,12 +49,14 @@
                     "instances":
                     [
                         {
-                            "uid": "com.pluginmaker.videocontrols-0",
-                            "engine": "com.pluginmaker.videocontrols",
+                            "uid": "com.gopro.videocontrols-0",
+                            "engine": "com.gopro.videocontrols",
+
                             "options":
                             {
                                 "poster": "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/poster.jpg"
                             },
+
                             "data": {},
                             "keep": false,
                             "index": 1
@@ -71,7 +75,7 @@
         "engines":
         [
             {
-                "uid": "com.pluginmaker.videocontrols",
+                "uid": "com.gopro.videocontrols",
                 "url": "VideoControls/",
                 "manifest": "manifest.json"
             }

@@ -22,7 +22,7 @@
 
                 "media":
                 {
-                    "uid": "scene-0-pano-0",
+                    "uid": "media-0",
                     "type": "image",
 
                     "source":
@@ -38,6 +38,7 @@
                     {
                         "default": -90
                     },
+
                     "fov":
                     {
                         "default": 250

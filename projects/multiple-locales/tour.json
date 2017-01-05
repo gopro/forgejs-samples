@@ -2,36 +2,43 @@
     "i18n":
     {
         "enabled": true,
-        "locales": [
 
+        "locales":
+        [
             {
                 "uid": "en-US",
                 "name": "English",
-                "files": [
-                {
-                    "key": "tour.en-US",
-                    "url": "./i18n/en-US/locale.json"
-                }]
+                "files":
+                [
+                    {
+                        "key": "tour.en-US",
+                        "url": "./i18n/en-US/locale.json"
+                    }
+                ]
             },
 
             {
                 "uid": "fr-FR",
                 "name": "French",
-                "files": [
-                {
-                    "key": "tour.fr-FR",
-                    "url": "./i18n/fr-FR/locale.json"
-                }]
+                "files":
+                [
+                    {
+                        "key": "tour.fr-FR",
+                        "url": "./i18n/fr-FR/locale.json"
+                    }
+                ]
             },
 
             {
                 "uid": "jp-JP",
                 "name": "Japanese",
-                "files": [
-                {
-                    "key": "tour.jp-JP",
-                    "url": "./i18n/jp-JP/locale.json"
-                }]
+                "files":
+                [
+                    {
+                        "key": "tour.jp-JP",
+                        "url": "./i18n/jp-JP/locale.json"
+                    }
+                ]
             }
         ],
 
@@ -46,25 +53,27 @@
         "description": "This is a tour which uses multiple locales",
         "default": "scene-0",
 
-        "scenes": [
-        {
-            "uid": "scene-0",
-            "name": "First scene",
-            "slug": "first-scene",
-            "description": "This is the first and only scene",
-
-            "media":
+        "scenes":
+        [
             {
-                "uid": "scene-0-pano-0",
-                "type": "image",
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first and only scene",
 
-                "source":
+                "media":
                 {
-                    "format": "equi",
-                    "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
+                    "uid": "scene-0-pano-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
+                    }
                 }
             }
-        }]
+        ]
     },
 
     "plugins":
@@ -74,12 +83,13 @@
         "engines":
         [
             {
-                "uid": "com.pluginmaker.localeselector",
+                "uid": "com.gopro.localeselector",
                 "url": "LocaleSelector/",
                 "manifest": "manifest.json"
             },
+
             {
-                "uid": "com.pluginmaker.simpletext",
+                "uid": "com.gopro.simpletext",
                 "url": "SimpleText/",
                 "manifest": "manifest.json"
             }
@@ -89,7 +99,8 @@
         [
             {
                 "uid": "localeselector",
-                "engine": "com.pluginmaker.localeselector",
+                "engine": "com.gopro.localeselector",
+
                 "options":
                 {
                     "horizontalCenter": true,
@@ -103,7 +114,8 @@
 
             {
                 "uid": "text-welcome",
-                "engine": "com.pluginmaker.simpletext",
+                "engine": "com.gopro.simpletext",
+
                 "options":
                 {
                     "config":
@@ -114,6 +126,7 @@
                         "color": "white",
                         "textAlign": "center"
                     },
+
                     "horizontalCenter": true,
                     "bottom": 400
                 }
@@ -121,7 +134,8 @@
 
             {
                 "uid": "text-instructions",
-                "engine": "com.pluginmaker.simpletext",
+                "engine": "com.gopro.simpletext",
+
                 "options":
                 {
                     "config":
@@ -132,6 +146,7 @@
                         "color": "white",
                         "textAlign": "center"
                     },
+
                     "horizontalCenter": true,
                     "bottom": 350
                 }

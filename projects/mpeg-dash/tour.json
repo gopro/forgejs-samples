@@ -24,11 +24,10 @@
                 {
                     "uid": "video-0",
                     "type": "video",
-                    "format": "equi",
 
                     "source":
                     {
-
+                        "format": "equi",
                         "streaming": "dash",
                         "url": "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/dash/411255.mpd"
                     },
@@ -51,31 +50,33 @@
 
                 "plugins":
                 {
-                    "instances": [
-                    {
-                        "uid": "simplevideo-mpegdash",
-                        "engine": "com.pluginmaker.simplevideo",
-
-                        "options":
+                    "instances":
+                    [
                         {
-                            "height": "100%",
-                            "width": "100%",
-                            "horizontalCenter": true,
-                            "verticalCenter": true,
-                            "autoPlay": true,
-                            "loop": true,
-                            "volume": 0.5
-                        },
+                            "uid": "simplevideo-mpegdash",
+                            "engine": "com.gopro.simplevideo",
 
-                        "data":
-                        {
-                            "video": "http://streams.kolor.com/streams/ken/samples/common/videos/moto-desert/dash/410524.mpd",
-                            "streaming": "dash"
-                        },
+                            "options":
+                            {
+                                "height": "100%",
+                                "width": "100%",
+                                "horizontalCenter": true,
+                                "verticalCenter": true,
+                                "autoPlay": true,
+                                "loop": true,
+                                "volume": 0.5
+                            },
 
-                        "index": 1,
-                        "keep": false
-                    }]
+                            "data":
+                            {
+                                "video": "http://streams.kolor.com/streams/ken/samples/common/videos/moto-desert/dash/410524.mpd",
+                                "streaming": "dash"
+                            },
+
+                            "index": 1,
+                            "keep": false
+                        }
+                    ]
                 }
             }
         ]
@@ -86,6 +87,7 @@
         {
             "uid": "action-prev",
             "target": "viewer.tour",
+
             "method":
             {
                 "name": "previousScene"
@@ -95,6 +97,7 @@
         {
             "uid": "action-next",
             "target": "viewer.tour",
+
             "method":
             {
                 "name": "nextScene"
@@ -109,13 +112,13 @@
         "engines":
         [
             {
-                "uid": "com.pluginmaker.simplebutton",
+                "uid": "com.gopro.simplebutton",
                 "url": "SimpleButton/",
                 "manifest": "manifest.json"
             },
 
             {
-                "uid": "com.pluginmaker.simplevideo",
+                "uid": "com.gopro.simplevideo",
                 "url": "SimpleVideo/",
                 "manifest": "manifest.json"
             }
@@ -125,13 +128,12 @@
         [
             {
                 "uid": "simplebutton-previous",
-                "engine": "com.pluginmaker.simplebutton",
+                "engine": "com.gopro.simplebutton",
 
                 "options":
                 {
                     "left": 5,
                     "verticalCenter": true,
-
                     "value": "Previous"
                 },
 
@@ -145,13 +147,12 @@
 
             {
                 "uid": "simplebutton-next",
-                "engine": "com.pluginmaker.simplebutton",
+                "engine": "com.gopro.simplebutton",
 
                 "options":
                 {
                     "right": 5,
                     "verticalCenter": true,
-
                     "value": "Next"
                 },
 

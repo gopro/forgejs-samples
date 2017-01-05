@@ -1,5 +1,5 @@
 {
-    "uid": "com.pluginmaker.ranking",
+    "uid": "com.gopro.ranking",
     "name": "Ranking",
     "shortName": "ranking",
     "version": "1.0.0",
@@ -31,7 +31,8 @@
 
         "source": "media",
 
-        "font": {
+        "font":
+        {
             "color": "black",
             "size": 25,
             "family": "pfdintextprolight"

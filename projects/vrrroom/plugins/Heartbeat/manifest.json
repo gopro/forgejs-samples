@@ -1,5 +1,5 @@
 {
-    "uid": "com.pluginmaker.heartbeat",
+    "uid": "com.gopro.heartbeat",
     "name": "Heartbeat",
     "slug": "heartbeat",
     "version": "1.0.0",
@@ -38,7 +38,8 @@
 
         "source": "media",
 
-        "font": {
+        "font":
+        {
             "color": "black",
             "size": 35,
             "family": "pfdintextprolight"

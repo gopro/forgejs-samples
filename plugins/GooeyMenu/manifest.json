@@ -1,5 +1,5 @@
 {
-    "uid": "com.pluginmaker.gooeymenu",
+    "uid": "com.gopro.gooeymenu",
     "name": "Gooey Menu",
     "slug": "gooey",
     "version": "1.0.0",
@@ -45,7 +45,7 @@
                 "files":
                 [
                     {
-                        "key": "com.pluginmaker.gooeymenu.fr-FR",
+                        "key": "com.gopro.gooeymenu.fr-FR",
                         "url": "i18n/fr-FR/locale.json"
                     }
                 ]
@@ -57,7 +57,7 @@
                 "files":
                 [
                     {
-                        "key": "com.pluginmaker.gooeymenu.en-US",
+                        "key": "com.gopro.gooeymenu.en-US",
                         "url": "i18n/en-US/locale.json"
                     }
                 ]

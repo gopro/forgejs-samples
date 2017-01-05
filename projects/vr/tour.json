@@ -12,6 +12,7 @@
             "min": -20,
             "max": 20
         },
+
         "fov":
         {
             "default": 90,
@@ -85,10 +86,7 @@
 
                         "events":
                         {
-                            "onClick": [
-                                "action-loadscene-1",
-                                "action-camera-0"
-                            ]
+                            "onClick": ["action-loadscene-1", "action-camera-0"]
                         }
                     }
                 ]
@@ -157,10 +155,7 @@
 
                         "events":
                         {
-                            "onClick": [
-                                "action-loadscene-2",
-                                "action-camera-3"
-                            ]
+                            "onClick": ["action-loadscene-2", "action-camera-3"]
                         }
                     },
 
@@ -193,10 +188,7 @@
 
                         "events":
                         {
-                            "onClick": [
-                                "action-loadscene-0",
-                                "action-camera-4"
-                            ]
+                            "onClick": ["action-loadscene-0", "action-camera-4"]
                         }
                     }
                 ]
@@ -264,10 +256,7 @@
 
                         "events":
                         {
-                            "onClick": [
-                                "action-loadscene-1",
-                                "action-camera-5"
-                            ]
+                            "onClick": ["action-loadscene-1", "action-camera-5"]
                         }
                     },
 
@@ -300,10 +289,7 @@
 
                         "events":
                         {
-                            "onClick": [
-                                "action-loadscene-3",
-                                "action-camera-6"
-                            ]
+                            "onClick": ["action-loadscene-3", "action-camera-6"]
                         }
                     }
                 ]
@@ -371,10 +357,7 @@
 
                         "events":
                         {
-                            "onClick": [
-                                "action-loadscene-4",
-                                "action-camera-7"
-                            ]
+                            "onClick": ["action-loadscene-4", "action-camera-7"]
                         }
                     },
 
@@ -407,10 +390,7 @@
 
                         "events":
                         {
-                            "onClick": [
-                                "action-loadscene-0",
-                                "action-camera-8"
-                            ]
+                            "onClick": ["action-loadscene-0", "action-camera-8"]
                         }
                     },
 
@@ -443,10 +423,7 @@
 
                         "events":
                         {
-                            "onClick": [
-                                "action-loadscene-2",
-                                "action-camera-9"
-                            ]
+                            "onClick": ["action-loadscene-2", "action-camera-9"]
                         }
                     }
                 ]
@@ -514,10 +491,7 @@
 
                         "events":
                         {
-                            "onClick": [
-                                "action-loadscene-5",
-                                "action-camera-10"
-                            ]
+                            "onClick": ["action-loadscene-5", "action-camera-10"]
                         }
                     },
 
@@ -550,10 +524,7 @@
 
                         "events":
                         {
-                            "onClick": [
-                                "action-loadscene-0",
-                                "action-camera-11"
-                            ]
+                            "onClick": ["action-loadscene-0", "action-camera-11"]
                         }
                     },
 
@@ -586,10 +557,7 @@
 
                         "events":
                         {
-                            "onClick": [
-                                "action-loadscene-3",
-                                "action-camera-12"
-                            ]
+                            "onClick": ["action-loadscene-3", "action-camera-12"]
                         }
                     }
                 ]
@@ -657,10 +625,7 @@
 
                         "events":
                         {
-                            "onClick": [
-                                "action-loadscene-4",
-                                "action-camera-13"
-                            ]
+                            "onClick": ["action-loadscene-4", "action-camera-13"]
                         }
                     }
                 ]
@@ -679,8 +644,11 @@
                     {
                         "type": "ColorifyShader",
                         "uid": "fxSet-spot-colorify-0",
-                        "params": {
-                            "color": {
+
+                        "params":
+                        {
+                            "color":
+                            {
                                 "type": "THREE.Color",
                                 "args": "rgb(66,141,113)"
                             }
@@ -696,7 +664,9 @@
         {
             "uid": "action-loadscene-0",
             "target": "viewer.tour",
-            "method": {
+
+            "method":
+            {
                 "name": "loadScene",
                 "args": ["scene-0"]
             }
@@ -705,7 +675,9 @@
         {
             "uid": "action-loadscene-1",
             "target": "viewer.tour",
-            "method": {
+
+            "method":
+            {
                 "name": "loadScene",
                 "args": ["scene-1"]
             }
@@ -714,7 +686,9 @@
         {
             "uid": "action-loadscene-2",
             "target": "viewer.tour",
-            "method": {
+
+            "method":
+            {
                 "name": "loadScene",
                 "args": ["scene-2"]
             }
@@ -723,7 +697,9 @@
         {
             "uid": "action-loadscene-3",
             "target": "viewer.tour",
-            "method": {
+
+            "method":
+            {
                 "name": "loadScene",
                 "args": ["scene-3"]
             }
@@ -732,7 +708,9 @@
         {
             "uid": "action-loadscene-4",
             "target": "viewer.tour",
-            "method": {
+
+            "method":
+            {
                 "name": "loadScene",
                 "args": ["scene-4"]
             }
@@ -741,7 +719,9 @@
         {
             "uid": "action-loadscene-5",
             "target": "viewer.tour",
-            "method": {
+
+            "method":
+            {
                 "name": "loadScene",
                 "args": ["scene-5"]
             }
@@ -750,90 +730,164 @@
         {
             "uid": "action-camera-0",
             "target": "viewer.renderer.camera",
-            "method": {"name": "lookAt", "args": [118,null,null,null,3000,false]}
+
+            "method":
+            {
+                "name": "lookAt",
+                "args": [118,null,null,null,3000,false]
+            }
         },
 
         {
             "uid": "action-camera-1",
             "target": "viewer.renderer.camera",
-            "method": {"name": "lookAt", "args": [-96, 0, 0]}
+
+            "method":
+            {
+                "name": "lookAt",
+                "args": [-96, 0, 0]
+            }
         },
 
         {
             "uid": "action-camera-2",
             "target": "viewer.renderer.camera",
-            "method": {"name": "lookAt", "args": [-39, 0, 0]}
+
+            "method":
+            {
+                "name": "lookAt",
+                "args": [-39, 0, 0]
+            }
         },
 
         {
             "uid": "action-camera-3",
             "target": "viewer.renderer.camera",
-            "method": {"name": "lookAt", "args": [-70, 0, 0]}
+
+            "method":
+            {
+                "name": "lookAt",
+                "args": [-70, 0, 0]
+            }
         },
 
         {
             "uid": "action-camera-4",
             "target": "viewer.renderer.camera",
-            "method": {"name": "lookAt", "args": [180, 0, 0]}
+
+            "method":
+            {
+                "name": "lookAt",
+                "args": [180, 0, 0]
+            }
         },
 
         {
             "uid": "action-camera-5",
             "target": "viewer.renderer.camera",
-            "method": {"name": "lookAt", "args": [-57.5, 0, 0]}
+
+            "method":
+            {
+                "name": "lookAt",
+                "args": [-57.5, 0, 0]
+            }
         },
 
         {
             "uid": "action-camera-6",
             "target": "viewer.renderer.camera",
-            "method": {"name": "lookAt", "args": [2, 0, 0]}
+
+            "method":
+            {
+                "name": "lookAt",
+                "args": [2, 0, 0]
+            }
         },
 
         {
             "uid": "action-camera-7",
             "target": "viewer.renderer.camera",
-            "method": {"name": "lookAt", "args": [5, 0, 0]}
+
+            "method":
+            {
+                "name": "lookAt",
+                "args": [5, 0, 0]
+            }
         },
 
         {
             "uid": "action-camera-8",
             "target": "viewer.renderer.camera",
-            "method": {"name": "lookAt", "args": [-96, 0, 0]}
+
+            "method":
+            {
+                "name": "lookAt",
+                "args": [-96, 0, 0]
+            }
         },
 
         {
             "uid": "action-camera-9",
             "target": "viewer.renderer.camera",
-            "method": {"name": "lookAt", "args": [-175, 0, 0]}
+
+            "method":
+            {
+                "name": "lookAt",
+                "args": [-175, 0, 0]
+            }
         },
 
         {
             "uid": "action-camera-10",
             "target": "viewer.renderer.camera",
-            "method": {"name": "lookAt", "args": [0, 0, 0]}
+
+            "method":
+            {
+                "name": "lookAt",
+                "args": [0, 0, 0]
+            }
         },
 
         {
             "uid": "action-camera-11",
             "target": "viewer.renderer.camera",
-            "method": {"name": "lookAt", "args": [-50, 0, 0]}
+
+            "method":
+            {
+                "name": "lookAt",
+                "args": [-50, 0, 0]
+            }
         },
 
         {
             "uid": "action-camera-12",
             "target": "viewer.renderer.camera",
-            "method": {"name": "lookAt", "args": [178, 0, 0]}
+
+            "method":
+            {
+                "name": "lookAt",
+                "args": [178, 0, 0]
+            }
         },
 
         {
             "uid": "action-camera-13",
             "target": "viewer.renderer.camera",
-            "method": {"name": "lookAt", "args": [-178, 0, 0]}
+
+            "method":
+            {
+                "name": "lookAt",
+                "args": [-178, 0, 0]
+            }
         },
 
         {
             "uid": "action-vr",
-            "method": {"name": "toggleVR"}
+
+            "method":
+            {
+                "name": "toggleVR"
+            }
         }
     ],
 
@@ -844,7 +898,7 @@
         "engines":
         [
             {
-                "uid": "com.pluginmaker.simplebutton",
+                "uid": "com.gopro.simplebutton",
                 "url": "SimpleButton/",
                 "manifest": "manifest.json"
             }
@@ -854,13 +908,12 @@
         [
             {
                 "uid": "simplebutton-vr",
-                "engine": "com.pluginmaker.simplebutton",
+                "engine": "com.gopro.simplebutton",
 
                 "options":
                 {
                     "top": 20,
                     "horizontalCenter": true,
-
                     "value": "Enter VR"
                 },
 

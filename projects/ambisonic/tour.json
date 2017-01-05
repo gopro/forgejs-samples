@@ -7,6 +7,7 @@
             "min": -20,
             "max": 20
         },
+
         "fov":
         {
             "default": 90,
@@ -32,7 +33,7 @@
 
                 "media":
                 {
-                    "uid": "scene-0-pano-0",
+                    "uid": "media-0",
                     "type": "image",
 
                     "source":
@@ -44,12 +45,14 @@
 
                 "sound":
                 {
-                    "uid": "scene-0-sound-0",
+                    "uid": "sound-0",
                     "type": "ambisonic",
+
                     "source":
                     {
                         "url": "http://streams.kolor.com/streams/ken/samples/ambisonic/ambisonic.wav"
                     },
+
                     "options":
                     {
                         "volume": 1,

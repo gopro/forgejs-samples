@@ -12,92 +12,94 @@
         "description": "This is a sample of director's cut applied to a video.",
         "default": "scene-0",
 
-        "scenes": [
-        {
-            "uid": "scene-0",
-            "name": "First scene",
-            "slug": "first-scene",
-            "description": "This is the first and only scene",
-
-            "media":
+        "scenes":
+        [
             {
-                "uid": "scene-0-video-0",
-                "type": "video",
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first and only scene",
 
-                "source":
+                "media":
                 {
-                    "format": "equi",
-                    "url": "http://streams.kolor.com/streams/ken/samples/directors-cut/Moto_Desert_2048x1024_2k_like_short.mp4"
+                    "uid": "media-0",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "http://streams.kolor.com/streams/ken/samples/directors-cut/Moto_Desert_2048x1024_2k_like_short.mp4"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": false,
+                        "volume": 0.4
+                    }
                 },
 
-                "options":
+                "view":
                 {
-                    "autoPlay": true,
-                    "loop": false,
-                    "volume": 0.4
-                }
-            },
+                    "type": "GoPro"
+                },
 
-            "view":
-            {
-                "type": "gopro"
-            },
-
-            "director":
-            {
-                "animation":
+                "director":
                 {
-                    "enabled": true,
-
-                    "intro":
+                    "animation":
                     {
-                        "smooth": false,
-                        "idleTime": 0
-                    },
+                        "enabled": true,
 
-                    "user":
-                    {
-                        "canStop": false
-                    },
+                        "intro":
+                        {
+                            "smooth": false,
+                            "idleTime": 0
+                        },
 
-                    "loop": false,
+                        "user":
+                        {
+                            "canStop": false
+                        },
 
-                    "tracks": ["director-track-0"]
+                        "loop": false,
+
+                        "tracks": ["director-track-0"]
+                    }
                 }
             }
-        }]
+        ]
     },
 
     "director":
     {
-        "tracks": [
-        {
-            "uid": "director-track-0",
-            "name": "Director's track #0 name",
-            "description": "Director's track #0 description",
-            "smooth": true,
-            "cancelRoll": true,
+        "tracks":
+        [
+            {
+                "uid": "director-track-0",
+                "name": "Director's track #0 name",
+                "description": "Director's track #0 description",
+                "smooth": true,
+                "cancelRoll": true,
 
-            "waypoints": [
-                { "time": 0,     "yaw": 100,  "pitch": null, "roll": null, "fov": 110 },
-                { "time": 6500,  "yaw": null, "pitch": null, "roll": null, "fov": null },
-                { "time": 9300,  "yaw": 0,    "pitch": null, "roll": null, "fov": null },
-                { "time": 11000, "yaw": null, "pitch": -20,  "roll": null, "fov": 130 },
-                { "time": 15000, "yaw": null, "pitch": -60,  "roll": null, "fov": null },
-                { "time": 25000, "yaw": -180, "pitch": -30,  "roll": null, "fov": 100 },
-                { "time": 30000, "yaw": -170, "pitch": -20,  "roll": null, "fov": 70 },
-                { "time": 33000, "yaw": -160, "pitch": -30,  "roll": null, "fov": 110 },
-                { "time": 37500, "yaw": -140, "pitch": -40,  "roll": null, "fov": 140 },
-                { "time": 37851, "yaw": 0,   "pitch": 0,    "roll": null, "fov": 100 },
-                { "time": 39000, "yaw": -25, "pitch": null, "roll": null, "fov": null },
-                { "time": 41000, "yaw": 85,  "pitch": null, "roll": null, "fov": 120 },
-                { "time": 44000, "yaw": 30,  "pitch": null, "roll": null, "fov": null },
-                { "time": 45000, "yaw": 0,   "pitch": null, "roll": null, "fov": null },
-                { "time": 48000, "yaw": -5,  "pitch": -40,  "roll": null, "fov": 180 },
-                { "time": 51200, "yaw": -15, "pitch": -85,  "roll": null, "fov": 210 }
-
-            ]
-        }
+                "waypoints": [
+                    { "time": 0,     "yaw": 100,  "pitch": null, "roll": null, "fov": 110 },
+                    { "time": 6500,  "yaw": null, "pitch": null, "roll": null, "fov": null },
+                    { "time": 9300,  "yaw": 0,    "pitch": null, "roll": null, "fov": null },
+                    { "time": 11000, "yaw": null, "pitch": -20,  "roll": null, "fov": 130 },
+                    { "time": 15000, "yaw": null, "pitch": -60,  "roll": null, "fov": null },
+                    { "time": 25000, "yaw": -180, "pitch": -30,  "roll": null, "fov": 100 },
+                    { "time": 30000, "yaw": -170, "pitch": -20,  "roll": null, "fov": 70 },
+                    { "time": 33000, "yaw": -160, "pitch": -30,  "roll": null, "fov": 110 },
+                    { "time": 37500, "yaw": -140, "pitch": -40,  "roll": null, "fov": 140 },
+                    { "time": 37851, "yaw": 0,   "pitch": 0,    "roll": null, "fov": 100 },
+                    { "time": 39000, "yaw": -25, "pitch": null, "roll": null, "fov": null },
+                    { "time": 41000, "yaw": 85,  "pitch": null, "roll": null, "fov": 120 },
+                    { "time": 44000, "yaw": 30,  "pitch": null, "roll": null, "fov": null },
+                    { "time": 45000, "yaw": 0,   "pitch": null, "roll": null, "fov": null },
+                    { "time": 48000, "yaw": -5,  "pitch": -40,  "roll": null, "fov": 180 },
+                    { "time": 51200, "yaw": -15, "pitch": -85,  "roll": null, "fov": 210 }
+                ]
+            }
         ]
     }
 }

@@ -4,55 +4,61 @@
         "background": "#000"
     },
 
-    "history": {"enabled": true},
+    "history":
+    {
+        "enabled": true
+    },
 
-    // Locale settings
     "i18n":
     {
         "enabled": true,
-        "locales": [
 
-            // English support
+        "locales":
+        [
             {
                 "uid": "en-US",
                 "name": "English",
-                "files": [
-                {
-                    "key": "tour.en-US",
-                    "url": "./i18n/en-US/locale.json"
-                }]
+                "files":
+                [
+                    {
+                        "key": "tour.en-US",
+                        "url": "./i18n/en-US/locale.json"
+                    }
+                ]
             },
 
-            // French support
             {
                 "uid": "fr-FR",
                 "name": "French",
-                "files": [
-                {
-                    "key": "tour.fr-FR",
-                    "url": "./i18n/fr-FR/locale.json"
-                }]
+                "files":
+                [
+                    {
+                        "key": "tour.fr-FR",
+                        "url": "./i18n/fr-FR/locale.json"
+                    }
+                ]
             },
 
-            // Italian support
             {
                 "uid": "it-IT",
                 "name": "Italian",
-                "files": [
-                {
-                    "key": "tour.it-IT",
-                    "url": "./i18n/it-IT/locale.json"
-                }]
+                "files":
+                [
+                    {
+                        "key": "tour.it-IT",
+                        "url": "./i18n/it-IT/locale.json"
+                    }
+                ]
             }
         ],
 
         "default": "en-US"
     },
 
-    // General settings for the audio
     "audio":
     {
         "enabled": true,
+
         "volume":
         {
             "default": 1.0,
@@ -60,47 +66,49 @@
         }
     },
 
-    // Playlists settings, different ones given the current scene
     "playlists":
     {
         "enabled": false,
         "loop": true,
         "autoPlay": true,
+
         "volume":
         {
             "default": 1.0,
             "max": 1.0
         },
+
         "default": "playlist-0",
 
-        "lists": [
-            // Playlist 1 for the driver selection
+        "lists":
+        [
             {
                 "uid": "playlist-0",
                 "name": "driver-selection",
                 "default": "playlist-0-track-0",
+
                 "tracks": ["playlist-0-track-0"]
             },
 
-            // Playlist 2 for the racing
             {
                 "uid": "playlist-1",
                 "name": "karting",
                 "default": "playlist-1-track-0",
+
                 "tracks": ["playlist-1-track-0", "playlist-1-track-1", "playlist-1-track-2"]
             },
 
-            // Playlist 3 for the director's cut
             {
                 "uid": "playlist-2",
                 "name": "fun",
                 "default": "playlist-2-track-0",
+
                 "tracks": ["playlist-2-track-0"]
             }
         ],
 
-        // The tracks composing the playlists
-        "tracks": [
+        "tracks":
+        [
             {
                 "uid": "playlist-0-track-0",
                 "author": "",
@@ -146,10 +154,8 @@
         "description": "i18n-tourDescription",
         "default": "scene-0",
 
-        // Configuration for all the scenes
         "scenes":
         [
-            // The first scene is the welcome screen, with language selection
             {
                 "uid": "scene-0",
                 "name": "Introduction Karting",
@@ -161,33 +167,37 @@
 
                 "plugins":
                 {
-                    "instances": [
-                        // The video is the little one that plays when selecting "start" on the screen
+                    "instances":
+                    [
                         {
-                            "uid": "com.pluginmaker.simplevideo-0",
-                            "engine": "com.pluginmaker.simplevideo",
+                            "uid": "com.gopro.simplevideo-0",
+                            "engine": "com.gopro.simplevideo",
+
                             "options":
                             {
                                 "height": "100%",
                                 "width": "100%",
                                 "horizontalCenter": true
                             },
+
                             "data":
                             {
                                 "video": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/intro.mp4"
                             },
+
                             "events":
                             {
                                 "onEnded": ["action-next"]
                             },
+
                             "index": 0,
                             "keep": false
                         },
 
-                        // The text inviting the user to start the race
                         {
-                            "uid": "com.pluginmaker.simpletext-intro",
-                            "engine": "com.pluginmaker.simpletext",
+                            "uid": "com.gopro.simpletext-intro",
+                            "engine": "com.gopro.simpletext",
+
                             "options":
                             {
                                 "config":
@@ -199,23 +209,24 @@
                                     "color": "white",
                                     "textAlign": "center"
                                 },
+
                                 "bottom": 270,
                                 "horizontalCenter": true
                             },
+
                             "data": {},
                             "index": 13,
                             "keep": false
                         },
 
-                        // The button "start", triggering the next scene (driver's selection)
                         {
-                            "uid": "com.pluginmaker.simplebutton-start",
-                            "engine": "com.pluginmaker.simplebutton",
+                            "uid": "com.gopro.simplebutton-start",
+                            "engine": "com.gopro.simplebutton",
+
                             "options":
                             {
                                 "bottom": 160,
                                 "horizontalCenter": true,
-
                                 "defaultSkin": false,
 
                                 "skin":
@@ -239,26 +250,31 @@
                                     }
                                 }
                             },
+
                             "data": {},
+
                             "events":
                             {
                                 "onClick": ["action-plugin-video-play", "action-plugin-localeselector-hide", "action-plugin-button-hide"]
                             },
+
                             "index": 13,
                             "keep": false
                         },
 
-                        // Selection of the locale, with flags of each language in assets/
                         {
-                            "uid": "com.pluginmaker.localeselector-0",
-                            "engine": "com.pluginmaker.localeselector",
+                            "uid": "com.gopro.localeselector-0",
+                            "engine": "com.gopro.localeselector",
+
                             "options":
                             {
                                 "bottom": 80,
                                 "horizontalCenter": true,
                                 "baseURL": "http://streams.kolor.com/streams/ken/samples/vrrroom/assets/flags/"
                             },
+
                             "data": {},
+
                             "index": 13,
                             "keep": false
                         }
@@ -266,7 +282,6 @@
                 }
             },
 
-            // The second scene is the driver selection
             {
 
                 "uid": "scene-1",
@@ -293,45 +308,62 @@
                     "default": "playlist-0"
                 },
 
-                // The camera is limited here, allowing only an horizontal movement
                 "camera":
                 {
                     "parallax": 0.2,
-                    "yaw": { "min": -180, "max": 180 },
-                    "pitch": { "min": 0, "max": 0 },
-                    "fov": { "default": 80, "min": 80, "max": 80 }
+
+                    "yaw":
+                    {
+                        "min": -180,
+                        "max": 180
+                    },
+
+                    "pitch":
+                    {
+                        "min": 0,
+                        "max": 0
+                    },
+
+                    "fov":
+                    {
+                        "default": 80,
+                        "min": 80,
+                        "max": 80
+                    }
                 },
 
                 "plugins":
                 {
-                    "instances": [
-                        // Show informations about the first driver, Martin
+                    "instances":
+                    [
                         {
-                            "uid": "com.pluginmaker.kartingdriverspot-martin",
-                            "engine": "com.pluginmaker.kartingdriverspot",
+                            "uid": "com.gopro.kartingdriverspot-martin",
+                            "engine": "com.gopro.kartingdriverspot",
+
                             "options":
                             {
                                 "top": 10,
                                 "left": 10,
-
                                 "background": "#000",
                                 "width": 150,
                                 "height": 100,
-
                                 "name": "MARTIN",
                                 "size": "1.88 m",
                                 "weight": "78 Kg"
                             },
+
                             "data": {},
+
                             "events": {},
+
                             "keep": false,
                             "index": 123
                         },
 
-                        // Show Martin cut from his green background with the chromakey effect
                         {
-                            "uid": "com.pluginmaker.chromakey-martin",
-                            "engine": "com.pluginmaker.chromakey",
+                            "uid": "com.gopro.chromakey-martin",
+                            "engine": "com.gopro.chromakey",
+
                             "options":
                             {
                                 "authoring": false,
@@ -339,47 +371,49 @@
                                 "right": 20,
                                 "width": 540,
                                 "height": 800,
-
                                 "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/martin_greenscreen_low.mp4",
                                 "backgroundSample": { "x": 2, "y": 2 },
-
                                 "threshold": 40,
                                 "smoothness": 22,
                                 "autoPlay": true
                             },
+
                             "data": {},
+
                             "events": {},
+
                             "keep": false,
                             "index": 14
                         },
 
-                        // Show informations about the second driver, Samy
                         {
-                            "uid": "com.pluginmaker.kartingdriverspot-samy",
-                            "engine": "com.pluginmaker.kartingdriverspot",
+                            "uid": "com.gopro.kartingdriverspot-samy",
+                            "engine": "com.gopro.kartingdriverspot",
+
                             "options":
                             {
                                 "top": 10,
                                 "right": 10,
-
                                 "background": "#000",
                                 "width": 150,
                                 "height": 100,
-
                                 "name": "SAMY",
                                 "size": "1.87 m",
                                 "weight": "75 Kg"
                             },
+
                             "data": {},
+
                             "events": {},
+
                             "keep": false,
                             "index": 123
                         },
 
-                        // Show Samy cut from his green background with the chromakey effect
                         {
-                            "uid": "com.pluginmaker.chromakey-samy",
-                            "engine": "com.pluginmaker.chromakey",
+                            "uid": "com.gopro.chromakey-samy",
+                            "engine": "com.gopro.chromakey",
+
                             "options":
                             {
                                 "authoring": false,
@@ -387,29 +421,31 @@
                                 "right": 20,
                                 "width": 507,
                                 "height": 800,
-
                                 "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/samy_greenscreen_low.mp4",
                                 "backgroundSample": { "x": 2, "y": 2 },
-
                                 "threshold": 36,
                                 "smoothness": 16,
                                 "autoPlay": true
                             },
+
                             "data": {},
+
                             "events": {},
+
                             "keep": false,
                             "index": 14
                         }
                     ]
                 },
 
-                "hotspots": [
-                    // Set Martin as a 3D hotspot, allowing parallax effect
+                "hotspots":
+                [
                     {
                         "uid": "hotspot-3d-martin",
                         "tags": [],
                         "visible": true,
                         "type": "3d",
+
                         "transform":
                         {
                             "position":
@@ -418,12 +454,14 @@
                                 "theta": -30,
                                 "phi": -15
                             },
+
                             "rotation":
                             {
                                 "x": 0,
                                 "y": 30,
                                 "z": 0
                             },
+
                             "size":
                             {
                                 "width": 450,
@@ -433,7 +471,7 @@
 
                         "material":
                         {
-                            "plugin": "com.pluginmaker.chromakey-martin",
+                            "plugin": "com.gopro.chromakey-martin",
                             "update": true
                         },
 
@@ -445,12 +483,12 @@
                         }
                     },
 
-                    // Same with his informations
                     {
                         "uid": "hotspot-3d-kartingdriverspot-martin",
                         "tags": [],
                         "visible": true,
                         "type": "3d",
+
                         "transform":
                         {
                             "position":
@@ -459,12 +497,14 @@
                                 "theta": -33,
                                 "phi": 20
                             },
+
                             "rotation":
                             {
                                 "x": 0,
                                 "y": 15,
                                 "z": 0
                             },
+
                             "size":
                             {
                                 "width": 150,
@@ -474,7 +514,7 @@
 
                         "material":
                         {
-                            "plugin": "com.pluginmaker.kartingdriverspot-martin",
+                            "plugin": "com.gopro.kartingdriverspot-martin",
                             "update": true
                         },
 
@@ -486,13 +526,13 @@
                         }
                     },
 
-                    // Set Samy as a 3D hotspot, allowing parallax effect
                     {
                         "uid": "hotspot-3d-samy",
                         "tags": [],
                         "visible": true,
                         "type": "3d",
                         "hotspotStyle": {},
+
                         "transform":
                         {
                             "position":
@@ -501,12 +541,14 @@
                                 "theta": 30,
                                 "phi": -15
                             },
+
                             "rotation":
                             {
                                 "x": 0,
                                 "y": -30,
                                 "z": 0
                             },
+
                             "size":
                             {
                                 "width": 384,
@@ -516,7 +558,7 @@
 
                         "material":
                         {
-                            "plugin": "com.pluginmaker.chromakey-samy",
+                            "plugin": "com.gopro.chromakey-samy",
                             "update": true
                         },
 
@@ -528,12 +570,12 @@
                         }
                     },
 
-                    // Same with his informations
                     {
                         "uid": "hotspot-3d-kartingdriverspot-samy",
                         "tags": [],
                         "visible": true,
                         "type": "3d",
+
                         "transform":
                         {
                             "position":
@@ -542,12 +584,14 @@
                                 "theta": 24,
                                 "phi": 20
                             },
+
                             "rotation":
                             {
                                 "x": 0,
                                 "y": -12,
                                 "z": 0
                             },
+
                             "size":
                             {
                                 "width": 150,
@@ -557,7 +601,7 @@
 
                         "material":
                         {
-                            "plugin": "com.pluginmaker.kartingdriverspot-samy",
+                            "plugin": "com.gopro.kartingdriverspot-samy",
                             "update": true
                         },
 
@@ -571,7 +615,6 @@
                 ]
             },
 
-            // This scene is the race viewed from Samy kart
             {
                 "uid": "scene-2",
                 "name": "Samy karting",
@@ -583,11 +626,12 @@
                 {
                     "uid": "media-2",
                     "type": "video",
-                    "format": "equi",
 
                     "source":
                     {
-                        "files": [
+                        "format": "equi",
+                        "files":
+                        [
                             { "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/360_Samy_UHD_25M_final_fast.mp4" }
                         ]
                     },
@@ -602,7 +646,7 @@
 
                 "view":
                 {
-                    "type": "gopro"
+                    "type": "GoPro"
                 },
 
                 "playlists":
@@ -612,12 +656,13 @@
                     "default": "playlist-1"
                 },
 
-                // Load all the configuration related to multiple plugins for this scene
                 "plugins":
                 {
-                    "configurations": [
+                    "configurations":
+                    [
                         {
-                            "instance": "com.pluginmaker.ranking-0",
+                            "instance": "com.gopro.ranking-0",
+
                             "options":
                             {
                                 "source": "media"
@@ -625,11 +670,13 @@
                         },
 
                         {
-                            "instance": "com.pluginmaker.googlemaps-0",
+                            "instance": "com.gopro.googlemaps-0",
+
                             "data":
                             {
                                 "gpx": "http://streams.kolor.com/streams/ken/samples/vrrroom/gpx/samy.xml"
                             },
+
                             "options":
                             {
                                 "source": "media"
@@ -637,11 +684,13 @@
                         },
 
                         {
-                            "instance": "com.pluginmaker.heartbeat-0",
+                            "instance": "com.gopro.heartbeat-0",
+
                             "data":
                             {
                                 "keyframes": "http://streams.kolor.com/streams/ken/samples/vrrroom/timeline/heartbeat-samy.json"
                             },
+
                             "options":
                             {
                                 "source": "media"
@@ -649,11 +698,13 @@
                         },
 
                         {
-                            "instance": "com.pluginmaker.speedometer-0",
+                            "instance": "com.gopro.speedometer-0",
+
                             "data":
                             {
                                 "keyframes": "http://streams.kolor.com/streams/ken/samples/vrrroom/timeline/speed-samy.json"
                             },
+
                             "options":
                             {
                                 "source": "media"
@@ -663,7 +714,6 @@
                 }
             },
 
-            // This scene is the race viewed from Martin kart
             {
                 "uid": "scene-3",
                 "name": "Martin karting",
@@ -675,10 +725,10 @@
                 {
                     "uid": "media-3",
                     "type": "video",
-                    "format": "equi",
 
                     "source":
                     {
+                        "format": "equi",
                         "files": [
                             { "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/360_Martin_UHD_25M_final_fast.mp4" }
                         ]
@@ -694,7 +744,7 @@
 
                 "view":
                 {
-                    "type": "gopro"
+                    "type": "GoPro"
                 },
 
                 "playlists":
@@ -703,13 +753,13 @@
                     "default": "playlist-1"
                 },
 
-                // Load all the configuration related to multiple plugins for this scene
                 "plugins":
                 {
                     "configurations":
                     [
                         {
-                            "instance": "com.pluginmaker.ranking-0",
+                            "instance": "com.gopro.ranking-0",
+
                             "options":
                             {
                                 "source": "media"
@@ -717,11 +767,13 @@
                         },
 
                         {
-                            "instance": "com.pluginmaker.googlemaps-0",
+                            "instance": "com.gopro.googlemaps-0",
+
                             "data":
                             {
                                 "gpx": "http://streams.kolor.com/streams/ken/samples/vrrroom/gpx/martin.xml"
                             },
+
                             "options":
                             {
                                 "source": "media"
@@ -729,11 +781,13 @@
                         },
 
                         {
-                            "instance": "com.pluginmaker.heartbeat-0",
+                            "instance": "com.gopro.heartbeat-0",
+
                             "data":
                             {
                                 "keyframes": "http://streams.kolor.com/streams/ken/samples/vrrroom/timeline/heartbeat-martin.json"
                             },
+
                             "options":
                             {
                                 "source": "media"
@@ -741,11 +795,13 @@
                         },
 
                         {
-                            "instance": "com.pluginmaker.speedometer-0",
+                            "instance": "com.gopro.speedometer-0",
+
                             "data":
                             {
                                 "keyframes": "http://streams.kolor.com/streams/ken/samples/vrrroom/timeline/speed-martin.json"
                             },
+
                             "options":
                             {
                                 "source": "media"
@@ -756,8 +812,6 @@
 
             },
 
-            // This scene is the race viewed from Samy kart, with perspective changed during time
-            // It is a simple 2D video and not a 360 one, but the scene is the same as scene-2
             {
                 "uid": "scene-4",
                 "name": "Samy karting cinema mode",
@@ -775,69 +829,82 @@
 
                 "plugins":
                 {
-                    "instances": [
-                    {
-                        "uid": "com.pluginmaker.simplevideo-1",
-                        "engine": "com.pluginmaker.simplevideo",
-                        "options":
+                    "instances":
+                    [
                         {
-                            "height": 1080,
-                            "width": 2048,
-                            "horizontalCenter": true,
-                            "autoPlay": true,
-                            "loop": true,
-                            "volume": 0
-                        },
-                        "data":
-                        {
-                            "video": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/Authoring_Samy_Full_HD_15M_fast.mp4"
-                        },
-                        "index": 0,
-                        "keep": false
-                    }],
+                            "uid": "com.gopro.simplevideo-1",
+                            "engine": "com.gopro.simplevideo",
 
-                    "configurations": [
-                        {
-                            "instance": "com.pluginmaker.ranking-0",
                             "options":
                             {
-                                "source": "com.pluginmaker.simplevideo-1"
+                                "height": 1080,
+                                "width": 2048,
+                                "horizontalCenter": true,
+                                "autoPlay": true,
+                                "loop": true,
+                                "volume": 0
+                            },
+
+                            "data":
+                            {
+                                "video": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/Authoring_Samy_Full_HD_15M_fast.mp4"
+                            },
+
+                            "index": 0,
+                            "keep": false
+                        }
+                    ],
+
+                    "configurations":
+                    [
+                        {
+                            "instance": "com.gopro.ranking-0",
+
+                            "options":
+                            {
+                                "source": "com.gopro.simplevideo-1"
                             }
                         },
 
                         {
-                            "instance": "com.pluginmaker.googlemaps-0",
+                            "instance": "com.gopro.googlemaps-0",
+
                             "data":
                             {
                                 "gpx": "http://streams.kolor.com/streams/ken/samples/vrrroom/gpx/samy.xml"
                             },
+
                             "options":
                             {
-                                "source": "com.pluginmaker.simplevideo-1"
+                                "source": "com.gopro.simplevideo-1"
                             }
                         },
 
                         {
-                            "instance": "com.pluginmaker.heartbeat-0",
+                            "instance": "com.gopro.heartbeat-0",
+
                             "data":
                             {
                                 "keyframes": "http://streams.kolor.com/streams/ken/samples/vrrroom/timeline/heartbeat-samy.json"
                             },
+
                             "options":
                             {
-                                "source": "com.pluginmaker.simplevideo-1"
+                                "source": "com.gopro.simplevideo-1"
                             }
                         },
 
                         {
-                            "instance": "com.pluginmaker.speedometer-0",
+                            "instance": "com.gopro.speedometer-0",
+
                             "data":
                             {
                                 "keyframes": "http://streams.kolor.com/streams/ken/samples/vrrroom/timeline/speed-samy.json"
                             },
+
                             "options":
                             {
-                                "source": "com.pluginmaker.simplevideo-1"
+                                "source": "com.gopro.simplevideo-1"
                             }
                         }
                     ]
@@ -863,75 +930,88 @@
 
                 "plugins":
                 {
-                    "instances": [
-                    {
-                        "uid": "com.pluginmaker.simplevideo-2",
-                        "engine": "com.pluginmaker.simplevideo",
-                        "options":
+                    "instances":
+                    [
                         {
-                            "height": 1080,
-                            "width": 2048,
-                            "horizontalCenter": true,
-                            "autoPlay": true,
-                            "loop": true,
-                            "volume": 0
-                        },
-                        "data":
-                        {
-                            "video": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/Authoring_Martin_Full_HD_15M_fast.mp4"
-                        },
-                        "index": 0,
-                        "keep": false
-                    }],
+                            "uid": "com.gopro.simplevideo-2",
+                            "engine": "com.gopro.simplevideo",
 
-                    "configurations": [
-                        {
-                            "instance": "com.pluginmaker.ranking-0",
                             "options":
                             {
-                                "source": "com.pluginmaker.simplevideo-2"
+                                "height": 1080,
+                                "width": 2048,
+                                "horizontalCenter": true,
+                                "autoPlay": true,
+                                "loop": true,
+                                "volume": 0
+                            },
+
+                            "data":
+                            {
+                                "video": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/Authoring_Martin_Full_HD_15M_fast.mp4"
+                            },
+
+                            "index": 0,
+                            "keep": false
+                        }
+                    ],
+
+                    "configurations":
+                    [
+                        {
+                            "instance": "com.gopro.ranking-0",
+
+                            "options":
+                            {
+                                "source": "com.gopro.simplevideo-2"
                             }
                         },
 
                         {
-                            "instance": "com.pluginmaker.googlemaps-0",
+                            "instance": "com.gopro.googlemaps-0",
+
                             "data":
                             {
                                 "gpx": "http://streams.kolor.com/streams/ken/samples/vrrroom/gpx/martin.xml"
                             },
+
                             "options":
                             {
-                                "source": "com.pluginmaker.simplevideo-2"
+                                "source": "com.gopro.simplevideo-2"
                             }
                         },
 
                         {
-                            "instance": "com.pluginmaker.heartbeat-0",
+                            "instance": "com.gopro.heartbeat-0",
+
                             "data":
                             {
                                 "keyframes": "http://streams.kolor.com/streams/ken/samples/vrrroom/timeline/heartbeat-martin.json"
                             },
+
                             "options":
                             {
-                                "source": "com.pluginmaker.simplevideo-2"
+                                "source": "com.gopro.simplevideo-2"
                             }
                         },
 
                         {
-                            "instance": "com.pluginmaker.speedometer-0",
+                            "instance": "com.gopro.speedometer-0",
+
                             "data":
                             {
                                 "keyframes": "http://streams.kolor.com/streams/ken/samples/vrrroom/timeline/speed-martin.json"
                             },
+
                             "options":
                             {
-                                "source": "com.pluginmaker.simplevideo-2"
+                                "source": "com.gopro.simplevideo-2"
                             }
                         }
                     ]
                 }
             }
-        ],
+        ]
     },
 
     "actions":
@@ -939,83 +1019,102 @@
         {
             "uid": "action-next",
             "target": "viewer.tour",
+
             "method":
             {
                 "name": "nextScene"
             }
         },
+
         {
             "uid": "action-plugin-video-play",
-            "target": "com.pluginmaker.simplevideo-0",
+            "target": "com.gopro.simplevideo-0",
+
             "method":
             {
                 "name": "play"
             }
         },
+
         {
             "uid": "action-plugin-localeselector-hide",
-            "target": "com.pluginmaker.localeselector-0",
+            "target": "com.gopro.localeselector-0",
+
             "method":
             {
                 "name": "hide"
             }
         },
+
         {
             "uid": "action-plugin-button-hide",
-            "target": "com.pluginmaker.simplebutton-start",
+            "target": "com.gopro.simplebutton-start",
+
             "method":
             {
                 "name": "hide"
             }
         },
+
         {
             "uid": "hotspotAction-martin",
             "target": "viewer.tour",
+
             "method":
             {
                 "name": "loadScene",
                 "args": ["scene-3"]
             }
         },
+
         {
             "uid": "hotspotAction-martin-over",
-            "target": "com.pluginmaker.kartingdriverspot-martin",
+            "target": "com.gopro.kartingdriverspot-martin",
+
             "method":
             {
                 "name": "setTextColor",
                 "args": ["#009ee2"]
             }
         },
+
         {
             "uid": "hotspotAction-martin-out",
-            "target": "com.pluginmaker.kartingdriverspot-martin",
+            "target": "com.gopro.kartingdriverspot-martin",
+
             "method":
             {
                 "name": "setTextColor",
                 "args": ["#fff"]
             }
         },
+
         {
             "uid": "hotspotAction-samy",
             "target": "viewer.tour",
+
             "method":
             {
                 "name": "loadScene",
                 "args": ["scene-2"]
             }
         },
+
         {
             "uid": "hotspotAction-samy-over",
-            "target": "com.pluginmaker.kartingdriverspot-samy",
+            "target": "com.gopro.kartingdriverspot-samy",
+
             "method":
             {
                 "name": "setTextColor",
                 "args": ["#009ee2"]
             }
         },
+
         {
             "uid": "hotspotAction-samy-out",
-            "target": "com.pluginmaker.kartingdriverspot-samy",
+            "target": "com.gopro.kartingdriverspot-samy",
+
             "method":
             {
                 "name": "setTextColor",
@@ -1028,199 +1127,206 @@
     {
         "prefix": "../../plugins/",
 
-        "engines": [
-            // Plugin adding two black strips on top and bottom
+        "engines":
+        [
             {
-                "uid": "com.pluginmaker.letterbox",
+                "uid": "com.gopro.letterbox",
                 "url": "Letterbox/",
                 "manifest": "manifest.json"
             },
 
-            // Plugin enabling the selection of a locale
             {
-                "uid": "com.pluginmaker.localeselector",
+                "uid": "com.gopro.localeselector",
                 "url": "LocaleSelector/",
                 "manifest": "manifest.json"
             },
 
-            // Plugin spawning simple buttons
             {
-                "uid": "com.pluginmaker.simplebutton",
+                "uid": "com.gopro.simplebutton",
                 "url": "SimpleButton/",
                 "manifest": "manifest.json"
             },
 
-            // Plugin spawining simple texts
             {
-                "uid": "com.pluginmaker.simpletext",
+                "uid": "com.gopro.simpletext",
                 "url": "SimpleText/",
                 "manifest": "manifest.json"
             },
 
-            // Plugin spawning simple images
             {
-                "uid": "com.pluginmaker.simpleimage",
+                "uid": "com.gopro.simpleimage",
                 "url": "SimpleImage/",
                 "manifest": "manifest.json"
             },
 
-            // Plugin showing the information about a driver, in the selection screen
             {
-                "uid": "com.pluginmaker.kartingdriverspot",
+                "uid": "com.gopro.kartingdriverspot",
                 "prefix": "./plugins/",
                 "url": "KartingDriverSpot/",
                 "manifest": "manifest.json"
             },
 
-            // Plugin allowing a chromakey effect on a video or an image, used in driver selection
             {
-                "uid": "com.pluginmaker.chromakey",
+                "uid": "com.gopro.chromakey",
                 "url": "ChromaKey/",
                 "manifest": "manifest.json"
             },
 
-            // Plugin displaying a google maps and the position in realtime of the driver
             {
-                "uid": "com.pluginmaker.googlemaps",
+                "uid": "com.gopro.googlemaps",
                 "url": "GoogleMaps/",
                 "manifest": "manifest.json"
             },
 
-            // Plugin showing the ranking of each driver
             {
-                "uid": "com.pluginmaker.ranking",
+                "uid": "com.gopro.ranking",
                 "prefix": "./plugins/",
                 "url": "Ranking/",
                 "manifest": "manifest.json"
             },
 
-            // Plugin displaying a gooey menu, allowing actions like toggeling maps, ranking etc...
             {
-                "uid": "com.pluginmaker.gooeymenu",
+                "uid": "com.gopro.gooeymenu",
                 "url": "GooeyMenu/",
                 "manifest": "manifest.json"
             },
 
-            // Plugin playing a video, no UI attached
             {
-                "uid": "com.pluginmaker.simplevideo",
+                "uid": "com.gopro.simplevideo",
                 "url": "SimpleVideo/",
                 "manifest": "manifest.json"
             },
 
-            // Plugin displaying the heartbeat of the selected driver, reading the data from a file
             {
-                "uid": "com.pluginmaker.heartbeat",
+                "uid": "com.gopro.heartbeat",
                 "prefix": "./plugins/",
                 "url": "Heartbeat/",
                 "manifest": "manifest.json"
             },
 
-            // Plugin displaying the speed of the selected driver, reading the data from a file
             {
-                "uid": "com.pluginmaker.speedometer",
+                "uid": "com.gopro.speedometer",
                 "prefix": "./plugins/",
                 "url": "Speedometer/",
                 "manifest": "manifest.json"
             }
         ],
 
-        "instances": [
-            // Global settings for the letter box
+        "instances":
+        [
             {
-                "uid": "com.pluginmaker.letterbox-0",
-                "engine": "com.pluginmaker.letterbox",
+                "uid": "com.gopro.letterbox-0",
+                "engine": "com.gopro.letterbox",
+
                 "options":
                 {
                     "stripeHeight": 80,
                     "stripeColor": "black"
                 },
+
                 "index": 1
             },
 
-            // Global settings for the gooey menu
             {
-                "uid": "com.pluginmaker.gooeymenu-0",
-                "engine": "com.pluginmaker.gooeymenu",
+                "uid": "com.gopro.gooeymenu-0",
+                "engine": "com.gopro.gooeymenu",
                 "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
+
                 "options":
                 {
                     "left": -30,
                     "bottom": 40,
 
-                    "items": [
+                    "items":
+                    [
                     {
-                        "id": "music",
-                        "title": "gooeymenu-item-0",
-                        "click":
+                            "id": "music",
+                            "title": "gooeymenu-item-0",
+
+                            "click":
+                            {
+                                "action": "playlist",
+                                "target": "next"
+                            }
+                        },
+
                         {
-                            "action": "playlist",
-                            "target": "next"
+                            "id": "rank",
+                            "title": "gooeymenu-item-1",
+
+                            "click":
+                            {
+                                "action": "visibility",
+                                "target": ["com.gopro.ranking-0"]
+                            },
+
+                            "ticked": true,
+                            "toggle": true
+                        },
+
+                        {
+                            "id": "map",
+                            "title": "gooeymenu-item-2",
+
+                            "click":
+                            {
+                                "action": "visibility",
+                                "target": ["com.gopro.googlemaps-0"]
+                            },
+
+                            "ticked": true,
+                            "toggle": true
+                        },
+
+                        {
+                            "id": "heart",
+                            "title": "gooeymenu-item-3",
+
+                            "click":
+                            {
+                                "action": "visibility",
+                                "target": ["com.gopro.heartbeat-0", "com.gopro.speedometer-0"]
+                            },
+
+                            "ticked": true,
+                            "toggle": true
+                        },
+
+                        {
+                            "id": "cinema",
+                            "title": "gooeymenu-item-4",
+
+                            "click":
+                            {
+                                "action": "scene",
+                                "target": [["scene-2", "scene-4"], ["scene-3", "scene-5"]]
+                            },
+
+                            "toggle": true,
+                            "videotime": "com.gopro.ranking-0"
+                        },
+
+                        {
+                            "id": "home",
+                            "title": "gooeymenu-item-5",
+
+                            "click":
+                            {
+                                "action": "scene",
+                                "target": "scene-0"
+                            }
                         }
-                    },
-                    {
-                        "id": "rank",
-                        "title": "gooeymenu-item-1",
-                        "click":
-                        {
-                            "action": "visibility",
-                            "target": ["com.pluginmaker.ranking-0"]
-                        },
-                        "ticked": true,
-                        "toggle": true
-                    },
-                    {
-                        "id": "map",
-                        "title": "gooeymenu-item-2",
-                        "click":
-                        {
-                            "action": "visibility",
-                            "target": ["com.pluginmaker.googlemaps-0"]
-                        },
-                        "ticked": true,
-                        "toggle": true
-                    },
-                    {
-                        "id": "heart",
-                        "title": "gooeymenu-item-3",
-                        "click":
-                        {
-                            "action": "visibility",
-                            "target": ["com.pluginmaker.heartbeat-0", "com.pluginmaker.speedometer-0"]
-                        },
-                        "ticked": true,
-                        "toggle": true
-                    },
-                    {
-                        "id": "cinema",
-                        "title": "gooeymenu-item-4",
-                        "click":
-                        {
-                            "action": "scene",
-                            "target": [["scene-2", "scene-4"], ["scene-3", "scene-5"]]
-                        },
-                        "toggle": true,
-                        "videotime": "com.pluginmaker.ranking-0"
-                    },
-                    {
-                        "id": "home",
-                        "title": "gooeymenu-item-5",
-                        "click":
-                        {
-                            "action": "scene",
-                            "target": "scene-0"
-                        }
-                    }]
+                    ]
                 },
 
                 "index": 20
             },
 
-            // Global settings for the ranking
             {
-                "uid": "com.pluginmaker.ranking-0",
-                "engine": "com.pluginmaker.ranking",
+                "uid": "com.gopro.ranking-0",
+                "engine": "com.gopro.ranking",
                 "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
+
                 "options":
                 {
                     "top": 90,
@@ -1234,7 +1340,8 @@
                             "thumb": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/Martin_POV_160px_2M_fast.mp4",
                             "scenes": [ "scene-3", "scene-5"],
 
-                            "keyframes": [
+                            "keyframes":
+                            [
                                 { "ts": 0, "rank": 0 },
                                 { "ts": 16000, "rank": 1 },
                                 { "ts": 30000, "rank": 0 },
@@ -1251,7 +1358,8 @@
                             "thumb": "http://streams.kolor.com/streams/ken/samples/vrrroom/videos/Samy_POV_160px_2M_fast.mp4",
                             "scenes": [ "scene-2", "scene-4"],
 
-                            "keyframes": [
+                            "keyframes":
+                            [
                                 { "ts": 0, "rank": 1 },
                                 { "ts": 16000, "rank": 0 },
                                 { "ts": 30000, "rank": 1 },
@@ -1264,19 +1372,22 @@
                         }
                     ]
                 },
+
                 "data": {},
+
                 "index": 20
             },
 
-            // Global settings for the google maps, only missing data, defined in the scenes
             {
-                "uid": "com.pluginmaker.googlemaps-0",
-                "engine": "com.pluginmaker.googlemaps",
+                "uid": "com.gopro.googlemaps-0",
+                "engine": "com.gopro.googlemaps",
                 "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
+
                 "data":
                 {
                     "googleMapsKey": "AIzaSyBaXB43aQIplDPVJ53ZzPfyUqxoHrd0HZk"
                 },
+
                 "options":
                 {
                     "markerIcon":
@@ -1287,6 +1398,7 @@
                         "anchorX": 15,
                         "anchorY": 15
                     },
+
                     "strokeColor": "#009ee2",
                     "strokeOpacity": 1,
                     "strokeWeight": 5,
@@ -1295,15 +1407,17 @@
                     "right": 15,
                     "bottom": 95
                 },
+
                 "events": {},
+
                 "index": 20
             },
 
-            // Global settings for the heartbeat, only missing data, defined in the scenes
             {
-                "uid": "com.pluginmaker.heartbeat-0",
-                "engine": "com.pluginmaker.heartbeat",
+                "uid": "com.gopro.heartbeat-0",
+                "engine": "com.gopro.heartbeat",
                 "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
+
                 "options":
                 {
                     "width": 125,
@@ -1312,15 +1426,17 @@
                     "top": 95,
                     "right": 15
                 },
+
                 "data": {},
+
                 "index": 20
             },
 
-            // Global settings for the speed o meter, only missing data, defined in the scenes
             {
-                "uid": "com.pluginmaker.speedometer-0",
-                "engine": "com.pluginmaker.speedometer",
+                "uid": "com.gopro.speedometer-0",
+                "engine": "com.gopro.speedometer",
                 "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
+
                 "options":
                 {
                     "width": 125,
@@ -1329,39 +1445,45 @@
                     "top": 150,
                     "right": 15
                 },
+
                 "data": {},
+
                 "index": 20
             },
 
-            // Add an overlay with a helmet scratch to reinforce the immersion
             {
-                "uid": "com.pluginmaker.simpleimage-0",
-                "engine": "com.pluginmaker.simpleimage",
+                "uid": "com.gopro.simpleimage-0",
+                "engine": "com.gopro.simpleimage",
                 "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
+
                 "options":
                 {
                     "key": "simpleimage-helmet-scratch",
                     "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/assets/helmet-scratch.png",
                     "alpha": 0.3
                 },
+
                 "data": {},
+
                 "index": 10
             },
 
-            // Add an overlay with a helmet hue to reinforce the immersion
             {
-                "uid": "com.pluginmaker.simpleimage-1",
-                "engine": "com.pluginmaker.simpleimage",
+                "uid": "com.gopro.simpleimage-1",
+                "engine": "com.gopro.simpleimage",
                 "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
+
                 "options":
                 {
                     "key": "simpleimage-helmet-vigneting",
                     "url": "http://streams.kolor.com/streams/ken/samples/vrrroom/assets/helmet-vigneting.png",
                     "alpha": 0.4
                 },
+
                 "data": {},
+
                 "index": 10
-            },
+            }
         ]
     }
 }

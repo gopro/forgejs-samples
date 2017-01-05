@@ -7,38 +7,43 @@
         "description": "This is a demonstration of special effects applied to the background",
         "default": "scene-0",
 
-        "scenes": [
-        {
-            "uid": "scene-0",
-            "name": "First scene",
-            "slug": "first-scene",
-            "description": "This is the first and only scene",
-            "fx": "fxSet-overall",
-
-            "media":
+        "scenes":
+        [
             {
-                "uid": "scene-0-pano-0",
-                "type": "image",
-                "fx": "fxSet-background",
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first and only scene",
+                "fx": "fxSet-overall",
 
-                "source":
+                "media":
                 {
-                    "format": "equi",
-                    "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
+                    "uid": "media-0",
+                    "type": "image",
+                    "fx": "fxSet-background",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
+                    }
                 }
             }
-        }]
+        ]
     },
 
     "postProcessing":
     {
-        "fxSets": [
+        "fxSets":
+        [
             {
                 "uid": "fxSet-background",
-                "set": [
+                "set":
+                [
                     {
                         "type": "HorizontalBlurShader",
                         "uid": "fxSet-background-horizontalblur-0",
+
                         "params":
                         {
                             "h": 0.0001
@@ -48,6 +53,7 @@
                     {
                         "type": "VerticalBlurShader",
                         "uid": "fxSet-background-verticalblur-0",
+
                         "params":
                         {
                             "v": 0.001
@@ -57,6 +63,7 @@
                     {
                         "type": "FilmShader",
                         "uid": "fxSet-background-film-0",
+
                         "params":
                         {
                             "nIntensity": 0.1,
@@ -69,6 +76,7 @@
                     {
                         "type": "SepiaShader",
                         "uid": "fxSet-background-sepia-0",
+
                         "params":
                         {
                             "amount": 0.7
@@ -79,16 +87,19 @@
 
             {
                 "uid": "fxSet-overall",
-                "set": [
-                {
-                    "type": "VignetteShader",
-                    "uid": "fxSet-overall-vignette-0",
-                    "params":
+                "set":
+                [
                     {
-                        "offset": 0.20,
-                        "darkness": 26
+                        "type": "VignetteShader",
+                        "uid": "fxSet-overall-vignette-0",
+
+                        "params":
+                        {
+                            "offset": 0.20,
+                            "darkness": 26
+                        }
                     }
-                }]
+                ]
             }
         ]
     },
@@ -98,6 +109,7 @@
         {
             "uid": "action-toggle-fx",
             "target": "viewer.renderer.renderPipeline",
+
             "property":
             {
                 "name": "enabled",
@@ -110,27 +122,28 @@
     {
         "prefix": "../../plugins/",
 
-        "engines": [
-        {
-            "uid": "com.pluginmaker.simplebutton",
-            "url": "SimpleButton/",
-            "manifest": "manifest.json"
-        }],
+        "engines":
+        [
+            {
+                "uid": "com.gopro.simplebutton",
+                "url": "SimpleButton/",
+                "manifest": "manifest.json"
+            }
+        ],
 
-        "instances": [
+        "instances":
+        [
             {
                 "uid": "simplebutton-fx-enable",
-                "engine": "com.pluginmaker.simplebutton",
+                "engine": "com.gopro.simplebutton",
                 "enabled": true,
 
                 "options":
                 {
                     "right": 5,
                     "verticalCenter": true,
-
                     "width": 100,
                     "height": 50,
-
                     "value": "Toggle FX"
                 },
 

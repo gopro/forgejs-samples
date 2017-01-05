@@ -2,24 +2,28 @@
     "camera":
     {
         "parallax": 0,
+
         "yaw":
         {
             "default": 0,
             "min": -70,
             "max": 70
         },
+
         "pitch":
         {
             "default": 30,
             "min": 0,
             "max": 60
         },
+
         "roll":
         {
             "default": 0,
             "min": 0,
             "max": 0
         },
+
         "fov":
         {
             "default": 70,
@@ -36,24 +40,26 @@
         "description": "Camera limitation and orientation can be applied on a tour",
         "default": "scene-0",
 
-        "scenes": [
-        {
-            "uid": "scene-0",
-            "name": "First scene",
-            "slug": "first-scene",
-            "description": "This is the first and only scene",
-
-            "media":
+        "scenes":
+        [
             {
-                "uid": "scene-0-pano-0",
-                "type": "image",
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first and only scene",
 
-                "source":
+                "media":
                 {
-                    "format": "equi",
-                    "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
+                    }
                 }
             }
-        }]
+        ]
     }
 }
