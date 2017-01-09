@@ -43,6 +43,7 @@
             {
                 "name": "John Doe",
                 "thumb": "videos/johndoe_pov.mp4",
+                "streaming": "html5",
                 "scenes": null,
 
                 "keyframes": [

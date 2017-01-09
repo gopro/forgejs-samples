@@ -90,7 +90,7 @@ KPlug.Ranking.prototype = {
             }
         }
 
-        if (KEN.Utils.isTypeOf(this._video, "VideoHTML5") === true)
+        if (KEN.Utils.isTypeOf(this._video, "VideoHTML5") === true || KEN.Utils.isTypeOf(this._video, "VideoDash") === true)
         {
             this._video.onSeeked.add(this._onSeekedHandler, this);
             this._video.onPlay.add(this._onPlayHandler, this);
@@ -204,7 +204,7 @@ KPlug.Ranking.prototype = {
             driver.container.addChild(driver.videoContainer);
 
             // The video (face of the driver)
-            driver.video = this.plugin.create.video(this.plugin.uid + "-video-"+i, this.plugin.options.drivers[i].thumb);
+            driver.video = this.plugin.create.video(this.plugin.uid + "-video-"+i, this.plugin.options.drivers[i].thumb, this.plugin.options.drivers[i].streaming, "manual");
             driver.video.width = driver.videoContainer.width - 2 * this.plugin.options.videoBorderSize;
             driver.video.height = driver.videoContainer.height - 2 * this.plugin.options.videoBorderSize;
             driver.video.borderRadius = driver.videoContainer.borderRadius;
