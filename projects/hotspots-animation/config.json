@@ -46,8 +46,6 @@
                     {
                         "uid": "hotspot-0",
                         "name": "White rabbit",
-                        "visible": true,
-                        "type": "3d",
 
                         "facingCenter": true,
 
@@ -93,8 +91,6 @@
                     {
                         "uid": "hotspot-1",
                         "name": "Butterfly",
-                        "visible": true,
-                        "type": "3d",
 
                         "facingCenter": true,
 

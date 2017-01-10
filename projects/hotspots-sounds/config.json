@@ -45,8 +45,6 @@
                 [
                     {
                         "uid": "hotspot-3d-0",
-                        "visible": true,
-                        "type": "3d",
                         "name": "Peeper Frogs Near Lake",
 
                         "transform":
@@ -93,7 +91,6 @@
 
                     {
                         "uid": "hotspot-3d-1",
-                        "type": "3d",
                         "name": "Jungle",
 
                         "transform":
@@ -131,9 +128,6 @@
 
                     {
                         "uid": "hotspot-3d-2",
-                        "tags": [],
-                        "visible": true,
-                        "type": "3d",
                         "name": "Frogs",
 
                         "transform":
@@ -181,9 +175,6 @@
 
                     {
                         "uid": "hotspot-3d-3",
-                        "tags": [],
-                        "visible": true,
-                        "type": "3d",
                         "name": "Osprey Bird Call",
 
                         "transform":

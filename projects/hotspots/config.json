@@ -40,9 +40,6 @@
                 [
                     {
                         "uid": "hotspot-3d-0",
-                        "tags": [],
-                        "visible": true,
-                        "type": "3d",
 
                         "transform":
                         {
@@ -67,9 +64,6 @@
 
                     {
                         "uid": "hotspot-3d-1",
-                        "tags": [],
-                        "visible": true,
-                        "type": "3d",
 
                         "transform":
                         {
@@ -93,9 +87,6 @@
 
                     {
                         "uid": "hotspot-3d-2",
-                        "tags": [],
-                        "visible": true,
-                        "type": "3d",
 
                         "transform":
                         {
@@ -119,9 +110,6 @@
 
                     {
                         "uid": "hotspot-3d-3",
-                        "tags": [],
-                        "visible": true,
-                        "type": "3d",
 
                         "transform":
                         {
@@ -145,9 +133,6 @@
 
                     {
                         "uid": "hotspot-3d-4",
-                        "tags": [],
-                        "visible": true,
-                        "type": "3d",
 
                         "transform":
                         {

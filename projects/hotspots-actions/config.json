@@ -65,7 +65,6 @@
                 [
                     {
                         "uid": "hotspot-s0-0",
-                        "type": "3d",
                         "fx": "fxSet-spot",
 
                         "transform":
@@ -97,7 +96,6 @@
 
                     {
                         "uid": "hotspot-s0-1",
-                        "type": "3d",
                         "fx": "fxSet-spot",
 
                         "transform":
@@ -131,7 +129,6 @@
 
                     {
                         "uid": "hotspot-s0-2",
-                        "type": "3d",
                         "fx": "fxSet-spot",
 
                         "transform":
@@ -199,7 +196,6 @@
                 [
                     {
                         "uid": "hotspot-s1-0",
-                        "type": "3d",
                         "fx": "fxSet-spot",
 
                         "transform":
@@ -232,7 +228,6 @@
 
                     {
                         "uid": "hotspot-s1-1",
-                        "type": "3d",
                         "fx": "fxSet-spot",
 
                         "transform":
@@ -300,7 +295,6 @@
                 [
                     {
                         "uid": "hotspot-s2-0",
-                        "type": "3d",
                         "fx": "fxSet-spot",
 
                         "transform":
@@ -333,7 +327,6 @@
 
                     {
                         "uid": "hotspot-s2-1",
-                        "type": "3d",
                         "fx": "fxSet-spot",
 
                         "transform":
@@ -401,7 +394,6 @@
                 [
                     {
                         "uid": "hotspot-s3-0",
-                        "type": "3d",
                         "fx": "fxSet-spot",
 
                         "transform":
@@ -434,7 +426,6 @@
 
                     {
                         "uid": "hotspot-s3-1",
-                        "type": "3d",
                         "fx": "fxSet-spot",
 
                         "transform":
@@ -467,7 +458,6 @@
 
                     {
                         "uid": "hotspot-s3-2",
-                        "type": "3d",
                         "fx": "fxSet-spot",
 
                         "transform":
@@ -535,7 +525,6 @@
                 [
                     {
                         "uid": "hotspot-s4-0",
-                        "type": "3d",
                         "fx": "fxSet-spot",
 
                         "transform":
@@ -568,7 +557,6 @@
 
                     {
                         "uid": "hotspot-s4-1",
-                        "type": "3d",
                         "fx": "fxSet-spot",
 
                         "transform":
@@ -601,7 +589,6 @@
 
                     {
                         "uid": "hotspot-s4-2",
-                        "type": "3d",
                         "fx": "fxSet-spot",
 
                         "transform":
@@ -669,7 +656,6 @@
                 [
                     {
                         "uid": "hotspot-s5-0",
-                        "type": "3d",
                         "fx": "fxSet-spot",
 
                         "transform":
