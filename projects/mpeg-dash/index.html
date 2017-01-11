@@ -8,40 +8,15 @@
     <!-- Little styling -->
     <style type="text/css">
 
-    html
+    html, body
     {
-        width: 100%;
-        height: 100%;
-    }
-
-    body
-    {
-        width: 100%;
         height: 100%;
         margin: 0;
         padding: 0;
     }
 
-    a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    div#instructions
-    {
-        position: absolute;
-        bottom: 10px;
-        background: rgba(0, 0, 0, 0.75);
-        color: whitesmoke;
-        padding: 15px;
-        width: 40%;
-        left: 30%;
-        text-align: center;
-    }
-
     div#container
     {
-        width: 100%;
         height: 100%;
     }
 
@@ -50,10 +25,6 @@
 
 <body>
     <div id="container"></div>
-
-    <div id="instructions">
-        Click on NEXT and PREVIOUS buttons to navigate between 360° and flat MPEG-DASH videos.
-    </div>
 
     <!-- Include the DASH library -->
     <script type="text/javascript" src="dash.js/dash.all.min.js"></script>

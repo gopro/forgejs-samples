@@ -29,7 +29,7 @@
                     {
                         "format": "equi",
                         "streaming": "dash",
-                        "url": "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/dash/411255.mpd"
+                        "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/videos/omni-highlights/dash/411255.mpd"
                     },
 
                     "options":
@@ -69,7 +69,7 @@
 
                             "data":
                             {
-                                "video": "http://streams.kolor.com/streams/ken/samples/common/videos/moto-desert/dash/410524.mpd",
+                                "video": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/videos/moto-desert/dash/410524.mpd",
                                 "streaming": "dash"
                             },
 

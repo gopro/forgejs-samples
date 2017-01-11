@@ -37,7 +37,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
+                        "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/panos/01-forest.jpg"
                     }
                 },
 
@@ -71,7 +71,7 @@
 
                         "material":
                         {
-                            "image": "http://streams.kolor.com/streams/ken/samples/hotspots-animation/rabbit-34013.svg",
+                            "image": "https://d1gzfej7jd6aeb.cloudfront.net/samples/hotspots-animation/rabbit-34013.svg",
                             "color": "#ffffff",
                             "opacity": 1,
                             "transparent": true
@@ -117,7 +117,7 @@
 
                         "material":
                         {
-                            "image": "http://streams.kolor.com/streams/ken/samples/hotspots-animation/butterfly-1299922.svg",
+                            "image": "https://d1gzfej7jd6aeb.cloudfront.net/samples/hotspots-animation/butterfly-1299922.svg",
                             "color": "#ffffff",
                             "opacity": 1,
                             "transparent": true

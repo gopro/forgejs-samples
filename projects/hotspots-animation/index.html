@@ -8,40 +8,15 @@
     <!-- Little styling -->
     <style type="text/css">
 
-    html
+    html, body
     {
-        width: 100%;
-        height: 100%;
-    }
-
-    body
-    {
-        width: 100%;
         height: 100%;
         margin: 0;
         padding: 0;
     }
 
-    a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    div#instructions
-    {
-        position: absolute;
-        bottom: 10px;
-        background: rgba(0, 0, 0, 0.75);
-        color: whitesmoke;
-        padding: 15px;
-        width: 40%;
-        left: 30%;
-        text-align: center;
-    }
-
     div#container
     {
-        width: 100%;
         height: 100%;
     }
 
@@ -50,25 +25,6 @@
 
 <body>
     <div id="container"></div>
-
-    <script>
-    function blink(ob)
-    {
-        if (ob.style.visibility == "visible")
-        {
-            ob.style.visibility = "hidden";
-        }
-        else
-        {
-            ob.style.visibility = "visible";
-        }
-    }
-    setInterval("blink(_blink)",500);
-    </script>
-
-    <div id="instructions">
-        Follow the white rabbit.<div id="_blink" style="display: inline;visibility: visible">|</div>
-    </div>
 
     <!-- Include the KEN library -->
     <script type="text/javascript" src="../../lib/ken.min.js" ></script>

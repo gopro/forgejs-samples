@@ -69,7 +69,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
+                        "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/panos/01-forest.jpg"
                     }
                 }
             }
@@ -107,7 +107,7 @@
                     "bottom": 100,
                     "flagWidth": 150,
                     "flagHeight": 100,
-                    "baseURL": "http://streams.kolor.com/streams/ken/samples/common/images/",
+                    "baseURL": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/images/",
                     "fileName": "flag-{{locale}}.gif"
                 }
             },
