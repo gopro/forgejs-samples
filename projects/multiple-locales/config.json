@@ -104,7 +104,7 @@
                 "options":
                 {
                     "horizontalCenter": true,
-                    "bottom": 100,
+                    "bottom": 30,
                     "flagWidth": 150,
                     "flagHeight": 100,
                     "baseURL": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/images/",
@@ -128,7 +128,7 @@
                     },
 
                     "horizontalCenter": true,
-                    "bottom": 400
+                    "bottom": 250
                 }
             },
 
@@ -148,7 +148,7 @@
                     },
 
                     "horizontalCenter": true,
-                    "bottom": 350
+                    "bottom": 200
                 }
             }
         ]
