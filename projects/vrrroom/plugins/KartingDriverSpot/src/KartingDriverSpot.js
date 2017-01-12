@@ -9,8 +9,7 @@ KPlug.KartingDriverSpot = function()
     // Information will be drawn in a canvas
     this._canvas = null;
 
-    // Color of the text, not set from the options but from actions, using 
-    // the setTextColor method
+    // Color of the text; the setTextColor method can interact with this value
     this._textColor = "#fff";
 };
 
@@ -35,6 +34,9 @@ KPlug.KartingDriverSpot.prototype = {
         this._canvas.verticalCenter = this.plugin.options.verticalCenter;
         this._canvas.background = this.plugin.options.background;
 
+        // set default options
+        this._textColor = this.plugin.options.color || this._textColor;
+
         this.plugin.notifyInstanceReady();
     },
 
@@ -52,7 +54,7 @@ KPlug.KartingDriverSpot.prototype = {
         ctx.clearRect(0, 0, this._canvas.dom.width, this._canvas.dom.height);
 
         // Draw the rectangle containing the informations
-        ctx.fillStyle = "rgba(0,0,0,0.75)";
+        ctx.fillStyle = this.plugin.options.background;
         ctx.fillRect(0, 0, this._canvas.dom.width, this._canvas.dom.height);
 
         // General font style
