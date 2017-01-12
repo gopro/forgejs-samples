@@ -34,7 +34,7 @@
                     "options":
                     {
                         "autoPlay": true,
-                        "loop": false,
+                        "loop": true,
                         "volume": 0.4
                     }
                 },
@@ -72,7 +72,7 @@
                 "cancelRoll": true,
 
                 "keyframes": [
-                    { "time": 0,     "data": { "yaw": 100,                  "fov": 110 } },
+                    { "time": 0,     "data": { "yaw": 100, "pitch": 0,      "fov": 110 } },
                     { "time": 6500,  "data": { "yaw": 100,                  "fov": 110 } },
                     { "time": 9300,  "data": { "yaw": 0,                    "fov": 110 } },
                     { "time": 11000, "data": { "yaw": 0,    "pitch": -20,   "fov": 130 } },
