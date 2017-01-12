@@ -80,7 +80,7 @@
 
                             "options":
                             {
-                                "volume": {"min": 0.2, "max": 0.6},
+                                "volume": { "min": 0, "max": 0.6 },
                                 "loop": true,
                                 "autoPlay": true,
                                 "range": 210
@@ -164,7 +164,7 @@
 
                             "options":
                             {
-                                "volume": {"min": 0.2, "max": 0.6},
+                                "volume": { "min": 0.2, "max": 0.8 },
                                 "loop": true,
                                 "startTime": 0,
                                 "autoPlay": true,
@@ -211,7 +211,7 @@
 
                             "options":
                             {
-                                "volume": {"min": 0.2, "max": 0.6},
+                                "volume": { "min": 0, "max": 0.8 },
                                 "loop": true,
                                 "startTime": 0,
                                 "autoPlay": true,
