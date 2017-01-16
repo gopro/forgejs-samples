@@ -39,7 +39,7 @@ KPlug.Heartbeat.prototype = {
         this._setupVideo();
 
         // Create a timeline
-        this._timeline = new KEN.Timeline(this.viewer);
+        this._timeline = new KEN.Timeline();
 
         // Create a div containing the informations
         this._container = this.plugin.create.displayObjectContainer();
@@ -98,7 +98,7 @@ KPlug.Heartbeat.prototype = {
             }
         }
 
-        if (KEN.Utils.isTypeOf(this._video, "VideoHTML5") == true)
+        if (KEN.Utils.isTypeOf(this._video, "VideoHTML5") === true || KEN.Utils.isTypeOf(this._video, "VideoDash") === true)
         {
             this._video.onSeeked.add(this._onSeekedHandler, this);
             this._video.onPlay.add(this._onPlayHandler, this);
@@ -272,10 +272,10 @@ KPlug.Heartbeat.prototype = {
             return;
         }
 
-        var kf = this._timeline.getKeyframesFromTime(this._video.currentTimeMS);
+        var kf = this._timeline.getKeyframes(this._video.currentTimeMS);
         if (kf !== null)
         {
-            var keyframe = this._timeline.keyframes[kf.previous];
+            var keyframe = kf.previous;
 
             if (keyframe !== this._keyframe)
             {

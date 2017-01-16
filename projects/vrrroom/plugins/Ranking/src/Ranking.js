@@ -230,7 +230,7 @@ KPlug.Ranking.prototype = {
             }
 
             // Create a timeline for the keyframes
-            driver.timeline = new KEN.Timeline(this.viewer, keyframes);
+            driver.timeline = new KEN.Timeline(keyframes);
 
             // Add all of this in the main container of the plugin
             this._container.addChild(driver.container);
@@ -311,10 +311,10 @@ KPlug.Ranking.prototype = {
         {
             driver = this._drivers[i];
 
-            var kf = driver.timeline.getKeyframesFromTime(this._video.currentTimeMS);
+            var kf = driver.timeline.getKeyframes(this._video.currentTimeMS);
             if (kf !== null)
             {
-                driver.keyframe = driver.timeline.keyframes[kf.previous];
+                driver.keyframe = kf.previous; //driver.timeline.keyframes[];
                 driver.video.currentTime = this._video.currentTime;
             }
         }
@@ -374,10 +374,10 @@ KPlug.Ranking.prototype = {
             driver = this._drivers[i];
 
             // Get the current keyframe
-            var kf = driver.timeline.getKeyframesFromTime(this._video.currentTimeMS);
+            var kf = driver.timeline.getKeyframes(this._video.currentTimeMS);
             if (kf !== null)
             {
-                var keyframe = driver.timeline.keyframes[kf.previous];
+                var keyframe = kf.previous; //driver.timeline.keyframes[];
 
                 if (keyframe !== driver.keyframe)
                 {

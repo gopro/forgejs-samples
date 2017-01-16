@@ -39,7 +39,7 @@ KPlug.Speedometer.prototype = {
         this._setupVideo();
 
         // Create a timeline
-        this._timeline = new KEN.Timeline(this.viewer);
+        this._timeline = new KEN.Timeline();
 
         // Create a div containing the informations
         this._container = this.plugin.create.displayObjectContainer();
@@ -203,10 +203,10 @@ KPlug.Speedometer.prototype = {
             return;
         }
 
-        var kf = this._timeline.getKeyframesFromTime(this._video.currentTimeMS);
+        var kf = this._timeline.getKeyframes(this._video.currentTimeMS);
         if (kf !== null)
         {
-            var keyframe = this._timeline.keyframes[kf.previous];
+            var keyframe = kf.previous;
 
             if (keyframe !== this._keyframe)
             {
