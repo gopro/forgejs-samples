@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="EditGPX">
+  <trk>
+    <name>2014-04-01T15:36:02Z</name>
+    <trkseg>
+      <trkpt lat="45.57645827733586" lon="6.032189535690745" ts="0">
+        <ele>716</ele>
+      </trkpt>
+      <trkpt lat="45.57628779873799" lon="6.031830392174177" ts="6.850102">
+        <ele>716</ele>
+      </trkpt>
+      <trkpt lat="45.57600065376283" lon="6.031203167637274" ts="19.109462">
+        <ele>714</ele>
+      </trkpt>
+      <trkpt lat="45.57576284576612" lon="6.0306942142643285" ts="26.982803">
+        <ele>721</ele>
+      </trkpt>
+      <trkpt lat="45.575470791674995" lon="6.030072500316877" ts="38.157211">
+        <ele>722</ele>
+      </trkpt>
+      <trkpt lat="45.57538576987105" lon="6.029972970396181" ts="40.959868">
+        <ele>717</ele>
+      </trkpt>
+      <trkpt lat="45.57528760565205" lon="6.0299404957008615" ts="43.762525">
+        <ele>718</ele>
+      </trkpt>
+      <trkpt lat="45.57520657157061" lon="6.029930169975263" ts="46.565182">
+        <ele>719</ele>
+      </trkpt>
+      <trkpt lat="45.57511239504491" lon="6.02996007738489" ts="49.367839">
+        <ele>721</ele>
+      </trkpt>
+      <trkpt lat="45.57474786413302" lon="6.030169171966407" ts="56.201116">
+        <ele>729</ele>
+      </trkpt>
+      <trkpt lat="45.57448378672371" lon="6.030341552253646" ts="62.001116">
+        <ele>730</ele>
+      </trkpt>
+      <trkpt lat="45.57420012568604" lon="6.030516954700392" ts="67.497267">
+        <ele>732</ele>
+      </trkpt>
+      <trkpt lat="45.5738488726155" lon="6.030703085983196" ts="75.037142">
+        <ele>733</ele>
+      </trkpt>
+      <trkpt lat="45.57368618057667" lon="6.030841517860347" ts="78.056346">
+        <ele>737</ele>
+      </trkpt>
+      <trkpt lat="45.57357230379082" lon="6.030963856483408" ts="81.004192">
+        <ele>736</ele>
+      </trkpt>
+      <trkpt lat="45.57335140741369" lon="6.031225669975247" ts="85.324192">
+        <ele>737</ele>
+      </trkpt>
+      <trkpt lat="45.57312299999997" lon="6.031433839286785" ts="90.021623">
+        <ele>737</ele>
+      </trkpt>
+      <trkpt lat="45.57293520406806" lon="6.031452721565171" ts="92.495548">
+        <ele>738</ele>
+      </trkpt>
+      <trkpt lat="45.572819892879465" lon="6.031394908073354" ts="94.410195">
+        <ele>738</ele>
+      </trkpt>
+      <trkpt lat="45.572751520335764" lon="6.031294179237296" ts="97.022439">
+        <ele>738</ele>
+      </trkpt>
+      <trkpt lat="45.57276098718407" lon="6.031153960817284" ts="99.137455">
+        <ele>738</ele>
+      </trkpt>
+      <trkpt lat="45.57279486222549" lon="6.031005695770228" ts="100.662972">
+        <ele>738</ele>
+      </trkpt>
+      <trkpt lat="45.57287763265121" lon="6.030505317791002" ts="106.304421">
+        <ele>738</ele>
+      </trkpt>
+      <trkpt lat="45.57294706145346" lon="6.030105146661735" ts="111.411811">
+        <ele>738</ele>
+      </trkpt>
+      <trkpt lat="45.57295265358244" lon="6.029704975532467" ts="114.748875">
+        <ele>738</ele>
+      </trkpt>
+      <trkpt lat="45.572909061921095" lon="6.029157450401209" ts="118.887027">
+        <ele>735</ele>
+      </trkpt>
+      <trkpt lat="45.572814040805234" lon="6.0286309927290755" ts="124.459">
+        <ele>734</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

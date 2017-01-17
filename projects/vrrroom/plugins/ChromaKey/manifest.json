@@ -1,0 +1,45 @@
+{
+    "uid": "com.gopro.chromakey",
+    "name": "Photo / Video chromakey effect",
+    "slug": "chromakey",
+    "version": "1.0.0",
+    "versionName": "Chromakey effect 1.0.0",
+    "description": "Chromakey effect for photo and video",
+
+    "author":
+    {
+        "name": "GoPro",
+        "website": "http://kenprivatebeta.kolor.com/"
+    },
+
+    "licence": "Apache 2",
+
+    "options":
+    {
+        "authoring": false,
+
+        "top": null,
+        "right": null,
+        "width": null,
+        "height": null,
+
+        "url": null,
+        "backgroundSample":
+        {
+            "x": 0,
+            "y": 0
+        },
+
+        "threshold": 50,
+        "smoothness": 50,
+        "autoPlay": true
+    },
+
+    "sources": [
+        "src/ChromaKey.js",
+        "src/ChromaKeySettings.js",
+        "src/ChromaKeyAuthoring.js"
+    ],
+
+    "constructor": "KPlug.ChromaKey"
+}
