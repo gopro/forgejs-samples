@@ -145,6 +145,33 @@ KPlug.SimpleButton.prototype = {
     },
 
     /**
+     * Set a new text
+     * @param {string} value
+     */
+    setText: function(value)
+    {
+        if (value !== undefined && value !== null)
+        {
+            var skin = this._btn.skin;
+
+            if(typeof skin.out.label !== "undefined")
+            {
+                skin.out.label.value = value;
+            }
+            if(typeof skin.over.label !== "undefined")
+            {
+                skin.over.label.value = value;
+            }
+            if(typeof skin.down.label !== "undefined")
+            {
+                skin.down.label.value = value;
+            }
+
+            this._btn.updateSkin();
+        }
+    },
+
+    /**
      * Destroy the button.
      */
     destroy: function()
