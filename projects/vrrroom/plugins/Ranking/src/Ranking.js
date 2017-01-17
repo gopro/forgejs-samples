@@ -90,7 +90,7 @@ KPlug.Ranking.prototype = {
             }
         }
 
-        if (KEN.Utils.isTypeOf(this._video, "VideoHTML5") === true || KEN.Utils.isTypeOf(this._video, "VideoDash") === true)
+        if (this._video !== null && (KEN.Utils.isTypeOf(this._video, "VideoHTML5") === true || KEN.Utils.isTypeOf(this._video, "VideoDash") === true))
         {
             this._video.onSeeked.add(this._onSeekedHandler, this);
             this._video.onPlay.add(this._onPlayHandler, this);
@@ -111,8 +111,7 @@ KPlug.Ranking.prototype = {
     },
 
     /**
-     * Reset the reference to the video, and re-highlight the currently selected
-     * driver.
+     * Reset the reference to the video, and highlight the currently selected driver.
      */
     reset: function()
     {
@@ -132,9 +131,9 @@ KPlug.Ranking.prototype = {
             this._video.onSeeked.remove(this._onSeekedHandler, this);
             this._video.onPlay.remove(this._onPlayHandler, this);
             this._video.onPause.remove(this._onPauseHandler, this);
-        }
 
-        this._video = null;
+            this._video = null;
+        }
     },
 
     /**
@@ -152,8 +151,10 @@ KPlug.Ranking.prototype = {
                 infoContainer: null,
                 name: null,
                 position: null,
-                videoContainer: null,
+                thumbContainer: null,
+                type: null,
                 video: null,
+                image: null,
                 tween: null,
                 timeline: null,
                 keyframes: this.plugin.options.drivers[i].keyframes,
@@ -196,19 +197,31 @@ KPlug.Ranking.prototype = {
             driver.infoContainer.addChild(driver.position);
 
             // The container of the video
-            driver.videoContainer = this.plugin.create.displayObjectContainer();
-            driver.videoContainer.width = this.plugin.options.height;
-            driver.videoContainer.height = this.plugin.options.height;
-            driver.videoContainer.borderColor = this.plugin.options.videoBorderColor;
-            driver.videoContainer.borderRadius = driver.videoContainer.width / 2;
-            driver.container.addChild(driver.videoContainer);
+            driver.thumbContainer = this.plugin.create.displayObjectContainer();
+            driver.thumbContainer.width = this.plugin.options.height;
+            driver.thumbContainer.height = this.plugin.options.height;
+            driver.thumbContainer.borderColor = this.plugin.options.borderColor;
+            driver.thumbContainer.borderRadius = driver.thumbContainer.width / 2;
+            driver.container.addChild(driver.thumbContainer);
 
-            // The video (face of the driver)
-            driver.video = this.plugin.create.video(this.plugin.uid + "-video-"+i, this.plugin.options.drivers[i].thumb, this.plugin.options.drivers[i].streaming, "manual");
-            driver.video.width = driver.videoContainer.width - 2 * this.plugin.options.videoBorderSize;
-            driver.video.height = driver.videoContainer.height - 2 * this.plugin.options.videoBorderSize;
-            driver.video.borderRadius = driver.videoContainer.borderRadius;
-            driver.videoContainer.addChild(driver.video);
+            if (this.plugin.options.drivers[i].type === "image")
+            {
+                // The image (face of the driver)
+                driver.image = this.plugin.create.image(this.plugin.options.drivers[i].thumb, false);
+                driver.image.width = driver.thumbContainer.width - 2 * this.plugin.options.borderSize;
+                driver.image.height = driver.thumbContainer.height - 2 * this.plugin.options.borderSize;
+                driver.image.borderRadius = driver.thumbContainer.borderRadius;
+                driver.thumbContainer.addChild(driver.image);
+            }
+            else
+            {
+                // The video (face of the driver)
+                driver.video = this.plugin.create.video(this.plugin.uid + "-video-"+i, this.plugin.options.drivers[i].thumb, this.plugin.options.drivers[i].streaming, "manual");
+                driver.video.width = driver.thumbContainer.width - 2 * this.plugin.options.borderSize;
+                driver.video.height = driver.thumbContainer.height - 2 * this.plugin.options.borderSize;
+                driver.video.borderRadius = driver.thumbContainer.borderRadius;
+                driver.thumbContainer.addChild(driver.video);
+            }
 
             // Data to save
             driver.container.data = this.plugin.options.drivers[i].scenes;
@@ -235,9 +248,12 @@ KPlug.Ranking.prototype = {
             // Add all of this in the main container of the plugin
             this._container.addChild(driver.container);
 
-            // Play the video
-            driver.video.volume = 0;
-            driver.video.play();
+            if (driver.video !== null)
+            {
+                // Play the video
+                driver.video.volume = 0;
+                driver.video.play();
+            }
 
             // Add it to the list
             this._drivers.push(driver);
@@ -260,16 +276,32 @@ KPlug.Ranking.prototype = {
                 if (driver.scenes[j] === this.viewer.tour.sceneUid)
                 {
                     this._currentDriver = driver;
-                    driver.videoContainer.borderWidth = this.plugin.options.videoBorderSize;
-                    driver.video.top = 0;
-                    driver.video.left = 0;
+                    driver.thumbContainer.borderWidth = this.plugin.options.borderSize;
+                    if (driver.video === null)
+                    {
+                        driver.image.top = 0;
+                        driver.image.left = 0;
+                    }
+                    else
+                    {
+                        driver.video.top = 0;
+                        driver.video.left = 0;
+                    }
                     break;
                 }
                 else
                 {
-                    driver.videoContainer.borderWidth = 0;
-                    driver.video.top = this.plugin.options.videoBorderSize;
-                    driver.video.left = this.plugin.options.videoBorderSize;
+                    driver.thumbContainer.borderWidth = 0;
+                    if (driver.video === null)
+                    {
+                        driver.image.top = this.plugin.options.borderSize;
+                        driver.image.left = this.plugin.options.borderSize;
+                    }
+                    else
+                    {
+                        driver.video.top = this.plugin.options.borderSize;
+                        driver.video.left = this.plugin.options.borderSize;
+                    }
                 }
             }
         }
@@ -280,7 +312,11 @@ KPlug.Ranking.prototype = {
      */
     _driverClickHandler: function(event)
     {
-        this.plugin.persistentData.time = this._video.currentTime;
+        if (this._video !== null)
+        {
+            this.plugin.persistentData.time = this._video.currentTime;
+        }
+
         this.plugin.persistentData.camera = {
             yaw: this.viewer.renderer.camera.yaw,
             pitch: this.viewer.renderer.camera.pitch,
@@ -314,8 +350,11 @@ KPlug.Ranking.prototype = {
             var kf = driver.timeline.getKeyframes(this._video.currentTimeMS);
             if (kf !== null)
             {
-                driver.keyframe = kf.previous; //driver.timeline.keyframes[];
-                driver.video.currentTime = this._video.currentTime;
+                driver.keyframe = kf.previous;
+                if (driver.video !== null)
+                {
+                    driver.video.currentTime = this._video.currentTime;
+                }
             }
         }
     },
@@ -330,7 +369,10 @@ KPlug.Ranking.prototype = {
         for (var i = 0, ii = this._drivers.length; i < ii; i++)
         {
             driver = this._drivers[i];
-            driver.video.play(this._video.currentTime);
+            if (driver.video !== null)
+            {
+                driver.video.play(this._video.currentTime);
+            }
         }
     },
 
@@ -344,7 +386,10 @@ KPlug.Ranking.prototype = {
         for (var i = 0, ii = this._drivers.length; i < ii; i++)
         {
             driver = this._drivers[i];
-            driver.video.pause();
+            if (driver.video !== null)
+            {
+                driver.video.pause();
+            }
         }
     },
 
@@ -353,7 +398,10 @@ KPlug.Ranking.prototype = {
      */
     changeCurrentTime: function()
     {
-        this.plugin.persistentData.time = this._video.currentTime;
+        if (this._video !== null)
+        {
+            this.plugin.persistentData.time = this._video.currentTime;
+        }
     },
 
     /**
@@ -377,7 +425,7 @@ KPlug.Ranking.prototype = {
             var kf = driver.timeline.getKeyframes(this._video.currentTimeMS);
             if (kf !== null)
             {
-                var keyframe = kf.previous; //driver.timeline.keyframes[];
+                var keyframe = kf.previous;
 
                 if (keyframe !== driver.keyframe)
                 {
@@ -414,7 +462,7 @@ KPlug.Ranking.prototype = {
                 }
 
                 // Update the synchronization
-                if (Math.abs(this._video.currentTimeMS - driver.video.currentTimeMS) > 200)
+                if (driver.video !== null && Math.abs(this._video.currentTimeMS - driver.video.currentTimeMS) > 200)
                 {
                     driver.video.currentTime = this._video.currentTime;
                 }
@@ -427,6 +475,12 @@ KPlug.Ranking.prototype = {
      */
     destroy: function()
     {
+        for (var i = 0, ii = this._drivers.length; i < ii; i++)
+        {
+            this._drivers[i] = null;
+        }
+        this._drivers = null;
+
         this._video = null;
         this._container = null;
         this._tween = null;

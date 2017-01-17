@@ -26,8 +26,8 @@
 
         "margin": 10,
 
-        "videoBorderColor": "black",
-        "videoBorderSize": 5,
+        "borderColor": "black",
+        "borderSize": 5,
 
         "source": "media",
 
@@ -42,6 +42,7 @@
         [
             {
                 "name": "John Doe",
+                "type": "video",
                 "thumb": "videos/johndoe_pov.mp4",
                 "streaming": "html5",
                 "scenes": null,
