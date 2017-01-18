@@ -1,4 +1,4 @@
-var KPlug = KPlug || {};
+var ForgePlugins = ForgePlugins || {};
 
 /**
  * Plugin allowing a letterboxing effect on a scene.
@@ -9,13 +9,13 @@ var KPlug = KPlug || {};
  *
  * Here, we're only adding black bars.
  */
-KPlug.Letterbox = function()
+ForgePlugins.Letterbox = function()
 {
     this._stripeTop = null;
     this._stripeBottom = null;
 };
 
-KPlug.Letterbox.prototype = {
+ForgePlugins.Letterbox.prototype = {
 
     /**
      * The boot function, instantiate two black display object and position them
@@ -44,7 +44,7 @@ KPlug.Letterbox.prototype = {
         this.viewer.container.addChild(this._stripeBottom);
     },
 
-    /** 
+    /**
      * Placeholder, do nothing
      */
     update: function() {},

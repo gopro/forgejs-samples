@@ -1,13 +1,13 @@
-var KPlug = KPlug || {};
+var ForgePlugins = ForgePlugins || {};
 
 /**
  * ChromaKey plugin settings
  * Interface used for dat.gui communication
  *
- * @constructor KPlug.ChromaKeySettings
- * @param {KPlug.ChromaKey} chromaKey - {@link KPlug.ChromaKey} reference.
+ * @constructor ForgePlugins.ChromaKeySettings
+ * @param {ForgePlugins.ChromaKey} chromaKey - {@link ForgePlugins.ChromaKey} reference.
  */
-KPlug.ChromaKeySettings = function(chromaKey)
+ForgePlugins.ChromaKeySettings = function(chromaKey)
 {
     this._chromaKey = chromaKey;
     this._bypass = false;
@@ -18,7 +18,7 @@ KPlug.ChromaKeySettings = function(chromaKey)
     };
 };
 
-KPlug.ChromaKeySettings.prototype.destroy = function()
+ForgePlugins.ChromaKeySettings.prototype.destroy = function()
 {
     // Release weak reference on chromakey plugin
     this._chromaKey = null;
@@ -27,7 +27,7 @@ KPlug.ChromaKeySettings.prototype.destroy = function()
 /**
  * Treshold property accessor
  */
-Object.defineProperty(KPlug.ChromaKeySettings.prototype, "threshold",
+Object.defineProperty(ForgePlugins.ChromaKeySettings.prototype, "threshold",
 {
     set: function(value)
     {
@@ -43,7 +43,7 @@ Object.defineProperty(KPlug.ChromaKeySettings.prototype, "threshold",
 /**
  * Smoothness property accessor
  */
-Object.defineProperty(KPlug.ChromaKeySettings.prototype, "smoothness",
+Object.defineProperty(ForgePlugins.ChromaKeySettings.prototype, "smoothness",
 {
     set: function(value)
     {
@@ -59,7 +59,7 @@ Object.defineProperty(KPlug.ChromaKeySettings.prototype, "smoothness",
 /**
  * Background property accessor
  */
-Object.defineProperty(KPlug.ChromaKeySettings.prototype, "background",
+Object.defineProperty(ForgePlugins.ChromaKeySettings.prototype, "background",
 {
     set: function(value)
     {
@@ -76,7 +76,7 @@ Object.defineProperty(KPlug.ChromaKeySettings.prototype, "background",
  * Show preview property accessor
  * Enable or disable the display of preview canvas
  */
-Object.defineProperty(KPlug.ChromaKeySettings.prototype, "showPreview",
+Object.defineProperty(ForgePlugins.ChromaKeySettings.prototype, "showPreview",
 {
     set: function(value)
     {
@@ -101,7 +101,7 @@ Object.defineProperty(KPlug.ChromaKeySettings.prototype, "showPreview",
  * Bypass property accessor
  * Turn on/off the processing to highlight current state
  */
-Object.defineProperty(KPlug.ChromaKeySettings.prototype, "bypass",
+Object.defineProperty(ForgePlugins.ChromaKeySettings.prototype, "bypass",
 {
     set: function(value)
     {

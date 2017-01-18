@@ -1,5 +1,5 @@
 {
-    "uid": "com.gopro.simpleimage",
+    "uid": "org.forgejs.simpleimage",
     "name": "Simple Image",
     "slug": "simpleimage",
     "version": "1.0.0",
@@ -9,7 +9,7 @@
     "author":
     {
         "name": "GoPro",
-        "website": "http://kenprivatebeta.kolor.com/"
+        "website": "https://forgejs.org"
     },
 
     "licence": "Apache 2",
@@ -51,5 +51,5 @@
         "src/SimpleImage.js"
     ],
 
-    "constructor": "KPlug.SimpleImage"
+    "constructor": "ForgePlugins.SimpleImage"
 }

@@ -1,9 +1,9 @@
-var KPlug = KPlug || {};
+var ForgePlugins = ForgePlugins || {};
 
 /**
  * This plugin displays a simple google maps, that can be loaded with GPX data.
  */
-KPlug.GoogleMaps = function()
+ForgePlugins.GoogleMaps = function()
 {
     // The reference to the video, for synchronization
     this._video = null;
@@ -43,7 +43,7 @@ KPlug.GoogleMaps = function()
     this._style = null;
 };
 
-KPlug.GoogleMaps.prototype = {
+ForgePlugins.GoogleMaps.prototype = {
 
     /**
      * The boot function

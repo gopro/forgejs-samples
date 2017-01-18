@@ -1,5 +1,5 @@
 {
-    "uid": "com.gopro.heartbeat",
+    "uid": "org.forgejs.heartbeat",
     "name": "Heartbeat",
     "slug": "heartbeat",
     "version": "1.0.0",
@@ -9,7 +9,7 @@
     "author":
     {
         "name": "GoPro",
-        "website": "http://kenprivatebeta.kolor.com/"
+        "website": "https://forgejs.org"
     },
 
     "licence": "Apache 2",
@@ -51,5 +51,5 @@
         "src/Heartbeat.js"
     ],
 
-    "constructor": "KPlug.Heartbeat"
+    "constructor": "ForgePlugins.Heartbeat"
 }

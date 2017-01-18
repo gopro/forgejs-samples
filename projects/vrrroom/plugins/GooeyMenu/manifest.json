@@ -1,5 +1,5 @@
 {
-    "uid": "com.gopro.gooeymenu",
+    "uid": "org.forgejs.gooeymenu",
     "name": "Gooey Menu",
     "slug": "gooey",
     "version": "1.0.0",
@@ -9,7 +9,7 @@
     "author":
     {
         "name": "GoPro",
-        "website": "http://kenprivatebeta.kolor.com/"
+        "website": "https://forgejs.org"
     },
 
     "licence": "Apache 2",
@@ -45,7 +45,7 @@
                 "files":
                 [
                     {
-                        "key": "com.gopro.gooeymenu.fr-FR",
+                        "key": "org.forgejs.gooeymenu.fr-FR",
                         "url": "i18n/fr-FR/locale.json"
                     }
                 ]
@@ -57,7 +57,7 @@
                 "files":
                 [
                     {
-                        "key": "com.gopro.gooeymenu.en-US",
+                        "key": "org.forgejs.gooeymenu.en-US",
                         "url": "i18n/en-US/locale.json"
                     }
                 ]
@@ -71,5 +71,5 @@
         "src/GooeyMenu.js"
     ],
 
-    "constructor": "KPlug.GooeyMenu"
+    "constructor": "ForgePlugins.GooeyMenu"
 }

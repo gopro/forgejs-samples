@@ -1,10 +1,10 @@
-var KPlug = KPlug || {};
+var ForgePlugins = ForgePlugins || {};
 
 /**
  * A Gooey menu, inspired by the one created by Lucas Bebber here
  * http://codepen.io/lbebber/pen/RNgBPP
  */
-KPlug.GooeyMenu = function()
+ForgePlugins.GooeyMenu = function()
 {
     // The main container
     this._container = null;
@@ -16,7 +16,7 @@ KPlug.GooeyMenu = function()
     this._itemsCount = 0
 };
 
-KPlug.GooeyMenu.prototype = {
+ForgePlugins.GooeyMenu.prototype = {
 
     /**
      * The boot function
