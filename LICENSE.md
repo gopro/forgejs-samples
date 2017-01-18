@@ -1,4 +1,4 @@
-# KEN Samples Apache License Agreement
+# ForgeJS Samples Apache License Agreement
 
 
                                  Apache License

@@ -4,11 +4,11 @@ We are going to make a full tour, starting from nothing.
 
 The first thing to do is to start by copying the `projects/empty-tour/` folder and renaming it with the name of your project. In here are a basic webpage and the `tour.json`, which is the core of our tour. In it is described the complete tour, from scenes to plugins, hotspots to the behavior of the camera.
 
-You don't have to touch the webpage in this tutorial, only the `tour.json`. To learn more how to configure the `KEN.Viewer` object, please consult the [documentation of the API]().
+You don't have to touch the webpage in this tutorial, only the `tour.json`. To learn more how to configure the `FORGE.Viewer` object, please consult the [documentation of the API]().
 
 # Completing the tour.json file
 
-````json
+```js
 {
     "tour":
     {
@@ -19,7 +19,7 @@ You don't have to touch the webpage in this tutorial, only the `tour.json`. To l
         "scenes": []
     }
 }
-````
+```
 
 This is what your `tour.json` file is looking like at the start. It got four elements:
 
@@ -35,7 +35,7 @@ The first thing to do is to add a scene to the tour. A scene is at least compose
 
 So let's add a scene to our tour by adding two properties to the tour object :
 
-````json
+```js
 {
     "tour":
     {
@@ -57,7 +57,7 @@ So let's add a scene to our tour by adding two properties to the tour object :
     }
 
 }
-````
+```
 
 + `default` - the uid of the scene to load by default at the opening of the webpage
 + `scenes` - an array containing scenes
@@ -74,18 +74,18 @@ In this array, what is more interesting is how is composed the object we added :
 
 Now that we have a scene, we can specify the media we want to add. First, let's create two folders where we will put our media : one for images, another for videos. We can then complete the `media` part with the strict minimum :
 
-````json
+```js
 {
     "media":
     {
-        "uid": "scene-0-media-0",
+        "uid": "media-0",
         "type": "image",
         "format": "equi",
 
-        "source": "http://streams.kolor.com/streams/ken/samples/common/panos/01-forest.png"
+        "source": "01-forest.png"
     }
 }
-````
+```
 
 + `uid` - The unique identifier of the media, will be used as a reference across the whole tour.
 + `type` - Specify the type of media we're loading, either `image` or `video`.
@@ -94,18 +94,18 @@ Now that we have a scene, we can specify the media we want to add. First, let's 
 
 Above is the code to load an image, and below is for a video :
 
-````json
+```js
 {
     "media":
     {
-        "uid": "scene-0-media-0",
+        "uid": "media-0",
         "type": "video",
         "format": "equi",
 
-        "source": "http://streams.kolor.com/streams/ken/samples/common/videos/omni-highlights/source.03-1080p_HD.mp4"
+        "source": "1080p_HD.mp4"
     }
 }
-````
+```
 
 Note that you can set only one media in a scene. We'll see later how to handle multiple scenes and multiples media.
 
@@ -119,14 +119,14 @@ If you try to scroll in the page, you'll see a change in the field of view (fov)
 
 To change the view type, add the following `view` object to the root of the configuration. If you want to specify a view for a single `scene` you can add this view object to a one of your `scene`.
 
-````json
+```js
 {
     "view":
     {
         "type": "GoPro"
     }
 }
-````
+```
 
 Refresh your page, and play with the scroll and move inside the media, you should see the new view.
 
@@ -134,7 +134,7 @@ Refresh your page, and play with the scroll and move inside the media, you shoul
 
 You can also limit the movement on your scene, for example if you don't want the user to be able to look down, up or behind him. Add this object to the tour object :
 
-````json
+```js
 {
     "camera":
     {
@@ -160,7 +160,7 @@ You can also limit the movement on your scene, for example if you don't want the
         }
     }
 }
-````
+```
 
 You can set three properties : `yaw`, `pitch` and `fov`. **Yaw** is the horizontal movement, **Pitch** is the vertical movement, and the **FOV** is the field of view, that can be changed using the scroll of the mouse. Each of those properties has three properties :
 
@@ -178,7 +178,7 @@ A tour cannot be a tour without multiple scene to view. Let's add other scenes, 
 
 If we go back to our `scenes` object, we can see it is in fact an array. So we can set multiple `scene` object inside this array. We can have something like that:
 
-````json
+```js
 {
     "scenes": [
     {
@@ -189,13 +189,13 @@ If we go back to our `scenes` object, we can see it is in fact an array. So we c
 
         "media":
         {
-            "uid": "scene-1-media-0",
+            "uid": "media-1",
             "type": "image",
             "format": "equi",
 
             "source":
             {
-                "url": "http://streams.kolor.com/streams/ken/samples/common/panos/02-sand.png"
+                "url": "02-sand.png"
             }
         }
     },
@@ -208,13 +208,13 @@ If we go back to our `scenes` object, we can see it is in fact an array. So we c
 
         "media":
         {
-            "uid": "scene-2-pano-0",
+            "uid": "media-2",
             "type": "image",
             "format": "equi",
 
             "source":
             {
-                "url": "http://streams.kolor.com/streams/ken/samples/common/panos/03-snow.png"
+                "url": "03-snow.png"
             }
         }
     },
@@ -227,18 +227,18 @@ If we go back to our `scenes` object, we can see it is in fact an array. So we c
 
         "media":
         {
-            "uid": "scene-3-media-0",
+            "uid": "media-1",
             "type": "video",
             "format": "equi",
 
             "source":
             {
-                "url": "http://streams.kolor.com/streams/ken/samples/common/videos/moto-desert/Moto_Desert_1920x960_1080p_like.mp4"
+                "url": "720p_HD.mp4"
             }
         }
     }]
 }
-````
+```
 
 As you can see, we now have three scenes: two with a panorama, and one with a video.
 
@@ -248,7 +248,7 @@ To navigate through each scene, open the web developer tools of your browser, an
 
 One of the points we can take advantage of having multiple scenes, is to specify some configuration locally, in each scene. For example, let's say we want to limit the camera only in the second scene, and have a *GoPro* view in the third one. We can put directly those two objects inside each scene object :
 
-````json
+```js
 {
     "scenes": [
     {
@@ -296,7 +296,7 @@ One of the points we can take advantage of having multiple scenes, is to specify
         }
     }]
 }
-````
+```
 
 Even if there is a global configuration for those objects, the configuration inside the scenes overrides the global one. This system works for certains parts only :
 
@@ -308,7 +308,7 @@ Even if there is a global configuration for those objects, the configuration ins
 
 ## Plugins
 
-One of the purpose of the KEN player, is to allow people to customize it using plugins they developed or acquired. Without any plugin, the player is only a simple player, without even an interface, even for a video.
+One of the purpose of the ForgeJS player, is to allow people to customize it using plugins they developed or acquired. Without any plugin, the player is only a simple player, without even an interface, even for a video.
 
 ### Include our first plugin
 
@@ -320,7 +320,7 @@ In our root folder, let's create a `plugins` folder. Then, go in the `plugins` f
 
 In the JSON file we have to add a `plugins` object to set options, declare where are located plugin engines and configure plugins instances.
 
-````json
+```js
 {
     "plugins":
     {
@@ -330,7 +330,7 @@ In the JSON file we have to add a `plugins` object to set options, declare where
         "instances": []
     }
 }
-````
+```
 
 + `enabled` - Global enabled switch, if set to false you will have no plugins, usefull for debug mainly. It's true by default.
 + `prefix` - This is the root plugin folder. In our case we put the *SimpleButton* plugin in the `./plugins/` folder.
@@ -341,7 +341,7 @@ In the JSON file we have to add a `plugins` object to set options, declare where
 
 First we're going to add an engine, which will be the basis of a plugin. This engine will be used as a reference for each instance of the plugin, as a plugin can be present multiple times in the tour and also in the same scene.
 
-````json
+```js
 {
     "plugins":
     {
@@ -349,14 +349,14 @@ First we're going to add an engine, which will be the basis of a plugin. This en
         "engines":
         [
             {
-                "uid": "com.pluginmaker.simplebutton",
+                "uid": "gopro.forge.simplebutton",
                 "url": "SimpleButton/",
                 "manifest": "manifest.json"
             }
         ]
     }
 }
-````
+```
 
 + `uid` - The uid of the plugin, the one specified in the manifest.
 + `url` - Where to find the plugin and its source.
@@ -369,7 +369,7 @@ Note that the `engines` property is an array, and so multiple plugins and their 
 
 Now that we have an engine, we can instantiate our plugin. Let's start with our *Previous* button.
 
-````json
+```js
 {
     "plugins":
     {
@@ -379,14 +379,14 @@ Now that we have an engine, we can instantiate our plugin. Let's start with our 
         [
             {
                 "uid": "simplebutton-previous",
-                "engine": "com.pluginmaker.simplebutton",
+                "engine": "gopro.forge.simplebutton",
                 "options": {},
                 "events": {}
             }
         ]
     }
 }
-````
+```
 
 + `uid` - The uid of the instance.
 + `engine` - The uid of the engine that will be used.
@@ -395,7 +395,7 @@ Now that we have an engine, we can instantiate our plugin. Let's start with our 
 
 In `options`, we have all the options related to the plugin we are instanciating. All the available options should be written in the manifest of the plugin. For the *SimpleButton*, if we consult the manifest, we have :
 
-````json
+```js
 {
     "options":
     {
@@ -419,11 +419,11 @@ In `options`, we have all the options related to the plugin we are instanciating
         }
     }
 }
-````
+```
 
 We can see that we have six properties for the position, two for the size, one for the value and three for the skins. We are going to set some values to place our button on the left side of the screen, with a label set to *Previous* :
 
-````json
+```js
 {
     "options":
     {
@@ -432,13 +432,13 @@ We can see that we have six properties for the position, two for the size, one f
         "value": "Previous"
     }
 }
-````
+```
 
 If we go back to the tour, we can now see a button on the left side of the page.
 
 Note that here the `instances` property is also an array (like `engines`), so we will add another instance, for our *Next* button. It is almost the same as the *Previous* button, but placed on the right side of the page.
 
-````json
+```js
 {
     "plugins":
     {
@@ -452,7 +452,7 @@ Note that here the `instances` property is also an array (like `engines`), so we
 
         {
             "uid": "simplebutton-next",
-            "engine": "com.pluginmaker.simplebutton",
+            "engine": "gopro.forge.simplebutton",
 
             "options":
             {
@@ -465,7 +465,7 @@ Note that here the `instances` property is also an array (like `engines`), so we
         }]
     }
 }
-````
+```
 
 ### Bind an action
 
@@ -473,7 +473,7 @@ The previously added buttons do nothing for now: they need to be bind to an acti
 
 First let's add an action. For this, we can add one on the root of the `tour.json`:
 
-````json
+```js
 {
     "actions":
     [
@@ -487,13 +487,13 @@ First let's add an action. For this, we can add one on the root of the `tour.jso
         }
     ]
 }
-````
+```
 
 In an action, we have access to all the public API of the library. See the full documentation to see all available methods. In `target` is an object or a chain of objects. For example, here we want to affect the `tour`, so we will get something we know, the `viewer`, and get the `tour` from it. Then we can call a method on it. The `method` object is here for that: we are calling the `previousScene` in our example.
 
 When this action will be called by its uid, it will trigger a changement in the current scene, and show the previous scene. We can add then a similar action, but for going to the next scene.
 
-````json
+```js
 {
     "actions":
     [
@@ -512,11 +512,11 @@ When this action will be called by its uid, it will trigger a changement in the 
         }
     ]
 }
-````
+```
 
 These two actions can now be called ! To trigger an action, we need to bind it to an event. Let's consult the list of available events on a *SimpleButton*:
 
-````json
+```js
 {
     "events":
     {
@@ -526,28 +526,28 @@ These two actions can now be called ! To trigger an action, we need to bind it t
         "onDown": null
     }
 }
-````
+```
 
 There are four events we can react to, the most basic ones for a button. The most appropriate event for our case is the click on a button. In the configuration of the *Previous* button, we can edit the `events` object for something like that :
 
-````json
+```js
 {
     "events":
     {
         "onClick": "action-previous"
     }
 }
-````
+```
 
 We simply assign the `uid` of the action to the event we want. We can do the same for the *Next* button :
 
-````json
+```js
 {
     "events":
     {
         "onClick": "action-next"
     }
 }
-````
+```
 
 And now we have a tour that have multiple scenes and is navigable !

@@ -1,6 +1,6 @@
-# KEN Samples
+# ForgeJS Samples
 
-This repository contains very simple samples, demonstrating the capatibilities of Kolor Eyes Next. [Another document](EXPLANATIONS.md) goes into details about some of the projects. It is recommended to read it if it is your first time creating a project.
+This repository contains very simple samples, demonstrating the capatibilities of ForgeJS. [Another document](EXPLANATIONS.md) goes into details about some of the projects. It is recommended to read it if it is your first time creating a project.
 
 ## Test it
 
