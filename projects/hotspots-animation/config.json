@@ -206,35 +206,35 @@
                     {
                         "time": 6000,
                         "data": {
-                            "position": { "radius": 200, "theta": 110, "phi": -10 },
+                            "position": { "theta": 110, "phi": -10 },
                             "rotation": { "x": 0, "y": 0, "z": 0 }
                         }
                     },
                     {
                         "time": 7000,
                         "data": {
-                            "position": { "radius": 200, "theta": 130, "phi": -15 },
+                            "position": { "theta": 130, "phi": -15 },
                             "rotation": { "x": 0, "y": 0, "z": 0 }
                         }
                     },
                     {
                         "time": 10000,
                         "data": {
-                            "position": { "radius": 200, "theta": 180, "phi": -15 },
+                            "position": { "theta": 180 },
                             "rotation": { "x": 0, "y": 0, "z": 0 }
                         }
                     },
                     {
                         "time": 15000,
                         "data": {
-                            "position": { "radius": 200, "theta": -90, "phi": -15 },
+                            "position": { "theta": -90 },
                             "rotation": { "x": 0, "y": 0, "z": 0 }
                         }
                     },
                     {
                         "time": 20000,
                         "data": {
-                            "position": { "radius": 200, "theta": 6, "phi": -15 },
+                            "position": { "theta": 6 },
                             "rotation": { "x": 0, "y": 0, "z": 0 }
                         }
                     }
@@ -259,77 +259,77 @@
                     {
                         "time": 6000,
                         "data": {
-                            "position": { "radius": 400, "theta": 25, "phi": 20 },
+                            "position": { "theta": 25, "phi": 20 },
                             "rotation": { "x": 0, "y": 0, "z": 0 }
                         }
                     },
                     {
                         "time": 8000,
                         "data": {
-                            "position": { "radius": 400, "theta": 40, "phi": 45 },
+                            "position": { "theta": 40, "phi": 45 },
                             "rotation": { "x": 0, "y": 0, "z": 0 }
                         }
                     },
                     {
                         "time": 10000,
                         "data": {
-                            "position": { "radius": 400, "theta": 25, "phi": 60 },
+                            "position": { "theta": 25, "phi": 60 },
                             "rotation": { "x": 0, "y": 0, "z": 0 }
                         }
                     },
                     {
                         "time": 12000,
                         "data": {
-                            "position": { "radius": 400, "theta": 45, "phi": 75 },
+                            "position": { "theta": 45, "phi": 75 },
                             "rotation": { "x": 0, "y": 0, "z": 0 }
                         }
                     },
                     {
                         "time": 14000,
                         "data": {
-                            "position": { "radius": 400, "theta": 180, "phi": 75 },
+                            "position": { "theta": 180, "phi": 75 },
                             "rotation": { "x": 0, "y": 0, "z": 0 }
                         }
                     },
                     {
                         "time": 16000,
                         "data": {
-                            "position": { "radius": 400, "theta": -90, "phi": 80 },
+                            "position": { "theta": -90, "phi": 80 },
                             "rotation": { "x": 0, "y": 0, "z": 0 }
                         }
                     },
                     {
                         "time": 18000,
                         "data": {
-                            "position": { "radius": 400, "theta": 6, "phi": 85 },
+                            "position": { "theta": 6, "phi": 85 },
                             "rotation": { "x": 0, "y": 0, "z": 0 }
                         }
                     },
                     {
                         "time": 20000,
                         "data": {
-                            "position": { "radius": 400, "theta": -15, "phi": 65 },
+                            "position": { "theta": -15, "phi": 65 },
                             "rotation": { "x": 0, "y": 0, "z": 0 }
                         }
                     },
                     {
                         "time": 22000,
                         "data": {
-                            "position": { "radius": 400, "theta": 2, "phi": 35 },
+                            "position": { "theta": 2, "phi": 35 },
                             "rotation": { "x": 0, "y": 0, "z": 0 }
                         }
                     },
                     {
                         "time": 24000,
                         "data": {
-                            "position": { "radius": 400, "theta": 15, "phi": 5 },
+                            "position": { "theta": 15, "phi": 5 },
                             "rotation": { "x": 0, "y": 0, "z": 0 }
                         }
                     },
                     {
                         "time": 26000,
                         "data": {
-                            "position": { "radius": 400, "theta": 10, "phi": -5 },
+                            "position": { "theta": 10, "phi": -5 },
                             "rotation": { "x": 0, "y": 0, "z": 0 }
                         }
                     }
