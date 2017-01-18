@@ -307,7 +307,7 @@ KPlug.ChromaKey.prototype = {
         }
         else
         {
-            this._media = this.plugin.create.video(this._uid, null, KEN.VideoFormat.HTML5);
+            this._media = this.plugin.create.video(this._uid, null, FORGE.VideoFormat.HTML5);
             this._media.load([this._mediaURL]);
             this._media.onLoadedMetaData.addOnce(this._onMediaLoadComplete, this);
             this._media.onEnded.add(this._onVideoEnded, this);
@@ -360,8 +360,8 @@ KPlug.ChromaKey.prototype = {
      */
     _setBackground: function(value)
     {
-        this._backgroundRGB = KEN.Color.fromRgbaString(value);
-        this._backgroundYCrCb = KEN.Color.rgbToYcbcr(this._backgroundRGB);
+        this._backgroundRGB = FORGE.Color.fromRgbaString(value);
+        this._backgroundYCrCb = FORGE.Color.rgbToYcbcr(this._backgroundRGB);
         this._needsUpdate = true;
     },
 
@@ -383,7 +383,7 @@ KPlug.ChromaKey.prototype = {
      */
     _setSmoothness: function(value)
     {
-        this._smoothness = KEN.Math.clamp(value, 0, 1);
+        this._smoothness = FORGE.Math.clamp(value, 0, 1);
         this._needsUpdate = true;
     },
 
@@ -607,7 +607,7 @@ Object.defineProperty(KPlug.ChromaKey.prototype, "smoothness",
 /**
  * Get provider
  * @name KPlug.ChromaKey#provider
- * @type {KEN.Canvas}
+ * @type {FORGE.Canvas}
  */
 Object.defineProperty(KPlug.ChromaKey.prototype, "texture",
 {

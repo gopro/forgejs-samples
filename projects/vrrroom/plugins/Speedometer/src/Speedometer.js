@@ -39,7 +39,7 @@ KPlug.Speedometer.prototype = {
         this._setupVideo();
 
         // Create a timeline
-        this._timeline = new KEN.Timeline();
+        this._timeline = new FORGE.Timeline();
 
         // Create a div containing the informations
         this._container = this.plugin.create.displayObjectContainer();
@@ -81,9 +81,9 @@ KPlug.Speedometer.prototype = {
                 }
             }
         }
-        else if (KEN.UID.isTypeOf(this.plugin.options.source, "Plugin") === true)
+        else if (FORGE.UID.isTypeOf(this.plugin.options.source, "Plugin") === true)
         {
-            var plugin = KEN.UID.get(this.plugin.options.source);
+            var plugin = FORGE.UID.get(this.plugin.options.source);
 
             if (plugin.instanceReady === true)
             {
@@ -143,7 +143,7 @@ KPlug.Speedometer.prototype = {
 
         for (var i = 0, ii = data.length; i < ii; i++)
         {
-            keyframe = new KEN.Keyframe(data[i].ts, data[i].data);
+            keyframe = new FORGE.Keyframe(data[i].ts, data[i].data);
             keyframes.push(keyframe);
         }
 

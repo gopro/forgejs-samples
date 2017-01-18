@@ -73,9 +73,9 @@ KPlug.Ranking.prototype = {
                 }
             }
         }
-        else if (KEN.UID.isTypeOf(this.plugin.options.source, "Plugin") === true)
+        else if (FORGE.UID.isTypeOf(this.plugin.options.source, "Plugin") === true)
         {
-            var plugin = KEN.UID.get(this.plugin.options.source);
+            var plugin = FORGE.UID.get(this.plugin.options.source);
 
             if (plugin.instanceReady === true)
             {
@@ -90,7 +90,7 @@ KPlug.Ranking.prototype = {
             }
         }
 
-        if (this._video !== null && (KEN.Utils.isTypeOf(this._video, "VideoHTML5") === true || KEN.Utils.isTypeOf(this._video, "VideoDash") === true))
+        if (this._video !== null && (FORGE.Utils.isTypeOf(this._video, "VideoHTML5") === true || FORGE.Utils.isTypeOf(this._video, "VideoDash") === true))
         {
             this._video.onSeeked.add(this._onSeekedHandler, this);
             this._video.onPlay.add(this._onPlayHandler, this);
@@ -238,12 +238,12 @@ KPlug.Ranking.prototype = {
             var keyframes = [];
             for (var j = 0, jj = driver.keyframes.length, keyframe; j < jj; j++)
             {
-                keyframe = new KEN.Keyframe(driver.keyframes[j].ts, driver.keyframes[j].rank);
+                keyframe = new FORGE.Keyframe(driver.keyframes[j].ts, driver.keyframes[j].rank);
                 keyframes.push(keyframe);
             }
 
             // Create a timeline for the keyframes
-            driver.timeline = new KEN.Timeline(keyframes);
+            driver.timeline = new FORGE.Timeline(keyframes);
 
             // Add all of this in the main container of the plugin
             this._container.addChild(driver.container);

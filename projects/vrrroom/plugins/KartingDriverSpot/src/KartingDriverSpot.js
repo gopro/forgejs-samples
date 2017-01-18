@@ -20,7 +20,7 @@ KPlug.KartingDriverSpot.prototype = {
      */
     boot: function()
     {
-        // Create a KEN.Canvas instance
+        // Create a FORGE.Canvas instance
         this._canvas = this.plugin.create.canvas();
 
         // Set properties to canvas

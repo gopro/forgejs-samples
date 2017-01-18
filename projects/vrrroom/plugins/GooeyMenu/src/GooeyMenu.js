@@ -23,7 +23,7 @@ KPlug.GooeyMenu.prototype = {
      */
     boot: function()
     {
-        // Create a KEN.DisplayObjectContainer instance
+        // Create a FORGE.DisplayObjectContainer instance
         this._container = this.plugin.create.displayObjectContainer();
 
         // Set properties to the div

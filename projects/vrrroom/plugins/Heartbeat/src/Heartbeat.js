@@ -15,10 +15,10 @@ KPlug.Heartbeat = function()
     // Main container of the plugin
     this._container = null;
 
-    // The KEN.Sprite containing the animation for the heart
+    // The FORGE.Sprite containing the animation for the heart
     this._heartbeat = null;
 
-    // The KEN.TextField containing the beating value
+    // The FORGE.TextField containing the beating value
     this._heartbeatPulse = null;
 
     // Timeline for sync
@@ -39,7 +39,7 @@ KPlug.Heartbeat.prototype = {
         this._setupVideo();
 
         // Create a timeline
-        this._timeline = new KEN.Timeline();
+        this._timeline = new FORGE.Timeline();
 
         // Create a div containing the informations
         this._container = this.plugin.create.displayObjectContainer();
@@ -81,9 +81,9 @@ KPlug.Heartbeat.prototype = {
                 }
             }
         }
-        else if (KEN.UID.isTypeOf(this.plugin.options.source, "Plugin") === true)
+        else if (FORGE.UID.isTypeOf(this.plugin.options.source, "Plugin") === true)
         {
-            var plugin = KEN.UID.get(this.plugin.options.source);
+            var plugin = FORGE.UID.get(this.plugin.options.source);
 
             if (plugin.instanceReady === true)
             {
@@ -98,7 +98,7 @@ KPlug.Heartbeat.prototype = {
             }
         }
 
-        if (KEN.Utils.isTypeOf(this._video, "VideoHTML5") === true || KEN.Utils.isTypeOf(this._video, "VideoDash") === true)
+        if (FORGE.Utils.isTypeOf(this._video, "VideoHTML5") === true || FORGE.Utils.isTypeOf(this._video, "VideoDash") === true)
         {
             this._video.onSeeked.add(this._onSeekedHandler, this);
             this._video.onPlay.add(this._onPlayHandler, this);
@@ -161,7 +161,7 @@ KPlug.Heartbeat.prototype = {
         var keyframe;
         for (var i = 0, ii = data.length; i < ii; i++)
         {
-            keyframe = new KEN.Keyframe(data[i].ts, data[i].data);
+            keyframe = new FORGE.Keyframe(data[i].ts, data[i].data);
             keyframes.push(keyframe);
         }
 
