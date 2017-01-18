@@ -1,20 +1,20 @@
 {
-  "name": "ken-samples",
+  "name": "ForgeJS Samples",
   "version": "0.3.0",
-  "description": "A collection of simple samples to demonstrate the capabilities of KEN",
+  "description": "A collection of samples to demonstrate the capabilities of ForgeJS",
+  "author": "GoPro, Inc. | Kolor SAS",
+  "license": "Apache 2.0",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
   },
   "repository": {
     "type": "git",
-    "url": "http://gitlab.kolor.com/koloreyes/koloreyesnextsamples.git"
+    "url": "https://github.com/gopro/gopro-ken-samples.git"
   },
   "keywords": [
     "ken",
     "vr",
     "gopro"
-  ],
-  "author": "GoPro - Kolor team",
-  "license": "Apache-2.0"
+  ]
 }
