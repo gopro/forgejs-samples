@@ -1,13 +1,13 @@
-var KPlug = KPlug || {};
+var ForgePlugins = ForgePlugins || {};
 
 /**
  * ChromaKey plugin
  * Extract foreground with chromakey algorithm
  * Author / Provider modes to prepare settings and them use them
  *
- * @constructor KPlug.ChromaKey
+ * @constructor ForgePlugins.ChromaKey
  */
-KPlug.ChromaKey = function()
+ForgePlugins.ChromaKey = function()
 {
     // Flags
     this._mediaReady = false;
@@ -61,13 +61,13 @@ KPlug.ChromaKey = function()
     this._onWorkerErrorBound = null;
 };
 
-KPlug.ChromaKey.WORKER_STATE = {
+ForgePlugins.ChromaKey.WORKER_STATE = {
     INIT: -1, // worker is not ready
     IDLE: 0, // worker is ready, but nothing happens
     PROCESSING: 1 // worker is processing current frame, wait for response
 };
 
-KPlug.ChromaKey.prototype = {
+ForgePlugins.ChromaKey.prototype = {
 
     /**
      * Boot sequence
@@ -89,7 +89,7 @@ KPlug.ChromaKey.prototype = {
 
         if (this._authoring)
         {
-            this._datGUIControls = new KPlug.ChromaKeySettings(this);
+            this._datGUIControls = new ForgePlugins.ChromaKeySettings(this);
             this._initGUI();
         }
 
@@ -141,7 +141,7 @@ KPlug.ChromaKey.prototype = {
             this._setMedia(this.plugin.options.url);
         }
 
-        this._workerState = KPlug.ChromaKey.WORKER_STATE.IDLE;
+        this._workerState = ForgePlugins.ChromaKey.WORKER_STATE.IDLE;
     },
 
     /**
@@ -197,7 +197,7 @@ KPlug.ChromaKey.prototype = {
      */
     update: function()
     {
-        if (this._workerState !== KPlug.ChromaKey.WORKER_STATE.IDLE ||
+        if (this._workerState !== ForgePlugins.ChromaKey.WORKER_STATE.IDLE ||
             this._mediaReady === false ||
             this._canvasReady === false)
         {
@@ -436,7 +436,7 @@ KPlug.ChromaKey.prototype = {
     _onWorkerMessage: function(msg)
     {
         // this._log("Compute frame done");
-        this._workerState = KPlug.ChromaKey.WORKER_STATE.IDLE;
+        this._workerState = ForgePlugins.ChromaKey.WORKER_STATE.IDLE;
 
         if (msg.data.success === true)
         {
@@ -454,7 +454,7 @@ KPlug.ChromaKey.prototype = {
 
     _onWorkerError: function(event)
     {
-        this._workerState = KPlug.ChromaKey.WORKER_STATE.IDLE;
+        this._workerState = ForgePlugins.ChromaKey.WORKER_STATE.IDLE;
 
         if (typeof event.message !== "undefined")
         {
@@ -508,7 +508,7 @@ KPlug.ChromaKey.prototype = {
             threshold: this._threshold,
             smoothness: this._smoothness
         }
-        this._workerState = KPlug.ChromaKey.WORKER_STATE.PROCESSING;
+        this._workerState = ForgePlugins.ChromaKey.WORKER_STATE.PROCESSING;
         this._worker.postMessage(workerParams);
     },
 
@@ -529,10 +529,10 @@ KPlug.ChromaKey.prototype = {
 
 /**
  * Get and set media URL
- * @name KPlug.ChromaKey#url
+ * @name ForgePlugins.ChromaKey#url
  * @type {String}
  */
-Object.defineProperty(KPlug.ChromaKey.prototype, "url",
+Object.defineProperty(ForgePlugins.ChromaKey.prototype, "url",
 {
     get: function()
     {
@@ -552,10 +552,10 @@ Object.defineProperty(KPlug.ChromaKey.prototype, "url",
 
 /**
  * Get and set background color (RGB)
- * @name KPlug.ChromaKey#background
+ * @name ForgePlugins.ChromaKey#background
  * @type {String}
  */
-Object.defineProperty(KPlug.ChromaKey.prototype, "background",
+Object.defineProperty(ForgePlugins.ChromaKey.prototype, "background",
 {
     get: function()
     {
@@ -570,10 +570,10 @@ Object.defineProperty(KPlug.ChromaKey.prototype, "background",
 
 /**
  * Get and set threshold
- * @name KPlug.ChromaKey#threshold
+ * @name ForgePlugins.ChromaKey#threshold
  * @type {String}
  */
-Object.defineProperty(KPlug.ChromaKey.prototype, "threshold",
+Object.defineProperty(ForgePlugins.ChromaKey.prototype, "threshold",
 {
     get: function()
     {
@@ -588,10 +588,10 @@ Object.defineProperty(KPlug.ChromaKey.prototype, "threshold",
 
 /**
  * Get and set smoothness
- * @name KPlug.ChromaKey#smoothness
+ * @name ForgePlugins.ChromaKey#smoothness
  * @type {String}
  */
-Object.defineProperty(KPlug.ChromaKey.prototype, "smoothness",
+Object.defineProperty(ForgePlugins.ChromaKey.prototype, "smoothness",
 {
     get: function()
     {
@@ -606,10 +606,10 @@ Object.defineProperty(KPlug.ChromaKey.prototype, "smoothness",
 
 /**
  * Get provider
- * @name KPlug.ChromaKey#provider
+ * @name ForgePlugins.ChromaKey#provider
  * @type {FORGE.Canvas}
  */
-Object.defineProperty(KPlug.ChromaKey.prototype, "texture",
+Object.defineProperty(ForgePlugins.ChromaKey.prototype, "texture",
 {
     get: function()
     {

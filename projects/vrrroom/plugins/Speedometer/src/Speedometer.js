@@ -1,10 +1,10 @@
-var KPlug = KPlug || {};
+var ForgePlugins = ForgePlugins || {};
 
 /**
  * This plugin displays a simple speedometer on the screen, indicating the speed
  * of the vehicule the camera is in.
  */
-KPlug.Speedometer = function()
+ForgePlugins.Speedometer = function()
 {
     // The reference to the video, for synchronization
     this._video = null;
@@ -28,7 +28,7 @@ KPlug.Speedometer = function()
     this._keyframe = null;
 };
 
-KPlug.Speedometer.prototype = {
+ForgePlugins.Speedometer.prototype = {
 
     /**
      * The boot function

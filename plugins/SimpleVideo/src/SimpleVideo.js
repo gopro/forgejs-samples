@@ -1,23 +1,23 @@
-var KPlug = KPlug || {};
+var ForgePlugins = ForgePlugins || {};
 
 /**
- * This plugin is a wrapper around KEN.Video, allowing someone to create a
+ * This plugin is a wrapper around FORGE.Video, allowing someone to create a
  * video from a tour.json, without having to access the javascript code and
- * instantiate itself a KEN.Video.
+ * instantiate itself a FORGE.Video.
  */
-KPlug.SimpleVideo = function()
+ForgePlugins.SimpleVideo = function()
 {
     this._video = null;
 };
 
-KPlug.SimpleVideo.prototype = {
+ForgePlugins.SimpleVideo.prototype = {
 
     /**
      * The boot function
      */
     boot: function()
     {
-        // Create a KEN.Video instance
+        // Create a FORGE.Video instance
         this._video = this.plugin.create.video(this.plugin.uid + "-video", this.plugin.data.video, this.plugin.data.streaming);
 
         // Set properties to the image
@@ -130,7 +130,7 @@ KPlug.SimpleVideo.prototype = {
 /**
  * Get the video object.
  */
-Object.defineProperty(KPlug.SimpleVideo.prototype, "video",
+Object.defineProperty(ForgePlugins.SimpleVideo.prototype, "video",
 {
     get: function()
     {

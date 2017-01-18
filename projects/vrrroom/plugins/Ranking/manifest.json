@@ -1,5 +1,5 @@
 {
-    "uid": "com.gopro.ranking",
+    "uid": "org.forgejs.ranking",
     "name": "Ranking",
     "shortName": "ranking",
     "version": "1.0.0",
@@ -9,7 +9,7 @@
     "author":
     {
         "name": "GoPro",
-        "website": "hhttp://kenprivatebeta.kolor.com/"
+        "website": "hhttps://forgejs.org"
     },
 
     "licence": "Apache 2",
@@ -59,5 +59,5 @@
         "src/Ranking.js"
     ],
 
-    "constructor": "KPlug.Ranking"
+    "constructor": "ForgePlugins.Ranking"
 }

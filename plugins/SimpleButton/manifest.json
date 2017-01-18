@@ -1,5 +1,5 @@
 {
-    "uid": "com.gopro.simplebutton",
+    "uid": "org.forgejs.simplebutton",
     "name": "Simple Button",
     "slug": "simplebutton",
     "version": "1.0.0",
@@ -9,7 +9,7 @@
     "author":
     {
         "name": "GoPro",
-        "website": "http://kenprivatebeta.kolor.com/"
+        "website": "https://forgejs.org"
     },
 
     "licence": "Apache 2",
@@ -56,5 +56,5 @@
         "src/SimpleButton.js"
     ],
 
-    "constructor": "KPlug.SimpleButton"
+    "constructor": "ForgePlugins.SimpleButton"
 }

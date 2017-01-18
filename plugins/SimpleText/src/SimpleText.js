@@ -1,24 +1,24 @@
-var KPlug = KPlug || {};
+var ForgePlugins = ForgePlugins || {};
 
 /**
- * This plugin is a wrapper around KEN.TextField, allowing someone to create a
+ * This plugin is a wrapper around FORGE.TextField, allowing someone to create a
  * text field from a tour.json, without having to access the javascript code and
- * instantiate itself a KEN.TextField.
+ * instantiate itself a FORGE.TextField.
  */
-KPlug.SimpleText = function()
+ForgePlugins.SimpleText = function()
 {
-    // The text field, a KEN.TextField instance
+    // The text field, a FORGE.TextField instance
     this._textField = null;
 };
 
-KPlug.SimpleText.prototype = {
+ForgePlugins.SimpleText.prototype = {
 
     /**
      * The boot function
      */
     boot: function()
     {
-        // Create a KEN.TextField instance
+        // Create a FORGE.TextField instance
         this._textField = this.plugin.create.textField(this.plugin.options.config);
 
         // Set properties to the text field

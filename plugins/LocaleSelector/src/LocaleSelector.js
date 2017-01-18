@@ -1,11 +1,11 @@
 
-var KPlug = KPlug || {};
+var ForgePlugins = ForgePlugins || {};
 
 /**
  * Plugin allowing a selection of the locale, with using a flag for each
  * language. There is no limit in the number of supported locale, only the limit of the screen.
  */
-KPlug.LocaleSelector = function()
+ForgePlugins.LocaleSelector = function()
 {
     //
     this._container = null;
@@ -23,7 +23,7 @@ KPlug.LocaleSelector = function()
     this._flagMargin = 0;
 };
 
-KPlug.LocaleSelector.prototype =
+ForgePlugins.LocaleSelector.prototype =
 {
     /**
      * The boot function, initialize the container of the flags, and then the
@@ -63,14 +63,14 @@ KPlug.LocaleSelector.prototype =
     },
 
     /**
-     * Create a flag (from a KEN.Button) for each locale.
+     * Create a flag (from a FORGE.Button) for each locale.
      * @param  {string} locale - the name of the locale
      */
     _createFlag: function(locale)
     {
         // Get the location of the folder containing the flags
         var pluginUrl = this.plugin.fullUrl;
-        pluginUrl += KEN.Utils.endsWith(pluginUrl,"/") ? "" : "/";
+        pluginUrl += FORGE.Utils.endsWith(pluginUrl,"/") ? "" : "/";
 
         var imgUrl = this.plugin.options.baseURL.replace("{{plugin_url}}", pluginUrl);
             imgUrl += this.plugin.options.fileName.replace("{{locale}}", locale);
@@ -102,7 +102,7 @@ KPlug.LocaleSelector.prototype =
             }
         };
 
-        // The created flag is a KEN.Button
+        // The created flag is a FORGE.Button
         var flag = this.plugin.create.button(skinConfig);
         flag.width = this._flagWidth;
         flag.x = this._flags.length * (flag.width + this._flagMargin);

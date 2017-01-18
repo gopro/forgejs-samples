@@ -1,5 +1,5 @@
 {
-    "uid": "com.gopro.googlemaps",
+    "uid": "org.forgejs.googlemaps",
     "name": "Google Maps",
     "shortName": "maps",
     "version": "1.0.0",
@@ -9,7 +9,7 @@
     "author":
     {
         "name": "GoPro",
-        "website": "http://kenprivatebeta.kolor.com/"
+        "website": "https://forgejs.org"
     },
 
     "licence": "Apache 2",
@@ -168,5 +168,5 @@
         "src/Maps.js"
     ],
 
-    "constructor": "KPlug.GoogleMaps"
+    "constructor": "ForgePlugins.GoogleMaps"
 }

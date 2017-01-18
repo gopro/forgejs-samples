@@ -1,10 +1,10 @@
-var KPlug = KPlug || {};
+var ForgePlugins = ForgePlugins || {};
 
 /**
  * This plugin is a custom one for the VROOM project, displaying on top of a
  * driver (in the selection screen) information about him.
  */
-KPlug.KartingDriverSpot = function()
+ForgePlugins.KartingDriverSpot = function()
 {
     // Information will be drawn in a canvas
     this._canvas = null;
@@ -13,7 +13,7 @@ KPlug.KartingDriverSpot = function()
     this._textColor = "#fff";
 };
 
-KPlug.KartingDriverSpot.prototype = {
+ForgePlugins.KartingDriverSpot.prototype = {
 
     /**
      * The boot function
@@ -114,7 +114,7 @@ KPlug.KartingDriverSpot.prototype = {
 /**
  * Return the canvas, to use it with a parallax effect.
  */
-Object.defineProperty(KPlug.KartingDriverSpot.prototype, "texture",
+Object.defineProperty(ForgePlugins.KartingDriverSpot.prototype, "texture",
 {
     get: function()
     {

@@ -1,5 +1,5 @@
 {
-    "uid": "com.gopro.videocontrols",
+    "uid": "org.forgejs.videocontrols",
     "name": "Video Controls",
     "slug": "videocontrols",
     "version": "1.0.0",
@@ -8,7 +8,7 @@
     "author":
     {
         "name": "GoPro",
-        "website": "http://kenprivatebeta.kolor.com/"
+        "website": "https://forgejs.org"
     },
 
     "licence": "Apache 2",
@@ -24,5 +24,5 @@
         "src/VideoControls.js"
     ],
 
-    "constructor": "VideoControls"
+    "constructor": "ForgePlugins.VideoControls"
 }

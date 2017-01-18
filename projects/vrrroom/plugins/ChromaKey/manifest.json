@@ -1,5 +1,5 @@
 {
-    "uid": "com.gopro.chromakey",
+    "uid": "org.forgejs.chromakey",
     "name": "Photo / Video chromakey effect",
     "slug": "chromakey",
     "version": "1.0.0",
@@ -9,7 +9,7 @@
     "author":
     {
         "name": "GoPro",
-        "website": "http://kenprivatebeta.kolor.com/"
+        "website": "https://forgejs.org"
     },
 
     "licence": "Apache 2",
@@ -41,5 +41,5 @@
         "src/ChromaKeyAuthoring.js"
     ],
 
-    "constructor": "KPlug.ChromaKey"
+    "constructor": "ForgePlugins.ChromaKey"
 }

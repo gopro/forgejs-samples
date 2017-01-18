@@ -1,24 +1,24 @@
-var KPlug = KPlug || {};
+var ForgePlugins = ForgePlugins || {};
 
 /**
- * This plugin is a wrapper around KEN.Button, allowing someone to create a
+ * This plugin is a wrapper around FORGE.Button, allowing someone to create a
  * button from a tour.json, without having to access the javascript code and
- * instantiate itself a KEN.Button.
+ * instantiate itself a FORGE.Button.
  */
-KPlug.SimpleButton = function()
+ForgePlugins.SimpleButton = function()
 {
-    // The button, a KEN.Button instance
+    // The button, a FORGE.Button instance
     this._btn = null;
 };
 
-KPlug.SimpleButton.prototype = {
+ForgePlugins.SimpleButton.prototype = {
 
     /**
      * The boot function
      */
     boot: function()
     {
-        // Create a KEN.Button instance
+        // Create a FORGE.Button instance
         this._btn = this.plugin.create.button();
 
         // Set properties to the button
@@ -37,19 +37,19 @@ KPlug.SimpleButton.prototype = {
             // default state
             if (typeof this.plugin.options.skin.out !== "undefined")
             {
-                skin.out = KEN.Utils.extendMultipleObjects((this.plugin.options.defaultSkin === true ? KEN.ButtonSkin.DEFAULT_STATE : {}), skin.out, this.plugin.options.skin.out);
+                skin.out = FORGE.Utils.extendMultipleObjects((this.plugin.options.defaultSkin === true ? FORGE.ButtonSkin.DEFAULT_STATE : {}), skin.out, this.plugin.options.skin.out);
             }
 
             // skin.out is the default skin state for over state
             if (typeof this.plugin.options.skin.over !== "undefined")
             {
-                skin.over = KEN.Utils.extendMultipleObjects(skin.out, skin.over, this.plugin.options.skin.over);
+                skin.over = FORGE.Utils.extendMultipleObjects(skin.out, skin.over, this.plugin.options.skin.over);
             }
 
             // skin.out is the default skin state for down state
             if (typeof this.plugin.options.skin.down !== "undefined")
             {
-                skin.down = KEN.Utils.extendMultipleObjects(skin.out, skin.down, this.plugin.options.skin.down);
+                skin.down = FORGE.Utils.extendMultipleObjects(skin.out, skin.down, this.plugin.options.skin.down);
             }
         }
 

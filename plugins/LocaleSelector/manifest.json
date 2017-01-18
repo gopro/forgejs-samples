@@ -1,5 +1,5 @@
 {
-    "uid": "com.gopro.localeselector",
+    "uid": "org.forgejs.localeselector",
     "name": "Locale Selector",
     "slug": "localeselector",
     "version": "1.0.0",
@@ -10,7 +10,7 @@
     "author":
     {
         "name": "GoPro",
-        "website": "http://kenprivatebeta.kolor.com/"
+        "website": "https://forgejs.org"
     },
 
     "licence": "Apache 2",
@@ -43,5 +43,5 @@
         "src/LocaleSelector.js"
     ],
 
-    "constructor": "KPlug.LocaleSelector"
+    "constructor": "ForgePlugins.LocaleSelector"
 }

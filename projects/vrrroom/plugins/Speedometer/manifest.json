@@ -1,5 +1,5 @@
 {
-    "uid": "com.gopro.speedometer",
+    "uid": "org.forgejs.speedometer",
     "name": "Speedometer",
     "slug": "speedometer",
     "version": "1.0.0",
@@ -9,7 +9,7 @@
     "author":
     {
         "name": "GoPro",
-        "website": "http://kenprivatebeta.kolor.com/"
+        "website": "https://forgejs.org"
     },
 
     "licence": "Apache 2",
@@ -49,5 +49,5 @@
         "src/Speedometer.js"
     ],
 
-    "constructor": "KPlug.Speedometer"
+    "constructor": "ForgePlugins.Speedometer"
 }

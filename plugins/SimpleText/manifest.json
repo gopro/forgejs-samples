@@ -1,5 +1,5 @@
 {
-    "uid": "com.gopro.simpletext",
+    "uid": "org.forgejs.simpletext",
     "name": "Simple Text",
     "slug": "simpletext",
     "version": "1.0.0",
@@ -9,7 +9,7 @@
     "author":
     {
         "name": "GoPro",
-        "website": "http://kenprivatebeta.kolor.com/"
+        "website": "https://forgejs.org"
     },
 
     "licence": "Apache 2",
@@ -41,5 +41,5 @@
         "src/SimpleText.js"
     ],
 
-    "constructor": "KPlug.SimpleText"
+    "constructor": "ForgePlugins.SimpleText"
 }

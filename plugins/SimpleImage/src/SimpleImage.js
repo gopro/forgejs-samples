@@ -1,24 +1,24 @@
-var KPlug = KPlug || {};
+var ForgePlugins = ForgePlugins || {};
 
 /**
- * This plugin is a wrapper around KEN.Image, allowing someone to create a
+ * This plugin is a wrapper around FORGE.Image, allowing someone to create a
  * image from a tour.json, without having to access the javascript code and
- * instantiate itself a KEN.Image.
+ * instantiate itself a FORGE.Image.
  */
-KPlug.SimpleImage = function()
+ForgePlugins.SimpleImage = function()
 {
-    // The image, a KEN.Image instance
+    // The image, a FORGE.Image instance
     this._image = null;
 };
 
-KPlug.SimpleImage.prototype = {
+ForgePlugins.SimpleImage.prototype = {
 
     /**
      * The boot function
      */
     boot: function()
     {
-        // The config for KEN.Image constructor
+        // The config for FORGE.Image constructor
         var config = {
             width: this.plugin.options.width,
             height: this.plugin.options.height,
@@ -29,7 +29,7 @@ KPlug.SimpleImage.prototype = {
             maximized: this.plugin.options.maximized
         };
 
-        // Create a KEN.Image instance
+        // Create a FORGE.Image instance
         this._image = this.plugin.create.image(config, false);
 
         // Set properties to the image

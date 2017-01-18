@@ -1,4 +1,6 @@
-VideoControls = function()
+var ForgePlugins = ForgePlugins || {};
+
+ForgePlugins.VideoControls = function()
 {
     this._video = null;
 
@@ -43,9 +45,7 @@ VideoControls = function()
     this._spinner = null;
 };
 
-VideoControls.prototype.constructor = VideoControls;
-
-VideoControls.prototype =
+ForgePlugins.VideoControls.prototype =
 {
 
     boot: function()
@@ -86,14 +86,14 @@ VideoControls.prototype =
 
         //Playback button ================================
 
-        var playSkin = new KEN.ButtonSkin("play");
+        var playSkin = new FORGE.ButtonSkin("play");
         playSkin.out.image = {key: "play-out", url: this.plugin.fullUrl+"assets/button-play.svg"};
         playSkin.out.align = "center";
         playSkin.out.autoWidth = false;
         playSkin.out.autoHeight = false;
         playSkin.out.background = "#00A3DA";
 
-        var pauseSkin = new KEN.ButtonSkin("pause");
+        var pauseSkin = new FORGE.ButtonSkin("pause");
         pauseSkin.out.image = {key: "pause-out", url: this.plugin.fullUrl+"assets/button-pause.svg"};
         pauseSkin.out.align = "center";
         pauseSkin.out.autoWidth = false;
@@ -124,19 +124,19 @@ VideoControls.prototype =
 
         this._volumeContainerTween = this.plugin.create.tween(this._volumeContainer);
 
-        var volume0 = new KEN.ButtonSkin("volume-0");
+        var volume0 = new FORGE.ButtonSkin("volume-0");
         volume0.out.image = {key: "volume-0", url: this.plugin.fullUrl+"assets/sound-state-0.svg"};
         volume0.out.align = "center";
         volume0.out.autoWidth = false;
         volume0.out.autoHeight = false;
 
-        var volume1 = new KEN.ButtonSkin("volume-1");
+        var volume1 = new FORGE.ButtonSkin("volume-1");
         volume1.out.image = {key: "volume-1", url: this.plugin.fullUrl+"assets/sound-state-1.svg"};
         volume1.out.align = "center";
         volume1.out.autoWidth = false;
         volume1.out.autoHeight = false;
 
-        var volume2 = new KEN.ButtonSkin("volume-2");
+        var volume2 = new FORGE.ButtonSkin("volume-2");
         volume2.out.image = {key: "volume-2", url: this.plugin.fullUrl+"assets/sound-state-2.svg"};
         volume2.out.align = "center";
         volume2.out.autoWidth = false;
@@ -153,7 +153,7 @@ VideoControls.prototype =
 
         this._volumeBar = this.plugin.create.canvas();
         this._volumeBar.pointer.enabled = true;
-        this._volumeBar.pointer.cursor = KEN.Pointer.cursors.POINTER;
+        this._volumeBar.pointer.cursor = FORGE.Pointer.cursors.POINTER;
         this._volumeBar.pointer.onClick.add(this._volumeBarClickHandler, this);
         this._volumeBar.background = "#211F20";
         this._volumeBar.width = "60px";
@@ -164,7 +164,7 @@ VideoControls.prototype =
 
         this._volumeCursor = this.plugin.create.image({key: "volume-cursor", url: "assets/sound-cursor.svg"});
         this._volumeCursor.pointer.enabled = true;
-        this._volumeCursor.pointer.cursor = KEN.Pointer.cursors.POINTER;
+        this._volumeCursor.pointer.cursor = FORGE.Pointer.cursors.POINTER;
         this._volumeCursor.top = 21;
         this._volumeCursor.drag.enabled = true;
         this._volumeCursor.drag.constrain = this._volumeBar;
@@ -221,19 +221,19 @@ VideoControls.prototype =
         this._seekBar.bottom = 60;
         this._seekBar.background = "rgb(33, 31, 32)";
         this._seekBar.pointer.enabled = true;
-        this._seekBar.pointer.cursor = KEN.Pointer.cursors.POINTER;
+        this._seekBar.pointer.cursor = FORGE.Pointer.cursors.POINTER;
         this._seekBar.pointer.onClick.add(this._seekBarClickHandler, this);
         this._bottomContainer.addChild(this._seekBar);
 
         //Fullscreen button =================================
 
-        var fsEnterSkin = new KEN.ButtonSkin("fs-enter");
+        var fsEnterSkin = new FORGE.ButtonSkin("fs-enter");
         fsEnterSkin.out.image = {key: "fs-enter", url: this.plugin.fullUrl+"assets/button-fs-enter.svg"};
         fsEnterSkin.out.autoWidth = false;
         fsEnterSkin.out.autoHeight = false;
         fsEnterSkin.out.align = "center";
 
-        var fsExitSkin = new KEN.ButtonSkin("fs-exit");
+        var fsExitSkin = new FORGE.ButtonSkin("fs-exit");
         fsExitSkin.out.image = {key: "fs-exit", url: this.plugin.fullUrl+"assets/button-fs-exit.svg"};
         fsExitSkin.out.autoWidth = false;
         fsExitSkin.out.autoHeight = false;
@@ -253,7 +253,7 @@ VideoControls.prototype =
 
         //Button showing the current quality in the bottom main button bar ================
 
-        var qualityMenuButtonSkin = new KEN.ButtonSkin("qualityMenu");
+        var qualityMenuButtonSkin = new FORGE.ButtonSkin("qualityMenu");
         qualityMenuButtonSkin.out.label = {value: "QUALITY", color: "white", fontFamily: "pfdintextprobold", fontSize: 18};
         qualityMenuButtonSkin.out.autoWidth = false;
         qualityMenuButtonSkin.out.autoHeight = false;
@@ -339,14 +339,14 @@ VideoControls.prototype =
         {
             qualities[i].name = this._qualityNames[i];
 
-            skin = new KEN.ButtonSkin("light");
+            skin = new FORGE.ButtonSkin("light");
             skin.out.label = {value: this._qualityNames[i], color: "white", fontFamily: "pfdintextprolight", fontSize: 28};
             skin.out.autoWidth = false;
             skin.out.autoHeight = false;
             skin.out.align = "center";
             qualitySkins.push(skin);
 
-            skin = new KEN.ButtonSkin("bold");
+            skin = new FORGE.ButtonSkin("bold");
             skin.out.label = {value: this._qualityNames[i], color: "white", fontFamily: "pfdintextprobold"};
             skin.out.autoWidth = false;
             skin.out.autoHeight = false;
@@ -382,13 +382,13 @@ VideoControls.prototype =
         this._qualityHighlightTween = this.plugin.create.tween(this._qualityHighlight);
 
         //Skin for the AUTO button
-        var skinAuto = new KEN.ButtonSkin("light");
+        var skinAuto = new FORGE.ButtonSkin("light");
         skinAuto.out.label = {value: "AUTO", color: "white", fontFamily: "pfdintextprolight", fontSize: 28};
         skinAuto.out.autoWidth = false;
         skinAuto.out.autoHeight = false;
         skinAuto.out.align = "center";
 
-        var skinAutoSelected = new KEN.ButtonSkin("bold");
+        var skinAutoSelected = new FORGE.ButtonSkin("bold");
         skinAutoSelected.out.label = {value: "AUTO", color: "white", fontFamily: "pfdintextprobold", fontSize: 28};
         skinAutoSelected.out.autoWidth = false;
         skinAutoSelected.out.autoHeight = false;
@@ -453,7 +453,7 @@ VideoControls.prototype =
 
     _volumeBarClickHandler: function(event)
     {
-        var offset = KEN.Dom.getMouseEventOffset(event.data);
+        var offset = FORGE.Dom.getMouseEventOffset(event.data);
         var volume = offset.x / this._volumeBar.pixelWidth;
         this._video.volume = volume;
     },
@@ -504,7 +504,7 @@ VideoControls.prototype =
 
     _qualityAutoButtonClickHandler: function()
     {
-        this._video.qualityMode = KEN.VideoQualityMode.AUTO;
+        this._video.qualityMode = FORGE.VideoQualityMode.AUTO;
     },
 
     _highlightQualityLabel: function(index)
@@ -518,7 +518,7 @@ VideoControls.prototype =
         var buttonIndex;
         var buttonBoldIndexes;
 
-        if(this._video.qualityMode === KEN.VideoQualityMode.AUTO)
+        if(this._video.qualityMode === FORGE.VideoQualityMode.AUTO)
         {
             buttonHiglightIndex = 0;
             buttonBoldIndexes = [0, (this._video.currentIndex + 1) ];
@@ -554,7 +554,7 @@ VideoControls.prototype =
 
     _onQualityRequestHandler: function(event)
     {
-        if(this._video.qualityMode === KEN.VideoQualityMode.MANUAL && this._qualityContainer !== null)
+        if(this._video.qualityMode === FORGE.VideoQualityMode.MANUAL && this._qualityContainer !== null)
         {
             this._updateQualityButtons();
             this._spinner.visible = true;
@@ -563,7 +563,7 @@ VideoControls.prototype =
 
     _onQualityChangeHandler: function()
     {
-        if(this._video.qualityMode === KEN.VideoQualityMode.AUTO && this._qualityContainer !== null)
+        if(this._video.qualityMode === FORGE.VideoQualityMode.AUTO && this._qualityContainer !== null)
         {
             this._updateQualityButtons();
         }
@@ -581,7 +581,7 @@ VideoControls.prototype =
 
     _onLoadedMetaDataHandler: function()
     {
-        this._totalTime.value = KEN.Utils.formatTime(this._video.duration, "M:S");
+        this._totalTime.value = FORGE.Utils.formatTime(this._video.duration, "M:S");
     },
 
     _onQualitiesLoadedHandler: function()
@@ -650,7 +650,7 @@ VideoControls.prototype =
             return;
         }
 
-        var offset = KEN.Dom.getMouseEventOffset(event.data);
+        var offset = FORGE.Dom.getMouseEventOffset(event.data);
         if(offset.y > this.viewer.container.pixelHeight - 130)
         {
             this._showButtonBar();
@@ -696,7 +696,7 @@ VideoControls.prototype =
 
     _seekBarClickHandler: function(event)
     {
-        var offset = KEN.Dom.getMouseEventOffset(event.data);
+        var offset = FORGE.Dom.getMouseEventOffset(event.data);
         var time = offset.x / this._seekBar.pixelWidth * this._video.duration;
         this._video.currentTime = time;
     },
@@ -745,7 +745,7 @@ VideoControls.prototype =
         this._seekBarDraw();
         this._volumeBarDraw();
 
-        this._currentTime.value = KEN.Utils.formatTime(this._video.currentTime, "M:S");
+        this._currentTime.value = FORGE.Utils.formatTime(this._video.currentTime, "M:S");
     },
 
     destroy: function()

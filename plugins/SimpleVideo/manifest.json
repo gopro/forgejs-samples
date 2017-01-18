@@ -1,5 +1,5 @@
 {
-    "uid": "com.gopro.simplevideo",
+    "uid": "org.forgejs.simplevideo",
     "name": "Simple Video",
     "shortName": "simplevideo",
     "version": "1.0.0",
@@ -9,7 +9,7 @@
     "author":
     {
         "name": "GoPro",
-        "website": "http://kenprivatebeta.kolor.com/"
+        "website": "https://forgejs.org"
     },
 
     "licence": "Apache 2",
@@ -55,5 +55,5 @@
         "src/SimpleVideo.js"
     ],
 
-    "constructor": "KPlug.SimpleVideo"
+    "constructor": "ForgePlugins.SimpleVideo"
 }

@@ -5,7 +5,7 @@
 /**
  * Update preview canvas
  */
-KPlug.ChromaKey.prototype.updatePreview = function()
+ForgePlugins.ChromaKey.prototype.updatePreview = function()
 {
     if (this._authoring === false || this._canvasReady === false || this._ui.previewCanvas.context2D === null || this._datGUIControls.showPreview === false || this._canvasDst === null || this._canvasSrc === null)
     {
@@ -37,7 +37,7 @@ KPlug.ChromaKey.prototype.updatePreview = function()
  * Has preview
  * @return {Boolean} true if plugin has a preview canvas
  */
-KPlug.ChromaKey.prototype.hasPreview = function()
+ForgePlugins.ChromaKey.prototype.hasPreview = function()
 {
     return this._ui.previewCanvas.visible;
 }
@@ -45,7 +45,7 @@ KPlug.ChromaKey.prototype.hasPreview = function()
 /**
  * Show preview canvas
  */
-KPlug.ChromaKey.prototype.showPreview = function()
+ForgePlugins.ChromaKey.prototype.showPreview = function()
 {
     this._ui.previewCanvas.visible = true;
     this._autoResizeContainer();
@@ -54,7 +54,7 @@ KPlug.ChromaKey.prototype.showPreview = function()
 /**
  * Hide preview canvas
  */
-KPlug.ChromaKey.prototype.hidePreview = function()
+ForgePlugins.ChromaKey.prototype.hidePreview = function()
 {
     this._ui.previewCanvas.visible = false;
     this._autoResizeContainer();
@@ -63,7 +63,7 @@ KPlug.ChromaKey.prototype.hidePreview = function()
 /**
  * Toggle play/pause
  */
-KPlug.ChromaKey.prototype.togglePlayPauseAuthoring = function()
+ForgePlugins.ChromaKey.prototype.togglePlayPauseAuthoring = function()
 {
     var datGuiController = null;
     for (var i = 0, ii = this._datGUI.__controllers.length; i < ii; i++)
@@ -97,7 +97,7 @@ KPlug.ChromaKey.prototype.togglePlayPauseAuthoring = function()
  * Init GUI objects
  * @private
  */
-KPlug.ChromaKey.prototype._initGUI = function()
+ForgePlugins.ChromaKey.prototype._initGUI = function()
 {
     this._log("init gui");
 
@@ -148,7 +148,7 @@ KPlug.ChromaKey.prototype._initGUI = function()
 /**
  * Destroy the GUI related stuff
  */
-KPlug.ChromaKey.prototype._destroyGUI = function()
+ForgePlugins.ChromaKey.prototype._destroyGUI = function()
 {
     if (this._ui.datguiContainer !== null)
     {
@@ -197,7 +197,7 @@ KPlug.ChromaKey.prototype._destroyGUI = function()
  * Called when showing or hiding preview elements
  * @private
  */
-KPlug.ChromaKey.prototype._autoResizeContainer = function()
+ForgePlugins.ChromaKey.prototype._autoResizeContainer = function()
 {
     if (this._ui === null)
     {
@@ -217,7 +217,7 @@ KPlug.ChromaKey.prototype._autoResizeContainer = function()
  * @param {Event} event event object
  * @private
  */
-KPlug.ChromaKey.prototype._onChessboardImageLoaded = function(event)
+ForgePlugins.ChromaKey.prototype._onChessboardImageLoaded = function(event)
 {
     this._log("Preview canvas chessboard image loaded");
     var ctx = this._ui.previewCanvas.context2D;
@@ -230,7 +230,7 @@ KPlug.ChromaKey.prototype._onChessboardImageLoaded = function(event)
  * Init dat.gui objects
  * @private
  */
-KPlug.ChromaKey.prototype._deinitDatGui = function()
+ForgePlugins.ChromaKey.prototype._deinitDatGui = function()
 {
     if (this._datGUI === null)
     {
@@ -263,7 +263,7 @@ KPlug.ChromaKey.prototype._deinitDatGui = function()
  * Init dat.gui objects
  * @private
  */
-KPlug.ChromaKey.prototype._initDatGui = function()
+ForgePlugins.ChromaKey.prototype._initDatGui = function()
 {
     this._datGUI = new dat.GUI(
     {
@@ -292,7 +292,7 @@ KPlug.ChromaKey.prototype._initDatGui = function()
  * Setup canvas objects
  * @private
  */
-KPlug.ChromaKey.prototype._setupCanvasAuthoring = function(size)
+ForgePlugins.ChromaKey.prototype._setupCanvasAuthoring = function(size)
 {
     var videoRatio = size.width / size.height;
 

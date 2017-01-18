@@ -1,7 +1,6 @@
-var KPlug = KPlug ||
-{};
+var ForgePlugins = ForgePlugins || {};
 
-KPlug.Ranking = function()
+ForgePlugins.Ranking = function()
 {
     this._drivers = [];
 
@@ -21,7 +20,7 @@ KPlug.Ranking = function()
     this._ready = false;
 };
 
-KPlug.Ranking.prototype = {
+ForgePlugins.Ranking.prototype = {
 
     /**
      * Boot function
