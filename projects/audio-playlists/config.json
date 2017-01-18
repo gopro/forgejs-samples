@@ -83,11 +83,11 @@
         ]
     },
 
-    "tour":
+    "story":
     {
-        "uid": "playlist-tour",
-        "name": "Audio Playlists Tour",
-        "slug": "playlist-tour",
+        "uid": "playlist-story",
+        "name": "Audio Playlists Story",
+        "slug": "playlist-story",
         "description": "This is a demonstration of audio playlists applied to the scenes",
         "default": "scene-1",
 
@@ -174,7 +174,7 @@
 
         {
             "uid": "action-prev",
-            "target": "viewer.tour",
+            "target": "viewer.story",
 
             "method":
             {
@@ -184,7 +184,7 @@
 
         {
             "uid": "action-next",
-            "target": "viewer.tour",
+            "target": "viewer.story",
 
             "method":
             {

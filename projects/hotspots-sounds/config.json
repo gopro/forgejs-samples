@@ -1,9 +1,9 @@
 {
-    "tour":
+    "story":
     {
-        "uid": "hotspots-sound-tour",
-        "name": "Hotspots with Spatialized Sound Tour",
-        "slug": "hotspots-sound-tour",
+        "uid": "hotspots-sound-story",
+        "name": "Hotspots with Spatialized Sound Story",
+        "slug": "hotspots-sound-story",
         "description": "This is sample of hotspots sound spatialization",
         "default": "scene-0",
 

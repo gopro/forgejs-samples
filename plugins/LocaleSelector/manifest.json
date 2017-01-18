@@ -4,7 +4,7 @@
     "slug": "localeselector",
     "version": "1.0.0",
     "versionName": "Locale Selector 1.0.0",
-    "description": "Add a locale selector, using flags, to the tour.",
+    "description": "Add a locale selector, using flags, to the project.",
     "tags": ["i18n", "locale", "multilingual"],
 
     "author":

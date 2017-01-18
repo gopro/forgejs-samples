@@ -1,10 +1,10 @@
 {
-    "tour":
+    "story":
     {
-        "uid": "multiple-scenes-tour",
-        "name": "Multiple Scenes Tour",
-        "slug": "multiple-scenes-tour",
-        "description": "This is a tour made with multiple scenes",
+        "uid": "multiple-scenes-story",
+        "name": "Multiple Scenes Story",
+        "slug": "multiple-scenes-story",
+        "description": "This project have multiple scenes",
         "default": "scene-3",
 
         "scenes":
@@ -72,7 +72,7 @@
     [
         {
             "uid": "action-prev",
-            "target": "viewer.tour",
+            "target": "viewer.story",
 
             "method":
             {
@@ -82,7 +82,7 @@
 
         {
             "uid": "action-next",
-            "target": "viewer.tour",
+            "target": "viewer.story",
 
             "method":
             {

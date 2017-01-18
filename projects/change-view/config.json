@@ -1,9 +1,9 @@
 {
-    "tour":
+    "story":
     {
-        "uid": "view-tour",
-        "name": "Change View Tour",
-        "slug": "view-tour",
+        "uid": "view-story",
+        "name": "Change View Story",
+        "slug": "view-story",
         "description": "This is a demonstration of the view changes",
         "default": "scene-0",
 

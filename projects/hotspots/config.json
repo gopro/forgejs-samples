@@ -1,9 +1,9 @@
 {
-    "tour":
+    "story":
     {
-        "uid": "hotspots-tour",
-        "name": "Hotspots Tour",
-        "slug": "hotspots-tour",
+        "uid": "hotspots-story",
+        "name": "Hotspots Story",
+        "slug": "hotspots-story",
         "description": "This is sample of hotspots",
         "default": "scene-0",
 

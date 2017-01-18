@@ -1,7 +1,7 @@
 {
-    "tour":
+    "story":
     {
-        "uid": "tour-0",
+        "uid": "story-0",
         "name": "Video Controls",
         "slug": "video-controls",
         "description": "This is a project sample with video controls plugin",

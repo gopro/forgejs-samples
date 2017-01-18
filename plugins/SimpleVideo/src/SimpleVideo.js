@@ -2,7 +2,7 @@ var KPlug = KPlug || {};
 
 /**
  * This plugin is a wrapper around KEN.Video, allowing someone to create a
- * video from a tour.json, without having to access the javascript code and
+ * video from a project json configuration, without having to access the javascript code and
  * instantiate itself a KEN.Video.
  */
 KPlug.SimpleVideo = function()

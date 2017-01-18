@@ -172,7 +172,7 @@ KPlug.Heartbeat.prototype = {
     },
 
     /**
-     * Load the keyframes from the json file, or directly from the tour.json
+     * Load the keyframes from the json file, or directly from the json configuration
      */
     _loadKeyframes: function()
     {

@@ -4,11 +4,11 @@
         "enabled": true
     },
 
-    "tour":
+    "story":
     {
-        "uid": "mpegdash-tour",
-        "name": "MPEG-DASH Video Tour",
-        "slug": "mpegdash-tour",
+        "uid": "mpegdash-story",
+        "name": "MPEG-DASH Video Story",
+        "slug": "mpegdash-story",
         "description": "This is sample of MPEG-DASH video display",
         "default": "scene-0",
 
@@ -86,7 +86,7 @@
     [
         {
             "uid": "action-prev",
-            "target": "viewer.tour",
+            "target": "viewer.story",
 
             "method":
             {
@@ -96,7 +96,7 @@
 
         {
             "uid": "action-next",
-            "target": "viewer.tour",
+            "target": "viewer.story",
 
             "method":
             {

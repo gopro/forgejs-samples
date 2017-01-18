@@ -4,11 +4,11 @@
         "enabled": false
     },
 
-    "tour":
+    "story":
     {
-        "uid": "director-tour",
-        "name": "Director's Cut Tour",
-        "slug": "director-tour",
+        "uid": "director-story",
+        "name": "Director's Cut Story",
+        "slug": "director-story",
         "description": "This is a sample of director's cut applied to a video.",
         "default": "scene-0",
 

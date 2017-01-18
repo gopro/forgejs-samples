@@ -12,12 +12,12 @@
         "fov": { "default": 90, "min": 30, "max": 150 }
     },
 
-    "tour":
+    "story":
     {
         "uid": "hotspots-actions",
         "name": "Hotspots with actions",
         "slug": "hotspots-actions",
-        "description": "This is a sample tour with actions applied on hotspots",
+        "description": "This is a sample project with actions applied on hotspots",
         "default": "scene-0",
 
         "scenes":

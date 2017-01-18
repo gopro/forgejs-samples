@@ -119,15 +119,15 @@ KPlug.GooeyMenu.prototype = {
         {
             if (target === "next")
             {
-                this.viewer.tour.nextScene();
+                this.viewer.story.nextScene();
             }
             else if (target === "previous")
             {
-                this.viewer.tour.previousScene();
+                this.viewer.story.previousScene();
             }
             else if (typeof target === "string")
             {
-                this.viewer.tour.scene = target
+                this.viewer.story.scene = target
             }
             else if (Array.isArray(target))
             {
@@ -139,13 +139,13 @@ KPlug.GooeyMenu.prototype = {
 
                 for (var i = 0, ii = target.length; i < ii; i++)
                 {
-                    if (this.viewer.tour.scene.uid === target[i][0])
+                    if (this.viewer.story.scene.uid === target[i][0])
                     {
-                        this.viewer.tour.scene = target[i][1];
+                        this.viewer.story.scene = target[i][1];
                     }
-                    else if (this.viewer.tour.scene.uid === target[i][1])
+                    else if (this.viewer.story.scene.uid === target[i][1])
                     {
-                        this.viewer.tour.scene = target[i][0];
+                        this.viewer.story.scene = target[i][0];
                     }
                 }
             }

@@ -1,9 +1,9 @@
 {
-    "tour":
+    "story":
     {
-        "uid": "fx-tour",
-        "name": "Special Effects Tour",
-        "slug": "fx-tour",
+        "uid": "fx-story",
+        "name": "Special Effects Story",
+        "slug": "fx-story",
         "description": "This is a demonstration of special effects applied to the background",
         "default": "scene-0",
 

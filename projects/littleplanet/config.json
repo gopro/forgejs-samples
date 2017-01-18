@@ -4,12 +4,12 @@
         "type": "GoPro"
     },
 
-    "tour":
+    "story":
     {
-        "uid": "littleplanet-tour",
-        "name": "Little planet Tour",
-        "slug": "littleplanet-tour",
-        "description": "This is the little planet tour ever",
+        "uid": "littleplanet-story",
+        "name": "Little planet Story",
+        "slug": "littleplanet-story",
+        "description": "This is the little planet project",
         "default": "scene-0",
 
         "scenes":

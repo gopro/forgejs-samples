@@ -11,7 +11,7 @@
                 "files":
                 [
                     {
-                        "key": "tour.en-US",
+                        "key": "project.en-US",
                         "url": "./i18n/en-US/locale.json"
                     }
                 ]
@@ -23,7 +23,7 @@
                 "files":
                 [
                     {
-                        "key": "tour.fr-FR",
+                        "key": "project.fr-FR",
                         "url": "./i18n/fr-FR/locale.json"
                     }
                 ]
@@ -35,7 +35,7 @@
                 "files":
                 [
                     {
-                        "key": "tour.jp-JP",
+                        "key": "project.jp-JP",
                         "url": "./i18n/jp-JP/locale.json"
                     }
                 ]
@@ -45,12 +45,12 @@
         "default": "en-US"
     },
 
-    "tour":
+    "story":
     {
-        "uid": "locales-tour",
-        "name": "Multiple Locales Tour",
-        "slug": "locales-tour",
-        "description": "This is a tour which uses multiple locales",
+        "uid": "locales-story",
+        "name": "Multiple Locales Story",
+        "slug": "locales-story",
+        "description": "This is a project with multiple locales",
         "default": "scene-0",
 
         "scenes":

@@ -2,7 +2,7 @@ var KPlug = KPlug || {};
 
 /**
  * This plugin is a wrapper around KEN.Image, allowing someone to create a
- * image from a tour.json, without having to access the javascript code and
+ * image from a project json configuration, without having to access the javascript code and
  * instantiate itself a KEN.Image.
  */
 KPlug.SimpleImage = function()

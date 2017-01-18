@@ -2,7 +2,7 @@ var KPlug = KPlug || {};
 
 /**
  * This plugin is a wrapper around KEN.Button, allowing someone to create a
- * button from a tour.json, without having to access the javascript code and
+ * button from the project json configuration, without having to access the javascript code and
  * instantiate itself a KEN.Button.
  */
 KPlug.SimpleButton = function()

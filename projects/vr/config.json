@@ -21,11 +21,11 @@
         }
     },
 
-    "tour":
+    "story":
     {
-        "uid": "hotspots-actions-tour",
-        "name": "Hotspots with actions Tour",
-        "slug": "hotspots-actions-tour",
+        "uid": "hotspots-actions-story",
+        "name": "Hotspots with actions Story",
+        "slug": "hotspots-actions-story",
         "description": "This is sample of hotspots actions",
 
         "scenes":
@@ -466,7 +466,7 @@
     [
         {
             "uid": "action-loadscene-0",
-            "target": "viewer.tour",
+            "target": "viewer.story",
 
             "method":
             {
@@ -477,7 +477,7 @@
 
         {
             "uid": "action-loadscene-1",
-            "target": "viewer.tour",
+            "target": "viewer.story",
 
             "method":
             {
@@ -488,7 +488,7 @@
 
         {
             "uid": "action-loadscene-2",
-            "target": "viewer.tour",
+            "target": "viewer.story",
 
             "method":
             {
@@ -499,7 +499,7 @@
 
         {
             "uid": "action-loadscene-3",
-            "target": "viewer.tour",
+            "target": "viewer.story",
 
             "method":
             {

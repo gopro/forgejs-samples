@@ -21,7 +21,7 @@
                 "files":
                 [
                     {
-                        "key": "tour.en-US",
+                        "key": "project.en-US",
                         "url": "./i18n/en-US/locale.json"
                     }
                 ]
@@ -33,7 +33,7 @@
                 "files":
                 [
                     {
-                        "key": "tour.fr-FR",
+                        "key": "project.fr-FR",
                         "url": "./i18n/fr-FR/locale.json"
                     }
                 ]
@@ -45,7 +45,7 @@
                 "files":
                 [
                     {
-                        "key": "tour.it-IT",
+                        "key": "project.it-IT",
                         "url": "./i18n/it-IT/locale.json"
                     }
                 ]
@@ -131,12 +131,12 @@
         ]
     },
 
-    "tour":
+    "story":
     {
-        "uid": "tour-0",
-        "name": "i18n-tourName",
-        "slug": "i18n-tourSlug",
-        "description": "i18n-tourDescription",
+        "uid": "story-0",
+        "name": "i18n-storyName",
+        "slug": "i18n-storySlug",
+        "description": "i18n-storyDescription",
         "default": "scene-0",
 
         "scenes":
@@ -1000,7 +1000,7 @@
     [
         {
             "uid": "action-next",
-            "target": "viewer.tour",
+            "target": "viewer.story",
 
             "method":
             {
@@ -1040,7 +1040,7 @@
 
         {
             "uid": "hotspotAction-martin",
-            "target": "viewer.tour",
+            "target": "viewer.story",
 
             "method":
             {
@@ -1073,7 +1073,7 @@
 
         {
             "uid": "hotspotAction-samy",
-            "target": "viewer.tour",
+            "target": "viewer.story",
 
             "method":
             {

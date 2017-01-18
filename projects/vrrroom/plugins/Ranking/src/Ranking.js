@@ -273,7 +273,7 @@ KPlug.Ranking.prototype = {
 
             for (var j = 0, jj = driver.scenes.length; j < jj; j++)
             {
-                if (driver.scenes[j] === this.viewer.tour.sceneUid)
+                if (driver.scenes[j] === this.viewer.story.sceneUid)
                 {
                     this._currentDriver = driver;
                     driver.thumbContainer.borderWidth = this.plugin.options.borderSize;
@@ -328,11 +328,11 @@ KPlug.Ranking.prototype = {
         // If array, there is two view
         if (Array.isArray(scene))
         {
-            this.viewer.tour.scene = scene[this._currentDriver.scenes.indexOf(this.viewer.tour.scene.uid)];
+            this.viewer.story.scene = scene[this._currentDriver.scenes.indexOf(this.viewer.story.scene.uid)];
         }
         else
         {
-            this.viewer.tour.scene = scene;
+            this.viewer.story.scene = scene;
         }
     },
 

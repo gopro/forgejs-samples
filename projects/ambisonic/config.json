@@ -16,11 +16,11 @@
         }
     },
 
-    "tour":
+    "story":
     {
-        "uid": "ambisonic-tour",
-        "name": "Ambisonic tour",
-        "slug": "ambisonic-tour",
+        "uid": "ambisonic-story",
+        "name": "Ambisonic story",
+        "slug": "ambisonic-story",
         "description": "This is a demonstration of the ambisonic sound applied to a scene",
 
         "scenes":

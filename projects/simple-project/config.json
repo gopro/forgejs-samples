@@ -1,10 +1,10 @@
 {
-    "tour":
+    "story":
     {
-        "uid": "simpliest-tour",
-        "name": "Simpliest Tour",
-        "slug": "simpliest-tour",
-        "description": "This is the simpliest tour ever",
+        "uid": "simpliest-story",
+        "name": "Simpliest Story",
+        "slug": "simpliest-story",
+        "description": "This is the simpliest story ever",
         "default": "scene-0",
 
         "scenes":

@@ -32,12 +32,12 @@
         }
     },
 
-    "tour":
+    "story":
     {
-        "uid": "camera-tour",
-        "name": "Camera Limitation Tour",
-        "slug": "camera-tour",
-        "description": "Camera limitation and orientation can be applied on a tour",
+        "uid": "camera-story",
+        "name": "Camera Limitation Story",
+        "slug": "camera-story",
+        "description": "Camera limitation and orientation can be applied on a project",
         "default": "scene-0",
 
         "scenes":

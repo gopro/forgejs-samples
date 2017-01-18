@@ -2,7 +2,7 @@ var KPlug = KPlug || {};
 
 /**
  * This plugin is a wrapper around KEN.TextField, allowing someone to create a
- * text field from a tour.json, without having to access the javascript code and
+ * text field from a project json configuration, without having to access the javascript code and
  * instantiate itself a KEN.TextField.
  */
 KPlug.SimpleText = function()

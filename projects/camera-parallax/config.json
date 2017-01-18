@@ -9,11 +9,11 @@
         }
     },
 
-    "tour":
+    "story":
     {
-        "uid": "parallax-tour",
-        "name": "Tour with Parallax Effect",
-        "slug": "parallax-tour",
+        "uid": "parallax-story",
+        "name": "Story with Parallax Effect",
+        "slug": "parallax-story",
         "description": "This is sample of the parallax effect applied on hotspots",
         "default": "scene-0",
 
