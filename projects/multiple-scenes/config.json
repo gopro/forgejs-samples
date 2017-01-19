@@ -23,7 +23,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/panos/01-forest.jpg"
+                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/panos/01-forest.jpg"
                     }
                 }
             },
@@ -42,7 +42,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/panos/02-sand.jpg"
+                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/panos/02-sand.jpg"
                     }
                 }
             },
@@ -61,7 +61,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/panos/03-snow.jpg"
+                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/panos/03-snow.jpg"
                     }
                 }
             }

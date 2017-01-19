@@ -69,7 +69,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/panos/01-forest.jpg"
+                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/panos/01-forest.jpg"
                     }
                 }
             }
@@ -107,7 +107,7 @@
                     "bottom": 30,
                     "flagWidth": 150,
                     "flagHeight": 100,
-                    "baseURL": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/images/",
+                    "baseURL": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/images/",
                     "fileName": "flag-{{locale}}.gif"
                 }
             },

@@ -43,42 +43,42 @@
                 "uid": "track-0",
                 "author": "TinyWorlds",
                 "name": "Forest Ambience",
-                "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/audio-playlists/Forest_Ambience.mp3"
+                "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/audio-playlists/Forest_Ambience.mp3"
             },
 
             {
                 "uid": "track-1",
                 "author": "Écrivain",
                 "name": "Nature Comes",
-                "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/audio-playlists/nature_comes_sharp.ogg"
+                "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/audio-playlists/nature_comes_sharp.ogg"
             },
 
             {
                 "uid": "track-2",
                 "author": "cynicmusic",
                 "name": "Battle theme A",
-                "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/audio-playlists/battleThemeA.mp3"
+                "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/audio-playlists/battleThemeA.mp3"
             },
 
             {
                 "uid": "track-3",
                 "author": "Sudocolon",
                 "name": "Space Ace",
-                "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/audio-playlists/Logisector Intro.mp3"
+                "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/audio-playlists/Logisector Intro.mp3"
             },
 
             {
                 "uid": "track-4",
                 "author": "Oddroom",
                 "name": "Samsara",
-                "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/audio-playlists/samsara_0.mp3"
+                "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/audio-playlists/samsara_0.mp3"
             },
 
             {
                 "uid": "track-5",
                 "author": "tebruno99",
                 "name": "The Rush",
-                "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/audio-playlists/The Rush.mp3"
+                "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/audio-playlists/The Rush.mp3"
             }
         ]
     },
@@ -107,7 +107,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/panos/01-forest.jpg"
+                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/panos/01-forest.jpg"
                     }
                 }
             },
@@ -125,7 +125,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/panos/02-sand.jpg"
+                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/panos/02-sand.jpg"
                     }
                 },
 
@@ -148,7 +148,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/panos/03-snow.jpg"
+                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/panos/03-snow.jpg"
                     }
                 },
 

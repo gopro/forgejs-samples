@@ -24,10 +24,10 @@
                     {
                         "format": "equi",
                         "levels": [
-                            { "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/videos/omni-highlights/source.02-720p_HD.mp4" },
-                            { "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/videos/omni-highlights/source.03-1080p_HD.mp4" },
-                            { "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/videos/omni-highlights/source.04-1440p_HD.mp4" },
-                            { "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/videos/omni-highlights/source.07-2160p_4K_H264_12M.mp4" }
+                            { "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/videos/omni-highlights/source.02-720p_HD.mp4" },
+                            { "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/videos/omni-highlights/source.03-1080p_HD.mp4" },
+                            { "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/videos/omni-highlights/source.04-1440p_HD.mp4" },
+                            { "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/videos/omni-highlights/source.07-2160p_4K_H264_12M.mp4" }
                         ]
                     },
 
@@ -54,7 +54,7 @@
 
                             "options":
                             {
-                                "poster": "https://d1gzfej7jd6aeb.cloudfront.net/samples/common/videos/omni-highlights/poster.jpg"
+                                "poster": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/videos/omni-highlights/poster.jpg"
                             },
 
                             "data": {},

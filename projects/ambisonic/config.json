@@ -39,7 +39,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/ambisonic/pano_sphere.jpg"
+                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/ambisonic/pano_sphere.jpg"
                     }
                 },
 
@@ -50,7 +50,7 @@
 
                     "source":
                     {
-                        "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/ambisonic/ambisonic.wav"
+                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/ambisonic/ambisonic.wav"
                     },
 
                     "options":

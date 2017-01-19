@@ -105,28 +105,28 @@
                 "uid": "playlist-0-track-0",
                 "author": "Everlone",
                 "name": "Flying Alaska",
-                "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/audio/Everlone-Flying_Alaska.mp3"
+                "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/audio/Everlone-Flying_Alaska.mp3"
             },
 
             {
                 "uid": "playlist-1-track-0",
                 "author": "",
                 "name": "",
-                "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/audio/Double-Trouble.mp3"
+                "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/audio/Double-Trouble.mp3"
             },
 
             {
                 "uid": "playlist-1-track-1",
                 "author": "",
                 "name": "",
-                "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/audio/dexters-lab.mp3"
+                "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/audio/dexters-lab.mp3"
             },
 
             {
                 "uid": "playlist-1-track-2",
                 "author": "",
                 "name": "",
-                "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/audio/Conscious.mp3"
+                "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/audio/Conscious.mp3"
             }
         ]
     },
@@ -167,7 +167,7 @@
 
                             "data":
                             {
-                                "video": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/videos/intro.mp4"
+                                "video": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/videos/intro.mp4"
                             },
 
                             "events":
@@ -255,7 +255,7 @@
                             {
                                 "bottom": 80,
                                 "horizontalCenter": true,
-                                "baseURL": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/assets/flags/"
+                                "baseURL": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/assets/flags/"
                             },
 
                             "data": {},
@@ -283,7 +283,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/panos/pano-scene-1-v3.jpg"
+                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/panos/pano-scene-1-v3.jpg"
                     }
                 },
 
@@ -404,7 +404,7 @@
 
                         "material":
                         {
-                            "image": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/assets/martin-small.png",
+                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/assets/martin-small.png",
                             "opacity": 1
                         },
 
@@ -491,7 +491,7 @@
 
                         "material":
                         {
-                            "image": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/assets/samy-small.png",
+                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/assets/samy-small.png",
                             "opacity": 1
                         },
 
@@ -564,7 +564,7 @@
                     {
                         "format": "equi",
                         "streaming": "dash",
-                        "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/videos/460017/460017.mpd"
+                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/videos/460017/460017.mpd"
                     },
 
                     "options":
@@ -605,7 +605,7 @@
 
                             "data":
                             {
-                                "gpx": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/gpx/samy.xml"
+                                "gpx": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/gpx/samy.xml"
                             },
 
                             "options":
@@ -619,7 +619,7 @@
 
                             "data":
                             {
-                                "keyframes": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/timeline/heartbeat-samy.json"
+                                "keyframes": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/timeline/heartbeat-samy.json"
                             },
 
                             "options":
@@ -633,7 +633,7 @@
 
                             "data":
                             {
-                                "keyframes": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/timeline/speed-samy.json"
+                                "keyframes": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/timeline/speed-samy.json"
                             },
 
                             "options":
@@ -661,7 +661,7 @@
                     {
                         "format": "equi",
                         "streaming": "dash",
-                        "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/videos/459989/459989.mpd"
+                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/videos/459989/459989.mpd"
                     },
 
                     "options":
@@ -701,7 +701,7 @@
 
                             "data":
                             {
-                                "gpx": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/gpx/martin.xml"
+                                "gpx": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/gpx/martin.xml"
                             },
 
                             "options":
@@ -715,7 +715,7 @@
 
                             "data":
                             {
-                                "keyframes": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/timeline/heartbeat-martin.json"
+                                "keyframes": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/timeline/heartbeat-martin.json"
                             },
 
                             "options":
@@ -729,7 +729,7 @@
 
                             "data":
                             {
-                                "keyframes": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/timeline/speed-martin.json"
+                                "keyframes": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/timeline/speed-martin.json"
                             },
 
                             "options":
@@ -778,7 +778,7 @@
                             "data":
                             {
                                 "streaming": "dash",
-                                "video": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/videos/460036/460036.mpd"
+                                "video": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/videos/460036/460036.mpd"
                             },
 
                             "index": 0,
@@ -802,7 +802,7 @@
 
                             "data":
                             {
-                                "gpx": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/gpx/samy.xml"
+                                "gpx": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/gpx/samy.xml"
                             },
 
                             "options":
@@ -816,7 +816,7 @@
 
                             "data":
                             {
-                                "keyframes": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/timeline/heartbeat-samy.json"
+                                "keyframes": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/timeline/heartbeat-samy.json"
                             },
 
                             "options":
@@ -830,7 +830,7 @@
 
                             "data":
                             {
-                                "keyframes": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/timeline/speed-samy.json"
+                                "keyframes": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/timeline/speed-samy.json"
                             },
 
                             "options":
@@ -878,7 +878,7 @@
                             "data":
                             {
                                 "streaming": "dash",
-                                "video": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/videos/460045/460045.mpd"
+                                "video": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/videos/460045/460045.mpd"
                             },
 
                             "index": 0,
@@ -902,7 +902,7 @@
 
                             "data":
                             {
-                                "gpx": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/gpx/martin.xml"
+                                "gpx": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/gpx/martin.xml"
                             },
 
                             "options":
@@ -916,7 +916,7 @@
 
                             "data":
                             {
-                                "keyframes": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/timeline/heartbeat-martin.json"
+                                "keyframes": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/timeline/heartbeat-martin.json"
                             },
 
                             "options":
@@ -930,7 +930,7 @@
 
                             "data":
                             {
-                                "keyframes": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/timeline/speed-martin.json"
+                                "keyframes": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/timeline/speed-martin.json"
                             },
 
                             "options":
@@ -1263,7 +1263,7 @@
                         {
                             "name": "Martin",
                             "type": "image",
-                            "thumb": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/assets/martin-thumbnail.jpg",
+                            "thumb": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/assets/martin-thumbnail.jpg",
                             "scenes": [ "scene-3", "scene-5"],
 
                             "keyframes":
@@ -1282,7 +1282,7 @@
                         {
                             "name": "Samy",
                             "type": "image",
-                            "thumb": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/assets/samy-thumbnail.jpg",
+                            "thumb": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/assets/samy-thumbnail.jpg",
                             "scenes": [ "scene-2", "scene-4"],
 
                             "keyframes":
@@ -1319,7 +1319,7 @@
                 {
                     "markerIcon":
                     {
-                        "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/assets/helmet-30x30.png",
+                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/assets/helmet-30x30.png",
                         "width": 30,
                         "height": 30,
                         "anchorX": 15,
@@ -1386,7 +1386,7 @@
                 "options":
                 {
                     "key": "simpleimage-helmet-scratch",
-                    "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/assets/helmet-scratch.png",
+                    "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/assets/helmet-scratch.png",
                     "alpha": 0.3
                 },
 
@@ -1403,7 +1403,7 @@
                 "options":
                 {
                     "key": "simpleimage-helmet-vigneting",
-                    "url": "https://d1gzfej7jd6aeb.cloudfront.net/samples/vrrroom/assets/helmet-vigneting.png",
+                    "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/vrrroom/assets/helmet-vigneting.png",
                     "alpha": 0.4
                 },
 
