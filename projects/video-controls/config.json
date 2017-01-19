@@ -49,8 +49,8 @@
                     "instances":
                     [
                         {
-                            "uid": "com.gopro.videocontrols-0",
-                            "engine": "com.gopro.videocontrols",
+                            "uid": "org.forgejs.videocontrols-0",
+                            "engine": "org.forgejs.videocontrols",
 
                             "options":
                             {
@@ -75,7 +75,7 @@
         "engines":
         [
             {
-                "uid": "com.gopro.videocontrols",
+                "uid": "org.forgejs.videocontrols",
                 "url": "VideoControls/",
                 "manifest": "manifest.json"
             }

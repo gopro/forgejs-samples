@@ -613,7 +613,7 @@
         "engines":
         [
             {
-                "uid": "com.gopro.simplebutton",
+                "uid": "org.forgejs.simplebutton",
                 "url": "SimpleButton/",
                 "manifest": "manifest.json"
             }
@@ -623,7 +623,7 @@
         [
             {
                 "uid": "btn-toggle-vr",
-                "engine": "com.gopro.simplebutton",
+                "engine": "org.forgejs.simplebutton",
 
                 "options":
                 {

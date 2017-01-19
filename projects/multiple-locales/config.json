@@ -83,13 +83,13 @@
         "engines":
         [
             {
-                "uid": "com.gopro.localeselector",
+                "uid": "org.forgejs.localeselector",
                 "url": "LocaleSelector/",
                 "manifest": "manifest.json"
             },
 
             {
-                "uid": "com.gopro.simpletext",
+                "uid": "org.forgejs.simpletext",
                 "url": "SimpleText/",
                 "manifest": "manifest.json"
             }
@@ -99,7 +99,7 @@
         [
             {
                 "uid": "localeselector",
-                "engine": "com.gopro.localeselector",
+                "engine": "org.forgejs.localeselector",
 
                 "options":
                 {
@@ -114,7 +114,7 @@
 
             {
                 "uid": "text-welcome",
-                "engine": "com.gopro.simpletext",
+                "engine": "org.forgejs.simpletext",
 
                 "options":
                 {
@@ -134,7 +134,7 @@
 
             {
                 "uid": "text-instructions",
-                "engine": "com.gopro.simpletext",
+                "engine": "org.forgejs.simpletext",
 
                 "options":
                 {

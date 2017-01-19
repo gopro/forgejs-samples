@@ -125,7 +125,7 @@
         "engines":
         [
             {
-                "uid": "com.gopro.simplebutton",
+                "uid": "org.forgejs.simplebutton",
                 "url": "SimpleButton/",
                 "manifest": "manifest.json"
             }
@@ -135,7 +135,7 @@
         [
             {
                 "uid": "simplebutton-fx-enable",
-                "engine": "com.gopro.simplebutton",
+                "engine": "org.forgejs.simplebutton",
                 "enabled": true,
 
                 "options":

@@ -98,7 +98,7 @@
         "engines":
         [
             {
-                "uid": "com.gopro.simplebutton",
+                "uid": "org.forgejs.simplebutton",
                 "url": "SimpleButton/",
                 "manifest": "manifest.json"
             }
@@ -108,7 +108,7 @@
         [
             {
                 "uid": "simplebutton-previous",
-                "engine": "com.gopro.simplebutton",
+                "engine": "org.forgejs.simplebutton",
 
                 "options":
                 {
@@ -125,7 +125,7 @@
 
             {
                 "uid": "simplebutton-next",
-                "engine": "com.gopro.simplebutton",
+                "engine": "org.forgejs.simplebutton",
 
                 "options":
                 {

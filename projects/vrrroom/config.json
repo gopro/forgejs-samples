@@ -155,8 +155,8 @@
                     "instances":
                     [
                         {
-                            "uid": "com.gopro.simplevideo-0",
-                            "engine": "com.gopro.simplevideo",
+                            "uid": "org.forgejs.simplevideo-0",
+                            "engine": "org.forgejs.simplevideo",
 
                             "options":
                             {
@@ -180,8 +180,8 @@
                         },
 
                         {
-                            "uid": "com.gopro.simpletext-intro",
-                            "engine": "com.gopro.simpletext",
+                            "uid": "org.forgejs.simpletext-intro",
+                            "engine": "org.forgejs.simpletext",
 
                             "options":
                             {
@@ -205,8 +205,8 @@
                         },
 
                         {
-                            "uid": "com.gopro.simplebutton-start",
-                            "engine": "com.gopro.simplebutton",
+                            "uid": "org.forgejs.simplebutton-start",
+                            "engine": "org.forgejs.simplebutton",
 
                             "options":
                             {
@@ -248,8 +248,8 @@
                         },
 
                         {
-                            "uid": "com.gopro.localeselector-0",
-                            "engine": "com.gopro.localeselector",
+                            "uid": "org.forgejs.localeselector-0",
+                            "engine": "org.forgejs.localeselector",
 
                             "options":
                             {
@@ -322,8 +322,8 @@
                     "instances":
                     [
                         {
-                            "uid": "com.gopro.kartingdriverspot-martin",
-                            "engine": "com.gopro.kartingdriverspot",
+                            "uid": "org.forgejs.kartingdriverspot-martin",
+                            "engine": "org.forgejs.kartingdriverspot",
 
                             "options":
                             {
@@ -346,8 +346,8 @@
                         },
 
                         {
-                            "uid": "com.gopro.kartingdriverspot-samy",
-                            "engine": "com.gopro.kartingdriverspot",
+                            "uid": "org.forgejs.kartingdriverspot-samy",
+                            "engine": "org.forgejs.kartingdriverspot",
 
                             "options":
                             {
@@ -447,7 +447,7 @@
 
                         "material":
                         {
-                            "plugin": "com.gopro.kartingdriverspot-martin",
+                            "plugin": "org.forgejs.kartingdriverspot-martin",
                             "update": true
                         },
 
@@ -534,7 +534,7 @@
 
                         "material":
                         {
-                            "plugin": "com.gopro.kartingdriverspot-samy",
+                            "plugin": "org.forgejs.kartingdriverspot-samy",
                             "update": true
                         },
 
@@ -592,7 +592,7 @@
                     "configurations":
                     [
                         {
-                            "instance": "com.gopro.ranking-0",
+                            "instance": "org.forgejs.ranking-0",
 
                             "options":
                             {
@@ -601,7 +601,7 @@
                         },
 
                         {
-                            "instance": "com.gopro.googlemaps-0",
+                            "instance": "org.forgejs.googlemaps-0",
 
                             "data":
                             {
@@ -615,7 +615,7 @@
                         },
 
                         {
-                            "instance": "com.gopro.heartbeat-0",
+                            "instance": "org.forgejs.heartbeat-0",
 
                             "data":
                             {
@@ -629,7 +629,7 @@
                         },
 
                         {
-                            "instance": "com.gopro.speedometer-0",
+                            "instance": "org.forgejs.speedometer-0",
 
                             "data":
                             {
@@ -688,7 +688,7 @@
                     "configurations":
                     [
                         {
-                            "instance": "com.gopro.ranking-0",
+                            "instance": "org.forgejs.ranking-0",
 
                             "options":
                             {
@@ -697,7 +697,7 @@
                         },
 
                         {
-                            "instance": "com.gopro.googlemaps-0",
+                            "instance": "org.forgejs.googlemaps-0",
 
                             "data":
                             {
@@ -711,7 +711,7 @@
                         },
 
                         {
-                            "instance": "com.gopro.heartbeat-0",
+                            "instance": "org.forgejs.heartbeat-0",
 
                             "data":
                             {
@@ -725,7 +725,7 @@
                         },
 
                         {
-                            "instance": "com.gopro.speedometer-0",
+                            "instance": "org.forgejs.speedometer-0",
 
                             "data":
                             {
@@ -762,8 +762,8 @@
                     "instances":
                     [
                         {
-                            "uid": "com.gopro.simplevideo-1",
-                            "engine": "com.gopro.simplevideo",
+                            "uid": "org.forgejs.simplevideo-1",
+                            "engine": "org.forgejs.simplevideo",
 
                             "options":
                             {
@@ -789,16 +789,16 @@
                     "configurations":
                     [
                         {
-                            "instance": "com.gopro.ranking-0",
+                            "instance": "org.forgejs.ranking-0",
 
                             "options":
                             {
-                                "source": "com.gopro.simplevideo-1"
+                                "source": "org.forgejs.simplevideo-1"
                             }
                         },
 
                         {
-                            "instance": "com.gopro.googlemaps-0",
+                            "instance": "org.forgejs.googlemaps-0",
 
                             "data":
                             {
@@ -807,12 +807,12 @@
 
                             "options":
                             {
-                                "source": "com.gopro.simplevideo-1"
+                                "source": "org.forgejs.simplevideo-1"
                             }
                         },
 
                         {
-                            "instance": "com.gopro.heartbeat-0",
+                            "instance": "org.forgejs.heartbeat-0",
 
                             "data":
                             {
@@ -821,12 +821,12 @@
 
                             "options":
                             {
-                                "source": "com.gopro.simplevideo-1"
+                                "source": "org.forgejs.simplevideo-1"
                             }
                         },
 
                         {
-                            "instance": "com.gopro.speedometer-0",
+                            "instance": "org.forgejs.speedometer-0",
 
                             "data":
                             {
@@ -835,7 +835,7 @@
 
                             "options":
                             {
-                                "source": "com.gopro.simplevideo-1"
+                                "source": "org.forgejs.simplevideo-1"
                             }
                         }
                     ]
@@ -862,8 +862,8 @@
                     "instances":
                     [
                         {
-                            "uid": "com.gopro.simplevideo-2",
-                            "engine": "com.gopro.simplevideo",
+                            "uid": "org.forgejs.simplevideo-2",
+                            "engine": "org.forgejs.simplevideo",
 
                             "options":
                             {
@@ -889,16 +889,16 @@
                     "configurations":
                     [
                         {
-                            "instance": "com.gopro.ranking-0",
+                            "instance": "org.forgejs.ranking-0",
 
                             "options":
                             {
-                                "source": "com.gopro.simplevideo-2"
+                                "source": "org.forgejs.simplevideo-2"
                             }
                         },
 
                         {
-                            "instance": "com.gopro.googlemaps-0",
+                            "instance": "org.forgejs.googlemaps-0",
 
                             "data":
                             {
@@ -907,12 +907,12 @@
 
                             "options":
                             {
-                                "source": "com.gopro.simplevideo-2"
+                                "source": "org.forgejs.simplevideo-2"
                             }
                         },
 
                         {
-                            "instance": "com.gopro.heartbeat-0",
+                            "instance": "org.forgejs.heartbeat-0",
 
                             "data":
                             {
@@ -921,12 +921,12 @@
 
                             "options":
                             {
-                                "source": "com.gopro.simplevideo-2"
+                                "source": "org.forgejs.simplevideo-2"
                             }
                         },
 
                         {
-                            "instance": "com.gopro.speedometer-0",
+                            "instance": "org.forgejs.speedometer-0",
 
                             "data":
                             {
@@ -935,7 +935,7 @@
 
                             "options":
                             {
-                                "source": "com.gopro.simplevideo-2"
+                                "source": "org.forgejs.simplevideo-2"
                             }
                         }
                     ]
@@ -958,7 +958,7 @@
 
         {
             "uid": "action-plugin-video-play",
-            "target": "com.gopro.simplevideo-0",
+            "target": "org.forgejs.simplevideo-0",
 
             "method":
             {
@@ -968,7 +968,7 @@
 
         {
             "uid": "action-plugin-localeselector-hide",
-            "target": "com.gopro.localeselector-0",
+            "target": "org.forgejs.localeselector-0",
 
             "method":
             {
@@ -978,7 +978,7 @@
 
         {
             "uid": "action-plugin-button-hide",
-            "target": "com.gopro.simplebutton-start",
+            "target": "org.forgejs.simplebutton-start",
 
             "method":
             {
@@ -999,7 +999,7 @@
 
         {
             "uid": "hotspotAction-martin-over",
-            "target": "com.gopro.kartingdriverspot-martin",
+            "target": "org.forgejs.kartingdriverspot-martin",
 
             "method":
             {
@@ -1010,7 +1010,7 @@
 
         {
             "uid": "hotspotAction-martin-out",
-            "target": "com.gopro.kartingdriverspot-martin",
+            "target": "org.forgejs.kartingdriverspot-martin",
 
             "method":
             {
@@ -1032,7 +1032,7 @@
 
         {
             "uid": "hotspotAction-samy-over",
-            "target": "com.gopro.kartingdriverspot-samy",
+            "target": "org.forgejs.kartingdriverspot-samy",
 
             "method":
             {
@@ -1043,7 +1043,7 @@
 
         {
             "uid": "hotspotAction-samy-out",
-            "target": "com.gopro.kartingdriverspot-samy",
+            "target": "org.forgejs.kartingdriverspot-samy",
 
             "method":
             {
@@ -1060,78 +1060,78 @@
         "engines":
         [
             {
-                "uid": "com.gopro.letterbox",
+                "uid": "org.forgejs.letterbox",
                 "url": "Letterbox/",
                 "manifest": "manifest.json"
             },
 
             {
-                "uid": "com.gopro.localeselector",
+                "uid": "org.forgejs.localeselector",
                 "url": "LocaleSelector/",
                 "prefix": "../../plugins/",
                 "manifest": "manifest.json"
             },
 
             {
-                "uid": "com.gopro.simplebutton",
+                "uid": "org.forgejs.simplebutton",
                 "url": "SimpleButton/",
                 "prefix": "../../plugins/",
                 "manifest": "manifest.json"
             },
 
             {
-                "uid": "com.gopro.simpletext",
+                "uid": "org.forgejs.simpletext",
                 "url": "SimpleText/",
                 "prefix": "../../plugins/",
                 "manifest": "manifest.json"
             },
 
             {
-                "uid": "com.gopro.simpleimage",
+                "uid": "org.forgejs.simpleimage",
                 "url": "SimpleImage/",
                 "prefix": "../../plugins/",
                 "manifest": "manifest.json"
             },
 
             {
-                "uid": "com.gopro.kartingdriverspot",
+                "uid": "org.forgejs.kartingdriverspot",
                 "url": "KartingDriverSpot/",
                 "manifest": "manifest.json"
             },
 
             {
-                "uid": "com.gopro.googlemaps",
+                "uid": "org.forgejs.googlemaps",
                 "url": "GoogleMaps/",
                 "manifest": "manifest.json"
             },
 
             {
-                "uid": "com.gopro.ranking",
+                "uid": "org.forgejs.ranking",
                 "url": "Ranking/",
                 "manifest": "manifest.json"
             },
 
             {
-                "uid": "com.gopro.gooeymenu",
+                "uid": "org.forgejs.gooeymenu",
                 "url": "GooeyMenu/",
                 "manifest": "manifest.json"
             },
 
             {
-                "uid": "com.gopro.simplevideo",
+                "uid": "org.forgejs.simplevideo",
                 "url": "SimpleVideo/",
                 "prefix": "../../plugins/",
                 "manifest": "manifest.json"
             },
 
             {
-                "uid": "com.gopro.heartbeat",
+                "uid": "org.forgejs.heartbeat",
                 "url": "Heartbeat/",
                 "manifest": "manifest.json"
             },
 
             {
-                "uid": "com.gopro.speedometer",
+                "uid": "org.forgejs.speedometer",
                 "url": "Speedometer/",
                 "manifest": "manifest.json"
             }
@@ -1140,8 +1140,8 @@
         "instances":
         [
             {
-                "uid": "com.gopro.letterbox-0",
-                "engine": "com.gopro.letterbox",
+                "uid": "org.forgejs.letterbox-0",
+                "engine": "org.forgejs.letterbox",
 
                 "options":
                 {
@@ -1153,8 +1153,8 @@
             },
 
             {
-                "uid": "com.gopro.gooeymenu-0",
-                "engine": "com.gopro.gooeymenu",
+                "uid": "org.forgejs.gooeymenu-0",
+                "engine": "org.forgejs.gooeymenu",
                 "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
 
                 "options":
@@ -1182,7 +1182,7 @@
                             "click":
                             {
                                 "action": "visibility",
-                                "target": ["com.gopro.ranking-0"]
+                                "target": ["org.forgejs.ranking-0"]
                             },
 
                             "ticked": true,
@@ -1196,7 +1196,7 @@
                             "click":
                             {
                                 "action": "visibility",
-                                "target": ["com.gopro.googlemaps-0"]
+                                "target": ["org.forgejs.googlemaps-0"]
                             },
 
                             "ticked": true,
@@ -1210,7 +1210,7 @@
                             "click":
                             {
                                 "action": "visibility",
-                                "target": ["com.gopro.heartbeat-0", "com.gopro.speedometer-0"]
+                                "target": ["org.forgejs.heartbeat-0", "org.forgejs.speedometer-0"]
                             },
 
                             "ticked": true,
@@ -1228,7 +1228,7 @@
                             },
 
                             "toggle": true,
-                            "videotime": "com.gopro.ranking-0"
+                            "videotime": "org.forgejs.ranking-0"
                         },
 
                         {
@@ -1248,8 +1248,8 @@
             },
 
             {
-                "uid": "com.gopro.ranking-0",
-                "engine": "com.gopro.ranking",
+                "uid": "org.forgejs.ranking-0",
+                "engine": "org.forgejs.ranking",
                 "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
 
                 "options":
@@ -1306,8 +1306,8 @@
             },
 
             {
-                "uid": "com.gopro.googlemaps-0",
-                "engine": "com.gopro.googlemaps",
+                "uid": "org.forgejs.googlemaps-0",
+                "engine": "org.forgejs.googlemaps",
                 "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
 
                 "data":
@@ -1341,8 +1341,8 @@
             },
 
             {
-                "uid": "com.gopro.heartbeat-0",
-                "engine": "com.gopro.heartbeat",
+                "uid": "org.forgejs.heartbeat-0",
+                "engine": "org.forgejs.heartbeat",
                 "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
 
                 "options":
@@ -1360,8 +1360,8 @@
             },
 
             {
-                "uid": "com.gopro.speedometer-0",
-                "engine": "com.gopro.speedometer",
+                "uid": "org.forgejs.speedometer-0",
+                "engine": "org.forgejs.speedometer",
                 "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
 
                 "options":
@@ -1379,8 +1379,8 @@
             },
 
             {
-                "uid": "com.gopro.simpleimage-0",
-                "engine": "com.gopro.simpleimage",
+                "uid": "org.forgejs.simpleimage-0",
+                "engine": "org.forgejs.simpleimage",
                 "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
 
                 "options":
@@ -1396,8 +1396,8 @@
             },
 
             {
-                "uid": "com.gopro.simpleimage-1",
-                "engine": "com.gopro.simpleimage",
+                "uid": "org.forgejs.simpleimage-1",
+                "engine": "org.forgejs.simpleimage",
                 "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
 
                 "options":
