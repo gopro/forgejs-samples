@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta http-equiv="x-ua-compatible" content="IE=edge" />
-    <title>ForgeJS - Vrrroom</title>
+    <title>ForgeJS sample - Vrrroom</title>
     <meta name="description" content="ForgeJS Vrrroom Karting Demo">
 
     <link rel="stylesheet" href="styles/style.css?v=1.0">
@@ -38,9 +38,24 @@
 <body>
     <div id="container"></div>
 
-    <script type="text/javascript" src="dash.js/dash.all.min.js"></script>
+    <!-- Include the DASH library -->
+    <script type="text/javascript" src="../../lib/dash.js/dash.all.min.js"></script>
 
-    <script src="../../lib/forge.min.js"></script>
-    <script src="boot.js"></script>
+    <!-- Include the threejs custom build -->
+    <script src="../../lib/three.js/three.r83.custom.min.js"></script>
+
+    <!-- Include the Hammer.js library -->
+    <script src="../../lib/hammer.js/hammer.min.js"></script>
+
+    <!-- Include the ForgeJS library -->
+    <script type="text/javascript" src="../../lib/forge/forge.min.js" ></script>
+
+    <!-- Start ForgeJS -->
+    <script type="text/javascript">
+
+        // Create a viewer
+        var viewer = new FORGE.Viewer("container", "config.json");
+
+    </script>
 </body>
 </html>

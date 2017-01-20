@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta http-equiv="x-ua-compatible" content="IE=edge" />
-    <title>ForgeJS - Video</title>
+    <title>ForgeJS sample - Video</title>
 
     <!-- Little styling -->
     <style type="text/css">
@@ -34,14 +34,20 @@
 <body>
     <div id="container"></div>
 
+    <!-- Include the threejs custom build -->
+    <script src="../../lib/three.js/three.r83.custom.min.js"></script>
+
+    <!-- Include the Hammer.js library -->
+    <script src="../../lib/hammer.js/hammer.min.js"></script>
+
     <!-- Include the ForgeJS library -->
-    <script type="text/javascript" src="../../lib/forge.min.js" ></script>
+    <script type="text/javascript" src="../../lib/forge/forge.min.js" ></script>
 
     <!-- Start ForgeJS -->
     <script type="text/javascript">
 
-    // Create a viewer
-    var viewer = new FORGE.Viewer("container", "config.json");
+        // Create a viewer
+        var viewer = new FORGE.Viewer("container", "config.json");
 
     </script>
 </body>

@@ -71,7 +71,8 @@
                 "smooth": true,
                 "cancelRoll": true,
 
-                "keyframes": [
+                "keyframes":
+                [
                     { "time": 0,     "data": { "yaw": 100,  "pitch": 0,     "fov": 110 } },
                     { "time": 6500,  "data": { "yaw": 100                              } },
                     { "time": 9300,  "data": { "yaw": 0,                    "fov": 110 } },
