@@ -65,7 +65,6 @@
                 [
                     {
                         "uid": "hotspot-s0-0",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -96,7 +95,6 @@
 
                     {
                         "uid": "hotspot-s0-1",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -129,7 +127,6 @@
 
                     {
                         "uid": "hotspot-s0-2",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -196,7 +193,6 @@
                 [
                     {
                         "uid": "hotspot-s1-0",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -228,7 +224,6 @@
 
                     {
                         "uid": "hotspot-s1-1",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -295,7 +290,6 @@
                 [
                     {
                         "uid": "hotspot-s2-0",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -327,7 +321,6 @@
 
                     {
                         "uid": "hotspot-s2-1",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -394,7 +387,6 @@
                 [
                     {
                         "uid": "hotspot-s3-0",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -426,7 +418,6 @@
 
                     {
                         "uid": "hotspot-s3-1",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -458,7 +449,6 @@
 
                     {
                         "uid": "hotspot-s3-2",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -525,7 +515,6 @@
                 [
                     {
                         "uid": "hotspot-s4-0",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -557,7 +546,6 @@
 
                     {
                         "uid": "hotspot-s4-1",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -589,7 +577,6 @@
 
                     {
                         "uid": "hotspot-s4-2",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -656,7 +643,6 @@
                 [
                     {
                         "uid": "hotspot-s5-0",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -683,31 +669,6 @@
                         "events":
                         {
                             "onClick": ["action-loadscene-4", "action-camera-13"]
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-
-    "postProcessing":
-    {
-        "fxSets":
-        [
-            {
-                "uid": "fxSet-spot",
-
-                "set":
-                [
-                    {
-                        "type": "ColorifyShader",
-                        "uid": "fxSet-spot-colorify-0",
-
-                        "params": {
-                            "color": {
-                                "type": "THREE.Color",
-                                "args": "rgb(66,141,113)"
-                            }
                         }
                     }
                 ]
@@ -790,7 +751,7 @@
             "method":
             {
                 "name": "lookAt",
-                "args": [118,null,null,null,3000,false]
+                "args": [5, 0, 0]
             }
         },
 

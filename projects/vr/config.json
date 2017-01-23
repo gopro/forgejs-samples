@@ -65,8 +65,6 @@
                 [
                     {
                         "uid": "hotspot-s0-0",
-                        "type": "3d",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -97,7 +95,6 @@
 
                     {
                         "uid": "hotspot-s0-1",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -166,8 +163,6 @@
                 [
                     {
                         "uid": "hotspot-s1-0",
-                        "type": "3d",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -199,8 +194,6 @@
 
                     {
                         "uid": "hotspot-s1-1",
-                        "type": "3d",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -267,8 +260,6 @@
                 [
                     {
                         "uid": "hotspot-s2-0",
-                        "type": "3d",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -300,8 +291,6 @@
 
                     {
                         "uid": "hotspot-s2-1",
-                        "type": "3d",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -368,8 +357,6 @@
                 [
                     {
                         "uid": "hotspot-s3-0",
-                        "type": "3d",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -401,8 +388,6 @@
 
                     {
                         "uid": "hotspot-s3-1",
-                        "type": "3d",
-                        "fx": "fxSet-spot",
 
                         "transform":
                         {
@@ -429,32 +414,6 @@
                         "events":
                         {
                             "onClick": ["action-loadscene-2", "action-camera-7"]
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-
-    "postProcessing":
-    {
-        "fxSets":
-        [
-            {
-                "uid": "fxSet-spot",
-                "set":
-                [
-                    {
-                        "type": "ColorifyShader",
-                        "uid": "fxSet-spot-colorify-0",
-
-                        "params":
-                        {
-                            "color":
-                            {
-                                "type": "THREE.Color",
-                                "args": "rgb(66,141,113)"
-                            }
                         }
                     }
                 ]
