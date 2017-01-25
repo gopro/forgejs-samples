@@ -1,6 +1,6 @@
 {
   "name": "forgejs-samples",
-  "version": "0.3.0",
+  "version": "0.9.0",
   "description": "A collection of samples to demonstrate the capabilities of ForgeJS",
   "author": "GoPro, Inc. | Kolor SAS",
   "license": "Apache 2.0",
@@ -13,8 +13,11 @@
     "url": "https://github.com/gopro/gopro-ken-samples.git"
   },
   "keywords": [
-    "ken",
+    "forge",
+    "forgejs",
+    "webvr",
     "vr",
-    "gopro"
+    "gopro",
+    "kolor"
   ]
 }
