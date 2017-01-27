@@ -53,7 +53,7 @@
 
                     "fov":
                     {
-                        "default": 250
+                        "default": 140
                     }
                 }
             }
@@ -102,7 +102,7 @@
             "method":
             {
                 "name": "lookAt",
-                "args": [null, -90, null, 250]
+                "args": [null, -90, null, 140]
             }
         }
     ],

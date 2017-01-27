@@ -9,7 +9,7 @@
         "yaw": { "default": 0, "min": -180, "max": 180 },
         "pitch": { "default": 0, "min": -90, "max": 90 },
         "roll": { "default": 0, "min": -180, "max": 180 },
-        "fov": { "default": 90, "min": 30, "max": 150 }
+        "fov": { "default": 90, "min": 30, "max": 140 }
     },
 
     "story":
@@ -37,7 +37,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/panos/01-forest.jpg"
+                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
                     }
                 },
 
@@ -72,7 +72,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-animation/rabbit-34013.svg",
+                            "image": "https://cdn.forgejs.org/samples/hotspots-animation/rabbit-34013.svg",
                             "color": "#ffffff",
                             "opacity": 1,
                             "transparent": true
@@ -119,7 +119,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-animation/butterfly-1299922.svg",
+                            "image": "https://cdn.forgejs.org/samples/hotspots-animation/butterfly-1299922.svg",
                             "color": "#ffffff",
                             "opacity": 1,
                             "transparent": true
