@@ -23,7 +23,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/panos/01-forest.jpg"
+                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
                     }
                 },
 
@@ -68,7 +68,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/images/spot-4.png"
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-4.png"
                         }
                     },
 
@@ -101,7 +101,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/images/spot-3.png"
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-3.png"
                         }
                     },
 
@@ -134,7 +134,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/images/spot-2.png"
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-2.png"
                         }
                     },
 
@@ -167,7 +167,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/images/spot-1.png"
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-1.png"
                         }
                     },
 
@@ -200,7 +200,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/images/spot-0.png"
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png"
                         }
                     }
                 ]
