@@ -23,7 +23,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/common/panos/01-forest.jpg"
+                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
                     }
                 }
             }

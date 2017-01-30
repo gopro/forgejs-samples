@@ -44,7 +44,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-actions/pano-0.jpg"
+                        "url": "https://cdn.forgejs.org/samples/hotspots-actions/pano-0.jpg"
                     }
                 },
 
@@ -83,7 +83,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-actions/ChevronUpCircle_white_64.png",
+                            "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
                             "opacity": 1
                         },
 
@@ -115,7 +115,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-actions/ChevronUpCircle_white_64.png",
+                            "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
                             "opacity": 1
                         },
 
@@ -142,7 +142,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-actions/pano-1.jpg"
+                        "url": "https://cdn.forgejs.org/samples/hotspots-actions/pano-1.jpg"
                     }
                 },
 
@@ -182,7 +182,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-actions/ChevronUpCircle_white_64.png",
+                            "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
                             "opacity": 1
                         },
 
@@ -213,7 +213,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-actions/ChevronUpCircle_white_64.png",
+                            "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
                             "opacity": 1
                         },
 
@@ -239,7 +239,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-actions/pano-2.jpg"
+                        "url": "https://cdn.forgejs.org/samples/hotspots-actions/pano-2.jpg"
                     }
                 },
 
@@ -279,7 +279,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-actions/ChevronUpCircle_white_64.png",
+                            "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
                             "opacity": 1
                         },
 
@@ -310,7 +310,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-actions/ChevronUpCircle_white_64.png",
+                            "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
                             "opacity": 1
                         },
 
@@ -336,7 +336,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-actions/pano-3.jpg"
+                        "url": "https://cdn.forgejs.org/samples/hotspots-actions/pano-3.jpg"
                     }
                 },
 
@@ -376,7 +376,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-actions/ChevronUpCircle_white_64.png",
+                            "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
                             "opacity": 1
                         },
 
@@ -407,7 +407,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-actions/ChevronUpCircle_white_64.png",
+                            "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
                             "opacity": 1
                         },
 

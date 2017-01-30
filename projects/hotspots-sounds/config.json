@@ -23,7 +23,7 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-sounds/rainforest-daniel-wambach.jpg"
+                        "url": "https://cdn.forgejs.org/samples/hotspots-sounds/rainforest-daniel-wambach.jpg"
                     }
                 },
 
@@ -64,7 +64,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-sounds/frog-b.png",
+                            "image": "https://cdn.forgejs.org/samples/hotspots-sounds/frog-b.png",
                             "color": "#ffffff",
                             "opacity": 1,
                             "transparent": true
@@ -76,7 +76,7 @@
 
                             "source":
                             {
-                                "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-sounds/Peeper_Frogs_Near_Lake.mp3"
+                                "url": "https://cdn.forgejs.org/samples/hotspots-sounds/Peeper_Frogs_Near_Lake.mp3"
                             },
 
                             "options":
@@ -116,7 +116,7 @@
 
                             "source":
                             {
-                                "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-sounds/Jungle.mp3"
+                                "url": "https://cdn.forgejs.org/samples/hotspots-sounds/Jungle.mp3"
                             },
 
                             "options":
@@ -150,7 +150,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-sounds/frog-a.png",
+                            "image": "https://cdn.forgejs.org/samples/hotspots-sounds/frog-a.png",
                             "color": "#ffffff",
                             "opacity": 1,
                             "transparent": true
@@ -162,7 +162,7 @@
 
                             "source":
                             {
-                                "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-sounds/Frogs.mp3"
+                                "url": "https://cdn.forgejs.org/samples/hotspots-sounds/Frogs.mp3"
                             },
 
                             "options":
@@ -198,7 +198,7 @@
 
                         "material":
                         {
-                            "image": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-sounds/osprey.png",
+                            "image": "https://cdn.forgejs.org/samples/hotspots-sounds/osprey.png",
                             "color": "#ffffff",
                             "opacity": 1,
                             "transparent": true
@@ -210,7 +210,7 @@
 
                             "source":
                             {
-                                "url": "https://d2z3zwtr25q24l.cloudfront.net/samples/hotspots-sounds/Osprey_Bird_Call.mp3"
+                                "url": "https://cdn.forgejs.org/samples/hotspots-sounds/Osprey_Bird_Call.mp3"
                             },
 
                             "options":
