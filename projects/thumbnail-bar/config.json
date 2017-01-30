@@ -1,0 +1,114 @@
+{
+    "story":
+    {
+        "uid": "multiple-scenes-story",
+        "name": "Multiple Scenes Story",
+        "slug": "multiple-scenes-story",
+        "description": "This project have multiple scenes",
+        "default": "scene-2",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-1",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first scene",
+
+                "thumbnails": [
+                    {
+                        "uid": "thumbnail-1",
+                        "url": "https://cdn.forgejs.org/samples/common/thumbnails/01-forest.jpg"
+                    }
+                ],
+
+                "media":
+                {
+                    "uid": "media-1",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-2",
+                "name": "Second scene",
+                "slug": "second-scene",
+                "description": "This is the second scene",
+
+                "thumbnails": [
+                    {
+                        "uid": "thumbnail-2",
+                        "url": "https://cdn.forgejs.org/samples/common/thumbnails/02-sand.jpg"
+                    }
+                ],
+
+                "media":
+                {
+                    "uid": "media-2",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/02-sand.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-3",
+                "name": "Third scene",
+                "slug": "third-scene",
+                "description": "This is the third and last scene",
+
+                "thumbnails": [
+                    {
+                        "uid": "thumbnail-3",
+                        "url": "https://cdn.forgejs.org/samples/common/thumbnails/03-snow.jpg"
+                    }
+                ],
+
+                "media":
+                {
+                    "uid": "media-3",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/03-snow.jpg"
+                    }
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.thumbnailbar",
+                "url": "ThumbnailBar/",
+                "manifest": "manifest.json"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "thumbnailbar",
+                "engine": "org.forgejs.thumbnailbar",
+                "scenes": [ "scene-1", "scene-2", "scene-3" ]
+            }
+        ]
+    }
+}
