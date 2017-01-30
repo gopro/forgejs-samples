@@ -65,7 +65,7 @@
                 "uid": "scene-3",
                 "name": "Third scene",
                 "slug": "third-scene",
-                "description": "This is the third and last scene",
+                "description": "This is the third scene",
 
                 "thumbnails": [
                     {
@@ -83,6 +83,110 @@
                     {
                         "format": "equi",
                         "url": "https://cdn.forgejs.org/samples/common/panos/03-snow.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-4",
+                "name": "Fourth scene",
+                "slug": "fourth-scene",
+                "description": "This is the fourth scene",
+
+                "thumbnails": [
+                    {
+                        "uid": "thumbnail-4",
+                        "url": "https://cdn.forgejs.org/samples/common/thumbnails/04-dragon.jpg"
+                    }
+                ],
+
+                "media":
+                {
+                    "uid": "media-4",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/04-dragon.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-5",
+                "name": "Fifth scene",
+                "slug": "fifth-scene",
+                "description": "This is the fifth scene",
+
+                "thumbnails": [
+                    {
+                        "uid": "thumbnail-5",
+                        "url": "https://cdn.forgejs.org/samples/common/thumbnails/05-moto.jpg"
+                    }
+                ],
+
+                "media":
+                {
+                    "uid": "media-5",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/05-moto.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-6",
+                "name": "Sixth scene",
+                "slug": "sixth-scene",
+                "description": "This is the sixth scene",
+
+                "thumbnails": [
+                    {
+                        "uid": "thumbnail-6",
+                        "url": "https://cdn.forgejs.org/samples/common/thumbnails/06-snowboard.jpg"
+                    }
+                ],
+
+                "media":
+                {
+                    "uid": "media-6",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/06-snowboard.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-7",
+                "name": "Seventh scene",
+                "slug": "seventh-scene",
+                "description": "This is the seventh and last scene",
+
+                "thumbnails": [
+                    {
+                        "uid": "thumbnail-7",
+                        "url": "https://cdn.forgejs.org/samples/common/thumbnails/07-bicycle.jpg"
+                    }
+                ],
+
+                "media":
+                {
+                    "uid": "media-7",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/07-bicycle.jpg"
                     }
                 }
             }
@@ -107,7 +211,7 @@
             {
                 "uid": "thumbnailbar",
                 "engine": "org.forgejs.thumbnailbar",
-                "scenes": [ "scene-1", "scene-2", "scene-3" ]
+                "scenes": [ "scene-1", "scene-2", "scene-3", "scene-4", "scene-5", "scene-6", "scene-7" ]
             }
         ]
     }
