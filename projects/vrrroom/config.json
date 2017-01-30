@@ -383,9 +383,9 @@
                         {
                             "position":
                             {
-                                "radius": 800,
+                                "radius": 400,
                                 "theta": -34,
-                                "phi": -15
+                                "phi": -16
                             },
 
                             "rotation":
@@ -397,8 +397,8 @@
 
                             "scale":
                             {
-                                "x": 4.71,
-                                "y": 8
+                                "x": 2,
+                                "y": 2
                             }
                         },
 
@@ -406,6 +406,16 @@
                         {
                             "image": "https://cdn.forgejs.org/samples/vrrroom/assets/martin-small.png",
                             "opacity": 1
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 60,
+                                "height": 102
+                            }
                         },
 
                         "events":
@@ -426,7 +436,7 @@
                         {
                             "position":
                             {
-                                "radius": 404,
+                                "radius": 450,
                                 "theta": -33,
                                 "phi": 20
                             },
@@ -434,14 +444,8 @@
                             "rotation":
                             {
                                 "x": 0,
-                                "y": 15,
+                                "y": 30,
                                 "z": 0
-                            },
-
-                            "scale":
-                            {
-                                "x": 1.5,
-                                "y": 1
                             }
                         },
 
@@ -449,6 +453,16 @@
                         {
                             "plugin": "org.forgejs.kartingdriverspot-martin",
                             "update": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 150,
+                                "height": 100
+                            }
                         },
 
                         "events":
@@ -470,9 +484,9 @@
                         {
                             "position":
                             {
-                                "radius": 800,
-                                "theta": 27.5,
-                                "phi": -16
+                                "radius": 450,
+                                "theta": 33,
+                                "phi": -14
                             },
 
                             "rotation":
@@ -484,8 +498,8 @@
 
                             "scale":
                             {
-                                "x": 5.36,
-                                "y": 8
+                                "x": 2.15,
+                                "y": 2.15
                             }
                         },
 
@@ -493,6 +507,16 @@
                         {
                             "image": "https://cdn.forgejs.org/samples/vrrroom/assets/samy-small.png",
                             "opacity": 1
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 60,
+                                "height": 90
+                            }
                         },
 
                         "events":
@@ -513,22 +537,16 @@
                         {
                             "position":
                             {
-                                "radius": 404,
-                                "theta": 24,
+                                "radius": 400,
+                                "theta": 30,
                                 "phi": 20
                             },
 
                             "rotation":
                             {
                                 "x": 0,
-                                "y": -12,
+                                "y": -30,
                                 "z": 0
-                            },
-
-                            "scale":
-                            {
-                                "x": 1.5,
-                                "y": 1
                             }
                         },
 
@@ -536,6 +554,16 @@
                         {
                             "plugin": "org.forgejs.kartingdriverspot-samy",
                             "update": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 150,
+                                "height": 100
+                            }
                         },
 
                         "events":

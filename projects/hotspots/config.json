@@ -45,18 +45,18 @@
                         {
                             "position":
                             {
-                                "radius": 100,
+                                "radius": 200,
                                 "theta": 0,
                                 "phi": 90
                             },
 
                             "scale":
                             {
-                                "x": 4
+                                "x": 3
                             }
                         },
 
-                        "geometry": 
+                        "geometry":
                         {
                             "type": "plane",
                             "options":
@@ -68,7 +68,8 @@
 
                         "material":
                         {
-                            "image": "https://cdn.forgejs.org/samples/common/images/spot-4.png"
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-4.png",
+                            "transparent": true
                         }
                     },
 
@@ -85,11 +86,11 @@
 
                             "scale":
                             {
-                                "x": 3
+                                "y": 2
                             }
                         },
 
-                        "geometry": 
+                        "geometry":
                         {
                             "type": "plane",
                             "options":
@@ -101,7 +102,8 @@
 
                         "material":
                         {
-                            "image": "https://cdn.forgejs.org/samples/common/images/spot-3.png"
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-3.png",
+                            "transparent": true
                         }
                     },
 
@@ -122,7 +124,7 @@
                             }
                         },
 
-                        "geometry": 
+                        "geometry":
                         {
                             "type": "plane",
                             "options":
@@ -134,7 +136,8 @@
 
                         "material":
                         {
-                            "image": "https://cdn.forgejs.org/samples/common/images/spot-2.png"
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-2.png",
+                            "transparent": true
                         }
                     },
 
@@ -145,17 +148,12 @@
                         {
                             "position":
                             {
-                                "radius": 300,
+                                "radius": 1000,
                                 "theta": 90
-                            },
-
-                            "scale":
-                            {
-                                "x": 1
                             }
                         },
 
-                        "geometry": 
+                        "geometry":
                         {
                             "type": "plane",
                             "options":
@@ -167,7 +165,8 @@
 
                         "material":
                         {
-                            "image": "https://cdn.forgejs.org/samples/common/images/spot-1.png"
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-1.png",
+                            "transparent": true
                         }
                     },
 
@@ -178,17 +177,12 @@
                         {
                             "position":
                             {
-                                "radius": 1000,
+                                "radius": 300,
                                 "theta": 0
-                            },
-
-                            "scale":
-                            {
-                                "x": 0.5
                             }
                         },
 
-                        "geometry": 
+                        "geometry":
                         {
                             "type": "plane",
                             "options":
@@ -200,7 +194,8 @@
 
                         "material":
                         {
-                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png"
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
                         }
                     }
                 ]

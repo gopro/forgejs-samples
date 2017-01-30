@@ -49,11 +49,6 @@
                                 "radius": 200,
                                 "theta": -103.7,
                                 "phi": 9.6
-                            },
-
-                            "scale":
-                            {
-                                "x": 2.5
                             }
                         },
 
@@ -61,6 +56,16 @@
                         {
                             "image": "https://cdn.forgejs.org/samples/camera-parallax/plane-a917.png",
                             "transparent": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 167,
+                                "height": 60
+                            }
                         }
                     },
 
@@ -75,11 +80,6 @@
                                 "radius": 200,
                                 "theta": 150.2,
                                 "phi": 8.7
-                            },
-
-                            "scale":
-                            {
-                                "x": 2.5
                             }
                         },
 
@@ -87,6 +87,16 @@
                         {
                             "image": "https://cdn.forgejs.org/samples/camera-parallax/plane-a919.png",
                             "transparent": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 161,
+                                "height": 60
+                            }
                         }
                     },
 
@@ -98,14 +108,9 @@
                         {
                             "position":
                             {
-                                "radius": 500,
+                                "radius": 400,
                                 "theta": -69,
                                 "phi": 4
-                            },
-
-                            "scale":
-                            {
-                                "x": 2.5
                             }
                         },
 
@@ -113,6 +118,16 @@
                         {
                             "image": "https://cdn.forgejs.org/samples/camera-parallax/plane-a912.png",
                             "transparent": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 173,
+                                "height": 60
+                            }
                         }
                     },
 
@@ -124,14 +139,9 @@
                         {
                             "position":
                             {
-                                "radius": 500,
+                                "radius": 400,
                                 "theta": 109.2,
                                 "phi": 1.7
-                            },
-
-                            "scale":
-                            {
-                                "x": 2.5
                             }
                         },
 
@@ -139,6 +149,16 @@
                         {
                             "image": "https://cdn.forgejs.org/samples/camera-parallax/plane-a933.png",
                             "transparent": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 186,
+                                "height": 60
+                            }
                         }
                     },
 
@@ -150,14 +170,9 @@
                         {
                             "position":
                             {
-                                "radius": 800,
+                                "radius": 750,
                                 "theta": 90.9,
                                 "phi": 0.2
-                            },
-
-                            "scale":
-                            {
-                                "x": 2.5
                             }
                         },
 
@@ -165,6 +180,16 @@
                         {
                             "image": "https://cdn.forgejs.org/samples/camera-parallax/plane-a915.png",
                             "transparent": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 199,
+                                "height": 60
+                            }
                         }
                     },
 
@@ -176,14 +201,9 @@
                         {
                             "position":
                             {
-                                "radius": 800,
+                                "radius": 750,
                                 "theta": -53.5,
                                 "phi": 2.1
-                            },
-
-                            "scale":
-                            {
-                                "x": 2.5
                             }
                         },
 
@@ -191,6 +211,16 @@
                         {
                             "image": "https://cdn.forgejs.org/samples/camera-parallax/plane-a928.png",
                             "transparent": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 183,
+                                "height": 60
+                            }
                         }
                     }
                 ]
