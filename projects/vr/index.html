@@ -51,16 +51,16 @@
 
         function toggleVR()
         {
-            viewer.renderer.enableVR(!viewer.renderer.presentingVR);
-
             if (viewer.renderer.presentingVR === true)
-            {
-                viewer.plugins.getById("btn-toggle-vr").instance.setText("ExitVR");
-            }
-            else
             {
                 viewer.plugins.getById("btn-toggle-vr").instance.setText("EnterVR");
             }
+            else
+            {
+                viewer.plugins.getById("btn-toggle-vr").instance.setText("ExitVR");
+            }
+
+            viewer.renderer.enableVR(!viewer.renderer.presentingVR);
         }
     </script>
 </body>
