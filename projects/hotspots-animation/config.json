@@ -14,10 +14,10 @@
 
     "story":
     {
-        "uid": "hotspots-actions",
-        "name": "Hotspots with actions",
-        "slug": "hotspots-actions",
-        "description": "This is a sample project with actions applied on hotspots",
+        "uid": "hotspots-animated",
+        "name": "Hotspots with animation",
+        "slug": "hotspots-animated",
+        "description": "This is a sample project with animation applied on hotspots",
         "default": "scene-0",
 
         "scenes":
