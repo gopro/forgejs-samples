@@ -134,7 +134,7 @@ ForgePlugins.GoogleMaps.prototype = {
 
         if (typeof key === "string" && key !== "")
         {
-            this.viewer.load.script("http://maps.googleapis.com/maps/api/js?key=" + key, this._googleMapScriptLoadComplete, this);
+            this.viewer.load.script("https://maps.googleapis.com/maps/api/js?key=" + key, this._googleMapScriptLoadComplete, this);
         }
         else
         {
