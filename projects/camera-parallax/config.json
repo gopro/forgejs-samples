@@ -42,6 +42,8 @@
                         "uid": "hotspot-plane-a917",
                         "type": "3d",
 
+                        "facingCenter": true,
+
                         "transform":
                         {
                             "position":
@@ -72,6 +74,8 @@
                     {
                         "uid": "hotspot-plane-a919",
                         "type": "3d",
+
+                        "facingCenter": true,
 
                         "transform":
                         {
@@ -104,6 +108,8 @@
                         "uid": "hotspot-plane-a912",
                         "type": "3d",
 
+                        "facingCenter": true,
+
                         "transform":
                         {
                             "position":
@@ -134,6 +140,8 @@
                     {
                         "uid": "hotspot-plane-a933",
                         "type": "3d",
+
+                        "facingCenter": true,
 
                         "transform":
                         {
@@ -166,6 +174,8 @@
                         "uid": "hotspot-plane-a915",
                         "type": "3d",
 
+                        "facingCenter": true,
+
                         "transform":
                         {
                             "position":
@@ -196,6 +206,8 @@
                     {
                         "uid": "hotspot-plane-a928",
                         "type": "3d",
+
+                        "facingCenter": true,
 
                         "transform":
                         {
