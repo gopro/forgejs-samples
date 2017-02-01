@@ -57,8 +57,7 @@
                     {
                         "volume": 1,
                         "autoPlay": true,
-                        "loop": true,
-                        "startTime": 0
+                        "loop": true
                     }
                 }
 
