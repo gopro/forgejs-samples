@@ -39,15 +39,15 @@
 
             "borderWidth": 5,
             "borderRadius": 5,
-            "borderColor": "rgb(210, 210, 210)",
-            "borderColorOver": "rgb(240, 240, 240)"
+            "borderColor": "rgb(240, 240, 240)",
+            "borderColorOver": "rgb(220, 220, 220)"
         },
 
         "navigation":
         {
             "enabled": true,
             "type": "click",
-            "step": 90,
+            "step": 125,
 
             "width": 30,
             "height": 120,
@@ -63,9 +63,9 @@
             "position": "bottom",
 
             "padding": 3,
-            "borderRadius": "5px 0 0 5px",
+            "borderRadius": "0 0 5px 5px",
             "color": "rgb(30, 30, 30)",
-            "background": "rgb(240, 240, 240)",
+            "background": "rgb(220, 220, 220)",
             "font": "12px sans-serif",
 
             "animation": true,
