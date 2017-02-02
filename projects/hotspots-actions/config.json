@@ -897,5 +897,27 @@
                 "args": [-178, 0, 0]
             }
         }
-    ]
+    ],
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.webvrbutton",
+                "url": "WebVRButton/",
+                "manifest": "manifest.json"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "webvrbutton",
+                "engine": "org.forgejs.webvrbutton"
+            }
+        ]
+    }
 }

@@ -572,8 +572,8 @@
         "engines":
         [
             {
-                "uid": "org.forgejs.simplebutton",
-                "url": "SimpleButton/",
+                "uid": "org.forgejs.webvrbutton",
+                "url": "WebVRButton/",
                 "manifest": "manifest.json"
             }
         ],
@@ -581,20 +581,11 @@
         "instances":
         [
             {
-                "uid": "btn-toggle-vr",
-                "engine": "org.forgejs.simplebutton",
-
-                "options":
+                "uid": "webvrbutton",
+                "engine": "org.forgejs.webvrbutton",
+                "options": 
                 {
-                    "top": 20,
-                    "horizontalCenter": true,
-                    "width": 100,
-                    "value": "EnterVR"
-                },
-
-                "events":
-                {
-                    "onClick": ["action-vr"]
+                    "position": "bottom"
                 }
             }
         ]
