@@ -553,15 +553,6 @@
                 "name": "lookAt",
                 "args": [-175, 0, 0]
             }
-        },
-
-        {
-            "uid": "action-vr",
-
-            "method":
-            {
-                "name": "toggleVR"
-            }
         }
     ],
 
@@ -583,7 +574,7 @@
             {
                 "uid": "webvrbutton",
                 "engine": "org.forgejs.webvrbutton",
-                "options": 
+                "options":
                 {
                     "position": "bottom"
                 }

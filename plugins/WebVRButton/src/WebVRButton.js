@@ -89,15 +89,15 @@ ForgePlugins.WebVRButton.prototype = {
         }
 
         // Add the skin
-        this._btn.skin.out = FORGE.Utils.extendMultipleObjects(this._btn.skin.out, 
-            { 
+        this._btn.skin.out = FORGE.Utils.extendMultipleObjects(this._btn.skin.out,
+            {
                 autoWidth: false,
                 autoHeight: false,
                 image: { url: this.plugin.fullUrl + this.plugin.options.off },
                 label: { value: "" }
             });
-        this._btn.skin.over = FORGE.Utils.extendMultipleObjects(this._btn.skin.out, 
-            { 
+        this._btn.skin.over = FORGE.Utils.extendMultipleObjects(this._btn.skin.out,
+            {
                 autoWidth: false,
                 autoHeight: false,
                 image: { url: this.plugin.fullUrl + this.plugin.options.on },
@@ -122,15 +122,15 @@ ForgePlugins.WebVRButton.prototype = {
     {
         if (this._vrActivated)
         {
-            this._btn.skin.out = FORGE.Utils.extendMultipleObjects(this._btn.skin.out, 
-                { 
+            this._btn.skin.out = FORGE.Utils.extendMultipleObjects(this._btn.skin.out,
+                {
                     autoWidth: false,
                     autoHeight: false,
                     image: { url: this.plugin.fullUrl + this.plugin.options.off },
                     label: { value: "" }
                 });
-            this._btn.skin.over = FORGE.Utils.extendMultipleObjects(this._btn.skin.out, 
-                { 
+            this._btn.skin.over = FORGE.Utils.extendMultipleObjects(this._btn.skin.out,
+                {
                     autoWidth: false,
                     autoHeight: false,
                     image: { url: this.plugin.fullUrl + this.plugin.options.on },
@@ -140,15 +140,15 @@ ForgePlugins.WebVRButton.prototype = {
         }
         else
         {
-            this._btn.skin.out = FORGE.Utils.extendMultipleObjects(this._btn.skin.out, 
-                { 
+            this._btn.skin.out = FORGE.Utils.extendMultipleObjects(this._btn.skin.out,
+                {
                     autoWidth: false,
                     autoHeight: false,
                     image: { url: this.plugin.fullUrl + this.plugin.options.on },
                     label: { value: "" }
                 });
-            this._btn.skin.over = FORGE.Utils.extendMultipleObjects(this._btn.skin.out, 
-                { 
+            this._btn.skin.over = FORGE.Utils.extendMultipleObjects(this._btn.skin.out,
+                {
                     autoWidth: false,
                     autoHeight: false,
                     image: { url: this.plugin.fullUrl + this.plugin.options.off },

@@ -48,20 +48,6 @@
     <script type="text/javascript">
         // Create a viewer
         var viewer = new FORGE.Viewer("container", "config.json");
-
-        function toggleVR()
-        {
-            if (viewer.renderer.presentingVR === true)
-            {
-                viewer.plugins.getById("btn-toggle-vr").instance.setText("EnterVR");
-            }
-            else
-            {
-                viewer.plugins.getById("btn-toggle-vr").instance.setText("ExitVR");
-            }
-
-            viewer.renderer.enableVR(!viewer.renderer.presentingVR);
-        }
     </script>
 </body>
 </html>
