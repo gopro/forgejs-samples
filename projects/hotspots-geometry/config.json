@@ -1,0 +1,155 @@
+{
+    "story":
+    {
+        "uid": "hotspots-story",
+        "name": "Hotspots Story",
+        "slug": "hotspots-story",
+        "description": "This is sample of hotspots",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first and only scene",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
+                    }
+                },
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "min": 30,
+                        "max": 120
+                    }
+                },
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-3d-plane",
+                        "tags": [],
+                        "visible":true,
+                        "type": "3d",
+
+                        "transform":
+                        {
+                            "position": { "phi": -10 },
+                            "rotation": { "x": 70 }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 200,
+                                "height": 200
+                            }
+                        },
+
+                        "material":
+                        {
+                            "color": "#8ce3ba",
+                            "opacity": 1
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-3d-box",
+                        "tags": [],
+                        "visible":true,
+                        "type": "3d",
+
+                        "transform":
+                        {
+                            "position": { "radius": 120, "phi": -10, "theta": -10 },
+                            "rotation": { "x": 70, "z": -20 }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "box",
+                            "options":
+                            {
+                                "width": 30,
+                                "height": 30,
+                                "depth": 30
+                            }
+                        },
+
+                        "material":
+                        {
+                            "color": "#59e2fc",
+                            "opacity": 1
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-3d-cylinder",
+                        "tags": [],
+                        "visible":true,
+                        "type": "3d",
+
+                        "transform":
+                        {
+                            "position": { "radius": 160, "phi": -10, "theta": 15 },
+                            "rotation": { "x": -20 }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "cylinder",
+                            "options":
+                            {
+                                "radiusTop": 20,
+                                "radiusBottom": 20,
+                                "height": 100
+                            }
+                        },
+
+                        "material":
+                        {
+                            "color": "#ffeb6f",
+                            "opacity": 1
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-3d-sphere",
+                        "tags": [],
+                        "visible":true,
+                        "type": "3d",
+
+                        "geometry":
+                        {
+                            "type": "sphere",
+                            "options":
+                            {
+                                "radius": 50
+                            }
+                        },
+
+                        "material":
+                        {
+                            "color": "#ff3f7f",
+                            "opacity": 1
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
