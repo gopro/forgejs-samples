@@ -6,7 +6,7 @@ var ForgePlugins = ForgePlugins || {};
 ForgePlugins.WebVRButton = function()
 {
     /**
-     * The real button
+     * The real button.
      * @name ForgePlugins.WebVRButton#_btn
      * @type {FORGE.Button}
      * @private
@@ -14,7 +14,7 @@ ForgePlugins.WebVRButton = function()
     this._btn = null;
 
     /**
-     * Is the VR activated ?
+     * Is the VR activated?
      * @name ForgePlugins.WebVRButton#_vrActivated
      * @type {boolean}
      * @private
@@ -22,20 +22,21 @@ ForgePlugins.WebVRButton = function()
     this._vrActivated = false;
 };
 
-ForgePlugins.WebVRButton.prototype = {
+ForgePlugins.WebVRButton.prototype =
+{
     /**
      * Boot function, add the button to the scene given the position.
      */
     boot: function()
     {
-        console.log(this)
         // Create the button
         this._btn = this.plugin.create.button();
 
         // Parse the value of the position
         var vPos, hPos;
 
-        switch(this.plugin.options.position) {
+        switch(this.plugin.options.position)
+        {
             case "topLeft":
                 vPos = "top";
                 hPos = "left";
@@ -120,20 +121,24 @@ ForgePlugins.WebVRButton.prototype = {
 
     _btnClickHandler: function()
     {
-        if (this._vrActivated)
+        this.viewer.renderer.toggleVR();
+
+        this._vrActivated = this.viewer.renderer.presentingVR;
+
+        if (this._vrActivated === true)
         {
             this._btn.skin.out = FORGE.Utils.extendMultipleObjects(this._btn.skin.out,
                 {
                     autoWidth: false,
                     autoHeight: false,
-                    image: { url: this.plugin.fullUrl + this.plugin.options.off },
+                    image: { url: this.plugin.fullUrl + this.plugin.options.on },
                     label: { value: "" }
                 });
             this._btn.skin.over = FORGE.Utils.extendMultipleObjects(this._btn.skin.out,
                 {
                     autoWidth: false,
                     autoHeight: false,
-                    image: { url: this.plugin.fullUrl + this.plugin.options.on },
+                    image: { url: this.plugin.fullUrl + this.plugin.options.off },
                     label: { value: "" }
                 });
             this._btn.skin.down = this._btn.skin.over;
@@ -144,21 +149,18 @@ ForgePlugins.WebVRButton.prototype = {
                 {
                     autoWidth: false,
                     autoHeight: false,
-                    image: { url: this.plugin.fullUrl + this.plugin.options.on },
+                    image: { url: this.plugin.fullUrl + this.plugin.options.off },
                     label: { value: "" }
                 });
             this._btn.skin.over = FORGE.Utils.extendMultipleObjects(this._btn.skin.out,
                 {
                     autoWidth: false,
                     autoHeight: false,
-                    image: { url: this.plugin.fullUrl + this.plugin.options.off },
+                    image: { url: this.plugin.fullUrl + this.plugin.options.on },
                     label: { value: "" }
                 });
             this._btn.skin.down = this._btn.skin.over;
         }
-
-        this._vrActivated = !this._vrActivated;
-        this.viewer.renderer.toggleVR();
     },
 
     destroy: function()
