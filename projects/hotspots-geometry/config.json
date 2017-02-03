@@ -33,7 +33,8 @@
                     {
                         "min": 30,
                         "max": 120
-                    }
+                    },
+                    "parallax": 0.5
                 },
 
                 "hotspots":

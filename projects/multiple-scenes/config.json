@@ -101,12 +101,6 @@
                 "uid": "org.forgejs.simplebutton",
                 "url": "SimpleButton/",
                 "manifest": "manifest.json"
-            },
-
-            {
-                "uid": "org.forgejs.webvrbutton",
-                "url": "WebVRButton/",
-                "manifest": "manifest.json"
             }
         ],
 
@@ -144,11 +138,6 @@
                 {
                     "onClick": ["action-next"]
                 }
-            },
-
-            {
-                "uid": "webvrbutton",
-                "engine": "org.forgejs.webvrbutton"
             }
         ]
     }

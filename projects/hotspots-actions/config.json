@@ -916,7 +916,11 @@
         [
             {
                 "uid": "webvrbutton",
-                "engine": "org.forgejs.webvrbutton"
+                "engine": "org.forgejs.webvrbutton",
+                "options":
+                {
+                    "position": "bottom"
+                }
             }
         ]
     }

@@ -113,7 +113,7 @@
 
                     "fov":
                     {
-                        "default": 155
+                        "default": 250
                     }
                 }
             },
@@ -235,7 +235,7 @@
 
                     "fov":
                     {
-                        "default": 118
+                        "default": 150
                     }
                 }
             }
