@@ -52,11 +52,22 @@
                 "uid": "org.forgejs.webvrbutton",
                 "url": "WebVRButton/",
                 "manifest": "manifest.json"
+            },
+
+            {
+                "uid": "org.forgejs.safarialertcors",
+                "url": "SafariAlertCORS/",
+                "manifest": "manifest.json"
             }
         ],
 
         "instances":
         [
+            {
+                "uid": "safarialertcors",
+                "engine": "org.forgejs.safarialertcors"
+            },
+
             {
                 "uid": "webvrbutton",
                 "engine": "org.forgejs.webvrbutton"
