@@ -121,6 +121,11 @@
                 "uid": "org.forgejs.simplevideo",
                 "url": "SimpleVideo/",
                 "manifest": "manifest.json"
+            },
+
+            {
+                "uid": "org.forgejs.safarialertcors",
+                "url": "SafariAlertCORS/"
             }
         ],
 
@@ -162,6 +167,11 @@
                 },
 
                 "index": 2
+            },
+
+            {
+                "uid": "safarialertcors",
+                "engine": "org.forgejs.safarialertcors"
             }
         ]
     }

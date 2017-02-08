@@ -1094,6 +1094,13 @@
             },
 
             {
+                "uid": "org.forgejs.safarialertcors",
+                "url": "SafariAlertCORS/",
+                "prefix": "../../plugins/",
+                "manifest": "manifest.json"
+            },
+
+            {
                 "uid": "org.forgejs.localeselector",
                 "url": "LocaleSelector/",
                 "prefix": "../../plugins/",
@@ -1438,6 +1445,12 @@
                 "data": {},
 
                 "index": 10
+            },
+
+            {
+                "uid": "safarialertcors",
+                "engine": "org.forgejs.safarialertcors",
+                "index": 1000
             }
         ]
     }

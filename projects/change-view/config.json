@@ -23,7 +23,8 @@
                     "source":
                     {
                         "format": "equi",
-                        "levels": [
+                        "levels":
+                        [
                             { "url": "https://cdn.forgejs.org/samples/common/videos/omni-highlights/source.02-720p_HD.mp4" },
                             { "url": "https://cdn.forgejs.org/samples/common/videos/omni-highlights/source.03-1080p_HD.mp4" },
                             { "url": "https://cdn.forgejs.org/samples/common/videos/omni-highlights/source.04-1440p_HD.mp4" },
@@ -117,6 +118,11 @@
                 "uid": "org.forgejs.simplebutton",
                 "url": "SimpleButton/",
                 "manifest": "manifest.json"
+            },
+
+            {
+                "uid": "org.forgejs.safarialertcors",
+                "url": "SafariAlertCORS/"
             }
         ],
 
@@ -141,6 +147,7 @@
                     "onClick": ["action-view-recti", "action-camera-fov-recti"]
                 }
             },
+
             {
                 "uid": "simplebutton-planet",
                 "engine": "org.forgejs.simplebutton",
@@ -159,6 +166,11 @@
                 {
                     "onClick": ["action-view-gopro", "action-camera-fov-gopro"]
                 }
+            },
+
+            {
+                "uid": "safarialertcors",
+                "engine": "org.forgejs.safarialertcors"
             }
         ]
     }

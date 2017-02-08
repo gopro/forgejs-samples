@@ -78,6 +78,20 @@
                 "uid": "org.forgejs.videocontrols",
                 "url": "VideoControls/",
                 "manifest": "manifest.json"
+            },
+
+            {
+                "uid": "org.forgejs.safarialertcors",
+                "url": "SafariAlertCORS/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "safarialertcors",
+                "engine": "org.forgejs.safarialertcors",
+                "index": 2
             }
         ]
     }
