@@ -96,7 +96,14 @@
                         "format": "cube",
                         "order": "RLUDFB",
                         "tile": 960,
-                        "url": "http://cdn.forgejs.org/samples/common/videos/cubemap/omni_highlights.mp4"
+                        "url": "https://cdn.forgejs.org/samples/common/videos/cubemap/omni_highlights.mp4"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 1
                     }
                 }
             }
