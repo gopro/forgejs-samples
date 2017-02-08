@@ -25,7 +25,7 @@
 
         "icon": "assets/images/favicon-120x120.png",
 
-        "text": "<h1>Safari detected!</h1>This video can't work because the media ressource is hosted on another server. This is a known issue of Safari video CORS when using distant video as a texture. Please use <a href=\"https://www.google.com/chrome/\" target=\"_blank\">Google Chrome</a> for better performances."
+        "text": "<h1>Safari detected :(</h1>This video can't be displayed because it is hosted on another server. This is a known <a href=\"https://bugs.webkit.org/show_bug.cgi?id=135379\">Safari issue</a> when using distant video as a texture. Please use <a href=\"https://www.google.com/chrome/\" target=\"_blank\">Google Chrome</a> for a better performance."
     },
 
     "actions":

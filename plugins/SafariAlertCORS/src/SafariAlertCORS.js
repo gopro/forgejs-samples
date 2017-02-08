@@ -11,6 +11,7 @@ ForgePlugins.SafariAlertCORS = function()
     this._textField = null;
     this._icon = null;
     this._button = null;
+    this._video = null;
 };
 
 ForgePlugins.SafariAlertCORS.prototype = {
@@ -35,6 +36,7 @@ ForgePlugins.SafariAlertCORS.prototype = {
         this._textField.width = 350;
         this._textField.verticalCenter = true;
         this._textField.right = 10;
+        this._textField.pointer.enabled = true;
         this._frame.addChild(this._textField);
 
         this._icon = this.plugin.create.image(this.plugin.options.icon);
@@ -92,6 +94,11 @@ ForgePlugins.SafariAlertCORS.prototype = {
     {
         if(FORGE.Device.safari === true && this.viewer.story.scene.config.media.type === "video")
         {
+            var mediaConfig = this.viewer.story.scene.config.media;
+            var mediaOptions = mediaConfig.options || {};
+
+            mediaOptions.autoPlay = false;
+
             this.show();
         }
         else
