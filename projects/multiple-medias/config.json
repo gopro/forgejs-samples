@@ -75,7 +75,7 @@
                     {
                         "autoPlay": true,
                         "loop": true,
-                        "volume": 1
+                        "volume": 0.5
                     }
                 }
             },
@@ -103,7 +103,7 @@
                     {
                         "autoPlay": true,
                         "loop": true,
-                        "volume": 1
+                        "volume": 0.5
                     }
                 }
             }
