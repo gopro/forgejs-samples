@@ -1,9 +1,4 @@
 {
-    "viewer":
-    {
-        "background": "#000"
-    },
-
     "history":
     {
         "enabled": true
