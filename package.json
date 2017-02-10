@@ -1,6 +1,6 @@
 {
   "name": "forgejs-samples",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "A collection of samples to demonstrate the capabilities of ForgeJS",
   "author": "GoPro, Inc. | Kolor SAS",
   "license": "Apache 2.0",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gopro/gopro-ken-samples.git"
+    "url": "https://github.com/gopro/gopro-forgejs-samples.git"
   },
   "keywords": [
     "forge",
