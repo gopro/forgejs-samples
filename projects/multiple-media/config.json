@@ -1,10 +1,10 @@
 {
     "story":
     {
-        "uid": "multiple-scenes-story",
-        "name": "Multiple Scenes Story",
-        "slug": "multiple-scenes-story",
-        "description": "This project have multiple scenes",
+        "uid": "multiple-media-story",
+        "name": "Multiple Media Story",
+        "slug": "multiple-media-story",
+        "description": "This project have multiple scenes and multiple media definition",
         "default": "scene-1",
 
         "scenes":
