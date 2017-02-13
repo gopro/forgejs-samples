@@ -119,6 +119,11 @@
             {
                 "uid": "org.forgejs.safaricors",
                 "url": "SafariCORS/"
+            },
+
+            {
+                "uid": "org.forgejs.mobilevideoplay",
+                "url": "MobileVideoPlay/"
             }
         ],
 
@@ -165,6 +170,11 @@
             {
                 "uid": "safaricors",
                 "engine": "org.forgejs.safaricors"
+            },
+
+            {
+                "uid": "mobilevideoplay",
+                "engine": "org.forgejs.mobilevideoplay"
             }
         ]
     }
