@@ -38,8 +38,7 @@
         [
             {
                 "uid": "org.forgejs.webvrbutton",
-                "url": "WebVRButton/",
-                "manifest": "manifest.json"
+                "url": "WebVRButton/"
             }
         ],
 

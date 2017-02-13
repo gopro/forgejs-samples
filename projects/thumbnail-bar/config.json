@@ -250,8 +250,7 @@
         [
             {
                 "uid": "org.forgejs.thumbnailbar",
-                "url": "ThumbnailBar/",
-                "manifest": "manifest.json"
+                "url": "ThumbnailBar/"
             }
         ],
 

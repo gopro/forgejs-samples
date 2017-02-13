@@ -116,8 +116,7 @@
         [
             {
                 "uid": "org.forgejs.simplebutton",
-                "url": "SimpleButton/",
-                "manifest": "manifest.json"
+                "url": "SimpleButton/"
             },
 
             {

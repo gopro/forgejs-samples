@@ -141,14 +141,12 @@
         [
             {
                 "uid": "org.forgejs.simplebutton",
-                "url": "SimpleButton/",
-                "manifest": "manifest.json"
+                "url": "SimpleButton/"
             },
 
             {
                 "uid": "org.forgejs.safarialertcors",
-                "url": "SafariAlertCORS/",
-                "manifest": "manifest.json"
+                "url": "SafariAlertCORS/"
             }
         ],
 

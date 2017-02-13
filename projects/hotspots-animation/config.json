@@ -1,17 +1,4 @@
 {
-    "view":
-    {
-        "type": "rectilinear"
-    },
-
-    "camera":
-    {
-        "yaw": { "default": 0, "min": -180, "max": 180 },
-        "pitch": { "default": 0, "min": -90, "max": 90 },
-        "roll": { "default": 0, "min": -180, "max": 180 },
-        "fov": { "default": 90, "min": 30, "max": 140 }
-    },
-
     "story":
     {
         "uid": "hotspots-animated",
@@ -27,7 +14,6 @@
                 "name": "First scene",
                 "slug": "first-scene",
                 "description": "This is the first scene",
-                "background": "rgb(0,0,0)",
 
                 "media":
                 {
@@ -46,7 +32,6 @@
                     {
                         "uid": "hotspot-0",
                         "name": "White rabbit",
-
                         "facingCenter": true,
 
                         "transform":
@@ -100,7 +85,6 @@
                     {
                         "uid": "hotspot-1",
                         "name": "Butterfly",
-
                         "facingCenter": true,
 
                         "transform":
@@ -331,8 +315,7 @@
         [
             {
                 "uid": "org.forgejs.webvrbutton",
-                "url": "WebVRButton/",
-                "manifest": "manifest.json"
+                "url": "WebVRButton/"
             }
         ],
 

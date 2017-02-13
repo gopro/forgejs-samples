@@ -40,7 +40,6 @@
                 [
                     {
                         "uid": "hotspot-3d-0",
-
                         "facingCenter": true,
 
                         "transform":
@@ -77,7 +76,6 @@
 
                     {
                         "uid": "hotspot-3d-1",
-
                         "facingCenter": true,
 
                         "transform":
@@ -113,7 +111,6 @@
 
                     {
                         "uid": "hotspot-3d-2",
-
                         "facingCenter": true,
 
                         "transform":
@@ -149,7 +146,6 @@
 
                     {
                         "uid": "hotspot-3d-3",
-
                         "facingCenter": true,
 
                         "transform":
@@ -180,7 +176,6 @@
 
                     {
                         "uid": "hotspot-3d-4",
-
                         "facingCenter": true,
 
                         "transform":
@@ -221,8 +216,7 @@
         [
             {
                 "uid": "org.forgejs.webvrbutton",
-                "url": "WebVRButton/",
-                "manifest": "manifest.json"
+                "url": "WebVRButton/"
             }
         ],
 

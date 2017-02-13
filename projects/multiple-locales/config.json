@@ -84,14 +84,12 @@
         [
             {
                 "uid": "org.forgejs.localeselector",
-                "url": "LocaleSelector/",
-                "manifest": "manifest.json"
+                "url": "LocaleSelector/"
             },
 
             {
                 "uid": "org.forgejs.simpletext",
-                "url": "SimpleText/",
-                "manifest": "manifest.json"
+                "url": "SimpleText/"
             }
         ],
 

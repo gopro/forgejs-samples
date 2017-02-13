@@ -126,14 +126,12 @@
         [
             {
                 "uid": "org.forgejs.simplebutton",
-                "url": "SimpleButton/",
-                "manifest": "manifest.json"
+                "url": "SimpleButton/"
             },
 
             {
                 "uid": "org.forgejs.webvrbutton",
-                "url": "WebVRButton/",
-                "manifest": "manifest.json"
+                "url": "WebVRButton/"
             }
         ],
 

@@ -50,14 +50,12 @@
         [
             {
                 "uid": "org.forgejs.webvrbutton",
-                "url": "WebVRButton/",
-                "manifest": "manifest.json"
+                "url": "WebVRButton/"
             },
 
             {
                 "uid": "org.forgejs.safarialertcors",
-                "url": "SafariAlertCORS/",
-                "manifest": "manifest.json"
+                "url": "SafariAlertCORS/"
             }
         ],
 

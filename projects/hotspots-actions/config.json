@@ -1,18 +1,6 @@
 {
-    "history":
-    {
-        "enabled": true
-    },
-
     "camera":
     {
-        "roll":
-        {
-            "default": 0,
-            "min": -20,
-            "max": 20
-        },
-
         "fov":
         {
             "default": 90,
@@ -46,11 +34,6 @@
                         "format": "equi",
                         "url": "https://cdn.forgejs.org/samples/hotspots-actions/pano-0.jpg"
                     }
-                },
-
-                "view":
-                {
-                    "type": "rectilinear"
                 },
 
                 "camera":
@@ -176,11 +159,6 @@
                     }
                 },
 
-                "view":
-                {
-                    "type": "rectilinear"
-                },
-
                 "camera":
                 {
                     "yaw":
@@ -273,11 +251,6 @@
                     }
                 },
 
-                "view":
-                {
-                    "type": "rectilinear"
-                },
-
                 "camera":
                 {
                     "yaw":
@@ -368,11 +341,6 @@
                         "format": "equi",
                         "url": "https://cdn.forgejs.org/samples/hotspots-actions/pano-3.jpg"
                     }
-                },
-
-                "view":
-                {
-                    "type": "rectilinear"
                 },
 
                 "camera":
@@ -498,11 +466,6 @@
                     }
                 },
 
-                "view":
-                {
-                    "type": "rectilinear"
-                },
-
                 "camera":
                 {
                     "yaw":
@@ -624,11 +587,6 @@
                         "format": "equi",
                         "url": "https://cdn.forgejs.org/samples/hotspots-actions/pano-5.jpg"
                     }
-                },
-
-                "view":
-                {
-                    "type": "rectilinear"
                 },
 
                 "camera":
@@ -907,8 +865,7 @@
         [
             {
                 "uid": "org.forgejs.webvrbutton",
-                "url": "WebVRButton/",
-                "manifest": "manifest.json"
+                "url": "WebVRButton/"
             }
         ],
 

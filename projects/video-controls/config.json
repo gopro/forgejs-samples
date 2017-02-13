@@ -76,8 +76,7 @@
         [
             {
                 "uid": "org.forgejs.videocontrols",
-                "url": "VideoControls/",
-                "manifest": "manifest.json"
+                "url": "VideoControls/"
             },
 
             {

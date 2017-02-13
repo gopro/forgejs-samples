@@ -1,9 +1,4 @@
 {
-    "history":
-    {
-        "enabled": true
-    },
-
     "i18n":
     {
         "enabled": true,
@@ -370,9 +365,6 @@
                 [
                     {
                         "uid": "hotspot-3d-martin",
-                        "tags": [],
-                        "visible": true,
-                        "type": "3d",
 
                         "transform":
                         {
@@ -423,9 +415,6 @@
 
                     {
                         "uid": "hotspot-3d-kartingdriverspot-martin",
-                        "tags": [],
-                        "visible": true,
-                        "type": "3d",
 
                         "transform":
                         {
@@ -470,10 +459,6 @@
 
                     {
                         "uid": "hotspot-3d-samy",
-                        "tags": [],
-                        "visible": true,
-                        "type": "3d",
-                        "hotspotStyle": {},
 
                         "transform":
                         {
@@ -524,9 +509,6 @@
 
                     {
                         "uid": "hotspot-3d-kartingdriverspot-samy",
-                        "tags": [],
-                        "visible": true,
-                        "type": "3d",
 
                         "transform":
                         {
@@ -1084,86 +1066,73 @@
         [
             {
                 "uid": "org.forgejs.letterbox",
-                "url": "Letterbox/",
-                "manifest": "manifest.json"
+                "url": "Letterbox/"
             },
 
             {
                 "uid": "org.forgejs.safarialertcors",
                 "url": "SafariAlertCORS/",
-                "prefix": "../../plugins/",
-                "manifest": "manifest.json"
+                "prefix": "../../plugins/"
             },
 
             {
                 "uid": "org.forgejs.localeselector",
                 "url": "LocaleSelector/",
-                "prefix": "../../plugins/",
-                "manifest": "manifest.json"
+                "prefix": "../../plugins/"
             },
 
             {
                 "uid": "org.forgejs.simplebutton",
                 "url": "SimpleButton/",
-                "prefix": "../../plugins/",
-                "manifest": "manifest.json"
+                "prefix": "../../plugins/"
             },
 
             {
                 "uid": "org.forgejs.simpletext",
                 "url": "SimpleText/",
-                "prefix": "../../plugins/",
-                "manifest": "manifest.json"
+                "prefix": "../../plugins/"
             },
 
             {
                 "uid": "org.forgejs.simpleimage",
                 "url": "SimpleImage/",
-                "prefix": "../../plugins/",
-                "manifest": "manifest.json"
+                "prefix": "../../plugins/"
             },
 
             {
                 "uid": "org.forgejs.kartingdriverspot",
-                "url": "KartingDriverSpot/",
-                "manifest": "manifest.json"
+                "url": "KartingDriverSpot/"
             },
 
             {
                 "uid": "org.forgejs.googlemaps",
-                "url": "GoogleMaps/",
-                "manifest": "manifest.json"
+                "url": "GoogleMaps/"
             },
 
             {
                 "uid": "org.forgejs.ranking",
-                "url": "Ranking/",
-                "manifest": "manifest.json"
+                "url": "Ranking/"
             },
 
             {
                 "uid": "org.forgejs.gooeymenu",
-                "url": "GooeyMenu/",
-                "manifest": "manifest.json"
+                "url": "GooeyMenu/"
             },
 
             {
                 "uid": "org.forgejs.simplevideo",
                 "url": "SimpleVideo/",
-                "prefix": "../../plugins/",
-                "manifest": "manifest.json"
+                "prefix": "../../plugins/"
             },
 
             {
                 "uid": "org.forgejs.heartbeat",
-                "url": "Heartbeat/",
-                "manifest": "manifest.json"
+                "url": "Heartbeat/"
             },
 
             {
                 "uid": "org.forgejs.speedometer",
-                "url": "Speedometer/",
-                "manifest": "manifest.json"
+                "url": "Speedometer/"
             }
         ],
 
@@ -1194,7 +1163,7 @@
 
                     "items":
                     [
-                    {
+                        {
                             "id": "music",
                             "title": "gooeymenu-item-0",
 

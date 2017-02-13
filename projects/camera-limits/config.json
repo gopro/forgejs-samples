@@ -1,8 +1,6 @@
 {
     "camera":
     {
-        "parallax": 0,
-
         "yaw":
         {
             "default": 0,

@@ -34,6 +34,7 @@
                         "min": 30,
                         "max": 120
                     },
+
                     "parallax": 0.5
                 },
 
@@ -41,9 +42,6 @@
                 [
                     {
                         "uid": "hotspot-3d-plane",
-                        "tags": [],
-                        "visible":true,
-                        "type": "3d",
 
                         "transform":
                         {
@@ -70,9 +68,6 @@
 
                     {
                         "uid": "hotspot-3d-box",
-                        "tags": [],
-                        "visible":true,
-                        "type": "3d",
 
                         "transform":
                         {
@@ -100,9 +95,6 @@
 
                     {
                         "uid": "hotspot-3d-cylinder",
-                        "tags": [],
-                        "visible":true,
-                        "type": "3d",
 
                         "transform":
                         {
@@ -130,9 +122,6 @@
 
                     {
                         "uid": "hotspot-3d-sphere",
-                        "tags": [],
-                        "visible":true,
-                        "type": "3d",
 
                         "geometry":
                         {
@@ -162,8 +151,7 @@
         [
             {
                 "uid": "org.forgejs.webvrbutton",
-                "url": "WebVRButton/",
-                "manifest": "manifest.json"
+                "url": "WebVRButton/"
             }
         ],
 
