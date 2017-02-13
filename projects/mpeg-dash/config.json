@@ -124,8 +124,8 @@
             },
 
             {
-                "uid": "org.forgejs.safarialertcors",
-                "url": "SafariAlertCORS/"
+                "uid": "org.forgejs.safaricors",
+                "url": "SafariCORS/"
             }
         ],
 
@@ -170,8 +170,8 @@
             },
 
             {
-                "uid": "safarialertcors",
-                "engine": "org.forgejs.safarialertcors"
+                "uid": "safaricors",
+                "engine": "org.forgejs.safaricors"
             }
         ]
     }
