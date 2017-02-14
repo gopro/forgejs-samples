@@ -1072,13 +1072,13 @@
             {
                 "uid": "org.forgejs.safaricors",
                 "url": "SafariCORS/",
-                "prefix": "../../plugins/",
-                "manifest": "manifest.json"
+                "prefix": "../../plugins/"
             },
 
             {
                 "uid": "org.forgejs.mobilevideoplay",
-                "url": "MobileVideoPlay/"
+                "url": "MobileVideoPlay/",
+                "prefix": "../../plugins/"
             },
 
             {
