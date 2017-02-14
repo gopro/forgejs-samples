@@ -106,6 +106,14 @@
                         "volume": 0.5
                     }
                 }
+            },
+
+            {
+                "uid": "scene-5",
+                "name": "No media scene",
+                "slug": "no-media-scene",
+                "description": "This scene without media, just a yellow background",
+                "background": "yellow"
             }
         ]
     },
