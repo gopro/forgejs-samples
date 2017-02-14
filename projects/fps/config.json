@@ -1,0 +1,50 @@
+{
+    "story":
+    {
+        "uid": "fps-plugin-demo",
+        "name": "FPS plugin demo",
+        "slug": "fps-plugin-demo",
+        "description": "Demonstrates",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
+                    }
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.fps",
+                "url": "FPS/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "fps",
+                "engine": "org.forgejs.fps"
+            }
+        ]
+    }
+}
