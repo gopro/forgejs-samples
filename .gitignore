@@ -1,0 +1,21 @@
+#Binary files extensions
+*.sh
+*.zip
+*.mp4
+*.webm
+*.xls
+
+#Node packages
+**/node_modules
+
+#Files updated with grunt task
+lib/
+plugins/
+
+# Others
+.DS_Store
+**/.DS_Store
+.dropbox
+
+
+
