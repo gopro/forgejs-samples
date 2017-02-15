@@ -1,10 +1,10 @@
 {
     "story":
     {
-        "uid": "fps-plugin-demo",
-        "name": "FPS plugin demo",
-        "slug": "fps-plugin-demo",
-        "description": "Demonstrates",
+        "uid": "ferformance-monitor-plugin-demo",
+        "name": "Performance monitor plugin demo",
+        "slug": "ferformance-monitor-plugin-demo",
+        "description": "Demonstrates the performance monitor plugin",
         "default": "scene-0",
 
         "scenes":
@@ -34,8 +34,8 @@
         "engines":
         [
             {
-                "uid": "org.forgejs.fps",
-                "url": "FPS/"
+                "uid": "org.forgejs.performancemonitor",
+                "url": "PerformanceMonitor/"
             }
         ],
 
@@ -43,7 +43,13 @@
         [
             {
                 "uid": "fps",
-                "engine": "org.forgejs.fps"
+                "engine": "org.forgejs.performancemonitor",
+                "options":
+                {
+                    "mode": "fps",
+                    "horizontalCenter": true,
+                    "top": 5
+                }
             }
         ]
     }
