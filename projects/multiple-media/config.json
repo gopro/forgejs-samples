@@ -110,10 +110,29 @@
 
             {
                 "uid": "scene-5",
+                "name": "Grid scene",
+                "slug": "grid-scene",
+                "description": "This scene has a grid media",
+                "background": "#7f763d",
+
+                "media":
+                {
+                    "uid": "media-5",
+                    "type": "grid",
+
+                    "options":
+                    {
+                        "color": "#bea87f"
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-6",
                 "name": "No media scene",
                 "slug": "no-media-scene",
-                "description": "This scene without media, just a yellow background",
-                "background": "yellow"
+                "description": "This scene without media, just a colored background",
+                "background": "#c5e9e8"
             }
         ]
     },
