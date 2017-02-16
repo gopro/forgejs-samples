@@ -5,16 +5,19 @@
         "name": "Performance monitor plugin demo",
         "slug": "ferformance-monitor-plugin-demo",
         "description": "Demonstrates the performance monitor plugin",
-        "default": "scene-0",
+        "default": "scene-1",
 
         "scenes":
         [
             {
-                "uid": "scene-0",
+                "uid": "scene-1",
+                "name": "Scene image",
+                "slug": "scene-image",
+                "description": "This is an image scene",
 
                 "media":
                 {
-                    "uid": "media-0",
+                    "uid": "media-1",
                     "type": "image",
 
                     "source":
@@ -23,9 +26,58 @@
                         "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
                     }
                 }
+            },
+
+            {
+                "uid": "scene-2",
+                "name": "Scene Video",
+                "slug": "scene-video",
+                "description": "This is a video scene",
+
+                "media":
+                {
+                    "uid": "media-2",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/videos/omni-highlights/source.03-1080p_HD.mp4"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0.5
+                    }
+                }
             }
         ]
     },
+
+    "actions":
+    [
+        {
+            "uid": "action-prev",
+            "target": "viewer.story",
+
+            "method":
+            {
+                "name": "previousScene"
+            }
+        },
+
+        {
+            "uid": "action-next",
+            "target": "viewer.story",
+
+            "method":
+            {
+                "name": "nextScene"
+            }
+        }
+    ],
 
     "plugins":
     {
@@ -36,6 +88,21 @@
             {
                 "uid": "org.forgejs.performancemonitor",
                 "url": "PerformanceMonitor/"
+            },
+
+            {
+                "uid": "org.forgejs.simplebutton",
+                "url": "SimpleButton/"
+            },
+
+            {
+                "uid": "org.forgejs.safaricors",
+                "url": "SafariCORS/"
+            },
+
+            {
+                "uid": "org.forgejs.mobilevideoplay",
+                "url": "MobileVideoPlay/"
             }
         ],
 
@@ -50,6 +117,50 @@
                     "horizontalCenter": true,
                     "top": 5
                 }
+            },
+
+            {
+                "uid": "simplebutton-previous",
+                "engine": "org.forgejs.simplebutton",
+
+                "options":
+                {
+                    "left": 5,
+                    "verticalCenter": true,
+                    "value": "Previous"
+                },
+
+                "events":
+                {
+                    "onClick": ["action-prev"]
+                }
+            },
+
+            {
+                "uid": "simplebutton-next",
+                "engine": "org.forgejs.simplebutton",
+
+                "options":
+                {
+                    "right": 5,
+                    "verticalCenter": true,
+                    "value": "Next"
+                },
+
+                "events":
+                {
+                    "onClick": ["action-next"]
+                }
+            },
+
+            {
+                "uid": "safaricors",
+                "engine": "org.forgejs.safaricors"
+            },
+
+            {
+                "uid": "mobilevideoplay",
+                "engine": "org.forgejs.mobilevideoplay"
             }
         ]
     }
