@@ -35,7 +35,7 @@
         {
             "color": "black",
             "size": 25,
-            "family": "pfdintextprolight"
+            "family": "pfdintextprolight,frutigerlight"
         },
 
         "drivers":

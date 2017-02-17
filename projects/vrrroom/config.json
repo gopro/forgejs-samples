@@ -179,7 +179,7 @@
                                 {
                                     "i18n": true,
                                     "value": "intro-text",
-                                    "fontFamily": "pfdintextprolight",
+                                    "fontFamily": "pfdintextprolight,frutigerlight",
                                     "fontSize": 30,
                                     "color": "white",
                                     "textAlign": "center"
