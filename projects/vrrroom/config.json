@@ -1392,7 +1392,8 @@
                 {
                     "key": "simpleimage-helmet-scratch",
                     "url": "https://cdn.forgejs.org/samples/vrrroom/assets/helmet-scratch.png",
-                    "alpha": 0.3
+                    "alpha": 0.3,
+                    "maximized": true
                 },
 
                 "data": {},
@@ -1409,7 +1410,8 @@
                 {
                     "key": "simpleimage-helmet-vigneting",
                     "url": "https://cdn.forgejs.org/samples/vrrroom/assets/helmet-vigneting.png",
-                    "alpha": 0.4
+                    "alpha": 0.4,
+                    "maximized": true
                 },
 
                 "data": {},
