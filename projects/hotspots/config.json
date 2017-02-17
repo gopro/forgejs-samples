@@ -224,7 +224,13 @@
         [
             {
                 "uid": "webvrbutton",
-                "engine": "org.forgejs.webvrbutton"
+                "engine": "org.forgejs.webvrbutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "right": 10
+                }
             }
         ]
     }

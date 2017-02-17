@@ -75,9 +75,12 @@
             {
                 "uid": "webvrbutton",
                 "engine": "org.forgejs.webvrbutton",
+
                 "options":
                 {
-                    "off": "./assets/hmd360off_black.png"
+                    "bottom": 10,
+                    "right": 10,
+                    "background": "#aaa"
                 }
             }
         ]

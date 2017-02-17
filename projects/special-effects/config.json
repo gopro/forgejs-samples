@@ -144,8 +144,8 @@
 
                 "options":
                 {
-                    "right": 5,
-                    "verticalCenter": true,
+                    "bottom": 14,
+                    "right": 80,
                     "width": 100,
                     "height": 50,
                     "value": "Toggle FX"
@@ -159,7 +159,13 @@
 
             {
                 "uid": "webvrbutton",
-                "engine": "org.forgejs.webvrbutton"
+                "engine": "org.forgejs.webvrbutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "right": 10
+                }
             }
         ]
     }
