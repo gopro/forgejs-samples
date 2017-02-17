@@ -86,7 +86,7 @@
         "instances":
         [
             {
-                "uid": "fps",
+                "uid": "performancemonitor",
                 "engine": "org.forgejs.performancemonitor",
                 "options":
                 {
