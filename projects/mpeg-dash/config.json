@@ -77,29 +77,6 @@
         ]
     },
 
-    "actions":
-    [
-        {
-            "uid": "action-prev",
-            "target": "viewer.story",
-
-            "method":
-            {
-                "name": "previousScene"
-            }
-        },
-
-        {
-            "uid": "action-next",
-            "target": "viewer.story",
-
-            "method":
-            {
-                "name": "nextScene"
-            }
-        }
-    ],
-
     "plugins":
     {
         "prefix": "../../plugins/",
@@ -107,8 +84,8 @@
         "engines":
         [
             {
-                "uid": "org.forgejs.simplebutton",
-                "url": "SimpleButton/"
+                "uid": "org.forgejs.previousnextbuttons",
+                "url": "PreviousNextButtons/"
             },
 
             {
@@ -130,41 +107,9 @@
         "instances":
         [
             {
-                "uid": "simplebutton-previous",
-                "engine": "org.forgejs.simplebutton",
-
-                "options":
-                {
-                    "left": 5,
-                    "verticalCenter": true,
-                    "value": "Previous"
-                },
-
-                "events":
-                {
-                    "onClick": ["action-prev"]
-                },
-
-                "index": 2
-            },
-
-            {
-                "uid": "simplebutton-next",
-                "engine": "org.forgejs.simplebutton",
-
-                "options":
-                {
-                    "right": 5,
-                    "verticalCenter": true,
-                    "value": "Next"
-                },
-
-                "events":
-                {
-                    "onClick": ["action-next"]
-                },
-
-                "index": 2
+                "uid": "previousnextbuttons",
+                "engine": "org.forgejs.previousnextbuttons",
+                "index": 10
             },
 
             {
