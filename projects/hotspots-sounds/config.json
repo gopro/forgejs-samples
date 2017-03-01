@@ -47,6 +47,7 @@
                         "uid": "hotspot-3d-0",
                         "name": "Peeper Frogs Near Lake",
                         "facingCenter": true,
+                        "interactive": false,
 
                         "transform":
                         {
@@ -95,6 +96,7 @@
                         "uid": "hotspot-3d-1",
                         "name": "Jungle",
                         "facingCenter": true,
+                        "interactive": false,
 
                         "transform":
                         {
@@ -128,6 +130,7 @@
                         "uid": "hotspot-3d-2",
                         "name": "Frogs",
                         "facingCenter": true,
+                        "interactive": false,
 
                         "transform":
                         {
@@ -177,6 +180,7 @@
                         "uid": "hotspot-3d-3",
                         "name": "Osprey Bird Call",
                         "facingCenter": true,
+                        "interactive": false,
 
                         "transform":
                         {

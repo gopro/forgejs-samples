@@ -42,6 +42,7 @@
                 [
                     {
                         "uid": "hotspot-3d-plane",
+                        "interactive": false,
 
                         "transform":
                         {
@@ -68,6 +69,7 @@
 
                     {
                         "uid": "hotspot-3d-box",
+                        "interactive": false,
 
                         "transform":
                         {
@@ -95,6 +97,7 @@
 
                     {
                         "uid": "hotspot-3d-cylinder",
+                        "interactive": false,
 
                         "transform":
                         {
@@ -122,6 +125,7 @@
 
                     {
                         "uid": "hotspot-3d-sphere",
+                        "interactive": false,
 
                         "geometry":
                         {
