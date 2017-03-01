@@ -139,8 +139,8 @@
 
                 "options":
                 {
-                    "left": 5,
-                    "verticalCenter": true,
+                    "bottom": 10,
+                    "right": 10,
                     "width": 100,
                     "height": 50,
                     "value": "Rectilinear"
@@ -159,8 +159,8 @@
 
                 "options":
                 {
-                    "right": 5,
-                    "verticalCenter": true,
+                    "bottom": 10,
+                    "right": 110,
                     "width": 100,
                     "height": 50,
                     "value": "Little Planet"
