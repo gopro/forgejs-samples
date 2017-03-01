@@ -176,8 +176,11 @@
 
                         "states":
                         {
-                            "default": "two",
-                            "auto": false,
+                            "options":
+                            {
+                                "default": "two",
+                                "auto": false
+                            },
 
                             "zero":
                             {
@@ -266,8 +269,11 @@
 
                         "states":
                         {
-                            "auto": false,
-                            "default": "off",
+                            "options":
+                            {
+                                "default": "off",
+                                "auto": false
+                            },
 
                             "off":
                             {
@@ -334,8 +340,11 @@
 
                         "states":
                         {
-                            "auto": false,
-                            "default": "on",
+                            "options":
+                            {
+                                "default": "on",
+                                "auto": false
+                            },
 
                             "off":
                             {
