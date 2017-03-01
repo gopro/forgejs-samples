@@ -33,6 +33,7 @@
                         "uid": "hotspot-0",
                         "name": "White rabbit",
                         "facingCenter": true,
+                        "interactive": false,
 
                         "transform":
                         {
@@ -86,6 +87,7 @@
                         "uid": "hotspot-1",
                         "name": "Butterfly",
                         "facingCenter": true,
+                        "interactive": false,
 
                         "transform":
                         {
