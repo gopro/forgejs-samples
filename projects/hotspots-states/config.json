@@ -1,0 +1,436 @@
+{
+    "view":
+    {
+        "type": "rectilinear"
+    },
+
+    "history":
+    {
+        "enabled": false
+    },
+
+    "story":
+    {
+        "uid": "hotspots-story",
+        "name": "Hotspots Story",
+        "slug": "hotspots-story",
+        "description": "This is sample of hotspots",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This scene demonstrate different use cases of hotspot states",
+                "background": "#202040",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "grid",
+
+                    "options":
+                    {
+                        "color": "#7F7FFF"
+                    }
+                },
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-two-images",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 200,
+                                "theta": -30,
+                                "phi": 0
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 60,
+                                "height": 60
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        },
+
+                        "states":
+                        {
+                            "over":
+                            {
+                                "material":
+                                {
+                                    "image": "https://cdn.forgejs.org/samples/common/images/spot-1.png"
+                                }
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-map",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 200,
+                                "theta": -10,
+                                "phi": 0
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 60,
+                                "height": 60
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image":
+                            {
+                                "url": "https://cdn.forgejs.org/samples/common/images/spot-map.png",
+                                "frame": { "x": 256, "y": 0, "w": 256, "h": 256 }
+                            },
+
+                            "opacity": 0.9,
+                            "transparent": true
+                        },
+
+                        "states":
+                        {
+                            "over":
+                            {
+                                "material":
+                                {
+                                    "image":
+                                    {
+                                        "frame": { "x": 0, "y": 256, "w": 256, "h": 256 }
+                                    },
+
+                                    "opacity": 1
+                                }
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-toogle-loop",
+                        "facingCenter": true,
+                        "cursor": "crosshair",
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 200,
+                                "theta": 10,
+                                "phi": 0
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 60,
+                                "height": 60
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image":
+                            {
+                                "url": "https://cdn.forgejs.org/samples/common/images/spot-map.png"
+                            },
+
+                            "transparent": true
+                        },
+
+                        "events":
+                        {
+                            "onClick": "click-action-2"
+                        },
+
+                        "states":
+                        {
+                            "default": "two",
+                            "auto": false,
+
+                            "zero":
+                            {
+                                "material":
+                                {
+                                    "image":
+                                    {
+                                        "frame": { "x": 0, "y": 0, "w": 256, "h": 256 }
+                                    }
+                                }
+                            },
+
+                            "one":
+                            {
+                                "material":
+                                {
+                                    "image":
+                                    {
+                                        "frame": { "x": 256, "y": 0, "w": 256, "h": 256 }
+                                    }
+                                }
+                            },
+
+                            "two":
+                            {
+                                "material":
+                                {
+                                    "image":
+                                    {
+                                        "frame": { "x": 0, "y": 256, "w": 256, "h": 256 }
+                                    }
+                                }
+                            },
+
+                            "three":
+                            {
+                                "material":
+                                {
+                                    "image":
+                                    {
+                                        "frame": { "x": 256, "y": 256, "w": 256, "h": 256 }
+                                    }
+                                }
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-checkbox-0",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 200,
+                                "theta": 30,
+                                "phi": 5
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 30,
+                                "height": 30
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image":
+                            {
+                                "url": "https://cdn.forgejs.org/samples/common/images/checkbox-white-map.png"
+                            },
+
+                            "transparent": true
+                        },
+
+                        "events":
+                        {
+                            "onClick": "click-action-0"
+                        },
+
+                        "states":
+                        {
+                            "auto": false,
+                            "default": "off",
+
+                            "off":
+                            {
+                                "material":
+                                {
+                                    "image":
+                                    {
+                                        "frame": { "x": 0, "y": 0, "w": 300, "h": 300 }
+                                    }
+                                }
+                            },
+
+                            "on":
+                            {
+                                "material":
+                                {
+                                    "image":
+                                    {
+                                        "frame": { "x": 300, "y": 0, "w": 300, "h": 300 }
+                                    }
+                                }
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-checkbox-1",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 200,
+                                "theta": 30,
+                                "phi": -5
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 30,
+                                "height": 30
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image":
+                            {
+                                "url": "https://cdn.forgejs.org/samples/common/images/checkbox-white-map.png"
+                            },
+
+                            "transparent": true
+                        },
+
+                        "events":
+                        {
+                            "onClick": "click-action-1"
+                        },
+
+                        "states":
+                        {
+                            "auto": false,
+                            "default": "on",
+
+                            "off":
+                            {
+                                "material":
+                                {
+                                    "image":
+                                    {
+                                        "frame": { "x": 0, "y": 0, "w": 300, "h": 300 }
+                                    }
+                                }
+                            },
+
+                            "on":
+                            {
+                                "material":
+                                {
+                                    "image":
+                                    {
+                                        "frame": { "x": 300, "y": 0, "w": 300, "h": 300 }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+
+    "actions":
+    [
+        {
+            "uid": "click-action-0",
+            "target":
+            {
+                "identifier": "hotspot-checkbox-0",
+                "accessor": "states"
+            },
+            "method":
+            {
+                "name": "toggle"
+            }
+        },
+
+        {
+            "uid": "click-action-1",
+            "target":
+            {
+                "identifier": "hotspot-checkbox-1",
+                "accessor": "states"
+            },
+            "method":
+            {
+                "name": "toggle"
+            }
+        },
+
+        {
+            "uid": "click-action-2",
+            "target":
+            {
+                "identifier": "hotspot-toogle-loop",
+                "accessor": "states"
+            },
+            "method":
+            {
+                "name": "toggle"
+            }
+        }
+    ],
+
+    "plugins":
+    {
+        "prefix": "../../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.webvrbutton",
+                "url": "WebVRButton/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "webvrbutton",
+                "engine": "org.forgejs.webvrbutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "right": 10
+                }
+            }
+        ]
+    }
+}
