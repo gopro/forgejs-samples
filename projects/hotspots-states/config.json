@@ -418,7 +418,7 @@
 
     "plugins":
     {
-        "prefix": "../../../plugins/",
+        "prefix": "../../plugins/",
 
         "engines":
         [
