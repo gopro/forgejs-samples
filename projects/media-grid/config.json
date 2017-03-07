@@ -1,0 +1,42 @@
+{
+    "view":
+    {
+        "type": "gopro"
+    },
+
+    "history":
+    {
+        "enabled": false
+    },
+
+    "story":
+    {
+        "uid": "grid-story",
+        "name": "Grid Story",
+        "slug": "grid-story",
+        "description": "This is sample of media grid",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This scene demonstrate the media grid",
+                "background": "#202040",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "grid",
+
+                    "options":
+                    {
+                        "color": "#7F7FFF"
+                    }
+                }
+            }
+        ]
+    }
+}
