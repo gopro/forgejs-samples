@@ -1,26 +1,14 @@
 
 @font-face
 {
-    font-family: pfdintextprolight;
-    src: url("https://cdn.forgejs.org/samples/vrrroom/fonts/pfdintextpro-light.otf") format("opentype");
+    font-family: dosislight;
+    src: url("https://cdn.forgejs.org/samples/vrrroom/fonts/Dosis-Light.ttf");
 }
 
 @font-face
 {
-    font-family: pfdintextprobold;
-    src: url("https://cdn.forgejs.org/samples/vrrroom/fonts/pfdintextpro-bold.otf") format("opentype");
-}
-
-@font-face
-{
-    font-family: frutigerlight;
-    src: url('https://cdn.forgejs.org/samples/vrrroom/fonts/Frutiger47-CondensedLight.ttf');
-}
-
-@font-face
-{
-    font-family: frutigerbold;
-    src: url('https://cdn.forgejs.org/samples/vrrroom/fonts/Frutiger67-Condensed-Bold.ttf');
+    font-family: dosisbold;
+    src: url("https://cdn.forgejs.org/samples/vrrroom/fonts/Dosis-Bold.ttf");
 }
 
 /**
