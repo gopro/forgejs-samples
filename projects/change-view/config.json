@@ -65,18 +65,18 @@
     [
         {
             "uid": "action-view-recti",
-            "target": "viewer.renderer",
+            "target": "viewer.view",
 
             "property":
             {
-                "name": "view",
+                "name": "type",
                 "value": "rectilinear"
             }
         },
 
         {
             "uid": "action-camera-fov-recti",
-            "target": "viewer.renderer.camera",
+            "target": "viewer.camera",
 
             "method":
             {
@@ -87,23 +87,56 @@
 
         {
             "uid": "action-view-gopro",
-            "target": "viewer.renderer",
+            "target": "viewer.view",
 
             "property":
             {
-                "name": "view",
+                "name": "type",
                 "value": "gopro"
             }
         },
 
         {
             "uid": "action-camera-fov-gopro",
-            "target": "viewer.renderer.camera",
+            "target": "viewer.camera",
 
             "method":
             {
                 "name": "lookAt",
                 "args": [null, -90, null, 220]
+            }
+        },
+
+        {
+            "uid": "action-view-flat",
+            "target": "viewer.view",
+
+            "property":
+            {
+                "name": "type",
+                "value": "flat"
+            }
+        },
+
+        {
+            "uid": "action-camera-fov-flat",
+            "target": "viewer.camera",
+
+            "method":
+            {
+                "name": "lookAt",
+                "args": [0, 0, 0, 180]
+            }
+        },
+
+        {
+            "uid": "action-view-flat-repeatX",
+            "target": "viewer.view.current",
+
+            "property":
+            {
+                "name": "repeatX",
+                "value": true
             }
         }
     ],
@@ -169,6 +202,26 @@
                 "events":
                 {
                     "onClick": ["action-view-gopro", "action-camera-fov-gopro"]
+                }
+            },
+
+            {
+                "uid": "simplebutton-flat",
+                "engine": "org.forgejs.simplebutton",
+                "enabled": true,
+
+                "options":
+                {
+                    "bottom": 10,
+                    "right": 220,
+                    "width": 100,
+                    "height": 50,
+                    "value": "Flat"
+                },
+
+                "events":
+                {
+                    "onClick": ["action-view-flat", "action-camera-fov-flat", "action-view-flat-repeatX"]
                 }
             },
 
