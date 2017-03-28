@@ -1,0 +1,330 @@
+{
+    "view":
+    {
+        "type": "rectilinear"
+    },
+
+    "history":
+    {
+        "enabled": false
+    },
+
+    "story":
+    {
+        "uid": "hotspots-story",
+        "name": "Hotspots Story",
+        "slug": "hotspots-story",
+        "description": "This is sample of hotspots",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This scene demonstrate different use cases of hotspot states",
+                "background": "#202040",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "grid",
+
+                    "options":
+                    {
+                        "color": "#7F7FFF"
+                    }
+                },
+
+                "hotspots":
+                [
+                     {
+                        "uid": "hotspot-sprite-0",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 200,
+                                "theta": -30,
+                                "phi": 0
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 56,
+                                "height": 80
+                            }
+                        },
+
+                        "material":
+                        {
+                            "sprite":
+                            {
+                                "url": "https://cdn.forgejs.org/samples/common/sprites/numbers.png",
+                                "frames": "https://cdn.forgejs.org/samples/common/sprites/numbers.json",
+                                "animation": "two",
+                                "animations":
+                                [
+                                    {
+                                        "name": "two",
+                                        "frameRate": 2
+                                    },
+
+                                    {
+                                        "name": "sixty",
+                                        "frameRate": 60
+                                    }
+                                ]
+                            },
+
+                            "transparent": false
+                        },
+
+                        "states":
+                        {
+                            "over":
+                            {
+                                "material":
+                                {
+                                    "sprite":
+                                    {
+                                        "animation": "sixty"
+                                    }
+                                }
+                            }
+
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-sprite-1",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 200,
+                                "theta": 0,
+                                "phi": 0
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 56,
+                                "height": 80
+                            }
+                        },
+
+                        "material":
+                        {
+                            "sprite":
+                            {
+                                "url": "https://cdn.forgejs.org/samples/common/sprites/numbers.png",
+                                "frames": "https://cdn.forgejs.org/samples/common/sprites/numbers.json",
+                                "animation": "first",
+
+                                "animations":
+                                [
+                                    {
+                                        "name": "first",
+                                        "start": 0,
+                                        "end": 4,
+                                        "frameRate": 2
+                                    },
+
+                                    {
+                                        "name": "second",
+                                        "start": 5,
+                                        "end": 9,
+                                        "frameRate": 2
+                                    }
+                                ]
+                            },
+
+                            "transparent": false
+                        },
+
+                        "states":
+                        {
+                            "over":
+                            {
+                                "material":
+                                {
+                                    "sprite":
+                                    {
+                                        "animation": "second"
+                                    }
+                                }
+                            }
+
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-sprite-2",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 200,
+                                "theta": 30,
+                                "phi": 0
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 56,
+                                "height": 80
+                            }
+                        },
+
+                        "material":
+                        {
+                            "sprite":
+                            {
+                                "url": "https://cdn.forgejs.org/samples/common/sprites/numbers.png",
+                                "frames": "https://cdn.forgejs.org/samples/common/sprites/numbers.json",
+                                "frameRate": 2
+                            },
+
+                            "transparent": false
+                        },
+
+                        "events":
+                        {
+                            "onOver": "over-action-0",
+                            "onOut": "out-action-0"
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-sprite-3",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 200,
+                                "theta": 0,
+                                "phi": 30
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 20,
+                                "height": 20
+                            }
+                        },
+
+                        "material":
+                        {
+                            "sprite":
+                            {
+                                "url": "https://cdn.forgejs.org/samples/common/sprites/hotspot-green-circle-animation.png",
+                                "frames": "https://cdn.forgejs.org/samples/common/sprites/hotspot-green-circle-animation.json",
+                                "paused": true,
+                                "frame": 5,
+                                "loop": false
+                            },
+
+                            "transparent": true
+                        },
+
+                        "states":
+                        {
+                            "over":
+                            {
+                                "material":
+                                {
+                                    "sprite":
+                                    {
+                                        "paused": false
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+
+    "actions":
+    [
+        {
+            "uid": "out-action-0",
+            "target":
+            {
+                "identifier": "hotspot-sprite-2",
+                "accessor": "material.displayObject"
+            },
+            "method":
+            {
+                "name": "resume"
+            }
+        },
+
+        {
+            "uid": "over-action-0",
+            "target":
+            {
+                "identifier": "hotspot-sprite-2",
+                "accessor": "material.displayObject"
+            },
+            "method":
+            {
+                "name": "pause"
+            }
+        }
+    ],
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.webvrbutton",
+                "url": "WebVRButton/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "webvrbutton",
+                "engine": "org.forgejs.webvrbutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "right": 10
+                }
+            }
+        ]
+    }
+}
