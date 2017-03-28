@@ -51,13 +51,37 @@
 
             {
                 "uid": "scene-3",
+                "name": "Image flat scene",
+                "slug": "image-flat-scene",
+                "description": "This scene has a flat image media",
+
+                "media":
+                {
+                    "uid": "media-3",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "flat",
+                        "url": "https://cdn.forgejs.org/samples/common/images/Mountain-selfie.jpg"
+                    }
+                },
+
+                "view":
+                {
+                    "type": "flat"
+                }
+            },
+
+            {
+                "uid": "scene-4",
                 "name": "Video equi scene",
                 "slug": "video-equi-scene",
                 "description": "This scene has an eqirectangular video media",
 
                 "media":
                 {
-                    "uid": "media-3",
+                    "uid": "media-4",
                     "type": "video",
 
                     "source":
@@ -81,14 +105,14 @@
             },
 
             {
-                "uid": "scene-4",
+                "uid": "scene-5",
                 "name": "Video cubemap scene",
                 "slug": "video-cubemap-scene",
                 "description": "This scene has a cubemap video media",
 
                 "media":
                 {
-                    "uid": "media-4",
+                    "uid": "media-5",
                     "type": "video",
 
                     "source":
@@ -109,7 +133,38 @@
             },
 
             {
-                "uid": "scene-5",
+                "uid": "scene-6",
+                "name": "Video flat scene",
+                "slug": "video-flat-scene",
+                "description": "This scene has a flat video media",
+
+                "media":
+                {
+                    "uid": "media-6",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "flat",
+                        "url": "https://cdn.forgejs.org/samples/common/videos/omni-highlights/Omni-Highlights-Reframed-1920x1080.mp4"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0.5
+                    }
+                },
+
+                "view":
+                {
+                    "type": "flat"
+                }
+            },
+
+            {
+                "uid": "scene-7",
                 "name": "Grid scene",
                 "slug": "grid-scene",
                 "description": "This scene has a grid media",
@@ -117,7 +172,7 @@
 
                 "media":
                 {
-                    "uid": "media-5",
+                    "uid": "media-7",
                     "type": "grid",
 
                     "options":
@@ -128,7 +183,7 @@
             },
 
             {
-                "uid": "scene-6",
+                "uid": "scene-8",
                 "name": "No media scene",
                 "slug": "no-media-scene",
                 "description": "This scene without media, just a colored background",
