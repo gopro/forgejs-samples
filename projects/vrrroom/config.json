@@ -59,8 +59,6 @@
     "playlists":
     {
         "enabled": false,
-        "loop": true,
-        "autoPlay": true,
 
         "volume":
         {
@@ -76,6 +74,8 @@
                 "uid": "playlist-0",
                 "name": "driver-selection",
                 "default": "playlist-0-track-0",
+                "loop": true,
+                "autoPlay": true,
 
                 "tracks": ["playlist-0-track-0"]
             },
@@ -84,6 +84,8 @@
                 "uid": "playlist-1",
                 "name": "karting",
                 "default": "playlist-1-track-0",
+                "loop": true,
+                "autoPlay": true,
 
                 "tracks": ["playlist-1-track-0", "playlist-1-track-1", "playlist-1-track-2"]
             }
@@ -137,8 +139,6 @@
                 "slug": "intro",
                 "description": "",
                 "tags": ["intro", "start"],
-
-                "media": {},
 
                 "plugins":
                 {
