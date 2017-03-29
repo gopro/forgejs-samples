@@ -1,0 +1,142 @@
+{
+    "view":
+    {
+        "type": "rectilinear"
+    },
+
+    "history":
+    {
+        "enabled": false
+    },
+
+    "story":
+    {
+        "uid": "hotspots-story",
+        "name": "Hotspots Story",
+        "slug": "hotspots-story",
+        "description": "This is sample of hotspots",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This scene demonstrate different use cases of hotspot states",
+                "background": "#202040",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "grid",
+
+                    "options":
+                    {
+                        "color": "#7F7FFF"
+                    }
+                },
+
+                "hotspots":
+                [
+                     {
+                        "uid": "hotspot-video-0",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 200,
+                                "theta": 0,
+                                "phi": 0
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 128,
+                                "height": 64
+                            }
+                        },
+
+                        "material":
+                        {
+                            "video":
+                            {
+                                "url": "https://cdn.forgejs.org/samples/common/videos/omni-highlights/Omni-Highlights-256x128.mp4"
+                            },
+
+                            "transparent": true
+                        },
+
+                        "events":
+                        {
+                            "onOver": "over-action-1",
+                            "onOut": "out-action-1"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+
+    "actions":
+    [
+        {
+            "uid": "out-action-1",
+            "target":
+            {
+                "identifier": "hotspot-video-0",
+                "accessor": "material.displayObject"
+            },
+            "method":
+            {
+                "name": "play"
+            }
+        },
+
+        {
+            "uid": "over-action-1",
+            "target":
+            {
+                "identifier": "hotspot-video-0",
+                "accessor": "material.displayObject"
+            },
+            "method":
+            {
+                "name": "pause"
+            }
+        }
+    ],
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.webvrbutton",
+                "url": "WebVRButton/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "webvrbutton",
+                "engine": "org.forgejs.webvrbutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "right": 10
+                }
+            }
+        ]
+    }
+}
