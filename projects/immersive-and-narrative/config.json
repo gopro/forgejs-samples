@@ -1,0 +1,537 @@
+{
+    "postProcessing":
+    {
+        "fxSets":
+        [
+            {
+                "uid": "fxSet-narrative",
+                "set":
+                [
+                    {
+                        "type": "VignetteShader",
+                        "uid": "fxSet-overall-vignette-0",
+
+                        "params":
+                        {
+                            "offset": 0.20,
+                            "darkness": 26
+                        }
+                    }
+                ]
+            },
+            {
+                "uid": "fxSet-immersive",
+                "set":
+                [
+                    {
+                        "type": "FilmShader",
+                        "uid": "fxSet-background-film-0",
+
+                        "params":
+                        {
+                            "nIntensity": 0.1,
+                            "sIntensity": 0.8,
+                            "sCount": 1024,
+                            "grayscale": 0
+                        }
+                    },
+                    {
+                        "type": "SepiaShader",
+                        "uid": "fxSet-background-sepia-0",
+
+                        "params":
+                        {
+                            "amount": 0.15
+                        }
+                    },
+                    {
+                        "type": "VignetteShader",
+                        "uid": "fxSet-overall-vignette-0",
+
+                        "params":
+                        {
+                            "offset": 0.20,
+                            "darkness": 26
+                        }
+                    }
+
+                ]
+            }
+        ]
+    },
+
+    "story":
+    {
+        "uid": "multiple-media-story",
+        "name": "Multiple Media Story",
+        "slug": "multiple-media-story",
+        "description": "This project have multiple scenes and multiple media definition",
+        "default": "scene-1",
+
+        "scenes":
+        [
+            {
+                "uid": "chapter-1",
+                "name": "First chapter - look around",
+                "slug": "first-chapter-introduction",
+                "description": "First chapter - find the pyramid to jump to the next scene",
+                "fx": "fxSet-immersive",
+
+                "media":
+                {
+                    "uid": "media-1",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/immersive-and-narrative/pano/Alpespace-VueAerienne.jpg"
+                    }
+                },
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-pyramid-media-1",
+                        "interactive": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "x": -15,
+                                "y": -220,
+                                "z": -10
+                            },
+
+                            "rotation":
+                            {
+                                "x": 90,
+                                "y": -30
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
+                            }
+                        },
+
+                        "material":
+                        {
+                            "color": "#207040",
+                            "opacity": 0.0
+                        },
+
+                        "states":
+                        {
+                            "over":
+                            {
+                                "material":
+                                {
+                                    "opacity": 0.4
+                                }
+                            }
+                        },
+
+                        "events":
+                        {
+                            "onClick": ["action-next-scene"]
+                        }
+                    }
+                ],
+
+                "camera":
+                {                   
+                    "fov":
+                    {
+                        "default": 90,
+                        "min": 50,
+                        "max": 330
+                    }
+                },
+
+                "controllers":
+                {
+                    "enabled": true
+                },
+
+                "view":
+                {
+                    "type": "gopro"
+                }
+            },
+
+            {
+                "uid": "chapter-2",
+                "name": "Second chapter",
+                "slug": "second-chapter",
+                "description": "Second chapter - just enjoy your watching",
+                "fx": "fxSet-narrative",
+         
+                "media":
+                {
+                    "uid": "media-2",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "flat",
+                        "url": "https://cdn.forgejs.org/samples/immersive-and-narrative/video/PyramideEtLac.mp4"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": false,
+                        "volume": 1
+                    }
+                },
+
+                "playlists":
+                {
+                    "enabled": false
+                },
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 180,
+                        "min": 180,
+                        "max": 180
+                    }
+                },
+
+                "controllers":
+                {
+                    "enabled": false
+                },
+       
+                "view":
+                {
+                    "type": "flat"
+                }
+            },
+
+            {
+                "uid": "chapter-3",
+                "name": "Third chapter - look around",
+                "slug": "third-chapter",
+                "description": "Third chapter - find the pyramid to jump to the next scene",
+                "fx": "fxSet-immersive",
+
+                "media":
+                {
+                    "uid": "media-3",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/immersive-and-narrative/pano/Alpespace-PyramideTerrasse.jpg"
+                    }
+                },
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-pyramid-media-3",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "x": -150,
+                                "y": 0,
+                                "z": -100
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "shape",
+                            "options":
+                            {
+                                "points":
+                                [
+                                    [ -66, 12 ],
+                                    [ 180, 12 ],
+                                    [  35, 83 ]
+                                ]
+                            }
+                        },
+
+                        "material":
+                        {
+                            "color": "#207040",
+                            "opacity": 0.0
+                        },
+
+                        "states":
+                        {
+                            "over":
+                            {
+                                "material":
+                                {
+                                    "opacity": 0.4
+                                }
+                            }
+                        },
+
+                        "events":
+                        {
+                            "onClick": ["action-next-scene"]
+                        }
+                    }
+                ],
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 90,
+                        "min": 50,
+                        "max": 130
+                    },
+
+                    "yaw":
+                    {
+                        "default": 125
+                    },
+
+                    "pitch":
+                    {
+                        "default": -12
+                    }
+                },
+
+                "controllers":
+                {
+                    "enabled": true
+                },
+                
+                "view":
+                {
+                    "type": "rectilinear"
+                }
+            },
+
+            {
+                "uid": "chapter-4",
+                "name": "Fourth chapter",
+                "slug": "fourth-chapter",
+                "description": "Fourth chapter - just enjoy your watching",
+                "fx": "fxSet-narrative",
+
+                "media":
+                {
+                    "uid": "media-4",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "flat",
+                        "url": "https://cdn.forgejs.org/samples/immersive-and-narrative/video/PyramideZoom.mp4"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": false,
+                        "volume": 1
+                    }
+                },
+
+                "playlists":
+                {
+                    "enabled": false
+                },
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 180,
+                        "min": 180,
+                        "max": 180
+                    }
+                },
+
+                "controllers":
+                {
+                    "enabled": false
+                },
+                
+                "view":
+                {
+                    "type": "flat"
+                }
+            }
+        ]
+    },
+
+    "playlists":
+    {
+        "volume":
+        {
+            "default": 0.5,
+            "max": 1.0
+        },
+
+        "default": "playlist-0",
+        "enabled": true,
+
+        "lists":
+        [
+            {
+                "uid": "playlist-0",
+                "name": "Playlist #1",
+                "default": "track-0",
+                "tracks": ["track-0"]
+            }
+        ],
+
+        "tracks":
+        [
+            {
+                "uid": "track-0",
+                "author": "Yann Gilquin",
+                "name": "Jack",
+                "url": "https://cdn.forgejs.org/samples/immersive-and-narrative/audio/Jack.mp3"
+            }
+        ]
+    },
+
+    "actions":
+    [       
+        {
+            "uid": "action-next-scene",
+            "target": "viewer.story",
+
+            "method":
+            {
+                "name": "nextScene"
+            }
+        }
+    ],
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.safaricors",
+                "url": "SafariCORS/"
+            },
+
+            {
+                "uid": "org.forgejs.mobilevideoplay",
+                "url": "MobileVideoPlay/"
+            },
+
+            {
+                "uid": "org.forgejs.mediaevents",
+                "prefix": "./plugins/",
+                "url": "MediaEvents/"
+            },
+
+            {
+                "uid": "org.forgejs.simpletext",
+                "url": "SimpleText/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "mediaevents",
+                "engine": "org.forgejs.mediaevents",
+
+                "scenes":
+                [
+                    "chapter-2",
+                    "chapter-4"
+                ],
+
+                "events":
+                {
+                    "onEnded": ["action-next-scene"]
+                }
+            },
+
+            {
+                "uid": "safaricors",
+                "engine": "org.forgejs.safaricors"
+            },
+
+            {
+                "uid": "mobilevideoplay",
+                "engine": "org.forgejs.mobilevideoplay"
+            },
+
+            {
+                "uid": "text-immersive-instructions",
+                "engine": "org.forgejs.simpletext",
+
+                "scenes":
+                [
+                    "chapter-1",
+                    "chapter-3"
+                ],
+
+                "options":
+                {
+                    "config":
+                    {
+                        "i18n": false,
+                        "value": "F I N D    T H E    P Y R A M I D    A N D    C L I C K    T O    C O N T I N U E   . . .",
+                        "fontSize": 24,
+                        "color": "#205030",
+                        "textAlign": "center",
+                        "textShadow": "1px 1px 1px #102010",
+                        "whiteSpace": "pre"
+                    },
+
+                    "horizontalCenter": true,
+                    "top": 20
+                }
+            },
+
+            {
+                "uid": "text-narrative-instructions",
+                "engine": "org.forgejs.simpletext",
+
+                "scenes":
+                [
+                    "chapter-2",
+                    "chapter-4"
+                ],
+
+                "options":
+                {
+                    "config":
+                    {
+                        "i18n": false,
+                        "value": "P L E A S E    E N J O Y    Y O U R    W A T C H I N G",
+                        "fontSize": 24,
+                        "color": "#205030",
+                        "textAlign": "center",
+                        "textShadow": "1px 1px 1px #102010",
+                        "whiteSpace": "pre"
+                    },
+
+                    "horizontalCenter": true,
+                    "top": 20
+                }
+            }
+        ]
+    }
+}

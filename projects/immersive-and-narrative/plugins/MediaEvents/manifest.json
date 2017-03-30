@@ -1,0 +1,37 @@
+{
+    "uid": "org.forgejs.mediaevents",
+    "name": "Media events",
+    "shortName": "mediaevents",
+    "version": "1.0.0",
+    "versionName": "Media events 1.0.0",
+    "description": "Media event dispatcher.",
+
+    "author":
+    {
+        "name": "GoPro",
+        "website": "https://forgejs.org"
+    },
+
+    "licence": "Apache 2",
+
+    "options":
+    {
+
+    },
+
+    "data":
+    {
+
+    },
+
+    "events":
+    {
+        "onEnded": null
+    },
+
+    "sources": [
+        "src/MediaEvents.js"
+    ],
+
+    "constructor": "ForgePlugins.MediaEvents"
+}
