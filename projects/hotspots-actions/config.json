@@ -64,6 +64,16 @@
                             }
                         },
 
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
+                            }
+                        },
+
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
@@ -85,7 +95,7 @@
                             {
                                 "theta": 82,
                                 "phi": -8,
-                                "radius": 400
+                                "radius": 700
                             },
 
                             "rotation":
@@ -93,6 +103,16 @@
                                 "x": 85,
                                 "y": -82,
                                 "z": -15
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
                             }
                         },
 
@@ -117,13 +137,23 @@
                             {
                                 "theta": 141,
                                 "phi": -8,
-                                "radius": 400
+                                "radius": 700
                             },
 
                             "rotation":
                             {
                                 "x": 85,
                                 "y": -141
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
                             }
                         },
 
@@ -178,13 +208,23 @@
                             {
                                 "theta": 118,
                                 "phi": -6,
-                                "radius": 400
+                                "radius": 700
                             },
 
                             "rotation":
                             {
                                 "x": 85,
                                 "y": -118
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
                             }
                         },
 
@@ -209,13 +249,23 @@
                             {
                                 "theta": -179,
                                 "phi": -11,
-                                "radius": 400
+                                "radius": 500
                             },
 
                             "rotation":
                             {
                                 "x": 85,
                                 "y": 179
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
                             }
                         },
 
@@ -270,13 +320,23 @@
                             {
                                 "theta": 110,
                                 "phi": -8,
-                                "radius": 400
+                                "radius": 500
                             },
 
                             "rotation":
                             {
                                 "x": 85,
                                 "y": -110
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
                             }
                         },
 
@@ -301,13 +361,23 @@
                             {
                                 "theta": 2,
                                 "phi": -11,
-                                "radius": 400
+                                "radius": 600
                             },
 
                             "rotation":
                             {
                                 "x": 85,
                                 "y": -2
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
                             }
                         },
 
@@ -362,13 +432,23 @@
                             {
                                 "theta": 5,
                                 "phi": -9,
-                                "radius": 400
+                                "radius": 600
                             },
 
                             "rotation":
                             {
                                 "x": 85,
                                 "y": -5
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
                             }
                         },
 
@@ -403,6 +483,16 @@
                             }
                         },
 
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
+                            }
+                        },
+
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
@@ -424,13 +514,23 @@
                             {
                                 "theta": -175,
                                 "phi": -5,
-                                "radius": 400
+                                "radius": 700
                             },
 
                             "rotation":
                             {
                                 "x": 82,
                                 "y": 175
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
                             }
                         },
 
@@ -485,13 +585,23 @@
                             {
                                 "theta": 0,
                                 "phi": -11,
-                                "radius": 400
+                                "radius": 600
                             },
 
                             "rotation":
                             {
                                 "x": 85,
                                 "y": 0
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
                             }
                         },
 
@@ -516,13 +626,23 @@
                             {
                                 "theta": 130,
                                 "phi": -33,
-                                "radius": 400
+                                "radius": 500
                             },
 
                             "rotation":
                             {
                                 "x": 85,
                                 "y": -130
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
                             }
                         },
 
@@ -547,13 +667,23 @@
                             {
                                 "theta": 178,
                                 "phi": -8,
-                                "radius": 400
+                                "radius": 700
                             },
 
                             "rotation":
                             {
                                 "x": 82,
                                 "y": -178
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
                             }
                         },
 
@@ -608,13 +738,23 @@
                             {
                                 "theta": -178,
                                 "phi": -11,
-                                "radius": 400
+                                "radius": 700
                             },
 
                             "rotation":
                             {
                                 "x": 82,
                                 "y": 178
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
                             }
                         },
 

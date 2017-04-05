@@ -67,8 +67,8 @@
                             "type": "plane",
                             "options":
                             {
-                                "width": 84,
-                                "height": 60
+                                "width": 72,
+                                "height": 50
                             }
                         },
 
@@ -115,6 +115,16 @@
                         {
                             "image": "https://cdn.forgejs.org/samples/hotspots-animation/butterfly-1299922.svg",
                             "transparent": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 40,
+                                "height": 40
+                            }
                         },
 
                         "animation":
