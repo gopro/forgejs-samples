@@ -1,0 +1,229 @@
+{
+    "audio":
+    {
+        "enabled": true,
+
+        "volume":
+        {
+            "default": 1.0,
+            "max": 1.0
+        }
+    },
+
+    "playlists":
+    {
+        "enabled": false,
+
+        "volume":
+        {
+            "default": 1.0,
+            "max": 1.0
+        },
+
+        "lists":
+        [
+            {
+                "uid": "playlist-1",
+                "name": "karting",
+                "default": "playlist-1-track-0",
+                "loop": true,
+                "autoPlay": true,
+
+                "tracks": ["playlist-1-track-0", "playlist-1-track-1", "playlist-1-track-2"]
+            }
+        ],
+
+        "tracks":
+        [
+            {
+                "uid": "playlist-1-track-0",
+                "author": "",
+                "name": "",
+                "url": "https://cdn.forgejs.org/samples/vrrroom/audio/Double-Trouble.mp3"
+            },
+
+            {
+                "uid": "playlist-1-track-1",
+                "author": "",
+                "name": "",
+                "url": "https://cdn.forgejs.org/samples/vrrroom/audio/dexters-lab.mp3"
+            },
+
+            {
+                "uid": "playlist-1-track-2",
+                "author": "",
+                "name": "",
+                "url": "https://cdn.forgejs.org/samples/vrrroom/audio/Conscious.mp3"
+            }
+        ]
+    },
+
+    "story":
+    {
+        "uid": "story-0",
+        "name": "i18n-storyName",
+        "slug": "i18n-storySlug",
+        "description": "i18n-storyDescription",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "Samy karting",
+                "slug": "samy-karting",
+                "description": "i18n-scene-0-description",
+                "tags": ["circuit", "samy", "kart"],
+                "sync":["scene-1", "scene-2", "scene-3"],
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "streaming": "dash",
+                        "url": "https://cdn.forgejs.org/samples/vrrroom/videos/460017/460017.mpd"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0
+                    }
+                },
+
+                "view":
+                {
+                    "type": "GoPro"
+                }
+            },
+
+            {
+                "uid": "scene-1",
+                "name": "Martin karting",
+                "slug": "martin-karting",
+                "description": "i18n-scene-1-description",
+                "tags": ["circuit", "martin", "kart"],
+                "sync":["scene-0", "scene-2", "scene-3"],
+
+                "media":
+                {
+                    "uid": "media-1",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "streaming": "dash",
+                        "url": "https://cdn.forgejs.org/samples/vrrroom/videos/459989/459989.mpd"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0
+                    }
+                },
+
+                "view":
+                {
+                    "type": "GoPro"
+                }
+            },
+
+            {
+                "uid": "scene-2",
+                "name": "Samy karting cinema mode",
+                "slug": "samy-karting-cinema",
+                "description": "",
+                "tags": ["circuit", "samy", "kart", "cinema"],
+                "sync":["scene-0", "scene-1", "scene-3"],
+
+                "media":
+                {
+                    "uid": "media-2",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "streaming": "dash",
+                        "url": "https://cdn.forgejs.org/samples/vrrroom/videos/460036/460036.mpd"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0
+                    }
+                },
+
+                "view":
+                {
+                    "type": "flat"
+                }
+            },
+
+            {
+                "uid": "scene-3",
+                "name": "Martin karting cinema mode",
+                "slug": "martin-karting-cinema",
+                "description": "",
+                "tags": ["circuit", "martin", "kart", "cinema"],
+                "sync":["scene-0", "scene-1", "scene-2"],
+
+                "media":
+                {
+                    "uid": "media-3",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "streaming": "dash",
+                        "url": "https://cdn.forgejs.org/samples/vrrroom/videos/460045/460045.mpd"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0
+                    }
+                },
+
+                "view":
+                {
+                    "type": "flat"
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.previousnextbuttons",
+                "url": "PreviousNextButtons/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "previousnextbuttons",
+                "engine": "org.forgejs.previousnextbuttons"
+            }
+        ]
+    }
+}
