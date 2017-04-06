@@ -20,18 +20,8 @@ ForgePlugins.MediaEvents.prototype =
 
     _setupVideo: function()
     {
-        if(this.viewer.renderer.media !== null)
-        {
-            this._video = this.viewer.renderer.media.displayObject;
-            this._video.onEnded.add(this._onEndedHandler, this);
-        }
-        else
-        {
-            if(this.viewer.renderer.onMediaReady.has(this._setupVideo, this) === false)
-            {
-                this.viewer.renderer.onMediaReady.addOnce(this._setupVideo, this);
-            }
-        }
+        this._video = this.viewer.story.scene.media.displayObject;
+        this._video.onEnded.add(this._onEndedHandler, this);
     },
 
     _clearVideo: function()
