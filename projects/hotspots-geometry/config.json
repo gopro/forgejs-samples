@@ -141,6 +141,38 @@
                             "color": "#ff3f7f",
                             "opacity": 1
                         }
+                    },
+
+                    {
+                        "uid": "hotspot-3d-shape",
+                        "interactive": false,
+
+                        "transform":
+                        {
+                            "position": { "radius": 199, "phi": -10 },
+                            "rotation": { "x": 70 }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "shape",
+                            "options":
+                            {
+                                "points":
+                                [
+                                    [ 90, -70 ],
+                                    [ 90, -90 ],
+                                    [ -90, -90 ],
+                                    [ -90, -70 ]
+                                ]
+                            }
+                        },
+
+                        "material":
+                        {
+                            "color": "#b563ee",
+                            "opacity": 1
+                        }
                     }
                 ]
             }
