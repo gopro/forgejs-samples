@@ -39,9 +39,9 @@
 
                 "hotspots":
                 [
-                     {
+                    {
                         "uid": "hotspot-video-0",
-                        "facingCenter": true,
+                        "facingCenter": false,
 
                         "transform":
                         {
