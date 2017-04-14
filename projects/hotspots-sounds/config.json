@@ -72,6 +72,16 @@
                             "transparent": true
                         },
 
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
+                            }
+                        },
+
                         "sound":
                         {
                             "uid": "hotspot-3d-0-sound",
@@ -105,6 +115,16 @@
                                 "radius": 400,
                                 "theta": -175,
                                 "phi": 12
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 1,
+                                "height": 1
                             }
                         },
 
@@ -145,6 +165,16 @@
                             {
                                 "x": 0.8,
                                 "y": 0.8
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
                             }
                         },
 
@@ -195,6 +225,16 @@
                             {
                                 "x": 0.75,
                                 "y": 0.75
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
                             }
                         },
 
