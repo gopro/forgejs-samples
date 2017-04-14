@@ -43,35 +43,29 @@
                 "description": "This is the second scene",
                 "background": "#111",
 
-                "plugins":
+                "media":
                 {
-                    "instances":
-                    [
-                        {
-                            "uid": "simplevideo-mpegdash",
-                            "engine": "org.forgejs.simplevideo",
+                    "uid": "video-1",
+                    "type": "video",
 
-                            "options":
-                            {
-                                "height": "100%",
-                                "width": "100%",
-                                "horizontalCenter": true,
-                                "verticalCenter": true,
-                                "autoPlay": true,
-                                "loop": true,
-                                "volume": 0.5
-                            },
+                    "source":
+                    {
+                        "format": "flat",
+                        "streaming": "dash",
+                        "url": "https://cdn.forgejs.org/samples/common/videos/moto-desert/dash/410524.mpd"
+                    },
 
-                            "data":
-                            {
-                                "video": "https://cdn.forgejs.org/samples/common/videos/moto-desert/dash/410524.mpd",
-                                "streaming": "dash"
-                            },
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0.5
+                    }
+                },
 
-                            "index": 1,
-                            "keep": false
-                        }
-                    ]
+                "view":
+                {
+                    "type": "flat"
                 }
             }
         ]
@@ -86,11 +80,6 @@
             {
                 "uid": "org.forgejs.previousnextbuttons",
                 "url": "PreviousNextButtons/"
-            },
-
-            {
-                "uid": "org.forgejs.simplevideo",
-                "url": "SimpleVideo/"
             },
 
             {
