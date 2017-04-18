@@ -1,4 +1,295 @@
 {
+    "story":
+    {
+        "uid": "multiple-media-story",
+        "name": "Multiple Media Story",
+        "slug": "multiple-media-story",
+        "description": "This project have multiple scenes and multiple media definition",
+        "default": "scene-1",
+
+        "scenes":
+        [
+            {
+                "uid": "chapter-1",
+                "name": "First chapter - look around",
+                "slug": "first-chapter-introduction",
+                "description": "First chapter - find the pyramid to jump to the next scene",
+                "fx": "fxSet-immersive",
+
+                "media":
+                {
+                    "uid": "media-1",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/immersive-and-narrative/pano/Alpespace-VueAerienne.jpg"
+                    }
+                },
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-pyramid-media-1",
+                        "interactive": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "x": -13,
+                                "y": -225,
+                                "z": -12
+                            },
+
+                            "rotation":
+                            {
+                                "x": 90,
+                                "y": -28
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
+                            }
+                        },
+
+                        "material":
+                        {
+                            "color": "#207040",
+                            "opacity": 0.0
+                        },
+
+                        "states":
+                        {
+                            "over":
+                            {
+                                "material":
+                                {
+                                    "opacity": 0.4
+                                }
+                            }
+                        },
+
+                        "events":
+                        {
+                            "onClick": ["action-next-scene"]
+                        }
+                    }
+                ],
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 90,
+                        "min": 50,
+                        "max": 330
+                    }
+                },
+
+                "view":
+                {
+                    "type": "gopro"
+                }
+            },
+
+            {
+                "uid": "chapter-2",
+                "name": "Second chapter",
+                "slug": "second-chapter",
+                "description": "Second chapter - just enjoy your watching",
+                "fx": "fxSet-narrative",
+
+                "media":
+                {
+                    "uid": "media-2",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "flat",
+                        "url": "https://cdn.forgejs.org/samples/immersive-and-narrative/video/PyramideEtLac.mp4"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": false,
+                        "volume": 1
+                    }
+                },
+
+                "playlists":
+                {
+                    "enabled": false
+                },
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 180,
+                        "min": 180,
+                        "max": 180
+                    }
+                },
+
+                "view":
+                {
+                    "type": "flat"
+                }
+            },
+
+            {
+                "uid": "chapter-3",
+                "name": "Third chapter - look around",
+                "slug": "third-chapter",
+                "description": "Third chapter - find the pyramid to jump to the next scene",
+                "fx": "fxSet-immersive",
+
+                "media":
+                {
+                    "uid": "media-3",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/immersive-and-narrative/pano/Alpespace-PyramideTerrasse.jpg"
+                    }
+                },
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-pyramid-media-3",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "x": -150,
+                                "y": 0,
+                                "z": -100
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "shape",
+                            "options":
+                            {
+                                "points":
+                                [
+                                    [ -62, 13 ],
+                                    [ 182, 12 ],
+                                    [  33, 83 ]
+                                ]
+                            }
+                        },
+
+                        "material":
+                        {
+                            "color": "#207040",
+                            "opacity": 0.0
+                        },
+
+                        "states":
+                        {
+                            "over":
+                            {
+                                "material":
+                                {
+                                    "opacity": 0.4
+                                }
+                            }
+                        },
+
+                        "events":
+                        {
+                            "onClick": ["action-next-scene"]
+                        }
+                    }
+                ],
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 90,
+                        "min": 50,
+                        "max": 130
+                    },
+
+                    "yaw":
+                    {
+                        "default": 125
+                    },
+
+                    "pitch":
+                    {
+                        "default": -12
+                    }
+                }
+            },
+
+            {
+                "uid": "chapter-4",
+                "name": "Fourth chapter",
+                "slug": "fourth-chapter",
+                "description": "Fourth chapter - just enjoy your watching",
+                "fx": "fxSet-narrative",
+
+                "media":
+                {
+                    "uid": "media-4",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "flat",
+                        "url": "https://cdn.forgejs.org/samples/immersive-and-narrative/video/PyramideZoom.mp4"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": false,
+                        "volume": 1
+                    }
+                },
+
+                "playlists":
+                {
+                    "enabled": false
+                },
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 180,
+                        "min": 180,
+                        "max": 180
+                    }
+                },
+
+                "view":
+                {
+                    "type": "flat"
+                }
+            }
+        ]
+    },
+
     "postProcessing":
     {
         "fxSets":
@@ -60,322 +351,6 @@
         ]
     },
 
-    "story":
-    {
-        "uid": "multiple-media-story",
-        "name": "Multiple Media Story",
-        "slug": "multiple-media-story",
-        "description": "This project have multiple scenes and multiple media definition",
-        "default": "scene-1",
-
-        "scenes":
-        [
-            {
-                "uid": "chapter-1",
-                "name": "First chapter - look around",
-                "slug": "first-chapter-introduction",
-                "description": "First chapter - find the pyramid to jump to the next scene",
-                "fx": "fxSet-immersive",
-
-                "media":
-                {
-                    "uid": "media-1",
-                    "type": "image",
-
-                    "source":
-                    {
-                        "format": "equi",
-                        "url": "https://cdn.forgejs.org/samples/immersive-and-narrative/pano/Alpespace-VueAerienne.jpg"
-                    }
-                },
-
-                "hotspots":
-                [
-                    {
-                        "uid": "hotspot-pyramid-media-1",
-                        "interactive": true,
-
-                        "transform":
-                        {
-                            "position":
-                            {
-                                "x": -15,
-                                "y": -220,
-                                "z": -10
-                            },
-
-                            "rotation":
-                            {
-                                "x": 90,
-                                "y": -30
-                            }
-                        },
-
-                        "geometry":
-                        {
-                            "type": "plane",
-                            "options":
-                            {
-                                "width": 100,
-                                "height": 100
-                            }
-                        },
-
-                        "material":
-                        {
-                            "color": "#207040",
-                            "opacity": 0.0
-                        },
-
-                        "states":
-                        {
-                            "over":
-                            {
-                                "material":
-                                {
-                                    "opacity": 0.4
-                                }
-                            }
-                        },
-
-                        "events":
-                        {
-                            "onClick": ["action-next-scene"]
-                        }
-                    }
-                ],
-
-                "camera":
-                {                   
-                    "fov":
-                    {
-                        "default": 90,
-                        "min": 50,
-                        "max": 330
-                    }
-                },
-
-                "controllers":
-                {
-                    "enabled": true
-                },
-
-                "view":
-                {
-                    "type": "gopro"
-                }
-            },
-
-            {
-                "uid": "chapter-2",
-                "name": "Second chapter",
-                "slug": "second-chapter",
-                "description": "Second chapter - just enjoy your watching",
-                "fx": "fxSet-narrative",
-         
-                "media":
-                {
-                    "uid": "media-2",
-                    "type": "video",
-
-                    "source":
-                    {
-                        "format": "flat",
-                        "url": "https://cdn.forgejs.org/samples/immersive-and-narrative/video/PyramideEtLac.mp4"
-                    },
-
-                    "options":
-                    {
-                        "autoPlay": true,
-                        "loop": false,
-                        "volume": 1
-                    }
-                },
-
-                "playlists":
-                {
-                    "enabled": false
-                },
-
-                "camera":
-                {
-                    "fov":
-                    {
-                        "default": 180,
-                        "min": 180,
-                        "max": 180
-                    }
-                },
-
-                "controllers":
-                {
-                    "enabled": false
-                },
-       
-                "view":
-                {
-                    "type": "flat"
-                }
-            },
-
-            {
-                "uid": "chapter-3",
-                "name": "Third chapter - look around",
-                "slug": "third-chapter",
-                "description": "Third chapter - find the pyramid to jump to the next scene",
-                "fx": "fxSet-immersive",
-
-                "media":
-                {
-                    "uid": "media-3",
-                    "type": "image",
-
-                    "source":
-                    {
-                        "format": "equi",
-                        "url": "https://cdn.forgejs.org/samples/immersive-and-narrative/pano/Alpespace-PyramideTerrasse.jpg"
-                    }
-                },
-
-                "hotspots":
-                [
-                    {
-                        "uid": "hotspot-pyramid-media-3",
-                        "facingCenter": true,
-
-                        "transform":
-                        {
-                            "position":
-                            {
-                                "x": -150,
-                                "y": 0,
-                                "z": -100
-                            }
-                        },
-
-                        "geometry":
-                        {
-                            "type": "shape",
-                            "options":
-                            {
-                                "points":
-                                [
-                                    [ -66, 12 ],
-                                    [ 180, 12 ],
-                                    [  35, 83 ]
-                                ]
-                            }
-                        },
-
-                        "material":
-                        {
-                            "color": "#207040",
-                            "opacity": 0.0
-                        },
-
-                        "states":
-                        {
-                            "over":
-                            {
-                                "material":
-                                {
-                                    "opacity": 0.4
-                                }
-                            }
-                        },
-
-                        "events":
-                        {
-                            "onClick": ["action-next-scene"]
-                        }
-                    }
-                ],
-
-                "camera":
-                {
-                    "fov":
-                    {
-                        "default": 90,
-                        "min": 50,
-                        "max": 130
-                    },
-
-                    "yaw":
-                    {
-                        "default": 125
-                    },
-
-                    "pitch":
-                    {
-                        "default": -12
-                    }
-                },
-
-                "controllers":
-                {
-                    "enabled": true
-                },
-                
-                "view":
-                {
-                    "type": "rectilinear"
-                }
-            },
-
-            {
-                "uid": "chapter-4",
-                "name": "Fourth chapter",
-                "slug": "fourth-chapter",
-                "description": "Fourth chapter - just enjoy your watching",
-                "fx": "fxSet-narrative",
-
-                "media":
-                {
-                    "uid": "media-4",
-                    "type": "video",
-
-                    "source":
-                    {
-                        "format": "flat",
-                        "url": "https://cdn.forgejs.org/samples/immersive-and-narrative/video/PyramideZoom.mp4"
-                    },
-
-                    "options":
-                    {
-                        "autoPlay": true,
-                        "loop": false,
-                        "volume": 1
-                    }
-                },
-
-                "playlists":
-                {
-                    "enabled": false
-                },
-
-                "camera":
-                {
-                    "fov":
-                    {
-                        "default": 180,
-                        "min": 180,
-                        "max": 180
-                    }
-                },
-
-                "controllers":
-                {
-                    "enabled": false
-                },
-                
-                "view":
-                {
-                    "type": "flat"
-                }
-            }
-        ]
-    },
-
     "playlists":
     {
         "volume":
@@ -409,7 +384,7 @@
     },
 
     "actions":
-    [       
+    [
         {
             "uid": "action-next-scene",
             "target": "viewer.story",
@@ -492,11 +467,12 @@
                     "config":
                     {
                         "i18n": false,
-                        "value": "F I N D    T H E    P Y R A M I D    A N D    C L I C K    T O    C O N T I N U E   . . .",
+                        "value": "F I N D    T H E    P Y R A M I D    A N D    C L I C K    T O    C O N T I N U E . . .",
                         "fontSize": 24,
-                        "color": "#205030",
+                        "color": "#FFFFFF",
                         "textAlign": "center",
                         "textShadow": "1px 1px 1px #102010",
+                        "fontFamily": "dosisbold, sans-serif",
                         "whiteSpace": "pre"
                     },
 
@@ -522,9 +498,10 @@
                         "i18n": false,
                         "value": "P L E A S E    E N J O Y    Y O U R    W A T C H I N G",
                         "fontSize": 24,
-                        "color": "#205030",
+                        "color": "#FFFFFF",
                         "textAlign": "center",
                         "textShadow": "1px 1px 1px #102010",
+                        "fontFamily": "dosisbold, sans-serif",
                         "whiteSpace": "pre"
                     },
 
