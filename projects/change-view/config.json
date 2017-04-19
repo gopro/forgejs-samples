@@ -81,7 +81,7 @@
             "method":
             {
                 "name": "lookAt",
-                "args": [null, 0, null, 90]
+                "args": [null, 0, null]
             }
         },
 
@@ -103,7 +103,7 @@
             "method":
             {
                 "name": "lookAt",
-                "args": [null, -90, null, 220]
+                "args": [null, -90, null]
             }
         },
 
@@ -125,7 +125,7 @@
             "method":
             {
                 "name": "lookAt",
-                "args": [0, 0, 0, 180]
+                "args": [0, 0, 0]
             }
         },
 
