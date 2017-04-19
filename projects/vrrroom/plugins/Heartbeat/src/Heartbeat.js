@@ -69,17 +69,7 @@ ForgePlugins.Heartbeat.prototype = {
     {
         if (this.plugin.options.source === "media")
         {
-            if (this.viewer.renderer.media !== null)
-            {
-                this._video = this.viewer.renderer.media.displayObject;
-            }
-            else
-            {
-                if (this.viewer.renderer.onMediaReady.has(this._setupVideo, this) === false)
-                {
-                    this.viewer.renderer.onMediaReady.addOnce(this._setupVideo, this);
-                }
-            }
+            this._video = this.viewer.story.scene.media.displayObject;
         }
         else if (FORGE.UID.isTypeOf(this.plugin.options.source, "Plugin") === true)
         {
@@ -216,7 +206,7 @@ ForgePlugins.Heartbeat.prototype = {
             return;
         }
 
-        if (this._heartbeat.animations.currentAnimation.paused === true)
+        if (this._heartbeat.animations.current.paused === true)
         {
             this._heartbeat.resume();
         }
@@ -231,7 +221,7 @@ ForgePlugins.Heartbeat.prototype = {
      */
     _onPauseHandler: function()
     {
-        if (this._heartbeat.animations.currentAnimation.playing === true)
+        if (this._heartbeat.animations.current.playing === true)
         {
             this._heartbeat.pause();
         }
@@ -277,17 +267,17 @@ ForgePlugins.Heartbeat.prototype = {
         {
             var keyframe = kf.previous;
 
-            if (keyframe !== this._keyframe)
+            if (typeof keyframe !== "undefined" && keyframe !== this._keyframe)
             {
                 this._keyframe = keyframe;
 
                 //pulse value
                 this._heartbeatPulse.value = this._keyframe.data;
 
-                var totalFrames = this._heartbeat.animations.currentAnimation.frames.length;
+                var totalFrames = this._heartbeat.animations.current.frames.length;
                 var frameRate = Math.round((this._keyframe.data * totalFrames) / 60);
 
-                this._heartbeat.animations.currentAnimation.frameRate = frameRate;
+                this._heartbeat.animations.current.frameRate = frameRate;
             }
         }
     },

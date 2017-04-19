@@ -60,17 +60,7 @@ ForgePlugins.Ranking.prototype = {
     {
         if (this.plugin.options.source === "media")
         {
-            if (this.viewer.renderer.media !== null)
-            {
-                this._video = this.viewer.renderer.media.displayObject;
-            }
-            else
-            {
-                if (this.viewer.renderer.onMediaReady.has(this._setupVideo, this) === false)
-                {
-                    this.viewer.renderer.onMediaReady.addOnce(this._setupVideo, this);
-                }
-            }
+            this._video = this.viewer.story.scene.media.displayObject;
         }
         else if (FORGE.UID.isTypeOf(this.plugin.options.source, "Plugin") === true)
         {
