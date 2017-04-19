@@ -5,26 +5,28 @@
 
         "volume":
         {
-            "default": 1.0,
+            "default": 0.5,
             "max": 1.0
         }
     },
 
     "playlists":
     {
-        "enabled": false,
+        "enabled": true,
 
         "volume":
         {
-            "default": 1.0,
+            "default": 0.5,
             "max": 1.0
         },
+
+        "default": "playlist-1",
 
         "lists":
         [
             {
                 "uid": "playlist-1",
-                "name": "karting",
+                "name": "Karting Playlist",
                 "default": "playlist-1-track-0",
                 "loop": true,
                 "autoPlay": true,
@@ -61,19 +63,18 @@
     "story":
     {
         "uid": "story-0",
-        "name": "i18n-storyName",
-        "slug": "i18n-storySlug",
-        "description": "i18n-storyDescription",
+        "name": "Karting Race",
+        "slug": "kart-srace",
+        "description": "This project have multiple synchronized videos scenes.",
         "default": "scene-0",
 
         "scenes":
         [
             {
                 "uid": "scene-0",
-                "name": "Samy karting",
+                "name": "Samy Karting",
                 "slug": "samy-karting",
-                "description": "i18n-scene-0-description",
-                "tags": ["circuit", "samy", "kart"],
+                "description": "Samy Karting Session",
                 "sync":["scene-1", "scene-2", "scene-3"],
 
                 "media":
@@ -104,10 +105,9 @@
 
             {
                 "uid": "scene-1",
-                "name": "Martin karting",
+                "name": "Martin Karting",
                 "slug": "martin-karting",
-                "description": "i18n-scene-1-description",
-                "tags": ["circuit", "martin", "kart"],
+                "description": "Martin Karting Session",
                 "sync":["scene-0", "scene-2", "scene-3"],
 
                 "media":
@@ -138,10 +138,9 @@
 
             {
                 "uid": "scene-2",
-                "name": "Samy karting cinema mode",
+                "name": "Samy Karting - Cinema Mode",
                 "slug": "samy-karting-cinema",
-                "description": "",
-                "tags": ["circuit", "samy", "kart", "cinema"],
+                "description": "Samy Karting Session Edit",
                 "sync":["scene-0", "scene-1", "scene-3"],
 
                 "media":
@@ -164,6 +163,14 @@
                     }
                 },
 
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 180
+                    }
+                },
+
                 "view":
                 {
                     "type": "flat"
@@ -172,10 +179,9 @@
 
             {
                 "uid": "scene-3",
-                "name": "Martin karting cinema mode",
+                "name": "Martin Karting - Cinema Mode",
                 "slug": "martin-karting-cinema",
-                "description": "",
-                "tags": ["circuit", "martin", "kart", "cinema"],
+                "description": "Martin Karting Session Edit",
                 "sync":["scene-0", "scene-1", "scene-2"],
 
                 "media":
@@ -198,6 +204,14 @@
                     }
                 },
 
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 180
+                    }
+                },
+
                 "view":
                 {
                     "type": "flat"
@@ -215,6 +229,11 @@
             {
                 "uid": "org.forgejs.previousnextbuttons",
                 "url": "PreviousNextButtons/"
+            },
+
+            {
+                "uid": "org.forgejs.gyroscopebutton",
+                "url": "GyroscopeButton/"
             }
         ],
 
@@ -223,6 +242,17 @@
             {
                 "uid": "previousnextbuttons",
                 "engine": "org.forgejs.previousnextbuttons"
+            },
+
+            {
+                "uid": "gyrobutton",
+                "engine": "org.forgejs.gyroscopebutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "left": 10
+                }
             }
         ]
     }
