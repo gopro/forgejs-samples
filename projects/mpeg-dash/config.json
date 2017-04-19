@@ -33,6 +33,14 @@
                         "loop": true,
                         "volume": 0.5
                     }
+                },
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 90
+                    }
                 }
             },
 
@@ -60,6 +68,14 @@
                         "autoPlay": true,
                         "loop": true,
                         "volume": 0.5
+                    }
+                },
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 180
                     }
                 },
 
