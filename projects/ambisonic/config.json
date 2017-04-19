@@ -96,7 +96,8 @@
                 "options":
                 {
                     "bottom": 10,
-                    "left": 10
+                    "left": 10,
+                    "background": "#aaa"
                 }
             }
         ]
