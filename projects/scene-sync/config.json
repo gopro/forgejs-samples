@@ -20,39 +20,25 @@
             "max": 1.0
         },
 
-        "default": "playlist-1",
+        "default": "playlist-0",
 
         "lists":
         [
             {
-                "uid": "playlist-1",
+                "uid": "playlist-0",
                 "name": "Karting Playlist",
-                "default": "playlist-1-track-0",
+                "default": "playlist-0-track-0",
                 "loop": true,
                 "autoPlay": true,
 
-                "tracks": ["playlist-1-track-0", "playlist-1-track-1", "playlist-1-track-2"]
+                "tracks": ["playlist-0-track-0"]
             }
         ],
 
         "tracks":
         [
             {
-                "uid": "playlist-1-track-0",
-                "author": "",
-                "name": "",
-                "url": "https://cdn.forgejs.org/samples/vrrroom/audio/Double-Trouble.mp3"
-            },
-
-            {
-                "uid": "playlist-1-track-1",
-                "author": "",
-                "name": "",
-                "url": "https://cdn.forgejs.org/samples/vrrroom/audio/dexters-lab.mp3"
-            },
-
-            {
-                "uid": "playlist-1-track-2",
+                "uid": "playlist-0-track-0",
                 "author": "",
                 "name": "",
                 "url": "https://cdn.forgejs.org/samples/vrrroom/audio/Conscious.mp3"
@@ -75,7 +61,7 @@
                 "name": "Samy Karting",
                 "slug": "samy-karting",
                 "description": "Samy Karting Session",
-                "sync":["scene-1", "scene-2", "scene-3"],
+                "sync":["scene-1"],
 
                 "media":
                 {
@@ -108,7 +94,7 @@
                 "name": "Martin Karting",
                 "slug": "martin-karting",
                 "description": "Martin Karting Session",
-                "sync":["scene-0", "scene-2", "scene-3"],
+                "sync":["scene-0"],
 
                 "media":
                 {
@@ -133,88 +119,6 @@
                 "view":
                 {
                     "type": "GoPro"
-                }
-            },
-
-            {
-                "uid": "scene-2",
-                "name": "Samy Karting - Cinema Mode",
-                "slug": "samy-karting-cinema",
-                "description": "Samy Karting Session Edit",
-                "sync":["scene-0", "scene-1", "scene-3"],
-
-                "media":
-                {
-                    "uid": "media-2",
-                    "type": "video",
-
-                    "source":
-                    {
-                        "format": "equi",
-                        "streaming": "dash",
-                        "url": "https://cdn.forgejs.org/samples/vrrroom/videos/460036/460036.mpd"
-                    },
-
-                    "options":
-                    {
-                        "autoPlay": true,
-                        "loop": true,
-                        "volume": 0
-                    }
-                },
-
-                "camera":
-                {
-                    "fov":
-                    {
-                        "default": 180
-                    }
-                },
-
-                "view":
-                {
-                    "type": "flat"
-                }
-            },
-
-            {
-                "uid": "scene-3",
-                "name": "Martin Karting - Cinema Mode",
-                "slug": "martin-karting-cinema",
-                "description": "Martin Karting Session Edit",
-                "sync":["scene-0", "scene-1", "scene-2"],
-
-                "media":
-                {
-                    "uid": "media-3",
-                    "type": "video",
-
-                    "source":
-                    {
-                        "format": "equi",
-                        "streaming": "dash",
-                        "url": "https://cdn.forgejs.org/samples/vrrroom/videos/460045/460045.mpd"
-                    },
-
-                    "options":
-                    {
-                        "autoPlay": true,
-                        "loop": true,
-                        "volume": 0
-                    }
-                },
-
-                "camera":
-                {
-                    "fov":
-                    {
-                        "default": 180
-                    }
-                },
-
-                "view":
-                {
-                    "type": "flat"
                 }
             }
         ]
