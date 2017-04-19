@@ -77,6 +77,11 @@
             {
                 "uid": "org.forgejs.previousnextbuttons",
                 "url": "PreviousNextButtons/"
+            },
+
+            {
+                "uid": "org.forgejs.gyroscopebutton",
+                "url": "GyroscopeButton/"
             }
         ],
 
@@ -85,6 +90,17 @@
             {
                 "uid": "previousnextbuttons",
                 "engine": "org.forgejs.previousnextbuttons"
+            },
+
+            {
+                "uid": "gyrobutton",
+                "engine": "org.forgejs.gyroscopebutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "left": 10
+                }
             }
         ]
     }

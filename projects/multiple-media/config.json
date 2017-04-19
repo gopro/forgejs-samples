@@ -211,6 +211,11 @@
             {
                 "uid": "org.forgejs.mobilevideoplay",
                 "url": "MobileVideoPlay/"
+            },
+
+            {
+                "uid": "org.forgejs.gyroscopebutton",
+                "url": "GyroscopeButton/"
             }
         ],
 
@@ -229,6 +234,17 @@
             {
                 "uid": "mobilevideoplay",
                 "engine": "org.forgejs.mobilevideoplay"
+            },
+
+            {
+                "uid": "gyrobutton",
+                "engine": "org.forgejs.gyroscopebutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "left": 10
+                }
             }
         ]
     }
