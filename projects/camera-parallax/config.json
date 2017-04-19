@@ -233,5 +233,48 @@
                 ]
             }
         ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.webvrbutton",
+                "url": "WebVRButton/"
+            },
+
+            {
+                "uid": "org.forgejs.gyroscopebutton",
+                "url": "GyroscopeButton/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "webvrbutton",
+                "engine": "org.forgejs.webvrbutton",
+
+                "options":
+                {
+                    "bottom": 30,
+                    "right": 10
+                }
+            },
+
+            {
+                "uid": "gyrobutton",
+                "engine": "org.forgejs.gyroscopebutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "left": 10
+                }
+            }
+        ]
     }
 }
