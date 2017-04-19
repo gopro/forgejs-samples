@@ -132,6 +132,11 @@
             {
                 "uid": "org.forgejs.webvrbutton",
                 "url": "WebVRButton/"
+            },
+
+            {
+                "uid": "org.forgejs.gyroscopebutton",
+                "url": "GyroscopeButton/"
             }
         ],
 
@@ -165,6 +170,17 @@
                 {
                     "bottom": 10,
                     "right": 10
+                }
+            },
+
+            {
+                "uid": "gyrobutton",
+                "engine": "org.forgejs.gyroscopebutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "left": 10
                 }
             }
         ]
