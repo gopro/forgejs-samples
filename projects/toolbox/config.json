@@ -1,10 +1,10 @@
 {
     "story":
     {
-        "uid": "hotspots-story",
-        "name": "Hotspots Story",
-        "slug": "hotspots-story",
-        "description": "This is sample of hotspots",
+        "uid": "toolbox-plugin-demo",
+        "name": "Toolbox Plugin Demo",
+        "slug": "toolbox-plugin-demo",
+        "description": "Demonstrates the Toolbox plugin",
         "default": "scene-0",
 
         "scenes":
@@ -13,7 +13,7 @@
                 "uid": "scene-0",
                 "name": "First scene",
                 "slug": "first-scene",
-                "description": "This is the first and only scene",
+                "description": "This is the first scene",
 
                 "media":
                 {
@@ -25,7 +25,70 @@
                         "format": "equi",
                         "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
                     }
-                }
+                },
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-3d-0",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 300,
+                                "theta": -25
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 60,
+                                "height": 60
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-3d-1",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 300,
+                                "theta": 25
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 60,
+                                "height": 60
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-1.png",
+                            "transparent": true
+                        }
+                    }
+                ]
             },
 
             {
@@ -112,8 +175,8 @@
             },
 
             {
-                "uid": "org.forgejs.debug",
-                "url": "Debug/"
+                "uid": "org.forgejs.toolbox",
+                "url": "Toolbox/"
             }
         ],
 
@@ -131,8 +194,8 @@
             },
 
             {
-                "uid": "debug",
-                "engine": "org.forgejs.debug"
+                "uid": "toolbox",
+                "engine": "org.forgejs.toolbox"
             }
         ]
     }
