@@ -1,9 +1,4 @@
 {
-    "view":
-    {
-        "type": "rectilinear"
-    },
-
     "history":
     {
         "enabled": false
@@ -11,10 +6,10 @@
 
     "story":
     {
-        "uid": "hotspots-story",
-        "name": "Hotspots Story",
-        "slug": "hotspots-story",
-        "description": "This is sample of hotspots",
+        "uid": "hotspots-sprite",
+        "name": "Hotspots Sprite",
+        "slug": "hotspots-sprite",
+        "description": "This is sample of hotspots with animated sprite texture",
         "default": "scene-0",
 
         "scenes":
@@ -23,7 +18,7 @@
                 "uid": "scene-0",
                 "name": "First scene",
                 "slug": "first-scene",
-                "description": "This scene demonstrate different use cases of hotspot states",
+                "description": "This scene demonstrate different use cases of hotspot sprite",
                 "background": "#202040",
 
                 "media":

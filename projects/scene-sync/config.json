@@ -50,7 +50,7 @@
     {
         "uid": "story-0",
         "name": "Karting Race",
-        "slug": "kart-srace",
+        "slug": "kart-race",
         "description": "This project have multiple synchronized videos scenes.",
         "default": "scene-0",
 

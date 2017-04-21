@@ -1,9 +1,9 @@
 {
     "story":
     {
-        "uid": "ferformance-monitor-plugin-demo",
+        "uid": "performance-monitor-plugin-demo",
         "name": "Performance monitor plugin demo",
-        "slug": "ferformance-monitor-plugin-demo",
+        "slug": "performance-monitor-plugin-demo",
         "description": "Demonstrates the performance monitor plugin",
         "default": "scene-1",
 
