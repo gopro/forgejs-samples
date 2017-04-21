@@ -115,7 +115,7 @@
                     "source":
                     {
                         "format": "flat",
-                        "url": "https://cdn.forgejs.org/samples/immersive-and-narrative/video/PyramideEtLac.mp4"
+                        "url": "https://cdn.forgejs.org/samples/immersive-and-narrative/video/PyramideEtLac-final.mp4"
                     },
 
                     "options":
@@ -256,7 +256,7 @@
                     "source":
                     {
                         "format": "flat",
-                        "url": "https://cdn.forgejs.org/samples/immersive-and-narrative/video/PyramideZoom.mp4"
+                        "url": "https://cdn.forgejs.org/samples/immersive-and-narrative/video/PyramideZoom-final.mp4"
                     },
 
                     "options":
