@@ -1,0 +1,93 @@
+{
+    "history":
+    {
+        "enabled": false
+    },
+
+    "story":
+    {
+        "uid": "multiple-viewers-story-0",
+        "description": "This project have multiple viewers",
+
+        "scenes":
+        [
+            {
+                "uid": "viewer-0-scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first scene",
+
+                "media":
+                {
+                    "uid": "viewer-0-media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "viewer-0-scene-1",
+                "name": "Second scene",
+                "slug": "second-scene",
+                "description": "This is the second scene",
+
+                "media":
+                {
+                    "uid": "viewer-0-media-1",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/02-sand.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "viewer-0-scene-2",
+                "name": "Third scene",
+                "slug": "third-scene",
+                "description": "This is the third and last scene",
+
+                "media":
+                {
+                    "uid": "viewer-0-media-2",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/03-snow.jpg"
+                    }
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.previousnextbuttons",
+                "url": "PreviousNextButtons/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "previousnextbuttons-0",
+                "engine": "org.forgejs.previousnextbuttons"
+            }
+        ]
+    }
+}
