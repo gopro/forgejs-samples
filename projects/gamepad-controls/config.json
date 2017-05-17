@@ -9,22 +9,28 @@
             "enabled": true,
             "options":
             {
-                "fullscreen": true,
-                "orientation":
+                "bindings":
                 {
-                    "hardness": 0.6,
-                    "damping": 0.15,
-                    "velocityMax": 300,
-                    "invert":
-                    {
-                        "x": false,
-                        "y": true
-                    }
-                },
-                "zoom":
-                {
-                    "hardness": 5,
-                    "invert": true
+                    "buttons":
+                    [
+                        {
+                            "in": 0,
+                            "events":
+                            {
+                                "onDown": "next-scene"
+                            },
+                            "name": "Next scene"
+                        },
+
+                        {
+                            "in": 1,
+                            "events":
+                            {
+                                "onDown": "prev-scene"
+                            },
+                            "name": "Previous scene"
+                        }
+                    ]
                 }
             }
         }]
@@ -57,9 +63,68 @@
                         "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
                     }
                 }
+            },
+
+            {
+                "uid": "scene-2",
+                "name": "Second scene",
+                "slug": "second-scene",
+                "description": "This is the second scene",
+
+                "media":
+                {
+                    "uid": "media-2",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/02-sand.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-3",
+                "name": "Third scene",
+                "slug": "third-scene",
+                "description": "This is the third and last scene",
+
+                "media":
+                {
+                    "uid": "media-3",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/03-snow.jpg"
+                    }
+                }
             }
         ]
     },
+
+    "actions":
+    [
+        {
+            "uid": "next-scene",
+            "target": "viewer.story",
+            "method":
+            {
+                "name": "nextScene"
+            }
+        },
+
+        {
+            "uid": "prev-scene",
+            "target": "viewer.story",
+            "method":
+            {
+                "name": "previousScene"
+            }
+        }
+    ],
 
     "plugins":
     {
