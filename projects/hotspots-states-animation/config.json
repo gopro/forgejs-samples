@@ -1,0 +1,309 @@
+{
+    "view":
+    {
+        "type": "rectilinear"
+    },
+
+    "history":
+    {
+        "enabled": false
+    },
+
+    "story":
+    {
+        "uid": "hotspots-story",
+        "name": "Hotspots Story",
+        "slug": "hotspots-story",
+        "description": "This is sample of hotspots",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This scene demonstrate different use cases of hotspot states",
+                "background": "#06266F",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "grid",
+
+                    "options":
+                    {
+                        "color": "#6C8CD5"
+                    }
+                },
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-two-images",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 200,
+                                "theta": 0,
+                                "phi": 0
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 60,
+                                "height": 60
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image":
+                            {
+                                "url": "https://cdn.forgejs.org/samples/common/images/spot-map.png"
+                            }
+                        },
+
+                        "states":
+                        {
+                            "options":
+                            {
+                                "default": "one",
+                                "auto": false
+                            },
+
+                            "one":
+                            {
+                                "material":
+                                {
+                                    "image":
+                                    {
+                                        "frame": { "x": 256, "y": 0, "w": 256, "h": 256 }
+                                    }
+                                },
+
+                                "animation":
+                                {
+                                    "loop": true,
+                                    "autoPlay": true,
+                                    "tracks": [ "hotspot-0-track-0" ]
+                                }
+                            },
+
+                            "two":
+                            {
+                                "material":
+                                {
+                                    "image":
+                                    {
+                                        "frame": { "x": 0, "y": 256, "w": 256, "h": 256 }
+                                    }
+                                },
+
+                                "animation":
+                                {
+                                    "loop": true,
+                                    "autoPlay": true,
+                                    "tracks": [ "hotspot-0-track-1" ]
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+
+    "hotspots":
+    {
+        "tracks":
+        [
+            {
+                "uid": "hotspot-0-track-0",
+                "name": "Animation track #0",
+                "description": "First animation track",
+                "smooth": true,
+
+                "keyframes":
+                [
+                    {
+                        "time": 0,
+                        "data": {
+                            "position": { "radius": 300, "theta": -10, "phi": 0 }
+                        }
+                    },
+                    {
+                        "time": 2000,
+                        "data": {
+                            "position": { "theta": 0, "phi": 10 }
+                        }
+                    },
+                    {
+                        "time": 4000,
+                        "data": {
+                            "position": { "theta": 10, "phi": 0 }
+                        }
+                    },
+                    {
+                        "time": 6000,
+                        "data": {
+                            "position": { "theta": 0, "phi": -10 }
+                        }
+                    },
+                    {
+                        "time": 8000,
+                        "data": {
+                            "position": { "theta": -10, "phi": 0 }
+                        }
+                    }
+                ]
+            },
+
+            {
+                "uid": "hotspot-0-track-1",
+                "name": "Animation track #1",
+                "description": "Second animation track",
+                "smooth": true,
+
+                "keyframes":
+                [
+                    {
+                        "time": 0,
+                        "data": {
+                            "position": { "radius": 300, "theta": -10, "phi": 0 }
+                        }
+                    },
+                    {
+                        "time": 1000,
+                        "data": {
+                            "position": { "theta": -10, "phi": 10 }
+                        }
+                    },
+                    {
+                        "time": 3000,
+                        "data": {
+                            "position": { "theta": 10, "phi": 10 }
+                        }
+                    },
+                    {
+                        "time": 5000,
+                        "data": {
+                            "position": { "theta": 10, "phi": -10 }
+                        }
+                    },
+                    {
+                        "time": 7000,
+                        "data": {
+                            "position": { "theta": -10, "phi": -10 }
+                        }
+                    },
+                    {
+                        "time": 8000,
+                        "data": {
+                            "position": { "theta": -10, "phi": 0 }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+
+    "actions":
+    [
+        {
+            "uid": "action-state-one",
+            "target": "hotspot-two-images",
+            "property":
+            {
+                "name": "state",
+                "value": "one"
+            }
+        },
+
+        {
+            "uid": "action-state-two",
+            "target": "hotspot-two-images",
+            "property":
+            {
+                "name": "state",
+                "value": "two"
+            }
+        }
+    ],
+
+    "plugins":
+    {
+        "prefix": "../../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.webvrbutton",
+                "url": "WebVRButton/"
+            },
+
+            {
+                "uid": "org.forgejs.simplebutton",
+                "url": "SimpleButton/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "webvrbutton",
+                "engine": "org.forgejs.webvrbutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "right": 10
+                }
+            },
+
+            {
+                "uid": "simplebutton-one",
+                "engine": "org.forgejs.simplebutton",
+                "enabled": true,
+
+                "options":
+                {
+                    "bottom": 10,
+                    "left": 10,
+                    "height": 50,
+                    "value": "One"
+                },
+
+                "events":
+                {
+                    "onClick": ["action-state-one"]
+                }
+            },
+
+            {
+                "uid": "simplebutton-two",
+                "engine": "org.forgejs.simplebutton",
+                "enabled": true,
+
+                "options":
+                {
+                    "bottom": 10,
+                    "left": 60,
+                    "value": "Two"
+                },
+
+                "events":
+                {
+                    "onClick": ["action-state-two"]
+                }
+            }
+        ]
+    }
+}
