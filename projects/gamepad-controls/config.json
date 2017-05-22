@@ -4,7 +4,7 @@
         "enabled": true,
         "instances": [
         {
-            "uid": "controller-0",
+            "uid": "gamepad-controller-0",
             "type": "gamepad",
             "enabled": true,
             "options":
@@ -29,6 +29,24 @@
                                 "onDown": "prev-scene"
                             },
                             "name": "Previous scene"
+                        },
+
+                        {
+                            "in": 2,
+                            "events":
+                            {
+                                "onDown": "view-rectilinear"
+                            },
+                            "name": "View Rectilinear"
+                        },
+
+                        {
+                            "in": 3,
+                            "events":
+                            {
+                                "onDown": "view-gopro"
+                            },
+                            "name": "View GoPro"
                         }
                     ]
                 }
@@ -38,19 +56,17 @@
 
     "story":
     {
-        "uid": "simpliest-story",
-        "name": "Simpliest Story",
-        "slug": "simpliest-story",
-        "description": "This is the simpliest story ever",
+        "uid": "gamepad-story",
+        "name": "Gamepad Story",
+        "slug": "gamepad-story",
+        "description": "This is a simple story to test gamepad controls",
         "default": "scene-0",
 
         "scenes":
         [
             {
                 "uid": "scene-0",
-                "name": "First scene",
-                "slug": "first-scene",
-                "description": "This is the first and only scene",
+                "slug": "forest",
 
                 "media":
                 {
@@ -67,9 +83,7 @@
 
             {
                 "uid": "scene-2",
-                "name": "Second scene",
-                "slug": "second-scene",
-                "description": "This is the second scene",
+                "slug": "sand",
 
                 "media":
                 {
@@ -86,9 +100,7 @@
 
             {
                 "uid": "scene-3",
-                "name": "Third scene",
-                "slug": "third-scene",
-                "description": "This is the third and last scene",
+                "slug": "snow",
 
                 "media":
                 {
@@ -122,6 +134,26 @@
             "method":
             {
                 "name": "previousScene"
+            }
+        },
+
+        {
+            "uid": "view-rectilinear",
+            "target": "viewer.view",
+            "property":
+            {
+                "name": "type",
+                "value": "rectilinear"
+            }
+        },
+
+        {
+            "uid": "view-gopro",
+            "target": "viewer.view",
+            "property":
+            {
+                "name": "type",
+                "value": "gopro"
             }
         }
     ],
