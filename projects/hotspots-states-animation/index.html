@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta http-equiv="x-ua-compatible" content="IE=edge" />
-    <title>ForgeJS sample - Multiple viewers</title>
+    <title>ForgeJS sample - Hotspots states animation</title>
 
     <!-- Little styling -->
     <style type="text/css">
@@ -24,41 +24,15 @@
             overflow: hidden;
         }
 
-        div#wrapper
+        div#container
         {
-            width: 840px;
-            margin: 20px auto;
-        }
-
-        div#container-0,
-        div#container-1
-        {
-            width: 400px;
-            height: 400px;
-            float: left;
-            margin: 10px;
-        }
-
-        h1
-        {
-            text-align: center;
-            padding: 20px;
-            margin: 0;
-            background: #eee;
-            border-radius: 5px;
+            height: 100%;
         }
     </style>
 </head>
 
 <body>
-
-<div id="wrapper">
-
-    <h1>Multiple viewers</h1>
-    <div id="container-0"></div>
-    <div id="container-1"></div>
-    <div>&nbsp;</div>
-</div>
+    <div id="container"></div>
 
     <!-- Include the threejs custom build -->
     <script src="../../lib/three.js/three.r83.custom.min.js"></script>
@@ -72,11 +46,8 @@
     <!-- Start ForgeJS -->
     <script type="text/javascript">
 
-        FORGE.Story.DEBUG = true;
-
-        // Create viewers
-        var viewerLeft = new FORGE.Viewer("container-0", "config-0.json");
-        var viewerRight = new FORGE.Viewer("container-1", "config-1.json");
+        // Create a viewer
+        var viewer = new FORGE.Viewer("container", "config.json");
 
     </script>
 </body>

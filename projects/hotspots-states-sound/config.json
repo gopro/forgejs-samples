@@ -1,0 +1,141 @@
+{
+    "story":
+    {
+        "uid": "hotspots-story",
+        "name": "Hotspots Story",
+        "slug": "hotspots-story",
+        "description": "This is sample of hotspots",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This scene demonstrate different use cases of hotspot states",
+                "background": "#06266F",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "grid",
+
+                    "options":
+                    {
+                        "color": "#6C8CD5"
+                    }
+                },
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-two-images",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 200,
+                                "theta": 0,
+                                "phi": 0
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 60,
+                                "height": 60
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        },
+
+                        "sound":
+                        {
+                            "uid": "hotspot-3d-0-sound",
+
+                            "source":
+                            {
+                                "url": "https://cdn.forgejs.org/samples/hotspots-sounds/Peeper_Frogs_Near_Lake.mp3"
+                            },
+
+                            "options":
+                            {
+                                "volume": { "min": 0, "max": 1 },
+                                "loop": true,
+                                "autoPlay": true,
+                                "range": 210
+                            }
+                        },
+
+                        "states":
+                        {
+                            "over":
+                            {
+                                "material":
+                                {
+                                    "image": "https://cdn.forgejs.org/samples/common/images/spot-1.png",
+                                    "transparent": true
+                                },
+
+                                "sound":
+                                {
+                                    "uid": "hotspot-3d-1-sound",
+
+                                    "source":
+                                    {
+                                        "url": "https://cdn.forgejs.org/samples/hotspots-states/boing.mp3"
+                                    },
+
+                                    "options":
+                                    {
+                                        "volume": { "min": 0, "max": 1 },
+                                        "loop": false,
+                                        "autoPlay": true,
+                                        "range": 210
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.webvrbutton",
+                "url": "WebVRButton/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "webvrbutton",
+                "engine": "org.forgejs.webvrbutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "right": 10
+                }
+            }
+        ]
+    }
+}
