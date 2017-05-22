@@ -1,0 +1,181 @@
+{
+    "controllers":
+    {
+        "enabled": true,
+        "instances": [
+        {
+            "uid": "gamepad-controller-0",
+            "type": "gamepad",
+            "enabled": true,
+            "options":
+            {
+                "bindings":
+                {
+                    "buttons":
+                    [
+                        {
+                            "in": 0,
+                            "events":
+                            {
+                                "onDown": "next-scene"
+                            },
+                            "name": "Next scene"
+                        },
+
+                        {
+                            "in": 1,
+                            "events":
+                            {
+                                "onDown": "prev-scene"
+                            },
+                            "name": "Previous scene"
+                        },
+
+                        {
+                            "in": 2,
+                            "events":
+                            {
+                                "onDown": "view-rectilinear"
+                            },
+                            "name": "View Rectilinear"
+                        },
+
+                        {
+                            "in": 3,
+                            "events":
+                            {
+                                "onDown": "view-gopro"
+                            },
+                            "name": "View GoPro"
+                        }
+                    ]
+                }
+            }
+        }]
+    },
+
+    "story":
+    {
+        "uid": "gamepad-story",
+        "name": "Gamepad Story",
+        "slug": "gamepad-story",
+        "description": "This is a simple story to test gamepad controls",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "slug": "forest",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-2",
+                "slug": "sand",
+
+                "media":
+                {
+                    "uid": "media-2",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/02-sand.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-3",
+                "slug": "snow",
+
+                "media":
+                {
+                    "uid": "media-3",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/03-snow.jpg"
+                    }
+                }
+            }
+        ]
+    },
+
+    "actions":
+    [
+        {
+            "uid": "next-scene",
+            "target": "viewer.story",
+            "method":
+            {
+                "name": "nextScene"
+            }
+        },
+
+        {
+            "uid": "prev-scene",
+            "target": "viewer.story",
+            "method":
+            {
+                "name": "previousScene"
+            }
+        },
+
+        {
+            "uid": "view-rectilinear",
+            "target": "viewer.view",
+            "property":
+            {
+                "name": "type",
+                "value": "rectilinear"
+            }
+        },
+
+        {
+            "uid": "view-gopro",
+            "target": "viewer.view",
+            "property":
+            {
+                "name": "type",
+                "value": "gopro"
+            }
+        }
+    ],
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.gamepadmonitor",
+                "url": "GamepadMonitor/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "gamepadmonitor",
+                "engine": "org.forgejs.gamepadmonitor"
+            }
+        ]
+    }
+}
