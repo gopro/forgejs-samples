@@ -1,20 +1,10 @@
 {
-    "view":
-    {
-        "type": "rectilinear"
-    },
-
-    "history":
-    {
-        "enabled": false
-    },
-
     "story":
     {
-        "uid": "hotspots-story",
-        "name": "Hotspots Story",
-        "slug": "hotspots-story",
-        "description": "This is sample of hotspots",
+        "uid": "hotspots-states-animation",
+        "name": "Hotspots states animation",
+        "slug": "hotspots-states-animation",
+        "description": "This is sample of hotspots with states and animations",
         "default": "scene-0",
 
         "scenes":
@@ -23,7 +13,7 @@
                 "uid": "scene-0",
                 "name": "First scene",
                 "slug": "first-scene",
-                "description": "This scene demonstrate different use cases of hotspot states",
+                "description": "This scene demonstrate hotspot states with animations",
                 "background": "#06266F",
 
                 "media":
@@ -40,7 +30,7 @@
                 "hotspots":
                 [
                     {
-                        "uid": "hotspot-two-images",
+                        "uid": "hotspot-animation",
                         "facingCenter": true,
 
                         "transform":
@@ -240,7 +230,7 @@
 
     "plugins":
     {
-        "prefix": "../../../plugins/",
+        "prefix": "../../plugins/",
 
         "engines":
         [
