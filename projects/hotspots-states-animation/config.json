@@ -209,7 +209,7 @@
     [
         {
             "uid": "action-state-one",
-            "target": "hotspot-two-images",
+            "target": "hotspot-animation",
             "property":
             {
                 "name": "state",
@@ -219,7 +219,7 @@
 
         {
             "uid": "action-state-two",
-            "target": "hotspot-two-images",
+            "target": "hotspot-animation",
             "property":
             {
                 "name": "state",
