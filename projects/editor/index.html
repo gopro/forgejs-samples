@@ -35,20 +35,19 @@
     <div id="container"></div>
 
     <!-- Include the threejs custom build -->
-    <script src="../../lib/three.js/three.r83.custom.js"></script>
+    <script src="../../lib/three.js/three.r83.custom.min.js"></script>
 
     <!-- Include the Hammer.js library -->
     <script src="../../lib/hammer.js/hammer.min.js"></script>
 
     <!-- Include the ForgeJS library -->
-    <!-- <script type="text/javascript" src="../../lib/forge/forge.js" ></script> -->
-    <script type="text/javascript" src="../../../sources/build/forge.js" ></script>
+    <script type="text/javascript" src="../../lib/forge/forge.min.js" ></script>
 
     <!-- Start ForgeJS -->
     <script type="text/javascript">
 
-    FORGE.HotspotStates.DEBUG = true;
-        FORGE.HotspotMaterial.DEBUG = true;
+    // FORGE.HotspotStates.DEBUG = true;
+    //     FORGE.HotspotMaterial.DEBUG = true;
 
         // Create a viewer
         var viewer = new FORGE.Viewer("container", "config.json");
