@@ -1,45 +1,27 @@
 {
     "story":
     {
-        "uid": "hotspots-story",
-        "name": "Hotspots Story",
-        "slug": "hotspots-story",
-        "description": "This is sample of hotspots",
-        "default": "scene-0",
+        "uid": "hotspots-editor",
+        "name": "Hotspots Editor",
+        "slug": "hotspots-editor",
+        "description": "This is a test project for the hotspot editor",
 
         "scenes":
         [
             {
                 "uid": "scene-0",
-                "name": "First scene",
-                "slug": "first-scene",
-                "description": "This is the first and only scene",
+                "background": "#202040",
 
                 "media":
                 {
                     "uid": "media-0",
-                    "type": "image",
+                    "type": "grid",
 
-                    "source":
+                    "options":
                     {
-                        "format": "equi",
-                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
+                        "color": "#7F7FFF"
                     }
-                },
-
-                "camera":
-                {
-                    "fov":
-                    {
-                        "min": 30,
-                        "max": 120
-                    }
-                },
-
-                "hotspots":
-                [
-                    
-                ]
+                }
             }
         ]
     },
