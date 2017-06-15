@@ -1,0 +1,65 @@
+{
+    "story":
+    {
+        "uid": "hotspots-editor",
+        "name": "Hotspots Editor",
+        "slug": "hotspots-editor",
+        "description": "This is a test project for the hotspot editor",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "background": "#202040",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "grid",
+
+                    "options":
+                    {
+                        "color": "#7F7FFF"
+                    }
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.editor",
+                "url": "Editor/"
+            },
+
+            {
+                "uid": "org.forgejs.toolbox",
+                "url": "Toolbox/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "editor",
+                "engine": "org.forgejs.editor",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "right": 10
+                }
+            },
+
+            {
+                "uid": "toolbox",
+                "engine": "org.forgejs.toolbox"
+            }
+        ]
+    }
+}
