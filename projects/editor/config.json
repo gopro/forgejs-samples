@@ -10,6 +10,8 @@
         [
             {
                 "uid": "scene-0",
+                "name": "scene-0",
+                "slug": "scene:0",
                 "background": "#202040",
 
                 "media":
