@@ -58,7 +58,7 @@
 
                         "material":
                         {
-                            "image": "https://cdn.forgejs.org/samples/hotspots-animation/rabbit-34013.svg",
+                            "image": "https://cdn.forgejs.org/samples/hotspots-animation/clipart-friendly-rabbit-4854.svg",
                             "transparent": true
                         },
 
@@ -67,7 +67,7 @@
                             "type": "plane",
                             "options":
                             {
-                                "width": 72,
+                                "width": 71,
                                 "height": 50
                             }
                         },
