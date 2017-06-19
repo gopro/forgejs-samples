@@ -56,7 +56,7 @@ ForgePlugins.GooeyMenu.prototype = {
                     + (this.plugin.options.items[i].ticked ? 'menu-item-active' : 'menu-item-inactive')
                     + (this.plugin.options.items[i].toggle ? ' menu-item-toggle' : '')
                     + '" id="menu-item-' + i + '"'
-                    + (this.plugin.options.items[i].videotime !== "undefined" ? ' data-videotime="' + this.plugin.options.items[i].videotime + '"' : '') + '></a>';
+                    + (typeof this.plugin.options.items[i].videotime !== "undefined" ? ' data-videotime="' + this.plugin.options.items[i].videotime + '"' : '') + '></a>';
         }
 
         content += '</nav>';
