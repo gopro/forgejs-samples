@@ -1,9 +1,6 @@
 
 
 .menu {
-/*  -webkit-filter: url("#goo");
-          filter: url("#goo");
-*/
   transform: scale(0.7, 0.7);
   -webkit-transform: scale(0.7, 0.7);
 }
@@ -66,7 +63,6 @@
   -webkit-transition: -webkit-transform 200ms;
   transition: -webkit-transform 200ms;
   transition: transform 200ms;
-  //transition: transform 200ms, -webkit-transform 200ms;
 }
 
 .hamburger-1 {
