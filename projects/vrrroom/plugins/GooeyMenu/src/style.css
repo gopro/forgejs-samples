@@ -1,9 +1,6 @@
 
 
 .menu {
-  -webkit-filter: url("#goo");
-          filter: url("#goo");
-
   transform: scale(0.7, 0.7);
   -webkit-transform: scale(0.7, 0.7);
 }
@@ -12,17 +9,13 @@
   background: #555;
 }
 
-.menu-item 
-{
+.menu-item {
   background: rgba(100, 100, 100, 0.5);
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .menu-item, .menu-open-button {
-  
-  /* background: #e91e63; */
-  
   border-radius: 100%;
   width: 80px;
   height: 80px;
@@ -39,7 +32,6 @@
   transition: transform ease-out 200ms;
   transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
 
-
   /* customization */
   border-width: 4px;
   border-style: solid;
@@ -47,8 +39,6 @@
   cursor: pointer;
   pointer-events: all; /* override pointer events of the container */
 },
-
-
 
 .menu-open-button:hover {
   cursor: pointer;
@@ -73,7 +63,6 @@
   -webkit-transition: -webkit-transform 200ms;
   transition: -webkit-transform 200ms;
   transition: transform 200ms;
-  transition: transform 200ms, -webkit-transform 200ms;
 }
 
 .hamburger-1 {
@@ -116,12 +105,6 @@
   font-size: 20px;
   text-align: left;
 }
-
-/*
-.menu-item:hover {
-  cursor: pointer;
-  border-color: #009ee2;
-}*/
 
 .menu-item-active {
   cursor: pointer;
