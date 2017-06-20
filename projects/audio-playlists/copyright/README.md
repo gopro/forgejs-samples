@@ -2,38 +2,38 @@
 
 ## Audio files
 
-Author: TinyWorlds
-Track: Forest Ambience
-File: Forest_Ambience.mp3
-License: [Creative Commons License 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)
-![Creative Commons License 1.0 Universal Public Domain Dedication](https://i.creativecommons.org/p/zero/1.0/88x31.png)
+Author: TinyWorlds<br/>
+Track: Forest Ambience<br/>
+File: Forest_Ambience.mp3<br/>
+License: [Creative Commons License 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)<br/>
+![Creative Commons License 1.0 Universal Public Domain Dedication](https://i.creativecommons.org/p/zero/1.0/88x31.png)<br/>
 
-Author: Luftrum
-Track: forestsurroundings
-File: 48411__luftrum__forestsurroundings.mp3
-License: [Creative Commons License Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/)
-![Creative Commons License Attribution 3.0 Unported](https://i.creativecommons.org/l/by/4.0/88x31.png)
+Author: Luftrum<br/>
+Track: forestsurroundings<br/>
+File: 48411__luftrum__forestsurroundings.mp3<br/>
+License: [Creative Commons License Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/)<br/>
+![Creative Commons License Attribution 3.0 Unported](https://i.creativecommons.org/l/by/4.0/88x31.png)<br/>
 
-Author: cynicmusic
-Track: Battle theme A
-File: battleThemeA.mp3
-License: [Creative Commons License 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)
-![Creative Commons License 1.0 Universal Public Domain Dedication](https://i.creativecommons.org/p/zero/1.0/88x31.png)
+Author: cynicmusic<br/>
+Track: Battle theme A<br/>
+File: battleThemeA.mp3<br/>
+License: [Creative Commons License 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)<br/>
+![Creative Commons License 1.0 Universal Public Domain Dedication](https://i.creativecommons.org/p/zero/1.0/88x31.png)<br/>
 
-Author: Sudocolon
-Track: Space Ace
-File: Logisector Intro.mp3
-License: [Creative Commons License 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)
-![Creative Commons License 1.0 Universal Public Domain Dedication](https://i.creativecommons.org/p/zero/1.0/88x31.png)
+Author: Sudocolon<br/>
+Track: Space Ace<br/>
+File: Logisector Intro.mp3<br/>
+License: [Creative Commons License 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)<br/>
+![Creative Commons License 1.0 Universal Public Domain Dedication](https://i.creativecommons.org/p/zero/1.0/88x31.png)<br/>
 
-Author: Oddroom
-Track: Samsara
-File: samsara_0.mp3
-License: [Creative Commons License 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)
-![Creative Commons License 1.0 Universal Public Domain Dedication](https://i.creativecommons.org/p/zero/1.0/88x31.png)
+Author: Oddroom<br/>
+Track: Samsara<br/>
+File: samsara_0.mp3<br/>
+License: [Creative Commons License 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)<br/>
+![Creative Commons License 1.0 Universal Public Domain Dedication](https://i.creativecommons.org/p/zero/1.0/88x31.png)<br/>
 
-Author: tebruno99
-Track: The Rush
-File: The Rush.mp3
-License : [Creative Commons License 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)
-![Creative Commons License 1.0 Universal Public Domain Dedication](https://i.creativecommons.org/p/zero/1.0/88x31.png)
+Author: tebruno99<br/>
+Track: The Rush<br/>
+File: The Rush.mp3<br/>
+License : [Creative Commons License 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)<br/>
+![Creative Commons License 1.0 Universal Public Domain Dedication](https://i.creativecommons.org/p/zero/1.0/88x31.png)<br/>
