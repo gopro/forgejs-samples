@@ -58,7 +58,7 @@
 
                         "material":
                         {
-                            "image": "https://cdn.forgejs.org/samples/hotspots-animation/rabbit-34013.svg",
+                            "image": "https://cdn.forgejs.org/samples/hotspots-animation/clipart-friendly-rabbit-128x128-4854.png",
                             "transparent": true
                         },
 
@@ -67,8 +67,8 @@
                             "type": "plane",
                             "options":
                             {
-                                "width": 72,
-                                "height": 50
+                                "width": 75,
+                                "height": 71
                             }
                         },
 
@@ -101,7 +101,8 @@
                             "rotation":
                             {
                                 "x": 0,
-                                "y": 0
+                                "y": 0,
+                                "z": -10
                             },
 
                             "scale":
@@ -113,7 +114,7 @@
 
                         "material":
                         {
-                            "image": "https://cdn.forgejs.org/samples/hotspots-animation/butterfly-1299922.svg",
+                            "image": "https://cdn.forgejs.org/samples/hotspots-animation/clipart-papilio-buddha-64x64-5c24.png",
                             "transparent": true
                         },
 
@@ -122,7 +123,7 @@
                             "type": "plane",
                             "options":
                             {
-                                "width": 40,
+                                "width": 45,
                                 "height": 40
                             }
                         },
