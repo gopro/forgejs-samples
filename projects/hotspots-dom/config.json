@@ -1,0 +1,61 @@
+{
+    "story":
+    {
+        "uid": "hotspots-story",
+        "name": "Hotspots Story",
+        "slug": "hotspots-story",
+        "description": "This is sample of hotspots",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first and only scene",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
+                    }
+                },
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "min": 30,
+                        "max": 120
+                    },
+
+                    "parallax": 0.5
+                },
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-dom",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-billboard",
+                            "width": 100,
+                            "height": 100,
+                            "color": "#ff5e9d",
+                            "index": 20
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
