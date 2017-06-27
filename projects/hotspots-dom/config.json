@@ -52,10 +52,50 @@
                             "height": 100,
                             "color": "#ff5e9d",
                             "index": 20
+                        },
+
+                        "events":
+                        {
+                            "onClick": "click-action",
+                            "onOver": "over-action",
+                            "onOut": "out-action"
                         }
                     }
                 ]
             }
         ]
-    }
+    },
+
+    "actions":
+    [
+        {
+            "uid": "click-action",
+            "target": "console",
+            "method":
+            {
+                "name": "log",
+                "args": ["click"]
+            }
+        },
+
+        {
+            "uid": "over-action",
+            "target": "console",
+            "method":
+            {
+                "name": "log",
+                "args": ["over"]
+            }
+        },
+
+        {
+            "uid": "out-action",
+            "target": "console",
+            "method":
+            {
+                "name": "log",
+                "args": ["out"]
+            }
+        }
+    ]
 }
