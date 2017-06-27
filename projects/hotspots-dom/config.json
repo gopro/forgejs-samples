@@ -14,16 +14,16 @@
                 "name": "First scene",
                 "slug": "first-scene",
                 "description": "This is the first and only scene",
+                "background": "#202040",
 
                 "media":
                 {
                     "uid": "media-0",
-                    "type": "image",
+                    "type": "grid",
 
-                    "source":
+                    "options":
                     {
-                        "format": "equi",
-                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
+                        "color": "#7F7FFF"
                     }
                 },
 
@@ -41,16 +41,16 @@
                 "hotspots":
                 [
                     {
-                        "uid": "hotspot-dom",
+                        "uid": "hotspot-dom-one",
                         "interactive": false,
                         "type": "dom",
 
                         "dom":
                         {
-                            "id": "hotspot-dom-billboard",
-                            "width": 100,
-                            "height": 100,
-                            "color": "#ff5e9d",
+                            "id": "hotspot-one",
+                            "class": "hotspot-round",
+                            "width": 120,
+                            "height": 60,
                             "index": 20
                         },
 
@@ -59,6 +59,87 @@
                             "onClick": "click-action",
                             "onOver": "over-action",
                             "onOut": "out-action"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "x": 10,
+                                "y": 10,
+                                "z": 30
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-two",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-two",
+                            "class": [ "scale-animation", "hotspot-round" ],
+                            "width": 60,
+                            "height": 60,
+                            "index": 20
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "x": -10,
+                                "y": 10,
+                                "z": 30
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-three",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-three",
+                            "class": "scale-animation",
+                            "width": 100,
+                            "height": 100,
+                            "color": "blue",
+                            "index": 20
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 30
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-outside-hotspot",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "outside-hotspot",
+                            "width": 560,
+                            "height": 315,
+                            "index": 10
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "x": 10,
+                                "y": 0,
+                                "z": 10
+                            }
                         }
                     }
                 ]

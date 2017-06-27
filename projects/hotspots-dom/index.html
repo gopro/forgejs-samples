@@ -28,10 +28,58 @@
         {
             height: 100%;
         }
+
+        .hotspot-round
+        {
+            border-radius: 50%;
+        }
+
+        .scale-animation
+        {
+            transform: scale(1.0);
+            transition: transform ease-out 0.5s;
+        }
+
+        .scale-animation:hover
+        {
+            transform: scale(1.3);
+            transition: transform ease-out 0.5s;
+        }
+
+        #hotspot-one
+        {
+            background-image: url(https://cdn.forgejs.org/samples/common/images/spot-1.png);
+            background-size: contain;
+            border: 5px dotted red;
+            transform: rotateZ(0deg);
+            transition: transform ease-out 0.5s;
+        }
+
+        #hotspot-one:hover
+        {
+            transform: rotateZ(180deg);
+            transition: transform ease-out 0.5s;
+        }
+
+        #hotspot-two
+        {
+            background-image: url(https://cdn.forgejs.org/samples/common/images/spot-2.png);
+            background-size: contain;
+        }
+
+        #hotspot-three
+        {
+            background-image: url(https://cdn.forgejs.org/samples/common/images/spot-3.png);
+            background-size: contain;
+        }
     </style>
 </head>
 
 <body>
+    <div id="outside-hotspot">
+        <iframe width="560" height="315" src="https://releases.forgejs.org/latest/samples/projects/video-controls" frameborder="0" allowfullscreen></iframe>
+    </div>
+
     <div id="container"></div>
 
     <!-- Include the threejs custom build -->
@@ -45,10 +93,8 @@
 
     <!-- Start ForgeJS -->
     <script type="text/javascript">
-
         // Create a viewer
         var viewer = new FORGE.Viewer("container", "config.json");
-
     </script>
 </body>
 </html>
