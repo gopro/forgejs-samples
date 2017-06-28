@@ -403,8 +403,8 @@
         "engines":
         [
             {
-                "uid": "org.forgejs.safaricors",
-                "url": "SafariCORS/"
+                "uid": "org.forgejs.videocors",
+                "url": "VideoCORS/"
             },
 
             {
@@ -443,8 +443,8 @@
             },
 
             {
-                "uid": "safaricors",
-                "engine": "org.forgejs.safaricors"
+                "uid": "videocors",
+                "engine": "org.forgejs.videocors"
             },
 
             {
