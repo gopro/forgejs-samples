@@ -782,11 +782,7 @@
                     {
                         "format": "flat",
                         "streaming": "dash",
-                        "url": "https://cdn.forgejs.org/samples/vrrroom/videos/460036/460036.mpd",
-                        "fov":
-                        {
-                            "horizontal": 180
-                        }
+                        "url": "https://cdn.forgejs.org/samples/vrrroom/videos/460036/460036.mpd"
                     },
 
                     "options":
@@ -894,11 +890,7 @@
                     {
                         "format": "flat",
                         "streaming": "dash",
-                        "url": "https://cdn.forgejs.org/samples/vrrroom/videos/460045/460045.mpd",
-                        "fov":
-                        {
-                            "horizontal": 180
-                        }
+                        "url": "https://cdn.forgejs.org/samples/vrrroom/videos/460045/460045.mpd"
                     },
 
                     "options":
@@ -918,7 +910,9 @@
                 {
                     "fov":
                     {
-                        "default": 180
+                        "default": 180,
+                        "min": 180,
+                        "max": 180
                     }
                 },
 
