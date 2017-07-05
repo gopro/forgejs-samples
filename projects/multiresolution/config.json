@@ -1,0 +1,196 @@
+{
+    "story":
+    {
+        "uid": "multiresolution-story",
+        "name": "Multiresolution Story",
+        "slug": "multiresolution-story",
+        "description": "This project display multiresolution panoramic images",
+        "default": "scene-1",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "Galoppaz",
+                "slug": "galoppaz",
+                "description": "Partial multiresolution panoramic image from summit of the Galoppaz",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 4,
+                            "up": 5
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/multiresolution/galoppaz/{face}/{level}/{y}/{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "6656x6656",
+                                "width": 6656,
+                                "height": 6656,
+                                "tile": 512,
+                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/galoppaz/{face}/{level}/{y}_{x}.jpg"
+                            },
+
+                            {
+                                "name": "12800x12800",
+                                "width": 12800,
+                                "height": 12800,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "25600x25600",
+                                "width": 25600,
+                                "height": 25600,
+                                "tile": 512
+                            },
+
+                            {
+                               "name": "51200x51200",
+                                "width": 51200,
+                                "height": 51200,
+                                "tile": 512
+                            }
+                        ],
+
+                        "limits":
+                        {
+                            "yaw":
+                            {
+                                "min": -127.665,
+                                "max":  127.665
+                            },
+
+                            "pitch":
+                            {
+                                "min": -27.815,
+                                "max": 11.995
+                            }
+                        }
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-1",
+                "name": "House Interior",
+                "slug": "house-interior",
+                "description": "Saint Jorioz's house interior",
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "max": 120
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-1",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/multiresolution/house/{face}/{level}/{y}_{x}.jpg",
+
+                        "levels":
+                        [
+                            {
+                                "name": "512x512",
+                                "width": 512,
+                                "height": 512,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "1024x1024",
+                                "width": 1024,
+                                "height": 1024,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "2048x2048",
+                                "width": 2048,
+                                "height": 2048,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "3584x3584",
+                                "width": 3584,
+                                "height": 3584,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.gyroscopebutton",
+                "url": "GyroscopeButton/"
+            },
+
+            {
+                "uid": "org.forgejs.previousnextbuttons",
+                "url": "PreviousNextButtons/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "gyrobutton",
+                "engine": "org.forgejs.gyroscopebutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "left": 10
+                }
+            },
+
+            {
+                "uid": "previousnextbuttons",
+                "engine": "org.forgejs.previousnextbuttons"
+            }
+        ]
+    }
+}
