@@ -15,6 +15,14 @@
                 "slug": "galoppaz",
                 "description": "Partial multiresolution panoramic image from summit of the Galoppaz",
 
+                "camera":
+                {
+                    "fov":
+                    {
+                        "max": 40
+                    }
+                },
+
                 "media":
                 {
                     "uid": "media-0",
