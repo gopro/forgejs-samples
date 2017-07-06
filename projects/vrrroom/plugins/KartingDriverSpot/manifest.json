@@ -2,8 +2,8 @@
     "uid": "org.forgejs.kartingdriverspot",
     "name": "Karting Driver Spot",
     "slug": "kartingdriverspot",
-    "version": "1.0.0",
-    "versionName": "Karting Driver Spot 1.0.0",
+    "version": "1.1.0",
+    "versionName": "Karting Driver Spot 1.1.0",
     "description": "Add information about a driver as a hotspot.",
     "tags": ["hotspot", "provider"],
 
@@ -14,6 +14,12 @@
     },
 
     "licence": "Apache 2",
+
+    "viewer":
+    {
+        "min": "0.9.0",
+        "max": "0.9.4"
+    },
 
     "options":
     {
