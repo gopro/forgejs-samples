@@ -1273,8 +1273,7 @@
                                 "target": [["scene-2", "scene-4"], ["scene-3", "scene-5"]]
                             },
 
-                            "toggle": true,
-                            "videotime": "org.forgejs.ranking-0"
+                            "toggle": true
                         },
 
                         {
@@ -1303,6 +1302,8 @@
                     "top": 90,
                     "left": 10,
                     "borderColor": "#009ee2",
+
+                    "timeSync": false,
 
                     "drivers":
                     [

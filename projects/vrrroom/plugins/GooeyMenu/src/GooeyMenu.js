@@ -55,8 +55,7 @@ ForgePlugins.GooeyMenu.prototype = {
                     + this.plugin.options.items[i].id + ' '
                     + (this.plugin.options.items[i].ticked ? 'menu-item-active' : 'menu-item-inactive')
                     + (this.plugin.options.items[i].toggle ? ' menu-item-toggle' : '')
-                    + '" id="menu-item-' + i + '"'
-                    + (typeof this.plugin.options.items[i].videotime !== "undefined" ? ' data-videotime="' + this.plugin.options.items[i].videotime + '"' : '') + '></a>';
+                    + '" id="menu-item-' + i + '"></a>';
         }
 
         content += '</nav>';
@@ -131,12 +130,6 @@ ForgePlugins.GooeyMenu.prototype = {
             }
             else if (Array.isArray(target))
             {
-                // change video current time into the plugin defined into dataset
-                if (item.dataset.videotime !== "" && this.viewer.plugins.get(item.dataset.videotime) !== "undefined")
-                {
-                    this.viewer.plugins.get(item.dataset.videotime).instance.changeCurrentTime();
-                }
-
                 for (var i = 0, ii = target.length; i < ii; i++)
                 {
                     if (this.viewer.story.scene.uid === target[i][0])

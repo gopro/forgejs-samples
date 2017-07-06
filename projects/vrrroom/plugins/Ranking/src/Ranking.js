@@ -85,7 +85,7 @@ ForgePlugins.Ranking.prototype = {
             this._video.onPlay.add(this._onPlayHandler, this);
             this._video.onPause.add(this._onPauseHandler, this);
 
-            if (typeof this.plugin.persistentData.time !== "undefined")
+            if (typeof this.plugin.persistentData.time !== "undefined" && this.plugin.options.timeSync === true)
             {
                 this._video.currentTime = this.plugin.persistentData.time;
             }
@@ -301,7 +301,7 @@ ForgePlugins.Ranking.prototype = {
      */
     _driverClickHandler: function(event)
     {
-        if (this._video !== null)
+        if (this._video !== null && this.plugin.options.timeSync === true)
         {
             this.plugin.persistentData.time = this._video.currentTime;
         }
@@ -379,17 +379,6 @@ ForgePlugins.Ranking.prototype = {
             {
                 driver.video.pause();
             }
-        }
-    },
-
-    /**
-     * Update video current time.
-     */
-    changeCurrentTime: function()
-    {
-        if (this._video !== null)
-        {
-            this.plugin.persistentData.time = this._video.currentTime;
         }
     },
 

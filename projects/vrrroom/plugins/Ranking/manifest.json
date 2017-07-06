@@ -2,8 +2,8 @@
     "uid": "org.forgejs.ranking",
     "name": "Ranking",
     "shortName": "ranking",
-    "version": "1.0.0",
-    "versionName": "Ranking 1.0.0",
+    "version": "1.1.0",
+    "versionName": "Ranking 1.1.0",
     "description": "Display the current ranking among drivers",
 
     "author":
@@ -13,6 +13,12 @@
     },
 
     "licence": "Apache 2",
+
+    "viewer":
+    {
+        "min": "0.9.0",
+        "max": "0.9.4"
+    },
 
     "options":
     {
@@ -28,6 +34,8 @@
 
         "borderColor": "black",
         "borderSize": 5,
+
+        "timeSync": true,
 
         "source": "media",
 
