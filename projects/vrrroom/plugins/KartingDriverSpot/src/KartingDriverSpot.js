@@ -37,7 +37,7 @@ ForgePlugins.KartingDriverSpot.prototype = {
         // set default options
         this._textColor = this.plugin.options.color || this._textColor;
 
-        // trick for IE / Edge
+        // trick for Edge / Internet Explorer
         // Issue #8167417 https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/8167417/
         this._canvas.dom.style.display = "none";
 
@@ -75,7 +75,13 @@ ForgePlugins.KartingDriverSpot.prototype = {
         ctx.font = "20px " + this.plugin.options.infoFontFamily;
         ctx.fillText(this.plugin.options.size, x, 70);
         ctx.fillText(this.plugin.options.weight, x, 90);
-        document.body.appendChild(this._canvas.dom);
+
+        // trick for Edge / Internet Explorer
+        // Issue #8167417 https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/8167417/
+        if (FORGE.Device.browser === "edge" || FORGE.Device.browser === "internetexplorer")
+        {
+            document.body.appendChild(this._canvas.dom);
+        }
     },
 
     /**
