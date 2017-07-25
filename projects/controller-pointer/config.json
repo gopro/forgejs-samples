@@ -1,0 +1,79 @@
+{
+    "controllers":
+    {
+        "instances":
+        [
+            {
+                "uid": "pointer",
+                "type": "pointer",
+                "options":
+                {
+                    "orientation": { "drag": true }
+                }
+            }
+        ]
+    },
+
+    "story":
+    {
+        "uid": "simpliest-story",
+        "name": "Simpliest Story",
+        "slug": "simpliest-story",
+        "description": "This is the simpliest story ever",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first and only scene",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
+                    }
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.toolbox",
+                "url": "Toolbox/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "toolbox",
+                "engine": "org.forgejs.toolbox",
+                "options":
+                {
+                    "pannels":
+                    {
+                        "camera": false,
+                        "view": false,
+                        "story": false,
+                        "scene" : false,
+                        "controllers": { "open": true }
+                    }
+                }
+            }
+        ]
+    }
+}
