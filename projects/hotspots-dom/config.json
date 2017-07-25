@@ -4,7 +4,7 @@
         "uid": "hotspots-story",
         "name": "Hotspots Story",
         "slug": "hotspots-story",
-        "description": "This is sample of hotspots",
+        "description": "This is sample of DOM hotspots",
         "default": "scene-0",
 
         "scenes":
@@ -27,17 +27,6 @@
                     }
                 },
 
-                "camera":
-                {
-                    "fov":
-                    {
-                        "min": 30,
-                        "max": 120
-                    },
-
-                    "parallax": 0.5
-                },
-
                 "hotspots":
                 [
                     {
@@ -48,25 +37,18 @@
                         "dom":
                         {
                             "id": "hotspot-one",
-                            "class": "hotspot-round",
-                            "width": 120,
-                            "height": 60,
-                            "index": 20
-                        },
-
-                        "events":
-                        {
-                            "onClick": "click-action",
-                            "onOver": "over-action",
-                            "onOut": "out-action"
+                            "width": "5em",
+                            "height": "5em",
+                            "color": "transparent",
+                            "index": 1,
+                            "class": [ "media-style__primary", "content-style__primary" ]
                         },
 
                         "transform":
                         {
                             "position": {
-                                "x": 10,
-                                "y": 10,
-                                "z": 30
+                                "x": -100,
+                                "y": 100
                             }
                         }
                     },
@@ -79,18 +61,18 @@
                         "dom":
                         {
                             "id": "hotspot-two",
-                            "class": [ "scale-animation", "hotspot-round" ],
-                            "width": 60,
-                            "height": 60,
-                            "index": 20
+                            "width": "5em",
+                            "height": "5em",
+                            "color": "transparent",
+                            "index": 2,
+                            "class": [ "media-style__pin", "content-style__above"]
                         },
 
                         "transform":
                         {
                             "position": {
-                                "x": -10,
-                                "y": 10,
-                                "z": 30
+                                "x": 100,
+                                "y": 100
                             }
                         }
                     },
@@ -103,80 +85,95 @@
                         "dom":
                         {
                             "id": "hotspot-three",
-                            "class": "scale-animation",
-                            "width": 100,
-                            "height": 100,
-                            "color": "blue",
-                            "index": 20
+                            "width": "5em",
+                            "height": "5em",
+                            "color": "transparent",
+                            "index": 3,
+                            "class": [ "content-style__primary" ]
                         },
 
                         "transform":
                         {
                             "position": {
                                 "x": 0,
-                                "y": 0,
-                                "z": 30
+                                "y": -100
                             }
                         }
                     },
 
                     {
-                        "uid": "hotspot-dom-outside-hotspot",
+                        "uid": "hotspot-dom-four",
                         "interactive": false,
                         "type": "dom",
 
                         "dom":
                         {
-                            "id": "outside-hotspot",
-                            "width": 560,
-                            "height": 315,
-                            "index": 10
+                            "id": "hotspot-four",
+                            "width": "5em",
+                            "height": "5em",
+                            "color": "transparent",
+                            "index": 4,
+                            "class": [ "content-style__primary", "media-style__see-through" ]
                         },
 
                         "transform":
                         {
                             "position": {
-                                "x": 10,
-                                "y": 0,
-                                "z": 10
+                                "theta": 90,
+                                "phi": 0
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-five",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-five",
+                            "width": "5em",
+                            "height": "5em",
+                            "color": "transparent",
+                            "index": 5,
+                            "class": [ "content-style__above", "media-style__see-through", "hover-trig" ]
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -90,
+                                "phi": 0
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-six",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-six",
+                            "width": "5em",
+                            "height": "5em",
+                            "color": "transparent",
+                            "index": 6,
+                            "class": [ "media-style__pin", "content-style__above", "hover-trig" ]
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": 180,
+                                "phi": 0
                             }
                         }
                     }
                 ]
             }
         ]
-    },
-
-    "actions":
-    [
-        {
-            "uid": "click-action",
-            "target": "console",
-            "method":
-            {
-                "name": "log",
-                "args": ["click"]
-            }
-        },
-
-        {
-            "uid": "over-action",
-            "target": "console",
-            "method":
-            {
-                "name": "log",
-                "args": ["over"]
-            }
-        },
-
-        {
-            "uid": "out-action",
-            "target": "console",
-            "method":
-            {
-                "name": "log",
-                "args": ["out"]
-            }
-        }
-    ]
+    }
 }
