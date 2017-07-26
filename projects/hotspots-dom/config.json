@@ -31,7 +31,7 @@
                 [
                     {
                         "uid": "hotspot-dom-one",
-                        "interactive": false,
+                        "interactive": true,
                         "type": "dom",
 
                         "dom":
@@ -55,7 +55,7 @@
 
                     {
                         "uid": "hotspot-dom-two",
-                        "interactive": false,
+                        "interactive": true,
                         "type": "dom",
 
                         "dom":
@@ -79,7 +79,7 @@
 
                     {
                         "uid": "hotspot-dom-three",
-                        "interactive": false,
+                        "interactive": true,
                         "type": "dom",
 
                         "dom":
@@ -103,7 +103,7 @@
 
                     {
                         "uid": "hotspot-dom-four",
-                        "interactive": false,
+                        "interactive": true,
                         "type": "dom",
 
                         "dom":
@@ -127,7 +127,7 @@
 
                     {
                         "uid": "hotspot-dom-five",
-                        "interactive": false,
+                        "interactive": true,
                         "type": "dom",
 
                         "dom":
@@ -151,7 +151,7 @@
 
                     {
                         "uid": "hotspot-dom-six",
-                        "interactive": false,
+                        "interactive": true,
                         "type": "dom",
 
                         "dom":
@@ -167,8 +167,32 @@
                         "transform":
                         {
                             "position": {
-                                "theta": 180,
-                                "phi": 0
+                                "theta": 160,
+                                "phi": 5
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-seven",
+                        "interactive": false,
+                        "cursor": "crosshair",
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-seven",
+                            "width": "5em",
+                            "height": "5em",
+                            "color": "#f49a1a",
+                            "index": 7
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -160,
+                                "phi": -25
                             }
                         }
                     }

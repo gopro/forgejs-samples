@@ -434,9 +434,19 @@ body {
     left: 0;
     height: 100%;
     width: 100%; }
+  body .hs-html {
+    }
+    body .hs-html .hs-html-tb {
+      display: table;
+      width: 100%;
+      height: 100%; }
+      body .hs-html .hs-html-cell {
+        display: table-cell;
+        color: white;
+        text-align: center;
+        vertical-align: middle; }
   body .hotspot {
-    /*width: auto;*/
-    /*height: auto;*/ }
+    }
     body .hotspot .hotspot-zone {
       perspective: 1000px;
       padding: 0;
