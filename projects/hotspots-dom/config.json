@@ -1,9 +1,9 @@
 {
     "story":
     {
-        "uid": "hotspots-story",
-        "name": "Hotspots Story",
-        "slug": "hotspots-story",
+        "uid": "hotspots-DOM-story",
+        "name": "Hotspots DOM Story",
+        "slug": "hotspots-dom-story",
         "description": "This is sample of DOM hotspots",
         "default": "scene-0",
 

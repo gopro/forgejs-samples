@@ -76,10 +76,10 @@
             </p>
             <!-- Content of the hotspot -->
             <div class="content">
-                <p><img src="https://cdn.forgejs.org/samples/common/images/wooden-fireball.jpg" class="parazoom" alt="Hover me for parallax effect<br/>and Click to close"></p>
-                <h2>Parallax image</h2>
+                <p><img src="https://cdn.forgejs.org/samples/common/images/wooden-fireball.jpg" alt="Hover me for parallax effect<br/>and Click to close"></p>
+                <h2>Description with image</h2>
                 <div class="padded">
-                    <p>This is an external jQuery plugin triggered into this image</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
             </div>
         </div>
@@ -176,7 +176,7 @@
                     <h2>Hover hotspot</h2>
                     <h3>Hover off to hide me</h3>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <p><strong>CSS only</strong></p>
                 </div>
             </div>
@@ -202,52 +202,6 @@
     <script type="text/javascript">
         // Create a viewer
         var viewer = new FORGE.Viewer("container", "config.json");
-    </script>
-
-    <!-- Include the jQuery library -->
-    <script type="text/javascript" src="./jquery/jquery-3.0.0.min.js"></script>
-    <!-- Include the Parazoom4 library -->
-    <script type="text/javascript" src="./jquery/parazoom4.js"></script>
-
-    <script type="text/javascript">
-        jQuery(document).ready(function(){
-            var mouseMoveThreshold = 10,
-                mouseMove = mouseMoveThreshold;
-            jQuery('.parazoom').parazoom({
-                tilt: true,
-                scale: 1,
-                overflow: 'visible',
-                cursor: 'cell',
-                text: true,
-                textClass: 'alt-text',
-                textPosition: 'middle',
-                textAlignment: 'center',
-                textXParallax: 30,
-                textYParallax: 30,
-                textOpacity: 1,
-                textOpacityHover: 0.1,
-                onClick: function(data){
-                    jQuery('.prz-container[data-prz-id='+data.id+']').closest('.hotspot-zone').find('input').prop('checked',false)
-                },
-                onMove: function(data){
-                    if(mouseMove > mouseMoveThreshold){
-                        jQuery('.prz-container[data-prz-id='+data.id+']').closest('.hotspot-zone').find('h2').css({
-                            'transform': 'translateX('+10*data.percentX+'px) translateY(calc(-50% -  '+20*data.percentY+'px)) rotateX('+10*data.percentY+'deg) rotateY('+10*data.percentX+'deg)',
-                            'transition-duration': '150ms'
-                        });
-                        mouseMove = 0;
-                    }else{
-                        mouseMove++;
-                    }
-                },
-                onLeave: function(data){
-                    jQuery('.prz-container[data-prz-id='+data.id+']').closest('.hotspot-zone').find('h2').css({
-                        'transform': 'translateX(0px) translateY(-50%) rotateX(0deg) rotateY(0deg)',
-                        'transition-duration': '300ms'
-                    });
-                }
-            });
-        });
     </script>
 </body>
 </html>

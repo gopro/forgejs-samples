@@ -435,6 +435,7 @@ body {
     height: 100%;
     width: 100%; }
   body .hs-html {
+      display: none;
     }
     body .hs-html .hs-html-tb {
       display: table;
@@ -446,6 +447,7 @@ body {
         text-align: center;
         vertical-align: middle; }
   body .hotspot {
+      display: none;
     }
     body .hotspot .hotspot-zone {
       perspective: 1000px;
@@ -764,7 +766,7 @@ body {
           margin-top: -0.5em;
           border-radius: 100%;
           transition: all 300ms;
-          -webkit-animation-delay: 0s;
+          /*-webkit-animation-delay: 0s;
           -webkit-animation-duration: 2s;
           -webkit-animation-name: primarySpotAnim;
           -webkit-animation-iteration-count: infinite;
@@ -784,7 +786,7 @@ body {
           animation-iteration-count: infinite;
           animation-fill-mode: forwards;
           animation-timing-function: ease;
-          transform-origin: center;
+          transform-origin: center;*/
           animation-direction: normal; }
       body .hotspot.media-style__pin .hotspot-zone > .media:after {
         content: '';
