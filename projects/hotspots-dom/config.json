@@ -1,0 +1,230 @@
+{
+    "story":
+    {
+        "uid": "hotspots-DOM-story",
+        "name": "Hotspots DOM Story",
+        "slug": "hotspots-dom-story",
+        "description": "This is sample of DOM hotspots",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first and only scene",
+                "background": "#202040",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "grid",
+
+                    "options":
+                    {
+                        "color": "#7F7FFF"
+                    }
+                },
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-dom-one",
+                        "interactive": true,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-one",
+                            "width": "5em",
+                            "height": "5em",
+                            "color": "transparent",
+                            "index": 1,
+                            "class": [ "media-style__primary", "content-style__primary" ]
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "x": -100,
+                                "y": 100
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-two",
+                        "interactive": true,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-two",
+                            "width": "5em",
+                            "height": "5em",
+                            "color": "transparent",
+                            "index": 2,
+                            "class": [ "media-style__pin", "content-style__above"]
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "x": 100,
+                                "y": 100
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-three",
+                        "interactive": true,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-three",
+                            "width": "5em",
+                            "height": "5em",
+                            "color": "transparent",
+                            "index": 3,
+                            "class": [ "content-style__primary" ]
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "x": 0,
+                                "y": -100
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-four",
+                        "interactive": true,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-four",
+                            "width": "5em",
+                            "height": "5em",
+                            "color": "transparent",
+                            "index": 4,
+                            "class": [ "content-style__primary", "media-style__see-through" ]
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": 90,
+                                "phi": 0
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-five",
+                        "interactive": true,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-five",
+                            "width": "5em",
+                            "height": "5em",
+                            "color": "transparent",
+                            "index": 5,
+                            "class": [ "content-style__above", "media-style__see-through", "hover-trig" ]
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -90,
+                                "phi": 0
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-six",
+                        "interactive": true,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-six",
+                            "width": "5em",
+                            "height": "5em",
+                            "color": "transparent",
+                            "index": 6,
+                            "class": [ "media-style__pin", "content-style__above", "hover-trig" ]
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": 160,
+                                "phi": 5
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-seven",
+                        "interactive": false,
+                        "cursor": "crosshair",
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-seven",
+                            "width": "5em",
+                            "height": "5em",
+                            "color": "#f49a1a",
+                            "index": 7
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -160,
+                                "phi": -25
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.gyroscopebutton",
+                "url": "GyroscopeButton/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "gyrobutton",
+                "engine": "org.forgejs.gyroscopebutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "left": 10
+                }
+            }
+        ]
+    }
+}

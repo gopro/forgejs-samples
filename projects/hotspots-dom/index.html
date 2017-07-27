@@ -1,0 +1,207 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="GoPro, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <title>ForgeJS sample - Hotspots</title>
+
+    <!-- CSS libraries -->
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Little styling -->
+    <style type="text/css">
+        @-ms-viewport { width: device-width; }
+        @-o-viewport { width: device-width; zoom: 1.0; min-zoom: 1.0; max-zoom: 1.0; }
+        @viewport { width: device-width; zoom: 1.0; min-zoom: 1.0; max-zoom: 1.0; }
+
+        html, body
+        {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        div#container
+        {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <div id="hotspot-one" class="hotspot">
+        <div class="hotspot-zone">
+            <!-- Toggle -->
+            <input type="checkbox">
+            <!-- Icon/Text container -->
+            <p class="media">
+                <!-- What you see into the hotspot, centered horizontally and vertically -->
+                <span class="centered">
+                    <span class="content">
+                        <!-- Icon font, image, anything... -->
+                    </span>
+                </span>
+            </p>
+            <!-- Content of the hotspot -->
+            <div class="content">
+                <div class="padded">
+                    <h2>CSS only</h2>
+                    <p>This is the most <u>basic</u> spot with only CSS.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hotspot-two" class="hotspot">
+        <div class="hotspot-zone">
+            <!-- Toggle -->
+            <input type="checkbox">
+            <!-- Icon/Text container -->
+            <p class="media">
+                <!-- What you see into the hotspot, centered horizontally and vertically -->
+                <span class="centered">
+                    <span class="content">
+                        <!-- Icon font, image, anything... -->
+                    </span>
+                </span>
+            </p>
+            <!-- Content of the hotspot -->
+            <div class="content">
+                <p><img src="https://cdn.forgejs.org/samples/common/images/wooden-fireball.jpg" alt="Hover me for parallax effect<br/>and Click to close"></p>
+                <h2>Description with image</h2>
+                <div class="padded">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hotspot-three" class="hotspot">
+        <div class="hotspot-zone">
+            <!-- Toggle -->
+            <input type="checkbox">
+            <!-- Icon/Text container -->
+            <p class="media">
+                <!-- What you see into the hotspot, centered horizontally and vertically -->
+                <span class="centered">
+                    <span class="content">
+                        <!-- Icon font, image, anything... -->
+                        <svg class="open-state" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 16"><title>slideshowGlyph</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><g id="slideshowGlyph"><polygon class="cls-1" points="0 14 1.5 14 3 14 3 8 3 2 1.5 2 0 2 0 8 0 14"/><polygon class="cls-1" points="19 2 19 8 19 14 20.5 14 22 14 22 8 22 2 20.5 2 19 2"/><path class="cls-1" d="M4,16H18V0H4V16ZM9,5l2.5,1.5L14,8,11.5,9.5,9,11V5Z"/></g></g></g></svg>
+                        <svg class="close-state" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.12109 18.12109"><title>exitGlyph</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon id="exitGlyph" class="cls-1" points="18.121 2.121 17.061 1.061 16 0 12.53 3.47 9.061 6.939 5.591 3.47 2.121 0 1.061 1.061 0 2.121 3.47 5.591 6.939 9.061 3.47 12.53 0 16 1.061 17.061 2.121 18.121 5.591 14.651 9.061 11.182 12.53 14.651 16 18.121 17.061 17.061 18.121 16 14.651 12.53 11.182 9.061 14.651 5.591 18.121 2.121"/></g></g></svg>
+                    </span>
+                </span>
+            </p>
+            <!-- Content of the hotspot -->
+            <div class="content" style="width: 560px;">
+                <p><iframe width="560" height="315" src="https://www.youtube.com/embed/z-o8GokZ-4A?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></p>
+                <div class="padded">
+                    <h2>YouTube and SVG icons</h2>
+                    <p>This is a hotspot with both open and close state SVGs which open a YouTube video.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="hotspot-four" class="hotspot">
+        <div class="hotspot-zone">
+            <!-- Toggle -->
+            <input type="checkbox">
+            <!-- Icon/Text container -->
+            <p class="media">
+                <!-- What you see into the hotspot, centered horizontally and vertically -->
+                <span class="centered">
+                    <span class="content">
+                        <img src="https://cdn.forgejs.org/samples/common/images/wooden-fireball.jpg" class="" alt="">
+                    </span>
+                </span>
+            </p>
+            <!-- Content of the hotspot -->
+            <div class="content">
+                <div class="padded">
+                    <h2>JPG</h2>
+                    <p>Hotspot with a JPG file.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hotspot-five" class="hotspot">
+        <div class="hotspot-zone">
+            <!-- Toggle -->
+            <input type="checkbox">
+            <!-- Icon/Text container -->
+            <p class="media">
+                <!-- What you see into the hotspot, centered horizontally and vertically -->
+                <span class="centered">
+                    <span class="content">
+                        <img src="https://media.giphy.com/media/l0MYRbawhDAnyMG4w/giphy.gif" class="" alt="">
+                    </span>
+                </span>
+            </p>
+            <!-- Content of the hotspot -->
+            <div class="content">
+                <h2>GIF</h2>
+                <p>Hotspot with a GIF file.</p>
+                <p><img src="https://media.giphy.com/media/l0MYRbawhDAnyMG4w/giphy.gif" class="" alt=""></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="hotspot-six" class="hotspot">
+        <div class="hotspot-zone">
+            <!-- Toggle -->
+            <input type="checkbox" title="Click to keep or not the modal opened">
+            <!-- Icon/Text container -->
+            <p class="media">
+                <!-- What you see into the hotspot, centered horizontally and vertically -->
+                <span class="centered">
+                    <span class="content">
+                        <!-- Icon font, image, anything... -->
+                    </span>
+                </span>
+            </p>
+            <!-- Content of the hotspot -->
+            <div class="content">
+                <div class="padded">
+                    <h2>Hover hotspot</h2>
+                    <h3>Hover off to hide me</h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p><strong>CSS only</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hotspot-seven" class="hs-html">
+        <div class="hs-html-tb">
+            <p class="hs-html-cell">HTML</p>
+        </div>
+    </div>
+
+    <!-- Include the threejs custom build -->
+    <script src="../../lib/three.js/three.r86.custom.min.js"></script>
+
+    <!-- Include the Hammer.js library -->
+    <script src="../../lib/hammer.js/hammer.min.js"></script>
+
+    <!-- Include the ForgeJS library -->
+    <script type="text/javascript" src="../../lib/forge/forge.min.js" ></script>
+
+    <!-- Start ForgeJS -->
+    <script type="text/javascript">
+        // Create a viewer
+        var viewer = new FORGE.Viewer("container", "config.json");
+    </script>
+</body>
+</html>
