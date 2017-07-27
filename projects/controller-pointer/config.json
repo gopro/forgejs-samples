@@ -16,10 +16,10 @@
 
     "story":
     {
-        "uid": "simpliest-story",
-        "name": "Simpliest Story",
-        "slug": "simpliest-story",
-        "description": "This is the simpliest story ever",
+        "uid": "controller-pointer-story",
+        "name": "Controller Pointer Story",
+        "slug": "controller-pointer-story",
+        "description": "This is a sample to demonstrate the pointer controller",
         "default": "scene-0",
 
         "scenes":
