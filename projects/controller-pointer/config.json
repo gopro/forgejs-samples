@@ -1,0 +1,79 @@
+{
+    "controllers":
+    {
+        "instances":
+        [
+            {
+                "uid": "pointer",
+                "type": "pointer",
+                "options":
+                {
+                    "orientation": { "drag": true }
+                }
+            }
+        ]
+    },
+
+    "story":
+    {
+        "uid": "controller-pointer-story",
+        "name": "Controller Pointer Story",
+        "slug": "controller-pointer-story",
+        "description": "This is a sample to demonstrate the pointer controller",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first and only scene",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
+                    }
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.toolbox",
+                "url": "Toolbox/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "toolbox",
+                "engine": "org.forgejs.toolbox",
+                "options":
+                {
+                    "pannels":
+                    {
+                        "camera": false,
+                        "view": false,
+                        "story": false,
+                        "scene" : false,
+                        "controllers": { "open": true }
+                    }
+                }
+            }
+        ]
+    }
+}
