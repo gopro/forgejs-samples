@@ -44,13 +44,7 @@
         [
             {
                 "uid": "editor",
-                "engine": "org.forgejs.editor",
-
-                "options":
-                {
-                    "bottom": 10,
-                    "right": 10
-                }
+                "engine": "org.forgejs.editor"
             }
         ]
     }
