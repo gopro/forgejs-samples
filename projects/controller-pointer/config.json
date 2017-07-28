@@ -70,7 +70,8 @@
                         "view": false,
                         "story": false,
                         "scene" : false,
-                        "controllers": { "open": true }
+                        "controllerPointerOrientation": { "open": true },
+                        "controllerPointerZoom": { "open": true }
                     }
                 }
             }
