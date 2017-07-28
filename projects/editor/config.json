@@ -37,11 +37,6 @@
             {
                 "uid": "org.forgejs.editor",
                 "url": "Editor/"
-            },
-
-            {
-                "uid": "org.forgejs.toolbox",
-                "url": "Toolbox/"
             }
         ],
 
@@ -49,18 +44,7 @@
         [
             {
                 "uid": "editor",
-                "engine": "org.forgejs.editor",
-
-                "options":
-                {
-                    "bottom": 10,
-                    "right": 10
-                }
-            },
-
-            {
-                "uid": "toolbox",
-                "engine": "org.forgejs.toolbox"
+                "engine": "org.forgejs.editor"
             }
         ]
     }
