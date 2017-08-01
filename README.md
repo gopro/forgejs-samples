@@ -15,10 +15,11 @@ Prior to the sample execution you have to setup the `plugins` directory which co
 
 Then you have to setup the `lib` directory which contains the ForgeJS library and all required external libraries.
 
-1. Clone the [ForgeJS](https://github.com/gopro/forgejs project).
-2. Build ForgeJS with the help of the ```grunt min``` command.
-3. Copy and paste the `lib` directory into the `forgejs-samples` local repository.
-4. Copy and paste the content of the `build` directory into the new `lib` directory of the `forgejs-samples` local repository.
+1. Clone the [ForgeJS](https://github.com/gopro/forgejs) project.
+2. Copy and paste the `lib` directory of the `forgejs` repository at the root of the `forgejs-samples` local repository.
+3. Build ForgeJS library with the help of the ```grunt min``` command (more informations [here](https://github.com/gopro/forgejs/blob/master/README.md)).
+4. Copy and paste the generated `build` directory into the previously pasted `lib` directory of the `forgejs-samples` local repository.
+5. Rename  `lib/build` directory to `lib/forge`.
 
 ## Test it
 
