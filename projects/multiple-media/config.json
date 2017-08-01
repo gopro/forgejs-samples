@@ -69,7 +69,12 @@
 
                 "view":
                 {
-                    "type": "flat"
+                    "type": "flat",
+                    "options":
+                    {
+                        "repeatX": false,
+                        "repeatY": false
+                    }
                 }
             },
 
