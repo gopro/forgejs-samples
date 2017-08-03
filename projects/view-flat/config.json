@@ -1,0 +1,140 @@
+{
+    "story":
+    {
+        "uid": "view-flat-story",
+        "name": "View Flat Story",
+        "slug": "view-flat-story",
+        "description": "This project show the usage of the flat view",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "Image flat scene",
+                "slug": "image-flat-scene",
+                "description": "This scene has a flat image media",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "flat",
+                        "url": "https://cdn.forgejs.org/samples/common/images/Mountain-selfie.jpg"
+                    }
+                },
+
+                "view":
+                {
+                    "type": "flat",
+                    "options":
+                    {
+                        "repeatX": false,
+                        "repeatY": false
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-1",
+                "name": "Video flat scene",
+                "slug": "video-flat-scene",
+                "description": "This scene has a flat video media",
+
+                "media":
+                {
+                    "uid": "media-1",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "flat",
+                        "url": "https://cdn.forgejs.org/samples/common/videos/omni-highlights/Omni-Highlights-Reframed-1920x1080.mp4"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0.5
+                    }
+                },
+
+                "view":
+                {
+                    "type": "flat",
+                    "options":
+                    {
+                        "repeatX": false,
+                        "repeatY": false
+                    }
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.previousnextbuttons",
+                "url": "PreviousNextButtons/"
+            },
+
+            {
+                "uid": "org.forgejs.videocors",
+                "url": "VideoCORS/"
+            },
+
+            {
+                "uid": "org.forgejs.mobilevideoplay",
+                "url": "MobileVideoPlay/"
+            },
+
+            {
+                "uid": "org.forgejs.toolbox",
+                "url": "Toolbox/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "previousnextbuttons",
+                "engine": "org.forgejs.previousnextbuttons"
+            },
+
+            {
+                "uid": "videocors",
+                "engine": "org.forgejs.videocors"
+            },
+
+            {
+                "uid": "mobilevideoplay",
+                "engine": "org.forgejs.mobilevideoplay"
+            },
+
+            {
+                "uid": "toolbox",
+                "engine": "org.forgejs.toolbox",
+                "options":
+                {
+                    "panels":
+                    {
+                        "camera": false,
+                        "story": false,
+                        "scene": false,
+                        "controllerPointerOrientation": false,
+                        "controllerPointerZoom": false,
+                        "view": { "open": true }
+                    }
+                }
+            }
+        ]
+    }
+}
