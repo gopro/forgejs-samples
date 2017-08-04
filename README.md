@@ -1,7 +1,7 @@
 
 ![](https://cdn.forgejs.org/grav/images/ForgeJS-logo-650x200.png)
 
-# ForgeJS Samples
+# ForgeJS Samples (TEST)
 
 This repository contains simple samples, demonstrating the capabilities of ForgeJS.
 
