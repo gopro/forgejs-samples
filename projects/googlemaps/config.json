@@ -1,0 +1,78 @@
+{
+    "story":
+    {
+        "uid": "toolbox-plugin-demo",
+        "name": "Toolbox Plugin Demo",
+        "slug": "toolbox-plugin-demo",
+        "description": "Demonstrates the Toolbox plugin",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first scene",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "streaming": "dash",
+                        "url": "https://cdn.forgejs.org/samples/vrrroom/videos/460017/460017.mpd"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0
+                    }
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.googlemaps",
+                "url": "GoogleMaps/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "googlemaps",
+                "engine": "org.forgejs.googlemaps",
+
+                "options":
+                {
+                    "strokeColor": "#009ee2",
+                    "strokeOpacity": 1,
+                    "strokeWeight": 3,
+                    "width": 200,
+                    "height": 200,
+                    "right": 15,
+                    "bottom": 15
+                },
+
+                "data":
+                {
+                    "googleMapsKey": "AIzaSyBaXB43aQIplDPVJ53ZzPfyUqxoHrd0HZk",
+                    "gpx": "https://cdn.forgejs.org/samples/vrrroom/gpx/samy.xml"
+                }
+            }
+        ]
+    }
+}
