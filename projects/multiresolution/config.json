@@ -1,11 +1,26 @@
 {
+    "controllers":
+    {
+        "instances":
+        [
+            {
+                "uid": "pointer",
+                "type": "pointer",
+                "options":
+                {
+                    "zoom": { "toPointer": true }
+                }
+            }
+        ]
+    },
+
     "story":
     {
         "uid": "multiresolution-story",
         "name": "Multiresolution Story",
         "slug": "multiresolution-story",
         "description": "This project display multiresolution panoramic images",
-        "default": "scene-1",
+        "default": "scene-0",
 
         "scenes":
         [
@@ -19,7 +34,7 @@
                 {
                     "fov":
                     {
-                        "max": 40
+                        "max": 39
                     }
                 },
 
@@ -42,12 +57,35 @@
                             "up": 5
                         },
 
+                        "limits":
+                        {
+                            "yaw":
+                            {
+                                "min": -126.5,
+                                "max":  126.5
+                            },
+
+                            "pitch":
+                            {
+                                "min": -27.6,
+                                "max": 11.6
+                            }
+                        },
+
                         "pattern": "https://cdn.forgejs.org/samples/multiresolution/galoppaz/{face}/{level}/{y}/{x}.jpg",
 
                         "levels":
                          [
                             {
-                                "name": "6656x6656",
+                                "name": "level 0",
+                                "width": 2048,
+                                "height": 2048,
+                                "tile": 2048,
+                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/galoppaz/{face}/{level}.jpg"
+                            },
+
+                            {
+                                "name": "level 1",
                                 "width": 6656,
                                 "height": 6656,
                                 "tile": 512,
@@ -55,41 +93,26 @@
                             },
 
                             {
-                                "name": "12800x12800",
+                                "name": "level 2",
                                 "width": 12800,
                                 "height": 12800,
                                 "tile": 512
                             },
 
                             {
-                                "name": "25600x25600",
+                                "name": "level 3",
                                 "width": 25600,
                                 "height": 25600,
                                 "tile": 512
                             },
 
                             {
-                               "name": "51200x51200",
+                               "name": "level 4",
                                 "width": 51200,
                                 "height": 51200,
                                 "tile": 512
                             }
-                        ],
-
-                        "limits":
-                        {
-                            "yaw":
-                            {
-                                "min": -127.665,
-                                "max":  127.665
-                            },
-
-                            "pitch":
-                            {
-                                "min": -27.815,
-                                "max": 11.995
-                            }
-                        }
+                        ]
                     }
                 }
             },
@@ -104,7 +127,9 @@
                 {
                     "fov":
                     {
-                        "max": 120
+                        "default": 95,
+                        "min": 60,
+                        "max": 110
                     }
                 },
 
@@ -132,28 +157,28 @@
                         "levels":
                         [
                             {
-                                "name": "512x512",
+                                "name": "level 0",
                                 "width": 512,
                                 "height": 512,
                                 "tile": 512
                             },
 
                             {
-                                "name": "1024x1024",
+                                "name": "level 1",
                                 "width": 1024,
                                 "height": 1024,
                                 "tile": 512
                             },
 
                             {
-                                "name": "2048x2048",
+                                "name": "level 2",
                                 "width": 2048,
                                 "height": 2048,
                                 "tile": 512
                             },
 
                             {
-                                "name": "3584x3584",
+                                "name": "level 3",
                                 "width": 3584,
                                 "height": 3584,
                                 "tile": 512
@@ -172,8 +197,8 @@
         "engines":
         [
             {
-                "uid": "org.forgejs.gyroscopebutton",
-                "url": "GyroscopeButton/"
+                "uid": "org.forgejs.webvrbutton",
+                "url": "WebVRButton/"
             },
 
             {
@@ -185,13 +210,13 @@
         "instances":
         [
             {
-                "uid": "gyrobutton",
-                "engine": "org.forgejs.gyroscopebutton",
+                "uid": "webvrbutton",
+                "engine": "org.forgejs.webvrbutton",
 
                 "options":
                 {
                     "bottom": 10,
-                    "left": 10
+                    "right": 10
                 }
             },
 

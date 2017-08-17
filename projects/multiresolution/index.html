@@ -28,27 +28,56 @@
         {
             height: 100%;
         }
+
+        .blackbox {
+            position: absolute;
+            top: 10px;
+            left:10px;
+            z-index: 10;
+            margin: auto;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            font-family: arial, helvetica, sans-serif;
+            font-size: 0.8em;
+        }
     </style>
 </head>
 
 <body>
+
+    <div id="levels" class="blackbox"></div>
+
     <div id="container"></div>
 
     <!-- Include the threejs custom build -->
-    <script src="../../lib/three.js/three.r83.custom.min.js"></script>
+    <script src="../../lib/three.js/three.r86.custom.min.js"></script>
 
     <!-- Include the Hammer.js library -->
     <script src="../../lib/hammer.js/hammer.min.js"></script>
 
     <!-- Include the ForgeJS library -->
-    <script type="text/javascript" src="../../../sources/build/forge.js" ></script>
+    <script type="text/javascript" src="../../lib/forge/forge.min.js" ></script>
 
     <!-- Start ForgeJS -->
     <script type="text/javascript">
 
-        // Create a viewer
-        var viewer = new FORGE.Viewer("container", "config.json");
+        var levelsNode = document.getElementById("levels");
 
+        var Callback = function()
+        {
+            this.update = function()
+            {
+                if (viewer.renderer.backgroundRenderer)
+                {
+                    var level = viewer.renderer.backgroundRenderer.level;
+                    levelsNode.innerHTML = "Pyramid level: " + level;
+                }
+            };
+        }
+
+        // Create a viewer
+        var viewer = new FORGE.Viewer("container", "config.json", new Callback());
     </script>
 </body>
 </html>
