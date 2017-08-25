@@ -56,6 +56,14 @@
                             {
                                 "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_altitude.json"
                             }
+                        },
+                        {
+                            "instance": "compass",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_gyro.json"
+                            }
                         }
                     ]
                 }
@@ -72,6 +80,10 @@
             {
                 "uid": "org.forgejs.altimeter",
                 "url": "Altimeter/"
+            },
+            {
+                "uid": "org.forgejs.compass",
+                "url": "Compass/"
             }
         ],
 
@@ -85,6 +97,16 @@
                     "width": 80,
                     "right": 20,
                     "top": 20
+                }
+            },
+            {
+                "uid": "compass",
+                "engine": "org.forgejs.compass",
+                "options":
+                {
+                    "size": 150,
+                    "left": 20,
+                    "bottom": 20
                 }
             }
         ]
