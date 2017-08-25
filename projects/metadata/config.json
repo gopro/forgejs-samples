@@ -1,0 +1,92 @@
+{
+    "story":
+    {
+        "uid": "metadata",
+        "name": "Metadata showcase",
+        "slug": "metadata",
+        "description": "This is a flat story to show metadata usage",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first and only scene",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "flat",
+                        "url": "https://cdn.forgejs.org/samples/metadata/GOPR7391.mp4"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "startTime": 100,
+                        "loop": true,
+                        "volume": 0
+                    }
+                },
+
+                "view":
+                {
+                    "type": "flat",
+                    "options":
+                    {
+                        "repeatX": false,
+                        "repeatY": false
+                    }
+                },
+
+                "plugins":
+                {
+                    "configurations":
+                    [
+                        {
+                            "instance": "altimeter",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_altitude.json"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.altimeter",
+                "url": "Altimeter/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "altimeter",
+                "engine": "org.forgejs.altimeter",
+                "options":
+                {
+                    "width": 80,
+                    "right": 20,
+                    "top": 20
+                }
+            }
+        ]
+    }
+}
