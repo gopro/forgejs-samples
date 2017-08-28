@@ -46,7 +46,11 @@
         [
             {
                 "uid": "share",
-                "engine": "org.forgejs.share"
+                "engine": "org.forgejs.share",
+                "options":
+                {
+                    "format": "short"
+                }
             }
         ]
     }
