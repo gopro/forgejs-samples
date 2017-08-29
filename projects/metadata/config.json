@@ -64,6 +64,14 @@
                             {
                                 "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_gyro.json"
                             }
+                        },
+                        {
+                            "instance": "speedometer",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_speed.json"
+                            }
                         }
                     ]
                 }
@@ -84,6 +92,10 @@
             {
                 "uid": "org.forgejs.compass",
                 "url": "Compass/"
+            },
+            {
+                "uid": "org.forgejs.speedometer",
+                "url": "Speedometer/"
             }
         ],
 
@@ -106,6 +118,16 @@
                 {
                     "size": 150,
                     "left": 20,
+                    "bottom": 20
+                }
+            },
+            {
+                "uid": "speedometer",
+                "engine": "org.forgejs.speedometer",
+                "options":
+                {
+                    "size": 150,
+                    "right": 20,
                     "bottom": 20
                 }
             }
