@@ -1,0 +1,129 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="GoPro, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+
+    <meta property="og:url"           content="https://releases.forgejs.org/latest/samples/projects/share/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="ForgeJS sample - Sharing the view" />
+    <meta property="og:description"   content="Share the current camera position and view through URL parameters." />
+    <meta property="og:image"         content="https://cdn.forgejs.org/grav/images/ForgeJS-logo-650x200.png" />
+
+    <title>ForgeJS sample - Sharing the view</title>
+
+    <!-- Little styling -->
+    <style type="text/css">
+        @-ms-viewport { width: device-width; }
+        @-o-viewport { width: device-width; zoom: 1.0; min-zoom: 1.0; max-zoom: 1.0; }
+        @viewport { width: device-width; zoom: 1.0; min-zoom: 1.0; max-zoom: 1.0; }
+
+        @font-face
+        {
+            font-family: dosislight;
+            src: url("https://cdn.forgejs.org/samples/vrrroom/fonts/Dosis-Light.ttf");
+        }
+        @font-face
+        {
+            font-family: dosisbold;
+            src: url("https://cdn.forgejs.org/samples/vrrroom/fonts/Dosis-Bold.ttf");
+        }
+
+        html, body
+        {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        div#container
+        {
+            height: 100%;
+        }
+
+        button.fb-share-button-forge
+        {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+
+            background-color: #00a3da;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-family: dosisbold, sans-serif;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId            : '114849899188541',
+                autoLogAppEvents : true,
+                xfbml            : true,
+                version          : 'v2.10'
+            });
+            FB.AppEvents.logPageView();
+
+            document.querySelector('.fb-share-button-forge').onclick = function(e)
+            {
+                FB.ui({
+                    method: 'share',
+                    href: 'https://releases.forgejs.org/latest/samples/projects/share/'+ encodeURI(FORGE.URL.parse()["hash"]),
+                    // hashtag: 'ForgeJS',
+                    quote: 'ForgeJS is able to share your camera and view parameters',
+                    mobile_iframe: true
+                }, function(response){});
+
+                FB.XFBML.parse(document.querySelector('.fb-share-button-forge'));
+            };
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+
+    <div id="container"></div>
+
+    <button class="fb-share-button-forge">Share your position on Facebook!</button>
+
+    <!-- Include the threejs custom build -->
+    <script src="../../lib/three.js/three.r86.custom.min.js"></script>
+
+    <!-- Include the Hammer.js library -->
+    <script src="../../lib/hammer.js/hammer.min.js"></script>
+
+    <!-- Include the ForgeJS library -->
+    <script type="text/javascript" src="../../lib/forge/forge.min.js" ></script>
+
+    <!-- Start ForgeJS -->
+    <script type="text/javascript">
+
+        // Create a viewer
+        var viewer = new FORGE.Viewer("container", "config.json");
+
+    </script>
+</body>
+</html>

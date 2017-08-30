@@ -1,0 +1,57 @@
+{
+    "story":
+    {
+        "uid": "share-story",
+        "name": "Share Story",
+        "slug": "share-story",
+        "description": "This story demonstrates the share plugin api",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first and only scene",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
+                    }
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.share",
+                "url": "Share/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "share",
+                "engine": "org.forgejs.share",
+                "options":
+                {
+                    "format": "short"
+                }
+            }
+        ]
+    }
+}
