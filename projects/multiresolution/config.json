@@ -204,6 +204,11 @@
             {
                 "uid": "org.forgejs.previousnextbuttons",
                 "url": "PreviousNextButtons/"
+            },
+
+            {
+                "uid": "org.forgejs.share",
+                "url": "Share/"
             }
         ],
 
@@ -223,6 +228,16 @@
             {
                 "uid": "previousnextbuttons",
                 "engine": "org.forgejs.previousnextbuttons"
+            },
+
+            {
+                "uid": "share",
+                "engine": "org.forgejs.share",
+                "options":
+                {
+                    "format": "normal",
+                    "precision": 3
+                }
             }
         ]
     }
