@@ -50,6 +50,14 @@
                     "configurations":
                     [
                         {
+                            "instance": "accelerometer",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_accl.json"
+                            }
+                        },
+                        {
                             "instance": "altimeter",
 
                             "data":
@@ -86,6 +94,10 @@
         "engines":
         [
             {
+                "uid": "org.forgejs.accelerometer",
+                "url": "Accelerometer/"
+            },
+            {
                 "uid": "org.forgejs.altimeter",
                 "url": "Altimeter/"
             },
@@ -101,6 +113,15 @@
 
         "instances":
         [
+            {
+                "uid": "accelerometer",
+                "engine": "org.forgejs.accelerometer",
+                "options":
+                {
+                    "left": 20,
+                    "top": 20
+                }
+            },
             {
                 "uid": "altimeter",
                 "engine": "org.forgejs.altimeter",
