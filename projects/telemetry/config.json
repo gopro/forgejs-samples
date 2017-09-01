@@ -1,0 +1,183 @@
+{
+    "story":
+    {
+        "uid": "metadata",
+        "name": "Metadata showcase",
+        "slug": "metadata",
+        "description": "This is a flat story to show metadata usage",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first and only scene",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "flat",
+                        "url": "https://cdn.forgejs.org/samples/metadata/GOPR7391.mp4"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "startTime": 100,
+                        "loop": true,
+                        "volume": 0
+                    }
+                },
+
+                "view":
+                {
+                    "type": "flat",
+                    "options":
+                    {
+                        "repeatX": false,
+                        "repeatY": false
+                    }
+                },
+
+                "plugins":
+                {
+                    "configurations":
+                    [
+                        {
+                            "instance": "accelerometer",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_accl.json"
+                            }
+                        },
+                        {
+                            "instance": "altimeter",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_altitude.json"
+                            }
+                        },
+                        {
+                            "instance": "compass",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_gyro.json"
+                            }
+                        },
+                        {
+                            "instance": "speedometer",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_speed.json"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.googlemaps",
+                "url": "GoogleMaps/"
+            },
+            {
+                "uid": "org.forgejs.accelerometer",
+                "url": "Accelerometer/"
+            },
+            {
+                "uid": "org.forgejs.altimeter",
+                "url": "Altimeter/"
+            },
+            {
+                "uid": "org.forgejs.compass",
+                "url": "Compass/"
+            },
+            {
+                "uid": "org.forgejs.speedometer",
+                "url": "Speedometer/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "googlemaps",
+                "engine": "org.forgejs.googlemaps",
+
+                "options":
+                {
+                    "strokeColor": "#009ee2",
+                    "strokeOpacity": 1,
+                    "strokeWeight": 3,
+                    "width": 200,
+                    "height": 200,
+                    "left": 20,
+                    "bottom": 20
+                },
+
+                "data":
+                {
+                    "googleMapsKey": "AIzaSyBaXB43aQIplDPVJ53ZzPfyUqxoHrd0HZk",
+                    "gpx": "https://cdn.forgejs.org/samples/metadata/GOPR7391.xml"
+                }
+            },
+            {
+                "uid": "accelerometer",
+                "engine": "org.forgejs.accelerometer",
+                "options":
+                {
+                    "size": 100,
+                    "right": 20,
+                    "bottom": 20
+                }
+            },
+            {
+                "uid": "altimeter",
+                "engine": "org.forgejs.altimeter",
+                "options":
+                {
+                    "width": 80,
+                    "right": 20,
+                    "top": 20
+                }
+            },
+            {
+                "uid": "compass",
+                "engine": "org.forgejs.compass",
+                "options":
+                {
+                    "size": 150,
+                    "left": 20,
+                    "top": 20
+                }
+            },
+            {
+                "uid": "speedometer",
+                "engine": "org.forgejs.speedometer",
+                "options":
+                {
+                    "size": 200,
+                    "right": 190,
+                    "bottom": 20
+                }
+            }
+        ]
+    }
+}
