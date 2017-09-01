@@ -147,7 +147,7 @@
                 "engine": "org.forgejs.speedometer",
                 "options":
                 {
-                    "size": 150,
+                    "size": 300,
                     "right": 20,
                     "bottom": 20
                 }
