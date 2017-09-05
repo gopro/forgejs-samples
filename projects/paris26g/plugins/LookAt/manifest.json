@@ -1,0 +1,35 @@
+{
+    "uid": "org.forgejs.lookat",
+    "name": "LookAt",
+    "shortName": "lookat",
+    "version": "1.0.0",
+    "versionName": "LookAt 1.0.0",
+    "description": "Display thumbnails with camera look at actions.",
+
+    "author":
+    {
+        "name": "GoPro",
+        "website": "https://forgejs.org"
+    },
+
+    "licence": "Apache 2",
+
+    "options":
+    {
+        "top": null,
+        "left": null,
+        "right": null,
+        "bottom": null
+    },
+
+    "data":
+    {
+        "json": ""
+    },
+
+    "sources": [
+        "src/LookAt.js"
+    ],
+
+    "constructor": "ForgePlugins.LookAt"
+}
