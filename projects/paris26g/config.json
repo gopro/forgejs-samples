@@ -16,25 +16,37 @@
 
     "story":
     {
-        "uid": "multiresolution-story",
-        "name": "Multiresolution Story",
-        "slug": "multiresolution-story",
-        "description": "This project display multiresolution panoramic images",
+        "uid": "paris-26gp-story",
+        "name": "Paris 26 gigapixels Story",
+        "slug": "paris26-story",
+        "description": "Interactive view of the most beautiful monuments of Paris.",
         "default": "scene-0",
 
         "scenes":
         [
             {
-                "uid": "scene-0",
-                "name": "Galoppaz",
-                "slug": "galoppaz",
-                "description": "Partial multiresolution panoramic image from summit of the Galoppaz",
+                "uid": "paris",
+                "name": "Paris",
+                "slug": "paris",
+                "description": "Partial multiresolution panoramic image of Paris",
 
                 "camera":
                 {
+                    "yaw":
+                    {
+                        "default": -88.38
+                    },
+
+                    "pitch":
+                    {
+                        "default": -4.44
+                    },
+
                     "fov":
                     {
-                        "max": 39
+                        "default": 24.238,
+                        "min": 0.7705,
+                        "max": 40
                     }
                 },
 
@@ -53,139 +65,854 @@
                             "right": 1,
                             "back": 2,
                             "left": 3,
-                            "down": 4,
-                            "up": 5
+                            "down": 5,
+                            "up": 4
                         },
 
                         "limits":
                         {
                             "yaw":
                             {
-                                "min": -126.5,
-                                "max":  126.5
+                                "min": -114.05,
+                                "max":  114.05
                             },
 
                             "pitch":
                             {
-                                "min": -27.6,
-                                "max": 11.6
+                                "min": -41.95,
+                                "max": 6.95
                             }
                         },
 
-                        "pattern": "https://cdn.forgejs.org/samples/multiresolution/galoppaz/{face}/{level}/{y}/{x}.jpg",
+                        "pattern": "https://cdn.forgejs.org/samples/multiresolution/paris26g/{face}/{level}/{y}/{x}.jpg",
 
                         "levels":
                          [
                             {
-                                "name": "level 0",
+                                "name": "level-0",
                                 "width": 2048,
                                 "height": 2048,
                                 "tile": 2048,
-                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/galoppaz/{face}/{level}.jpg"
+                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/paris26g/{face}/{level}.jpg"
                             },
 
                             {
-                                "name": "level 1",
-                                "width": 6656,
-                                "height": 6656,
+                                "name": "level-1",
+                                "width": 3072,
+                                "height": 3072,
                                 "tile": 512,
-                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/galoppaz/{face}/{level}/{y}_{x}.jpg"
+                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/paris26g/{face}/{level}/{y}_{x}.jpg"
                             },
 
                             {
-                                "name": "level 2",
-                                "width": 12800,
-                                "height": 12800,
+                                "name": "level-2",
+                                "width": 5632,
+                                "height": 5632,
+                                "tile": 512,
+                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/paris26g/{face}/{level}/{y}_{x}.jpg"
+                            },
+
+                            {
+                                "name": "level-3",
+                                "width": 11264,
+                                "height": 11264,
+                                "tile": 512,
+                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/paris26g/{face}/{level}/{y}_{x}.jpg"
+                            },
+
+                            {
+                                "name": "level-4",
+                                "width": 22528,
+                                "height": 22528,
                                 "tile": 512
                             },
 
                             {
-                                "name": "level 3",
-                                "width": 25600,
-                                "height": 25600,
+                                "name": "level-5",
+                                "width": 44544,
+                                "height": 44544,
                                 "tile": 512
                             },
 
                             {
-                               "name": "level 4",
-                                "width": 51200,
-                                "height": 51200,
+                               "name": "level-6",
+                                "width": 88576,
+                                "height": 88576,
+                                "tile": 512
+                            },
+
+                            {
+                               "name": "level-7",
+                                "width": 176640,
+                                "height": 176640,
                                 "tile": 512
                             }
                         ]
-                    }
-                }
-            },
-
-            {
-                "uid": "scene-1",
-                "name": "House Interior",
-                "slug": "house-interior",
-                "description": "Saint Jorioz's house interior",
-
-                "camera":
-                {
-                    "fov":
-                    {
-                        "default": 95,
-                        "min": 60,
-                        "max": 110
                     }
                 },
 
-                "media":
-                {
-                    "uid": "media-1",
-                    "type": "image",
-
-                    "source":
+                "hotspots":
+                [
                     {
-                        "format": "cube",
+                        "uid": "hotspot-01-eiffel-tower",
+                        "facingCenter": true,
 
-                        "faces":
+                        "transform":
                         {
-                            "front": 0,
-                            "right": 1,
-                            "back": 2,
-                            "left": 3,
-                            "down": 5,
-                            "up": 4
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": -103.28234811660693,
+                                "phi": 4.247546530405285
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
                         },
 
-                        "pattern": "https://cdn.forgejs.org/samples/multiresolution/house/{face}/{level}/{y}_{x}.jpg",
+                        "geometry":
+                        {
+                            "type": "plane",
 
-                        "levels":
-                        [
+                            "options":
                             {
-                                "name": "level 0",
-                                "width": 512,
-                                "height": 512,
-                                "tile": 512
-                            },
-
-                            {
-                                "name": "level 1",
-                                "width": 1024,
-                                "height": 1024,
-                                "tile": 512
-                            },
-
-                            {
-                                "name": "level 2",
-                                "width": 2048,
-                                "height": 2048,
-                                "tile": 512
-                            },
-
-                            {
-                                "name": "level 3",
-                                "width": 3584,
-                                "height": 3584,
-                                "tile": 512
+                                "width": 10,
+                                "height": 10
                             }
-                        ]
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-02-invalids",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": -103.37303098590493,
+                                "phi": -0.3593657800651679
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-03-defense",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": -84.50128101837626,
+                                "phi": 0.22646401895569757
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-04-triumphal-arch",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": -75.77923718452732,
+                                "phi": -0.25372218190090373
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-05-great-palace",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": -70.62337073920226,
+                                "phi": -1.0451113481118803
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-06-orsay-museum",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": -54.68264837441932,
+                                "phi": -2.5036821379097685
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-07-palais-garnier",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": -29.594013020339375,
+                                "phi": -0.5801597851921418
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-08-saint-germain-des-pres",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": -28.30907054152547,
+                                "phi": -5.563991033173633
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-09-louvre-museum",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": -21.12944020603937,
+                                "phi": -2.0939788861565036
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-10-basilica-sacred-heart",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": -15.29432996545672,
+                                "phi": 1.4022739003301679
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-11-church-saint-eustache",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": 7.546870402145546,
+                                "phi": -0.6220323123815177
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-12-chatelet-theatre",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": 28.388691041736973,
+                                "phi": -1.1464260649801519
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-13-pompidou-center",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": 30.325283656206338,
+                                "phi": -0.2016481144400114
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-14-city-theatre",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": 34.58102066099341,
+                                "phi": -0.9749129477350414
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-15-holy-chapel",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": 38.1786404202683,
+                                "phi": -1.0509838232041187
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-16-city-hall",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": 44.25545711876702,
+                                "phi": -0.4382420276654248
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-17-notre-dame-cathedral",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": 57.55194895633712,
+                                "phi": -0.060215851675962655
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-18-church-saint-sulpice",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": 73.40096059672635,
+                                "phi": -26.806891129444463
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-19-odean-theater",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": 99.68520905719149,
+                                "phi": -0.4166423412926299
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-20-pantheon",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": 103.65250965525608,
+                                "phi": 2.2474840277792576
+                            },
+
+                            "scale":
+                            {
+                                "x": 0.05,
+                                "y": 0.05
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+
+                            "options":
+                            {
+                                "width": 10,
+                                "height": 10
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
                     }
-                }
+                ]
             }
         ]
     },
@@ -197,32 +924,26 @@
         "engines":
         [
             {
-                "uid": "org.forgejs.webvrbutton",
-                "url": "WebVRButton/"
-            },
-
-            {
-                "uid": "org.forgejs.previousnextbuttons",
-                "url": "PreviousNextButtons/"
+                "uid": "org.forgejs.lookat",
+                "url": "LookAt/",
+                "prefix": "plugins/"
             }
         ],
 
         "instances":
         [
             {
-                "uid": "webvrbutton",
-                "engine": "org.forgejs.webvrbutton",
-
+                "uid": "lookat",
+                "engine": "org.forgejs.lookat",
                 "options":
                 {
                     "bottom": 10,
                     "right": 10
+                },
+                "data":
+                {
+                    "json": "./data/data.json"
                 }
-            },
-
-            {
-                "uid": "previousnextbuttons",
-                "engine": "org.forgejs.previousnextbuttons"
             }
         ]
     }
