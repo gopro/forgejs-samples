@@ -11,20 +11,13 @@ ForgePlugins.LookAt = function()
     // Loaded data
     this._data = null;
 
+    // points of interest data
     this._poi = null;
 
+    // poi counter
     this._count = 0;
 
-    this._margin = 5;
-
-    this._horizontal = 0;
-
-    this._vertical = 0;
-
-    this._imgWidth = 47;
-
-    this._imgHeight = 27;
-
+    // images array
     this._images = null;
 };
 
@@ -83,8 +76,7 @@ ForgePlugins.LookAt.prototype = {
     },
 
     /**
-     * [draw description]
-     * @return {[type]} [description]
+     * Prepare the canvas size
      */
     _prepareCanvas: function()
     {
@@ -97,16 +89,19 @@ ForgePlugins.LookAt.prototype = {
         var poiLength = this._poi.length;
         this._count = poiLength;
 
-        this._horizontal = Math.ceil(Math.sqrt(poiLength));
-        this._vertical = Math.floor(Math.sqrt(poiLength));
+        var rows = Math.ceil(Math.sqrt(poiLength));
+        var columns = Math.floor(Math.sqrt(poiLength));
 
-        var hMax = this._horizontal * this._imgWidth + (this._horizontal - 1) * this._margin;
-        var vMax = this._vertical * this._imgHeight + (this._vertical - 1) * this._margin;
+        var margin = this.plugin.options.container.margin;
+
+        var hMax = rows * this.plugin.options.thumbnail.width + (rows - 1) * margin;
+        var vMax = columns * this.plugin.options.thumbnail.height + (columns - 1) * margin;
 
         // Create the canvas
         this._canvas = this.plugin.create.canvas();
-        this._canvas.width = hMax + this._margin * 2;
-        this._canvas.height = vMax + this._margin * 2;
+        this._canvas.width = hMax + margin * 2;
+        this._canvas.height = vMax + margin * 2;
+
         this._canvas.top = this.plugin.options.top;
         this._canvas.left = this.plugin.options.left;
         this._canvas.right = this.plugin.options.right;
@@ -117,15 +112,16 @@ ForgePlugins.LookAt.prototype = {
         this._images = [];
 
         // load images
-        for(var i = 0; i < poiLength; i++) {
-
+        for(var i = 0; i < poiLength; i++)
+        {
             // create an image element
             var img = document.createElement('img');
+            img.crossOrigin = "anonymous";
 
             // use common loader as we need to count files
             img.onload = this._imageLoaded.bind(this);
-            //img.onerror = ... handle errors too ...
-            //img.onabort = ... handle errors too ...
+            img.onerror = this._imageError.bind(this);
+            img.onabort = this._imageError.bind(this);
 
             img.src = this._poi[i].img;
 
@@ -139,6 +135,9 @@ ForgePlugins.LookAt.prototype = {
         this._canvas.pointer.onClick.add(this._canvasClick, this);
     },
 
+    /**
+     * Canvas click handler
+     */
     _canvasClick: function(e)
     {
         var elem = this._canvas.dom,
@@ -149,19 +148,26 @@ ForgePlugins.LookAt.prototype = {
         var y = e.data.center.y - elemTop;
 
         var self = this;
-        this._poi.forEach(function(element) {
-            if (y > element.top && y < element.top + element.height && x > element.left && x < element.left + element.width) {
+        this._poi.forEach(function(element)
+        {
+            if (y > element.top && y < element.top + element.height && x > element.left && x < element.left + element.width)
+            {
                 self._lookAt(element);
             }
         });
     },
 
+    /**
+     * lookAt action for a given element
+     */
     _lookAt: function(elem)
     {
-        console.log(elem);
         this.viewer.camera.lookAt(elem.yaw, elem.pitch, 0, elem.fov, 2000, true, FORGE.EasingType.QUAD_IN_OUT);
     },
 
+    /**
+     * Image loaded handler
+     */
     _imageLoaded: function(e)
     {
         // for each successful load we count down
@@ -170,49 +176,74 @@ ForgePlugins.LookAt.prototype = {
         if (this._count === 0) this._drawThumbs();
     },
 
-    _drawThumbs: function()
+    /**
+     * Image error/aborted handler
+     */
+    _imageError: function(e)
+    {
+        // for each error or aborted load we count down
+        this._count--;
+        //start when all images are requested
+        if (this._count === 0) this._drawThumbs(false);
+    },
+
+    /**
+     * Thumbnails drawing
+     */
+    _drawThumbs: function(status)
     {
         var ctx = this._canvas.context2D;
-
-        this._elements = [];
 
         try
         {
             ctx.clearRect(0, 0, this._canvas.width, this._canvas.height);
 
-            ctx.fillStyle = "rgba(112, 66, 20, 1.0)";
+            ctx.fillStyle = this.plugin.options.container.color;
             ctx.fillRect(0, 0, this._canvas.width, this._canvas.height);
 
-            var hPos = 0;
-            var vPos = 0;
+            var row = 0;
+            var column = 0;
+
+            var imgWidth = this.plugin.options.thumbnail.width;
+            var imgHeight = this.plugin.options.thumbnail.height;
+            var margin = this.plugin.options.container.margin;
 
             var imagesLength = this._images.length;
             for (var i = 0; i < imagesLength; i++)
             {
-                var x = hPos * this._imgWidth + hPos * this._margin + this._margin;
-                var y = vPos * this._imgHeight + vPos * this._margin + this._margin;
+                var x = row * imgWidth + row * margin + margin;
+                var y = column * imgHeight + column * margin + margin;
 
-
-                //draw background image
-                ctx.drawImage(this._images[i], x, y, this._imgWidth, this._imgHeight);
-
-                //draw a box over the top
-                ctx.fillStyle = "rgba(112, 66, 20, 0.2)";
-                ctx.fillRect(x, y, this._imgWidth, this._imgHeight);
-
-                if (hPos === (this._horizontal - 1))
+                if (status === false)
                 {
-                    vPos++;
-                    hPos = 0;
+                    // black box fallback when no image
+                    ctx.fillStyle = "rgba(0, 0, 0, 1.0)";
                 }
                 else
                 {
-                    hPos++;
+                    //draw background image
+                    ctx.drawImage(this._images[i], x, y, imgWidth, imgHeight);
+
+                    // draw a color box over the thumb
+                    ctx.fillStyle = this.plugin.options.thumbnail.color;
                 }
 
-                // add coordinate to the poi object
-                this._poi[i].width = this._imgWidth;
-                this._poi[i].height = this._imgHeight;
+                ctx.fillRect(x, y, imgWidth, imgHeight);
+
+                // set next position
+                if (row >= 4) //Math.ceil(Math.sqrt(this._poi.length))
+                {
+                    column++;
+                    row = 0;
+                }
+                else
+                {
+                    row++;
+                }
+
+                // set canvas coordinates to the poi object
+                this._poi[i].width = imgWidth;
+                this._poi[i].height = imgHeight;
                 this._poi[i].top = y;
                 this._poi[i].left = x;
             };
@@ -231,6 +262,8 @@ ForgePlugins.LookAt.prototype = {
         this._canvas.destroy();
         this._canvas = null;
 
+        this._poi = null;
+        this._images = null;
         this._data = null;
     }
 };

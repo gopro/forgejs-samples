@@ -19,7 +19,20 @@
         "top": null,
         "left": null,
         "right": null,
-        "bottom": null
+        "bottom": null,
+
+        "container":
+        {
+            "color": "rgba(112, 66, 20, 1.0)",
+            "margin": 5
+        },
+
+        "thumbnail":
+        {
+            "color": "rgba(112, 66, 20, 0.2)",
+            "width": 45,
+            "height": 27
+        }
     },
 
     "data":

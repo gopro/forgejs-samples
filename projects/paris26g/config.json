@@ -927,6 +927,11 @@
                 "uid": "org.forgejs.lookat",
                 "url": "LookAt/",
                 "prefix": "plugins/"
+            },
+
+            {
+                "uid": "org.forgejs.share",
+                "url": "Share/"
             }
         ],
 
@@ -943,6 +948,16 @@
                 "data":
                 {
                     "json": "./data/data.json"
+                }
+            },
+
+            {
+                "uid": "share",
+                "engine": "org.forgejs.share",
+                "options":
+                {
+                    "view": false,
+                    "precision": 3
                 }
             }
         ]
