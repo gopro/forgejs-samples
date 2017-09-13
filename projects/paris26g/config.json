@@ -1,0 +1,202 @@
+{
+    "controllers":
+    {
+        "instances":
+        [
+            {
+                "uid": "pointer",
+                "type": "pointer",
+                "options":
+                {
+                    "zoom": { "toPointer": true }
+                }
+            }
+        ]
+    },
+
+    "story":
+    {
+        "uid": "paris-26gp-story",
+        "name": "Paris 26 gigapixels Story",
+        "slug": "paris26-story",
+        "description": "Interactive view of the most beautiful monuments of Paris.",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "paris",
+                "name": "Paris",
+                "slug": "paris",
+                "description": "Partial multiresolution panoramic image of Paris",
+
+                "camera":
+                {
+                    "yaw":
+                    {
+                        "default": -88.38
+                    },
+
+                    "pitch":
+                    {
+                        "default": -4.44
+                    },
+
+                    "fov":
+                    {
+                        "default": 24.238,
+                        "min": 0.7705,
+                        "max": 40
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "limits":
+                        {
+                            "yaw":
+                            {
+                                "min": -114.05,
+                                "max":  114.05
+                            },
+
+                            "pitch":
+                            {
+                                "min": -41.95,
+                                "max": 6.95
+                            }
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/multiresolution/paris26g/{face}/{level}/{y}/{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "level-0",
+                                "width": 2048,
+                                "height": 2048,
+                                "tile": 2048,
+                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/paris26g/{face}/{level}.jpg"
+                            },
+
+                            {
+                                "name": "level-1",
+                                "width": 3072,
+                                "height": 3072,
+                                "tile": 512,
+                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/paris26g/{face}/{level}/{y}_{x}.jpg"
+                            },
+
+                            {
+                                "name": "level-2",
+                                "width": 5632,
+                                "height": 5632,
+                                "tile": 512,
+                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/paris26g/{face}/{level}/{y}_{x}.jpg"
+                            },
+
+                            {
+                                "name": "level-3",
+                                "width": 11264,
+                                "height": 11264,
+                                "tile": 512,
+                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/paris26g/{face}/{level}/{y}_{x}.jpg"
+                            },
+
+                            {
+                                "name": "level-4",
+                                "width": 22528,
+                                "height": 22528,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-5",
+                                "width": 44544,
+                                "height": 44544,
+                                "tile": 512
+                            },
+
+                            {
+                               "name": "level-6",
+                                "width": 88576,
+                                "height": 88576,
+                                "tile": 512
+                            },
+
+                            {
+                               "name": "level-7",
+                                "width": 176640,
+                                "height": 176640,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.lookat",
+                "url": "LookAt/",
+                "prefix": "plugins/"
+            },
+
+            {
+                "uid": "org.forgejs.share",
+                "url": "Share/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "lookat",
+                "engine": "org.forgejs.lookat",
+                "options":
+                {
+                    "bottom": 10,
+                    "right": 10
+                },
+                "data":
+                {
+                    "json": "./data/data.json"
+                }
+            },
+
+            {
+                "uid": "share",
+                "engine": "org.forgejs.share",
+                "options":
+                {
+                    "view": false,
+                    "precision": 3
+                }
+            }
+        ]
+    }
+}

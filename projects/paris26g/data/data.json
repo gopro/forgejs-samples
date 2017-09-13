@@ -1,0 +1,206 @@
+{
+    "poi":
+    [
+        {
+            "id": "hotspot-01-eiffel-tower",
+            "fr": "La Tour Eiffel",
+            "en": "The Eiffel Tower",
+            "yaw": -103.28234811660693,
+            "pitch": 4.247546530405285,
+            "fov": 1.11,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-1.png"
+        },
+
+        {
+            "id": "hotspot-02-invalids",
+            "fr": "L'Hôtel National des Invalides",
+            "en": "The National Residence of the Invalids",
+            "yaw": -103.37303098590493,
+            "pitch": -0.3593657800651679,
+            "fov": 4.80,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-2.png"
+        },
+
+        {
+            "id": "hotspot-03-defense",
+            "fr": "La Défense",
+            "en": "La Défense",
+            "yaw": -84.50128101837626,
+            "pitch": 0.22646401895569757,
+            "fov": 4.80,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-3.png"
+        },
+
+        {
+            "id": "hotspot-04-triumphal-arch",
+            "fr": "L'Arc de triomphe de l'Étoile",
+            "en": "The Arc de Triomphe de l'Étoile",
+            "yaw": -75.77923718452732,
+            "pitch": -0.25372218190090373,
+            "fov": 2.11,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-4.png"
+        },
+
+        {
+            "id": "hotspot-05-great-palace",
+            "fr": "Le Grand Palais des Champs-Élysées",
+            "en": "The Grand Palais of Champs-Élysées",
+            "yaw": -70.62337073920226,
+            "pitch": -1.0451113481118803,
+            "fov": 3.44,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-5.png"
+        },
+
+        {
+            "id": "hotspot-06-orsay-museum",
+            "fr": "Le Musée d'Orsay",
+            "en": "The Musée d'Orsay",
+            "yaw": -54.68264837441932,
+            "pitch": -2.5036821379097685,
+            "fov": 5.10,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-6.png"
+        },
+
+        {
+            "id": "hotspot-07-palais-garnier",
+            "fr": "Le Palais Garnier",
+            "en": "The Palais Garnier",
+            "yaw": -29.594013020339375,
+            "pitch": -0.5801597851921418,
+            "fov": 2.31,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-7.png"
+        },
+
+        {
+            "id": "hotspot-08-saint-germain-des-pres",
+            "fr": "L'église abbatiale de Saint-Germain-des-Prés",
+            "en": "The abbey church of Saint-Germain-des-Prés",
+            "yaw": -28.30907054152547,
+            "pitch": -5.563991033173633,
+            "fov": 16.50,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-8.png"
+        },
+
+        {
+            "id": "hotspot-09-louvre-museum",
+            "fr": "Musée du Louvre",
+            "en": "The Louvre Museum",
+            "yaw": -21.12944020603937,
+            "pitch": -2.0939788861565036,
+            "fov": 7.05,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-9.png"
+        },
+
+        {
+            "id": "hotspot-10-basilica-sacred-heart",
+            "fr": "La Basilique du Sacré-Coeur de Paris",
+            "en": "The Basilica of the Sacred Heart of Paris",
+            "yaw": -15.29432996545672,
+            "pitch": 1.4022739003301679,
+            "fov": 2.15,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-10.png"
+        },
+
+        {
+            "id": "hotspot-11-church-saint-eustache",
+            "fr": "L'église Saint-Eustache",
+            "en": "The Church of Saint-Eustache",
+            "yaw": 7.546870402145546,
+            "pitch": -0.6220323123815177,
+            "fov": 3.44,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-11.png"
+        },
+
+        {
+            "id": "hotspot-12-chatelet-theatre",
+            "fr": "Le Théâtre du Châtelet",
+            "en": "The Théâtre du Châtelet",
+            "yaw": 28.388691041736973,
+            "pitch": -1.1464260649801519,
+            "fov": 2.99,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-12.png"
+        },
+
+        {
+            "id": "hotspot-13-pompidou-center",
+            "fr": "Le Centre Georges Pompidou",
+            "en": "The Pompidou Centre",
+            "yaw": 30.325283656206338,
+            "pitch": -0.2016481144400114,
+            "fov": 3.32,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-13.png"
+        },
+
+        {
+            "id": "hotspot-14-city-theatre",
+            "fr": "Le Théâtre de la Ville",
+            "en": "The Théâtre de la Ville",
+            "yaw": 34.58102066099341,
+            "pitch": -0.9749129477350414,
+            "fov": 2.02,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-14.png"
+        },
+
+        {
+            "id": "hotspot-15-holy-chapel",
+            "fr": "La Sainte-Chapelle",
+            "en": "The Holy Chapel",
+            "yaw": 38.1786404202683,
+            "pitch": -1.0509838232041187,
+            "fov": 2.64,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-15.png"
+        },
+
+        {
+            "id": "hotspot-16-city-hall",
+            "fr": "Hôtel de Ville",
+            "en": "City Hall",
+            "yaw": 44.25545711876702,
+            "pitch": -0.4382420276654248,
+            "fov": 3.41,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-16.png"
+        },
+
+        {
+            "id": "hotspot-17-notre-dame-cathedral",
+            "fr": "La Cathédrale Notre-Dame de Paris",
+            "en": "The Notre-Dame Cathedral of Paris",
+            "yaw": 57.55194895633712,
+            "pitch": -0.060215851675962655,
+            "fov": 3.93,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-17.png"
+        },
+
+        {
+            "id": "hotspot-18-church-saint-sulpice",
+            "fr": "L'Église Saint-Sulpice",
+            "en": "The Church of Saint-Sulpice",
+            "yaw": 73.40096059672635,
+            "pitch": -26.806891129444463,
+            "fov": 19.96,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-18.png"
+        },
+
+        {
+            "id": "hotspot-19-odean-theater",
+            "fr": "L'Odéon-Théâtre de l'Europe",
+            "en": "The Odéon-Théâtre de l'Europe",
+            "yaw": 99.68520905719149,
+            "pitch": -0.4166423412926299,
+            "fov": 2.63,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-19.png"
+        },
+
+
+        {
+            "id": "hotspot-20-pantheon",
+            "fr": "Le Panthéon",
+            "en": "The Panthéon",
+            "yaw": 103.65250965525608,
+            "pitch": 2.2474840277792576,
+            "fov": 7.85,
+            "img": "https://cdn.forgejs.org/samples/multiresolution/paris26g/assets/spot-20.png"
+        }
+
+    ]
+}
