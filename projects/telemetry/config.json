@@ -85,9 +85,7 @@
                                 "dom": true,
                                 "right": 20,
                                 "bottom": 20
-                            },
-
-                            "keep": false
+                            }
                         },
 
                         {
@@ -103,9 +101,7 @@
                                 "dom": true,
                                 "right": 20,
                                 "top": 20
-                            },
-
-                            "keep": false
+                            }
                         },
 
                         {
@@ -121,9 +117,7 @@
                                 "dom": true,
                                 "left": 20,
                                 "top": 20
-                            },
-
-                            "keep": false
+                            }
                         },
 
                         {
@@ -139,9 +133,7 @@
                                 "dom": true,
                                 "right": 190,
                                 "bottom": 20
-                            },
-
-                            "keep": false
+                            }
                         }
                     ]
                 }
@@ -188,9 +180,7 @@
                             "options":
                             {
                                 "dom": false
-                            },
-
-                            "keep": false
+                            }
                         },
 
                         {
@@ -204,9 +194,7 @@
                             "options":
                             {
                                 "dom": false
-                            },
-
-                            "keep": false
+                            }
                         },
 
                         {
@@ -220,9 +208,7 @@
                             "options":
                             {
                                 "dom": false
-                            },
-
-                            "keep": false
+                            }
                         },
 
                         {
@@ -236,9 +222,7 @@
                             "options":
                             {
                                 "dom": false
-                            },
-
-                            "keep": false
+                            }
                         }
                     ]
                 },
