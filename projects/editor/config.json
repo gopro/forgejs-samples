@@ -37,11 +37,6 @@
             {
                 "uid": "org.forgejs.editor",
                 "url": "Editor/"
-            },
-
-            {
-                "uid": "org.forgejs.toolbox",
-                "url": "Toolbox/"
             }
         ],
 
@@ -50,22 +45,6 @@
             {
                 "uid": "editor",
                 "engine": "org.forgejs.editor"
-            },
-
-            {
-                "uid": "toolbox",
-                "engine": "org.forgejs.toolbox",
-                "options":
-                {
-                    "panels":
-                    {
-                        "view": false,
-                        "story": false,
-                        "scene" : false,
-                        "controllerPointerOrientation": false,
-                        "controllerPointerZoom": false
-                    }
-                }
             }
         ]
     }
