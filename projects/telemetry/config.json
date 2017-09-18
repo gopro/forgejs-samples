@@ -50,29 +50,6 @@
                     "configurations":
                     [
                         {
-                            "instance": "googlemaps",
-
-                            "options":
-                            {
-                                "strokeColor": "#009ee2",
-                                "strokeOpacity": 1,
-                                "strokeWeight": 3,
-                                "width": 200,
-                                "height": 200,
-                                "left": 20,
-                                "bottom": 20
-                            },
-
-                            "data":
-                            {
-                                "googleMapsKey": "AIzaSyBaXB43aQIplDPVJ53ZzPfyUqxoHrd0HZk",
-                                "gpx": "https://cdn.forgejs.org/samples/metadata/GOPR7391.xml"
-                            },
-
-                            "keep": false
-                        },
-
-                        {
                             "instance": "accelerometer",
 
                             "data":
@@ -82,9 +59,7 @@
 
                             "options":
                             {
-                                "dom": true,
-                                "right": 20,
-                                "bottom": 20
+                                "dom": true
                             }
                         },
 
@@ -98,9 +73,7 @@
 
                             "options":
                             {
-                                "dom": true,
-                                "right": 20,
-                                "top": 20
+                                "dom": true
                             }
                         },
 
@@ -114,9 +87,7 @@
 
                             "options":
                             {
-                                "dom": true,
-                                "left": 20,
-                                "top": 20
+                                "dom": true
                             }
                         },
 
@@ -130,9 +101,7 @@
 
                             "options":
                             {
-                                "dom": true,
-                                "right": 190,
-                                "bottom": 20
+                                "dom": true
                             }
                         }
                     ]
@@ -263,7 +232,7 @@
 
                     {
                         "uid": "hotspot-altimeter",
-
+                        "type": "3d",
                         "facingCenter": true,
 
                         "transform":
@@ -407,7 +376,27 @@
 
             {
                 "uid": "googlemaps",
-                "engine": "org.forgejs.googlemaps"
+                "engine": "org.forgejs.googlemaps",
+
+                "options":
+                {
+                    "strokeColor": "#009ee2",
+                    "strokeOpacity": 1,
+                    "strokeWeight": 3,
+                    "width": 200,
+                    "height": 200,
+                    "left": 20,
+                    "bottom": 20
+                },
+
+                "data":
+                {
+                    "googleMapsKey": "AIzaSyBaXB43aQIplDPVJ53ZzPfyUqxoHrd0HZk",
+                    "gpx": "https://cdn.forgejs.org/samples/metadata/GOPR7391.xml"
+                },
+
+                "keep": true,
+                "reset": true
             },
 
             {
@@ -415,8 +404,13 @@
                 "engine": "org.forgejs.accelerometer",
                 "options":
                 {
-                    "size": 100
-                }
+                    "size": 100,
+                    "right": 20,
+                    "bottom": 20
+                },
+
+                "keep": true,
+                "reset": true
             },
 
             {
@@ -424,8 +418,14 @@
                 "engine": "org.forgejs.altimeter",
                 "options":
                 {
-                    "width": 80
-                }
+                    "align": "right",
+                    "width": 80,
+                    "right": 20,
+                    "top": 20
+                },
+
+                "keep": true,
+                "reset": true
             },
 
             {
@@ -433,8 +433,13 @@
                 "engine": "org.forgejs.compass",
                 "options":
                 {
-                    "size": 150
-                }
+                    "size": 150,
+                    "left": 20,
+                    "top": 20
+                },
+
+                "keep": true,
+                "reset": true
             },
 
             {
@@ -442,8 +447,13 @@
                 "engine": "org.forgejs.speedometer",
                 "options":
                 {
-                    "size": 200
-                }
+                    "size": 200,
+                    "right": 190,
+                    "bottom": 20
+                },
+
+                "keep": true,
+                "reset": true
             }
         ]
     }
