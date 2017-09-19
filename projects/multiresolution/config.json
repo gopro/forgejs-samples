@@ -43,6 +43,12 @@
                     "uid": "media-0",
                     "type": "image",
 
+                    "preview":
+                    {
+                        "url": "https://cdn.forgejs.org/samples/multiresolution/galoppaz/preview/{face}.jpg",
+                        "tile": 1024
+                    },
+
                     "source":
                     {
                         "format": "cube",
@@ -78,14 +84,6 @@
                          [
                             {
                                 "name": "level 0",
-                                "width": 2048,
-                                "height": 2048,
-                                "tile": 2048,
-                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/galoppaz/{face}/{level}.jpg"
-                            },
-
-                            {
-                                "name": "level 1",
                                 "width": 6656,
                                 "height": 6656,
                                 "tile": 512,
@@ -93,21 +91,21 @@
                             },
 
                             {
-                                "name": "level 2",
+                                "name": "level 1",
                                 "width": 12800,
                                 "height": 12800,
                                 "tile": 512
                             },
 
                             {
-                                "name": "level 3",
+                                "name": "level 2",
                                 "width": 25600,
                                 "height": 25600,
                                 "tile": 512
                             },
 
                             {
-                               "name": "level 4",
+                               "name": "level 3",
                                 "width": 51200,
                                 "height": 51200,
                                 "tile": 512
@@ -128,7 +126,7 @@
                     "fov":
                     {
                         "default": 95,
-                        "min": 60,
+                        "min": 30,
                         "max": 110
                     }
                 },
@@ -137,6 +135,12 @@
                 {
                     "uid": "media-1",
                     "type": "image",
+
+                    "preview":
+                    {
+                        "url": "https://cdn.forgejs.org/samples/multiresolution/house/preview/{face}.jpg",
+                        "tile": 512
+                    },
 
                     "source":
                     {
@@ -158,27 +162,20 @@
                         [
                             {
                                 "name": "level 0",
-                                "width": 512,
-                                "height": 512,
-                                "tile": 512
-                            },
-
-                            {
-                                "name": "level 1",
                                 "width": 1024,
                                 "height": 1024,
                                 "tile": 512
                             },
 
                             {
-                                "name": "level 2",
+                                "name": "level 1",
                                 "width": 2048,
                                 "height": 2048,
                                 "tile": 512
                             },
 
                             {
-                                "name": "level 3",
+                                "name": "level 2",
                                 "width": 3584,
                                 "height": 3584,
                                 "tile": 512
