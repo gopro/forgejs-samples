@@ -13,7 +13,7 @@
                 "uid": "scene-0",
                 "name": "First scene",
                 "slug": "first-scene",
-                "description": "This is the first and only scene",
+                "description": "This is the first scene",
 
                 "media":
                 {
@@ -55,34 +55,277 @@
                             "data":
                             {
                                 "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_accl.json"
+                            },
+
+                            "options":
+                            {
+                                "dom": true
                             }
                         },
+
                         {
                             "instance": "altimeter",
 
                             "data":
                             {
                                 "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_altitude.json"
+                            },
+
+                            "options":
+                            {
+                                "dom": true
                             }
                         },
+
                         {
                             "instance": "compass",
 
                             "data":
                             {
                                 "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_gyro.json"
+                            },
+
+                            "options":
+                            {
+                                "dom": true
                             }
                         },
+
                         {
                             "instance": "speedometer",
 
                             "data":
                             {
                                 "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_speed.json"
+                            },
+
+                            "options":
+                            {
+                                "dom": true
                             }
                         }
                     ]
                 }
+            },
+
+            {
+                "uid": "scene-1",
+                "name": "Second scene",
+                "slug": "second-scene",
+                "description": "This is the second scene",
+
+                "media":
+                {
+                    "uid": "media-1",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/metadata/GOPR7391.mp4"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "startTime": 100,
+                        "loop": true,
+                        "volume": 0.1
+                    }
+                },
+
+                "plugins":
+                {
+                    "configurations":
+                    [
+                        {
+                            "instance": "accelerometer",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_accl.json"
+                            },
+
+                            "options":
+                            {
+                                "dom": false
+                            }
+                        },
+
+                        {
+                            "instance": "altimeter",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_altitude.json"
+                            },
+
+                            "options":
+                            {
+                                "dom": false
+                            }
+                        },
+
+                        {
+                            "instance": "compass",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_gyro.json"
+                            },
+
+                            "options":
+                            {
+                                "dom": false
+                            }
+                        },
+
+                        {
+                            "instance": "speedometer",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_speed.json"
+                            },
+
+                            "options":
+                            {
+                                "dom": false
+                            }
+                        }
+                    ]
+                },
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-accelerometer",
+
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 400,
+                                "theta": 13,
+                                "phi": -23
+                            }
+                        },
+
+                        "material":
+                        {
+                            "plugin": "accelerometer",
+                            "update": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 90,
+                                "height": 60
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-altimeter",
+                        "type": "3d",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 400,
+                                "theta": 32,
+                                "phi": -7
+                            }
+                        },
+
+                        "material":
+                        {
+                            "plugin": "altimeter",
+                            "update": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 45
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-compass",
+
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 400,
+                                "theta": 30,
+                                "phi": -20
+                            }
+                        },
+
+                        "material":
+                        {
+                            "plugin": "compass",
+                            "update": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-speedometer",
+
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 400,
+                                "theta": -30,
+                                "phi": -20
+                            }
+                        },
+
+                        "material":
+                        {
+                            "plugin": "speedometer",
+                            "update": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
+                            }
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -94,21 +337,30 @@
         "engines":
         [
             {
+                "uid": "org.forgejs.previousnextbuttons",
+                "url": "PreviousNextButtons/"
+            },
+
+            {
                 "uid": "org.forgejs.googlemaps",
                 "url": "GoogleMaps/"
             },
+
             {
                 "uid": "org.forgejs.accelerometer",
                 "url": "Accelerometer/"
             },
+
             {
                 "uid": "org.forgejs.altimeter",
                 "url": "Altimeter/"
             },
+
             {
                 "uid": "org.forgejs.compass",
                 "url": "Compass/"
             },
+
             {
                 "uid": "org.forgejs.speedometer",
                 "url": "Speedometer/"
@@ -117,6 +369,11 @@
 
         "instances":
         [
+            {
+                "uid": "previousnextbuttons",
+                "engine": "org.forgejs.previousnextbuttons"
+            },
+
             {
                 "uid": "googlemaps",
                 "engine": "org.forgejs.googlemaps",
@@ -136,8 +393,12 @@
                 {
                     "googleMapsKey": "AIzaSyBaXB43aQIplDPVJ53ZzPfyUqxoHrd0HZk",
                     "gpx": "https://cdn.forgejs.org/samples/metadata/GOPR7391.xml"
-                }
+                },
+
+                "keep": true,
+                "reset": true
             },
+
             {
                 "uid": "accelerometer",
                 "engine": "org.forgejs.accelerometer",
@@ -146,18 +407,27 @@
                     "size": 100,
                     "right": 20,
                     "bottom": 20
-                }
+                },
+
+                "keep": true,
+                "reset": true
             },
+
             {
                 "uid": "altimeter",
                 "engine": "org.forgejs.altimeter",
                 "options":
                 {
+                    "align": "right",
                     "width": 80,
                     "right": 20,
                     "top": 20
-                }
+                },
+
+                "keep": true,
+                "reset": true
             },
+
             {
                 "uid": "compass",
                 "engine": "org.forgejs.compass",
@@ -166,8 +436,12 @@
                     "size": 150,
                     "left": 20,
                     "top": 20
-                }
+                },
+
+                "keep": true,
+                "reset": true
             },
+
             {
                 "uid": "speedometer",
                 "engine": "org.forgejs.speedometer",
@@ -176,7 +450,10 @@
                     "size": 200,
                     "right": 190,
                     "bottom": 20
-                }
+                },
+
+                "keep": true,
+                "reset": true
             }
         ]
     }
