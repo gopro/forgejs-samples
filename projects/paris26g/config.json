@@ -34,12 +34,16 @@
                 {
                     "yaw":
                     {
-                        "default": -88.38
+                        "default": -88.38,
+                        "min": -114.05,
+                        "max":  114.05
                     },
 
                     "pitch":
                     {
-                        "default": -4.44
+                        "default": -4.44,
+                        "min": -41.95,
+                        "max": 6.95
                     },
 
                     "fov":
@@ -73,21 +77,6 @@
                             "left": 3,
                             "down": 5,
                             "up": 4
-                        },
-
-                        "limits":
-                        {
-                            "yaw":
-                            {
-                                "min": -114.05,
-                                "max":  114.05
-                            },
-
-                            "pitch":
-                            {
-                                "min": -41.95,
-                                "max": 6.95
-                            }
                         },
 
                         "pattern": "https://cdn.forgejs.org/samples/multiresolution/paris26g/{face}/{level}/{y}/{x}.jpg",

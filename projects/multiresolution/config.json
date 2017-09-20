@@ -35,6 +35,18 @@
                     "fov":
                     {
                         "max": 39
+                    },
+
+                    "yaw":
+                    {
+                        "min": -126.5,
+                        "max":  126.5
+                    },
+
+                    "pitch":
+                    {
+                        "min": -27.6,
+                        "max": 11.6
                     }
                 },
 
@@ -61,21 +73,6 @@
                             "left": 3,
                             "down": 4,
                             "up": 5
-                        },
-
-                        "limits":
-                        {
-                            "yaw":
-                            {
-                                "min": -126.5,
-                                "max":  126.5
-                            },
-
-                            "pitch":
-                            {
-                                "min": -27.6,
-                                "max": 11.6
-                            }
                         },
 
                         "pattern": "https://cdn.forgejs.org/samples/multiresolution/galoppaz/{face}/{level}/{y}/{x}.jpg",
