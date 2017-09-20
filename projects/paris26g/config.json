@@ -55,6 +55,12 @@
                     "uid": "media-0",
                     "type": "image",
 
+                    "preview":
+                    {
+                        "url": "https://cdn.forgejs.org/samples/multiresolution/paris26g/preview/{face}.jpg",
+                        "tile": 2048
+                    },
+
                     "source":
                     {
                         "format": "cube",
@@ -90,14 +96,6 @@
                          [
                             {
                                 "name": "level-0",
-                                "width": 2048,
-                                "height": 2048,
-                                "tile": 2048,
-                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/paris26g/{face}/{level}.jpg"
-                            },
-
-                            {
-                                "name": "level-1",
                                 "width": 3072,
                                 "height": 3072,
                                 "tile": 512,
@@ -105,7 +103,7 @@
                             },
 
                             {
-                                "name": "level-2",
+                                "name": "level-1",
                                 "width": 5632,
                                 "height": 5632,
                                 "tile": 512,
@@ -113,7 +111,7 @@
                             },
 
                             {
-                                "name": "level-3",
+                                "name": "level-2",
                                 "width": 11264,
                                 "height": 11264,
                                 "tile": 512,
@@ -121,28 +119,28 @@
                             },
 
                             {
-                                "name": "level-4",
+                                "name": "level-3",
                                 "width": 22528,
                                 "height": 22528,
                                 "tile": 512
                             },
 
                             {
-                                "name": "level-5",
+                                "name": "level-4",
                                 "width": 44544,
                                 "height": 44544,
                                 "tile": 512
                             },
 
                             {
-                               "name": "level-6",
+                               "name": "level-5",
                                 "width": 88576,
                                 "height": 88576,
                                 "tile": 512
                             },
 
                             {
-                               "name": "level-7",
+                               "name": "level-6",
                                 "width": 176640,
                                 "height": 176640,
                                 "tile": 512
@@ -194,7 +192,7 @@
                 "options":
                 {
                     "view": false,
-                    "precision": 3
+                    "precision": 4
                 }
             }
         ]
