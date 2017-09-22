@@ -35,7 +35,7 @@
                         "max": 120
                     },
 
-                    "parallax": 0.5
+                    "parallax": 0
                 },
 
                 "hotspots":
@@ -43,6 +43,7 @@
                     {
                         "uid": "hotspot-3d-collada",
                         "interactive": false,
+                        "visible": false,
 
                         "transform":
                         {

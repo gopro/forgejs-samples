@@ -37,6 +37,8 @@
     <!-- Include the threejs custom build -->
     <script src="../../lib/three.js/three.r86.custom.min.js"></script>
     <script src="../../lib/three.js/loaders/ColladaLoader.js"></script>
+    <script src="../../lib/three.js/loaders/OBJLoader.js"></script>
+    <script src="../../lib/three.js/loaders/MTLLoader.js"></script>
 
     <!-- Include the Hammer.js library -->
     <script src="../../lib/hammer.js/hammer.min.js"></script>
@@ -53,36 +55,120 @@
 
         viewer.onConfigLoadComplete.addOnce(function()
         {
-            var loader = new THREE.ColladaLoader();
 
+            // CHAT OBJ ONLY ========================================
+
+            var loader = new THREE.OBJLoader();
+
+            // load a resource
             loader.load(
                 // resource URL
-                'assets/deer.dae',
+                'assets/lowpolycat/cat.obj',
                 // Function when resource is loaded
-                function ( collada ) {
+                function ( object ) {
 
-                    console.log(collada);
+                    // console.log(object);
 
-                    collada.scene.position.set(0, 0, 1000);
+                    var scene = new THREE.Scene();
+
+                    var o = object.children[0];
+                    scene.add(o);
 
                     var l = new THREE.AmbientLight( 0x404040 );
-                    collada.scene.add(l);
+                    scene.add(l);
 
-                    var o = collada.scene.children[0];
-                    o.material = new THREE.MeshLambertMaterial({color: "red"});
+                    var directionalLight = new THREE.DirectionalLight( 0xffeedd );
+                    directionalLight.position.set( 100, 0, 0 );
+                    directionalLight.target = o;
+                    scene.add( directionalLight );
+
+                    o.material = new THREE.MeshLambertMaterial({color: "red", lights: true});
                     o.material.needsUpdate = true;
 
-                    o.position.set(0, 0, 10000);
+                    o.scale.set(0.1, 0.1, 0.1);
+                    o.position.set(0, 0, -100);
 
-                    var renderScene = new FORGE.RenderScene(viewer, collada.scene, viewer.camera, null);
+                    // console.log(o);
 
+                    var renderScene = new FORGE.RenderScene(viewer, scene, viewer.camera, null);
                     viewer.renderer.renderPipeline.addRenderScenes([renderScene]);
-                },
-                // Function called when download progresses
-                function ( xhr ) {
-                    console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
                 }
             );
+
+            // VOITURE OBJ + MTL ==========================================
+
+            var onProgress = function ( xhr ) {
+                if ( xhr.lengthComputable ) {
+                    var percentComplete = xhr.loaded / xhr.total * 100;
+                    console.log( Math.round(percentComplete, 2) + '% downloaded' );
+                }
+            };
+
+            var onError = function ( xhr ) { };
+
+            var mtlLoader = new THREE.MTLLoader();
+            mtlLoader.setPath( 'assets/Aventador/' );
+            mtlLoader.load( 'Avent.mtl', function( materials )
+            {
+                materials.preload();
+
+                var objLoader = new THREE.OBJLoader();
+                objLoader.setMaterials( materials );
+                objLoader.setPath( 'assets/Aventador/' );
+                objLoader.load( 'Avent.obj', function ( object )
+                {
+                    var scene = new THREE.Scene();
+
+                    scene.add( object );
+                    object.scale.set(10, 10, 10);
+                    object.position.set(0, -30, -50);
+                    object.rotation.set(0, 90, 0);
+
+                    var directionalLight = new THREE.DirectionalLight( 0xffeedd );
+                    directionalLight.position.set( 0, 0, 0 );
+                    directionalLight.target = object;
+                    scene.add( directionalLight );
+
+                    var renderScene = new FORGE.RenderScene(viewer, scene, viewer.camera, null);
+                    viewer.renderer.renderPipeline.addRenderScenes([renderScene]);
+
+                }, onProgress, onError );
+
+            });
+
+            // var loader = new THREE.ColladaLoader();
+
+            // loader.load(
+            //     // resource URL
+            //     'assets/rooster/rooster_1.0.1.dae',
+            //     // Function when resource is loaded
+            //     function ( collada ) {
+
+            //         console.log(collada);
+
+            //         // collada.scene.position.set(0, 0, 1000);
+
+            //         // var l = new THREE.AmbientLight( 0x404040 );
+            //         // collada.scene.add(l);
+
+            //         // var o = collada.scene.children[0];
+            //         // o.material = new THREE.MeshLambertMaterial({color: "red"});
+            //         // o.material.needsUpdate = true;
+
+            //         // o.position.set(0, 0, 10000);
+
+            //         var scene = new THREE.Scene();
+            //         scene.add(collada.scene.children[2]);
+
+            //         var renderScene = new FORGE.RenderScene(viewer, scene, viewer.camera, null);
+
+            //         viewer.renderer.renderPipeline.addRenderScenes([renderScene]);
+            //     },
+            //     // Function called when download progresses
+            //     function ( xhr ) {
+            //         console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+            //     }
+            // );
 
         })
 
