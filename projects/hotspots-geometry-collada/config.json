@@ -1,0 +1,114 @@
+{
+    "story":
+    {
+        "uid": "hotspots-story",
+        "name": "Hotspots Story",
+        "slug": "hotspots-story",
+        "description": "This is sample of hotspots",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first and only scene",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
+                    }
+                },
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "min": 30,
+                        "max": 120
+                    },
+
+                    "parallax": 0.5
+                },
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-3d-collada",
+                        "interactive": false,
+
+                        "transform":
+                        {
+
+                        },
+
+                        "geometry":
+                        {
+                            "type": "collada",
+                            "options":
+                            {
+                                "url": "assets/deer.dae"
+                            }
+                        },
+
+                        "material":
+                        {
+                            "color": "#8ce3ba",
+                            "opacity": 1
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.webvrbutton",
+                "url": "WebVRButton/"
+            },
+
+            {
+                "uid": "org.forgejs.gyroscopebutton",
+                "url": "GyroscopeButton/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "webvrbutton",
+                "engine": "org.forgejs.webvrbutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "right": 10
+                }
+            },
+
+            {
+                "uid": "gyrobutton",
+                "engine": "org.forgejs.gyroscopebutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "left": 10
+                }
+            }
+        ]
+    }
+}
