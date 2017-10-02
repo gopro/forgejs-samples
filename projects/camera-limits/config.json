@@ -4,15 +4,15 @@
         "yaw":
         {
             "default": 0,
-            "min": -70,
-            "max": 70
+            "min": -90,
+            "max": 90
         },
 
         "pitch":
         {
             "default": 30,
             "min": 0,
-            "max": 60
+            "max": 90
         },
 
         "roll":
@@ -24,8 +24,8 @@
 
         "fov":
         {
-            "default": 70,
-            "min": 50,
+            "default": 50,
+            "min": 20,
             "max": 100
         }
     },
