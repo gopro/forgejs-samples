@@ -54,17 +54,17 @@
 
             viewer.camera.onChange.add(function()
             {
-                console.log("change");
+                console.log("onChange");
             });
 
-            viewer.camera.onOrientationChange.add(function()
+            viewer.camera.onOrientationChange.add(function(e)
             {
-                console.log("orientation");
+                console.log("onOrientationChange: yaw="+e.emitter.yaw+"; pitch="+e.emitter.pitch+"; roll="+e.emitter.roll);
             });
 
-            viewer.camera.onFovChange.add(function()
+            viewer.camera.onFovChange.add(function(e)
             {
-                console.log("fov");
+                console.log("onFovChange: fov="+e.emitter.fov);
             });
 
         });
