@@ -1,0 +1,129 @@
+{
+    "controllers":
+    {
+        "instances":
+        [
+            {
+                "uid": "pointer",
+                "type": "pointer",
+                "options":
+                {
+                    "orientation": { "drag": false },
+                    "zoom": { "toPointer": true }
+                }
+            }
+        ]
+    },
+
+    "story":
+    {
+        "uid": "camera-story",
+        "name": "Camera Limitation Story",
+        "slug": "camera-story",
+        "description": "Camera limitation and orientation can be applied on a project",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first and only scene",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
+                    }
+                },
+
+                "camera":
+                {
+                    "yaw":
+                    {
+                        "default": 0,
+                        "min": -90,
+                        "max": 90
+                    },
+
+                    "pitch":
+                    {
+                        "default": 30,
+                        "min": 0,
+                        "max": 90
+                    },
+
+                    "roll":
+                    {
+                        "default": 0,
+                        "min": 0,
+                        "max": 0
+                    },
+
+                    "fov":
+                    {
+                        "default": 70,
+                        "min": 20,
+                        "max": 110
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-1",
+                "name": "Image flat scene",
+                "slug": "image-flat-scene",
+                "description": "This scene has a flat image media",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "flat",
+                        "url": "https://cdn.forgejs.org/samples/common/images/Mountain-selfie.jpg"
+                    }
+                },
+
+                "view":
+                {
+                    "type": "flat",
+                    "options":
+                    {
+                        "repeatX": false,
+                        "repeatY": false
+                    }
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.previousnextbuttons",
+                "url": "PreviousNextButtons/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "previousnextbuttons",
+                "engine": "org.forgejs.previousnextbuttons"
+            }
+        ]
+    }
+}
