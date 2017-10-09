@@ -23,7 +23,7 @@
                     "source":
                     {
                         "format": "flat",
-                        "url": "https://cdn.forgejs.org/samples/metadata/GOPR7391.mp4"
+                        "url": "https://cdn.forgejs.org/samples/telemetry/GH014181-1.mp4"
                     },
 
                     "options":
@@ -54,7 +54,7 @@
 
                             "data":
                             {
-                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_accl.json"
+                                "json": "https://cdn.forgejs.org/samples/telemetry/GH014181_gpmf_accl_cut.json"
                             },
 
                             "options":
@@ -68,7 +68,7 @@
 
                             "data":
                             {
-                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_altitude.json"
+                                "json": "https://cdn.forgejs.org/samples/telemetry/GH014181_gpmf_altitude_cut.json"
                             },
 
                             "options":
@@ -82,7 +82,7 @@
 
                             "data":
                             {
-                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_gyro.json"
+                                "json": "https://cdn.forgejs.org/samples/telemetry/GH014181_gpmf_gyro_cut.json"
                             },
 
                             "options":
@@ -96,7 +96,7 @@
 
                             "data":
                             {
-                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_speed.json"
+                                "json": "https://cdn.forgejs.org/samples/telemetry/GH014181_gpmf_speed_cut.json"
                             },
 
                             "options":
@@ -122,13 +122,13 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "https://cdn.forgejs.org/samples/metadata/GOPR7391.mp4"
+                        "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz.mp4"
                     },
 
                     "options":
                     {
                         "autoPlay": true,
-                        "startTime": 100,
+                        "startTime": 0,
                         "loop": true,
                         "volume": 0.1
                     }
@@ -143,7 +143,7 @@
 
                             "data":
                             {
-                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_accl.json"
+                                "json": "https://cdn.forgejs.org/samples/telemetry/descente-martin-raw_accl.json"
                             },
 
                             "options":
@@ -157,7 +157,7 @@
 
                             "data":
                             {
-                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_altitude.json"
+                                "json": "https://cdn.forgejs.org/samples/telemetry/descente-martin-raw_altitude.json"
                             },
 
                             "options":
@@ -171,7 +171,7 @@
 
                             "data":
                             {
-                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_gyro.json"
+                                "json": "https://cdn.forgejs.org/samples/telemetry/descente-martin-raw_gyro.json"
                             },
 
                             "options":
@@ -185,7 +185,7 @@
 
                             "data":
                             {
-                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_speed.json"
+                                "json": "https://cdn.forgejs.org/samples/telemetry/descente-martin-raw_speed.json"
                             },
 
                             "options":
@@ -378,6 +378,8 @@
                 "uid": "googlemaps",
                 "engine": "org.forgejs.googlemaps",
 
+                "scenes": ["scene-0"],
+
                 "options":
                 {
                     "strokeColor": "#009ee2",
@@ -392,7 +394,7 @@
                 "data":
                 {
                     "googleMapsKey": "AIzaSyBaXB43aQIplDPVJ53ZzPfyUqxoHrd0HZk",
-                    "gpx": "https://cdn.forgejs.org/samples/metadata/GOPR7391.xml"
+                    "gpx": "https://cdn.forgejs.org/samples/metadata/GH014181.xml"
                 },
 
                 "keep": true,
