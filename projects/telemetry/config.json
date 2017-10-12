@@ -101,16 +101,20 @@
                 [
                     {
                         "uid": "hotspot-accelerometer",
-
-                        "facingCenter": false,
+                        "name": "accelerometer",
 
                         "transform":
                         {
                             "position":
                             {
                                 "radius": 250,
-                                "theta": 13,
+                                "theta": 0,
                                 "phi": -30
+                            },
+
+                            "rotation":
+                            {
+                                "x": 70
                             }
                         },
 
@@ -133,8 +137,7 @@
 
                     {
                         "uid": "hotspot-altimeter",
-                        "type": "3d",
-                        "facingCenter": false,
+                        "name": "altimeter",
 
                         "transform":
                         {
@@ -142,7 +145,12 @@
                             {
                                 "radius": 250,
                                 "theta": 40,
-                                "phi": -7
+                                "phi": -4
+                            },
+
+                            "rotation":
+                            {
+                                "y": -45
                             }
                         },
 
@@ -165,8 +173,7 @@
 
                     {
                         "uid": "hotspot-compass",
-
-                        "facingCenter": false,
+                        "name": "compass",
 
                         "transform":
                         {
@@ -198,8 +205,7 @@
 
                     {
                         "uid": "hotspot-speedometer",
-
-                        "facingCenter": false,
+                        "name": "speedometer",
 
                         "transform":
                         {
@@ -383,33 +389,6 @@
             },
 
             {
-                "uid": "googlemaps",
-                "engine": "org.forgejs.googlemaps",
-
-                "scenes": ["scene-1"],
-
-                "options":
-                {
-                    "strokeColor": "#009ee2",
-                    "strokeOpacity": 1,
-                    "strokeWeight": 3,
-                    "width": 200,
-                    "height": 200,
-                    "left": 20,
-                    "bottom": 20
-                },
-
-                "data":
-                {
-                    "googleMapsKey": "AIzaSyBaXB43aQIplDPVJ53ZzPfyUqxoHrd0HZk",
-                    "gpx": "https://cdn.forgejs.org/samples/telemetry/GH014181.xml"
-                },
-
-                "keep": true,
-                "reset": true
-            },
-
-            {
                 "uid": "accelerometer",
                 "engine": "org.forgejs.accelerometer",
                 "options":
@@ -456,6 +435,33 @@
                 {
                     "left": 20,
                     "bottom": 20
+                },
+
+                "keep": true,
+                "reset": true
+            },
+
+            {
+                "uid": "googlemaps",
+                "engine": "org.forgejs.googlemaps",
+
+                "scenes": ["scene-1"],
+
+                "options":
+                {
+                    "strokeColor": "#009ee2",
+                    "strokeOpacity": 1,
+                    "strokeWeight": 3,
+                    "width": 200,
+                    "height": 200,
+                    "right": 20,
+                    "top": 20
+                },
+
+                "data":
+                {
+                    "googleMapsKey": "AIzaSyBaXB43aQIplDPVJ53ZzPfyUqxoHrd0HZk",
+                    "gpx": "https://cdn.forgejs.org/samples/telemetry/GH014181.gpx"
                 },
 
                 "keep": true,
