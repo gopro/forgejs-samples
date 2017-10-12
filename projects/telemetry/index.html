@@ -61,7 +61,7 @@
 
         // Create a viewer
         var viewer = new FORGE.Viewer("container", "config.json");
-        var gui = new dat.GUI();
+        var gui = null;
 
         var telemety = new FORGE.TelemetryManager(viewer);
         telemety.add("speedometer", "speedometer", "hotspot-speedometer");
@@ -75,12 +75,20 @@
             {
                 if(viewer.story.sceneUid === "scene-0")
                 {
+                    gui = new dat.GUI();
                     var modules = telemety.modules;
 
                     for(var i = 0, ii = modules.length; i < ii; i++)
                     {
-                        gui.add(modules[i], "displayMode", FORGE.TelemetryModule.displayModes).name(modules[i].name).listen();;
-
+                        gui.add(modules[i], "displayMode", FORGE.TelemetryModule.displayModes).name(modules[i].name).listen();
+                    }
+                }
+                else
+                {
+                    if(gui !== null)
+                    {
+                        gui.destroy();
+                        gui = null;
                     }
                 }
             });
