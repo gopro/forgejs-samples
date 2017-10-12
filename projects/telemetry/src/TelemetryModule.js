@@ -10,8 +10,8 @@
 FORGE.TelemetryModule.displayModes =
 {
     NONE: 0,
-    FLAT: 1,
-    SPHERICAL: 2
+    SCREEN: 1,
+    SPHERE: 2
 };
 
 FORGE.TelemetryModule.prototype._setDisplayMode = function(value)
@@ -24,12 +24,12 @@ FORGE.TelemetryModule.prototype._setDisplayMode = function(value)
             this._displayNone();
             break;
 
-        case FORGE.TelemetryModule.displayModes.FLAT:
-            this._displayFlat();
+        case FORGE.TelemetryModule.displayModes.SCREEN:
+            this._displayScreen();
             break;
 
-        case FORGE.TelemetryModule.displayModes.SPHERICAL:
-            this._displaySpherical();
+        case FORGE.TelemetryModule.displayModes.SPHERE:
+            this._displaySphere();
             break;
     }
 };
@@ -43,7 +43,7 @@ FORGE.TelemetryModule.prototype._displayNone = function()
     hotspot.visible = false;
 };
 
-FORGE.TelemetryModule.prototype._displayFlat = function()
+FORGE.TelemetryModule.prototype._displayScreen = function()
 {
     var plugin = FORGE.UID.get(this._config.plugin);
     plugin.instance.show();
@@ -52,7 +52,7 @@ FORGE.TelemetryModule.prototype._displayFlat = function()
     hotspot.visible = false;
 };
 
-FORGE.TelemetryModule.prototype._displaySpherical = function()
+FORGE.TelemetryModule.prototype._displaySphere = function()
 {
     var plugin = FORGE.UID.get(this._config.plugin);
     plugin.instance.hide();
