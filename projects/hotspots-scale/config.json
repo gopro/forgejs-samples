@@ -1,0 +1,258 @@
+{
+    "viewer":
+    {
+
+        "webgl":
+        {
+            "preserveDrawingBuffer": true
+        }
+    },
+
+    "story":
+    {
+        "uid": "hotspots-story",
+        "name": "Hotspots Story",
+        "slug": "hotspots-story",
+        "description": "This is sample of hotspots",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first and only scene",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
+                    }
+                },
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-3d-0",
+                        "facingCenter": true,
+                        "autoScale": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 300,
+                                "theta": 0
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 60,
+                                "height": 60
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-3d-1",
+                        "facingCenter": true,
+                        "autoScale": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 1000,
+                                "theta": 90
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 60,
+                                "height": 60
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-1.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-3d-2",
+                        "facingCenter": true,
+                        "autoScale": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 500,
+                                "theta": 180
+                            },
+
+                            "scale":
+                            {
+                                "x": 2
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 60,
+                                "height": 60
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-2.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-3d-3",
+                        "facingCenter": true,
+                        "autoScale": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 700,
+                                "theta": -90
+                            },
+
+                            "scale":
+                            {
+                                "y": 2
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 60,
+                                "height": 60
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-3.png",
+                            "transparent": true
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-3d-4",
+                        "facingCenter": true,
+                        "autoScale": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 200,
+                                "theta": 0,
+                                "phi": 90
+                            },
+
+                            "scale":
+                            {
+                                "x": 3
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 60,
+                                "height": 60
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-4.png",
+                            "transparent": true
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.webvrbutton",
+                "url": "WebVRButton/"
+            },
+
+            {
+                "uid": "org.forgejs.gyroscopebutton",
+                "url": "GyroscopeButton/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "webvrbutton",
+                "engine": "org.forgejs.webvrbutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "right": 10
+                }
+            },
+
+            {
+                "uid": "gyrobutton",
+                "engine": "org.forgejs.gyroscopebutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "left": 10
+                }
+            }
+        ]
+    }
+}
