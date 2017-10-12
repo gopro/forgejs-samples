@@ -266,6 +266,13 @@
                     }
                 },
 
+                "camera":
+                {
+                    "yaw": {"min": 0, "max": 0, "default": 0},
+                    "pitch": {"min": 0, "max": 0, "default": 0},
+                    "fov": {"min": 180, "max": 180, "default": 180}
+                },
+
                 "plugins":
                 {
                     "configurations":
