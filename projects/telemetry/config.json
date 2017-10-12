@@ -102,6 +102,7 @@
                     {
                         "uid": "hotspot-accelerometer",
                         "name": "accelerometer",
+                        "facingCenter": false,
 
                         "transform":
                         {
@@ -138,6 +139,7 @@
                     {
                         "uid": "hotspot-altimeter",
                         "name": "altimeter",
+                        "facingCenter": false,
 
                         "transform":
                         {
@@ -174,6 +176,7 @@
                     {
                         "uid": "hotspot-compass",
                         "name": "compass",
+                        "facingCenter": false,
 
                         "transform":
                         {
@@ -206,6 +209,7 @@
                     {
                         "uid": "hotspot-speedometer",
                         "name": "speedometer",
+                        "facingCenter": false,
 
                         "transform":
                         {

@@ -76,11 +76,12 @@
                 if(viewer.story.sceneUid === "scene-0")
                 {
                     gui = new dat.GUI();
+                    var folder = gui.addFolder('Telemetry display mode');
                     var modules = telemety.modules;
 
                     for(var i = 0, ii = modules.length; i < ii; i++)
                     {
-                        gui.add(modules[i], "displayMode", FORGE.TelemetryModule.displayModes).name(modules[i].name).listen();
+                        folder.add(modules[i], "displayMode", FORGE.TelemetryModule.displayModes).name(modules[i].name).listen();
                     }
                 }
                 else
