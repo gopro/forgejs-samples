@@ -22,8 +22,13 @@
                     "source":
                     {
                         "format": "equi",
-                        "streaming": "dash",
-                        "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/manifest.mpd"
+                        "levels": [
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/Sources/Descente_Marocaz_720p.mp4" },
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/Sources/Descente_Marocaz_1080p.mp4" },
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/Sources/Descente_Marocaz_1440p.mp4" },
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/Sources/Descente_Marocaz_4k.mp4" },
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/Sources/Descente_Marocaz_4kfull.mp4" }
+                        ]
                     },
 
                     "options":
@@ -253,8 +258,12 @@
                     "source":
                     {
                         "format": "flat",
-                        "streaming": "dash",
-                        "url": "https://cdn.forgejs.org/samples/telemetry/GH014181/manifest.mpd"
+                        "levels": [
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/GH014181/Sources/GH014181_720p.mp4" },
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/GH014181/Sources/GH014181_1080p.mp4" },
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/GH014181/Sources/GH014181_1440p.mp4" },
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/GH014181/Sources/GH014181_2.7k.mp4" }
+                        ]
                     },
 
                     "options":
