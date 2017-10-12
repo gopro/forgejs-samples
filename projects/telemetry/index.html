@@ -29,10 +29,19 @@
             height: 100%;
         }
     </style>
+
+   <link rel="stylesheet" type="text/css" href="../../lib/dat.gui/dat.gui.css">
+
 </head>
 
 <body>
     <div id="container"></div>
+
+    <!-- Include the dat.gui library -->
+    <script src="../../lib/dat.gui/dat.gui.min.js"></script>
+
+    <!-- Include the DASH library -->
+    <script type="text/javascript" src="../../lib/dash.js/dash.all.min.js"></script>
 
     <!-- Include the threejs custom build -->
     <script src="../../lib/three.js/three.r86.custom.min.js"></script>
@@ -43,11 +52,40 @@
     <!-- Include the ForgeJS library -->
     <script type="text/javascript" src="../../lib/forge/forge.min.js" ></script>
 
+    <!-- Custom code for the sample -->
+    <script type="text/javascript" src="./src/TelemetryManager.js" ></script>
+    <script type="text/javascript" src="./src/TelemetryModule.js" ></script>
+
     <!-- Start ForgeJS -->
     <script type="text/javascript">
 
         // Create a viewer
         var viewer = new FORGE.Viewer("container", "config.json");
+        var gui = new dat.GUI();
+
+        var telemety = new FORGE.TelemetryManager(viewer);
+        telemety.add("speedometer", "speedometer", "hotspot-speedometer");
+        telemety.add("compass", "compass", "hotspot-compass");
+        telemety.add("accelerometer", "accelerometer", "hotspot-accelerometer");
+        telemety.add("altimeter", "altimeter", "hotspot-altimeter");
+
+        viewer.onReady.addOnce(function()
+        {
+            viewer.story.onSceneLoadComplete.add(function()
+            {
+                if(viewer.story.sceneUid === "scene-0")
+                {
+                    var modules = telemety.modules;
+
+                    for(var i = 0, ii = modules.length; i < ii; i++)
+                    {
+                        gui.add(modules[i], "displayMode", FORGE.TelemetryModule.displayModes).name(modules[i].name).listen();;
+
+                    }
+                }
+            });
+
+        });
 
     </script>
 </body>

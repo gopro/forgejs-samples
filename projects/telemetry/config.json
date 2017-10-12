@@ -1,19 +1,18 @@
 {
     "story":
     {
-        "uid": "metadata",
-        "name": "Metadata showcase",
-        "slug": "metadata",
-        "description": "This is a flat story to show metadata usage",
+        "uid": "telemetry",
+        "name": "Telemetry showcase",
+        "slug": "telemetry",
+        "description": "This story demonstrates telemetry display extracted from GoPro Fusion and GoPro HERO6",
         "default": "scene-0",
 
         "scenes":
         [
             {
                 "uid": "scene-0",
-                "name": "First scene",
-                "slug": "first-scene",
-                "description": "This is the first scene",
+                "name": "Spherical video scene",
+                "slug": "spherical-video",
 
                 "media":
                 {
@@ -22,8 +21,230 @@
 
                     "source":
                     {
+                        "format": "equi",
+                        "streaming": "dash",
+                        "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/manifest.mpd"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "startTime": 0,
+                        "loop": true,
+                        "volume": 0.1
+                    }
+                },
+
+                "plugins":
+                {
+                    "configurations":
+                    [
+                        {
+                            "instance": "accelerometer",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/telemetry/descente-martin-raw_accl.json"
+                            },
+
+                            "options":
+                            {
+                                "dom": false
+                            }
+                        },
+
+                        {
+                            "instance": "altimeter",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/telemetry/descente-martin-raw_altitude.json"
+                            },
+
+                            "options":
+                            {
+                                "dom": false
+                            }
+                        },
+
+                        {
+                            "instance": "compass",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/telemetry/descente-martin-raw_gyro.json"
+                            },
+
+                            "options":
+                            {
+                                "dom": false
+                            }
+                        },
+
+                        {
+                            "instance": "speedometer",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/telemetry/descente-martin-raw_speed.json"
+                            },
+
+                            "options":
+                            {
+                                "dom": false
+                            }
+                        }
+                    ]
+                },
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-accelerometer",
+
+                        "facingCenter": false,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 250,
+                                "theta": 13,
+                                "phi": -30
+                            }
+                        },
+
+                        "material":
+                        {
+                            "plugin": "accelerometer",
+                            "update": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 64,
+                                "height": 64
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-altimeter",
+                        "type": "3d",
+                        "facingCenter": false,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 250,
+                                "theta": 40,
+                                "phi": -7
+                            }
+                        },
+
+                        "material":
+                        {
+                            "plugin": "altimeter",
+                            "update": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 45,
+                                "height": 25
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-compass",
+
+                        "facingCenter": false,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 250,
+                                "theta": 30,
+                                "phi": -20
+                            }
+                        },
+
+                        "material":
+                        {
+                            "plugin": "compass",
+                            "update": true,
+                            "transparent": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-speedometer",
+
+                        "facingCenter": false,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 250,
+                                "theta": -30,
+                                "phi": -20
+                            }
+                        },
+
+                        "material":
+                        {
+                            "plugin": "speedometer",
+                            "update": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 100,
+                                "height": 100
+                            }
+                        }
+                    }
+                ]
+            },
+
+            {
+                "uid": "scene-1",
+                "name": "Flat video scene",
+                "slug": "flat-video-scene",
+
+                "media":
+                {
+                    "uid": "media-1",
+                    "type": "video",
+
+                    "source":
+                    {
                         "format": "flat",
-                        "url": "https://cdn.forgejs.org/samples/telemetry/GH014181-1.mp4"
+                        "streaming": "dash",
+                        "url": "https://cdn.forgejs.org/samples/telemetry/GH014181/manifest.mpd"
                     },
 
                     "options":
@@ -106,226 +327,6 @@
                         }
                     ]
                 }
-            },
-
-            {
-                "uid": "scene-1",
-                "name": "Second scene",
-                "slug": "second-scene",
-                "description": "This is the second scene",
-
-                "media":
-                {
-                    "uid": "media-1",
-                    "type": "video",
-
-                    "source":
-                    {
-                        "format": "equi",
-                        "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz.mp4"
-                    },
-
-                    "options":
-                    {
-                        "autoPlay": true,
-                        "startTime": 0,
-                        "loop": true,
-                        "volume": 0.1
-                    }
-                },
-
-                "plugins":
-                {
-                    "configurations":
-                    [
-                        {
-                            "instance": "accelerometer",
-
-                            "data":
-                            {
-                                "json": "https://cdn.forgejs.org/samples/telemetry/descente-martin-raw_accl.json"
-                            },
-
-                            "options":
-                            {
-                                "dom": false
-                            }
-                        },
-
-                        {
-                            "instance": "altimeter",
-
-                            "data":
-                            {
-                                "json": "https://cdn.forgejs.org/samples/telemetry/descente-martin-raw_altitude.json"
-                            },
-
-                            "options":
-                            {
-                                "dom": false
-                            }
-                        },
-
-                        {
-                            "instance": "compass",
-
-                            "data":
-                            {
-                                "json": "https://cdn.forgejs.org/samples/telemetry/descente-martin-raw_gyro.json"
-                            },
-
-                            "options":
-                            {
-                                "dom": false
-                            }
-                        },
-
-                        {
-                            "instance": "speedometer",
-
-                            "data":
-                            {
-                                "json": "https://cdn.forgejs.org/samples/telemetry/descente-martin-raw_speed.json"
-                            },
-
-                            "options":
-                            {
-                                "dom": false
-                            }
-                        }
-                    ]
-                },
-
-                "hotspots":
-                [
-                    {
-                        "uid": "hotspot-accelerometer",
-
-                        "facingCenter": true,
-
-                        "transform":
-                        {
-                            "position":
-                            {
-                                "radius": 400,
-                                "theta": 13,
-                                "phi": -23
-                            }
-                        },
-
-                        "material":
-                        {
-                            "plugin": "accelerometer",
-                            "update": true
-                        },
-
-                        "geometry":
-                        {
-                            "type": "plane",
-                            "options":
-                            {
-                                "width": 90,
-                                "height": 60
-                            }
-                        }
-                    },
-
-                    {
-                        "uid": "hotspot-altimeter",
-                        "type": "3d",
-                        "facingCenter": true,
-
-                        "transform":
-                        {
-                            "position":
-                            {
-                                "radius": 400,
-                                "theta": 32,
-                                "phi": -7
-                            }
-                        },
-
-                        "material":
-                        {
-                            "plugin": "altimeter",
-                            "update": true
-                        },
-
-                        "geometry":
-                        {
-                            "type": "plane",
-                            "options":
-                            {
-                                "width": 100,
-                                "height": 45
-                            }
-                        }
-                    },
-
-                    {
-                        "uid": "hotspot-compass",
-
-                        "facingCenter": true,
-
-                        "transform":
-                        {
-                            "position":
-                            {
-                                "radius": 400,
-                                "theta": 30,
-                                "phi": -20
-                            }
-                        },
-
-                        "material":
-                        {
-                            "plugin": "compass",
-                            "update": true
-                        },
-
-                        "geometry":
-                        {
-                            "type": "plane",
-                            "options":
-                            {
-                                "width": 100,
-                                "height": 100
-                            }
-                        }
-                    },
-
-                    {
-                        "uid": "hotspot-speedometer",
-
-                        "facingCenter": true,
-
-                        "transform":
-                        {
-                            "position":
-                            {
-                                "radius": 400,
-                                "theta": -30,
-                                "phi": -20
-                            }
-                        },
-
-                        "material":
-                        {
-                            "plugin": "speedometer",
-                            "update": true
-                        },
-
-                        "geometry":
-                        {
-                            "type": "plane",
-                            "options":
-                            {
-                                "width": 100,
-                                "height": 100
-                            }
-                        }
-                    }
-                ]
             }
         ]
     },
@@ -378,7 +379,7 @@
                 "uid": "googlemaps",
                 "engine": "org.forgejs.googlemaps",
 
-                "scenes": ["scene-0"],
+                "scenes": ["scene-1"],
 
                 "options":
                 {
@@ -394,7 +395,7 @@
                 "data":
                 {
                     "googleMapsKey": "AIzaSyBaXB43aQIplDPVJ53ZzPfyUqxoHrd0HZk",
-                    "gpx": "https://cdn.forgejs.org/samples/metadata/GH014181.xml"
+                    "gpx": "https://cdn.forgejs.org/samples/telemetry/GH014181.xml"
                 },
 
                 "keep": true,
@@ -406,7 +407,6 @@
                 "engine": "org.forgejs.accelerometer",
                 "options":
                 {
-                    "size": 100,
                     "right": 20,
                     "bottom": 20
                 },
@@ -421,9 +421,8 @@
                 "options":
                 {
                     "align": "right",
-                    "width": 80,
                     "right": 20,
-                    "top": 20
+                    "bottom": 150
                 },
 
                 "keep": true,
@@ -435,7 +434,6 @@
                 "engine": "org.forgejs.compass",
                 "options":
                 {
-                    "size": 150,
                     "left": 20,
                     "top": 20
                 },
@@ -449,8 +447,7 @@
                 "engine": "org.forgejs.speedometer",
                 "options":
                 {
-                    "size": 200,
-                    "right": 190,
+                    "left": 20,
                     "bottom": 20
                 },
 
