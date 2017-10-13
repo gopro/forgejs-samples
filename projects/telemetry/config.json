@@ -1,19 +1,18 @@
 {
     "story":
     {
-        "uid": "metadata",
-        "name": "Metadata showcase",
-        "slug": "metadata",
-        "description": "This is a flat story to show metadata usage",
+        "uid": "telemetry",
+        "name": "Telemetry showcase",
+        "slug": "telemetry",
+        "description": "This story demonstrates telemetry display extracted from GoPro Fusion and GoPro HERO6",
         "default": "scene-0",
 
         "scenes":
         [
             {
                 "uid": "scene-0",
-                "name": "First scene",
-                "slug": "first-scene",
-                "description": "This is the first scene",
+                "name": "Spherical video scene",
+                "slug": "spherical-video",
 
                 "media":
                 {
@@ -22,113 +21,20 @@
 
                     "source":
                     {
-                        "format": "flat",
-                        "url": "https://cdn.forgejs.org/samples/metadata/GOPR7391.mp4"
-                    },
-
-                    "options":
-                    {
-                        "autoPlay": true,
-                        "startTime": 100,
-                        "loop": true,
-                        "volume": 0
-                    }
-                },
-
-                "view":
-                {
-                    "type": "flat",
-                    "options":
-                    {
-                        "repeatX": false,
-                        "repeatY": false
-                    }
-                },
-
-                "plugins":
-                {
-                    "configurations":
-                    [
-                        {
-                            "instance": "accelerometer",
-
-                            "data":
-                            {
-                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_accl.json"
-                            },
-
-                            "options":
-                            {
-                                "dom": true
-                            }
-                        },
-
-                        {
-                            "instance": "altimeter",
-
-                            "data":
-                            {
-                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_altitude.json"
-                            },
-
-                            "options":
-                            {
-                                "dom": true
-                            }
-                        },
-
-                        {
-                            "instance": "compass",
-
-                            "data":
-                            {
-                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_gyro.json"
-                            },
-
-                            "options":
-                            {
-                                "dom": true
-                            }
-                        },
-
-                        {
-                            "instance": "speedometer",
-
-                            "data":
-                            {
-                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_speed.json"
-                            },
-
-                            "options":
-                            {
-                                "dom": true
-                            }
-                        }
-                    ]
-                }
-            },
-
-            {
-                "uid": "scene-1",
-                "name": "Second scene",
-                "slug": "second-scene",
-                "description": "This is the second scene",
-
-                "media":
-                {
-                    "uid": "media-1",
-                    "type": "video",
-
-                    "source":
-                    {
                         "format": "equi",
-                        "url": "https://cdn.forgejs.org/samples/metadata/GOPR7391.mp4"
+                        "levels": [
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/Sources/Descente_Marocaz_720p.mp4" },
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/Sources/Descente_Marocaz_1080p.mp4" },
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/Sources/Descente_Marocaz_1440p.mp4" },
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/Sources/Descente_Marocaz_4k.mp4" },
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/Sources/Descente_Marocaz_4kfull.mp4" }
+                        ]
                     },
 
                     "options":
                     {
                         "autoPlay": true,
-                        "startTime": 100,
+                        "startTime": 0,
                         "loop": true,
                         "volume": 0.1
                     }
@@ -143,12 +49,12 @@
 
                             "data":
                             {
-                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_accl.json"
+                                "json": "https://cdn.forgejs.org/samples/telemetry/descente-martin-raw_accl.json"
                             },
 
                             "options":
                             {
-                                "dom": false
+                                "visible": false
                             }
                         },
 
@@ -157,12 +63,12 @@
 
                             "data":
                             {
-                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_altitude.json"
+                                "json": "https://cdn.forgejs.org/samples/telemetry/descente-martin-raw_altitude.json"
                             },
 
                             "options":
                             {
-                                "dom": false
+                                "visible": false
                             }
                         },
 
@@ -171,12 +77,12 @@
 
                             "data":
                             {
-                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_gyro.json"
+                                "json": "https://cdn.forgejs.org/samples/telemetry/descente-martin-raw_gyro.json"
                             },
 
                             "options":
                             {
-                                "dom": false
+                                "visible": false
                             }
                         },
 
@@ -185,12 +91,12 @@
 
                             "data":
                             {
-                                "json": "https://cdn.forgejs.org/samples/metadata/GOPR7391_gpmf_speed.json"
+                                "json": "https://cdn.forgejs.org/samples/telemetry/descente-martin-raw_speed.json"
                             },
 
                             "options":
                             {
-                                "dom": false
+                                "visible": false
                             }
                         }
                     ]
@@ -200,16 +106,21 @@
                 [
                     {
                         "uid": "hotspot-accelerometer",
-
-                        "facingCenter": true,
+                        "name": "accelerometer",
+                        "facingCenter": false,
 
                         "transform":
                         {
                             "position":
                             {
-                                "radius": 400,
-                                "theta": 13,
-                                "phi": -23
+                                "radius": 250,
+                                "theta": 0,
+                                "phi": -30
+                            },
+
+                            "rotation":
+                            {
+                                "x": 70
                             }
                         },
 
@@ -224,24 +135,29 @@
                             "type": "plane",
                             "options":
                             {
-                                "width": 90,
-                                "height": 60
+                                "width": 64,
+                                "height": 64
                             }
                         }
                     },
 
                     {
                         "uid": "hotspot-altimeter",
-                        "type": "3d",
-                        "facingCenter": true,
+                        "name": "altimeter",
+                        "facingCenter": false,
 
                         "transform":
                         {
                             "position":
                             {
-                                "radius": 400,
-                                "theta": 32,
-                                "phi": -7
+                                "radius": 250,
+                                "theta": 40,
+                                "phi": -4
+                            },
+
+                            "rotation":
+                            {
+                                "y": -45
                             }
                         },
 
@@ -256,22 +172,22 @@
                             "type": "plane",
                             "options":
                             {
-                                "width": 100,
-                                "height": 45
+                                "width": 45,
+                                "height": 25
                             }
                         }
                     },
 
                     {
                         "uid": "hotspot-compass",
-
-                        "facingCenter": true,
+                        "name": "compass",
+                        "facingCenter": false,
 
                         "transform":
                         {
                             "position":
                             {
-                                "radius": 400,
+                                "radius": 250,
                                 "theta": 30,
                                 "phi": -20
                             }
@@ -280,7 +196,8 @@
                         "material":
                         {
                             "plugin": "compass",
-                            "update": true
+                            "update": true,
+                            "transparent": true
                         },
 
                         "geometry":
@@ -296,14 +213,14 @@
 
                     {
                         "uid": "hotspot-speedometer",
-
-                        "facingCenter": true,
+                        "name": "speedometer",
+                        "facingCenter": false,
 
                         "transform":
                         {
                             "position":
                             {
-                                "radius": 400,
+                                "radius": 250,
                                 "theta": -30,
                                 "phi": -20
                             }
@@ -326,6 +243,116 @@
                         }
                     }
                 ]
+            },
+
+            {
+                "uid": "scene-1",
+                "name": "Flat video scene",
+                "slug": "flat-video-scene",
+
+                "media":
+                {
+                    "uid": "media-1",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "flat",
+                        "levels": [
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/GH014181/Sources/GH014181_720p.mp4" },
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/GH014181/Sources/GH014181_1080p.mp4" },
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/GH014181/Sources/GH014181_1440p.mp4" },
+                            { "url": "https://cdn.forgejs.org/samples/telemetry/GH014181/Sources/GH014181_2.7k.mp4" }
+                        ]
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "startTime": 100,
+                        "loop": true,
+                        "volume": 0
+                    }
+                },
+
+                "view":
+                {
+                    "type": "flat",
+                    "options":
+                    {
+                        "repeatX": false,
+                        "repeatY": false
+                    }
+                },
+
+                "camera":
+                {
+                    "yaw": {"min": 0, "max": 0, "default": 0},
+                    "pitch": {"min": 0, "max": 0, "default": 0},
+                    "fov": {"min": 180, "max": 180, "default": 180}
+                },
+
+                "plugins":
+                {
+                    "configurations":
+                    [
+                        {
+                            "instance": "accelerometer",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/telemetry/GH014181_gpmf_accl_cut.json"
+                            },
+
+                            "options":
+                            {
+                                "visible": true
+                            }
+                        },
+
+                        {
+                            "instance": "altimeter",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/telemetry/GH014181_gpmf_altitude_cut.json"
+                            },
+
+                            "options":
+                            {
+                                "visible": true
+                            }
+                        },
+
+                        {
+                            "instance": "compass",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/telemetry/GH014181_gpmf_gyro_cut.json"
+                            },
+
+                            "options":
+                            {
+                                "visible": true
+                            }
+                        },
+
+                        {
+                            "instance": "speedometer",
+
+                            "data":
+                            {
+                                "json": "https://cdn.forgejs.org/samples/telemetry/GH014181_gpmf_speed_cut.json"
+                            },
+
+                            "options":
+                            {
+                                "visible": true
+                            }
+                        }
+                    ]
+                }
             }
         ]
     },
@@ -375,36 +402,10 @@
             },
 
             {
-                "uid": "googlemaps",
-                "engine": "org.forgejs.googlemaps",
-
-                "options":
-                {
-                    "strokeColor": "#009ee2",
-                    "strokeOpacity": 1,
-                    "strokeWeight": 3,
-                    "width": 200,
-                    "height": 200,
-                    "left": 20,
-                    "bottom": 20
-                },
-
-                "data":
-                {
-                    "googleMapsKey": "AIzaSyBaXB43aQIplDPVJ53ZzPfyUqxoHrd0HZk",
-                    "gpx": "https://cdn.forgejs.org/samples/metadata/GOPR7391.xml"
-                },
-
-                "keep": true,
-                "reset": true
-            },
-
-            {
                 "uid": "accelerometer",
                 "engine": "org.forgejs.accelerometer",
                 "options":
                 {
-                    "size": 100,
                     "right": 20,
                     "bottom": 20
                 },
@@ -419,9 +420,8 @@
                 "options":
                 {
                     "align": "right",
-                    "width": 80,
                     "right": 20,
-                    "top": 20
+                    "bottom": 150
                 },
 
                 "keep": true,
@@ -433,7 +433,6 @@
                 "engine": "org.forgejs.compass",
                 "options":
                 {
-                    "size": 150,
                     "left": 20,
                     "top": 20
                 },
@@ -447,9 +446,146 @@
                 "engine": "org.forgejs.speedometer",
                 "options":
                 {
-                    "size": 200,
-                    "right": 190,
+                    "left": 20,
                     "bottom": 20
+                },
+
+                "keep": true,
+                "reset": true
+            },
+
+            {
+                "uid": "googlemaps",
+                "engine": "org.forgejs.googlemaps",
+
+                "scenes": ["scene-1"],
+
+                "options":
+                {
+                    "strokeColor": "#009ee2",
+                    "strokeOpacity": 1,
+                    "strokeWeight": 3,
+                    "width": 200,
+                    "height": 200,
+                    "right": 20,
+                    "top": 20,
+
+                    "googleMapsStyle":
+                    [
+                        {
+                            "featureType": "all",
+                            "elementType": "labels.text.fill",
+                            "stylers": [
+                                { "saturation": 36 },
+                                { "color": "#000000" },
+                                { "lightness": 40 }
+                            ]
+                        },
+                        {
+                            "featureType": "all",
+                            "elementType": "labels.text.stroke",
+                            "stylers": [
+                                { "visibility": "on" },
+                                { "color": "#000000" },
+                                { "lightness": 16 }
+                            ]
+                        },
+                        {
+                            "featureType": "all",
+                            "elementType": "labels.icon",
+                            "stylers": [
+                                { "visibility": "off" }
+                            ]
+                        },
+                        {
+                            "featureType": "administrative",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                { "color": "#000000" },
+                                { "lightness": 20 }
+                            ]
+                        },
+                        {
+                            "featureType": "administrative",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                                { "color": "#000000" },
+                                { "lightness": 17 },
+                                { "weight": 1.2 }
+                            ]
+                        },
+                        {
+                            "featureType": "landscape",
+                            "elementType": "geometry",
+                            "stylers": [
+                                { "color": "#000000" },
+                                { "lightness": 20 }
+                            ]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "geometry",
+                            "stylers": [
+                                { "color": "#000000" },
+                                { "lightness": 21 }
+                            ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                { "color": "#000000" },
+                                { "lightness": 17 }
+                            ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                                { "color": "#000000" },
+                                { "lightness": 29 },
+                                {"weight": 0.2 }
+                            ]
+                        },
+                        {
+                            "featureType": "road.arterial",
+                            "elementType": "geometry",
+                            "stylers": [
+                                { "color": "#000000" },
+                                { "lightness": 18 }
+                            ]
+                        },
+                        {
+                            "featureType": "road.local",
+                            "elementType": "geometry",
+                            "stylers": [
+                                { "color": "#000000" },
+                                { "lightness": 16 }
+                            ]
+                        },
+                        {
+                            "featureType": "transit",
+                            "elementType": "geometry",
+                            "stylers": [
+                                { "color": "#000000" },
+                                { "lightness": 19 }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "geometry",
+                            "stylers": [
+                                { "color": "#000000" },
+                                { "lightness": 17 }
+                            ]
+                        }
+                    ]
+                },
+
+                "data":
+                {
+                    "googleMapsKey": "AIzaSyBaXB43aQIplDPVJ53ZzPfyUqxoHrd0HZk",
+                    "gpx": "https://cdn.forgejs.org/samples/telemetry/GH014181.gpx"
                 },
 
                 "keep": true,
