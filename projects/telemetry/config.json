@@ -54,7 +54,7 @@
 
                             "options":
                             {
-                                "dom": false
+                                "visible": false
                             }
                         },
 
@@ -68,7 +68,7 @@
 
                             "options":
                             {
-                                "dom": false
+                                "visible": false
                             }
                         },
 
@@ -82,7 +82,7 @@
 
                             "options":
                             {
-                                "dom": false
+                                "visible": false
                             }
                         },
 
@@ -96,7 +96,7 @@
 
                             "options":
                             {
-                                "dom": false
+                                "visible": false
                             }
                         }
                     ]
@@ -306,7 +306,7 @@
 
                             "options":
                             {
-                                "dom": true
+                                "visible": true
                             }
                         },
 
@@ -320,7 +320,7 @@
 
                             "options":
                             {
-                                "dom": true
+                                "visible": true
                             }
                         },
 
@@ -334,7 +334,7 @@
 
                             "options":
                             {
-                                "dom": true
+                                "visible": true
                             }
                         },
 
@@ -348,7 +348,7 @@
 
                             "options":
                             {
-                                "dom": true
+                                "visible": true
                             }
                         }
                     ]
