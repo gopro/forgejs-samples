@@ -19,7 +19,24 @@ ForgePlugins.LookAt = function()
 
     // images array
     this._images = null;
+
+    // current destination
+    this._destination = null;
+
+    // current offset yaw
+    this._offsetYaw = 0;
+
+    // current offset pitch
+    this._offsetPitch = 0;
+
+    // current offset fov
+    this._offsetFov = 0;
+
+    // current factor for animation
+    this._factor = 0;
 };
+
+ForgePlugins.LookAt.TIME_REFERENCE = 1500;
 
 ForgePlugins.LookAt.prototype = {
 
@@ -162,7 +179,53 @@ ForgePlugins.LookAt.prototype = {
      */
     _lookAt: function(elem)
     {
-        this.viewer.camera.lookAt(elem.yaw, elem.pitch, 0, elem.fov, 2000, true, FORGE.EasingType.QUAD_IN_OUT);
+        this._destination = elem;
+
+        var camera = this.viewer.camera;
+
+        // clean current animation
+        camera.animation.stop();
+        camera.animation.onComplete.remove(this._midAnimation, this);
+        camera.animation.onComplete.remove(this._endAnimation, this);
+
+        // delta yaw and delta pitch
+        var dy = camera.yaw - elem.yaw;
+        var dp = camera.pitch - elem.pitch;
+
+        // don't move if too little
+        if (Math.abs(dy) < 0.001 && Math.abs(dp) < 0.001)
+        {
+            return;
+        }
+
+        // compute a factor given the distance between the two hotspots
+        this._factor = Math.log(Math.sqrt(dy * dy + dp * dp));
+        this._factor = (this._factor < 2) ? 1 : this._factor / 2;
+
+        // get mid yaw/pitch/fov
+        this._offsetYaw = dy / (2 * this._factor);
+        this._offsetPitch = dp / (2 * this._factor);
+        this._offsetFov = this._factor > 1 ? Math.min(camera.fov, elem.fov) * this._factor * this._factor : (camera.fov + elem.fov) / 2;
+
+        camera.animation.onComplete.addOnce(this._factor > 1 ? this._midAnimation : this._endAnimation, this);
+        camera.lookAt(camera.yaw - this._offsetYaw, camera.pitch - this._offsetPitch, 0, this._offsetFov, ForgePlugins.LookAt.TIME_REFERENCE, true, FORGE.EasingType.SINE_IN);
+    },
+
+    _midAnimation: function()
+    {
+        var camera = this.viewer.camera;
+        var elem = this._destination;
+        var midTime = Math.abs(camera.yaw - elem.yaw - this._offsetYaw) / this._offsetYaw * ForgePlugins.LookAt.TIME_REFERENCE;
+
+        camera.animation.onComplete.addOnce(this._endAnimation, this);
+        camera.lookAt(elem.yaw + this._offsetYaw, elem.pitch + this._offsetPitch, 0, this._offsetFov, Math.abs(midTime) / this._factor, true, FORGE.EasingType.LINEAR);
+    },
+
+    _endAnimation: function()
+    {
+        var camera = this.viewer.camera;
+        var elem = this._destination;
+        camera.lookAt(elem.yaw, elem.pitch, 0, elem.fov, ForgePlugins.LookAt.TIME_REFERENCE, true, FORGE.EasingType.SINE_OUT);
     },
 
     /**
