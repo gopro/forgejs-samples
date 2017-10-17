@@ -1,4 +1,68 @@
 {
+    "audio":
+    {
+        "enabled": true,
+
+        "volume":
+        {
+            "default": 1.0,
+            "max": 1.0
+        }
+    },
+
+    "playlists":
+    {
+        "enabled": false,
+
+        "volume":
+        {
+            "default": 0.5,
+            "max": 1.0
+        },
+
+        "default": "playlist-0",
+
+        "lists":
+        [
+            {
+                "uid": "playlist-0",
+                "name": "telemetry-spherical",
+                "default": "track-0",
+                "loop": true,
+                "autoPlay": true,
+
+                "tracks": ["track-0"]
+            },
+
+            {
+                "uid": "playlist-1",
+                "name": "telemetry-flat",
+                "default": "track-1",
+                "loop": true,
+                "autoPlay": true,
+
+                "tracks": ["track-1"]
+            }
+        ],
+
+        "tracks":
+        [
+            {
+                "uid": "track-0",
+                "author": "Broke For Free",
+                "name": "Night Owl",
+                "url": "https://cdn.forgejs.org/samples/common/sounds/Broke_For_Free-01-Night_Owl.mp3"
+            },
+
+            {
+                "uid": "track-1",
+                "author": "Tours",
+                "name": "Enthusiast",
+                "url": "https://cdn.forgejs.org/samples/common/sounds/Tours-01-Enthusiast.mp3"
+            }
+        ]
+    },
+
     "story":
     {
         "uid": "telemetry",
@@ -22,22 +86,22 @@
                     "source":
                     {
                         "format": "equi",
-                        "levels": [
-                            { "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/Sources/Descente_Marocaz_720p.mp4" },
-                            { "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/Sources/Descente_Marocaz_1080p.mp4" },
-                            { "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/Sources/Descente_Marocaz_1440p.mp4" },
-                            { "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/Sources/Descente_Marocaz_4k.mp4" },
-                            { "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/Sources/Descente_Marocaz_4kfull.mp4" }
-                        ]
+                        "streaming": "dash",
+                        "url": "https://cdn.forgejs.org/samples/telemetry/Descente_Marocaz/manifest.mpd"
                     },
 
                     "options":
                     {
                         "autoPlay": true,
-                        "startTime": 0,
                         "loop": true,
-                        "volume": 0.1
+                        "volume": 0
                     }
+                },
+
+                "playlists":
+                {
+                    "enabled": true,
+                    "default": "playlist-0"
                 },
 
                 "plugins":
@@ -258,19 +322,14 @@
                     "source":
                     {
                         "format": "flat",
-                        "levels": [
-                            { "url": "https://cdn.forgejs.org/samples/telemetry/GH014181/Sources/GH014181_720p.mp4" },
-                            { "url": "https://cdn.forgejs.org/samples/telemetry/GH014181/Sources/GH014181_1080p.mp4" },
-                            { "url": "https://cdn.forgejs.org/samples/telemetry/GH014181/Sources/GH014181_1440p.mp4" },
-                            { "url": "https://cdn.forgejs.org/samples/telemetry/GH014181/Sources/GH014181_2.7k.mp4" }
-                        ]
+                        "streaming": "dash",
+                        "url": "https://cdn.forgejs.org/samples/telemetry/GH014181/manifest.mpd"
                     },
 
                     "options":
                     {
                         "autoPlay": true,
-                        "startTime": 100,
-                        "loop": true,
+                        "loop": false,
                         "volume": 0
                     }
                 },
@@ -290,6 +349,12 @@
                     "yaw": {"min": 0, "max": 0, "default": 0},
                     "pitch": {"min": 0, "max": 0, "default": 0},
                     "fov": {"min": 180, "max": 180, "default": 180}
+                },
+
+                "playlists":
+                {
+                    "enabled": true,
+                    "default": "playlist-1"
                 },
 
                 "plugins":

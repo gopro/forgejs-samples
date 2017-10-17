@@ -12,7 +12,7 @@ Author: Unknown<br/>
 Track: Unknown<br/>
 File: Double-Trouble.mp3<br/>
 License: [Creative Commons License Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/)<br/>
-![Creative Commons License Attribution 3.0 Unported](https://i.creativecommons.org/l/by/4.0/88x31.png)<br/>
+![Creative Commons License Attribution 3.0 Unported](https://i.creativecommons.org/l/by/3.0/88x31.png)<br/>
 
 Author: Unknown<br/>
 Track: Unknown<br/>
