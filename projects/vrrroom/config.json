@@ -140,54 +140,36 @@
                 "description": "",
                 "tags": ["intro", "start"],
 
-                "media":
-                {
-                    "uid": "media-0",
-                    "type": "video",
-
-                    "source":
-                    {
-                        "format": "flat",
-                        "url": "https://cdn.forgejs.org/samples/vrrroom/videos/intro.mp4"
-                    },
-
-                    "options":
-                    {
-                        "autoPlay": false,
-                        "loop": false,
-                        "volume": 1.0
-                    },
-
-                    "events":
-                    {
-                        "onEnded": ["action-next"]
-                    }
-                },
-
-                "events":
-                {
-                    "onLoadComplete": ["action-intro-video-pause"]
-                },
-
-                "view":
-                {
-                    "type": "flat"
-                },
-
-                "camera":
-                {
-                    "fov":
-                    {
-                        "default": 180,
-                        "min": 180,
-                        "max": 180
-                    }
-                },
-
                 "plugins":
                 {
                     "instances":
                     [
+                        {
+                            "uid": "org.forgejs.simplevideo-intro",
+                            "engine": "org.forgejs.simplevideo",
+
+                            "options":
+                            {
+                                "height": "100%",
+                                "width": "100%",
+                                "horizontalCenter": true
+                            },
+
+                            "data":
+                            {
+                                "video": "https://cdn.forgejs.org/samples/vrrroom/videos/intro.mp4"
+                            },
+
+                            "events":
+                            {
+                                "onEnded": ["action-next"]
+                            },
+
+                            "index": 0,
+                            "index": 12,
+                            "keep": false
+                        },
+
                         {
                             "uid": "org.forgejs.simpletext-intro",
                             "engine": "org.forgejs.simpletext",
@@ -990,21 +972,11 @@
 
         {
             "uid": "action-intro-video-play",
-            "target": "viewer.story.scene.media.displayObject",
+            "target": "org.forgejs.simplevideo-intro",
 
             "method":
             {
                 "name": "play"
-            }
-        },
-
-        {
-            "uid": "action-intro-video-pause",
-            "target": "viewer.story.scene.media.displayObject",
-
-            "method":
-            {
-                "name": "pause"
             }
         },
 
@@ -1117,8 +1089,8 @@
             },
 
             {
-                "uid": "org.forgejs.safaricors",
-                "url": "SafariCORS/",
+                "uid": "org.forgejs.videocors",
+                "url": "VideoCORS/",
                 "prefix": "../../plugins/"
             },
 
@@ -1149,6 +1121,12 @@
             {
                 "uid": "org.forgejs.simpleimage",
                 "url": "SimpleImage/",
+                "prefix": "../../plugins/"
+            },
+
+            {
+                "uid": "org.forgejs.simplevideo",
+                "url": "SimpleVideo/",
                 "prefix": "../../plugins/"
             },
 
@@ -1195,7 +1173,9 @@
                     "stripeColor": "black"
                 },
 
-                "index": 1
+                "index": 1,
+                "keep": true,
+                "reset": false
             },
 
             {
@@ -1462,8 +1442,8 @@
             },
 
             {
-                "uid": "safaricors",
-                "engine": "org.forgejs.safaricors",
+                "uid": "videocors",
+                "engine": "org.forgejs.videocors",
                 "index": 1000
             },
 
