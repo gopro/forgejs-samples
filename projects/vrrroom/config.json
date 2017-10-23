@@ -145,7 +145,7 @@
                     "instances":
                     [
                         {
-                            "uid": "org.forgejs.simplevideo-0",
+                            "uid": "org.forgejs.simplevideo-intro",
                             "engine": "org.forgejs.simplevideo",
 
                             "options":
@@ -166,6 +166,7 @@
                             },
 
                             "index": 0,
+                            "index": 12,
                             "keep": false
                         },
 
@@ -230,7 +231,7 @@
 
                             "events":
                             {
-                                "onClick": ["action-plugin-video-play", "action-plugin-localeselector-hide", "action-plugin-button-hide"]
+                                "onClick": ["action-intro-video-play", "action-plugin-localeselector-hide", "action-plugin-button-hide", "action-plugin-text-hide"]
                             },
 
                             "index": 13,
@@ -401,9 +402,9 @@
 
                         "events":
                         {
-                            "onClick": ["hotspotAction-martin"],
-                            "onOver": ["hotspotAction-martin-over"],
-                            "onOut": ["hotspotAction-martin-out"]
+                            "onClick": ["action-hotspot-martin"],
+                            "onOver": ["action-hotspot-martin-over"],
+                            "onOut": ["action-hotspot-martin-out"]
                         }
                     },
 
@@ -445,9 +446,9 @@
 
                         "events":
                         {
-                            "onClick": ["hotspotAction-martin"],
-                            "onOver": ["hotspotAction-martin-over"],
-                            "onOut": ["hotspotAction-martin-out"]
+                            "onClick": ["action-hotspot-martin"],
+                            "onOver": ["action-hotspot-martin-over"],
+                            "onOut": ["action-hotspot-martin-out"]
                         }
                     },
 
@@ -489,9 +490,9 @@
 
                         "events":
                         {
-                            "onClick": ["hotspotAction-samy"],
-                            "onOver": ["hotspotAction-samy-over"],
-                            "onOut": ["hotspotAction-samy-out"]
+                            "onClick": ["action-hotspot-samy"],
+                            "onOver": ["action-hotspot-samy-over"],
+                            "onOut": ["action-hotspot-samy-out"]
                         }
                     },
 
@@ -533,9 +534,9 @@
 
                         "events":
                         {
-                            "onClick": ["hotspotAction-samy"],
-                            "onOver": ["hotspotAction-samy-over"],
-                            "onOut": ["hotspotAction-samy-out"]
+                            "onClick": ["action-hotspot-samy"],
+                            "onOver": ["action-hotspot-samy-over"],
+                            "onOut": ["action-hotspot-samy-out"]
                         }
                     }
                 ]
@@ -547,6 +548,8 @@
                 "slug": "samy-karting",
                 "description": "i18n-scene-2-description",
                 "tags": ["circuit", "samy", "kart"],
+
+                "sync":["scene-3", "scene-4"],
 
                 "media":
                 {
@@ -645,6 +648,8 @@
                 "description": "i18n-scene-3-description",
                 "tags": ["circuit", "martin", "kart"],
 
+                "sync":["scene-2", "scene-5"],
+
                 "media":
                 {
                     "uid": "media-3",
@@ -742,7 +747,7 @@
                 "description": "",
                 "tags": ["circuit", "samy", "kart", "cinema"],
 
-                "media": {},
+                "sync": ["scene-2", "scene-5"],
 
                 "playlists":
                 {
@@ -750,35 +755,43 @@
                     "default": "playlist-1"
                 },
 
+                "media":
+                {
+                    "uid": "media-4",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "flat",
+                        "streaming": "dash",
+                        "url": "https://cdn.forgejs.org/samples/vrrroom/videos/460036/460036.mpd"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0
+                    }
+                },
+
+                "view":
+                {
+                    "type": "flat"
+                },
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 180,
+                        "min": 180,
+                        "max": 180
+                    }
+                },
+
                 "plugins":
                 {
-                    "instances":
-                    [
-                        {
-                            "uid": "org.forgejs.simplevideo-1",
-                            "engine": "org.forgejs.simplevideo",
-
-                            "options":
-                            {
-                                "height": 1080,
-                                "width": 2048,
-                                "horizontalCenter": true,
-                                "autoPlay": true,
-                                "loop": true,
-                                "volume": 0
-                            },
-
-                            "data":
-                            {
-                                "streaming": "dash",
-                                "video": "https://cdn.forgejs.org/samples/vrrroom/videos/460036/460036.mpd"
-                            },
-
-                            "index": 0,
-                            "keep": false
-                        }
-                    ],
-
                     "configurations":
                     [
                         {
@@ -786,7 +799,7 @@
 
                             "options":
                             {
-                                "source": "org.forgejs.simplevideo-1"
+                                "source": "media"
                             }
                         },
 
@@ -800,7 +813,7 @@
 
                             "options":
                             {
-                                "source": "org.forgejs.simplevideo-1"
+                                "source": "media"
                             }
                         },
 
@@ -814,7 +827,7 @@
 
                             "options":
                             {
-                                "source": "org.forgejs.simplevideo-1"
+                                "source": "media"
                             }
                         },
 
@@ -828,7 +841,7 @@
 
                             "options":
                             {
-                                "source": "org.forgejs.simplevideo-1"
+                                "source": "media"
                             }
                         }
                     ]
@@ -842,7 +855,7 @@
                 "description": "",
                 "tags": ["circuit", "martin", "kart", "cinema"],
 
-                "media": {},
+                "sync": ["scene-3", "scene-4"],
 
                 "playlists":
                 {
@@ -850,35 +863,43 @@
                     "default": "playlist-1"
                 },
 
+                "media":
+                {
+                    "uid": "media-5",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "flat",
+                        "streaming": "dash",
+                        "url": "https://cdn.forgejs.org/samples/vrrroom/videos/460045/460045.mpd"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0
+                    }
+                },
+
+                "view":
+                {
+                    "type": "flat"
+                },
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 180,
+                        "min": 180,
+                        "max": 180
+                    }
+                },
+
                 "plugins":
                 {
-                    "instances":
-                    [
-                        {
-                            "uid": "org.forgejs.simplevideo-2",
-                            "engine": "org.forgejs.simplevideo",
-
-                            "options":
-                            {
-                                "height": 1080,
-                                "width": 2048,
-                                "horizontalCenter": true,
-                                "autoPlay": true,
-                                "loop": true,
-                                "volume": 0
-                            },
-
-                            "data":
-                            {
-                                "streaming": "dash",
-                                "video": "https://cdn.forgejs.org/samples/vrrroom/videos/460045/460045.mpd"
-                            },
-
-                            "index": 0,
-                            "keep": false
-                        }
-                    ],
-
                     "configurations":
                     [
                         {
@@ -886,7 +907,7 @@
 
                             "options":
                             {
-                                "source": "org.forgejs.simplevideo-2"
+                                "source": "media"
                             }
                         },
 
@@ -900,7 +921,7 @@
 
                             "options":
                             {
-                                "source": "org.forgejs.simplevideo-2"
+                                "source": "media"
                             }
                         },
 
@@ -914,7 +935,7 @@
 
                             "options":
                             {
-                                "source": "org.forgejs.simplevideo-2"
+                                "source": "media"
                             }
                         },
 
@@ -928,7 +949,7 @@
 
                             "options":
                             {
-                                "source": "org.forgejs.simplevideo-2"
+                                "source": "media"
                             }
                         }
                     ]
@@ -950,8 +971,8 @@
         },
 
         {
-            "uid": "action-plugin-video-play",
-            "target": "org.forgejs.simplevideo-0",
+            "uid": "action-intro-video-play",
+            "target": "org.forgejs.simplevideo-intro",
 
             "method":
             {
@@ -980,7 +1001,17 @@
         },
 
         {
-            "uid": "hotspotAction-martin",
+            "uid": "action-plugin-text-hide",
+            "target": "org.forgejs.simpletext-intro",
+
+            "method":
+            {
+                "name": "hide"
+            }
+        },
+
+        {
+            "uid": "action-hotspot-martin",
             "target": "viewer.story",
 
             "method":
@@ -991,7 +1022,7 @@
         },
 
         {
-            "uid": "hotspotAction-martin-over",
+            "uid": "action-hotspot-martin-over",
             "target": "org.forgejs.kartingdriverspot-martin",
 
             "method":
@@ -1002,7 +1033,7 @@
         },
 
         {
-            "uid": "hotspotAction-martin-out",
+            "uid": "action-hotspot-martin-out",
             "target": "org.forgejs.kartingdriverspot-martin",
 
             "method":
@@ -1013,7 +1044,7 @@
         },
 
         {
-            "uid": "hotspotAction-samy",
+            "uid": "action-hotspot-samy",
             "target": "viewer.story",
 
             "method":
@@ -1024,7 +1055,7 @@
         },
 
         {
-            "uid": "hotspotAction-samy-over",
+            "uid": "action-hotspot-samy-over",
             "target": "org.forgejs.kartingdriverspot-samy",
 
             "method":
@@ -1035,7 +1066,7 @@
         },
 
         {
-            "uid": "hotspotAction-samy-out",
+            "uid": "action-hotspot-samy-out",
             "target": "org.forgejs.kartingdriverspot-samy",
 
             "method":
@@ -1094,6 +1125,12 @@
             },
 
             {
+                "uid": "org.forgejs.simplevideo",
+                "url": "SimpleVideo/",
+                "prefix": "../../plugins/"
+            },
+
+            {
                 "uid": "org.forgejs.kartingdriverspot",
                 "url": "KartingDriverSpot/"
             },
@@ -1111,12 +1148,6 @@
             {
                 "uid": "org.forgejs.gooeymenu",
                 "url": "GooeyMenu/"
-            },
-
-            {
-                "uid": "org.forgejs.simplevideo",
-                "url": "SimpleVideo/",
-                "prefix": "../../plugins/"
             },
 
             {
@@ -1142,7 +1173,9 @@
                     "stripeColor": "black"
                 },
 
-                "index": 1
+                "index": 1,
+                "keep": true,
+                "reset": false
             },
 
             {
@@ -1220,8 +1253,7 @@
                                 "target": [["scene-2", "scene-4"], ["scene-3", "scene-5"]]
                             },
 
-                            "toggle": true,
-                            "videotime": "org.forgejs.ranking-0"
+                            "toggle": true
                         },
 
                         {
@@ -1250,6 +1282,8 @@
                     "top": 90,
                     "left": 10,
                     "borderColor": "#009ee2",
+
+                    "timeSync": false,
 
                     "drivers":
                     [
