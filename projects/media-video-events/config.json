@@ -79,36 +79,40 @@
     [
         {
             "uid": "play-action",
+            "target": "console",
             "method":
             {
-                "name": "alert",
+                "name": "log",
                 "args": ["play"]
             }
         },
 
         {
             "uid": "pause-action",
+            "target": "console",
             "method":
             {
-                "name": "alert",
+                "name": "log",
                 "args": ["pause"]
             }
         },
 
         {
             "uid": "seeked-action",
+            "target": "console",
             "method":
             {
-                "name": "alert",
+                "name": "log",
                 "args": ["seeked"]
             }
         },
 
         {
             "uid": "ended-action",
+            "target": "console",
             "method":
             {
-                "name": "alert",
+                "name": "log",
                 "args": ["ended"]
             }
         }
