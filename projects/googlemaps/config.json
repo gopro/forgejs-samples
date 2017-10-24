@@ -1,10 +1,10 @@
 {
     "story":
     {
-        "uid": "toolbox-plugin-demo",
-        "name": "Toolbox Plugin Demo",
-        "slug": "toolbox-plugin-demo",
-        "description": "Demonstrates the Toolbox plugin",
+        "uid": "googlemaps-plugin-demo",
+        "name": "Googlemaps Plugin Demo",
+        "slug": "googlemaps-plugin-demo",
+        "description": "Demonstrates the Googlemaps plugin",
         "default": "scene-0",
 
         "scenes":
