@@ -3,7 +3,7 @@
   "version": "0.9.6",
   "description": "A collection of samples to demonstrate the capabilities of ForgeJS",
   "author": "GoPro, Inc. | Kolor SAS",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
