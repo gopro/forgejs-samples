@@ -1,0 +1,264 @@
+{
+    "story":
+    {
+        "uid": "simpliest-story",
+        "name": "Simpliest Story",
+        "slug": "simpliest-story",
+        "description": "This is the simpliest story ever",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first and only scene",
+
+                "media":
+                {
+                    "uid": "media-2",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "cube",
+                        "order": "RLUDFB",
+                        "tile": 960,
+                        "url": "https://cdn.forgejs.org/samples/common/panos/02-sand-cube.jpg"
+                    }
+                },
+
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-3d-0",
+                        "facingCenter": true,
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 300,
+                                "theta": 0
+                            }
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 60,
+                                "height": 60
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/common/images/spot-0.png",
+                            "transparent": true
+                        }
+                    }
+                ],
+
+                "fx": ["vignette-0"],
+
+                "layout":
+                [
+                    {
+                        "uid": "scene0-viewport0",
+                        "viewport":
+                        {
+                            "x":0,
+                            "y":0,
+                            "width":50,
+                            "height":100
+                        },
+                        "background": "#704040",
+                        "fx": ["sepia-0", "vignette-0"],
+                        "view":
+                        {
+                            "type": "rectilinear"
+                        }
+                    },
+
+                    {
+                        "uid": "scene0-viewport1",
+                        "viewport":
+                        {
+                            "x":50,
+                            "y":0,
+                            "width":50,
+                            "height":50
+                        },
+                        "background": "#007000",
+                        "view":
+                        {
+                            "type": "rectilinear"
+                        },
+                        "camera":
+                        {
+                            "fov":
+                            {
+                                "default": 90
+                            },
+                            "pitch":
+                            {
+                                "default": 0
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "scene0-viewport2",
+                        "viewport":
+                        {
+                            "x":50,
+                            "y":50,
+                            "width":50,
+                            "height":50
+                        },
+                        "background": "#007000",
+                        "view":
+                        {
+                            "type": "rectilinear"
+                        },
+                        "camera":
+                        {
+                            "fov":
+                            {
+                                "default": 90
+                            },
+                            "pitch":
+                            {
+                                "default": 0
+                            }
+                        }
+                    }
+                ],
+
+                "view":
+                {
+                    "type": "rectilinear"
+                }
+            }
+        ]
+    },
+
+    "fx":
+    [
+         {
+            "type": "GlitchPass",
+            "uid": "glitch-0",
+
+            "args":
+            {
+                "dt_size": 64
+            },
+
+            "params":
+            {
+                "goWild": false
+            }
+        },
+
+        {
+            "type": "HorizontalBlurShader",
+            "uid": "horizontalblur-0",
+
+            "params":
+            {
+                "h": 0.0001
+            }
+        },
+
+        {
+            "type": "VerticalBlurShader",
+            "uid": "verticalblur-0",
+
+            "params":
+            {
+                "v": 0.001
+            }
+        },
+
+        {
+            "type": "FilmShader",
+            "uid": "film-0",
+
+            "params":
+            {
+                "nIntensity": 0.1,
+                "sIntensity": 0.8,
+                "sCount": 1024,
+                "grayscale": 0
+            }
+        },
+
+        {
+            "type": "SepiaShader",
+            "uid": "sepia-0",
+
+            "params":
+            {
+                "amount": 0.7
+            }
+        },
+
+        {
+            "type": "VignetteShader",
+            "uid": "vignette-0",
+
+            "params":
+            {
+                "offset": 0.20,
+                "darkness": 26
+            }
+        }
+    ],
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.webvrbutton",
+                "url": "WebVRButton/"
+            },
+
+            {
+                "uid": "org.forgejs.gyroscopebutton",
+                "url": "GyroscopeButton/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "webvrbutton",
+                "engine": "org.forgejs.webvrbutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "right": 10
+                }
+            },
+
+            {
+                "uid": "gyrobutton",
+                "engine": "org.forgejs.gyroscopebutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "left": 10
+                }
+            }
+        ]
+    }
+}
