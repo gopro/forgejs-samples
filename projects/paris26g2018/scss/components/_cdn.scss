@@ -1,0 +1,182 @@
+html {
+    &.cdn {
+        .loader {
+            &.tour-eiffel {
+                background-image: url('https://cdn.forgejs.org/samples/paris2018/img/tour-eiffel.svg');
+            }
+        }
+        a {
+            &.link-forge-js {
+                background-image: url('https://cdn.forgejs.org/samples/paris2018/img/logo-forge-js-drop.svg');
+                &.black {
+                    background-image: url('https://cdn.forgejs.org/samples/paris2018/img/logo-forge-js.svg');
+                }
+            }
+            &.link-toolbar {
+                &[href="#home"] {
+                    background-image: url('https://cdn.forgejs.org/samples/paris2018/img/logo-mask-paris-26.svg');
+                }
+            }
+        }
+        .intro {
+            &>div {
+                &:first-child {
+                    background-image: url('https://cdn.forgejs.org/samples/paris2018/img/logo-mask-paris-26.svg');
+                }
+            }
+        }
+        #wrapper {
+            main {
+                &>.sidebar {
+                    &.main {
+                        &>.content {
+                            .easter-eggs {
+                                a {
+                                    &.checked {
+                                        &[href="#reblochon"] {
+                                            &>span {
+                                                &>span {
+                                                    &.thumbnail {
+                                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/easter-eggs/thumbnails/reblochon.jpg');
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &[href="#ovni"] {
+                                            &>span {
+                                                &>span {
+                                                    &.thumbnail {
+                                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/easter-eggs/thumbnails/ovni.jpg');
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &[href="#tortue"] {
+                                            &>span {
+                                                &>span {
+                                                    &.thumbnail {
+                                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/easter-eggs/thumbnails/tortue.jpg');
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &[href="#team"] {
+                                            &>span {
+                                                &>span {
+                                                    &.thumbnail {
+                                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/easter-eggs/thumbnails/team.jpg');
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &[href="#marmotte"] {
+                                            &>span {
+                                                &>span {
+                                                    &.thumbnail {
+                                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/easter-eggs/thumbnails/marmotte.jpg');
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &[href="#grenouille"] {
+                                            &>span {
+                                                &>span {
+                                                    &.thumbnail {
+                                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/easter-eggs/thumbnails/grenouille.jpg');
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &[href="#plaque"] {
+                                            &>span {
+                                                &>span {
+                                                    &.thumbnail {
+                                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/easter-eggs/thumbnails/plaque.jpg');
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &[href="#publicite"] {
+                                            &>span {
+                                                &>span {
+                                                    &.thumbnail {
+                                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/easter-eggs/thumbnails/publicite.jpg');
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &[href="#pi"] {
+                                            &>span {
+                                                &>span {
+                                                    &.thumbnail {
+                                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/easter-eggs/thumbnails/pi.jpg');
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &[href="#feu"] {
+                                            &>span {
+                                                &>span {
+                                                    &.thumbnail {
+                                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/easter-eggs/thumbnails/feu.jpg');
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .points-of-interest {
+                                a {
+                                    //Points of interest
+                                    &[href="#01"] {
+                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/poi/previews/thumbs/01.jpg');
+                                    }
+                                    &[href="#02"] {
+                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/poi/previews/thumbs/02.jpg');
+                                    }
+                                    &[href="#03"] {
+                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/poi/previews/thumbs/03.jpg');
+                                    }
+                                    &[href="#04"] {
+                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/poi/previews/thumbs/04.jpg');
+                                    }
+                                    &[href="#05"] {
+                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/poi/previews/thumbs/05.jpg');
+                                    }
+                                    &[href="#06"] {
+                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/poi/previews/thumbs/06.jpg');
+                                    }
+                                    &[href="#07"] {
+                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/poi/previews/thumbs/07.jpg');
+                                    }
+                                    &[href="#09"] {
+                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/poi/previews/thumbs/09.jpg');
+                                    }
+                                    &[href="#10"] {
+                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/poi/previews/thumbs/10.jpg');
+                                    }
+                                    &[href="#13"] {
+                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/poi/previews/thumbs/13.jpg');
+                                    }
+                                    &[href="#16"] {
+                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/poi/previews/thumbs/16.jpg');
+                                    }
+                                    &[href="#17"] {
+                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/poi/previews/thumbs/17.jpg');
+                                    }
+                                    &[href="#18"] {
+                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/poi/previews/thumbs/18.jpg');
+                                    }
+                                    &[href="#20"] {
+                                        background-image: url('https://cdn.forgejs.org/samples/paris2018/img/poi/previews/thumbs/20.jpg');
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

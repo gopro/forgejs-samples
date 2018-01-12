@@ -1,0 +1,41 @@
+body {
+    //Tabulation
+    [data-tab] {
+        display: none;
+        &.active {
+            display: inherit;
+        }
+        &[data-tab="#about"] {
+            p {
+                &.baseline {
+                    font-size: qtr-font-size();
+                    color: qtr-color();
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    line-height: 1.6em;
+                    letter-spacing: 0.1em;
+                    font-family: qtr-font-family(1);
+                }
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                &>li {
+                    margin-bottom: 2em;
+                    strong {
+                        display: block;
+                        margin-bottom: 0.5em;
+                        font-size: qtr-font-size(-4);
+                        color: qtr-color();
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        font-family: qtr-font-family(1);
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+body {
+    //Language
+    [lang] {
+        display: none;
+        &.active {
+            display: inherit;
+        }
+    }
+}

@@ -1,0 +1,269 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700);
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+/* line 5, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  color:white;
+  line-height: 1;
+}
+.home {
+  width: 100%;
+  position: relative;
+  text-align: center; }
+  .home h1:after {
+    content: attr(title);
+    font-size: 0.20em;
+    position: absolute; }
+#hero {
+    text-align:center;
+        font-family: 'Varela Round', 'Century Gothic', sans-serif;
+      position: absolute;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+#hero h1 {
+    font-size: 10vh;
+}
+#hero p {
+    font-size: 2.5vh;
+}
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../scss/_opr.scss */
+.opr-page {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+.footer {
+  height: 115%;
+  width: 100%;
+}
+/* line 6, ../scss/_opr.scss */
+.opr-current {
+  z-index: 99;
+}
+
+/* line 9, ../scss/_opr.scss */
+.opr-animate {
+  z-index: 100;
+}
+
+/* line 12, ../scss/_opr.scss */
+.opr-nav a[data-target], .opr-next, .opr-prev {
+  cursor: pointer;
+}
+
+/* line 13, ../scss/main.scss */
+body {
+  background-color: #ddd;
+  font-family: 'Varela Round', serif;
+}
+
+/* line 18, ../scss/main.scss */
+.a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+/* line 24, ../scss/main.scss */
+.a:after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 8px;
+  border-bottom: 2px solid white;
+  transition: 0.3s ease-in-out;
+}
+
+/* line 32, ../scss/main.scss */
+.a:hover:after {
+  width: 100%;
+}
+
+/* line 35, ../scss/main.scss */
+#nav-main {
+  position: fixed;
+  right: 0;
+  z-index: 999;
+  padding: 20px;
+  margin: 20px;
+  border: 4px solid white;
+}
+
+/* line 43, ../scss/main.scss */
+#nav-main li {
+  float: left;
+}
+
+/* line 46, ../scss/main.scss */
+#nav-main li + li {
+  margin-left: 20px;
+}
+
+/* line 49, ../scss/main.scss */
+.first {
+  background-color: #11CC88;
+}
+
+/* line 52, ../scss/main.scss */
+.second {
+  background-color: #FFB242;
+}
+
+/* line 55, ../scss/main.scss */
+.third {
+  background-color: #418AD0;
+}
+
+/* line 58, ../scss/main.scss */
+.fourth {
+  background-color: #FF6342;
+}
+
+.fifth {
+  background-color: #9b59b6;
+}
+
+.sixth {
+  background-color: #1abc9c;
+}
+/* line 62, ../scss/main.scss */
+.opr-next {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  box-shadow: 4px 4px 0 white;
+  transform: translate(-50%, 0) rotate(45deg);
+  cursor: pointer;
+}
+.opr-next1 {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  box-shadow: 4px 4px 0 white;
+  transform: translate(-50%, 0) rotate(45deg);
+  cursor: pointer;
+}
+.grid {
+    padding: 5vh;
+}
+@media all and (min-width: 768px) {
+    .m-nav {
+    display: none;
+  }
+}
+
+
+@media all and (max-width: 768px) {
+  #nav-main {
+    visibility: hidden;
+  }
+    .opr-next {
+        visibility: hidden;
+    }
+  .m-nav {
+    display: inline;
+  }
+  
+}
+
+.components {
+    padding-top: 15vh;
+}
+.light, .dark {
+    font-size: 2vh;
+}
+.mega {
+    font-size: 10vh;
+}
+.love {
+  font-size: 12px;
+  text-align: center;
+}
+.love a {
+  color: black;
+  text-decoration: none;
+}
+.love .fa {
+  color: #E90606;
+  margin: 0 3px;
+  font-size: 10px;
+  animation: pound 0.35s infinite alternate;
+  -webkit-animation: pound 0.35s infinite alternate;
+}
+
+@-webkit-keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}

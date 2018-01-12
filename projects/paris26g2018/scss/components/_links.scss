@@ -1,0 +1,316 @@
+a {
+    &:link,
+    &:visited,
+    &:active {
+        color: qtr-color();
+        text-decoration: none;
+        transition: all 300ms;
+    }
+    &:hover {
+        color: qtr-color(-4);
+    }
+    &.link-highlight {
+        box-shadow: inset 0 -0.4em 0 qtr-color(5);
+        &:hover {
+            box-shadow: inset 0 -1em 0 qtr-color(5);
+        }
+    }
+    &.link-logo {
+        &>img {
+            height: 25px;
+            width: auto;
+            &[src*="logo-forge-js.svg"] {
+                position: relative;
+                top: -3px;
+                left: 15px;
+            }
+        }
+    }
+    &.link-soft {
+        opacity: 0.5;
+        text-decoration: underline;
+        font-weight: bold;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &.link-forge-js {
+        display: block;
+        width: 64px;
+        height: 64px;
+        background-image: url('../../img/logo-forge-js-drop.svg');
+        background-repeat: no-repeat;
+        background-size: 30%;
+        background-position: center;
+        color: transparent;
+        user-select: none;
+        &.black {
+            background-image: url('../../img/logo-forge-js.svg');
+            background-size: contain;
+            width: inherit;
+        }
+    }
+    &.link-description {
+        color: qtr-color();
+        font-family: qtr-font-family(1);
+        text-transform: uppercase;
+        font-size: qtr-font-size(-6);
+        display: inline-block;
+        background-color: qtr-color(6);
+        vertical-align: middle;
+        padding: 0.3em 1em;
+        line-height: 1.0em;
+        &:hover {
+            background-color: qtr-color();
+            color: qtr-color(6);
+        }
+    }
+    &.link-social {
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 100%;
+        vertical-align: middle;
+        color: white;
+        img {
+            height: 4em;
+            width: auto;
+        }
+        &.link-facebook {
+            background-color: #3b5897;
+        }
+        &.link-twitter {
+            background-color: #54acee;
+        }
+        &.link-google {
+            background-color: #dc4e40;
+        }
+        &.link-pinterest {
+            background-color: #cb2128;
+        }
+        &.link-copy {
+            background-color: #f2f2f2;
+            img {
+                transform: scale(0.5);
+            }
+        }
+        &:focus {
+            overflow: hidden;
+            &>span {
+                &.tooltip-content {
+                    display: none;
+                }
+            }
+        }
+    }
+    &.link-toolbar {
+        pointer-events: auto;
+        transition: all 300ms;
+        position: relative;
+        background-color: qtr-color();
+        color: qtr-color(6);
+        height: 54px;
+        text-align: center;
+        box-sizing: border-box;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.inline-flex {
+            display: inline-flex;
+            height: 54px;
+            width: 44px;
+        }
+        &:after {
+            content: '';
+            transition: all 300ms;
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            width: 10px;
+            height: 10px;
+            margin-top: -5px;
+            background-color: qtr-color(6);
+            transform: rotate(45deg);
+            z-index: -1;
+            // display: none; // enabled/disable
+            visibility: hidden;
+        }
+        &.inactive {
+            pointer-events: none;
+            opacity: 0.3;
+            &:after {
+                // display: none;
+                // visibility: hidden;
+            }
+        }
+        &[href="#home"] {
+            background-image: url('../../img/logo-mask-paris-26.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 400%;
+            opacity: 1;
+            display: block;
+            box-sizing: border-box;
+            padding-bottom: 100%;
+            text-align: center;
+            cursor: pointer;
+            transition: background-size 300ms;
+            &:hover {
+                background-size: 300%;
+            }
+        }
+        &[href="#toggle"] {
+            display: none;
+        }
+        &.active {
+            background-color: qtr-color(6);
+            color: qtr-color();
+            &:after {
+                right: -5px;
+                visibility: visible;
+            }
+        }
+    }
+    @include qtr-screen(xs,sm){
+        &.link-toolbar {
+            font-size: qtr-font-size();
+            background-color: transparent;
+            text-shadow: 0px 0px 5px rgba(black,0.3);
+            &:after {
+                display: none;
+            }
+            &:active,
+            &:focus {
+                color: qtr-color(6);
+            }
+            &:after {
+                display: none;
+            }
+            &.active {
+                background-color: transparent;
+                color: qtr-color(6);
+                &:after {
+                    display: none;
+                }
+            }
+            &[href="#home"] {
+                display: block;
+                left: 64px;
+                width: 7em;
+                border-left: 1px solid qtr-color();
+                padding: 0;
+                background-size: 300%;
+                height: 54px;
+                &:hover {
+                    background-size: 300%;
+                }
+            }
+            &[href="#toggle"] {
+                display: flex;
+                text-shadow: none;
+                background-color: qtr-color(6);
+                color: qtr-color();
+            }
+            &.hideable {
+                left: -100%;
+                &.visible {
+                    left: 0%;
+                }
+            }
+        }
+    }
+    &.link-button {
+        display: inline-block;
+        background-color: qtr-color();
+        color: qtr-color(6);
+        padding: 10+$qtr_font_size_unit 20+$qtr_font_size_unit;
+        text-transform: uppercase;
+        font-family: qtr-font-family(1);
+        font-size: qtr-font-size(-5);
+        text-decoration: none;
+        transition: all 800ms;
+        box-shadow: 0px 0px 0px 0px rgba(black,0);
+        &>span {
+            font-family: qtr-font-family(1);
+        }
+        &.icon {
+            background-color: transparent;
+            color: qtr-color(6);
+            line-height: 0;
+            padding: 15px;
+            font-size: qtr-font-size(1);
+            text-shadow: 0px 0px 5px black;
+            &>span {
+                display: inline-block;
+                transition: all 300ms;
+                transform: rotate(0deg);
+            }
+            &:hover {
+                &>span {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        &.neutral {
+            background-color: desaturate(qtr-color(), 100);
+            color: qtr-color(6);
+        }
+        &.text {
+            font-family: qtr-font-family(1);
+            background-color: transparent;
+            color: qtr-color(6);
+            padding: 1em 2em;
+            border: 2px solid qtr-color(6);
+            border-radius: 4px;
+        }
+        &.size-xl {
+            padding: 1.5em 4em;
+            font-size: qtr-font-size(-2);
+            line-height: 0;
+        }
+        &:hover {
+            box-shadow: 0px 0px 10px 0px rgba(black,0.3);
+            background-color: qtr-color(1);
+        }
+        @include qtr-screen(xs,sm){
+            &.size-xl {
+                font-size: qtr-font-size(-5);
+            }
+        }
+    }
+    &.link-language {
+        color: qtr-color(6);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: qtr-font-size(-3);
+    }
+    &.link-icon {
+        color: qtr-color(6);
+        text-shadow: 0px 0px 3px black;
+        &:hover {
+            color: qtr-color(4);
+        }
+    }
+    &.link-transparent {
+        color: transparent;
+        user-select: none;
+        &:hover,
+        &:active,
+        &:visited {
+            color: transparent;
+        }
+    }
+}
+
+
+html {
+    &.touch {
+        a {
+            &.link-icon {
+                &:hover {
+                    color: qtr-color(6);
+                }
+            }
+        }
+    }
+}

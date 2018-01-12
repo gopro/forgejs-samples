@@ -1,0 +1,65 @@
+.btn {
+    padding: 0.5em 0.75em;
+    border:none;
+    font-size: 0.9+$qtr_font_size_unit;
+    text-decoration: none;
+    transition: background-color $qtr_transition_time, color $qtr_transition_time;
+    //Colors
+    &.btn-default {
+        background-color: qtr-color(6);
+        color: qtr-color();
+        &:hover {
+            background-color: qtr-color(5);
+        }
+    }
+    &.btn-primary {
+        border: 3px solid qtr-color(6);
+        color: qtr-color(6);
+        text-transform: uppercase;
+        font-family: qtr-font-family(1);
+        transition: all $qtr_transition_time;
+        &:hover {
+            border-color: qtr-color(2);
+            color: qtr-color(2);
+        }
+        &.invert {
+            border-color: qtr-color();
+            color: qtr-color();
+            &:hover {
+                color: qtr-color(2);
+                border-color: qtr-color(2);
+            }
+        }
+    }
+    &.btn-filled {
+        border: 3px solid qtr-color();
+        color: qtr-color(6);
+        background-color: qtr-color();
+        text-transform: uppercase;
+        font-family: qtr-font-family(1);
+        transition: all $qtr_transition_time;
+        &:hover {
+            border-color: qtr-color(2);
+            background-color: qtr-color(2);
+        }
+        &.invert {
+            background-color: qtr-color(2);
+            border-color: qtr-color(2);
+            &:hover {
+                background-color: qtr-color(2);
+                border-color: qtr-color(2);
+            }
+        }
+    }
+    //Sizes
+    &.btn-xs {
+        padding: 0.4em 1.5em;
+        font-size: 0.5 + $qtr_font_size_unit;
+    }
+    &.btn-lg {
+        font-size: 1.2 + $qtr_font_size_unit;
+    }
+    &.btn-xl {
+        font-size: 1.4 + $qtr_font_size_unit;
+    }
+}

@@ -1,0 +1,136 @@
+body {
+    //Notification bars
+    .notification-bar {
+        $gap: 0;
+        display: none;
+        position: fixed;
+        box-sizing: border-box;
+        bottom: $gap+px;
+        left: $gap+px;
+        width: calc(100% - #{$gap * 2}px);
+        padding: 0.5em 1em;
+        z-index: 1000;
+        &.active {
+            display: inherit;
+        }
+        &>p {
+            &.flex {
+                display: flex;
+                align-items: center;
+                margin: 0;
+                &>span {
+                    padding-left: 0.5em;
+                    padding-right: 0.5em;
+                    a {
+                        white-space: nowrap;
+                    }
+                    &.fill {
+                        width: 100%;
+                    }
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+        &.cookies {
+            background-color: qtr-color(5);
+            color: qtr-color();
+            font-size: qtr-font-size(-4);
+            text-align: justify;
+            .fill {
+                [lang] {
+                    &.active {
+                        display: inline;
+                    }
+                }
+            }
+            .full-text {
+                display: none;
+                overflow: auto;
+                max-height: 50vh;
+                &.active {
+                    display: block;
+                    p {
+                        &[lang] {
+                            &.active {
+                                display: block;
+                                margin-bottom: 1em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.popup {
+            @include qtr-keyframe(autohide){
+                0%      { transform: translateX(calc(100% + 84px)); opacity: 0; }
+                10%     { transform: translateX(0px); opacity: 1; }
+                80%     { transform: translateX(0px); opacity: 1; }
+                100%    { transform: translateX(0px) translateY(calc(-100% - 20px)); opacity: 0; }
+            }
+            @include qtr-keyframe(dismissable){
+                0%      { transform: translateX(calc(100% + 84px)); opacity: 0; }
+                100%    { transform: translateX(0px); opacity: 1; }
+            }
+            position: fixed;
+            top: 20px;
+            right: 84px;
+            max-width: 500px;
+            bottom: inherit;
+            left: inherit;
+            padding: 20px;
+            border-radius: 3px;
+            z-index: 1000;
+            width: auto;
+            height: auto;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            cursor: pointer;
+            &.dismissable {
+                animation-name: dismissable;
+                animation-duration: 500ms;
+            }
+            &.autohide {
+                animation-name: autohide;
+                animation-duration: 4s;
+                animation-play-state: running;
+                &:hover {
+                    animation-play-state: paused;
+                }
+            }
+            &.success {
+                background-color: #76b734;
+                color: white;
+            }
+            &.warning {
+                background-color: orange;
+                color: white;
+            }
+            &.alert {
+                background-color: red;
+                color: white;
+            }
+            &>p {
+                display: flex;
+                align-items: center;
+                margin: 0;
+                &>span {
+                    &:first-child {
+                        margin-right: 1em;
+                    }
+                }
+            }
+        }
+        @include qtr-screen(xs,sm){
+            &.popup {
+                top: 74px;
+                right: 20px;
+                max-width: calc(100vw - 40px);
+            }
+        }
+    }
+}

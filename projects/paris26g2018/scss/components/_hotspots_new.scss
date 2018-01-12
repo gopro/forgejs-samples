@@ -1,0 +1,550 @@
+body {
+    //Hotspots
+    .hotspot {
+        width: auto;
+        height: auto;
+        &.easter-egg {
+            .hotspot-zone {
+                display: none;
+            }
+            &.active {
+                .hotspot-zone {
+                    display: inherit;
+                }
+            }
+        }
+        //Main properties
+        .hotspot-zone {
+            $width: 3;
+            $height: 3;
+            perspective: 1000px;
+            padding: 0;
+            position: relative;
+            top: -1 * $width / 2+em;
+            left: -1 * $height / 2+em;
+            transition: all 300ms;
+            &>input {
+                display: none;
+            }
+            //The spot
+            &>.media {
+                position: absolute;
+                text-align: center;
+                top: 0;
+                left: 0;
+                // overflow: hidden;
+                padding: 0;
+                margin: 0;
+                width: $width+em;
+                height: $height+em;
+                &>.centered {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    //Content of the spot
+                    &>.content {
+                        display: table-cell;
+                        vertical-align: middle;
+                        line-height: 0;
+                        //Spot center
+                        &:before, &:after {
+                        }
+                        &:after {
+                        }
+                    }
+                }
+                //Spot border
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            //Content displayed/hidden after click
+            &>.content {
+                pointer-events: none;
+                opacity: 0;
+                perspective: 1000px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20em;
+                // max-height: 25em;
+                overflow: auto;
+                opacity: 0;
+                padding: 0;
+                &>p {
+                    margin: 0;
+                    padding: 0;
+                }
+                h1, h2, h3, h4, h5, h6 {
+                    margin: 0;
+                    padding: 0;
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+                &>.padded {
+                    padding: 2em;
+                }
+            }
+        }//END HOTSPOT ZONE
+
+
+        &:focus {
+            outline: none;
+        }
+        //Toggle system
+        &.active {
+            z-index: 1000;
+            // cursor: pointer;
+            .hotspot-zone {
+                //Active Spot
+                &>.media {
+                    &>.centered {
+                        &>.content {
+
+                        }
+                    }
+                }
+                &>.content {
+                    pointer-events: auto;
+                    opacity: 1;
+                }
+                //Active Hovered spot
+                &:hover {
+                    //Hovered spot
+                    &>.media {
+                        &>.centered {
+                            //Hovered spot media
+                            &>.content {
+                                &:before {
+                                }
+                                &:after {
+                                }
+                            }
+                        }
+                        //Hovered spot border
+                        &:after {
+                        }
+                    }
+                }
+            }
+        }
+
+        //Hide gun
+        &.media-style__cache {
+            .hotspot-zone {
+                display: none;
+                opacity: 0;
+                left: -50%;
+                top: -50%;
+                position: absolute;
+                pointer-events: none;
+                visibility: hidden;
+                transform: translateY(-50%) translateX(-50%);
+            }
+            &.active {
+                .hotspot-zone {
+                    display: inherit;
+                    visibility: visible;
+                    pointer-events: auto;
+                    opacity: 1;
+                }
+            }
+        }
+
+        //Spot Media style
+        &.media-style__primary {
+            .hotspot-zone {
+                &>.media {
+                    @include qtr-keyframe(mainGigaHotspotAnim){
+                        0% {
+                            background-color: rgba(qtr-color(6),0.4);
+                        }
+                        100% {
+                            background-color: rgba(qtr-color(6),0.75);
+                        }
+                    }
+                    animation-name: mainGigaHotspotAnim;
+                    animation-duration: 3s;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+
+                    border-radius: 100%;
+                    // background-color: rgba(white,0.5);
+                    // border: 2px solid qtr-color(6);
+                    transition: all 800ms;
+                    border: 0vmax solid rgba(qtr-color(),0);
+                    &>.centered {
+                        &>.content {
+                            &:before {
+
+                            }
+                        }
+                    }
+                    &:after {
+                        @include qtr-keyframe(secondaryGigaHotspotAnim){
+                            0% {
+                                transform: rotate(0deg);
+                            }
+                            100% {
+                                transform: rotate(360deg);
+                            }
+                        }
+                        animation-name: secondaryGigaHotspotAnim;
+                        animation-duration: 25s;
+                        animation-iteration-count: infinite;
+                        animation-direction: alternate-reverse;
+                        animation-timing-function: linear;
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: -20px;
+                        left: -20px;
+                        width: calc(100% + 40px);
+                        height: calc(100% + 40px);
+                        border: 1px dashed qtr-color(6);
+                        border-radius: 100%;
+                        box-sizing: border-box;
+                    }
+                    &:hover {
+                        &:after {
+                            animation-play-state: paused;
+                        }
+                    }
+                }
+            }
+            &.active {
+                .hotspot-zone {
+                    &>.media {
+                        border-radius: 100% 0% 100% 100%;
+                        pointer-events: none;
+                        box-sizing: content-box;
+                        border: 100vmax solid rgba(qtr-color(),.8);
+                        background-color: transparent;
+                        // transform: translateX(-50%) translateY(-50%);
+                        left: calc(-100vmax - 7.5em);
+                        top: calc(-100vmax - 7.5em);
+                        width: 25vmin;
+                        height: 25vmin;
+                        animation-name: none;
+                        &>.centered {
+                            &>.content {
+                                opacity: 0;
+                                transform: rotate(-135deg);
+                            }
+                        }
+                        &:after {
+                            animation-name: none;
+                            border: none;
+                        }
+                    }
+                    @include qtr-screen(xs,sm,md,lg){
+                        &>.media {
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+            }
+        }
+
+        //Content style
+        &.content-style__primary {
+            .hotspot-zone {
+                &>.content {
+                    // background-color: qtr-color();
+                    color: qtr-color(6);
+                    // background-color: rgba(qtr-color(6),.75);
+                    transition: all 300ms;
+                    // transform: translateY(calc(-200% - 2em)) translateX(calc(-50% + 2.5em));
+                    overflow: inherit;
+                    width: calc(50vw - 25vmin);
+                    left: calc(12.5vmin + 2em);
+                    box-sizing: border-box;
+                    max-width: 26em;
+                    line-height: 1.5em;
+                    font-size: qtr-font-size(0);
+                    hr {
+                        &.separator {
+                            visibility: hidden;
+                        }
+                    }
+                    a[href="#learn-more"] {
+                        display: block;
+                        position: relative;
+                        line-height: 0;
+                        margin: 0px 0px 24px 0px;
+                        &>img {
+                            transition: all 800ms;
+                        }
+                        &>span {
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            text-align: center;
+                            line-height: 1em;
+                            z-index: 1;
+                            transition: all 1200ms;
+                            transform: translateX(-50%) translateY(-50%);
+                            &>span {
+                                @include qtr-keyframe(pump){
+                                    0% { opacity: 1; }
+                                    100% { opacity: 0.5; }
+                                }
+                                color: qtr-color(6);
+                                &[class^="icon-"] {
+                                    font-size: qtr-font-size(5);
+                                    // @include qtr-animation(pump,0s,1s,infinite);
+                                    animation-direction: alternate;
+                                }
+                                &.text {
+                                    display: block;
+                                    font-family: qtr-font-family(1);
+                                    text-transform: uppercase;
+                                }
+                            }
+                        }
+                        &:after {
+                            transition: all 800ms;
+                            content: '';
+                            padding-top: 1em;
+                            display: block;
+                            position: absolute;
+                            width: 100%;
+                            box-sizing: border-box;
+                            height: 100%;
+                            top: 0;
+                            background-color: rgba(qtr-color(),0.5);
+                        }
+                        &:hover {
+                            &>img,
+                            &:after {
+                                transform: scale(0.9);
+                            }
+                            &>span {
+                                transform: translateX(-50%) translateY(-100%);
+                            }
+                        }
+                    }
+
+                    &>.toolbar {
+                        transition: all 800ms;
+                        position: absolute;
+                        top: -2em;
+                        left: -3em;
+                        padding: 0;
+                        font-size: qtr-font-size();
+                        color: qtr-color(6);
+                        width: 3em;
+                        height: 100%;
+                        &>a {
+                            display: block;
+                            padding: 0.5em 1em;
+                            border-bottom: 1px solid rgba(qtr-color(), .2);
+                            &:last-child {
+                                border-bottom: none;
+                            }
+                            &[href="#toggle-visible"] {
+                                display: none;
+                            }
+                        }
+                    }
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        transition: all 800ms;
+                        left: 0;
+                        top: -100px;
+                        width: 1px;
+                        height: 100%;
+                        background-color: qtr-color(6);
+                    }
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                    h2 {
+                        font-size: qtr-font-size(4);
+                        line-height: 1em;
+                        padding: 0px 24px 24px 0px;
+                        letter-spacing: -0.03em;
+                        transition: all 800ms;
+                        &:after {
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 1px;
+                            background-color: qtr-color(6);
+                            margin-top: 24px;
+                        }
+                    }
+                    p {
+                        margin: 0;
+                        padding: 0;
+                        a {
+                            // font-size: qtr-font-size();
+                            // color: qtr-color(6);
+                        }
+                        &[lang] {
+                            // white-space: nowrap;
+                            // text-overflow: ellipsis;
+                            // overflow: hidden;
+                            // width: 100%;
+                            max-height: 50vh;
+                            overflow: auto;
+                            position: relative;
+                            padding-right: 24px;
+                            text-align: justify;
+                        }
+                    }
+                    .padded {
+                        padding: 0px 24px;
+                        // display: none;
+                    }
+                }
+                @include qtr-screen(md,lg){
+                    &>.content {
+                        width: 26em;
+                        left: -12.5vmin;
+                    }
+                    @media all and (orientation:landscape) {
+                        &>.content {
+
+                            &>.toolbar {
+
+                            }
+                            &:after {
+
+                            }
+                        }
+                    }
+                }
+                @include qtr-screen(xs,sm){
+                    &>.content {
+                        left: calc(50% - 35vw);
+                        width: 70vw;
+                        max-width: initial;
+                        padding: 0;
+                        font-size: qtr-font-size(-3);
+                        &>.toolbar {
+                            right: -3em;
+                            left: initial;
+                        }
+                        &:after {
+                            right: 0;
+                            left: initial;
+                        }
+                        h2 {
+                            display: none;
+                        }
+                        p {
+                            &[lang] {
+                                max-height: calc(85vh - 74px);
+                                padding-right: 0;
+                                text-align: left;
+
+                            }
+                        }
+                        a[href="#learn-more"] {
+                            &>span {
+                                &>span {
+                                    &.text {
+                                        font-size: qtr-font-size(-3);
+                                    }
+                                }
+                            }
+                        }
+                        .padded {
+                            padding: 0px 24px 0px 0px;
+                        }
+                    }
+                    @media all and (orientation:landscape) {
+                        &>.content {
+
+                            &>.toolbar {
+
+                            }
+                            &:after {
+
+                            }
+                        }
+                    }
+                }
+                @include qtr-screen(sm){
+                    &>.content {
+                        p {
+                            &[lang] {
+                                &>a {
+                                    &[href="#learn-more"] {
+                                        width: 50%;
+                                        float: left;
+                                        margin: 0px 24px 0px 0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.active {
+                .hotspot-zone {
+                    top: 0;
+                    left: 0;
+                    &>.content {
+                        top: calc(-12.5vmin - 10em);
+                        &>.toolbar {
+                            top: 0em;
+                        }
+                        &:after {
+                            top: 0px;
+                        }
+                    }
+                    @include qtr-screen(xs,sm){
+                        &>.content {
+                            top: calc(-50vh + 74px);
+                        }
+                    }
+                    @include qtr-screen(md,lg){
+                        &>.content {
+                            top: calc(-50vh + 74px);
+                        }
+                    }
+                }
+            }
+            &[id^="hotspot-dom-01"], [id*=" hotspot-dom-01"]{
+                .hotspot-zone {
+                    &>.content {
+                        &>.toolbar {
+                            [href="#previous-poi"] {
+                                pointer-events: none;
+                                opacity: 0.2;
+                            }
+                        }
+                    }
+                }
+            }
+            &[id^="hotspot-dom-20"], [id*=" hotspot-dom-20"]{
+                .hotspot-zone {
+                    &>.content {
+                        &>.toolbar {
+                            [href="#next-poi"] {
+                                pointer-events: none;
+                                opacity: 0.2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Feather.js",
+  "version": "0.0.0",
+  "description": "A lightweight library to select DOM elements",
+  "main": "/dist/js/feather.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/KingPixil/Feather.git"
+  },
+  "keywords": [
+    "Select DOM",
+    "Feather",
+    "js"
+  ],
+  "author": "Kabir Shah <simplecooldude1@gmail.com> (http//kingpixil.github.io/Me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KingPixil/Feather/issues"
+  }
+}

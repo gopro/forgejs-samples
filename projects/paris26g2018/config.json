@@ -1,0 +1,2047 @@
+{
+
+    "controllers":
+    {
+        "instances":
+        [
+            {
+                "uid": "pointer",
+                "type": "pointer",
+                "options":
+                {
+                    "orientation": {
+                        "drag": true
+                    },
+                    "zoom": {
+                        "toPointer": true
+                    },
+                    "fullscreen": false
+                }
+            },
+            {
+                "uid": "keyboard",
+                "type": "keyboard"
+            }
+        ]
+    },
+
+    "history":
+    {
+        "enabled": false
+    },
+
+    "camera":
+    {
+        "instances":
+        [
+            {
+                "uid": "pointer",
+                "type": "pointer",
+                "options":
+                {
+                    "orientation": {
+                        "drag": true
+                    }
+                }
+            }
+        ]
+    },
+
+    "viewer":
+    {
+        "webgl":
+            {
+                "preserveDrawingBuffer": true
+            }
+    },
+
+    "story":
+    {
+        "uid": "paris-26gp-story",
+        "name": "Paris 26 gigapixels Story",
+        "slug": "paris26-story",
+        "description": "Interactive view of the most beautiful monuments of Paris.",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "paris",
+                "name": "Paris",
+                "slug": "paris",
+                "description": "Partial multiresolution panoramic image of Paris",
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 24.238,
+                        "min": 0.7705,
+                        "max": 40
+                    },
+
+                    "yaw":
+                    {
+                        "default": -18.8,
+                        "min": -114.05,
+                        "max":  114.05
+                    },
+
+                    "pitch":
+                    {
+                        "default": -5.2,
+                        "min": -41.95,
+                        "max": 6.95
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "preview": {
+                        "url": "https://cdn.forgejs.org/samples/multiresolution/paris26g/preview/{face}.jpg",
+                        "tile": 2048
+                    },
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/multiresolution/paris26g/{face}/{level}/{y}/{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "level-1",
+                                "width": 3072,
+                                "height": 3072,
+                                "tile": 512,
+                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/paris26g/{face}/{level}/{y}_{x}.jpg"
+                            },
+
+                            {
+                                "name": "level-2",
+                                "width": 5632,
+                                "height": 5632,
+                                "tile": 512,
+                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/paris26g/{face}/{level}/{y}_{x}.jpg"
+                            },
+
+                            {
+                                "name": "level-3",
+                                "width": 11264,
+                                "height": 11264,
+                                "tile": 512,
+                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/paris26g/{face}/{level}/{y}_{x}.jpg"
+                            },
+
+                            {
+                                "name": "level-4",
+                                "width": 22528,
+                                "height": 22528,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-5",
+                                "width": 44544,
+                                "height": 44544,
+                                "tile": 512
+                            },
+
+                            {
+                               "name": "level-6",
+                                "width": 88576,
+                                "height": 88576,
+                                "tile": 512
+                            },
+
+                            {
+                               "name": "level-7",
+                                "width": 176640,
+                                "height": 176640,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                },
+
+
+                "hotspots":
+                [
+                    {
+                        "uid": "hotspot-dom-cache",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-cache"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": 29.113842543820446,
+                                "phi": -35.088784081285084
+                            }
+                        }
+                    },
+                    {
+                        "uid": "hotspot-dom-easter-egg-reblochon",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-easter-egg-reblochon",
+                            "class": [ "media-style__easter-egg"]
+                        },
+
+                        "events":{
+                            "onClick": "easterEgg_reblochon"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -17.97331848138829,
+                                "phi": -36.48614130774447
+                            }
+                        }
+                    },
+                    {
+                        "uid": "hotspot-dom-easter-egg-ovni",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-easter-egg-ovni",
+                            "class": [ "media-style__easter-egg"]
+                        },
+
+                        "events":{
+                            "onClick": "easterEgg_ovni"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": 76.25825895217281,
+                                "phi": 6.03811805210122
+                            }
+                        }
+                    },
+                    {
+                        "uid": "hotspot-dom-easter-egg-tortue",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-easter-egg-tortue",
+                            "class": [ "media-style__easter-egg"]
+                        },
+
+                        "events":{
+                            "onClick": "easterEgg_tortue"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -33.544400674007214,
+                                "phi": -13.313836139075569
+                            }
+                        }
+                    },
+                    {
+                        "uid": "hotspot-dom-easter-egg-team",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-easter-egg-team",
+                            "class": [ "media-style__easter-egg"]
+                        },
+
+                        "events":{
+                            "onClick": "easterEgg_team"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -82.07452108258549,
+                                "phi": -12.062552784590402
+                            }
+                        }
+                    },
+                    {
+                        "uid": "hotspot-dom-easter-egg-marmotte",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-easter-egg-marmotte",
+                            "class": [ "media-style__easter-egg"]
+                        },
+
+                        "events":{
+                            "onClick": "easterEgg_marmotte"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -66.05246936843554,
+                                "phi": -21.84537690624756
+                            }
+                        }
+                    },
+                    {
+                        "uid": "hotspot-dom-easter-egg-grenouille",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-easter-egg-grenouille",
+                            "class": [ "media-style__easter-egg"]
+                        },
+
+                        "events":{
+                            "onClick": "easterEgg_grenouille"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -50.794738767970124,
+                                "phi": -21.695324023030583
+                            }
+                        }
+                    },
+                    {
+                        "uid": "hotspot-dom-easter-egg-plaque",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-easter-egg-plaque",
+                            "class": [ "media-style__easter-egg"]
+                        },
+
+                        "events":{
+                            "onClick": "easterEgg_plaque"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": 0.8730910858899684,
+                                "phi": -9.802741454522154
+                            }
+                        }
+                    },
+                    {
+                        "uid": "hotspot-dom-easter-egg-publicite",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-easter-egg-publicite",
+                            "class": [ "media-style__easter-egg"]
+                        },
+
+                        "events":{
+                            "onClick": "easterEgg_publicite"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": 0.588852535896853,
+                                "phi": -3.2081624881142443
+                            }
+                        }
+                    },
+                    {
+                        "uid": "hotspot-dom-easter-egg-feu",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-easter-egg-feu",
+                            "class": [ "media-style__easter-egg"]
+                        },
+
+                        "events":{
+                            "onClick": "easterEgg_feu"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": 1.2135669601361578,
+                                "phi": -2.8239205912434944
+                            }
+                        }
+                    },
+                    {
+                        "uid": "hotspot-dom-easter-egg-pi",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-easter-egg-pi",
+                            "class": [ "media-style__easter-egg"]
+                        },
+
+                        "events":{
+                            "onClick": "easterEgg_pi"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": 60.0018079024584,
+                                "phi": -18.030562125316482
+                            }
+                        }
+                    },
+                    {
+                        "uid": "hotspot-dom-01-eiffel-tower",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-01-eiffel-tower",
+                            "class": [ "media-style__primary", "content-style__primary" ]
+                        },
+
+                        "events":{
+                            "onClick": "clickSpot01"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -103.28234811660693,
+                                "phi": 4.247546530405285
+                            }
+                        }
+                    },
+                    {
+                        "uid": "hotspot-dom-02-invalids",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-02-invalids",
+                            "class": [ "media-style__primary", "content-style__primary" ]
+                        },
+
+                        "events":{
+                            "onClick": "clickSpot02"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -103.37303098590493,
+                                "phi": -0.3593657800651679
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-03-defense",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-03-defense",
+                            "class": [ "media-style__primary", "content-style__primary" ]
+                        },
+
+                        "events":{
+                            "onClick": "clickSpot03"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -84.50128101837626,
+                                "phi": 0.22646401895569757
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-04-triumphal-arch",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-04-triumphal-arch",
+                            "class": [ "media-style__primary", "content-style__primary" ]
+                        },
+
+                        "events":{
+                            "onClick": "clickSpot04"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -75.77923718452732,
+                                "phi": -0.25372218190090373
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-05-great-palace",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-05-great-palace",
+                            "class": [ "media-style__primary", "content-style__primary" ]
+                        },
+
+                        "events":{
+                            "onClick": "clickSpot05"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -70.62337073920226,
+                                "phi": -1.0451113481118803
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-06-orsay-museum",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-06-orsay-museum",
+                            "class": [ "media-style__primary", "content-style__primary" ]
+                        },
+
+                        "events":{
+                            "onClick": "clickSpot06"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -54.68264837441932,
+                                "phi": -2.5036821379097685
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-07-palais-garnier",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-07-palais-garnier",
+                            "class": [ "media-style__primary", "content-style__primary" ]
+                        },
+
+                        "events":{
+                            "onClick": "clickSpot07"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -29.594013020339375,
+                                "phi": -0.5801597851921418
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-09-louvre-museum",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-09-louvre-museum",
+                            "class": [ "media-style__primary", "content-style__primary" ]
+                        },
+
+                        "events":{
+                            "onClick": "clickSpot09"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -21.12944020603937,
+                                "phi": -2.0939788861565036
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-10-basilica-sacred-heart",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-10-basilica-sacred-heart",
+                            "class": [ "media-style__primary", "content-style__primary" ]
+                        },
+
+                        "events":{
+                            "onClick": "clickSpot10"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": -15.29432996545672,
+                                "phi": 1.4022739003301679
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-13-pompidou-center",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-13-pompidou-center",
+                            "class": [ "media-style__primary", "content-style__primary" ]
+                        },
+
+                        "events":{
+                            "onClick": "clickSpot13"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": 30.325283656206338,
+                                "phi": -0.2016481144400114
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-16-city-hall",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-16-city-hall",
+                            "class": [ "media-style__primary", "content-style__primary" ]
+                        },
+
+                        "events":{
+                            "onClick": "clickSpot16"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": 44.25545711876702,
+                                "phi": -0.4382420276654248
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-17-notre-dame-cathedral",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-17-notre-dame-cathedral",
+                            "class": [ "media-style__primary", "content-style__primary" ]
+                        },
+
+                        "events":{
+                            "onClick": "clickSpot17"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": 57.55194895633712,
+                                "phi": -0.060215851675962655
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-18-church-saint-sulpice",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-18-church-saint-sulpice",
+                            "class": [ "media-style__primary", "content-style__primary" ]
+                        },
+
+                        "events":{
+                            "onClick": "clickSpot18"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": 73.40096059672635,
+                                "phi": -26.806891129444463
+                            }
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-dom-20-pantheon",
+                        "interactive": false,
+                        "type": "dom",
+
+                        "dom":
+                        {
+                            "id": "hotspot-dom-20-pantheon",
+                            "class": [ "media-style__primary", "content-style__primary" ]
+                        },
+
+                        "events":{
+                            "onClick": "clickSpot20"
+                        },
+
+                        "transform":
+                        {
+                            "position": {
+                                "theta": 103.65250965525608,
+                                "phi": 2.2474840277792576
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "uid": "01",
+                "name": "La Tour Eiffel",
+                "slug": "tour-eiffel",
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 60,
+                        "min": 40,
+                        "max": 80
+                    },
+                    "yaw":
+                    {
+                        "default": -10
+                    },
+                    "pitch":
+                    {
+                        "default": 9
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-01",
+                    "type": "image",
+                    "preview": {
+                        "url": "https://cdn.forgejs.org/samples/paris2018/tiles/01/mobile/{face}.jpg",
+                        "tile": 1024
+                    },
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/paris2018/tiles/01/{face}/{level}/{y}_{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "level-0",
+                                "width": 1536,
+                                "height": 1536,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-1",
+                                "width": 2560,
+                                "height": 2560,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-2",
+                                "width": 4608,
+                                "height": 4608,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "uid": "02",
+                "name": "L'Hôtel National des Invalides",
+                "slug": "les-invalides",
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 50,
+                        "min": 30,
+                        "max": 80
+                    },
+                    "yaw":
+                    {
+                        "default": -80.67
+                    },
+                    "pitch":
+                    {
+                        "default": 8.5
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-02",
+                    "type": "image",
+                    "preview": {
+                        "url": "https://cdn.forgejs.org/samples/paris2018/tiles/02/mobile/{face}.jpg",
+                        "tile": 1024
+                    },
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/paris2018/tiles/02/{face}/{level}/{y}_{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "level-0",
+                                "width": 2048,
+                                "height": 2048,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-1",
+                                "width": 4096,
+                                "height": 4096,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "uid": "03",
+                "name": "La Défense",
+                "slug": "defense",
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 80,
+                        "min": 30,
+                        "max": 80
+                    },
+                    "yaw":
+                    {
+                        "default": -60
+                    },
+                    "pitch":
+                    {
+                        "default": 5.013
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-03",
+                    "type": "image",
+                    "preview": {
+                        "url": "https://cdn.forgejs.org/samples/paris2018/tiles/03/mobile/{face}.jpg",
+                        "tile": 1024
+                    },
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/paris2018/tiles/03/{face}/{level}/{y}_{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "level-0",
+                                "width": 2048,
+                                "height": 2048,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-1",
+                                "width": 4096,
+                                "height": 4096,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "uid": "04",
+                "name": "L'Arc de triomphe de l'Etoile",
+                "slug": "arc-de-triomphe",
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 80,
+                        "min": 66,
+                        "max": 80
+                    },
+                    "yaw":
+                    {
+                        "default": -110.59
+                    },
+                    "pitch":
+                    {
+                        "default": 10
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-04",
+                    "type": "image",
+                    "preview": {
+                        "url": "https://cdn.forgejs.org/samples/paris2018/tiles/04/mobile/{face}.jpg",
+                        "tile": 1024
+                    },
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/paris2018/tiles/04/{face}/{level}/{y}_{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "level-0",
+                                "width": 2048,
+                                "height": 2048,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "uid": "05",
+                "name": "Le Grand Palais des Champs-Elysées",
+                "slug": "grand-palais",
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 80,
+                        "min": 20,
+                        "max": 80
+                    },
+                    "yaw":
+                    {
+                        "default": -189
+                    },
+                    "pitch":
+                    {
+                        "default": 8
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-05",
+                    "type": "image",
+                    "preview": {
+                        "url": "https://cdn.forgejs.org/samples/paris2018/tiles/05/mobile/{face}.jpg",
+                        "tile": 1024
+                    },
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/paris2018/tiles/05/{face}/{level}/{y}_{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "level-0",
+                                "width": 2048,
+                                "height": 2048,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-1",
+                                "width": 3584,
+                                "height": 3584,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-2",
+                                "width": 6656,
+                                "height": 6656,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "uid": "06",
+                "name": "Le Musée d'Orsay",
+                "slug": "musee-orsay",
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 80,
+                        "min": 55,
+                        "max": 80
+                    },
+                    "yaw":
+                    {
+                        "default": 74
+                    },
+                    "pitch":
+                    {
+                        "default": -11
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-06",
+                    "type": "image",
+                    "preview": {
+                        "url": "https://cdn.forgejs.org/samples/paris2018/tiles/06/mobile/{face}.jpg",
+                        "tile": 1024
+                    },
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/paris2018/tiles/06/{face}/{level}/{y}_{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "level-0",
+                                "width": 1536,
+                                "height": 1536,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-1",
+                                "width": 2560,
+                                "height": 2560,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-2",
+                                "width": 4608,
+                                "height": 4608,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "uid": "07",
+                "name": "Opéra Garnier",
+                "slug": "opera-garnier",
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 80,
+                        "min": 40,
+                        "max": 80
+                    },
+                    "yaw":
+                    {
+                        "default": -10
+                    },
+                    "pitch":
+                    {
+                        "default": 23.5
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-07",
+                    "type": "image",
+                    "preview": {
+                        "url": "https://cdn.forgejs.org/samples/paris2018/tiles/07/mobile/{face}.jpg",
+                        "tile": 1024
+                    },
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/paris2018/tiles/07/{face}/{level}/{y}_{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "level-0",
+                                "width": 1536,
+                                "height": 1536,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-1",
+                                "width": 3072,
+                                "height": 3072,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "uid": "09",
+                "name": "Le Musée du Louvre",
+                "slug": "louvre",
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 60,
+                        "min": 20,
+                        "max": 100
+                    },
+                    "yaw":
+                    {
+                        "default": 9.5
+                    },
+                    "pitch":
+                    {
+                        "default": 8
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-09",
+                    "type": "image",
+                    "preview": {
+                        "url": "https://cdn.forgejs.org/samples/paris2018/tiles/09/mobile/{face}.jpg",
+                        "tile": 1024
+                    },
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/paris2018/tiles/09/{face}/{level}/{y}_{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "level-0",
+                                "width": 1536,
+                                "height": 1536,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-1",
+                                "width": 3072,
+                                "height": 3072,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "uid": "10",
+                "name": "La Basilique du Sacré-Coeur de Paris",
+                "slug": "basilique-sacre-coeur",
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 50,
+                        "min": 20,
+                        "max": 80
+                    },
+                    "yaw":
+                    {
+                        "default": -100
+                    },
+                    "pitch":
+                    {
+                        "default": 13
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-10",
+                    "type": "image",
+                    "preview": {
+                        "url": "https://cdn.forgejs.org/samples/paris2018/tiles/10/mobile/{face}.jpg",
+                        "tile": 1024
+                    },
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/paris2018/tiles/10/{face}/{level}/{y}_{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "level-0",
+                                "width": 1536,
+                                "height": 1536,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-1",
+                                "width": 2560,
+                                "height": 2560,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-2",
+                                "width": 5120,
+                                "height": 5120,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "uid": "13",
+                "name": "Le Centre Georges Pompidou",
+                "slug": "beaubourg",
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 80,
+                        "min": 55,
+                        "max": 80
+                    },
+                    "yaw":
+                    {
+                        "default": 28
+                    },
+                    "pitch":
+                    {
+                        "default": -2
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-13",
+                    "type": "image",
+                    "preview": {
+                        "url": "https://cdn.forgejs.org/samples/paris2018/tiles/13/mobile/{face}.jpg",
+                        "tile": 1024
+                    },
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/paris2018/tiles/13/{face}/{level}/{y}_{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "level-0",
+                                "width": 2048,
+                                "height": 2048,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "uid": "16",
+                "name": "Hôtel de Ville",
+                "slug": "hotel-de-ville",
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 80,
+                        "min": 50,
+                        "max": 80
+                    },
+                    "yaw":
+                    {
+                        "default": 26
+                    },
+                    "pitch":
+                    {
+                        "default": 8
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-16",
+                    "type": "image",
+                    "preview": {
+                        "url": "https://cdn.forgejs.org/samples/paris2018/tiles/16/mobile/{face}.jpg",
+                        "tile": 1024
+                    },
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/paris2018/tiles/16/{face}/{level}/{y}_{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "level-0",
+                                "width": 2048,
+                                "height": 2048,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-1",
+                                "width": 4096,
+                                "height": 4096,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "uid": "17",
+                "name": "La Cathédrale Notre-Dame de Paris",
+                "slug": "notre-dame",
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 80,
+                        "min": 40,
+                        "max": 80
+                    },
+                    "yaw":
+                    {
+                        "default": -6.7
+                    },
+                    "pitch":
+                    {
+                        "default": -6.33
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-17",
+                    "type": "image",
+                    "preview": {
+                        "url": "https://cdn.forgejs.org/samples/paris2018/tiles/17/mobile/{face}.jpg",
+                        "tile": 1024
+                    },
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/paris2018/tiles/17/{face}/{level}/{y}_{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "level-0",
+                                "width": 1536,
+                                "height": 1536,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-1",
+                                "width": 2560,
+                                "height": 2560,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-2",
+                                "width": 4608,
+                                "height": 4608,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "uid": "18",
+                "name": "L'Eglise Saint-Sulpice",
+                "slug": "st-sulpice",
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 80,
+                        "min": 30,
+                        "max": 80
+                    },
+                    "yaw":
+                    {
+                        "default": -68
+                    },
+                    "pitch":
+                    {
+                        "default": 17
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-18",
+                    "type": "image",
+                    "preview": {
+                        "url": "https://cdn.forgejs.org/samples/paris2018/tiles/18/mobile/{face}.jpg",
+                        "tile": 1024
+                    },
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/paris2018/tiles/18/{face}/{level}/{y}_{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "level-0",
+                                "width": 2048,
+                                "height": 2048,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-1",
+                                "width": 4096,
+                                "height": 4096,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "uid": "20",
+                "name": "Le Panthéon",
+                "slug": "pantheon",
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 60,
+                        "min": 35,
+                        "max": 80
+                    },
+                    "yaw":
+                    {
+                        "default": -140
+                    },
+                    "pitch":
+                    {
+                        "default": 7.3
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-20",
+                    "type": "image",
+                    "preview": {
+                        "url": "https://cdn.forgejs.org/samples/paris2018/tiles/20/mobile/{face}.jpg",
+                        "tile": 1024
+                    },
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/paris2018/tiles/20/{face}/{level}/{y}_{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "level-0",
+                                "width": 1536,
+                                "height": 1536,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level-1",
+                                "width": 3072,
+                                "height": 3072,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "plugins/",
+
+        "engines":
+        [
+
+        ],
+
+        "instances":
+        [
+
+        ]
+    },
+
+    "actions":[
+        {
+            "uid": "easterEgg_reblochon",
+            "target": "window",
+
+            "method":
+            {
+                "name": "easterEggStatusCheck",
+                "args": ["reblochon"]
+            }
+        },
+        {
+            "uid": "easterEgg_ovni",
+            "target": "window",
+
+            "method":
+            {
+                "name": "easterEggStatusCheck",
+                "args": ["ovni"]
+            }
+        },
+        {
+            "uid": "easterEgg_tortue",
+            "target": "window",
+
+            "method":
+            {
+                "name": "easterEggStatusCheck",
+                "args": ["tortue"]
+            }
+        },
+        {
+            "uid": "easterEgg_team",
+            "target": "window",
+
+            "method":
+            {
+                "name": "easterEggStatusCheck",
+                "args": ["team"]
+            }
+        },
+        {
+            "uid": "easterEgg_marmotte",
+            "target": "window",
+
+            "method":
+            {
+                "name": "easterEggStatusCheck",
+                "args": ["marmotte"]
+            }
+        },
+        {
+            "uid": "easterEgg_grenouille",
+            "target": "window",
+
+            "method":
+            {
+                "name": "easterEggStatusCheck",
+                "args": ["grenouille"]
+            }
+        },
+        {
+            "uid": "easterEgg_plaque",
+            "target": "window",
+
+            "method":
+            {
+                "name": "easterEggStatusCheck",
+                "args": ["plaque"]
+            }
+        },
+        {
+            "uid": "easterEgg_publicite",
+            "target": "window",
+
+            "method":
+            {
+                "name": "easterEggStatusCheck",
+                "args": ["publicite"]
+            }
+        },
+        {
+            "uid": "easterEgg_feu",
+            "target": "window",
+
+            "method":
+            {
+                "name": "easterEggStatusCheck",
+                "args": ["feu"]
+            }
+        },
+        {
+            "uid": "easterEgg_pi",
+            "target": "window",
+
+            "method":
+            {
+                "name": "easterEggStatusCheck",
+                "args": ["pi"]
+            }
+        },
+        {
+            "uid": "clickSpot01",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["01"]
+            }
+        },
+        {
+            "uid": "clickSpot02",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["02"]
+            }
+        },
+        {
+            "uid": "clickSpot03",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["03"]
+            }
+        },
+        {
+            "uid": "clickSpot04",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["04"]
+            }
+        },
+        {
+            "uid": "clickSpot05",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["05"]
+            }
+        },
+        {
+            "uid": "clickSpot06",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["06"]
+            }
+        },
+        {
+            "uid": "clickSpot07",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["07"]
+            }
+        },
+        {
+            "uid": "clickSpot08",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["08"]
+            }
+        },
+        {
+            "uid": "clickSpot09",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["09"]
+            }
+        },
+        {
+            "uid": "clickSpot10",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["10"]
+            }
+        },
+        {
+            "uid": "clickSpot11",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["11"]
+            }
+        },
+        {
+            "uid": "clickSpot12",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["12"]
+            }
+        },
+        {
+            "uid": "clickSpot13",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["13"]
+            }
+        },
+        {
+            "uid": "clickSpot14",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["14"]
+            }
+        },
+        {
+            "uid": "clickSpot15",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["15"]
+            }
+        },
+        {
+            "uid": "clickSpot16",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["16"]
+            }
+        },
+        {
+            "uid": "clickSpot17",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["17"]
+            }
+        },
+        {
+            "uid": "clickSpot18",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["18"]
+            }
+        },
+        {
+            "uid": "clickSpot19",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["19"]
+            }
+        },
+        {
+            "uid": "clickSpot20",
+            "target": "window",
+
+            "method":
+            {
+                "name": "clickSpot",
+                "args": ["20"]
+            }
+        }
+    ]
+}
