@@ -667,7 +667,7 @@ var shareView = function(){
     var currentSceneUid = viewer.story.sceneUid;
     var currentSceneTitle = jQ_navPointsOfInterest.find('a[href="#'+currentSceneUid+'"]>span').text();
     if(currentSceneTitle == ''){
-        currentSceneTitle = document.title;
+        currentSceneTitle = jQuery('h1').text();
     }
     jQuery
         .ajax({
