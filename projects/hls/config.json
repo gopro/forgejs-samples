@@ -1,0 +1,95 @@
+{
+    "story":
+    {
+        "uid": "hls-story",
+        "name": "HLS Video Story",
+        "slug": "hls-story",
+        "description": "This is sample of HLS video display",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first scene",
+
+                "media":
+                {
+                    "uid": "video-0",
+                    "type": "video",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "streaming": "hls",
+                        "url": "https://cdn.forgejs.org/samples/common/videos/omni-highlights/hls/filename.m3u8"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0.5
+                    }
+                },
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "default": 90
+                    }
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.videocors",
+                "url": "VideoCORS/"
+            },
+
+            {
+                "uid": "org.forgejs.mobilevideoplay",
+                "url": "MobileVideoPlay/"
+            },
+
+            {
+                "uid": "org.forgejs.gyroscopebutton",
+                "url": "GyroscopeButton/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "videocors",
+                "engine": "org.forgejs.videocors"
+            },
+
+            {
+                "uid": "mobilevideoplay",
+                "engine": "org.forgejs.mobilevideoplay"
+            },
+
+            {
+                "uid": "gyrobutton",
+                "engine": "org.forgejs.gyroscopebutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "left": 10
+                }
+            }
+        ]
+    }
+}
