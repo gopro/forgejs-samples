@@ -1,0 +1,304 @@
+{
+    "viewer":
+    {
+        "background": "purple"
+    },
+
+    "transitions":
+    [
+        {
+            "uid": "trans-screen",
+            "type": "screen"
+        }
+    ],
+
+    "layouts":
+    [
+        {
+            "uid": "layout-0",
+            "viewports":
+            [
+                {
+                    "uid": "viewport-0",
+                    "rectangle":
+                    {
+                        "x":0,
+                        "y":0,
+                        "width":50,
+                        "height":100
+                    },
+                    "background": "#704040",
+
+                    "view":
+                    {
+                        "type": "rectilinear"
+                    }
+                },
+
+                {
+                    "uid": "viewport-1",
+                    "rectangle":
+                    {
+                        "x":50,
+                        "y":0,
+                        "width":50,
+                        "height":50
+                    },
+                    "background": "#007000",
+                    "view":
+                    {
+                        "type": "rectilinear"
+                    },
+                    "camera":
+                    {
+                        "fov":
+                        {
+                            "default": 90
+                        },
+                        "pitch":
+                        {
+                            "default": 0
+                        }
+                    }
+                },
+
+                {
+                    "uid": "viewport-2",
+                    "rectangle":
+                    {
+                        "x":50,
+                        "y":50,
+                        "width":50,
+                        "height":50
+                    },
+                    "background": "#007000",
+                    "view":
+                    {
+                        "type": "rectilinear"
+                    },
+                    "camera":
+                    {
+                        "fov":
+                        {
+                            "default": 90
+                        },
+                        "pitch":
+                        {
+                            "default": 0
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+
+    "story":
+    {
+        "uid": "multiple-media-and-viewports-story",
+        "name": "Multiple Media and Viewports Story",
+        "slug": "multiple-media-and-viewports-story",
+        "description": "This project have multiple scenes with combination of media and viewports",
+        "default": "scene-1",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-1",
+                "slug": "equi-single-1",
+                "name": "equi-viewport-single-1",
+                "description": "Equi A - single viewport",
+
+                "media":
+                {
+                    "uid": "media-equi-1",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/common/panos/01-forest.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-2",
+                "slug": "equi-single-2",
+                "name": "equi-viewport-single-2",
+                "description": "Equi B - single viewport",
+
+                "media":
+                {
+                    "uid": "media-equi-2",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "https://cdn.forgejs.org/samples/camera-parallax/Innerschweiz-no-planes.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-3",
+                "slug": "cubeface-single-1",
+                "name": "cubeface-viewport-single-1",
+                "description": "Cubeface A - single viewport",
+
+                "media":
+                {
+                    "uid": "media-cubeface-1",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "cube",
+                        "order": "RLUDFB",
+                        "tile": 960,
+                        "url": "https://cdn.forgejs.org/samples/common/panos/02-sand-cube.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-4",
+                "slug": "cubeface-single-2",
+                "name": "cubeface-viewport-single-2",
+                "description": "Cubeface B - single viewport",
+
+                "media":
+                {
+                    "uid": "media-cubeface-2",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "cube",
+                        "order": "RLUDFB",
+                        "tile": 960,
+                        "url": "https://cdn.uploadvr.com/wp-content/uploads/2016/02/12056966_1503871109935770_567400215_n.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-5",
+                "slug": "cubeface-vr-1",
+                "name": "cubeface-viewport-vr-1",
+                "description": "Cubeface A - VR viewport",
+                "layout": "forge-layout-preset-vr",
+
+
+                "media":
+                {
+                    "uid": "media-cubeface-11",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "cube",
+                        "order": "RLUDFB",
+                        "tile": 960,
+                        "url": "https://cdn.forgejs.org/samples/common/panos/02-sand-cube.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-6",
+                "slug": "cubeface-vr-2",
+                "name": "cubeface-viewport-vr-2",
+                "description": "Cubeface B - VR viewport",
+                "layout": "forge-layout-preset-vr",
+
+                "media":
+                {
+                    "uid": "media-cubeface-21",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "cube",
+                        "order": "RLUDFB",
+                        "tile": 960,
+                        "url": "https://cdn.uploadvr.com/wp-content/uploads/2016/02/12056966_1503871109935770_567400215_n.jpg"
+                    }
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.performancemonitor",
+                "url": "PerformanceMonitor/"
+            },
+
+            {
+                "uid": "org.forgejs.previousnextbuttons",
+                "url": "PreviousNextButtons/"
+            },
+
+            {
+                "uid": "org.forgejs.videocors",
+                "url": "VideoCORS/"
+            },
+
+            {
+                "uid": "org.forgejs.mobilevideoplay",
+                "url": "MobileVideoPlay/"
+            },
+
+            {
+                "uid": "org.forgejs.gyroscopebutton",
+                "url": "GyroscopeButton/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "performancemonitor",
+                "engine": "org.forgejs.performancemonitor",
+                "options":
+                {
+                    "mode": "fps",
+                    "horizontalCenter": true,
+                    "top": 5
+                }
+            },
+
+            {
+                "uid": "previousnextbuttons",
+                "engine": "org.forgejs.previousnextbuttons"
+            },
+
+            {
+                "uid": "videocors",
+                "engine": "org.forgejs.videocors"
+            },
+
+            {
+                "uid": "mobilevideoplay",
+                "engine": "org.forgejs.mobilevideoplay"
+            },
+
+            {
+                "uid": "gyrobutton",
+                "engine": "org.forgejs.gyroscopebutton",
+
+                "options":
+                {
+                    "bottom": 10,
+                    "left": 10
+                }
+            }
+        ]
+    }
+}
