@@ -77,7 +77,8 @@
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
-                            "opacity": 1
+                            "opacity": 1,
+                            "transparent": true
                         },
 
                         "events":
@@ -119,7 +120,8 @@
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
-                            "opacity": 1
+                            "opacity": 1,
+                            "transparent": true
                         },
 
                         "events":
@@ -160,7 +162,8 @@
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
-                            "opacity": 1
+                            "opacity": 1,
+                            "transparent": true
                         },
 
                         "events":
@@ -231,7 +234,8 @@
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
-                            "opacity": 1
+                            "opacity": 1,
+                            "transparent": true
                         },
 
                         "events":
@@ -272,7 +276,8 @@
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
-                            "opacity": 1
+                            "opacity": 1,
+                            "transparent": true
                         },
 
                         "events":
@@ -343,7 +348,8 @@
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
-                            "opacity": 1
+                            "opacity": 1,
+                            "transparent": true
                         },
 
                         "events":
@@ -384,7 +390,8 @@
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
-                            "opacity": 1
+                            "opacity": 1,
+                            "transparent": true
                         },
 
                         "events":
@@ -455,7 +462,8 @@
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
-                            "opacity": 1
+                            "opacity": 1,
+                            "transparent": true
                         },
 
                         "events":
@@ -496,7 +504,8 @@
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
-                            "opacity": 1
+                            "opacity": 1,
+                            "transparent": true
                         },
 
                         "events":
@@ -537,7 +546,8 @@
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
-                            "opacity": 1
+                            "opacity": 1,
+                            "transparent": true
                         },
 
                         "events":
@@ -608,7 +618,8 @@
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
-                            "opacity": 1
+                            "opacity": 1,
+                            "transparent": true
                         },
 
                         "events":
@@ -649,7 +660,8 @@
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
-                            "opacity": 1
+                            "opacity": 1,
+                            "transparent": true
                         },
 
                         "events":
@@ -690,7 +702,8 @@
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
-                            "opacity": 1
+                            "opacity": 1,
+                            "transparent": true
                         },
 
                         "events":
@@ -761,7 +774,8 @@
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/hotspots-actions/ChevronUpCircle_white_64.png",
-                            "opacity": 1
+                            "opacity": 1,
+                            "transparent": true
                         },
 
                         "events":
