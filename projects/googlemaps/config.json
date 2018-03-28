@@ -55,6 +55,7 @@
             {
                 "uid": "googlemaps",
                 "engine": "org.forgejs.googlemaps",
+                "scenes": ["scene-0"],
 
                 "options":
                 {
