@@ -53,7 +53,7 @@
                 "media":
                 {
                     "uid": "media-0",
-                    "type": "image",
+                    "type": "tiled",
 
                     "preview":
                     {
@@ -131,7 +131,7 @@
                 "media":
                 {
                     "uid": "media-1",
-                    "type": "image",
+                    "type": "tiled",
 
                     "preview":
                     {
