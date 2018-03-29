@@ -14,7 +14,7 @@
                 "name": "First chapter - look around",
                 "slug": "first-chapter-introduction",
                 "description": "First chapter - find the pyramid to jump to the next scene",
-                "fx": "fxSet-immersive",
+                "fx": ["fx-vignette", "fx-film", "fx-sepia"],
 
                 "media":
                 {
@@ -105,7 +105,7 @@
                 "name": "Second chapter",
                 "slug": "second-chapter",
                 "description": "Second chapter - just enjoy your watching",
-                "fx": "fxSet-narrative",
+                "fx": ["fx-vignette"],
 
                 "media":
                 {
@@ -152,7 +152,7 @@
                 "name": "Third chapter - look around",
                 "slug": "third-chapter",
                 "description": "Third chapter - find the pyramid to jump to the next scene",
-                "fx": "fxSet-immersive",
+                "fx": ["fx-vignette", "fx-film", "fx-sepia"],
 
                 "media":
                 {
@@ -246,7 +246,7 @@
                 "name": "Fourth chapter",
                 "slug": "fourth-chapter",
                 "description": "Fourth chapter - just enjoy your watching",
-                "fx": "fxSet-narrative",
+                "fx": ["fx-vignette"],
 
                 "media":
                 {
@@ -290,66 +290,42 @@
         ]
     },
 
-    "postProcessing":
-    {
-        "fxSets":
-        [
+    "fx":
+    [
+        {
+            "uid": "fx-vignette",
+            "type": "VignetteShader",
+
+            "params":
             {
-                "uid": "fxSet-narrative",
-                "set":
-                [
-                    {
-                        "type": "VignetteShader",
-                        "uid": "fxSet-overall-vignette-0",
-
-                        "params":
-                        {
-                            "offset": 0.20,
-                            "darkness": 26
-                        }
-                    }
-                ]
-            },
-            {
-                "uid": "fxSet-immersive",
-                "set":
-                [
-                    {
-                        "type": "FilmShader",
-                        "uid": "fxSet-background-film-0",
-
-                        "params":
-                        {
-                            "nIntensity": 0.1,
-                            "sIntensity": 0.8,
-                            "sCount": 1024,
-                            "grayscale": 0
-                        }
-                    },
-                    {
-                        "type": "SepiaShader",
-                        "uid": "fxSet-background-sepia-0",
-
-                        "params":
-                        {
-                            "amount": 0.15
-                        }
-                    },
-                    {
-                        "type": "VignetteShader",
-                        "uid": "fxSet-overall-vignette-0",
-
-                        "params":
-                        {
-                            "offset": 0.20,
-                            "darkness": 26
-                        }
-                    }
-
-                ]
+                "offset": 0.20,
+                "darkness": 26
             }
-        ]
-    },
+        },
+
+        {
+            "uid": "fx-film",
+            "type": "FilmShader",
+
+            "params":
+            {
+                "nIntensity": 0.1,
+                "sIntensity": 0.8,
+                "sCount": 1024,
+                "grayscale": 0
+            }
+        },
+
+        {
+            "uid": "fx-sepia",
+            "type": "SepiaShader",
+
+            "params":
+            {
+                "amount": 0.15
+            }
+        }
+    ],
 
     "playlists":
     {
