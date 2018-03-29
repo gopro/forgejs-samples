@@ -58,7 +58,8 @@
                             "image":
                             {
                                 "url": "https://cdn.forgejs.org/samples/common/images/spot-map.png"
-                            }
+                            },
+                            "transparent": true
                         },
 
                         "states":
