@@ -191,6 +191,7 @@
                         "material":
                         {
                             "plugin": "accelerometer",
+                            "transparent": true,
                             "update": true
                         },
 
@@ -228,6 +229,7 @@
                         "material":
                         {
                             "plugin": "altimeter",
+                            "transparent": true,
                             "update": true
                         },
 
@@ -293,6 +295,7 @@
                         "material":
                         {
                             "plugin": "speedometer",
+                            "transparent": true,
                             "update": true
                         },
 
@@ -469,6 +472,7 @@
             {
                 "uid": "accelerometer",
                 "engine": "org.forgejs.accelerometer",
+                "scenes": ["scene-0", "scene-1"],
                 "options":
                 {
                     "right": 20,
@@ -482,6 +486,7 @@
             {
                 "uid": "altimeter",
                 "engine": "org.forgejs.altimeter",
+                "scenes": ["scene-0", "scene-1"],
                 "options":
                 {
                     "align": "right",
@@ -496,6 +501,7 @@
             {
                 "uid": "compass",
                 "engine": "org.forgejs.compass",
+                "scenes": ["scene-0", "scene-1"],
                 "options":
                 {
                     "left": 20,
@@ -509,6 +515,7 @@
             {
                 "uid": "speedometer",
                 "engine": "org.forgejs.speedometer",
+                "scenes": ["scene-0", "scene-1"],
                 "options":
                 {
                     "left": 20,
