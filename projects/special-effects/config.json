@@ -14,13 +14,12 @@
                 "name": "First scene",
                 "slug": "first-scene",
                 "description": "This is the first and only scene",
-                "fx": "fxSet-overall",
+                "fx": ["fx-horizontalblur", "fx-verticalblur", "fx-film", "fx-sepia", "fx-vignette"],
 
                 "media":
                 {
                     "uid": "media-0",
                     "type": "image",
-                    "fx": "fxSet-background",
 
                     "source":
                     {
@@ -32,83 +31,75 @@
         ]
     },
 
-    "postProcessing":
+    "fx":
     {
-        "fxSets":
+        "enabled": true,
+
+        "items":
         [
             {
-                "uid": "fxSet-background",
-                "set":
-                [
-                    {
-                        "type": "HorizontalBlurShader",
-                        "uid": "fxSet-background-horizontalblur-0",
+                "uid": "fx-horizontalblur",
+                "type": "HorizontalBlurShader",
 
-                        "params":
-                        {
-                            "h": 0.0001
-                        }
-                    },
-
-                    {
-                        "type": "VerticalBlurShader",
-                        "uid": "fxSet-background-verticalblur-0",
-
-                        "params":
-                        {
-                            "v": 0.001
-                        }
-                    },
-
-                    {
-                        "type": "FilmShader",
-                        "uid": "fxSet-background-film-0",
-
-                        "params":
-                        {
-                            "nIntensity": 0.1,
-                            "sIntensity": 0.8,
-                            "sCount": 1024,
-                            "grayscale": 0
-                        }
-                    },
-
-                    {
-                        "type": "SepiaShader",
-                        "uid": "fxSet-background-sepia-0",
-
-                        "params":
-                        {
-                            "amount": 0.7
-                        }
-                    }
-                ]
+                "params":
+                {
+                    "h": 0.0001
+                }
             },
 
             {
-                "uid": "fxSet-overall",
-                "set":
-                [
-                    {
-                        "type": "VignetteShader",
-                        "uid": "fxSet-overall-vignette-0",
+                "uid": "fx-verticalblur",
+                "type": "VerticalBlurShader",
 
-                        "params":
-                        {
-                            "offset": 0.20,
-                            "darkness": 26
-                        }
-                    }
-                ]
+                "params":
+                {
+                    "v": 0.001
+                }
+            },
+
+            {
+                "uid": "fx-film",
+                "type": "FilmShader",
+
+                "params":
+                {
+                    "nIntensity": 0.1,
+                    "sIntensity": 0.8,
+                    "sCount": 1024,
+                    "grayscale": 0
+                }
+            },
+
+            {
+                "uid": "fx-sepia",
+                "type": "SepiaShader",
+
+                "params":
+                {
+                    "amount": 0.7
+                }
+            },
+
+            {
+                "uid": "fx-vignette",
+                "type": "VignetteShader",
+
+                "params":
+                {
+                    "offset": 0.20,
+                    "darkness": 26
+                }
             }
+
         ]
     },
+
 
     "actions":
     [
         {
             "uid": "action-toggle-fx",
-            "target": "viewer.renderer.renderPipeline",
+            "target": "viewer.fxs",
 
             "property":
             {
