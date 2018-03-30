@@ -387,7 +387,8 @@
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/vrrroom/assets/martin-small.png",
-                            "opacity": 1
+                            "opacity": 1,
+                            "transparent": true
                         },
 
                         "geometry":
@@ -475,7 +476,8 @@
                         "material":
                         {
                             "image": "https://cdn.forgejs.org/samples/vrrroom/assets/samy-small.png",
-                            "opacity": 1
+                            "opacity": 1,
+                            "transparent": true
                         },
 
                         "geometry":
