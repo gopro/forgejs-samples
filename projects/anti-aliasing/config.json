@@ -1,0 +1,164 @@
+{
+    "story":
+    {
+        "uid": "anti-aliasing-experiments",
+        "name": "Anti-aliasing experiments",
+        "slug": "anti-aliasing-experiments",
+        "description": "This project showcases different anti-aliasing methods",
+        "default": "scene-1",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-1",
+                "slug": "equi-single-1",
+                "name": "equi-viewport-single-1",
+                "description": "Equi",
+
+                "view": {
+                    "type": "gopro"
+                },
+
+                "media":
+                {
+                    "uid": "media-equi-1",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "rubikscube.jpg"
+                    }
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.performancemonitor",
+                "url": "PerformanceMonitor/"
+            },
+
+            {
+                "uid": "org.forgejs.simpletext",
+                "url": "SimpleText/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "performancemonitor",
+                "engine": "org.forgejs.performancemonitor",
+                "options":
+                {
+                    "mode": "fps",
+                    "horizontalCenter": true,
+                    "top": 5
+                }
+            },
+
+            {
+                "uid": "text-tl",
+                "engine": "org.forgejs.simpletext",
+
+                "options":
+                {
+                    "config":
+                    {
+                        "i18n": false,
+                        "value": "No Anti-aliasing",
+                        "fontSize": 14,
+                        "color": "#FFFFFF",
+                        "background": "#202020",
+                        "textAlign": "center",
+                        "textShadow": "1px 1px 1px #102010",
+                        "fontFamily": "dosisbold, sans-serif",
+                        "whiteSpace": "pre"
+                    },
+
+                    "left": 20,
+                    "top": 20
+                }
+            },
+
+            {
+                "uid": "text-tr",
+                "engine": "org.forgejs.simpletext",
+
+                "options":
+                {
+                    "config":
+                    {
+                        "i18n": false,
+                        "value": "RGSS anti-aliasing",
+                        "fontSize": 14,
+                        "color": "#FFFFFF",
+                        "background": "#202020",
+                        "textAlign": "center",
+                        "textShadow": "1px 1px 1px #102010",
+                        "fontFamily": "dosisbold, sans-serif",
+                        "whiteSpace": "pre"
+                    },
+
+                    "right": 20,
+                    "top": 20
+                }
+            },
+
+            {
+                "uid": "text-bl",
+                "engine": "org.forgejs.simpletext",
+
+                "options":
+                {
+                    "config":
+                    {
+                        "i18n": false,
+                        "value": "Quincunx anti-aliasing",
+                        "fontSize": 14,
+                        "color": "#FFFFFF",
+                        "background": "#202020",
+                        "textAlign": "center",
+                        "textShadow": "1px 1px 1px #102010",
+                        "fontFamily": "dosisbold, sans-serif",
+                        "whiteSpace": "pre"
+                    },
+
+                    "left": 20,
+                    "bottom": 20
+                }
+            },
+
+            {
+                "uid": "text-br",
+                "engine": "org.forgejs.simpletext",
+
+                "options":
+                {
+                    "config":
+                    {
+                        "i18n": false,
+                        "value": "No anti-aliasing",
+                        "fontSize": 14,
+                        "color": "#FFFFFF",
+                        "background": "#202020",
+                        "textAlign": "center",
+                        "textShadow": "1px 1px 1px #102010",
+                        "fontFamily": "dosisbold, sans-serif",
+                        "whiteSpace": "pre"
+                    },
+
+                    "right": 20,
+                    "bottom": 20
+                }
+            }
+        ]
+    }
+}
