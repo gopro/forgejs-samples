@@ -40,20 +40,58 @@
 <body>
     <div id="container"></div>
 
+    <script src='https://cdn.jsdelivr.net/npm/webvr-polyfill@latest/build/webvr-polyfill.js'></script>
+
     <!-- Include the threejs custom build -->
-    <script src="../../lib/three.js/three.r86.custom.min.js"></script>
+    <script src="../../../sources/lib/three.js/three.r88.custom.js"></script>
 
     <!-- Include the Hammer.js library -->
     <script src="../../lib/hammer.js/hammer.min.js"></script>
 
     <!-- Include the ForgeJS library -->
-    <script type="text/javascript" src="../../lib/forge/forge.min.js" ></script>
+    <script type="text/javascript" src="../../../sources/build/forge.js" ></script>
 
     <!-- Start ForgeJS -->
     <script type="text/javascript">
 
         // Create a viewer
         var viewer = new FORGE.Viewer("container", "config.json");
+
+        var polyfill = new WebVRPolyfill({
+            // Ensures the polyfill is always active on mobile, due to providing
+            // a polyfilled CardboardVRDisplay when no native API is available,
+            // and also polyfilling even when the native API is available, due to
+            // providing a CardboardVRDisplay when no native VRDisplays exist.
+            PROVIDE_MOBILE_VRDISPLAY: true,
+            DEBUG: true,
+            // Polyfill optimizations
+            DIRTY_SUBMIT_FRAME_BINDINGS: true,
+
+            // Flag to disabled the UI in VR Mode.
+            CARDBOARD_UI_DISABLED: true,
+
+            // Flag to disable the instructions to rotate your device.
+            ROTATE_INSTRUCTIONS_DISABLED: true,
+
+            BUFFER_SCALE: 0.75
+        });
+
+        // Polyfill always provides us with `navigator.getVRDisplays`
+        polyfill.getVRDisplays().then(displays => {
+            // If we have a native VRDisplay, or if the polyfill
+            // provided us with a CardboardVRDisplay, use it
+            if (displays.length) {
+                vrDisplay = displays[0];
+
+                viewer.onConfigLoadComplete.add(function() {
+                    viewer.renderer.webGLRenderer.vr.setDevice(vrDisplay);
+                    viewer.vr = true;
+                    vrDisplay.requestPresent([{ source: viewer.renderer.webGLRenderer.domElement }]);
+                }, this);
+
+            }
+        });
+
 
     </script>
 </body>
