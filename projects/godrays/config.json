@@ -1,0 +1,137 @@
+{
+    "viewer":
+    {
+        "background": "purple"
+    },
+
+    "story":
+    {
+        "uid":  "simpliest-story",
+        "name": "Simpliest Story",
+        "slug": "simpliest-story",
+        "description": "Orléans cathedral",
+        "default": "the-sphere",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "A godrays effect",
+                "fx": ["fx-godrays"],
+
+                "media":
+                {
+                    "uid": "media-0-equi",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "assets/scene/orleans-equi.jpg"
+                    }
+                },
+
+                "media-aa":
+                {
+                    "uid": "media-0-tiled",
+                    "type": "tiled",
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 5,
+                            "up": 4
+                        },
+
+                        "pattern": "assets/scene/{face}/{level}/{y}_{x}.jpg",
+
+                        "levels":
+                        [
+                            {
+                                "name": "1024",
+                                "width": 1024,
+                                "height": 1024,
+                                "tile": 512
+                            },
+                            {
+                                "name": "2048",
+                                "width": 2048,
+                                "height": 2048,
+                                "tile": 512
+                            },
+                            {
+                                "name": "3584",
+                                "width": 3584,
+                                "height": 3584,
+                                "tile": 512
+                            },
+                            {
+                                "name": "6656",
+                                "width": 6656,
+                                "height": 6656,
+                                "tile": 512
+                            },
+                            {
+                                "name": "13312",
+                                "width": 13312,
+                                "height": 13312,
+                                "tile": 512,
+                                "pattern": "assets/scene/{face}/{level}/{y}/{x}.jpg"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.fxgodrays",
+                "url": "FXGodRays/"
+            },
+
+            {
+                "uid": "org.forgejs.fxgodrayscontroller",
+                "url": "FXGodRaysController/"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "fx-godrays",
+                "engine": "org.forgejs.fxgodrays",
+
+                "options":
+                {
+                    "mask": "./assets/scene/orleans-equi-light-mask.png"
+                }
+            },
+
+            {
+                "uid": "fx-godrays-controller",
+                "engine": "org.forgejs.fxgodrayscontroller",
+
+                "options":
+                {
+                    "fx": "fx-godrays"
+                }
+            }
+        ]
+    }
+}
