@@ -290,43 +290,6 @@
         ]
     },
 
-    "fx":
-    [
-        {
-            "uid": "fx-vignette",
-            "type": "VignetteShader",
-
-            "params":
-            {
-                "offset": 0.20,
-                "darkness": 26
-            }
-        },
-
-        {
-            "uid": "fx-film",
-            "type": "FilmShader",
-
-            "params":
-            {
-                "nIntensity": 0.1,
-                "sIntensity": 0.8,
-                "sCount": 1024,
-                "grayscale": 0
-            }
-        },
-
-        {
-            "uid": "fx-sepia",
-            "type": "SepiaShader",
-
-            "params":
-            {
-                "amount": 0.15
-            }
-        }
-    ],
-
     "playlists":
     {
         "volume":
@@ -397,6 +360,21 @@
             {
                 "uid": "org.forgejs.simpletext",
                 "url": "SimpleText/"
+            },
+
+            {
+                "uid": "org.forgejs.fxvignette",
+                "url": "FXVignette/"
+            },
+
+            {
+                "uid": "org.forgejs.fxsepia",
+                "url": "FXSepia/"
+            },
+
+            {
+                "uid": "org.forgejs.fxfilm",
+                "url": "FXFilm/"
             }
         ],
 
@@ -483,6 +461,40 @@
 
                     "horizontalCenter": true,
                     "top": 20
+                }
+            },
+
+            {
+                "uid": "fx-vignette",
+                "engine": "org.forgejs.fxvignette",
+
+                "options":
+                {
+                    "offset": 0.20,
+                    "darkness": 25
+                }
+            },
+
+            {
+                "uid": "fx-sepia",
+                "engine": "org.forgejs.fxsepia",
+
+                "options":
+                {
+                    "amount": 0.15
+                }
+            },
+
+            {
+                "uid": "fx-film",
+                "engine": "org.forgejs.fxfilm",
+
+                "options":
+                {
+                    "noiseIntensity": 0.1,
+                    "scanIntensity": 0.8,
+                    "scanCount": 1024,
+                    "grayscale": false
                 }
             }
         ]
