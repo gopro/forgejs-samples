@@ -193,6 +193,94 @@
                 "slug": "no-media-scene",
                 "description": "This scene without media, just a colored background",
                 "background": "#237ABF"
+            },
+
+            {
+                "uid": "scene-9",
+                "name": "Galoppaz",
+                "slug": "galoppaz",
+                "description": "Partial multiresolution panoramic image from summit of the Galoppaz",
+
+                "camera":
+                {
+                    "fov":
+                    {
+                        "max": 39
+                    },
+
+                    "yaw":
+                    {
+                        "min": -126.5,
+                        "max":  126.5
+                    },
+
+                    "pitch":
+                    {
+                        "min": -27.6,
+                        "max": 11.6
+                    }
+                },
+
+                "media":
+                {
+                    "uid": "media-tiled",
+                    "type": "tiled",
+
+                    "preview":
+                    {
+                        "url": "https://cdn.forgejs.org/samples/multiresolution/galoppaz/preview/{face}.jpg",
+                        "tile": 1024
+                    },
+
+                    "source":
+                    {
+                        "format": "cube",
+
+                        "faces":
+                        {
+                            "front": 0,
+                            "right": 1,
+                            "back": 2,
+                            "left": 3,
+                            "down": 4,
+                            "up": 5
+                        },
+
+                        "pattern": "https://cdn.forgejs.org/samples/multiresolution/galoppaz/{face}/{level}/{y}/{x}.jpg",
+
+                        "levels":
+                         [
+                            {
+                                "name": "level 0",
+                                "width": 6656,
+                                "height": 6656,
+                                "tile": 512,
+                                "pattern": "https://cdn.forgejs.org/samples/multiresolution/galoppaz/{face}/{level}/{y}_{x}.jpg"
+                            },
+
+                            {
+                                "name": "level 1",
+                                "width": 12800,
+                                "height": 12800,
+                                "tile": 512
+                            },
+
+                            {
+                                "name": "level 2",
+                                "width": 25600,
+                                "height": 25600,
+                                "tile": 512
+                            },
+
+                            {
+                               "name": "level 3",
+                                "width": 51200,
+                                "height": 51200,
+                                "tile": 512
+                            }
+                        ]
+                    }
+                }
             }
         ]
     },
