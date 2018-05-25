@@ -4,6 +4,11 @@
         "background": "purple"
     },
 
+    "layouts":
+    {
+        "default": "forge-layout-preset-single"
+    },
+
     "story":
     {
         "uid":  "simpliest-story",
