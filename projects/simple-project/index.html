@@ -40,10 +40,9 @@
 <body>
     <div id="container"></div>
 
-    <script src='https://cdn.jsdelivr.net/npm/webvr-polyfill@latest/build/webvr-polyfill.js'></script>
-
     <!-- Include the threejs custom build -->
-    <script src="../../../sources/lib/three.js/three.r88.custom.js"></script>
+    <script src="../../../sources/lib/three.js/three.r94.custom.js"></script>
+    <script src="../../../sources/lib/webvr.js"></script>
 
     <!-- Include the Hammer.js library -->
     <script src="../../lib/hammer.js/hammer.min.js"></script>
@@ -54,44 +53,259 @@
     <!-- Start ForgeJS -->
     <script type="text/javascript">
 
+        var buttonCfg = {
+            "geometry":
+            {
+                "type": "plane",
+                "options":
+                {
+                    "width": 30,
+                    "height": 30
+                }
+            },
+
+            "material":
+            {
+                "color": "black",
+                "opacity": 0.0,
+                "transparent": true
+            }
+        };
+
+//        FORGE.CameraGaze.DEBUG = true;
+        FORGE.HUD.DEBUG = true;
+        FORGE.DockScene3D.DEBUG = true;
+        FORGE.ViewportRenderer.DEBUG = true;
+
         // Create a viewer
         var viewer = new FORGE.Viewer("container", "config.json");
 
-        var polyfill = new WebVRPolyfill({
-            // Ensures the polyfill is always active on mobile, due to providing
-            // a polyfilled CardboardVRDisplay when no native API is available,
-            // and also polyfilling even when the native API is available, due to
-            // providing a CardboardVRDisplay when no native VRDisplays exist.
-            PROVIDE_MOBILE_VRDISPLAY: true,
-            DEBUG: true,
-            // Polyfill optimizations
-            DIRTY_SUBMIT_FRAME_BINDINGS: true,
+        var menu, menuVR;
 
-            // Flag to disabled the UI in VR Mode.
-            CARDBOARD_UI_DISABLED: true,
+        function onEnterVR(display)
+        {
+            var canvas = viewer.renderer.webGLRenderer.domElement;
+            var w = canvas.width;
+            var h = canvas.height;
 
-            // Flag to disable the instructions to rotate your device.
-            ROTATE_INSTRUCTIONS_DISABLED: true,
+            viewer.container.resize(w, h);
 
-            BUFFER_SCALE: 0.75
-        });
+            viewer.vr = true;
+        }
 
-        // Polyfill always provides us with `navigator.getVRDisplays`
-        polyfill.getVRDisplays().then(displays => {
-            // If we have a native VRDisplay, or if the polyfill
-            // provided us with a CardboardVRDisplay, use it
-            if (displays.length) {
-                vrDisplay = displays[0];
+        function onExitVR()
+        {
+            viewer.vr = false;
+            viewer.renderer.vr = true;
+            // WebVRManager  onVRDisplayPresentChange needs scope.enabled (vr flag) to be ON to restore canvas size
+            // we set it to false in sceneRenderer after background and object rendering
+            // that should be fixed
 
-                viewer.onConfigLoadComplete.add(function() {
-                    viewer.renderer.webGLRenderer.vr.setDevice(vrDisplay);
-                    viewer.vr = true;
-                    vrDisplay.requestPresent([{ source: viewer.renderer.webGLRenderer.domElement }]);
-                }, this);
+            var canvas = viewer.renderer.webGLRenderer.domElement;
+            var w = canvas.width;
+            var h = canvas.height;
 
+            viewer.container.resize(w, h);
+        }
+
+        function setupMenu()
+        {
+            menu = viewer.renderer.createScene3D({
+                type: "HUDOrthographic",
+                enabled: false,
+                interactive: true
+            });
+
+            var menuSize = menu.getFrustumSize();
+            var unit = menuSize.height / 10;
+
+            var w = 3 * unit;
+            var h = 2 * unit;
+
+            var container = new THREE.Mesh(
+                new THREE.PlaneBufferGeometry(w, h),
+                new THREE.MeshBasicMaterial({transparent:true, opacity:0.5, color:"black", depthTest:false}));
+            container.position.set(0, 0, -10);
+            container.updateMatrix();
+
+            var label = new FORGE.TextObject3D(viewer, "Enter VR", {
+                font: "60px sans-serif",
+                fillStyle: "white",
+                strokeColor: "black",
+                strokeWidth: 2
+            });
+            label.interactive = false;
+            label.mesh.position.set(0, 0, 2);
+
+            var config = Object.assign(buttonCfg);
+            config.geometry.options.width = w;
+            config.geometry.options.height = h;
+            config.uid = FORGE.UID.generate();
+
+            var clickArea = new FORGE.Hotspot3D(viewer, config);
+            clickArea.mesh.position.set(0, 0, 1);
+            clickArea.mesh.updateMatrix();
+
+            clickArea.onClick.add(function() {
+                menuVR.enabled = true;
+                menu.enabled = false;
+                menu.onClick();
+            }, clickArea);
+
+            container.add(label.mesh, clickArea.mesh);
+
+            menu.anchorMesh(container, "top", "left");
+            menu.add(container);
+
+            menu.onClick = function() {};
+        }
+
+        function setupMenuVR()
+        {
+            menuVR = viewer.renderer.createScene3D({
+                type: "DockScene3D",
+                enabled: false,
+                interactive: true,
+                pitchShow: -45,
+                pitchHide: -5
+            });
+
+            var container = new THREE.Mesh(
+                new THREE.PlaneBufferGeometry(200, 100, 32, 32),
+                new THREE.MeshBasicMaterial({transparent:true, opacity:0.5, color:"black", depthTest:false}));
+
+            container.position.set(0, 0, -5);
+            container.scale.set(0.025, 0.025, 0.025);
+            container.userData.opacity = 0;
+
+            var label = new FORGE.TextObject3D(viewer, "Exit VR", {
+                font: "60px sans-serif",
+                fillStyle: "white",
+                strokeColor: "black",
+                strokeWidth: 2
+            });
+
+            label.interactive = false;
+            label.mesh.position.set(0, 0, 1);
+            label.mesh.scale.set(0.4, 0.4, 0.4);
+
+            var config = Object.assign(buttonCfg);
+            config.uid = FORGE.UID.generate();
+
+            var clickArea = new FORGE.Hotspot3D(viewer, config);
+            clickArea.mesh.geometry.dispose();
+            clickArea.mesh.geometry = container.geometry.clone();
+            clickArea.mesh.position.set(0, 0, 1);
+            clickArea.mesh.userData.opacity = 0;
+
+            clickArea.onClick.add(function() {
+                menuVR.enabled = false;
+                menu.enabled = true;
+                menuVR.onClick();
+            }, clickArea);
+
+            container.add(label.mesh, clickArea.mesh);
+
+            container.position.set(0, -5, -5);
+            container.rotation.set(FORGE.Math.degToRad(-45), 0, 0);
+
+            menuVR.add(container);
+
+            menuVR.onClick = function() {};
+        }
+
+        function toggleMenu() {
+            menuVR.enabled = !menuVR.enabled;
+            menu.enabled = !menu.enabled;
+        }
+
+        function onEnterVR(display)
+        {
+            var canvas = viewer.renderer.webGLRenderer.domElement;
+            var w = canvas.width;
+            var h = canvas.height;
+
+            viewer.container.resize(w, h);
+
+            viewer.vr = true;
+        }
+
+        function onExitVR()
+        {
+            viewer.vr = false;
+            viewer.renderer.vr = true;
+            // WebVRManager  onVRDisplayPresentChange needs scope.enabled (vr flag) to be ON to restore canvas size
+            // we set it to false in sceneRenderer after background and object rendering
+            // that should be fixed
+
+            var canvas = viewer.renderer.webGLRenderer.domElement;
+            var w = canvas.width;
+            var h = canvas.height;
+
+            viewer.container.resize(w, h);
+        }
+
+        function setupVR()
+        {
+            if ( 'getVRDisplays' in navigator ) {
+
+                navigator.getVRDisplays()
+                    .then( function ( displays ) {
+
+                        if ( displays.length > 0 ) {
+                            var display = displays[ 0 ];
+
+                            viewer.renderer.webGLRenderer.vr.setDevice( display );
+
+                            menuVR.onClick = function()
+                            {
+                                if (display.isPresenting)
+                                {
+                                    display.exitPresent();
+                                }
+                            };
+
+                            menu.onClick = function()
+                            {
+                                if (!display.isPresenting)
+                                {
+                                    display.requestPresent([{ source: viewer.renderer.webGLRenderer.domElement }]);
+                                }
+                            };
+
+                            window.addEventListener( 'vrdisplaypresentchange', function ( event ) {
+
+                                if (event.display.isPresenting)
+                                {
+                                    onEnterVR(event.display);
+                                }
+                                else
+                                {
+                                    onExitVR();
+                                }
+
+                            }, false );
+
+                        } else {
+                            console.log('WEBVR NOT SUPPORTED');
+                        }
+                    });
+
+            } else {
+                console.log('WEBVR NOT SUPPORTED');
             }
-        });
+        }
 
+        viewer.onConfigLoadComplete.add(function() {
+            setupMenu();
+            setupMenuVR();
+            setupVR();
+
+            menuVR.enabled = true;
+
+            // var renderer = viewer.renderer.webGLRenderer;
+            // document.body.appendChild( WEBVR.createButton( renderer, onEnterVR, onExitVR ) );
+        });
 
     </script>
 </body>

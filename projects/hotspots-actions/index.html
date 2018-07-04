@@ -36,24 +36,78 @@
         }
     </style>
 </head>
-
 <body>
     <div id="container"></div>
 
     <!-- Include the threejs custom build -->
-    <script src="../../lib/three.js/three.r86.custom.min.js"></script>
+    <script src="../../../sources/lib/three.js/three.r94.custom.js"></script>
+    <script src="../../../sources/lib/webvr.js"></script>
 
     <!-- Include the Hammer.js library -->
     <script src="../../lib/hammer.js/hammer.min.js"></script>
 
     <!-- Include the ForgeJS library -->
-    <script type="text/javascript" src="../../lib/forge/forge.min.js" ></script>
+    <script type="text/javascript" src="../../../sources/build/forge.js" ></script>
 
     <!-- Start ForgeJS -->
     <script type="text/javascript">
 
+//        FORGE.Picking.DEBUG = true;
+       // FORGE.CameraGaze.DEBUG = true;
+
         // Create a viewer
         var viewer = new FORGE.Viewer("container", "config.json");
+
+        var onEnterVR = function(display)
+        {
+            var canvas = viewer.renderer.webGLRenderer.domElement;
+            var w = canvas.width;
+            var h = canvas.height;
+
+            viewer.container.resize(w, h);
+
+            viewer.vr = true;
+        };
+
+        var onExitVR = function()
+        {
+            viewer.vr = false;
+            viewer.renderer.vr = true;
+            // WebVRManager  onVRDisplayPresentChange needs scope.enabled (vr flag) to be ON to restore canvas size
+            // we set it to false in sceneRenderer after background and object rendering
+            // that should be fixed
+
+            var canvas = viewer.renderer.webGLRenderer.domElement;
+            var w = canvas.width;
+            var h = canvas.height;
+
+            viewer.container.resize(w, h);
+        };
+
+        viewer.onConfigLoadComplete.add(function() {
+            var renderer = viewer.renderer.webGLRenderer;
+            document.body.appendChild( WEBVR.createButton( renderer, onEnterVR, onExitVR ) );
+        });
+
+
+        // navigator.getVRDisplays().then(displays => {
+        //     // If we have a native VRDisplay, or if the polyfill
+        //     // provided us with a CardboardVRDisplay, use it
+        //     if (displays.length) {
+        //         vrDisplay = displays[0];
+
+
+        //         viewer.onConfigLoadComplete.add(function() {
+        //             var vrManager = viewer.renderer.webGLRenderer.vr;
+        //             vrManager.setDevice(vrDisplay);
+        //             // vrManager.enabled = true;
+
+        //             vrDisplay.requestPresent([{ source: viewer.renderer.webGLRenderer.domElement }]);
+        //         }, this);
+
+        //     }
+        // });
+
 
     </script>
 </body>

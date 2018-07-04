@@ -15,6 +15,11 @@
                 "slug": "first-scene",
                 "description": "This is the first and only scene",
 
+                "view":
+                {
+                    "type": "gopro"
+                },
+
                 "media":
                 {
                     "uid": "media-0",
@@ -30,46 +35,21 @@
         ]
     },
 
-    "plugins":
+    "controllers":
     {
-        "prefix": "../../plugins/",
-
-        "engines":
-        [
-            {
-                "uid": "org.forgejs.webvrbutton",
-                "url": "WebVRButton/"
-            },
-
-            {
-                "uid": "org.forgejs.gyroscopebutton",
-                "url": "GyroscopeButton/"
-            }
-        ],
-
-        "instances":
-        [
-            {
-                "uid": "webvrbutton",
-                "engine": "org.forgejs.webvrbutton",
-
-                "options":
+            "instances":
+            [
                 {
-                    "bottom": 10,
-                    "right": 10
-                }
-            },
+                    "uid": "gyroscope-controller",
+                    "type": "gyroscope",
+                    "enabled": false
+                },
 
-            {
-                "uid": "gyrobutton",
-                "engine": "org.forgejs.gyroscopebutton",
-
-                "options":
                 {
-                    "bottom": 10,
-                    "left": 10
+                    "uid": "pointer-controller",
+                    "type": "pointer",
+                    "enabled": true
                 }
-            }
-        ]
+            ]
     }
 }
